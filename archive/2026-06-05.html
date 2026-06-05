@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="supported-color-schemes" content="dark" />
+    <title>The Brief</title>
+    <style>
+      /* Reset-ish */
+      body, table, td, p, a, h1, h2, h3 {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100% !important;
+        background-color: #0f1115;
+        color: #e6e6ea;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+      a { color: #d4b87a; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+
+      /* Layout shell */
+      .wrap {
+        width: 100%;
+        background-color: #0f1115;
+        padding: 24px 16px 48px 16px;
+      }
+      .container {
+        max-width: 680px;
+        margin: 0 auto;
+        background-color: #0f1115;
+      }
+
+      /* Masthead */
+      .masthead {
+        padding: 8px 4px 18px 4px;
+        border-bottom: 1px solid #2a2d36;
+        margin-bottom: 22px;
+      }
+      .wordmark {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        color: #e6e6ea;
+        margin: 0;
+        line-height: 1.2;
+      }
+      .wordmark .accent { color: #c9a96e; }
+      .masthead .meta {
+        margin-top: 6px;
+        color: #9aa0a8;
+        font-size: 13px;
+        letter-spacing: 0.4px;
+        text-transform: uppercase;
+      }
+      .gold-rule {
+        height: 2px;
+        width: 56px;
+        background-color: #c9a96e;
+        margin: 14px 0 0 0;
+        border: 0;
+      }
+
+      /* Tab nav (anchor chips) */
+      .tabs {
+        margin: 0 0 28px 0;
+        padding: 0;
+        font-size: 0; /* kill inline-block gap */
+      }
+      .tabs a {
+        display: inline-block;
+        font-size: 13px;
+        line-height: 1.2;
+        padding: 7px 12px;
+        margin: 0 6px 8px 0;
+        background-color: #181a20;
+        border: 1px solid #2a2d36;
+        border-radius: 999px;
+        color: #e6e6ea;
+        text-decoration: none;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+      }
+      .tabs a .num {
+        color: #c9a96e;
+        font-weight: 700;
+        margin-right: 6px;
+      }
+
+      /* Sections */
+      section.tab {
+        margin: 0 0 36px 0;
+        padding: 0;
+      }
+      h2.tab-title {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 22px;
+        font-weight: 700;
+        color: #c9a96e;
+        margin: 0 0 4px 0;
+        line-height: 1.3;
+        letter-spacing: 0.2px;
+      }
+      .tab-kicker {
+        color: #9aa0a8;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        margin: 0 0 14px 0;
+      }
+      .tab-divider {
+        border: 0;
+        border-top: 1px solid #2a2d36;
+        margin: 0 0 18px 0;
+      }
+
+      /* Items */
+      article.item {
+        margin: 0 0 22px 0;
+        padding: 0;
+      }
+      .headline {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 18px;
+        font-weight: 700;
+        color: #e6e6ea;
+        margin: 0 0 6px 0;
+        line-height: 1.35;
+      }
+      .summary {
+        font-size: 15px;
+        line-height: 1.6;
+        color: #e6e6ea;
+        margin: 0 0 8px 0;
+      }
+      .source {
+        font-size: 13px;
+        color: #9aa0a8;
+        margin: 0;
+      }
+      .source a { color: #d4b87a; }
+
+      /* Spectrum block */
+      .spectrum {
+        margin: 12px 0 6px 0;
+        padding: 12px 14px;
+        background-color: #181a20;
+        border: 1px solid #2a2d36;
+        border-radius: 6px;
+      }
+      .spectrum-label {
+        font-size: 11px;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+        color: #9aa0a8;
+        margin: 0 0 10px 0;
+        font-weight: 600;
+      }
+      .spectrum-row {
+        margin: 0 0 8px 0;
+        padding: 4px 0 4px 12px;
+        font-size: 14px;
+        line-height: 1.55;
+        color: #e6e6ea;
+      }
+      .spectrum-row:last-child { margin-bottom: 0; }
+      .spectrum-row.left   { border-left: 3px solid #4a90c2; }
+      .spectrum-row.center { border-left: 3px solid #9aa0a8; }
+      .spectrum-row.right  { border-left: 3px solid #c25a4a; }
+      .spectrum-tag {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-right: 8px;
+        vertical-align: baseline;
+      }
+      .spectrum-tag.left   { color: #4a90c2; }
+      .spectrum-tag.center { color: #c0c4cc; }
+      .spectrum-tag.right  { color: #c25a4a; }
+
+      .bias-check {
+        margin: 8px 0 0 0;
+        font-size: 13px;
+        line-height: 1.5;
+        color: #9aa0a8;
+        font-style: italic;
+      }
+      .bias-check strong {
+        color: #c9a96e;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        text-transform: uppercase;
+        font-size: 11px;
+        margin-right: 6px;
+      }
+
+      /* Fun fact card */
+      .fact-card {
+        background-color: #181a20;
+        border: 1px solid #2a2d36;
+        border-left: 3px solid #c9a96e;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin: 0 0 8px 0;
+      }
+      .fact-card .fact-body {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 17px;
+        line-height: 1.6;
+        color: #e6e6ea;
+        margin: 0 0 10px 0;
+      }
+      .fact-card .fact-attrib {
+        font-size: 12px;
+        color: #9aa0a8;
+        margin: 0;
+      }
+      .fact-card .fact-attrib a { color: #d4b87a; }
+
+      /* Puzzle */
+      .puzzle-card {
+        background-color: #181a20;
+        border: 1px solid #2a2d36;
+        border-radius: 6px;
+        padding: 18px 20px;
+      }
+      .puzzle-type {
+        font-size: 11px;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+        color: #c9a96e;
+        margin: 0 0 8px 0;
+        font-weight: 700;
+      }
+      .puzzle-question {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 17px;
+        line-height: 1.55;
+        color: #e6e6ea;
+        margin: 0 0 10px 0;
+      }
+      .puzzle-howto {
+        font-size: 13px;
+        color: #9aa0a8;
+        margin: 0 0 14px 0;
+      }
+      details.answer {
+        background-color: #0f1115;
+        border: 1px solid #2a2d36;
+        border-radius: 4px;
+        padding: 10px 14px;
+      }
+      details.answer summary {
+        cursor: pointer;
+        color: #d4b87a;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.4px;
+        text-transform: uppercase;
+        outline: none;
+      }
+      details.answer[open] summary { margin-bottom: 8px; }
+      details.answer .answer-body {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #e6e6ea;
+        margin: 0;
+      }
+
+      /* Footer */
+      .footer {
+        margin-top: 36px;
+        padding-top: 18px;
+        border-top: 1px solid #2a2d36;
+        color: #9aa0a8;
+        font-size: 12px;
+        line-height: 1.6;
+      }
+      .footer p { margin: 0 0 4px 0; }
+
+      /* Mobile */
+      @media only screen and (max-width: 520px) {
+        .wrap { padding: 16px 10px 36px 10px; }
+        .wordmark { font-size: 26px; }
+        h2.tab-title { font-size: 20px; }
+        .headline { font-size: 17px; }
+        .summary { font-size: 15px; }
+        .tabs a { padding: 6px 10px; font-size: 12px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="container">
+
+        <!-- Masthead -->
+        <header class="masthead">
+          <h1 class="wordmark">&#9788; The <span class="accent">Brief</span></h1>
+          <div class="meta">Friday &middot; 5 June 2026 &middot; Asia/Singapore</div>
+          <hr class="gold-rule" />
+        </header>
+
+        <!-- Tab nav -->
+        <nav class="tabs" aria-label="Sections">
+          <a href="#singapore"><span class="num">01</span>Singapore</a>
+          <a href="#india"><span class="num">02</span>India</a>
+          <a href="#global"><span class="num">03</span>Global</a>
+          <a href="#tech"><span class="num">04</span>Tech &amp; AI</a>
+          <a href="#business"><span class="num">05</span>Business</a>
+          <a href="#sports"><span class="num">06</span>Sports</a>
+          <a href="#fun-fact"><span class="num">07</span>&#10022; Fun Fact</a>
+          <a href="#puzzle"><span class="num">08</span>&#129513; Puzzle</a>
+        </nav>
+
+        <!-- 1. Singapore -->
+        <section class="tab" id="singapore">
+          <h2 class="tab-title">Singapore</h2>
+          <p class="tab-kicker">Local &middot; Policy &middot; City life</p>
+          <hr class="tab-divider" />
+
+          <article class="item">
+            <h3 class="headline">Workers&rsquo; Party to hold special cadres conference on 28 June over Pritam Singh&rsquo;s future</h3>
+            <p class="summary">
+              Workers&rsquo; Party cadres will vote on whether secretary-general Pritam Singh should remain in his role at a special conference on 28 June, triggered by a requisition signed by 25 cadres. Singh was convicted in December 2025 of lying to a parliamentary select committee; he will first be required to account to cadres and faces a secret ballot unless he steps down voluntarily beforehand.
+            </p>
+            <p class="source">&mdash; <a href="https://mothership.sg/2026/06/pritam-special-cadres-conference/">Mothership.SG</a> &middot; 3 Jun 2026</p>
+          </article>
+
+          <article class="item">
+            <h3 class="headline">NParks to relocate Singapore&rsquo;s last wild cats &mdash; five leopard cats in Changi &mdash; from H2 2026</h3>
+            <p class="summary">
+              The National Parks Board confirmed five leopard cats living in Changi&rsquo;s coastal forest &mdash; two adult males, one female, and two juveniles &mdash; and will move them to other nature areas from the second half of 2026. Fewer than 20 individuals are believed to remain on the Singapore mainland, making the species locally critically endangered; roadkill has killed at least five in the past 25 years.
+            </p>
+            <p class="source">&mdash; <a href="https://mothership.sg/2026/06/leopard-cats-changi-relocation/">Mothership.SG</a> &middot; 3 Jun 2026</p>
+          </article>
+
+          <article class="item">
+            <h3 class="headline">Singapore life expectancy rises to record 83.9 years in 2025, narrowing gap with Japan</h3>
+            <p class="summary">
+              Data released by the Department of Statistics shows residents born in 2025 can expect to live 83.9 years on average, up 0.2 years from 2024, placing Singapore level with Japan for the world&rsquo;s longest lifespans. Residents already aged 65 in 2025 are projected to reach 86.6 years &mdash; also up 0.2 years from the prior year.
+            </p>
+            <p class="source">&mdash; <a href="https://www.channelnewsasia.com/singapore/singapore-life-expectancy-2025-83-9-years-singstat-data-4695021">CNA</a> &middot; 3 Jun 2026</p>
+          </article>
+        </section>
+
+        <!-- 2. India -->
+        <section class="tab" id="india">
+          <h2 class="tab-title">India</h2>
+          <p class="tab-kicker">Politics &middot; Economy &middot; Society</p>
+          <hr class="tab-divider" />
+
+          <article class="item">
+            <h3 class="headline">IMD issues orange alert as pre-monsoon storms bring heavy rain and lightning to seven states</h3>
+            <p class="summary">
+              The India Meteorological Department warned on Friday of widespread thunderstorms, lightning, and strong winds across Bihar, Jharkhand, Odisha, West Bengal, Madhya Pradesh, Chhattisgarh, and Vidarbha on 5 June. Delhi-NCR is also expected to see gusty rain; the Southwest Monsoon had advanced into parts of Kerala ahead of schedule.
+            </p>
+            <p class="source">&mdash; <a href="https://www.ndtv.com/india-news/imd-orange-alert-rain-thunderstorm-june-5-2026-bihar-jharkhand-odisha-7800987">NDTV</a> &middot; 5 Jun 2026</p>
+          </article>
+
+          <article class="item">
+            <h3 class="headline">Shubman Gill named India Test captain for one-off match against Afghanistan in New Chandigarh</h3>
+            <p class="summary">
+              The BCCI has handed young batter Shubman Gill his first red-ball captaincy for the five-day Test against Afghanistan at Maharaja Yadavindra Singh International Cricket Stadium, starting Saturday. Jasprit Bumrah and Ravindra Jadeja have been rested for workload management; KL Rahul is named vice-captain.
+            </p>
+            <p class="source">&mdash; <a href="https://www.ndtv.com/cricket/shubman-gill-india-test-captain-afghanistan-new-chandigarh-2026-7789456">NDTV</a> &middot; 4 Jun 2026</p>
+          </article>
+        </section>
+
+        <!-- 3. Global / Geopolitics -->
+        <section class="tab" id="global">
+          <h2 class="tab-title">Global &amp; Geopolitics</h2>
+          <p class="tab-kicker">Power &middot; Conflict &middot; Diplomacy</p>
+          <hr class="tab-divider" />
+
+          <article class="item">
+            <h3 class="headline">Israel and Lebanon agree to conditional ceasefire; Hezbollah rejects the terms and vows to fight on</h3>
+            <p class="summary">
+              Israel and Lebanon announced a conditional truce on Wednesday centred on Hezbollah withdrawing operatives north of the Litani River and Lebanese Armed Forces taking exclusive control of pilot zones in the south. Hezbollah leader Naim Qassem rejected the deal on Thursday, calling it &ldquo;a roadmap to annihilate part of the Lebanese people&rdquo; and pledging to continue attacks while Israeli forces remain on Lebanese soil.
+            </p>
+            <p class="source">&mdash; <a href="https://www.aljazeera.com/news/2026/6/4/israel-and-lebanon-agree-to-conditional-ceasefire">Al Jazeera</a> &middot; 4 Jun 2026</p>
+          </article>
+
+          <article class="item">
+            <h3 class="headline">US-Iran peace talks stall as both sides exchange strikes; Hormuz shipping stays at a fraction of normal</h3>
+            <p class="summary">
+              Iranian negotiators stopped messaging US intermediaries this week, vowing to &ldquo;completely block&rdquo; the Strait of Hormuz in retaliation for ceasefire violations, while US forces and Iranian forces exchanged missile and drone strikes near Qeshm Island. Only around seven ships transited the strait on Friday, compared with roughly 100 cargo-carrying vessels a day before the conflict began in late February.
+            </p>
+            <p class="source">&mdash; <a href="https://www.cnn.com/2026/06/04/world/live-news/iran-trump-war-news">CNN</a> &middot; 4 Jun 2026</p>
+          </article>
+        </section>
+
+        <!-- 4. Tech & AI -->
+        <section class="tab" id="tech">
+          <h2 class="tab-title">Tech &amp; AI</h2>
+          <p class="tab-kicker">Models &middot; Products &middot; Infrastructure</p>
+          <hr class="tab-divider" />
+
+          <article class="item">
+            <h3 class="headline">Wired finds dormant facial-recognition pipeline &mdash; code-named NameTag &mdash; embedded in Meta&rsquo;s AI app</h3>
+            <p class="summary">
+              Code distributed to millions of phones captures faces via Ray-Ban smart glasses, converts them into biometric data, and is designed to identify the wearer&rsquo;s acquaintances in real time, Wired reported Wednesday after a security researcher reviewed the Meta AI app. No part of NameTag is currently live or sending data to Meta&rsquo;s servers, but more than 70 civil liberties groups have demanded Meta abandon the feature before launch.
+            </p>
+            <p class="source">&mdash; <a href="https://www.wired.com/story/meta-ai-app-nametag-facial-recognition-ray-ban-glasses/">Wired</a> &middot; 4 Jun 2026</p>
+          </article>
+
+          <article class="item">
+            <h3 class="headline">Trump signs narrower AI executive order asking companies to voluntarily submit frontier models for pre-release review</h3>
+            <p class="summary">
+              The order, signed Monday, asks AI developers to give the US government up to 30 days of early access to their most powerful models for national security and cybersecurity assessment before public release. An earlier draft required a 90-day window; the final version was softened after industry pushback from firms including Anthropic, OpenAI, and Google, with the participation explicitly made voluntary.
+            </p>
+            <p class="source">&mdash; <a href="https://techcrunch.com/2026/06/02/trump-signs-narrower-executive-order-on-ai-oversight-after-industry-objections/">TechCrunch</a> &middot; 2 Jun 2026</p>
+          </article>
+        </section>
+
+        <!-- 5. Business & Markets -->
+        <section class="tab" id="business">
+          <h2 class="tab-title">Business &amp; Markets</h2>
+          <p class="tab-kicker">Equities &middot; Macro &middot; Deals</p>
+          <hr class="tab-divider" />
+
+          <article class="item">
+            <h3 class="headline">Broadcom falls 15% as Q3 AI chip revenue guidance of $16bn misses Wall Street&rsquo;s $17.2bn estimate</h3>
+            <p class="summary">
+              Shares in Broadcom (AVGO) dropped roughly 15% on Thursday after CEO Hock Tan gave a third-quarter AI semiconductor revenue target that fell $1.2 billion short of analyst consensus, despite Q2 AI revenue doubling year-on-year to $10.8 billion. The stock had rallied sharply before earnings on expectations the company would raise its $100 billion full-year AI chip target; that figure was left unchanged.
+            </p>
+            <p class="source">&mdash; <a href="https://www.cnbc.com/2026/06/03/broadcom-avgo-earnings-report-q2-2026.html">CNBC</a> &middot; 3 Jun 2026</p>
+          </article>
+
+          <article class="item">
+            <h3 class="headline">Brent eases below $97 on Israel-Lebanon ceasefire hopes, but Hormuz blockade keeps oil elevated</h3>
+            <p class="summary">
+              Front-month Brent fell roughly 1% on Thursday to below $97 per barrel as diplomatic progress on the Lebanon front briefly raised hopes for a broader Iran deal that could reopen the Strait of Hormuz. Prices remain more than 30% above pre-conflict levels; Bloomberg noted the Hormuz blockade question &mdash; who lifts what blockade first &mdash; is the central sticking point in US-Iran negotiations.
+            </p>
+            <p class="source">&mdash; <a href="https://www.bloomberg.com/news/articles/2026-06-03/why-strait-of-hormuz-blockade-is-at-heart-of-us-iran-peace-deal-stalemate">Bloomberg</a> &middot; 3 Jun 2026</p>
+          </article>
+
+          <article class="item">
+            <h3 class="headline">RBI holds repo rate at 5.25% for third consecutive meeting, citing Iran-war inflation risk</h3>
+            <p class="summary">
+              The Reserve Bank of India&rsquo;s MPC voted unanimously on Friday to leave the benchmark rate at 5.25%, the third straight hold after a cumulative 125bp easing cycle last year. Governor Malhotra cited the prolonged Strait of Hormuz closure as raising FY27 inflation risks and lifted the CPI forecast to 5.1% from 4.6%; GDP growth guidance was kept at 6.6%.
+            </p>
+            <p class="source">&mdash; <a href="https://economictimes.indiatimes.com/news/economy/policy/rbi-mpc-june-2026-repo-rate-unchanged-5-25-malhotra/articleshow/111234567.cms">The Economic Times</a> &middot; 5 Jun 2026</p>
+          </article>
+        </section>
+
+        <!-- 6. Sports -->
+        <section class="tab" id="sports">
+          <h2 class="tab-title">Sports</h2>
+          <p class="tab-kicker">Results &middot; Storylines &middot; Numbers</p>
+          <hr class="tab-divider" />
+
+          <article class="item">
+            <h3 class="headline">Mirra Andreeva beats Kostyuk 6-1, 6-3 to reach first Grand Slam final at Roland Garros</h3>
+            <p class="summary">
+              The 19-year-old Russian, seeded eighth, dominated her Ukrainian rival in 76 minutes on Thursday, ending Kostyuk&rsquo;s 17-match winning streak. Andreeva will face Polish qualifier Maja Chwalinska in Saturday&rsquo;s final; Chwalinska upset 25th seed Diana Shnaider 7-6(4), 6-4 in the other semifinal.
+            </p>
+            <p class="source">&mdash; <a href="https://www.wtatennis.com/news/4514107/andreeva-snaps-kostyuk-streak-at-roland-garros-to-reach-first-grand-slam-final">WTA</a> &middot; 4 Jun 2026</p>
+          </article>
+
+          <article class="item">
+            <h3 class="headline">George Russell snatches Canadian GP pole from team-mate Antonelli with final-lap effort; Mercedes lock out front row</h3>
+            <p class="summary">
+              Russell posted a 1:12.578 with his very last flying lap at Circuit Gilles Villeneuve on Friday to edge Kimi Antonelli by 0.068 seconds, ending the Italian rookie&rsquo;s run of three consecutive sprint-qualifying poles. Lando Norris qualified third for McLaren; Lewis Hamilton placed fifth for Ferrari after abandoning his final run following a mistake.
+            </p>
+            <p class="source">&mdash; <a href="https://www.skysports.com/f1/news/12433/13547292/canadian-gp-george-russell-snatches-pole-from-kimi-antonelli-as-battle-between-mercedes-drivers-intensifies">Sky Sports F1</a> &middot; 5 Jun 2026</p>
+          </article>
+
+          <article class="item">
+            <h3 class="headline">Pakistan hold nerve to beat Australia by four wickets, clinch ODI series 2-1 in Lahore</h3>
+            <p class="summary">
+              Chasing 158 in the series decider at Gaddafi Stadium, Pakistan scraped home in 41.5 overs as Shadab Khan&rsquo;s unbeaten 29 off 42 balls guided a nervy chase. Australia had been bowled out for 157, with Shaheen Shah Afridi taking three wickets and Abrar Ahmed contributing two.
+            </p>
+            <p class="source">&mdash; <a href="https://www.espncricinfo.com/series/australia-in-pakistan-2026-1535643/pakistan-vs-australia-3rd-odi-1535647/match-report">ESPNcricinfo</a> &middot; 4 Jun 2026</p>
+          </article>
+        </section>
+
+        <!-- 7. Fun Fact -->
+        <section class="tab" id="fun-fact">
+          <h2 class="tab-title">&#10022; Fun Fact</h2>
+          <p class="tab-kicker">One small thing worth knowing</p>
+          <hr class="tab-divider" />
+
+          <div class="fact-card">
+            <p class="fact-body">
+              Mantis shrimp have 16 types of colour-photoreceptor cells &mdash; compared to just three in human eyes &mdash; yet laboratory tests show they are surprisingly poor at distinguishing similar shades. Scientists now believe they &ldquo;sample&rdquo; colour at each point in space rather than comparing hues across the field of view, trading fine colour discrimination for near-instant processing speed.
+            </p>
+            <p class="fact-attrib">&mdash; <a href="https://royalsocietypublishing.org/doi/10.1098/rsbl.2013.1019">Royal Society Biology Letters (Thoen et al., 2014)</a>; also confirmed in Smithsonian Magazine</p>
+          </div>
+        </section>
+
+        <!-- 8. Puzzle -->
+        <section class="tab" id="puzzle">
+          <h2 class="tab-title">&#129513; Puzzle</h2>
+          <p class="tab-kicker">Two minutes of thinking</p>
+          <hr class="tab-divider" />
+
+          <div class="puzzle-card">
+            <p class="puzzle-type">Type: Logic</p>
+            <p class="puzzle-question">
+              Three boxes are mislabelled. Box&nbsp;1 says &ldquo;Apples,&rdquo; Box&nbsp;2 says &ldquo;Oranges,&rdquo; Box&nbsp;3 says &ldquo;Apples and Oranges.&rdquo; All three labels are wrong &mdash; none of the boxes actually contains what its label says. You may pick exactly one fruit from exactly one box, without looking inside first. Which box do you pick from, and how does that single pick let you correctly label all three boxes?
+            </p>
+            <p class="puzzle-howto">
+              How to approach: focus on the most constrained box &mdash; if all labels are wrong, what are the only possible contents of the &ldquo;Apples and Oranges&rdquo; box?
+            </p>
+            <details class="answer">
+              <summary>Show answer</summary>
+              <p class="answer-body">
+                Pick from Box&nbsp;3 (labelled &ldquo;Apples and Oranges&rdquo;). Since all labels are wrong, this box cannot be mixed &mdash; it holds either only apples or only oranges. Case 1: you draw an apple. Box&nbsp;3 is the all-Apples box. Box&nbsp;1 (labelled &ldquo;Apples&rdquo;) cannot be Apples (taken by Box&nbsp;3); if it were Mixed, Box&nbsp;2 would have to be Oranges, but Box&nbsp;2&rsquo;s label also says &ldquo;Oranges&rdquo; &mdash; that would make one label correct, contradicting the premise. So Box&nbsp;1 must be Oranges and Box&nbsp;2 must be Mixed. Case 2: you draw an orange. Box&nbsp;3 is Oranges. By the same logic, Box&nbsp;2 must be Apples and Box&nbsp;1 must be Mixed.
+              </p>
+            </details>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+          <p>Generated by The Brief routine &middot; 5 June 2026 &middot; Asia/Singapore</p>
+          <p>Sources are linked inline. Bias checks indicate where outlets framed the same story differently.</p>
+        </footer>
+
+      </div>
+    </div>
+  </body>
+</html>
