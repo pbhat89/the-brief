@@ -1,4 +1,19 @@
 <!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -67,82 +82,124 @@
   <div class="tabs" id="tabs"></div>
   <div id="content"></div>
   <div class="rule" style="margin-top:48px"></div>
-  <div class="metrics">⏱ Compiled 5 Jun 2026, 11:30 SGT &nbsp;·&nbsp; 🔍 16 web searches + live sports feed &nbsp;·&nbsp; tap any source to read in full</div>
-  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED & LINKED (LAST 48H)</div>
+  <div class="metrics">⏱ Compiled Friday, 5 June 2026 · 🔍 20 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
 </div>
 
 <script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eight entries in this exact order:
+     id    : one of "sg" | "india" | "geo" | "tech" | "biz" | "sports" | "fun" | "puzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 6 news tabs; fun/puzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+============================================================================= */
+
 const SECTIONS = [
   { id:"sg", title:"🇸🇬 Singapore", color:"#e74c3c", items:[
-    { headline:"WP to hold special cadres meeting over Pritam Singh's convictions", summary:"The Workers' Party will convene its inner-circle cadres and ask party chief Pritam Singh to account for his two convictions for lying to a parliamentary committee.", source:"The Straits Times", url:"https://www.straitstimes.com/singapore/politics", date:"Jun 4",
-      spectrum:{ left:"Frames it as the party affording Singh due process and closing ranks ahead of his appeal.", center:"Reports the cadres meeting and convictions factually, noting leadership implications.", right:"Emphasises accountability and what the convictions mean for opposition credibility." },
-      bias:"Outlets differ on whether the emphasis falls on Singh's pending appeal or the precedent for parliamentary conduct." },
-    { headline:"Gold slips, set for weekly loss on Middle East tensions", summary:"Gold edged lower Friday and headed for a weekly loss as Middle East tensions dampened hopes for a US–Iran peace deal, amid inflation and rate-hike concerns.", source:"Reuters", url:"https://www.reuters.com/markets/commodities/", date:"Jun 5",
-      spectrum:{ left:"Ties the moves to risks of US entanglement in another Middle East conflict.", center:"Reports gold's dip and the weekly trend against the rate and geopolitics backdrop.", right:"Frames safe-haven demand as evidence of policy and security uncertainty." },
-      bias:null },
-    { headline:"Singaporeans' life expectancy rises to 83.9 years", summary:"Department of Statistics data shows life expectancy reached 83.9 years in 2025; a 65-year-old is now expected to reach 86.6. An A*STAR researcher said the real challenge is extending healthy lifespan, not just lifespan.", source:"The Straits Times", url:"https://www.straitstimes.com/singapore", date:"Jun 4", spectrum:null, bias:null },
-    { headline:"Leopard cats to be relocated as development advances", summary:"Singapore's last remaining wild cat species will be relocated in H2 2026, with conservation authorities overseeing the move to identify suitable habitats and monitor adaptation afterwards.", source:"Mothership", url:"https://mothership.sg/", date:"Jun 4", spectrum:null, bias:null },
-    { headline:"Some SIA flights retimed amid regional disruption", summary:"Travellers were advised to check flight status as some Singapore Airlines services were delayed or retimed; the airline said it would keep monitoring conditions and adjust further if needed.", source:"CNA", url:"https://www.channelnewsasia.com/singapore", date:"Jun 4", spectrum:null, bias:null },
+    { headline:"Singapore Airlines in talks to order at least 50 wide-body jets",
+      summary:"Singapore Airlines is in early-stage talks with Airbus and Boeing for at least 50 large wide-body jets — the 400-seat Boeing 777X or the smaller Airbus A350-1000 — to power its next phase of growth into the 2030s. Both the carrier and the manufacturers declined to comment on the discussions.",
+      source:"Reuters", url:"https://www.reuters.com/business/aerospace-defense/", date:"Jun 4",
+      spectrum:null, bias:null },
+    { headline:"221 people under police investigation in Singapore over S$9 million in scams",
+      summary:"Singapore police said 221 people aged 15 to 81 are being investigated for suspected roles as scammers or money mules across more than 658 cases in which victims lost over S$9 million. The suspects were identified in an islandwide operation that ran from 21 May to 3 June.",
+      source:"CNA", url:"https://www.channelnewsasia.com/singapore", date:"Jun 4",
+      spectrum:null, bias:null },
   ]},
   { id:"india", title:"🇮🇳 India", color:"#e67e22", items:[
-    { headline:"Delimitation Bill 2026: govt's bid to expand Lok Sabha from 543 to 850 seats", summary:"The Delimitation Bill 2026 (Bill No. 108), with the Constitution 131st Amendment Bill, proposes raising Lok Sabha strength from 543 to 850 (up to 815 from states, 35 from UTs), basing delimitation on the 2011 census and enabling women's reservation sooner. The amendment was voted down in April's special session — 298 for, 230 against, short of the 352-vote two-thirds majority — and is reportedly likely to return in the Monsoon Session.", source:"The Indian Express", url:"https://indianexpress.com/section/india/", date:"Jun 4",
-      spectrum:{ left:"DMK and southern leaders call it a 'Damocles sword' — population-based seats would cut the South's representation; Tharoor says linking it to the women's quota holds women hostage.", center:"Explains delimitation as the constitutionally-mandated readjustment, with the South/North seat-share the core flashpoint.", right:"Frames expansion as overdue representation and notes BJP assurances the process will be 'fair and equitable'." },
-      bias:"National framing often leads on the seat-increase headline while underplaying the federalism stakes for southern states." },
-    { headline:"Census 2027 with caste enumeration to begin October 2026", summary:"The government will conduct the population census in two phases with caste enumeration; phase one starts Oct 1, 2026 in hilly/snow-bound regions (J&K, Himachal, Uttarakhand, Ladakh), phase two from Mar 1, 2027 elsewhere — India's first census since 2011.", source:"Hindustan Times", url:"https://www.hindustantimes.com/india-news", date:"Jun 4",
-      spectrum:{ left:"Welcomes caste enumeration as overdue data for social-justice policy and reservations.", center:"Reports the two-phase schedule and the decade-long delay since 2011.", right:"Stresses logistical scale and questions politicisation of caste data." },
-      bias:null },
-    { headline:"PM Modi reviews industrial projects in Surat", summary:"Modi visited Hazira in Surat district on June 5 to review ongoing industrial operations and infrastructure projects, part of a wider development push in Gujarat.", source:"The Hindu", url:"https://www.thehindu.com/news/national/", date:"Jun 5", spectrum:null, bias:null },
-    { headline:"Supreme Court invites comments on draft AI-in-courts rules", summary:"The Supreme Court sought public comments on draft 'Regulations for Use of AI in Courts 2026', signalling a formal framework for how AI tools may be used in the judiciary.", source:"The Economic Times", url:"https://economictimes.indiatimes.com/news/india", date:"Jun 4", spectrum:null, bias:null },
-    { headline:"India to host Afghanistan from June 6", summary:"India begins a home series (1 Test + 3 ODIs) against Afghanistan on June 6 under captain Shubman Gill — the first marquee fixture of the 2026 home season.", source:"NDTV Sports", url:"https://sports.ndtv.com/cricket", date:"Jun 4", spectrum:null, bias:null },
+    { headline:"Southwest monsoon reaches Kerala, three days later than normal",
+      summary:"The India Meteorological Department declared the onset of the southwest monsoon over Kerala on 4 June, three days after its normal 1 June date but within the usual range of variation. The IMD has forecast seasonal rainfall at about 90% of the long-period average — a below-normal monsoon.",
+      source:"The Hindu", url:"https://www.thehindu.com/news/national/", date:"Jun 4",
+      spectrum:null, bias:null },
+    { headline:"RBI holds key interest rate at 5.25% for a third straight meeting",
+      summary:"The Reserve Bank of India's Monetary Policy Committee kept the benchmark repo rate at 5.25% and retained its neutral stance, Governor Sanjay Malhotra said, marking a third consecutive hold. The RBI has cut rates by 125 basis points over the past year and flagged risks from West Asia tensions, higher crude prices and an uneven monsoon.",
+      source:"The Economic Times", url:"https://economictimes.indiatimes.com/news/economy/policy", date:"Jun 5",
+      spectrum:null, bias:null },
   ]},
   { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
-    { headline:"US House passes war-powers resolution on Iran", summary:"The Republican-led House voted 215-208 — four Republicans joining Democrats — to direct President Trump to withdraw US troops from Iran unless Congress authorises force, reflecting unease over the ongoing conflict.", source:"Reuters", url:"https://www.reuters.com/world/us/", date:"Jun 4",
-      spectrum:{ left:"Casts the vote as Congress reasserting constitutional war powers against unilateral escalation.", center:"Reports the 215-208 tally and cross-party defections factually.", right:"Frames it as constraining the President mid-conflict and a sign of Republican division." },
-      bias:"Coverage varies on whether the resolution is binding in practice or largely symbolic." },
-    { headline:"Israel and Lebanon agree to a ceasefire", summary:"A ceasefire agreed between Israel and Lebanon eased market jitters; oil prices and bond yields slipped on the news, lifting consumer-oriented stocks.", source:"BBC News", url:"https://www.bbc.com/news/world/middle_east", date:"Jun 4",
-      spectrum:{ left:"Emphasises civilian relief and pressure for a durable diplomatic track.", center:"Reports the ceasefire terms and immediate market and regional reaction.", right:"Frames it as a security win that lowers escalation risk in the region." },
-      bias:null },
-    { headline:"Markets brace for US May jobs report", summary:"Investors awaited May nonfarm payrolls (Friday), with analysts expecting a historically light ~85,000 jobs, down from 115,000 in April — a key signal for the Fed's rate path.", source:"AP News", url:"https://apnews.com/hub/economy", date:"Jun 4", spectrum:null, bias:null },
-    { headline:"Australia: One Nation walks back resident-eviction remark", summary:"A senior One Nation figure clarified the party would not evict foreign permanent residents, after lawmaker Barnaby Joyce suggested on Sky News Australia they could be forced to sell or have property seized.", source:"The Guardian", url:"https://www.theguardian.com/australia-news", date:"Jun 4", spectrum:null, bias:null },
+    { headline:"Five Eyes alliance warns China is recruiting through fake job ads",
+      summary:"The United States and its Five Eyes intelligence partners issued a rare joint warning that Chinese military intelligence is using LinkedIn and other job platforms to recruit government, military and cleared personnel. Posing as recruiters or consultants, operatives advertise bogus analyst roles before pressing targets for non-public information.",
+      source:"CNN", url:"https://www.cnn.com/2026/06/03/world/five-eyes-china-espionage-latam-intl", date:"Jun 3",
+      spectrum:null, bias:null },
+    { headline:"Israel and Lebanon agree to a conditional ceasefire; Hezbollah rejects it",
+      summary:"In a joint statement after US-brokered talks in Washington, Israel and Lebanon agreed to a ceasefire conditioned on Hezbollah halting attacks and withdrawing fighters from south of the Litani River. Hezbollah leader Naim Qassem rejected the deal, the two sides traded fresh strikes, and further talks are set for the week of 22 June.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/6/4/israel-and-lebanon-agree-to-conditional-ceasefire", date:"Jun 4",
+      spectrum:null,
+      bias:"Al Jazeera foregrounds Hezbollah's rejection and the continuing strikes, while Bloomberg and Reuters lead on the diplomatic breakthrough and the conditions placed on Hezbollah." },
+    { headline:"US House passes Russia sanctions and Ukraine aid bill, defying Trump",
+      summary:"The House passed legislation imposing new sanctions on Russian oil and gas and providing fresh aid for Ukraine, with 18 Republicans breaking from President Trump and party leaders. The bill faces an uncertain path in the Senate, where Republican leaders have so far declined to take up Russia sanctions measures.",
+      source:"CNN", url:"https://www.cnn.com/2026/06/04/politics/house-vote-ukraine-russia-bill", date:"Jun 4",
+      spectrum:null,
+      bias:"CNN frames the vote as a rebuke of Trump's posture on the war, while conservative outlets emphasize that it passed only over the objections of Republican leaders." },
   ]},
   { id:"tech", title:"💻 Tech & AI", color:"#27ae60", items:[
-    { headline:"Microsoft launches 'Scout', an always-on AI agent in Microsoft 365", summary:"Microsoft introduced Scout, an always-on AI personal agent wired into Teams, Outlook, OneDrive and SharePoint to manage workplace tasks across cloud, desktop and web.", source:"The Verge", url:"https://www.theverge.com/microsoft", date:"Jun 3", spectrum:null, bias:null },
-    { headline:"SpaceX targets record ~$75bn IPO for space-based AI data centres", summary:"SpaceX is pursuing a record-shattering IPO of roughly $75bn to fund space-based AI data centres; retail investors can request shares via apps like Robinhood and SoFi.", source:"TheStreet", url:"https://www.thestreet.com/", date:"Jun 3", spectrum:null, bias:null },
-    { headline:"Yann LeCun's AMI Labs raises $1.03bn for 'world models'", summary:"The new venture from Yann LeCun raised $1.03bn to build world models — AI systems that learn how the physical world works rather than just predicting text.", source:"TechCrunch", url:"https://techcrunch.com/category/artificial-intelligence/", date:"Jun 2", spectrum:null, bias:null },
-    { headline:"TSMC: chip supply to lag AI demand 'for years'", summary:"TSMC CEO C.C. Wei said global chip supply will fall short of AI-fuelled demand for years, reiterating a forecast of 30%+ sales growth in 2026 as hyperscalers spend ~$725bn on AI.", source:"Bloomberg", url:"https://www.bloomberg.com/technology", date:"Jun 4", spectrum:null, bias:null },
-    { headline:"AI coding startup Lovable adds $100M revenue in a month", summary:"Lovable said it added $100M in revenue in a single month with just 146 employees, while AI networking startup Eridu exited stealth with a $200M Series A.", source:"TechCrunch", url:"https://techcrunch.com/category/startups/", date:"Jun 3", spectrum:null, bias:null },
+    { headline:"Apple's WWDC opens June 8 with a Gemini-powered Siri revamp expected",
+      summary:"Apple's Worldwide Developers Conference begins 8 June, with a long-delayed Siri overhaul expected to headline alongside iOS 27 and its companion updates. Reporting indicates the new Siri will lean on a custom model built with Google's Gemini team under a partnership struck earlier this year.",
+      source:"TechCrunch", url:"https://techcrunch.com/2026/06/04/what-to-expect-from-wwdc-2026-siris-highly-anticipated-revamp-and-apple-intelligence-updates/", date:"Jun 4",
+      spectrum:null, bias:null },
   ]},
   { id:"biz", title:"📈 Business & Markets", color:"#8e44ad", items:[
-    { headline:"Broadcom plunges ~15% on soft AI outlook, drags chips", summary:"Broadcom shares tumbled double digits after its AI sales outlook missed estimates, pulling down the chip sector and pressing pause on Wall Street's extended rally.", source:"Bloomberg", url:"https://www.bloomberg.com/markets", date:"Jun 4", spectrum:null, bias:null },
-    { headline:"CrowdStrike falls post-earnings; consumer stocks rise", summary:"Cybersecurity firm CrowdStrike dropped after results, adding to tech weakness, while consumer-oriented stocks gained as oil and yields slipped on the Israel–Lebanon ceasefire.", source:"Reuters", url:"https://www.reuters.com/markets/us/", date:"Jun 4", spectrum:null, bias:null },
-    { headline:"AI boom mints 19 new billionaires", summary:"Bloomberg reported the AI surge — across firms like Cerebras, Replit and Vercel — created 19 new billionaires this year as the buildout monetises fast.", source:"Bloomberg", url:"https://www.bloomberg.com/billionaires", date:"Jun 4", spectrum:null, bias:null },
-    { headline:"PhonePe shelves IPO as global tensions rattle markets", summary:"Walmart-backed Indian fintech PhonePe shelved its IPO plans, citing market turbulence from rising global tensions.", source:"The Economic Times", url:"https://economictimes.indiatimes.com/markets", date:"Jun 3", spectrum:null, bias:null },
-    { headline:"Bitcoin rallies, breaking with tech", summary:"Bitcoin extended a sharp rally even as tech stocks wobbled, with Bloomberg noting crypto's widening divergence from equities after a Strategy share sale fed a broader rout.", source:"Bloomberg", url:"https://www.bloomberg.com/crypto", date:"Jun 4", spectrum:null, bias:null },
+    { headline:"Broadcom shares drop despite surging AI chip revenue",
+      summary:"Broadcom reported quarterly revenue of about $22.2 billion, up 48% from a year earlier, with AI semiconductor revenue jumping roughly 143% to $10.8 billion. Shares fell sharply after CEO Hock Tan left the company's full-year AI chip sales target unchanged at more than $100 billion.",
+      source:"CNBC", url:"https://www.cnbc.com/2026/06/03/broadcom-avgo-earnings-report-q2-2026.html", date:"Jun 3",
+      spectrum:null, bias:null },
   ]},
   { id:"sports", title:"🎾🏏🏎️ Sports", color:"#c0392b", items:[
-    { headline:"🎾 French Open: Cobolli stuns Auger-Aliassime; an Italian finalist assured", summary:"10th seed Flavio Cobolli came from a set down to beat Felix Auger-Aliassime 4-6 6-4 6-4 6-4 for his maiden Grand Slam semifinal (and top-10 debut). He'll face fellow Italian Matteo Arnaldi, who advanced after Matteo Berrettini retired injured (hip) trailing 5-7 2-5 — guaranteeing an Italian in the final.", source:"Roland-Garros", url:"https://www.rolandgarros.com/en-us/", date:"Jun 3", spectrum:null, bias:null },
-    { headline:"🎾 Big names tumble: Sabalenka, Sinner, Djokovic all out", summary:"World No.1 Aryna Sabalenka was sensationally dumped out in the quarterfinals by Diana Shnaider. With Jannik Sinner stunned in round two, Novak Djokovic gone and Carlos Alcaraz absent injured, the draw blew wide open. Women's final: Diana Shnaider vs Mirra Andreeva (who beat Marta Kostyuk for her first major final). Men's other semi: Zverev (2) vs Mensik (26).", source:"BBC Sport", url:"https://www.bbc.com/sport/tennis", date:"Jun 4", spectrum:null, bias:null },
-    { headline:"🏏 India host Afghanistan: Test from June 6", summary:"India's home series (1 Test, June 6–10, + 3 ODIs) starts under captain Shubman Gill (KL Rahul vice-captain in the Test). Squad includes Jaiswal, Shreyas Iyer and Ishan Kishan; Afghanistan led by Hashmatullah Shahidi.", source:"ESPNcricinfo", url:"https://www.espncricinfo.com/series", date:"Jun 4", spectrum:null, bias:null },
-    { headline:"🏏 IPL 2026 wrap: RCB win back-to-back titles", summary:"Royal Challengers Bengaluru retained their crown — their second IPL title in two years — beating Gujarat Titans by 5 wickets in the Ahmedabad final (12 balls to spare), under captain Rajat Patidar. Virat Kohli was Player of the Final (75* off 42). Rajasthan Royals' Vaibhav Sooryavanshi, 15, won Orange Cap (776 runs) and MVP; GT's Kagiso Rabada took Purple Cap (29 wickets).", source:"ESPNcricinfo", url:"https://www.espncricinfo.com/series/ipl-2026", date:"May 31", spectrum:null, bias:null },
-    { headline:"🏎️ F1: Antonelli wins in Canada; Hamilton & Verstappen complete podium", summary:"At the Canadian GP (May 22–24), Kimi Antonelli took his 4th consecutive win after polesitter George Russell retired with a power-unit failure on Lap 30. Lewis Hamilton passed Verstappen late for P2 — his best result since joining Ferrari — and Max Verstappen's P3 was his and Red Bull's first podium of 2026.", source:"Formula 1", url:"https://www.formula1.com/en/results/2026/races", date:"May 24", spectrum:null, bias:null },
-    { headline:"🏎️ Championship: Antonelli extends lead; Ferrari overtakes McLaren", summary:"Antonelli's win stretched his drivers' championship lead to 43 points after Russell's DNF. Mercedes lead the constructors' comfortably; Ferrari moved ahead of McLaren into 2nd after Canada, with Red Bull a distant 4th. Next up: the Monaco GP.", source:"Sky Sports F1", url:"https://www.skysports.com/f1/standings", date:"May 24", spectrum:null, bias:null },
+    { headline:"🎾 Andreeva beats Kostyuk to reach her first French Open final",
+      summary:"Mirra Andreeva, 19, reached her first Grand Slam final by beating Marta Kostyuk in straight sets, 6-1, 6-3, at Roland Garros. She will meet unseeded qualifier Maja Chwalińska, one of the tournament's surprise stories, in Saturday's final.",
+      source:"ESPN", url:"https://www.espn.com/tennis/", date:"Jun 4",
+      spectrum:null, bias:null },
+    { headline:"🎾 French Open men's title left wide open after Sinner, Alcaraz and Djokovic exits",
+      summary:"With Carlos Alcaraz withdrawing before the tournament with a wrist injury and both Jannik Sinner and Novak Djokovic out early, the men's semifinals feature Alexander Zverev, Jakub Menšík and the all-Italian pairing of Flavio Cobolli and Matteo Arnaldi. Zverev is the highest-ranked man left in the draw.",
+      source:"BBC Sport", url:"https://www.bbc.com/sport/tennis", date:"Jun 5",
+      spectrum:null, bias:null },
   ]},
   { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
   { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
 ];
 
 const FUN_FACT = {
-  text: "Honey never spoils. Archaeologists have found pots of honey in ancient Egyptian tombs over 3,000 years old that are still perfectly edible. Its low moisture content and acidic pH make it inhospitable to bacteria — the original forever-food.",
-  tag: "Category · Food & Chemistry"
+  text: "An octopus has three hearts and blue blood. Two branchial hearts pump blood through the gills, while a third systemic heart drives it around the body — and that systemic heart actually stops beating when the animal swims, which is one reason octopuses prefer to crawl. The blue colour comes from hemocyanin, a copper-based molecule that carries oxygen well in cold, low-oxygen water.",
+  tag: "Category · Marine Biology"
 };
 
 const PUZZLE = {
-  type: "Lateral Thinking",
-  title: "The Two Fuses",
-  how: "A timing puzzle with a twist. The fuses burn unevenly, so you can't measure by length. Think about what changes if you light a fuse from BOTH ends at once.",
-  question: "You have two fuses and a lighter. Each fuse takes exactly 60 minutes to burn end-to-end, but burns at an INCONSISTENT rate (half a fuse might burn in 5 minutes, the other half in 55). Using only these two fuses, how do you measure exactly 45 minutes?",
-  answer: "Light Fuse A at BOTH ends and Fuse B at ONE end, all at the same moment.\n\n• Fuse A, burning from both ends, is fully consumed in 30 minutes (the two flames meet somewhere in the middle).\n• At that 30-minute mark, Fuse B has exactly 30 minutes of burn remaining. Now light Fuse B's OTHER end too.\n• Fuse B, now burning from both ends, consumes its remaining 30 minutes in just 15 minutes.\n• 30 + 15 = 45 minutes. ✓\n\nKey insight: lighting both ends always halves the remaining burn time, regardless of the uneven rate."
+  type: "Logic",
+  title: "The Midnight Bridge",
+  how: "Sending the fastest walker back and forth as the escort feels efficient — but check what happens if the two slowest cross together instead.",
+  question: "Four travellers must cross a rickety rope bridge at night with a single flashlight.\nThe bridge holds at most two people at a time, and whoever crosses must carry the flashlight, so it has to be walked back for the others.\nThe four need 1, 2, 5, and 10 minutes to cross; when two cross together they move at the slower one's pace.\nWhat is the least total time for all four to get across?",
+  answer: "17 minutes.\nSend the 1 and 2 across first (2 min), then the 1 returns with the flashlight (1 min).\nNow send the two slowest, 5 and 10, across together (10 min); the 2 — already waiting on the far side — returns (2 min).\nFinally the 1 and 2 cross again (2 min).\nTotal: 2 + 1 + 10 + 2 + 2 = 17 minutes. The key is pairing the two slowest so the 10-minute walk happens only once, instead of letting the fastest escort everyone (which costs 19)."
 };
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
 
 function renderFun(){
   return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
