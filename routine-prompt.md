@@ -198,31 +198,80 @@ Then stop. Do not write archive files for a skipped day except a `YYYY-MM-DD.jso
 
 ## Stage 4 — Publish and archive
 
-### 4a. Send the email (or draft, if the connector only supports drafts)
+### 4a. Create the Gmail draft — PLAIN TEXT ONLY
 
-Send / draft via the Gmail connector to **`<<RECIPIENT_EMAIL>>`**.
+**Hard constraint learned from prior runs:** the claude.ai Gmail connector's `create_draft` tool takes a single plain-text body string. It does NOT support HTML MIME parts, multipart/alternative, or attachments. Any HTML you put in the body will render as raw source text in the recipient's inbox. Embedded HTML is therefore forbidden in the body.
 
-- **Subject:** `☕ The Brief · {today's long date}` — for example, `☕ The Brief · Friday, 5 June 2026`
+The brief's rich rendering lives at the **Pages URL** only. The Gmail draft is a plain-text pointer to it.
 
-- **Body — always use this exact structure**, in this order:
+Call the Gmail connector's `create_draft` tool ONCE with these arguments:
 
-  1. A **plain-text intro line** with the live link, so the recipient can read the brief even if their mail client refuses to render HTML or shows it as raw source:
+- **to:** `<<RECIPIENT_EMAIL>>`
+- **subject:** `☕ The Brief · {today's long date}` — for example, `☕ The Brief · Friday, 5 June 2026`
+- **body:** the **plain-text body below**. Do NOT include any HTML tags, no inline `<style>`, no `<script>` — none of it will render. Plain text only.
 
-     ```
-     ☕ The Brief · {today's long date}
+#### Plain-text body format
 
-     View in browser: https://pbhat89.github.io/the-brief/archive/YYYY-MM-DD.html
+Compose the body as the following structure. Every line is plain text. Use the actual Pages URL with today's date substituted:
 
-     (HTML version below; also attached as YYYY-MM-DD.html.)
-     ```
+```
+☕ THE BRIEF · {today's long date}
 
-  2. The **full verified HTML** of the brief, embedded as the HTML part of the email body. Use a multipart/alternative or HTML-body send so the rich version renders for clients that support it. Do NOT escape the HTML — it should be the live markup.
+Read the full brief: https://pbhat89.github.io/the-brief/archive/YYYY-MM-DD.html
 
-- **Attachment:** in addition to embedding the HTML in the body, **attach the HTML file as `YYYY-MM-DD.html`**. This is the last-line fallback if both the inline HTML and the Pages link fail (Pages was down, repo was rate-limited, etc.). Three independent ways to read the brief: inline, link, attachment.
 
-- **Pages link format:** the link in the body is always `https://pbhat89.github.io/the-brief/archive/YYYY-MM-DD.html` where `YYYY-MM-DD` matches today's archive filename. GitHub Pages serves the file as soon as the commit lands on `main` (typically within 30-60 seconds of push).
+SINGAPORE
+• {Headline 1} — {outlet}
+• {Headline 2} — {outlet}
+• {Headline 3} — {outlet}
 
-- **If the connector only exposes `create_draft` (no `send`):** create the draft — the recipient will manually send it. Use the same body structure and attachment. Do not "skip the email" because send isn't available; the draft is the deliverable.
+INDIA
+• {Headline 1} — {outlet}
+• {Headline 2} — {outlet}
+• {Headline 3} — {outlet}
+
+GLOBAL / GEOPOLITICS
+• {Headline 1} — {outlet}
+• {Headline 2} — {outlet}
+• {Headline 3} — {outlet}
+
+TECH & AI
+• {Headline 1} — {outlet}
+• {Headline 2} — {outlet}
+
+BUSINESS & MARKETS
+• {Headline 1} — {outlet}
+• {Headline 2} — {outlet}
+
+SPORTS
+• {Headline 1} — {outlet}
+• {Headline 2} — {outlet}
+
+✦ FUN FACT
+{One sentence — the fact itself, no source line.}
+
+🧩 PUZZLE ({type})
+{One-sentence puzzle setup.}
+
+—
+Full brief with spectrum framing, bias checks, sources, and the puzzle answer:
+https://pbhat89.github.io/the-brief/archive/YYYY-MM-DD.html
+```
+
+Rules for the plain-text body:
+
+- Headlines are single-line teasers: the same headline text as in the HTML, but no summary, no links, no spectrum, no bias check. The link at the bottom is how the reader gets the full content.
+- Use the unicode bullet `•` for items. Use uppercase tab names. Keep tab separators as plain blank lines.
+- The "Read the full brief" link appears twice: once near the top, once at the bottom. Use the same URL both times.
+- The link MUST use today's actual date in `YYYY-MM-DD` form, matching the archive filename you write in Stage 4b. GitHub Pages serves the file within 30-60s of push.
+- Total body length should be roughly 25-40 lines. The reader's job is to scan the teaser and click through; not to read the full brief inline.
+
+**Do NOT:**
+- Include any HTML in the body. No `<p>`, no `<a>`, no `<style>`, nothing.
+- Attempt to add an attachment. The MCP doesn't support it; trying will either silently fail or break the draft.
+- Send the draft. The connector only exposes `create_draft`; a separate Google Apps Script auto-sends it. Your job ends at draft creation.
+
+If `create_draft` fails for any reason (auth, quota, malformed args), log the failure and move on to Stage 4b — the Pages URL will still serve the brief, so the publish chain is degraded but not broken.
 
 ### 4b. Write archive files
 
@@ -269,12 +318,21 @@ Write three files into `archive/`:
    `INDEX.md` carries story rows only. The fun-fact ID and puzzle type for the day live in the JSON file written above — tomorrow's run reads them from there for fun-fact / puzzle dedup.
    Always append; never rewrite existing rows. Replace any literal tabs inside a headline with a single space before writing.
 
-### 4c. Commit
+### 4c. Commit and push to `main`
 
-- Create branch `claude/the-brief-YYYY-MM-DD`.
-- Stage the three new files (`archive/YYYY-MM-DD.html`, `archive/YYYY-MM-DD.json`, updated `archive/INDEX.md`).
-- Commit with message: `the-brief: YYYY-MM-DD`.
-- Push the branch. A PR is not required — the commit on the branch is the durable record.
+**Critical:** push to `main`, not to a feature branch. Two reasons: (1) the GitHub Pages site is published from `main`, so the brief is only viewable at the Pages URL after `main` updates; (2) creating new branches has failed silently in prior runs due to MCP / git-proxy permission scope.
+
+Steps:
+
+1. Stage the three new files: `archive/YYYY-MM-DD.html`, `archive/YYYY-MM-DD.json`, updated `archive/INDEX.md`.
+2. Commit on `main` with author `Claude <noreply@anthropic.com>` (or whatever the MCP-side default is) and message `the-brief: YYYY-MM-DD`.
+3. **Push to `main`.** Do not create a `claude/...` branch. Do not open a PR.
+4. After the push succeeds, **verify Pages is serving the new file** by HEAD-requesting `https://pbhat89.github.io/the-brief/archive/YYYY-MM-DD.html`. If the request returns 404 for more than 60 seconds after a successful push, log the Pages-not-serving failure; do not retry (Pages often takes 30-60s to build).
+
+If the push to `main` fails with 403 or a permissions error:
+- Do NOT silently move on. The Pages URL in the email body is the deliverable — if `main` doesn't get the file, the URL 404s and the recipient sees an empty page.
+- Surface the failure clearly in the run log: "PUSH FAILED to pbhat89/the-brief main. The Gmail draft contains a link that will 404. Manual intervention required."
+- Still write the archive files locally in the session so the user can recover them if needed.
 
 ---
 
