@@ -27,8 +27,14 @@ Run the pipeline below in order. Do not skip stages.
 - **Short hash:** Compute a short hash by lowercasing the headline, stripping all punctuation, collapsing whitespace to single spaces, and taking the first 8 characters of `sha1(normalized_headline).hexdigest()`. Use this exact procedure everywhere — Stage 0, Stage 2, Stage 4 — so hashes are stable across days.
 - **Key entities:** A comma-separated, lowercase list of the proper nouns + the core event verb for an item. Example: `modi, parliament, monsoon-session, opens`. Three to six entities is the sweet spot.
 - **Fun-fact ID:** `funfact-` plus the short hash of the fun fact's one-line headline (same hash procedure).
-- **Puzzle type:** one of `visual`, `logic`, `quantitative`, `lateral`.
-- **Tabs (fixed order):** Singapore, India, Global / Geopolitics, Tech & AI, Business & Markets, Sports, ✦ Fun Fact, 🧩 Puzzle.
+- **Puzzle type — two namespaces:**
+  - *Internal (dedup):* lowercase `visual`, `logic`, `quantitative`, `lateral` — used in `EXCLUDE_PUZZLE_TYPES` and the JSON `puzzle.type` field for the archive.
+  - *Display (in the HTML's `PUZZLE.type`):* Title Case `"Visual"`, `"Logic"`, `"Quantitative"`, `"Lateral Thinking"` — used in the rendered puzzle card.
+  - Both versions are stored: HTML uses display, JSON uses internal. Map between them as needed.
+- **Tabs — two namespaces:**
+  - *Template SECTIONS `id` (internal, CSS-friendly):* `sg`, `india`, `geo`, `tech`, `biz`, `sports`, `fun`, `puzzle` — used for HTML rendering only.
+  - *Display labels / JSON `tab` field:* `Singapore`, `India`, `Global / Geopolitics`, `Tech & AI`, `Business & Markets`, `Sports`, `Fun Fact`, `Puzzle` — used in the rendered HTML titles, the JSON archive, the plain-text email teaser, and `dedup.md`.
+  - Fixed order in both namespaces.
 
 ---
 
@@ -86,82 +92,127 @@ As you compile candidates, drop any whose short hash is in `EXCLUDE_HASHES` or w
 
 ### Volume targets
 
-- Singapore: 2-4 items
-- India: 2-4 items
-- Global / Geopolitics: 2-4 items
-- Tech & AI: 2-3 items
-- Business & Markets: 2-3 items
-- Sports: 2-3 items (mix tennis / cricket / F1; only include sports that have real news in the window)
-- Fun Fact: exactly 1
-- Puzzle: exactly 1
+These are the **research** targets — over-collect so Stage 3 verification has cull headroom before Stage 2's final-item targets:
+
+- Singapore: 5-7 candidates (final 4-5 in brief)
+- India: 5-7 candidates (final 4-5 in brief)
+- Global / Geopolitics: 4-6 candidates (final 3-4 in brief)
+- Tech & AI: 4-6 candidates (final 3-5 in brief)
+- Business & Markets: 4-6 candidates (final 3-5 in brief)
+- Sports: 5-7 candidates (final 4-6 in brief; mix tennis / cricket / F1; only include sports that have real news in the window)
+- Fun Fact: 2-3 candidates (final 1)
+- Puzzle: 2-3 candidates (final 1)
 
 ---
 
 ## Stage 2 — Draft the HTML brief from `template.html`
 
-**STRICT TEMPLATE REQUIREMENT — read this before writing any HTML.**
+**MANDATORY APPROACH.** The brief is served via GitHub Pages where JavaScript runs normally in the recipient's browser. The email is plain-text only (handled in Stage 4a) and carries a Pages link — NOT inline HTML. This means you must NOT strip JavaScript, external fonts, or visual richness from the template. Earlier prompt versions wrongly forbade those — that guidance has been retired.
 
-The HTML you produce becomes the email body. Email clients (Gmail in particular) strip `<script>` tags and ignore inline event handlers like `onclick=""`. **Any tab system or content renderer that depends on JavaScript will render as a blank page in the inbox.** This has actually happened on a prior run: a JS-tabbed UI shipped, Gmail stripped the scripts, and the recipient saw masthead + footer with no content between them. Do not repeat that mistake.
+### What you produce
 
-To guarantee inbox-rendering, use `template.html` **literally**, not as inspiration:
+Today's archive HTML file. It must be a verbatim copy of `template.html` with three things substituted in:
 
-1. **Read `template.html` in full** and copy its complete HTML/CSS into your draft as the starting point. The `<style>` block, the `<nav class="tabs">` with anchor-link chips, the eight `<section class="tab">` blocks, and the `<details>` puzzle answer are all email-safe and must be preserved.
-2. **Replace ONLY the example `<article class="item">` elements** inside each `<section class="tab">` with real items from your Stage 1 research. Each replacement article must have exactly the template's structure: `<h3 class="headline">`, `<p class="summary">`, `<p class="source">`, and optionally `<div class="spectrum">` + `<p class="bias-check">`.
-3. **Replace the date** in `.masthead .meta` with today's actual date in the form `Friday · 5 June 2026 · Asia/Singapore`.
-4. **Replace the Fun Fact card** body (`.fact-body`) and source link (`.fact-attrib`) with today's fact.
-5. **Replace the Puzzle card** content (`.puzzle-type`, `.puzzle-question`, `.puzzle-howto`, `.answer-body`) with today's puzzle.
-6. **Replace the footer date** in `.footer` with today's date.
+1. **Date placeholders** — replace every `{{DATE_SHORT}}` (e.g. `Fri, 5 June 2026`) and `{{DATE_LONG}}` (e.g. `Friday, 5 June 2026`) with today's date in Asia/Singapore.
+2. **`{{SEARCH_COUNT}}`** — replace with a rough count of web searches you ran in Stage 1 (an integer; "16" is fine if uncertain).
+3. **The three data structures inside `<script>`** — `SECTIONS`, `FUN_FACT`, `PUZZLE` — get their placeholder items replaced with real content.
 
-What you must NOT change:
-- The `<style>` block. Do not add fonts. Do not add new CSS classes. Do not change colors.
-- The 8 `<section class="tab">` blocks or their `id` attributes (`singapore`, `india`, `global`, `tech`, `business`, `sports`, `fun-fact`, `puzzle`).
-- The `<nav class="tabs">` and its anchor-link chips.
-- The `<details>` element on the puzzle answer.
+Every other byte of `template.html` (the `<style>` block, the `render()` function, the masthead markup, the tabs container, the metrics row, the footer) is **immutable**. Copy it byte-for-byte. Do not "improve" the CSS. Do not change the colors. Do not rename CSS classes. Do not swap fonts. Do not remove the `<script>` block.
 
-What you must NEVER add:
-- `<script>` tags or any JavaScript whatsoever.
-- `onclick=""`, `onload=""`, or any `on*=""` attribute.
-- External `<link rel="stylesheet">` references (no Google Fonts, no CDN CSS).
-- External `<img src="">` from remote URLs.
-- Any tab UI that needs JS to switch views. The template's anchor-link chips (`<a href="#singapore">`, etc.) work without JS — clicking scrolls to the section. That is the only acceptable tab mechanism.
+### Filling `SECTIONS`
 
-**Items per tab (real news, not placeholders):**
-- Singapore, India, Global / Geopolitics: 3-4 items each. 1-2 of them on political stories carry a `<div class="spectrum">` + `<p class="bias-check">`.
-- Tech & AI, Business & Markets, Sports: 2-3 items each.
-- Fun Fact: 1.
-- Puzzle: 1.
+The template ships with one placeholder item per news tab (six placeholders in total) and a comment indicating where to add more. Replace each placeholder item with a real item, and add more items so each tab has the right count.
 
-Build the eight tabs in the fixed order above.
-3. **Per item formatting:**
-   - Bold headline (use the template's headline class)
-   - 1-2 sentence summary using the specifics you captured. Be declarative.
-   - A clickable line at the end: `— <outlet> · <publish date>` — the entire line is the hyperlink to the article URL.
-4. **Spectrum (Left / Center / Right) framing block:** Include this block on **political** items in the Singapore, India, and Global tabs. Summarize how left-leaning, centrist, and right-leaning outlets are framing the same story in one short line each. Use the spectrum slot in the template. Do not force a spectrum onto non-political items (sports, business, tech, weather, accidents without political angle).
-5. **Per-item Bias Check:** Only include where outlets genuinely diverge in framing, emphasis, or omission. One or two sentences. Never repeat across items. Never global.
-6. **Update items:** Prefix the headline with `Update:` and lead the summary with the new fact ("As of Thursday, the count has risen to 47, up from 12 yesterday.").
-7. **Fun Fact tab:**
-   - One true, surprising, verifiable fact.
-   - Must be **fresh**: its `fun-fact-id` must not be in `EXCLUDE_FUNFACTS`. If a candidate collides, swap it.
-   - Include a short verification source line (in-list source preferred, but reputable encyclopedic sources are acceptable for evergreen facts as long as you can name the source).
-8. **Puzzle tab:**
-   - Pick a puzzle whose **type** is not in `EXCLUDE_PUZZLE_TYPES`. Rotate through `visual`, `logic`, `quantitative`, `lateral` over the days.
-   - The specific puzzle must also not repeat (check the last 2-3 days' JSON for puzzle text).
-   - It must be **genuinely challenging** — not trivia, not a riddle a 10-year-old would solve in 5 seconds.
-   - Include in the card: a type label (e.g. `Type: Logic`), a one-line "how to approach" hint, the puzzle body, and the answer inside the template's `<details>` block.
-9. Confirm every link is the **article URL**, not a homepage. Confirm every source name appears in the allowed list for that tab.
+**Items per tab:**
+- Singapore: 4-5 items
+- India: 4-5 items
+- Global / Geopolitics: 3-4 items
+- Tech & AI: 3-5 items
+- Business & Markets: 3-5 items
+- Sports: 4-6 items (mix tennis 🎾, cricket 🏏, F1 🏎️; only sports with real news in the 48h window)
+
+**Per item, the object shape is:**
+
+```javascript
+{ headline:"...",
+  summary:"...",
+  source:"Outlet Name",
+  url:"https://full.article.url/here",
+  date:"Jun 4",                              // short date
+  spectrum: { left:"...", center:"...", right:"..." },   // OR null
+  bias: "..."                                            // OR null
+}
+```
+
+**Spectrum block rules:**
+- Only on political items in the Singapore, India, and Global tabs.
+- Each side gets ONE short sentence describing how left-leaning, centrist, and right-leaning outlets framed the story.
+- Quote actual outlet positions, not stereotypes. If you cannot find three genuinely distinct framings from real outlets, set `spectrum: null` for that item.
+
+**Bias note rules:**
+- Optional, even on items with a spectrum.
+- Use it only when there's something specific to say about HOW outlets diverge — emphasis, omission, what's foregrounded. Never global. Never repeated.
+- Format: a single observational sentence. No editorial verdict.
+- If nothing specific to say, set `bias: null`.
+
+**JavaScript string-literal hygiene (this is where prior runs broke things):**
+- Inside JS strings, escape single quotes (`\'`) and backslashes (`\\`).
+- Use HTML entities or unicode for typographic marks: `&rsquo;` or the actual `'` character, em-dash `&mdash;` or `—`. Whichever you pick, keep it consistent.
+- Multi-line content (Puzzle question/answer) uses `\n` for line breaks.
+- Do NOT introduce template literals with backticks unless you escape them inside JS — stick to double-quoted strings.
+
+### Filling `FUN_FACT`
+
+```javascript
+const FUN_FACT = {
+  text: "{{FUN_FACT_BODY}}",       // 2-3 sentences. Verifiable. Surprising but true.
+  tag: "{{FUN_FACT_CATEGORY}}"     // e.g. "Category · Food & Chemistry"
+};
+```
+
+Rules:
+- The fact must be verifiable against at least TWO reputable sources (encyclopedic, primary, or established news).
+- Its `fun-fact-id` (per the hashing convention) must NOT be in `EXCLUDE_FUNFACTS`.
+- Listicle / "amazing facts" sites are not acceptable sources.
+- **Topic** is not stored in the HTML's `FUN_FACT` object, but you must record it in the JSON archive (Stage 4b's `fun_fact.topic` field). Pick a coarse one-word topic: `space`, `biology`, `history`, `language`, `physics`, `geography`, `culture`, `chemistry`, `mathematics`, etc. This drives the soft topical-rotation rule in `dedup.md`.
+
+### Filling `PUZZLE`
+
+```javascript
+const PUZZLE = {
+  type: "Logic",                   // exactly one of: "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+  title: "Two Trains and a Bird",  // short evocative name
+  how: "Think about ...",          // one-line "how to approach" hint
+  question: "...",                 // the puzzle setup; use \n for line breaks
+  answer: "..."                    // the answer; use \n for line breaks; appears inside the toggle
+};
+```
+
+Rules:
+- `type` must NOT be in `EXCLUDE_PUZZLE_TYPES`. Rotate through the four types day to day.
+- The specific puzzle (its question text hash) must NOT match a puzzle from the last 2-3 days.
+- Genuinely challenging — not trivia, not a 5-second riddle. Two minutes of real thinking is the target.
+- The answer must be unambiguous. Re-solve the puzzle yourself before writing the answer to confirm.
+
+### Other rules
+
+- **Update items:** When including a story that's an `Update:` per the dedup rules, prefix the `headline` field with `"Update: "` and lead the `summary` with the new fact.
+- **Source-list compliance:** Every `source` field must name an outlet from the allowed list for that tab (see Stage 1's "Allowed sources per tab"). Drop the item if you can only verify it via off-list outlets.
+- **URL hygiene:** Every `url` must be the deep link to the specific article — not a homepage, not a section index, not an aggregator. If you cannot find the article URL, drop the item.
 
 ### Pre-Stage-3 self-check (mandatory)
 
-Before proceeding to Stage 3, scan the draft HTML for these violations. Any one of them means **regenerate the draft from `template.html`** — do not patch:
+Before proceeding to Stage 3, run these checks on the draft. Any one failure means **regenerate the affected section** — do not patch by hand:
 
-1. Contains `<script` anywhere? FAIL.
-2. Contains `onclick=`, `onload=`, `onerror=`, or any `on[a-z]+=` attribute? FAIL.
-3. Contains `<link rel="stylesheet"` or `@import url(` pointing to a remote URL? FAIL.
-4. Contains `<img src="http` (any remote image)? FAIL.
-5. Missing any of the 8 `<section class="tab" id="...">` blocks with the exact IDs `singapore`, `india`, `global`, `tech`, `business`, `sports`, `fun-fact`, `puzzle`? FAIL.
-6. The `<style>` block has been modified from `template.html` in ways other than removing unused rules? FAIL.
+1. Does the file still contain ANY `{{...}}` placeholder string (e.g. `{{DATE_LONG}}`, `{{HEADLINE}}`, `{{SUMMARY}}`)? **FAIL** — every placeholder must be substituted with real data before Stage 3.
+2. Does the `<script>` block still contain the `render()` function and the `SECTIONS`, `FUN_FACT`, `PUZZLE` constants? If any is missing, **FAIL** — the template's render code was wrongly stripped.
+3. Does `SECTIONS` have exactly 8 entries in this order: `sg`, `india`, `geo`, `tech`, `biz`, `sports`, `fun`, `puzzle`? If not, **FAIL**.
+4. Do the news tab counts hit the targets above (SG 4-5, India 4-5, Global 3-4, Tech 3-5, Biz 3-5, Sports 4-6)? If under-staffed in any tab, **regenerate that section** with backfill from your Stage 1 over-collection.
+5. For every item with `spectrum` non-null, do all three fields (`left`, `center`, `right`) have substantive content? If any is empty or `null` inside the object, **FAIL** — either fill it or set the whole `spectrum` to `null`.
+6. Does any `headline`, `summary`, `source`, or `url` field contain unescaped single quotes (`'`) inside a single-quoted JS string, or unescaped backticks inside a template literal? **FAIL** — fix the escaping, the JS won't parse otherwise.
+7. Are the dates in `<title>`, `.sub`, and `.metrics` all today's date in Asia/Singapore?  If any are stale or still `{{...}}`, **FAIL**.
 
-Only after the draft passes all six checks do you proceed to Stage 3.
+Only after the draft passes all seven checks do you proceed to Stage 3.
 
 At the end of Stage 2 you have a complete HTML draft. Do not send it yet.
 
@@ -345,7 +396,12 @@ If the push to `main` fails with 403 or a permissions error:
 - Use the Oxford comma. Use SGT for any time references unless the event location dictates otherwise (then convert and append `(SGT: HH:MM)`).
 - Numbers: spell out one through nine; use digits for 10 and above. Always digits for scores, percentages, prices, ages, years.
 - Spectrum lines should be observational, not editorial. "The Guardian frames X as Y; The Telegraph emphasizes Z." Not "The Guardian shamefully ignored Z."
-- No emojis in the brief content. The only emojis permitted are the proper-noun ones already in the template: ☕ in the subject, ✦ on the Fun Fact tab, 🧩 on the Puzzle tab.
+- No emojis in headlines, summaries, or spectrum / bias text. The only emojis permitted are those already baked into the template's tab titles and the section markers:
+  - Subject prefix: ☕
+  - Tab titles: 🇸🇬 Singapore, 🇮🇳 India, 🌍 Global / Geopolitics, 💻 Tech & AI, 📈 Business & Markets, 🎾🏏🏎️ Sports, ✦ Fun Fact, 🧩 Puzzle
+  - Sports item headline prefixes (use to mark the sport): 🎾 (tennis), 🏏 (cricket), 🏎️ (F1)
+  - Section markers in the plain-text email body: ✦ FUN FACT, 🧩 PUZZLE
+  - Do not invent new emoji uses. Do not add country flags to non-Singapore/India items, decorative emojis to summaries, etc.
 
 ---
 
@@ -354,6 +410,6 @@ If the push to `main` fails with 403 or a permissions error:
 - Do all five stages in one pass. Do not send mid-pipeline drafts.
 - If a step's tool errors, retry once, then either route around it (e.g., different search query) or, if blocked at the email step, write the archive files first so tomorrow's run still has continuity, then surface the failure in a follow-up email attempt.
 - Treat `verifier-checklist.md` and `dedup.md` as the source of truth where they disagree with this prompt — they were written by the human and you should defer to them on specifics.
-- Your final visible action is the sent email. Everything after that is bookkeeping.
+- The Gmail connector creates a draft only; a separate Google Apps Script auto-sends it within ~15 minutes. Your final action in the routine is the `create_draft` call (Stage 4a) plus the push to `main` (Stage 4c). You do not need to confirm delivery.
 
 Begin Stage 0 now.

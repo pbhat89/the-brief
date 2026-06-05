@@ -1,683 +1,227 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
-  The Brief — design reference / fillable HTML template.
-  This file is BOTH a visual reference and the structural template the daily
-  routine should produce. The example content below is realistic-looking
-  placeholder text; the routine should output the SAME STRUCTURE with real
-  news. Notes for the routine:
-    - Replace the date in the masthead and footer (Asia/Singapore).
-    - Replace each <article> with a real item: bold headline, 1-2 sentence
-      specific summary, and a "— Source · Date" anchor link at the end.
-    - Add a Spectrum block + Bias Check ONLY where outlets actually framed
-      the story differently. Do not force it on every item.
-    - Keep the 8 tab anchor chips at the top in the order shown.
-  Email constraints honored:
-    - Inline-equivalent styling via <style> in <head> (Gmail supports this).
-    - No external fonts, no JS, no remote assets.
-    - <details> used only for the puzzle answer.
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
 -->
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="dark" />
-    <meta name="supported-color-schemes" content="dark" />
-    <title>The Brief</title>
-    <style>
-      /* Reset-ish */
-      body, table, td, p, a, h1, h2, h3 {
-        -webkit-text-size-adjust: 100%;
-        -ms-text-size-adjust: 100%;
-      }
-      body {
-        margin: 0;
-        padding: 0;
-        width: 100% !important;
-        background-color: #0f1115;
-        color: #e6e6ea;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          Helvetica, Arial, sans-serif;
-        font-size: 16px;
-        line-height: 1.6;
-      }
-      a { color: #d4b87a; text-decoration: none; }
-      a:hover { text-decoration: underline; }
-
-      /* Layout shell */
-      .wrap {
-        width: 100%;
-        background-color: #0f1115;
-        padding: 24px 16px 48px 16px;
-      }
-      .container {
-        max-width: 680px;
-        margin: 0 auto;
-        background-color: #0f1115;
-      }
-
-      /* Masthead */
-      .masthead {
-        padding: 8px 4px 18px 4px;
-        border-bottom: 1px solid #2a2d36;
-        margin-bottom: 22px;
-      }
-      .wordmark {
-        font-family: Georgia, "Times New Roman", serif;
-        font-size: 30px;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-        color: #e6e6ea;
-        margin: 0;
-        line-height: 1.2;
-      }
-      .wordmark .accent { color: #c9a96e; }
-      .masthead .meta {
-        margin-top: 6px;
-        color: #9aa0a8;
-        font-size: 13px;
-        letter-spacing: 0.4px;
-        text-transform: uppercase;
-      }
-      .gold-rule {
-        height: 2px;
-        width: 56px;
-        background-color: #c9a96e;
-        margin: 14px 0 0 0;
-        border: 0;
-      }
-
-      /* Tab nav (anchor chips) */
-      .tabs {
-        margin: 0 0 28px 0;
-        padding: 0;
-        font-size: 0; /* kill inline-block gap */
-      }
-      .tabs a {
-        display: inline-block;
-        font-size: 13px;
-        line-height: 1.2;
-        padding: 7px 12px;
-        margin: 0 6px 8px 0;
-        background-color: #181a20;
-        border: 1px solid #2a2d36;
-        border-radius: 999px;
-        color: #e6e6ea;
-        text-decoration: none;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          Helvetica, Arial, sans-serif;
-      }
-      .tabs a .num {
-        color: #c9a96e;
-        font-weight: 700;
-        margin-right: 6px;
-      }
-
-      /* Sections */
-      section.tab {
-        margin: 0 0 36px 0;
-        padding: 0;
-      }
-      h2.tab-title {
-        font-family: Georgia, "Times New Roman", serif;
-        font-size: 22px;
-        font-weight: 700;
-        color: #c9a96e;
-        margin: 0 0 4px 0;
-        line-height: 1.3;
-        letter-spacing: 0.2px;
-      }
-      .tab-kicker {
-        color: #9aa0a8;
-        font-size: 12px;
-        text-transform: uppercase;
-        letter-spacing: 1.2px;
-        margin: 0 0 14px 0;
-      }
-      .tab-divider {
-        border: 0;
-        border-top: 1px solid #2a2d36;
-        margin: 0 0 18px 0;
-      }
-
-      /* Items */
-      article.item {
-        margin: 0 0 22px 0;
-        padding: 0;
-      }
-      .headline {
-        font-family: Georgia, "Times New Roman", serif;
-        font-size: 18px;
-        font-weight: 700;
-        color: #e6e6ea;
-        margin: 0 0 6px 0;
-        line-height: 1.35;
-      }
-      .summary {
-        font-size: 15px;
-        line-height: 1.6;
-        color: #e6e6ea;
-        margin: 0 0 8px 0;
-      }
-      .source {
-        font-size: 13px;
-        color: #9aa0a8;
-        margin: 0;
-      }
-      .source a { color: #d4b87a; }
-
-      /* Spectrum block */
-      .spectrum {
-        margin: 12px 0 6px 0;
-        padding: 12px 14px;
-        background-color: #181a20;
-        border: 1px solid #2a2d36;
-        border-radius: 6px;
-      }
-      .spectrum-label {
-        font-size: 11px;
-        letter-spacing: 1.4px;
-        text-transform: uppercase;
-        color: #9aa0a8;
-        margin: 0 0 10px 0;
-        font-weight: 600;
-      }
-      .spectrum-row {
-        margin: 0 0 8px 0;
-        padding: 4px 0 4px 12px;
-        font-size: 14px;
-        line-height: 1.55;
-        color: #e6e6ea;
-      }
-      .spectrum-row:last-child { margin-bottom: 0; }
-      .spectrum-row.left   { border-left: 3px solid #4a90c2; }
-      .spectrum-row.center { border-left: 3px solid #9aa0a8; }
-      .spectrum-row.right  { border-left: 3px solid #c25a4a; }
-      .spectrum-tag {
-        display: inline-block;
-        font-size: 11px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        margin-right: 8px;
-        vertical-align: baseline;
-      }
-      .spectrum-tag.left   { color: #4a90c2; }
-      .spectrum-tag.center { color: #c0c4cc; }
-      .spectrum-tag.right  { color: #c25a4a; }
-
-      .bias-check {
-        margin: 8px 0 0 0;
-        font-size: 13px;
-        line-height: 1.5;
-        color: #9aa0a8;
-        font-style: italic;
-      }
-      .bias-check strong {
-        color: #c9a96e;
-        font-style: normal;
-        font-weight: 700;
-        letter-spacing: 0.4px;
-        text-transform: uppercase;
-        font-size: 11px;
-        margin-right: 6px;
-      }
-
-      /* Fun fact card */
-      .fact-card {
-        background-color: #181a20;
-        border: 1px solid #2a2d36;
-        border-left: 3px solid #c9a96e;
-        border-radius: 6px;
-        padding: 18px 20px;
-        margin: 0 0 8px 0;
-      }
-      .fact-card .fact-body {
-        font-family: Georgia, "Times New Roman", serif;
-        font-size: 17px;
-        line-height: 1.6;
-        color: #e6e6ea;
-        margin: 0 0 10px 0;
-      }
-      .fact-card .fact-attrib {
-        font-size: 12px;
-        color: #9aa0a8;
-        margin: 0;
-      }
-      .fact-card .fact-attrib a { color: #d4b87a; }
-
-      /* Puzzle */
-      .puzzle-card {
-        background-color: #181a20;
-        border: 1px solid #2a2d36;
-        border-radius: 6px;
-        padding: 18px 20px;
-      }
-      .puzzle-type {
-        font-size: 11px;
-        letter-spacing: 1.4px;
-        text-transform: uppercase;
-        color: #c9a96e;
-        margin: 0 0 8px 0;
-        font-weight: 700;
-      }
-      .puzzle-question {
-        font-family: Georgia, "Times New Roman", serif;
-        font-size: 17px;
-        line-height: 1.55;
-        color: #e6e6ea;
-        margin: 0 0 10px 0;
-      }
-      .puzzle-howto {
-        font-size: 13px;
-        color: #9aa0a8;
-        margin: 0 0 14px 0;
-      }
-      details.answer {
-        background-color: #0f1115;
-        border: 1px solid #2a2d36;
-        border-radius: 4px;
-        padding: 10px 14px;
-      }
-      details.answer summary {
-        cursor: pointer;
-        color: #d4b87a;
-        font-size: 13px;
-        font-weight: 600;
-        letter-spacing: 0.4px;
-        text-transform: uppercase;
-        outline: none;
-      }
-      details.answer[open] summary { margin-bottom: 8px; }
-      details.answer .answer-body {
-        font-size: 14px;
-        line-height: 1.6;
-        color: #e6e6ea;
-        margin: 0;
-      }
-
-      /* Footer */
-      .footer {
-        margin-top: 36px;
-        padding-top: 18px;
-        border-top: 1px solid #2a2d36;
-        color: #9aa0a8;
-        font-size: 12px;
-        line-height: 1.6;
-      }
-      .footer p { margin: 0 0 4px 0; }
-
-      /* Mobile */
-      @media only screen and (max-width: 520px) {
-        .wrap { padding: 16px 10px 36px 10px; }
-        .wordmark { font-size: 26px; }
-        h2.tab-title { font-size: 20px; }
-        .headline { font-size: 17px; }
-        .summary { font-size: 15px; }
-        .tabs a { padding: 6px 10px; font-size: 12px; }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="wrap">
-      <div class="container">
-
-        <!-- Masthead -->
-        <header class="masthead">
-          <h1 class="wordmark">&#9788; The <span class="accent">Brief</span></h1>
-          <div class="meta">Thursday &middot; 5 June 2026 &middot; Asia/Singapore</div>
-          <hr class="gold-rule" />
-        </header>
-
-        <!-- Tab nav -->
-        <nav class="tabs" aria-label="Sections">
-          <a href="#singapore"><span class="num">01</span>Singapore</a>
-          <a href="#india"><span class="num">02</span>India</a>
-          <a href="#global"><span class="num">03</span>Global</a>
-          <a href="#tech"><span class="num">04</span>Tech &amp; AI</a>
-          <a href="#business"><span class="num">05</span>Business</a>
-          <a href="#sports"><span class="num">06</span>Sports</a>
-          <a href="#fun-fact"><span class="num">07</span>&#10022; Fun Fact</a>
-          <a href="#puzzle"><span class="num">08</span>&#129513; Puzzle</a>
-        </nav>
-
-        <!-- 1. Singapore -->
-        <section class="tab" id="singapore">
-          <h2 class="tab-title">Singapore</h2>
-          <p class="tab-kicker">Local &middot; Policy &middot; City life</p>
-          <hr class="tab-divider" />
-
-          <article class="item">
-            <h3 class="headline">MAS holds policy steady as core inflation edges to 1.9%</h3>
-            <p class="summary">
-              The Monetary Authority kept the S$NEER band unchanged at its
-              quarterly review, citing softer imported inflation and steady
-              wage growth. Core inflation came in at 1.9% year-on-year, the
-              lowest reading since late 2021.
-            </p>
-            <p class="source">&mdash; <a href="https://example.com/mas-review">The Straits Times</a> &middot; 4 Jun 2026</p>
-
-            <div class="spectrum" aria-label="How outlets framed this story">
-              <p class="spectrum-label">Spectrum</p>
-              <div class="spectrum-row left">
-                <span class="spectrum-tag left">Left</span>
-                Cautious hold leaves cost-of-living pressure on lower-income
-                households unaddressed; calls grow for targeted transfers.
-              </div>
-              <div class="spectrum-row center">
-                <span class="spectrum-tag center">Center</span>
-                MAS signals confidence that disinflation is on track without
-                needing to ease; growth forecast unchanged at 2.0-3.0%.
-              </div>
-              <div class="spectrum-row right">
-                <span class="spectrum-tag right">Right</span>
-                Steady hand vindicates tight policy; framed as a win for
-                fiscal discipline and the Singapore dollar's credibility.
-              </div>
-            </div>
-            <p class="bias-check"><strong>Bias check</strong>
-              Outlets agree on the facts (hold, 1.9% core) but diverge sharply
-              on who pays the cost of waiting &mdash; households or the currency.
-            </p>
-          </article>
-
-          <article class="item">
-            <h3 class="headline">Cross Island Line Phase 2 tunnelling begins under Pasir Ris</h3>
-            <p class="summary">
-              LTA started tunnel-boring works for the second phase of the
-              Cross Island Line, with the first segment running beneath
-              Pasir Ris Park. Service opening is still targeted for 2032.
-            </p>
-            <p class="source">&mdash; <a href="https://example.com/cil-phase2">CNA</a> &middot; 4 Jun 2026</p>
-          </article>
-
-          <article class="item">
-            <h3 class="headline">HDB resale prices rise 0.7% in May, fifth straight monthly gain</h3>
-            <p class="summary">
-              Flash estimates from SRX show resale prices up 0.7% month-on-month,
-              led by mature estates. Million-dollar transactions hit 142 in May,
-              a new monthly record.
-            </p>
-            <p class="source">&mdash; <a href="https://example.com/hdb-may">The Business Times</a> &middot; 3 Jun 2026</p>
-          </article>
-        </section>
-
-        <!-- 2. India -->
-        <section class="tab" id="india">
-          <h2 class="tab-title">India</h2>
-          <p class="tab-kicker">Politics &middot; Economy &middot; Society</p>
-          <hr class="tab-divider" />
-
-          <article class="item">
-            <h3 class="headline">Centre clears 12% hike in MSP for kharif pulses ahead of sowing season</h3>
-            <p class="summary">
-              The Cabinet approved revised minimum support prices for the
-              upcoming kharif season, with the steepest increase for tur and
-              moong. Procurement targets were also raised by roughly 20%.
-            </p>
-            <p class="source">&mdash; <a href="https://example.com/msp-kharif">The Hindu</a> &middot; 4 Jun 2026</p>
-
-            <div class="spectrum" aria-label="How outlets framed this story">
-              <p class="spectrum-label">Spectrum</p>
-              <div class="spectrum-row left">
-                <span class="spectrum-tag left">Left</span>
-                Hike is welcome but still trails farmer-led demands for a
-                legally guaranteed MSP; pulses remain in deficit, importers gain.
-              </div>
-              <div class="spectrum-row center">
-                <span class="spectrum-tag center">Center</span>
-                A pragmatic pre-monsoon move &mdash; addresses pulses inflation
-                while staying within the fiscal envelope of the budget.
-              </div>
-              <div class="spectrum-row right">
-                <span class="spectrum-tag right">Right</span>
-                Decisive support for farmers and a strategic push for
-                aatmanirbharta in edible oils and pulses.
-              </div>
-            </div>
-            <p class="bias-check"><strong>Bias check</strong>
-              The number (12%) is undisputed; the framing splits on whether
-              this is generous, adequate, or insufficient.
-            </p>
-          </article>
-
-          <article class="item">
-            <h3 class="headline">RBI keeps repo rate at 6.00%, lowers FY27 inflation forecast to 4.1%</h3>
-            <p class="summary">
-              The MPC voted 5-1 to hold rates, with one member dissenting in
-              favour of a 25bp cut. Governor flagged monsoon progress as the
-              key swing variable for the next review.
-            </p>
-            <p class="source">&mdash; <a href="https://example.com/rbi-jun">Mint</a> &middot; 4 Jun 2026</p>
-          </article>
-
-          <article class="item">
-            <h3 class="headline">Bengaluru airport opens Terminal 2 second phase, adds 25 mppa capacity</h3>
-            <p class="summary">
-              The expansion brings BLR's total capacity to about 75 million
-              passengers a year and adds 22 new aerobridges. International
-              transfers move into a new dedicated wing.
-            </p>
-            <p class="source">&mdash; <a href="https://example.com/blr-t2">Indian Express</a> &middot; 3 Jun 2026</p>
-          </article>
-        </section>
-
-        <!-- 3. Global / Geopolitics -->
-        <section class="tab" id="global">
-          <h2 class="tab-title">Global &amp; Geopolitics</h2>
-          <p class="tab-kicker">Power &middot; Conflict &middot; Diplomacy</p>
-          <hr class="tab-divider" />
-
-          <article class="item">
-            <h3 class="headline">EU and Mercosur sign long-stalled trade pact, France abstains</h3>
-            <p class="summary">
-              After 25 years of talks, the EU and the South American bloc
-              signed the agreement in Brussels. France abstained, citing
-              farm-sector concerns; ratification still needs national approvals.
-            </p>
-            <p class="source">&mdash; <a href="https://example.com/eu-mercosur">Reuters</a> &middot; 4 Jun 2026</p>
-
-            <div class="spectrum" aria-label="How outlets framed this story">
-              <p class="spectrum-label">Spectrum</p>
-              <div class="spectrum-row left">
-                <span class="spectrum-tag left">Left</span>
-                Deal risks accelerating Amazon deforestation and undercutting
-                EU farm and labour standards; critics say enforcement is thin.
-              </div>
-              <div class="spectrum-row center">
-                <span class="spectrum-tag center">Center</span>
-                A pragmatic recalibration as Europe diversifies trade away
-                from China; gains for autos and machinery, friction in agri.
-              </div>
-              <div class="spectrum-row right">
-                <span class="spectrum-tag right">Right</span>
-                Strategic win for European industry and a pushback against
-                protectionism; France's abstention framed as parochial.
-              </div>
-            </div>
-            <p class="bias-check"><strong>Bias check</strong>
-              Same signing event, three different stories &mdash; environment,
-              geoeconomics, or industrial competitiveness.
-            </p>
-          </article>
-
-          <article class="item">
-            <h3 class="headline">South Korea and Japan agree on first joint Arctic research base</h3>
-            <p class="summary">
-              The two countries will co-fund a permanent station in Svalbard
-              by 2029, with rotating scientific leadership. The pact also
-              covers icebreaker time-sharing.
-            </p>
-            <p class="source">&mdash; <a href="https://example.com/kr-jp-arctic">Nikkei Asia</a> &middot; 4 Jun 2026</p>
-          </article>
-
-          <article class="item">
-            <h3 class="headline">Argentina inflation slows to 1.2% monthly, lowest in five years</h3>
-            <p class="summary">
-              INDEC reported May CPI at 1.2% month-on-month, with annual
-              inflation now at 32%. Peso strengthened modestly on the print.
-            </p>
-            <p class="source">&mdash; <a href="https://example.com/arg-cpi">Bloomberg</a> &middot; 3 Jun 2026</p>
-          </article>
-        </section>
-
-        <!-- 4. Tech & AI -->
-        <section class="tab" id="tech">
-          <h2 class="tab-title">Tech &amp; AI</h2>
-          <p class="tab-kicker">Models &middot; Products &middot; Infrastructure</p>
-          <hr class="tab-divider" />
-
-          <article class="item">
-            <h3 class="headline">Anthropic ships Claude Sonnet 4.8 with 2M-token context window</h3>
-            <p class="summary">
-              The new model doubles context from the 4.7 release and improves
-              tool-use latency by roughly 30% on long-running agent benchmarks.
-              Pricing for prompt-cached reads drops to $0.30/MTok.
-            </p>
-            <p class="source">&mdash; <a href="https://example.com/sonnet-48">The Verge</a> &middot; 4 Jun 2026</p>
-          </article>
-
-          <article class="item">
-            <h3 class="headline">TSMC breaks ground on second Arizona fab, 2nm node targeted for 2028</h3>
-            <p class="summary">
-              The Phoenix expansion will roughly triple TSMC's US output by
-              the end of the decade. Apple and Nvidia are reportedly among
-              the anchor customers.
-            </p>
-            <p class="source">&mdash; <a href="https://example.com/tsmc-az2">Wall Street Journal</a> &middot; 3 Jun 2026</p>
-          </article>
-
-          <article class="item">
-            <h3 class="headline">EU AI Act enters second compliance phase &mdash; what changes today</h3>
-            <p class="summary">
-              General-purpose model providers must now publish training-data
-              summaries and energy disclosures. Penalties for non-compliance
-              scale up to 3% of global turnover.
-            </p>
-            <p class="source">&mdash; <a href="https://example.com/eu-ai-phase2">Financial Times</a> &middot; 4 Jun 2026</p>
-          </article>
-        </section>
-
-        <!-- 5. Business & Markets -->
-        <section class="tab" id="business">
-          <h2 class="tab-title">Business &amp; Markets</h2>
-          <p class="tab-kicker">Equities &middot; Macro &middot; Deals</p>
-          <hr class="tab-divider" />
-
-          <article class="item">
-            <h3 class="headline">Brent crude slips below $74 as OPEC+ signals gradual unwind</h3>
-            <p class="summary">
-              The cartel said it would taper voluntary cuts from September,
-              earlier than markets expected. Brent settled at $73.60, the
-              lowest close since February.
-            </p>
-            <p class="source">&mdash; <a href="https://example.com/brent-74">Reuters</a> &middot; 4 Jun 2026</p>
-          </article>
-
-          <article class="item">
-            <h3 class="headline">Nippon Steel completes $14.9B acquisition of US Steel after delay</h3>
-            <p class="summary">
-              The deal closed after revised commitments on Pennsylvania
-              employment and a US-citizen board majority. CFIUS lifted its
-              conditional hold last week.
-            </p>
-            <p class="source">&mdash; <a href="https://example.com/nippon-us-steel">CNBC</a> &middot; 3 Jun 2026</p>
-          </article>
-
-          <article class="item">
-            <h3 class="headline">STI closes at fresh 16-year high, led by banks and Singtel</h3>
-            <p class="summary">
-              The Straits Times Index gained 0.8% to 3,612, with DBS up 1.4%
-              on rate-resilience commentary. Year-to-date the STI is up 9.6%.
-            </p>
-            <p class="source">&mdash; <a href="https://example.com/sti-high">The Business Times</a> &middot; 4 Jun 2026</p>
-          </article>
-        </section>
-
-        <!-- 6. Sports -->
-        <section class="tab" id="sports">
-          <h2 class="tab-title">Sports</h2>
-          <p class="tab-kicker">Results &middot; Storylines &middot; Numbers</p>
-          <hr class="tab-divider" />
-
-          <article class="item">
-            <h3 class="headline">Alcaraz beats Sinner in five sets to reach Roland-Garros final</h3>
-            <p class="summary">
-              The Spaniard edged the world No. 1 in a four-hour semifinal,
-              7-5, 4-6, 6-3, 3-6, 7-6(8). He'll face Zverev for a third
-              consecutive French Open title.
-            </p>
-            <p class="source">&mdash; <a href="https://example.com/alcaraz-sinner">L'Equipe</a> &middot; 4 Jun 2026</p>
-          </article>
-
-          <article class="item">
-            <h3 class="headline">India clinch T20I series in West Indies with five-wicket win</h3>
-            <p class="summary">
-              Chasing 168 in Tarouba, India got there with seven balls to
-              spare. Series victory is their fourth on Caribbean soil since 2017.
-            </p>
-            <p class="source">&mdash; <a href="https://example.com/ind-wi-t20">ESPNcricinfo</a> &middot; 4 Jun 2026</p>
-          </article>
-
-          <article class="item">
-            <h3 class="headline">F1: Verstappen on pole for Canadian Grand Prix, McLarens lock out row two</h3>
-            <p class="summary">
-              Verstappen took his fifth pole of the season by 0.072s over
-              Norris. Hamilton qualified seventh in his second race for Ferrari.
-            </p>
-            <p class="source">&mdash; <a href="https://example.com/f1-canada">Autosport</a> &middot; 4 Jun 2026</p>
-          </article>
-        </section>
-
-        <!-- 7. Fun Fact -->
-        <section class="tab" id="fun-fact">
-          <h2 class="tab-title">&#10022; Fun Fact</h2>
-          <p class="tab-kicker">One small thing worth knowing</p>
-          <hr class="tab-divider" />
-
-          <div class="fact-card">
-            <p class="fact-body">
-              Octopuses have three hearts &mdash; but two of them stop beating
-              when the octopus swims, which is why they prefer to crawl. It
-              also explains why they're famously bad long-distance travellers.
-            </p>
-            <p class="fact-attrib">&mdash; <a href="https://example.com/octopus-hearts">Smithsonian Magazine</a></p>
-          </div>
-        </section>
-
-        <!-- 8. Puzzle -->
-        <section class="tab" id="puzzle">
-          <h2 class="tab-title">&#129513; Puzzle</h2>
-          <p class="tab-kicker">Two minutes of thinking</p>
-          <hr class="tab-divider" />
-
-          <div class="puzzle-card">
-            <p class="puzzle-type">Type: Lateral</p>
-            <p class="puzzle-question">
-              A man walks into a bar and asks the bartender for a glass of
-              water. The bartender pulls out a shotgun and points it at him.
-              The man says &ldquo;thank you&rdquo; and walks out. Why?
-            </p>
-            <p class="puzzle-howto">
-              How to: think about what the water was actually <em>for</em>,
-              not what the man asked for. One short sentence is enough.
-            </p>
-            <details class="answer">
-              <summary>Show answer</summary>
-              <p class="answer-body">
-                The man had hiccups. He wanted water to cure them; the
-                bartender startled him instead, which worked just as well.
-              </p>
-            </details>
-          </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer">
-          <p>Generated by The Brief routine &middot; 5 June 2026 &middot; Asia/Singapore</p>
-          <p>Sources are linked inline. Bias checks indicate where outlets framed the same story differently.</p>
-        </footer>
-
-      </div>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · {{DATE_SHORT}}</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · {{DATE_LONG}}</div>
+      <span class="livebadge">● Real news · sources linked</span>
     </div>
-  </body>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled {{DATE_LONG}} · 🔍 {{SEARCH_COUNT}} web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eight entries in this exact order:
+     id    : one of "sg" | "india" | "geo" | "tech" | "biz" | "sports" | "fun" | "puzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 6 news tabs; fun/puzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+============================================================================= */
+
+const SECTIONS = [
+  { id:"sg", title:"🇸🇬 Singapore", color:"#e74c3c", items:[
+    { headline:"{{HEADLINE}}", summary:"{{SUMMARY}}", source:"{{OUTLET}}", url:"{{URL}}", date:"{{DATE}}",
+      spectrum:{ left:"{{LEFT_FRAMING}}", center:"{{CENTER_FRAMING}}", right:"{{RIGHT_FRAMING}}" },
+      bias:"{{BIAS_NOTE_OR_NULL}}" },
+    // ADD 2-3 MORE SINGAPORE ITEMS HERE. Spectrum + bias only on political items.
+  ]},
+  { id:"india", title:"🇮🇳 India", color:"#e67e22", items:[
+    { headline:"{{HEADLINE}}", summary:"{{SUMMARY}}", source:"{{OUTLET}}", url:"{{URL}}", date:"{{DATE}}",
+      spectrum:{ left:"{{LEFT_FRAMING}}", center:"{{CENTER_FRAMING}}", right:"{{RIGHT_FRAMING}}" },
+      bias:"{{BIAS_NOTE_OR_NULL}}" },
+    // ADD 2-3 MORE INDIA ITEMS HERE.
+  ]},
+  { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
+    { headline:"{{HEADLINE}}", summary:"{{SUMMARY}}", source:"{{OUTLET}}", url:"{{URL}}", date:"{{DATE}}",
+      spectrum:{ left:"{{LEFT_FRAMING}}", center:"{{CENTER_FRAMING}}", right:"{{RIGHT_FRAMING}}" },
+      bias:"{{BIAS_NOTE_OR_NULL}}" },
+    // ADD 2-3 MORE GLOBAL ITEMS HERE.
+  ]},
+  { id:"tech", title:"💻 Tech & AI", color:"#27ae60", items:[
+    { headline:"{{HEADLINE}}", summary:"{{SUMMARY}}", source:"{{OUTLET}}", url:"{{URL}}", date:"{{DATE}}", spectrum:null, bias:null },
+    // ADD 1-2 MORE TECH ITEMS HERE.
+  ]},
+  { id:"biz", title:"📈 Business & Markets", color:"#8e44ad", items:[
+    { headline:"{{HEADLINE}}", summary:"{{SUMMARY}}", source:"{{OUTLET}}", url:"{{URL}}", date:"{{DATE}}", spectrum:null, bias:null },
+    // ADD 1-2 MORE BUSINESS ITEMS HERE.
+  ]},
+  { id:"sports", title:"🎾🏏🏎️ Sports", color:"#c0392b", items:[
+    { headline:"🎾 {{HEADLINE}}", summary:"{{SUMMARY}}", source:"{{OUTLET}}", url:"{{URL}}", date:"{{DATE}}", spectrum:null, bias:null },
+    // ADD 1-2 MORE SPORTS ITEMS HERE. Prefix headlines with 🎾 (tennis), 🏏 (cricket), or 🏎️ (F1).
+  ]},
+  { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
+  { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
+];
+
+const FUN_FACT = {
+  text: "{{FUN_FACT_BODY}}",
+  tag: "{{FUN_FACT_CATEGORY}}"
+};
+
+const PUZZLE = {
+  type: "{{PUZZLE_TYPE}}",
+  title: "{{PUZZLE_TITLE}}",
+  how: "{{PUZZLE_APPROACH_HINT}}",
+  question: "{{PUZZLE_QUESTION}}",
+  answer: "{{PUZZLE_ANSWER}}"
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn){var a=document.getElementById('ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
 </html>

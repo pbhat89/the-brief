@@ -1,6 +1,6 @@
 # Verifier Checklist — Stage 3 of The Brief
 
-This is the spec the verifier follows after the writer produces the draft HTML and before the email is sent. The verifier is a separate persona from the writer. Read this file in full at the start of every Stage 3 pass.
+This is the spec the verifier follows after the writer produces the draft HTML and before the brief is published (HTML pushed to `main` and Gmail draft created). The verifier is a separate persona from the writer. Read this file in full at the start of every Stage 3 pass.
 
 Companion files: `routine-prompt.md` (pipeline + source lists per tab), `dedup.md` (overlap rules), `template.html` (output shape).
 
@@ -14,7 +14,7 @@ Default to omission over confident assertion. A shorter brief with zero errors b
 
 "Second source" means a distinct outlet with its own reporting — not a syndication of the first, not an aggregator, not a social post. Wire copy (AP, Reuters) republished by another outlet counts as ONE source, not two. Two outlets that both cite the same single press release count as ONE source.
 
-The goal of Stage 3 is zero embarrassing errors in the sent email. Not maximum content. Not the writer's ego. Not yours.
+The goal of Stage 3 is zero embarrassing errors in the published brief. Not maximum content. Not the writer's ego. Not yours.
 
 ---
 
@@ -70,10 +70,10 @@ Do not invent outlet names. Do not use "a left-leaning outlet" as a placeholder.
 ## 5. Puzzle Verification
 
 - The puzzle must have a single unambiguous correct answer. If multiple defensible answers exist, replace the puzzle.
-- Re-solve the puzzle yourself from scratch. Do not read the answer first. Then compare your solution to the answer in the `<details>` block.
+- Re-solve the puzzle yourself from scratch. Do not read the answer first. Then compare your solution to the answer in the `PUZZLE.answer` field.
 - If your solution does not match, investigate: is the puzzle wording ambiguous, is the published answer wrong, or did you misread? Do not auto-trust the draft.
 - If you cannot confidently re-derive the answer in a reasonable time, the puzzle is too hard or under-specified for the audience — replace it.
-- Confirm the `<details>` / `<summary>` HTML actually hides the answer in the template (see `template.html`). A spoiled puzzle is a dead puzzle.
+- Confirm the answer stays hidden behind the "Show Answer" toggle in the template (see `template.html` — the `renderPuzzle()` function wraps the answer in a `.answer` div that's `display:none` until the button is clicked). A spoiled puzzle is a dead puzzle.
 
 ---
 
@@ -102,7 +102,7 @@ final: <the exact text after edit, or "REMOVED">
 reason: <which check failed and which second source was consulted>
 ```
 
-This log is for post-run review and for tuning the writer prompt over time. Do not include it in the sent email. Do not show it to the reader.
+This log is for post-run review and for tuning the writer prompt over time. Do not include it in the email or the published HTML. Do not show it to the reader.
 
 ---
 

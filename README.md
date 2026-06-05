@@ -3,10 +3,10 @@
 A self-contained daily news brief that runs every morning at 07:00 Asia/Singapore
 on Anthropic's cloud as a Claude Code Routine. The routine fetches real news,
 fact-checks it, deduplicates against the last 2-3 days of archived headlines,
-renders a styled HTML email from `template.html`, and sends it via the Gmail
-connector to a recipient address you configure locally (see "Recipient"
-below). It runs on the user's Max plan, so
-there is no API cost as long as overage and credits stay disabled in billing.
+renders an interactive HTML brief from `template.html`, publishes it via
+GitHub Pages, and emails a plain-text teaser with the Pages link via the
+Gmail connector. It runs on the user's Max plan, so there is no API cost as
+long as overage and credits stay disabled in billing.
 
 ## How it runs
 
@@ -16,17 +16,26 @@ Each morning the routine executes five stages in order:
   build an EXCLUDE set of recently-covered stories.
 - Stage 1 — Research. Pull from the source lists in `routine-prompt.md`,
   skipping anything in the EXCLUDE set.
-- Stage 2 — Draft. Compose the brief sections and render the HTML email using
-  `template.html`.
+- Stage 2 — Draft. Substitute today's data into `template.html` (date
+  placeholders + the `SECTIONS` / `FUN_FACT` / `PUZZLE` JS arrays) to produce
+  the day's rich HTML brief.
 - Stage 3 — Verify. Run every item past `verifier-checklist.md` (sourcing,
   dates, named entities, claims). Re-do anything that fails.
-- Stage 4 — Publish & Archive. Send the email through the Gmail connector,
-  then append today's headlines to `archive/INDEX.md` so tomorrow's run can
-  see them. Dedup rules live in `dedup.md`.
+- Stage 4 — Publish & Archive. Create a Gmail draft (plain text — subject +
+  short teaser per tab + the Pages URL). Write today's HTML + JSON to
+  `archive/` and append story rows to `archive/INDEX.md`. Push the archive
+  to `main`; GitHub Pages auto-serves the new HTML within ~60s.
 
-The email subject line uses a ☕ prefix. The brief is split across labelled
-tabs: Singapore, India, Global / Geopolitics, Tech & AI, Business & Markets,
-Sports, ✦ Fun Fact, and 🧩 Puzzle, as defined in the template.
+The brief itself lives at
+`https://pbhat89.github.io/the-brief/archive/YYYY-MM-DD.html` and uses the
+interactive tabbed UI from `template.html` (anchor chips, spectrum framing
+blocks on political items, fun-fact and puzzle cards). The email is a
+short plain-text teaser pointing at that URL.
+
+The email subject line uses a ☕ prefix. The Pages-hosted brief is split
+across labelled tabs: 🇸🇬 Singapore, 🇮🇳 India, 🌍 Global / Geopolitics,
+💻 Tech & AI, 📈 Business & Markets, 🎾🏏🏎️ Sports, ✦ Fun Fact, and
+🧩 Puzzle, as defined in the template.
 
 ## Repo layout
 
