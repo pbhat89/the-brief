@@ -1,0 +1,30 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Local-only secrets / personal details (never pushed to the public repo).
+# The recipient email for The Brief lives in recipient.local.txt — gitignored
+# so the personal address stays out of git history and GitHub search.
+*.local
+*.local.txt
+recipient.local*
+
+# Logs
+*.log
+
+# Note: /archive contents ARE committed on purpose. The archive is the dedup
+# history that the daily routine reads to avoid repeating stories. Do not
+# ignore it.
