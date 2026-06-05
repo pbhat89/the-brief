@@ -154,13 +154,31 @@ Then stop. Do not write archive files for a skipped day except a `YYYY-MM-DD.jso
 
 ## Stage 4 — Publish and archive
 
-### 4a. Send the email
+### 4a. Send the email (or draft, if the connector only supports drafts)
 
-Send via the Gmail connector to **`<<RECIPIENT_EMAIL>>`**.
+Send / draft via the Gmail connector to **`<<RECIPIENT_EMAIL>>`**.
 
 - **Subject:** `☕ The Brief · {today's long date}` — for example, `☕ The Brief · Friday, 5 June 2026`
-- **Body:** the final verified HTML, sent as the email body (HTML email).
-- **Fallback:** if the connector cannot send HTML in the body, attach the HTML file as `YYYY-MM-DD.html` and put a one-line note in the plain-text body: `Today's Brief is attached as HTML.`
+
+- **Body — always use this exact structure**, in this order:
+
+  1. A **plain-text intro line** with the live link, so the recipient can read the brief even if their mail client refuses to render HTML or shows it as raw source:
+
+     ```
+     ☕ The Brief · {today's long date}
+
+     View in browser: https://pbhat89.github.io/the-brief/archive/YYYY-MM-DD.html
+
+     (HTML version below; also attached as YYYY-MM-DD.html.)
+     ```
+
+  2. The **full verified HTML** of the brief, embedded as the HTML part of the email body. Use a multipart/alternative or HTML-body send so the rich version renders for clients that support it. Do NOT escape the HTML — it should be the live markup.
+
+- **Attachment:** in addition to embedding the HTML in the body, **attach the HTML file as `YYYY-MM-DD.html`**. This is the last-line fallback if both the inline HTML and the Pages link fail (Pages was down, repo was rate-limited, etc.). Three independent ways to read the brief: inline, link, attachment.
+
+- **Pages link format:** the link in the body is always `https://pbhat89.github.io/the-brief/archive/YYYY-MM-DD.html` where `YYYY-MM-DD` matches today's archive filename. GitHub Pages serves the file as soon as the commit lands on `main` (typically within 30-60 seconds of push).
+
+- **If the connector only exposes `create_draft` (no `send`):** create the draft — the recipient will manually send it. Use the same body structure and attachment. Do not "skip the email" because send isn't available; the draft is the deliverable.
 
 ### 4b. Write archive files
 
