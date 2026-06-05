@@ -99,8 +99,39 @@ As you compile candidates, drop any whose short hash is in `EXCLUDE_HASHES` or w
 
 ## Stage 2 — Draft the HTML brief from `template.html`
 
-1. Read `template.html`. It defines the tab structure, the styling for headlines and source lines, the bias-check block, the spectrum block, the fun-fact card, and the puzzle card with its `<details>` answer. Do not restructure it — only fill its slots.
-2. Build the eight tabs in the fixed order above.
+**STRICT TEMPLATE REQUIREMENT — read this before writing any HTML.**
+
+The HTML you produce becomes the email body. Email clients (Gmail in particular) strip `<script>` tags and ignore inline event handlers like `onclick=""`. **Any tab system or content renderer that depends on JavaScript will render as a blank page in the inbox.** This has actually happened on a prior run: a JS-tabbed UI shipped, Gmail stripped the scripts, and the recipient saw masthead + footer with no content between them. Do not repeat that mistake.
+
+To guarantee inbox-rendering, use `template.html` **literally**, not as inspiration:
+
+1. **Read `template.html` in full** and copy its complete HTML/CSS into your draft as the starting point. The `<style>` block, the `<nav class="tabs">` with anchor-link chips, the eight `<section class="tab">` blocks, and the `<details>` puzzle answer are all email-safe and must be preserved.
+2. **Replace ONLY the example `<article class="item">` elements** inside each `<section class="tab">` with real items from your Stage 1 research. Each replacement article must have exactly the template's structure: `<h3 class="headline">`, `<p class="summary">`, `<p class="source">`, and optionally `<div class="spectrum">` + `<p class="bias-check">`.
+3. **Replace the date** in `.masthead .meta` with today's actual date in the form `Friday · 5 June 2026 · Asia/Singapore`.
+4. **Replace the Fun Fact card** body (`.fact-body`) and source link (`.fact-attrib`) with today's fact.
+5. **Replace the Puzzle card** content (`.puzzle-type`, `.puzzle-question`, `.puzzle-howto`, `.answer-body`) with today's puzzle.
+6. **Replace the footer date** in `.footer` with today's date.
+
+What you must NOT change:
+- The `<style>` block. Do not add fonts. Do not add new CSS classes. Do not change colors.
+- The 8 `<section class="tab">` blocks or their `id` attributes (`singapore`, `india`, `global`, `tech`, `business`, `sports`, `fun-fact`, `puzzle`).
+- The `<nav class="tabs">` and its anchor-link chips.
+- The `<details>` element on the puzzle answer.
+
+What you must NEVER add:
+- `<script>` tags or any JavaScript whatsoever.
+- `onclick=""`, `onload=""`, or any `on*=""` attribute.
+- External `<link rel="stylesheet">` references (no Google Fonts, no CDN CSS).
+- External `<img src="">` from remote URLs.
+- Any tab UI that needs JS to switch views. The template's anchor-link chips (`<a href="#singapore">`, etc.) work without JS — clicking scrolls to the section. That is the only acceptable tab mechanism.
+
+**Items per tab (real news, not placeholders):**
+- Singapore, India, Global / Geopolitics: 3-4 items each. 1-2 of them on political stories carry a `<div class="spectrum">` + `<p class="bias-check">`.
+- Tech & AI, Business & Markets, Sports: 2-3 items each.
+- Fun Fact: 1.
+- Puzzle: 1.
+
+Build the eight tabs in the fixed order above.
 3. **Per item formatting:**
    - Bold headline (use the template's headline class)
    - 1-2 sentence summary using the specifics you captured. Be declarative.
@@ -118,6 +149,19 @@ As you compile candidates, drop any whose short hash is in `EXCLUDE_HASHES` or w
    - It must be **genuinely challenging** — not trivia, not a riddle a 10-year-old would solve in 5 seconds.
    - Include in the card: a type label (e.g. `Type: Logic`), a one-line "how to approach" hint, the puzzle body, and the answer inside the template's `<details>` block.
 9. Confirm every link is the **article URL**, not a homepage. Confirm every source name appears in the allowed list for that tab.
+
+### Pre-Stage-3 self-check (mandatory)
+
+Before proceeding to Stage 3, scan the draft HTML for these violations. Any one of them means **regenerate the draft from `template.html`** — do not patch:
+
+1. Contains `<script` anywhere? FAIL.
+2. Contains `onclick=`, `onload=`, `onerror=`, or any `on[a-z]+=` attribute? FAIL.
+3. Contains `<link rel="stylesheet"` or `@import url(` pointing to a remote URL? FAIL.
+4. Contains `<img src="http` (any remote image)? FAIL.
+5. Missing any of the 8 `<section class="tab" id="...">` blocks with the exact IDs `singapore`, `india`, `global`, `tech`, `business`, `sports`, `fun-fact`, `puzzle`? FAIL.
+6. The `<style>` block has been modified from `template.html` in ways other than removing unused rules? FAIL.
+
+Only after the draft passes all six checks do you proceed to Stage 3.
 
 At the end of Stage 2 you have a complete HTML draft. Do not send it yet.
 

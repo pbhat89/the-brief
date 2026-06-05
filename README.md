@@ -37,6 +37,7 @@ the-brief/
   template.html           HTML email template the routine fills in.
   verifier-checklist.md   Per-item fact-check rules used in Stage 3.
   dedup.md                Rules for matching today's stories against history.
+  send-drafts.gs          Google Apps Script that auto-sends drafts the routine creates.
   .gitignore
   archive/
     INDEX.md              Append-only log of past headlines (the dedup source).
@@ -71,6 +72,36 @@ prompt itself changes.
 In billing, keep both overage and credit top-ups OFF. The routine is sized to
 fit inside Max-plan usage; leaving overage off prevents any accidental charge
 if usage spikes.
+
+## Auto-send the Gmail draft
+
+The claude.ai Gmail connector only exposes `create_draft` — there's no `send`
+tool. By default the routine therefore leaves a draft in your Drafts folder
+every morning, which you'd have to open and click Send manually.
+
+`send-drafts.gs` is a small Google Apps Script that closes this gap. It
+walks your Drafts folder on a schedule, finds any draft whose subject starts
+with `☕ The Brief`, and sends it. Drafts you write by hand are untouched.
+
+One-time setup (about 3 minutes):
+
+1. Open https://script.google.com and click **New project**.
+2. Paste the contents of `send-drafts.gs` into the editor. Save.
+3. Click **Run** once on `autoSendBriefDrafts` — Google will ask for the
+   "Send email as you" Gmail scope. Authorize it.
+4. In the left rail click the clock icon (**Triggers**) → **Add Trigger**:
+   - Function: `autoSendBriefDrafts`
+   - Event source: Time-driven
+   - Type: Minutes timer
+   - Interval: Every 15 minutes
+   - Save.
+
+That's it. From the next routine run forward, the daily brief will be in
+your inbox within 15 minutes of the routine creating the draft.
+
+The repo also publishes each day's HTML at
+`https://pbhat89.github.io/the-brief/archive/YYYY-MM-DD.html` via GitHub
+Pages, so even if the email path fails the brief is always live at that URL.
 
 ## Recipient
 
