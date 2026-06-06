@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Sat, 6 June 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Saturday, 6 June 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Saturday, 6 June 2026 · 🔍 34 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eight entries in this exact order:
+     id    : one of "sg" | "india" | "geo" | "tech" | "biz" | "sports" | "fun" | "puzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 6 news tabs; fun/puzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+============================================================================= */
+
+const SECTIONS = [
+  { id:"sg", title:"🇸🇬 Singapore", color:"#e74c3c", items:[
+    { headline:"Singapore braces for warmer, drier weather and higher haze risk as El Niño develops",
+      summary:"The Meteorological Service Singapore puts the chance of an El Niño event in 2026 at more than 80 per cent, signalling warmer temperatures, below-average rainfall and an elevated risk of transboundary haze from June to October.",
+      source:"CNA", url:"https://www.channelnewsasia.com/singapore", date:"Jun 5",
+      spectrum:null, bias:null },
+    { headline:"HDB launches June BTO exercise with 6,900 flats as resale prices dip for first time since 2019",
+      summary:"The June Build-To-Order exercise offers about 6,900 flats across Ang Mo Kio, Bishan, Bukit Merah, Sembawang and Woodlands, after the first-quarter resale price index slipped 0.1 per cent — its first decline since 2019.",
+      source:"Mothership", url:"https://mothership.sg/2026/04/hdb-resale-prices/", date:"Jun 4",
+      spectrum:null, bias:null },
+  ]},
+  { id:"india", title:"🇮🇳 India", color:"#e67e22", items:[
+    { headline:"India's economy grows 7.8% in Q4 and 7.7% for FY26, keeping its fastest-growing major economy tag",
+      summary:"Provisional government estimates released Friday showed real GDP rising 7.8 per cent in the January–March quarter and 7.7 per cent for FY26, led by services up 9.3 per cent and industry up 8.8 per cent.",
+      source:"The Economic Times", url:"https://economictimes.indiatimes.com/news/economy/indicators", date:"Jun 5",
+      spectrum:null, bias:null },
+    { headline:"Modi meets Venezuela's Delcy Rodríguez as India expands Venezuelan oil imports",
+      summary:"Prime Minister Narendra Modi held talks with Venezuelan Vice-President Delcy Rodríguez in New Delhi on Thursday to deepen energy ties; Venezuela has climbed to among India's largest crude suppliers amid the Gulf supply shock.",
+      source:"The Hindu", url:"https://www.thehindu.com/news/national/", date:"Jun 4",
+      spectrum:null, bias:null },
+    { headline:"Update: Southwest monsoon advances into Karnataka, Tamil Nadu and Goa",
+      summary:"Days after its onset over Kerala, the India Meteorological Department said on 5 June that the southwest monsoon had advanced into more of Karnataka, Tamil Nadu and Goa, keeping its progress broadly on schedule.",
+      source:"The Hindu", url:"https://www.thehindu.com/news/national/", date:"Jun 5",
+      spectrum:null, bias:null },
+    { headline:"Government sets Parliament's monsoon session for July 21 to August 12",
+      summary:"Parliamentary Affairs Minister Kiren Rijiju said the monsoon session will run from 21 July to 12 August, as the Opposition presses for a special sitting to debate Operation Sindoor.",
+      source:"The Indian Express", url:"https://indianexpress.com/section/india/", date:"Jun 5",
+      spectrum:null, bias:null },
+  ]},
+  { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
+    { headline:"Update: Israel keeps striking southern Lebanon despite US-brokered deal, killing at least five",
+      summary:"Israeli air strikes killed at least five people across southern Lebanon on Friday and triggered fresh evacuation orders, even after a US-brokered agreement; Israel says operations will continue while Hezbollah demands a full withdrawal.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/6/5/israel-maintains-attacks-despite-us-brokered-deal-with-lebanon", date:"Jun 5",
+      spectrum:null,
+      bias:"Coverage diverges sharply: Al Jazeera leads on Lebanese civilian casualties and the extent of Israeli occupation, while reporting that relays Israeli statements frames the strikes as enforcing the deal's terms." },
+    { headline:"US House votes 215-208 to limit Trump's war powers on Iran",
+      summary:"In a bipartisan rebuke, the House passed a war powers resolution directing the President to halt further strikes on Iran, with four Republicans joining Democrats; the measure faces long odds in the Senate and a likely veto.",
+      source:"CNN", url:"https://www.cnn.com/2026/06/03/politics/house-iran-war-powers-vote", date:"Jun 4",
+      spectrum:null,
+      bias:"The split was less left-versus-right than usual — the four Republicans who crossed over drew nearly as much attention as the Democratic majority that carried the vote." },
+    { headline:"South Korea's ruling party sweeps local elections but loses Seoul",
+      summary:"President Lee Jae-myung's Democratic Party won 12 of 16 metropolitan mayor and governor races in the 3 June local elections, while the People Power Party held Seoul, where Mayor Oh Se-hoon was re-elected.",
+      source:"Reuters", url:"https://www.reuters.com/world/asia-pacific/", date:"Jun 4",
+      spectrum:null, bias:null },
+  ]},
+  { id:"tech", title:"💻 Tech & AI", color:"#27ae60", items:[
+    { headline:"EU unveils tech sovereignty package to cut reliance on US and Chinese technology",
+      summary:"The European Commission proposed a sweeping technological sovereignty package — including a Chips Act 2.0 and a Cloud and AI Development Act — to bolster home-grown semiconductors, cloud and AI after fears of foreign control over critical services.",
+      source:"Reuters", url:"https://www.reuters.com/technology/", date:"Jun 3", spectrum:null, bias:null },
+    { headline:"EU regulators put Nvidia's AI-chip business under antitrust scrutiny",
+      summary:"European Union antitrust officials are reportedly canvassing Nvidia's rivals and customers over possible bundling and abuse of its dominance in AI chips, an early-stage inquiry that stops short of a formal case.",
+      source:"Reuters", url:"https://www.reuters.com/technology/", date:"Jun 5", spectrum:null, bias:null },
+  ]},
+  { id:"biz", title:"📈 Business & Markets", color:"#8e44ad", items:[
+    { headline:"US adds 172,000 jobs in May as unemployment holds at 4.3%",
+      summary:"Nonfarm payrolls rose 172,000 in May, far above the roughly 80,000 consensus, while the jobless rate held at 4.3 per cent for a third straight month and wages rose 3.4 per cent year on year; Treasury yields jumped as odds of Fed cuts faded.",
+      source:"CNBC", url:"https://www.cnbc.com/2026/06/05/jobs-report-may-2026.html", date:"Jun 5", spectrum:null, bias:null },
+    { headline:"Brent crude hovers near $95 as Strait of Hormuz crisis keeps oil elevated",
+      summary:"Brent traded around $95 a barrel on Friday, easing after a near 3 per cent slide the previous session on hopes of US–Iran diplomacy, even as disruption at the Strait of Hormuz keeps a risk premium on energy prices.",
+      source:"Reuters", url:"https://www.reuters.com/markets/commodities/", date:"Jun 5", spectrum:null, bias:null },
+  ]},
+  { id:"sports", title:"🎾🏏🏎️ Sports", color:"#c0392b", items:[
+    { headline:"🏏 England set New Zealand 254 to win first Test as Black Caps reach 36-3",
+      summary:"England set New Zealand a target of 254 in the opening Test at Lord's, and the Black Caps closed a wicket-filled second day on 36-3, still needing 218 runs with seven wickets in hand.",
+      source:"ESPNcricinfo", url:"https://www.espncricinfo.com/series/new-zealand-in-england-2026-1496491/england-vs-new-zealand-1st-test-1496571/full-scorecard", date:"Jun 5", spectrum:null, bias:null },
+    { headline:"🎾 Update: Zverev reaches French Open final and will face Cobolli",
+      summary:"Alexander Zverev beat Jakub Mensik 7-5, 6-2, 3-6, 6-3 to reach the Roland Garros final, where he will play Italy's Flavio Cobolli, who advanced when Matteo Arnaldi withdrew ill before their semifinal.",
+      source:"ESPN", url:"https://www.espn.com/tennis/story/_/id/48975883/zverev-beats-mensik-french-open-nears-elusive-slam-title", date:"Jun 5", spectrum:null, bias:null },
+    { headline:"🏎️ Hamilton leads Ferrari 1-2 in Monaco practice ahead of qualifying",
+      summary:"Lewis Hamilton topped second practice for the Monaco Grand Prix with a 1:13.026, 0.111 seconds ahead of Ferrari teammate Charles Leclerc and with Max Verstappen third; qualifying is Saturday and the race Sunday.",
+      source:"BBC Sport", url:"https://www.bbc.com/sport/formula1", date:"Jun 5", spectrum:null, bias:null },
+  ]},
+  { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
+  { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
+];
+
+const FUN_FACT = {
+  text: "Venus is the slowest-spinning planet in the Solar System: it takes about 243 Earth days to turn once on its axis, yet only about 225 Earth days to orbit the Sun — so a single rotation lasts longer than a Venusian year. Venus also rotates backwards relative to most planets, which means that from its surface the Sun would appear to rise in the west and set in the east.",
+  tag: "Category · Space & Astronomy"
+};
+
+const PUZZLE = {
+  type: "Quantitative",
+  title: "The Two Red Marbles",
+  how: "Write the probability as a ratio of combinations, then hunt for the smallest whole numbers that make it exactly one-half.",
+  question: "A bag holds some red marbles and some blue marbles. If you draw two marbles at random, without replacement, the probability that both are red is exactly 1/2.\nWhat is the smallest possible number of marbles in the bag, and how many of them are red?",
+  answer: "Four marbles — three red and one blue.\nThe chance that both draws are red is (r/n) × ((r−1)/(n−1)). With 3 red out of 4, that is 3/4 × 2/3 = 6/12 = 1/2.\nNo smaller total works: with 2 or 3 marbles there is no whole-number split that gives exactly 1/2, so 4 (with 3 red) is the minimum."
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn){var a=document.getElementById('ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>

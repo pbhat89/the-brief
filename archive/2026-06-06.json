@@ -1,0 +1,195 @@
+{
+  "date": "2026-06-06",
+  "items": [
+    {
+      "tab": "Singapore",
+      "headline": "Singapore braces for warmer, drier weather and higher haze risk as El Niño develops",
+      "summary": "The Meteorological Service Singapore puts the chance of an El Niño event in 2026 at more than 80 per cent, signalling warmer temperatures, below-average rainfall and an elevated risk of transboundary haze from June to October.",
+      "url": "https://www.channelnewsasia.com/singapore",
+      "outlet": "CNA",
+      "publish_date": "2026-06-05",
+      "short_hash": "f4113d98",
+      "key_entities": ["Meteorological Service Singapore", "El Nino", "haze"],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "HDB launches June BTO exercise with 6,900 flats as resale prices dip for first time since 2019",
+      "summary": "The June Build-To-Order exercise offers about 6,900 flats across Ang Mo Kio, Bishan, Bukit Merah, Sembawang and Woodlands, after the first-quarter resale price index slipped 0.1 per cent - its first decline since 2019.",
+      "url": "https://mothership.sg/2026/04/hdb-resale-prices/",
+      "outlet": "Mothership",
+      "publish_date": "2026-06-04",
+      "short_hash": "3a8d5061",
+      "key_entities": ["HDB", "BTO", "resale prices"],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "India's economy grows 7.8% in Q4 and 7.7% for FY26, keeping its fastest-growing major economy tag",
+      "summary": "Provisional government estimates released Friday showed real GDP rising 7.8 per cent in the January-March quarter and 7.7 per cent for FY26, led by services up 9.3 per cent and industry up 8.8 per cent.",
+      "url": "https://economictimes.indiatimes.com/news/economy/indicators",
+      "outlet": "The Economic Times",
+      "publish_date": "2026-06-05",
+      "short_hash": "4aa46b26",
+      "key_entities": ["India GDP", "FY26", "MoSPI"],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "Modi meets Venezuela's Delcy Rodríguez as India expands Venezuelan oil imports",
+      "summary": "Prime Minister Narendra Modi held talks with Venezuelan Vice-President Delcy Rodríguez in New Delhi on Thursday to deepen energy ties; Venezuela has climbed to among India's largest crude suppliers amid the Gulf supply shock.",
+      "url": "https://www.thehindu.com/news/national/",
+      "outlet": "The Hindu",
+      "publish_date": "2026-06-04",
+      "short_hash": "d98bba0b",
+      "key_entities": ["Modi", "Delcy Rodriguez", "Venezuela", "oil"],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "Update: Southwest monsoon advances into Karnataka, Tamil Nadu and Goa",
+      "summary": "Days after its onset over Kerala, the India Meteorological Department said on 5 June that the southwest monsoon had advanced into more of Karnataka, Tamil Nadu and Goa, keeping its progress broadly on schedule.",
+      "url": "https://www.thehindu.com/news/national/",
+      "outlet": "The Hindu",
+      "publish_date": "2026-06-05",
+      "short_hash": "37824284",
+      "key_entities": ["IMD", "southwest monsoon", "Karnataka", "Tamil Nadu", "Goa"],
+      "is_update": true
+    },
+    {
+      "tab": "India",
+      "headline": "Government sets Parliament's monsoon session for July 21 to August 12",
+      "summary": "Parliamentary Affairs Minister Kiren Rijiju said the monsoon session will run from 21 July to 12 August, as the Opposition presses for a special sitting to debate Operation Sindoor.",
+      "url": "https://indianexpress.com/section/india/",
+      "outlet": "The Indian Express",
+      "publish_date": "2026-06-05",
+      "short_hash": "e96d57e5",
+      "key_entities": ["Kiren Rijiju", "Parliament", "monsoon session", "Operation Sindoor"],
+      "is_update": false
+    },
+    {
+      "tab": "Global",
+      "headline": "Update: Israel keeps striking southern Lebanon despite US-brokered deal, killing at least five",
+      "summary": "Israeli air strikes killed at least five people across southern Lebanon on Friday and triggered fresh evacuation orders, even after a US-brokered agreement; Israel says operations will continue while Hezbollah demands a full withdrawal.",
+      "url": "https://www.aljazeera.com/news/2026/6/5/israel-maintains-attacks-despite-us-brokered-deal-with-lebanon",
+      "outlet": "Al Jazeera",
+      "publish_date": "2026-06-05",
+      "short_hash": "16eeb650",
+      "key_entities": ["Israel", "Lebanon", "Hezbollah", "ceasefire"],
+      "is_update": true
+    },
+    {
+      "tab": "Global",
+      "headline": "US House votes 215-208 to limit Trump's war powers on Iran",
+      "summary": "In a bipartisan rebuke, the House passed a war powers resolution directing the President to halt further strikes on Iran, with four Republicans joining Democrats; the measure faces long odds in the Senate and a likely veto.",
+      "url": "https://www.cnn.com/2026/06/03/politics/house-iran-war-powers-vote",
+      "outlet": "CNN",
+      "publish_date": "2026-06-04",
+      "short_hash": "f04e6801",
+      "key_entities": ["US House", "Iran war", "war powers resolution", "Trump"],
+      "is_update": false
+    },
+    {
+      "tab": "Global",
+      "headline": "South Korea's ruling party sweeps local elections but loses Seoul",
+      "summary": "President Lee Jae-myung's Democratic Party won 12 of 16 metropolitan mayor and governor races in the 3 June local elections, while the People Power Party held Seoul, where Mayor Oh Se-hoon was re-elected.",
+      "url": "https://www.reuters.com/world/asia-pacific/",
+      "outlet": "Reuters",
+      "publish_date": "2026-06-04",
+      "short_hash": "7cc167d5",
+      "key_entities": ["South Korea", "Democratic Party", "local elections", "Oh Se-hoon"],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "EU unveils tech sovereignty package to cut reliance on US and Chinese technology",
+      "summary": "The European Commission proposed a sweeping technological sovereignty package - including a Chips Act 2.0 and a Cloud and AI Development Act - to bolster home-grown semiconductors, cloud and AI after fears of foreign control over critical services.",
+      "url": "https://www.reuters.com/technology/",
+      "outlet": "Reuters",
+      "publish_date": "2026-06-03",
+      "short_hash": "47bdf16b",
+      "key_entities": ["European Commission", "tech sovereignty", "Chips Act", "cloud AI"],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "EU regulators put Nvidia's AI-chip business under antitrust scrutiny",
+      "summary": "European Union antitrust officials are reportedly canvassing Nvidia's rivals and customers over possible bundling and abuse of its dominance in AI chips, an early-stage inquiry that stops short of a formal case.",
+      "url": "https://www.reuters.com/technology/",
+      "outlet": "Reuters",
+      "publish_date": "2026-06-05",
+      "short_hash": "3369d0e7",
+      "key_entities": ["European Union", "Nvidia", "antitrust", "AI chips"],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "US adds 172,000 jobs in May as unemployment holds at 4.3%",
+      "summary": "Nonfarm payrolls rose 172,000 in May, far above the roughly 80,000 consensus, while the jobless rate held at 4.3 per cent for a third straight month and wages rose 3.4 per cent year on year; Treasury yields jumped as odds of Fed cuts faded.",
+      "url": "https://www.cnbc.com/2026/06/05/jobs-report-may-2026.html",
+      "outlet": "CNBC",
+      "publish_date": "2026-06-05",
+      "short_hash": "99510f9f",
+      "key_entities": ["US jobs report", "nonfarm payrolls", "unemployment", "Federal Reserve"],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Brent crude hovers near $95 as Strait of Hormuz crisis keeps oil elevated",
+      "summary": "Brent traded around $95 a barrel on Friday, easing after a near 3 per cent slide the previous session on hopes of US-Iran diplomacy, even as disruption at the Strait of Hormuz keeps a risk premium on energy prices.",
+      "url": "https://www.reuters.com/markets/commodities/",
+      "outlet": "Reuters",
+      "publish_date": "2026-06-05",
+      "short_hash": "99fb2907",
+      "key_entities": ["Brent crude", "oil prices", "Strait of Hormuz", "Iran"],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "England set New Zealand 254 to win first Test as Black Caps reach 36-3",
+      "summary": "England set New Zealand a target of 254 in the opening Test at Lord's, and the Black Caps closed a wicket-filled second day on 36-3, still needing 218 runs with seven wickets in hand.",
+      "url": "https://www.espncricinfo.com/series/new-zealand-in-england-2026-1496491/england-vs-new-zealand-1st-test-1496571/full-scorecard",
+      "outlet": "ESPNcricinfo",
+      "publish_date": "2026-06-05",
+      "short_hash": "f862df0f",
+      "key_entities": ["England", "New Zealand", "Lord's", "Test cricket"],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "Update: Zverev reaches French Open final and will face Cobolli",
+      "summary": "Alexander Zverev beat Jakub Mensik 7-5, 6-2, 3-6, 6-3 to reach the Roland Garros final, where he will play Italy's Flavio Cobolli, who advanced when Matteo Arnaldi withdrew ill before their semifinal.",
+      "url": "https://www.espn.com/tennis/story/_/id/48975883/zverev-beats-mensik-french-open-nears-elusive-slam-title",
+      "outlet": "ESPN",
+      "publish_date": "2026-06-05",
+      "short_hash": "9c5d03b7",
+      "key_entities": ["French Open", "Alexander Zverev", "Flavio Cobolli", "Roland Garros"],
+      "is_update": true
+    },
+    {
+      "tab": "Sports",
+      "headline": "Hamilton leads Ferrari 1-2 in Monaco practice ahead of qualifying",
+      "summary": "Lewis Hamilton topped second practice for the Monaco Grand Prix with a 1:13.026, 0.111 seconds ahead of Ferrari teammate Charles Leclerc and with Max Verstappen third; qualifying is Saturday and the race Sunday.",
+      "url": "https://www.bbc.com/sport/formula1",
+      "outlet": "BBC Sport",
+      "publish_date": "2026-06-05",
+      "short_hash": "7f5af0da",
+      "key_entities": ["Monaco Grand Prix", "Lewis Hamilton", "Ferrari", "Charles Leclerc"],
+      "is_update": false
+    }
+  ],
+  "fun_fact": {
+    "headline": "A day on Venus is longer than its year.",
+    "body": "Venus is the slowest-spinning planet in the Solar System: it takes about 243 Earth days to turn once on its axis, yet only about 225 Earth days to orbit the Sun - so a single rotation lasts longer than a Venusian year. Venus also rotates backwards relative to most planets, which means that from its surface the Sun would appear to rise in the west and set in the east.",
+    "source": "NASA",
+    "fun_fact_id": "funfact-28b90f0a",
+    "topic": "space"
+  },
+  "puzzle": {
+    "type": "quantitative",
+    "body": "A bag holds some red marbles and some blue marbles. If you draw two marbles at random, without replacement, the probability that both are red is exactly 1/2. What is the smallest possible number of marbles in the bag, and how many of them are red?",
+    "approach": "Write the probability as a ratio of combinations, then hunt for the smallest whole numbers that make it exactly one-half.",
+    "answer": "Four marbles - three red and one blue. The chance that both draws are red is (r/n) x ((r-1)/(n-1)); with 3 red out of 4 that is 3/4 x 2/3 = 6/12 = 1/2. No smaller total works, so 4 (with 3 red) is the minimum.",
+    "puzzle_hash": "d0941461"
+  }
+}
