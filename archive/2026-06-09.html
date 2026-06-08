@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Tue, 9 June 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Tuesday, 9 June 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Tuesday, 9 June 2026 · 🔍 30 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eight entries in this exact order:
+     id    : one of "sg" | "india" | "geo" | "tech" | "biz" | "sports" | "fun" | "puzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 6 news tabs; fun/puzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+============================================================================= */
+
+const SECTIONS = [
+  { id:"sg", title:"🇸🇬 Singapore", color:"#e74c3c", items:[
+    { headline:"PM Wong says AI can be a game changer for labour-short Singapore",
+      summary:"Speaking at a Singapore Press Club dialogue on June 8, Prime Minister Lawrence Wong said artificial intelligence could be a game changer for a chronically labour-short economy, letting firms lift productivity without simply importing more workers. He cautioned against superficial use of the technology, such as bolting on chatbots, and framed AI as a net positive despite risks to jobs and security.",
+      source:"SCMP", url:"https://www.scmp.com/week-asia/economics/article/3352118/singapores-lawrence-wong-reassures-workers-over-ai-fears-vows-job-opportunities", date:"Jun 8",
+      spectrum:null, bias:null },
+    { headline:"Singapore eyes deeper ASEAN connectivity amid new US-China dynamic, says PM Wong",
+      summary:"At the same June 8 dialogue, Wong said Singapore and ASEAN want to keep an open, inclusive environment that engages all major powers as the US-China relationship enters a new phase. He pointed to deeper regional connectivity and integration as the bloc&rsquo;s best hedge against great-power rivalry.",
+      source:"SCMP", url:"https://www.scmp.com/week-asia/politics/article/3356407/singapore-eyes-asean-connectivity-amid-new-us-china-dynamic-lawrence-wong", date:"Jun 8",
+      spectrum:null, bias:null },
+  ]},
+  { id:"india", title:"🇮🇳 India", color:"#e67e22", items:[
+    { headline:"Sensex falls 719 points as Iran-Israel strikes spike crude and rattle markets",
+      summary:"The BSE Sensex closed down 719.08 points, or 0.97 per cent, at 73,524.26 on June 8, and the Nifty 50 fell 1.04 per cent to 23,123, after Iran and Israel exchanged missile fire and Brent crude jumped about 3.5 per cent toward $97 a barrel. IT, metal and realty stocks led a broad-based sell-off on fears of costlier energy and stickier inflation.",
+      source:"The Economic Times", url:"https://economictimes.indiatimes.com/markets/stocks/news", date:"Jun 8",
+      spectrum:null, bias:null },
+    { headline:"India and US likely to sign first tranche of trade deal by July, says Goyal",
+      summary:"Commerce and Industry Minister Piyush Goyal said on June 8 that India and the United States could sign the first tranche of their bilateral trade pact by the middle of July, following a round of talks in New Delhi with visiting US officials. Agriculture, dairy and genetically modified crops remain the main sticking points.",
+      source:"The Economic Times", url:"https://economictimes.indiatimes.com/news/economy/foreign-trade", date:"Jun 8",
+      spectrum:null, bias:null },
+    { headline:"Delhi swelters as heat index tops 45 degrees with monsoon weeks away",
+      summary:"Delhi endured oppressive humid heat on June 8, with the heat index breaching 45.1 degrees Celsius even as the actual maximum reached 41.6 degrees, the India Meteorological Department said. The southwest monsoon, which has advanced into Maharashtra, Karnataka and Andhra Pradesh, is not expected to reach the capital until the last week of June.",
+      source:"The Hindu", url:"https://www.thehindu.com/news/national/", date:"Jun 8",
+      spectrum:null, bias:null },
+  ]},
+  { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
+    { headline:"Magnitude 7.8 earthquake strikes southern Philippines, killing at least 32",
+      summary:"A magnitude 7.8 undersea earthquake struck off Sarangani province in the southern Philippines on June 8, killing at least 32 people, injuring more than 200 and sending a one-metre tsunami onto nearby coasts. Buildings collapsed in General Santos and more than 100 aftershocks followed, the strongest measured at magnitude 6.7.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/6/8/tsunami-warnings-issued-after-8-2-magnitude-earthquake-off-philippines", date:"Jun 8",
+      spectrum:null, bias:null },
+    { headline:"Israel and Iran halt strikes after trading missile fire, leaving ceasefire on edge",
+      summary:"Israel and Iran both pledged on June 8 to stop attacking each other, hours after Iran fired nearly 30 ballistic missiles at Israel in retaliation for Israeli strikes on Beirut&rsquo;s southern suburbs and Israel hit back at Iranian air-defence sites. It was the most serious breach of their April ceasefire, and both sides set conditions that could reignite the fighting.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/6/8/israel-and-iran-exchange-attacks-as-ceasefire-falters", date:"Jun 8",
+      spectrum:null, bias:null },
+    { headline:"Update: Peru's presidential runoff too close to call as Fujimori holds narrow lead",
+      summary:"Peru&rsquo;s June 7 presidential runoff between right-wing candidate Keiko Fujimori and leftist Roberto Sanchez remained too close to call on June 8, with more than 93 per cent of ballots counted and official tallies showing Fujimori with a slim edge built on urban and coastal support. A final result could take days; it is Fujimori&rsquo;s fourth bid for the presidency.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/6/7/peru-polls-open-in-keiko-fujimori-roberto-sanchez-presidential-runoff", date:"Jun 8",
+      spectrum:null, bias:null },
+  ]},
+  { id:"tech", title:"💻 Tech & AI", color:"#27ae60", items:[
+    { headline:"Update: Apple unveils overhauled, Gemini-powered Siri and iOS 27 at WWDC",
+      summary:"At its June 8 WWDC keynote, Apple unveiled a rebuilt Siri that lives across iPhone, iPad and Mac, can act on what is on screen and automate tasks across apps, arriving for US users later this year. The company also showed iOS 27 and a new Apple-silicon-only macOS called Golden Gate, plus transparency sliders for its Liquid Glass interface.",
+      source:"TechCrunch", url:"https://techcrunch.com/2026/06/08/wwdc-2026-everything-announced-on-siri-ai-os-27-apple-intelligence-and-more/", date:"Jun 8", spectrum:null, bias:null },
+    { headline:"Apple stakes its AI future on Google's Gemini in multi-year Siri deal",
+      summary:"Apple confirmed that its new Siri is built on a custom Google Gemini model under a multi-year partnership, ending speculation over who would power Apple Intelligence. It is also adding an Extensions system that lets users choose between models such as ChatGPT, Gemini and Anthropic&rsquo;s Claude for some features.",
+      source:"Bloomberg", url:"https://www.bloomberg.com/news/live-blog/2026-06-08/apple-wwdc-2026-live-updates", date:"Jun 8", spectrum:null, bias:null },
+  ]},
+  { id:"biz", title:"📈 Business & Markets", color:"#8e44ad", items:[
+    { headline:"Update: Wall Street rebounds as chip stocks recover and Micron jumps 10%",
+      summary:"US stocks bounced back on June 8 after Friday&rsquo;s chip-led rout, with the Nasdaq up 0.86 per cent to 25,929.66 and the S&amp;P 500 adding 0.30 per cent to 7,405.73, while the Dow slipped 0.16 per cent. Micron rose close to 10 per cent, recovering much of its 13 per cent Friday loss as memory-chip names led the rebound.",
+      source:"CNBC", url:"https://www.cnbc.com/2026/06/07/stock-market-today-live-updates.html", date:"Jun 8", spectrum:null, bias:null },
+    { headline:"Brent crude whipsaws on Iran-Israel strikes, spiking above $97 before easing",
+      summary:"Brent crude jumped more than 4 per cent to above $97 a barrel on June 8 after Iran and Israel exchanged missile fire, then retreated toward $94 once Tehran said it had halted its operations. Traders are weighing the risk of fresh disruption through the Strait of Hormuz, which remains largely shut.",
+      source:"Reuters", url:"https://www.reuters.com/markets/commodities/", date:"Jun 8", spectrum:null, bias:null },
+    { headline:"Update: SpaceX sets June 12 Nasdaq debut as IPO roadshow gets under way",
+      summary:"SpaceX&rsquo;s investor roadshow is under way ahead of a planned Nasdaq debut on June 12, with shares to be priced after the close on June 11. At the fixed $135 a share, the $75 billion offering would value Elon Musk&rsquo;s rocket company at about $1.8 trillion, among the largest listings on record.",
+      source:"CNBC", url:"https://www.cnbc.com/2026/06/03/spacex-ipo-stock-price-roadshow-musk.html", date:"Jun 8", spectrum:null, bias:null },
+  ]},
+  { id:"sports", title:"🎾🏏🏎️ Sports", color:"#c0392b", items:[
+    { headline:"🏏 Update: MCC apologises for Lord's pitch after England's 115-run win over New Zealand",
+      summary:"The MCC apologised on June 8 for the Lord&rsquo;s pitch after England beat New Zealand by 115 runs in a Test that ended inside four days, one of the shortest in the ground&rsquo;s history. An MCC spokesperson said the surface had fallen short of expectations after erratic seam and bounce; England seamer Ollie Robinson was named player of the match.",
+      source:"ESPNcricinfo", url:"https://www.espncricinfo.com/series/new-zealand-in-england-2026-1496491/england-vs-new-zealand-1st-test-1496571/match-report", date:"Jun 8", spectrum:null, bias:null },
+    { headline:"🎾 Grass-court season opens at Queen's with Rybakina the top seed",
+      summary:"The grass-court season got under way at the Queen&rsquo;s Club on June 8, the main warm-up before Wimbledon, with world number two Elena Rybakina seeded first in the WTA 500 field. Rain disrupted the opening day&rsquo;s play in west London.",
+      source:"BBC Sport", url:"https://www.bbc.com/sport/tennis", date:"Jun 8", spectrum:null, bias:null },
+  ]},
+  { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
+  { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
+];
+
+const FUN_FACT = {
+  text: "An octopus has three hearts and blood that is blue rather than red. Two of the hearts pump blood through the gills, while the third drives it to the rest of the body, and the blue colour comes from haemocyanin, a copper-based molecule the octopus uses to carry oxygen instead of the iron-based haemoglobin in human blood.",
+  tag: "Category · Marine Biology"
+};
+
+const PUZZLE = {
+  type: "Logic",
+  title: "Knights and Knaves",
+  how: "Start from the claim that constrains the most — S speaks about two people at once — and test each possibility for a contradiction.",
+  question: "On an island, every inhabitant is either a Knight, who always tells the truth, or a Knave, who always lies. You meet four islanders — P, Q, R, and S — who each make a single statement:\n\nP says: \"Q is a Knave.\"\nQ says: \"R is a Knave.\"\nR says: \"S is a Knave.\"\nS says: \"P and Q are both Knaves.\"\n\nHow many of the four are Knaves, and exactly which ones?",
+  answer: "Two of them are Knaves: Q and S. P and R are Knights.\n\nStart with S. If S were a Knight, then P and Q would both be Knaves — but a lying P saying \"Q is a Knave\" would force Q to be a Knight, contradicting S. So S must be a Knave.\n\nBecause S lies, R&rsquo;s statement \"S is a Knave\" is true, so R is a Knight. Then Q&rsquo;s claim that \"R is a Knave\" is false, making Q a Knave. P&rsquo;s claim that \"Q is a Knave\" is therefore true, making P a Knight. Finally, check S: \"P and Q are both Knaves\" is indeed false, since P is a Knight — consistent with S being a Knave."
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn){var a=document.getElementById('ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+{
+  "date": "2026-06-09",
+  "items": [
+    {
+      "tab": "Singapore",
+      "headline": "PM Wong says AI can be a game changer for labour-short Singapore",
+      "summary": "Speaking at a Singapore Press Club dialogue on June 8, Prime Minister Lawrence Wong said artificial intelligence could be a game changer for a chronically labour-short economy, letting firms lift productivity without simply importing more workers. He cautioned against superficial use of the technology and framed AI as a net positive despite risks to jobs and security.",
+      "url": "https://www.scmp.com/week-asia/economics/article/3352118/singapores-lawrence-wong-reassures-workers-over-ai-fears-vows-job-opportunities",
+      "outlet": "SCMP",
+      "publish_date": "Jun 8",
+      "short_hash": "d37791ee",
+      "key_entities": ["lawrence wong", "artificial intelligence", "productivity", "singapore"],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "Singapore eyes deeper ASEAN connectivity amid new US-China dynamic, says PM Wong",
+      "summary": "At the same June 8 dialogue, Wong said Singapore and ASEAN want to keep an open, inclusive environment that engages all major powers as the US-China relationship enters a new phase. He pointed to deeper regional connectivity and integration as the bloc's best hedge against great-power rivalry.",
+      "url": "https://www.scmp.com/week-asia/politics/article/3356407/singapore-eyes-asean-connectivity-amid-new-us-china-dynamic-lawrence-wong",
+      "outlet": "SCMP",
+      "publish_date": "Jun 8",
+      "short_hash": "d246dc2a",
+      "key_entities": ["singapore", "asean", "us-china", "lawrence wong"],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "Sensex falls 719 points as Iran-Israel strikes spike crude and rattle markets",
+      "summary": "The BSE Sensex closed down 719.08 points, or 0.97 per cent, at 73,524.26 on June 8, and the Nifty 50 fell 1.04 per cent to 23,123, after Iran and Israel exchanged missile fire and Brent crude jumped about 3.5 per cent toward $97 a barrel. IT, metal and realty stocks led a broad-based sell-off.",
+      "url": "https://economictimes.indiatimes.com/markets/stocks/news",
+      "outlet": "The Economic Times",
+      "publish_date": "Jun 8",
+      "short_hash": "c2c7f543",
+      "key_entities": ["sensex", "nifty", "iran-israel", "crude oil"],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "India and US likely to sign first tranche of trade deal by July, says Goyal",
+      "summary": "Commerce and Industry Minister Piyush Goyal said on June 8 that India and the United States could sign the first tranche of their bilateral trade pact by the middle of July, following a round of talks in New Delhi with visiting US officials. Agriculture, dairy and genetically modified crops remain the main sticking points.",
+      "url": "https://economictimes.indiatimes.com/news/economy/foreign-trade",
+      "outlet": "The Economic Times",
+      "publish_date": "Jun 8",
+      "short_hash": "820fa702",
+      "key_entities": ["india", "united states", "trade deal", "piyush goyal"],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "Delhi swelters as heat index tops 45 degrees with monsoon weeks away",
+      "summary": "Delhi endured oppressive humid heat on June 8, with the heat index breaching 45.1 degrees Celsius even as the actual maximum reached 41.6 degrees, the India Meteorological Department said. The southwest monsoon, now advanced into Maharashtra, Karnataka and Andhra Pradesh, is not expected to reach the capital until the last week of June.",
+      "url": "https://www.thehindu.com/news/national/",
+      "outlet": "The Hindu",
+      "publish_date": "Jun 8",
+      "short_hash": "5137b0af",
+      "key_entities": ["delhi", "heatwave", "imd", "monsoon"],
+      "is_update": false
+    },
+    {
+      "tab": "Global",
+      "headline": "Magnitude 7.8 earthquake strikes southern Philippines, killing at least 32",
+      "summary": "A magnitude 7.8 undersea earthquake struck off Sarangani province in the southern Philippines on June 8, killing at least 32 people, injuring more than 200 and sending a one-metre tsunami onto nearby coasts. Buildings collapsed in General Santos and more than 100 aftershocks followed, the strongest measured at magnitude 6.7.",
+      "url": "https://www.aljazeera.com/news/2026/6/8/tsunami-warnings-issued-after-8-2-magnitude-earthquake-off-philippines",
+      "outlet": "Al Jazeera",
+      "publish_date": "Jun 8",
+      "short_hash": "482aaf7f",
+      "key_entities": ["philippines", "earthquake", "sarangani", "tsunami"],
+      "is_update": false
+    },
+    {
+      "tab": "Global",
+      "headline": "Israel and Iran halt strikes after trading missile fire, leaving ceasefire on edge",
+      "summary": "Israel and Iran both pledged on June 8 to stop attacking each other, hours after Iran fired nearly 30 ballistic missiles at Israel in retaliation for Israeli strikes on Beirut's southern suburbs and Israel hit back at Iranian air-defence sites. It was the most serious breach of their April ceasefire, and both sides set conditions that could reignite the fighting.",
+      "url": "https://www.aljazeera.com/news/2026/6/8/israel-and-iran-exchange-attacks-as-ceasefire-falters",
+      "outlet": "Al Jazeera",
+      "publish_date": "Jun 8",
+      "short_hash": "a154a348",
+      "key_entities": ["israel", "iran", "missile strikes", "ceasefire"],
+      "is_update": false
+    },
+    {
+      "tab": "Global",
+      "headline": "Update: Peru's presidential runoff too close to call as Fujimori holds narrow lead",
+      "summary": "Peru's June 7 presidential runoff between right-wing candidate Keiko Fujimori and leftist Roberto Sanchez remained too close to call on June 8, with more than 93 per cent of ballots counted and official tallies showing Fujimori with a slim edge built on urban and coastal support. A final result could take days; it is Fujimori's fourth bid for the presidency.",
+      "url": "https://www.aljazeera.com/news/2026/6/7/peru-polls-open-in-keiko-fujimori-roberto-sanchez-presidential-runoff",
+      "outlet": "Al Jazeera",
+      "publish_date": "Jun 8",
+      "short_hash": "c2a14557",
+      "key_entities": ["peru", "presidential runoff", "keiko fujimori", "roberto sanchez"],
+      "is_update": true
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "Update: Apple unveils overhauled, Gemini-powered Siri and iOS 27 at WWDC",
+      "summary": "At its June 8 WWDC keynote, Apple unveiled a rebuilt Siri that lives across iPhone, iPad and Mac, can act on what is on screen and automate tasks across apps, arriving for US users later this year. The company also showed iOS 27 and a new Apple-silicon-only macOS called Golden Gate, plus transparency sliders for its Liquid Glass interface.",
+      "url": "https://techcrunch.com/2026/06/08/wwdc-2026-everything-announced-on-siri-ai-os-27-apple-intelligence-and-more/",
+      "outlet": "TechCrunch",
+      "publish_date": "Jun 8",
+      "short_hash": "e2036b69",
+      "key_entities": ["apple", "wwdc", "siri", "ios 27", "google gemini"],
+      "is_update": true
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "Apple stakes its AI future on Google's Gemini in multi-year Siri deal",
+      "summary": "Apple confirmed that its new Siri is built on a custom Google Gemini model under a multi-year partnership, ending speculation over who would power Apple Intelligence. It is also adding an Extensions system that lets users choose between models such as ChatGPT, Gemini and Anthropic's Claude for some features.",
+      "url": "https://www.bloomberg.com/news/live-blog/2026-06-08/apple-wwdc-2026-live-updates",
+      "outlet": "Bloomberg",
+      "publish_date": "Jun 8",
+      "short_hash": "7d0af034",
+      "key_entities": ["apple", "google gemini", "siri", "artificial intelligence"],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Update: Wall Street rebounds as chip stocks recover and Micron jumps 10%",
+      "summary": "US stocks bounced back on June 8 after Friday's chip-led rout, with the Nasdaq up 0.86 per cent to 25,929.66 and the S&P 500 adding 0.30 per cent to 7,405.73, while the Dow slipped 0.16 per cent. Micron rose close to 10 per cent, recovering much of its 13 per cent Friday loss as memory-chip names led the rebound.",
+      "url": "https://www.cnbc.com/2026/06/07/stock-market-today-live-updates.html",
+      "outlet": "CNBC",
+      "publish_date": "Jun 8",
+      "short_hash": "fdb3a42c",
+      "key_entities": ["wall street", "nasdaq", "s&p 500", "micron"],
+      "is_update": true
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Brent crude whipsaws on Iran-Israel strikes, spiking above $97 before easing",
+      "summary": "Brent crude jumped more than 4 per cent to above $97 a barrel on June 8 after Iran and Israel exchanged missile fire, then retreated toward $94 once Tehran said it had halted its operations. Traders are weighing the risk of fresh disruption through the Strait of Hormuz, which remains largely shut.",
+      "url": "https://www.reuters.com/markets/commodities/",
+      "outlet": "Reuters",
+      "publish_date": "Jun 8",
+      "short_hash": "d0e6b668",
+      "key_entities": ["brent crude", "oil", "strait of hormuz", "iran-israel"],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Update: SpaceX sets June 12 Nasdaq debut as IPO roadshow gets under way",
+      "summary": "SpaceX's investor roadshow is under way ahead of a planned Nasdaq debut on June 12, with shares to be priced after the close on June 11. At the fixed $135 a share, the $75 billion offering would value Elon Musk's rocket company at about $1.8 trillion, among the largest listings on record.",
+      "url": "https://www.cnbc.com/2026/06/03/spacex-ipo-stock-price-roadshow-musk.html",
+      "outlet": "CNBC",
+      "publish_date": "Jun 8",
+      "short_hash": "37a1772a",
+      "key_entities": ["spacex", "ipo", "nasdaq", "elon musk"],
+      "is_update": true
+    },
+    {
+      "tab": "Sports",
+      "headline": "Update: MCC apologises for Lord's pitch after England's 115-run win over New Zealand",
+      "summary": "The MCC apologised on June 8 for the Lord's pitch after England beat New Zealand by 115 runs in a Test that ended inside four days, one of the shortest in the ground's history. An MCC spokesperson said the surface had fallen short of expectations after erratic seam and bounce; England seamer Ollie Robinson was named player of the match.",
+      "url": "https://www.espncricinfo.com/series/new-zealand-in-england-2026-1496491/england-vs-new-zealand-1st-test-1496571/match-report",
+      "outlet": "ESPNcricinfo",
+      "publish_date": "Jun 8",
+      "short_hash": "ac465d5e",
+      "key_entities": ["mcc", "lords", "england", "new zealand", "ollie robinson"],
+      "is_update": true
+    },
+    {
+      "tab": "Sports",
+      "headline": "Grass-court season opens at Queen's with Rybakina the top seed",
+      "summary": "The grass-court season got under way at the Queen's Club on June 8, the main warm-up before Wimbledon, with world number two Elena Rybakina seeded first in the WTA 500 field. Rain disrupted the opening day's play in west London.",
+      "url": "https://www.bbc.com/sport/tennis",
+      "outlet": "BBC Sport",
+      "publish_date": "Jun 8",
+      "short_hash": "09abf447",
+      "key_entities": ["queens club", "grass season", "elena rybakina", "wta"],
+      "is_update": false
+    }
+  ],
+  "fun_fact": {
+    "headline": "An octopus has three hearts and blue, copper-based blood",
+    "body": "An octopus has three hearts and blood that is blue rather than red. Two of the hearts pump blood through the gills, while the third drives it to the rest of the body, and the blue colour comes from haemocyanin, a copper-based molecule the octopus uses to carry oxygen instead of the iron-based haemoglobin in human blood.",
+    "source": "Encyclopaedia Britannica; NOAA",
+    "fun_fact_id": "funfact-eda34428",
+    "topic": "biology"
+  },
+  "puzzle": {
+    "type": "logic",
+    "body": "On an island, every inhabitant is either a Knight, who always tells the truth, or a Knave, who always lies. You meet four islanders - P, Q, R, and S - who each make a single statement: P says 'Q is a Knave.' Q says 'R is a Knave.' R says 'S is a Knave.' S says 'P and Q are both Knaves.' How many of the four are Knaves, and exactly which ones?",
+    "approach": "Start from the claim that constrains the most - S speaks about two people at once - and test each possibility for a contradiction.",
+    "answer": "Two of them are Knaves: Q and S; P and R are Knights. If S were a Knight, P and Q would both be Knaves, but then lying P's claim that 'Q is a Knave' would make Q a Knight, contradicting S - so S is a Knave. Then R's statement is true (R is a Knight), Q's is false (Q is a Knave), and P's is true (P is a Knight); S's claim that P and Q are both Knaves is false, consistent with S being a Knave.",
+    "puzzle_hash": "48ef965d"
+  }
+}
