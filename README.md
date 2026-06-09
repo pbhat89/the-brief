@@ -2,35 +2,43 @@
 
 A self-contained daily news brief that runs every morning at 07:00 Asia/Singapore
 on Anthropic's cloud as a Claude Code Routine. The routine fetches real news,
-fact-checks it, deduplicates against the last 2-3 days of archived headlines,
+fact-checks it, deduplicates stories against the last 2-3 days of archived
+headlines (and fun facts / puzzles against a longer 30-day rolling ledger),
 renders an interactive HTML brief from `template.html`, publishes it via
-GitHub Pages, and emails a plain-text teaser with the Pages link via the
-Gmail connector. It runs on the user's Max plan, so there is no API cost as
-long as overage and credits stay disabled in billing.
+GitHub Pages, and emails a clean, styled one-line HTML digest (with the Pages
+link) to the recipient list via the Gmail connector. It runs on the user's Max
+plan, so there is no API cost as long as overage and credits stay disabled in
+billing.
 
 ## How it runs
 
 Each morning the routine executes five stages in order:
 
 - Stage 0 — Load history. Read the last 2-3 days from `archive/INDEX.md` to
-  build an EXCLUDE set of recently-covered stories.
+  build an EXCLUDE set of recently-covered stories, and read `archive/USED.json`
+  for the 30-day fun-fact / puzzle dedup ledger.
 - Stage 1 — Research. Pull from the source lists in `routine-prompt.md`,
-  skipping anything in the EXCLUDE set.
+  skipping anything in the EXCLUDE set, and expand searches (widening 48h→72h)
+  until each news section has at least 4 candidates.
 - Stage 2 — Draft. Substitute today's data into `template.html` (date
   placeholders + the `SECTIONS` / `FUN_FACT` / `PUZZLE` JS arrays) to produce
   the day's rich HTML brief.
 - Stage 3 — Verify. Run every item past `verifier-checklist.md` (sourcing,
-  dates, named entities, claims). Re-do anything that fails.
-- Stage 4 — Publish & Archive. Create a Gmail draft (plain text — subject +
-  short teaser per tab + the Pages URL). Write today's HTML + JSON to
-  `archive/` and append story rows to `archive/INDEX.md`. Push the archive
-  to `main`; GitHub Pages auto-serves the new HTML within ~60s.
+  dates, named entities, claims). Re-do anything that fails, backfilling to keep
+  each section at 4-5 items.
+- Stage 4 — Publish & Archive. Create a Gmail draft: a styled one-line HTML
+  digest (`htmlBody`, built from `email-digest-sample.html`) of the six news
+  sections, with a plain-text fallback, sent to every address in the recipient
+  list. Write today's HTML + JSON to `archive/`, append story rows to
+  `archive/INDEX.md`, and update `archive/USED.json`. Push to `main`; GitHub
+  Pages auto-serves the new HTML within ~60s.
 
-The brief itself lives at
+The full brief lives at
 `https://pbhat89.github.io/the-brief/archive/YYYY-MM-DD.html` and uses the
 interactive tabbed UI from `template.html` (anchor chips, spectrum framing
-blocks on political items, fun-fact and puzzle cards). The email is a
-short plain-text teaser pointing at that URL.
+blocks on political items, fun-fact and puzzle cards). The email is a clean,
+scannable HTML digest — one line per headline, four to five per section, no
+fun fact or puzzle — that links to that URL.
 
 The email subject line uses a ☕ prefix. The Pages-hosted brief is split
 across labelled tabs: 🇸🇬 Singapore, 🇮🇳 India, 🌍 Global / Geopolitics,
@@ -43,13 +51,15 @@ across labelled tabs: 🇸🇬 Singapore, 🇮🇳 India, 🌍 Global / Geopolit
 the-brief/
   README.md               This file.
   routine-prompt.md       The full prompt the routine runs each morning.
-  template.html           HTML email template the routine fills in.
+  template.html           The full rich brief template (served via Pages).
+  email-digest-sample.html Reference layout for the clean one-line email digest.
   verifier-checklist.md   Per-item fact-check rules used in Stage 3.
   dedup.md                Rules for matching today's stories against history.
   send-drafts.gs          Google Apps Script that auto-sends drafts the routine creates.
   .gitignore
   archive/
-    INDEX.md              Append-only log of past headlines (the dedup source).
+    INDEX.md              Append-only log of past headlines (the story dedup source).
+    USED.json             Rolling fun-fact / puzzle ledger (30-day dedup memory).
     .gitkeep
 ```
 
@@ -114,17 +124,17 @@ Pages, so even if the email path fails the brief is always live at that URL.
 
 ## Recipient
 
-The recipient email is **not committed** to this public repo. `routine-prompt.md`
-uses `<<RECIPIENT_EMAIL>>` as a placeholder. The actual address lives in
-`recipient.local.txt` (gitignored).
+The recipient list is **not committed** to this public repo. `routine-prompt.md`
+uses `<<RECIPIENT_EMAILS>>` as a placeholder — a JSON array of one or more plain
+addresses. The actual list lives in `recipient.local.txt` (gitignored).
 
 To paste the prompt into the claude.ai routine "Instructions" field:
 
 1. Open `routine-prompt.md` and copy its full contents.
-2. Open `recipient.local.txt` and copy the address.
-3. In the Instructions box on claude.ai, find-and-replace `<<RECIPIENT_EMAIL>>`
-   with the address before saving the routine.
+2. Open `recipient.local.txt` and copy the address array.
+3. In the Instructions box on claude.ai, find-and-replace every `<<RECIPIENT_EMAILS>>`
+   with the array before saving the routine.
 
-The address is also visible in the routine's bound Gmail connector, so it's
-not "secret" — but keeping it out of git means the address never shows up in
-the public commit history, GitHub search, or repo clones.
+The addresses are also visible in the routine's bound Gmail connector, so they're
+not "secret" — but keeping them out of git means they never show up in the public
+commit history, GitHub search, or repo clones.

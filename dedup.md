@@ -12,7 +12,8 @@ The routine loads the following from `/archive`, in this order of preference:
 
 1. **`archive/INDEX.md`** — primary fast-path. A tab-separated running log. Parse all rows whose date falls within the last 3 calendar days (Asia/Singapore).
 2. **`archive/YYYY-MM-DD.json`** — for each of the last 2-3 days, read the structured items. Provides the richer fields (`key-entities`, `fun-fact-id`, `puzzle-type`) needed for fuzzy matching.
-3. **`archive/YYYY-MM-DD.html`** — not read by the routine. Rendered artifact only.
+3. **`archive/USED.json`** — the rolling fun-fact / puzzle ledger. This is the LONG-window memory: `funfact_topics` (last 60 days) and `puzzle_log` (last 30 days). The per-day JSON files only cover the last 2-3 days, which is far too short for topic-based fun-fact dedup — `USED.json` is what makes the 30-day fun-fact rule and the 30-day puzzle-title rule actually work. Read it at Stage 0; write it at Stage 4b every run. Schema and write rules: §7, §8, §9.
+4. **`archive/YYYY-MM-DD.html`** — not read by the routine. Rendered artifact only.
 
 Fallback rules:
 - If `INDEX.md` is missing or malformed, fall back to reading the JSON files directly and rebuilding the in-memory index.
@@ -23,11 +24,11 @@ Fallback rules:
 
 The EXCLUDE set is the union of signals from the last 2-3 days, partitioned by item kind:
 
-- **Stories** — union of all `short-hash` values, plus a "soft" set of `(key-entities, event)` tuples for entity-based matching when hashes don't match but the story is clearly the same.
-- **Fun facts** — union of all `fun-fact-id` values from the last 2-3 days.
-- **Puzzles** — union of all `puzzle-type` values from the last 2-3 days, so the puzzle TYPE rotates, not just the specific puzzle.
+- **Stories** — union of all `short-hash` values, plus a "soft" set of `(key-entities, event)` tuples for entity-based matching when hashes don't match but the story is clearly the same. Window: last 2-3 days (from `INDEX.md` / per-day JSON).
+- **Fun facts** — set of `topic_key` values from `USED.json.funfact_topics` dated within the last **30 days** (see §7).
+- **Puzzles** — set of `type` values from the last **4 days** plus `title_key` values from the last **30 days**, both from `USED.json.puzzle_log` (see §8).
 
-The window is 2-3 days: always include yesterday and the day before; include 3 days back when the topical density warrants it (e.g., a multi-day rolling story like an election or trial). Default window is 3 days.
+The STORY window is 2-3 days: always include yesterday and the day before; include 3 days back when the topical density warrants it (e.g., a multi-day rolling story like an election or trial). Default story window is 3 days. The fun-fact and puzzle windows are the longer 30/4-day windows above, which is why they are tracked in `USED.json` rather than only the per-day files.
 
 ## 4. The `short-hash` Algorithm
 
@@ -100,23 +101,32 @@ Decision:
 
 The `≥2 shared entities` threshold is intentionally moderate. Lower (≥1) would over-suppress unrelated stories that happen to share a country or a politician. Higher (≥3) would let near-duplicates slip through when stories naturally surface only 2 strong entities. When in doubt, the verifier prefers DROP over duplicate.
 
-## 7. Fun Fact Dedup
+## 7. Fun Fact Dedup — TOPIC-based over 30 days
 
-Each fact has a `fun-fact-id` derived using the **same algorithm** as `short-hash`, but computed on the fact text rather than a headline.
+The old rule (exact `fun-fact-id` text-hash over 2-3 days) was too weak: the same fact reworded, or a different fact about the same subject, slipped through within days. Dedup is now **topic-based over a 30-day window**, backed by `archive/USED.json`.
 
-Rules:
-- Hard constraint: the fact's `fun-fact-id` must not be in the last 2-3 days' EXCLUDE set.
-- Soft constraint: avoid topical repetition. Three consecutive days of "space" facts is bad even if each individual fact is novel. The routine tracks a coarse topical bucket per fact (e.g., `space`, `biology`, `history`, `language`, `physics`, `geography`, `culture`) and avoids choosing today's bucket if the same bucket appeared yesterday AND the day before.
+**`topic_key`.** The normalized main SUBJECT of the fact: lowercase, singular, articles (`a`/`an`/`the`) stripped. Examples:
+- "octopuses have three hearts" → `octopus`
+- "the Eiffel Tower grows taller in summer" → `eiffel tower`
+- "honey never spoils" → `honey`
+
+**Rules:**
+- **HARD RULE:** do NOT use a fun fact whose `topic_key` appears in `USED.json.funfact_topics` within the last **30 days**, even if the wording is entirely different. The subject is the dedup unit, not the sentence.
+- If the first candidate collides, generate another and retry — up to **10 times**.
+- If 10 candidates still collide, deliberately switch to a different category and draw from it. Rotate categories across: `space`, `biology`, `history`, `language`, `food`, `math`, `geography`, `human body`, `tech`.
+- Still require the fact to be verifiable against at least two reputable sources (see `verifier-checklist.md`); listicle / "amazing facts" sites are not acceptable.
+- A coarse one-word `topic` is also recorded in the per-day JSON for a soft secondary rotation signal, but the 30-day `topic_key` check in `USED.json` is the binding constraint.
 
 ## 8. Puzzle Dedup
 
-Puzzle TYPE rotates across: `visual`, `logic`, `quantitative`, `lateral`.
+Puzzle TYPE rotates across: `visual`, `logic`, `quantitative`, `lateral`. Backed by `archive/USED.json.puzzle_log`.
 
-Rules:
-- If both yesterday and the day before had `puzzle-type = logic`, today must NOT be `logic`.
-- More generally: today's `puzzle-type` must not equal the type used on either of the prior two days when those two prior types are identical.
-- When the prior two days had two different types, today may pick freely from the remaining types (and from either of the prior two as a last resort, preferring the older).
-- The specific puzzle (its full prompt text, hashed using the `short-hash` algorithm) must not repeat in the last 2-3 days, regardless of type.
+**`title_key`.** The puzzle title normalized: lowercase, kebab-case, articles stripped (e.g. "Two Trains and a Bird" → `two-trains-and-a-bird`).
+
+**Rules:**
+- **Type:** today's `type` must NOT equal any `type` used in the last **4 days** (`USED.json.puzzle_log`). This guarantees a rotation tighter than "not two-in-a-row".
+- **Title:** today's `title_key` must NOT appear in `USED.json.puzzle_log` within the last **30 days**, regardless of type. If it collides, pick a different puzzle.
+- Beyond those hard rules, prefer types not seen recently when a free choice exists.
 
 ## 9. Writing the Archive After the Run
 
@@ -162,7 +172,22 @@ At the end of the daily routine, write three artifacts under `/archive`:
 
 3. **`archive/YYYY-MM-DD.html`** — the rendered brief, produced from `template.html`.
 
-All three writes happen atomically at the end of the routine. If any write fails, none are committed (so a partial archive never poisons tomorrow's EXCLUDE set).
+4. **`archive/USED.json`** — the rolling fun-fact / puzzle ledger. Load the existing file (or start `{ "funfact_topics": [], "puzzle_log": [] }`), then:
+
+   ```json
+   {
+     "funfact_topics": [ { "date": "YYYY-MM-DD", "topic_key": "octopus", "text": "Octopuses have three hearts." } ],
+     "puzzle_log":     [ { "date": "YYYY-MM-DD", "type": "logic", "title_key": "two-trains-and-a-bird" } ]
+   }
+   ```
+
+   Rules:
+   - Append today's fun-fact entry to `funfact_topics` and today's puzzle entry to `puzzle_log`.
+   - Prune `funfact_topics` to the last **60 days** and `puzzle_log` to the last **30 days** (relative to today's SGT date). The 60-day fun-fact retention gives headroom above the 30-day enforcement window so an edge-of-window topic is never lost early.
+   - This file IS committed (it is the dedup memory; do not gitignore it).
+   - On a skipped day, write no fun-fact/puzzle entries (none were chosen) but still prune.
+
+All four writes happen atomically at the end of the routine. If any write fails, none are committed (so a partial archive never poisons tomorrow's EXCLUDE set).
 
 ## 10. Edge Cases
 

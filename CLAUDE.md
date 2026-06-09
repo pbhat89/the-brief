@@ -33,6 +33,7 @@ This routine is designed to run end-to-end without human-in-the-loop confirmatio
 - `archive/YYYY-MM-DD.html` — today's brief, byte-identical to what the email links to
 - `archive/YYYY-MM-DD.json` — structured payload for today's items
 - `archive/INDEX.md` — append-only headline log; never rewrite prior rows
+- `archive/USED.json` — rolling fun-fact / puzzle ledger (60-day topics, 30-day puzzle log); read at Stage 0, rewritten at Stage 4b. Committed on purpose — it is the long-window dedup memory.
 
 ## Files you should NOT modify during a normal routine run
 
@@ -40,4 +41,4 @@ This routine is designed to run end-to-end without human-in-the-loop confirmatio
 
 ## Recipient
 
-The recipient email address is **not** committed. `routine-prompt.md` uses the literal placeholder `<<RECIPIENT_EMAIL>>`. When the routine is configured on claude.ai, the human substitutes the placeholder in the pasted Instructions text. You should treat whatever the Instructions field contains as the authoritative recipient and not introspect the gitignored `recipient.local.txt`.
+The recipient addresses are **not** committed. `routine-prompt.md` uses the literal placeholder `<<RECIPIENT_EMAILS>>` — a JSON array of one or more plain addresses. When the routine is configured on claude.ai, the human substitutes the placeholder in the pasted Instructions text. The real list (currently two addresses) lives only in the gitignored `recipient.local.txt`. You should treat whatever the Instructions field contains as the authoritative recipient list, pass the whole array to the Gmail `create_draft` tool's `to` field, and not introspect `recipient.local.txt`.

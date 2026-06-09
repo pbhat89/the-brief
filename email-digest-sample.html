@@ -1,0 +1,104 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<!--
+  email-digest-sample.html — reference layout for The Brief's EMAIL body.
+
+  This is the structure the daily routine builds and passes to the Gmail
+  connector's create_draft tool as `htmlBody` (with a plain-text version in
+  `body` as the multipart/alternative fallback). It is NOT the archive page.
+
+  Rules this sample encodes (see routine-prompt.md Stage 4a):
+    - One line per item: bold ~10-14 word headline — Source link. 4-5 per section.
+    - Six news sections in fixed order: Singapore, India, Global, Tech & AI,
+      Business & Markets, Sports. NO fun fact, NO puzzle, NO spectrum/bias.
+    - All-inline CSS (email clients strip <style>/<head> CSS and JavaScript).
+    - Tables for layout (email-client safe), system font stack, white card.
+    - One "Link" to the full archived edition at the top, absolute Pages URL.
+    - Per-item "Source" links go to the publishers' real https article URLs.
+-->
+<body style="margin:0;background:#f4f4f5;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f5;padding:24px 0;">
+    <tr><td align="center">
+      <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;background:#ffffff;border-radius:10px;overflow:hidden;border:1px solid #e5e5e7;">
+        <tr><td style="padding:24px 28px 10px;border-bottom:1px solid #eee;">
+          <div style="font-size:24px;font-weight:800;color:#111;letter-spacing:-.3px;">☕ The Brief</div>
+          <div style="font-size:12px;color:#888;margin-top:2px;">Friday, 5 June 2026 · headlines</div>
+          <div style="font-size:12px;color:#999;margin-top:6px;">
+            Full edition with analysis, fun fact &amp; puzzle:
+            <a href="https://pbhat89.github.io/the-brief/archive/2026-06-05.html"
+               style="color:#1a6dd6;text-decoration:none;font-weight:600;">Link</a>
+          </div>
+        </td></tr>
+
+        <!-- ── SECTION BLOCK (repeat per section, in this exact order) ── -->
+        <tr><td style="padding:18px 28px 6px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#c0392b;">🇸🇬 Singapore</div>
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:8px;">
+            <tr><td style="padding:5px 0;font-size:14px;line-height:1.5;color:#222;">• <b>One-line headline goes here in plain words</b> — <a href="https://www.example.com/article" style="color:#1a6dd6;text-decoration:none;">Source</a></td></tr>
+            <tr><td style="padding:5px 0;font-size:14px;line-height:1.5;color:#222;">• <b>Second headline, ~10-14 words, specific and concrete</b> — <a href="https://www.example.com/article" style="color:#1a6dd6;text-decoration:none;">Source</a></td></tr>
+            <tr><td style="padding:5px 0;font-size:14px;line-height:1.5;color:#222;">• <b>Third headline</b> — <a href="https://www.example.com/article" style="color:#1a6dd6;text-decoration:none;">Source</a></td></tr>
+            <tr><td style="padding:5px 0;font-size:14px;line-height:1.5;color:#222;">• <b>Fourth headline</b> — <a href="https://www.example.com/article" style="color:#1a6dd6;text-decoration:none;">Source</a></td></tr>
+          </table>
+        </td></tr>
+
+        <tr><td style="padding:18px 28px 6px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#c0392b;">🇮🇳 India</div>
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:8px;">
+            <tr><td style="padding:5px 0;font-size:14px;line-height:1.5;color:#222;">• <b>One-line headline</b> — <a href="https://www.example.com/article" style="color:#1a6dd6;text-decoration:none;">Source</a></td></tr>
+            <tr><td style="padding:5px 0;font-size:14px;line-height:1.5;color:#222;">• <b>Second headline</b> — <a href="https://www.example.com/article" style="color:#1a6dd6;text-decoration:none;">Source</a></td></tr>
+            <tr><td style="padding:5px 0;font-size:14px;line-height:1.5;color:#222;">• <b>Third headline</b> — <a href="https://www.example.com/article" style="color:#1a6dd6;text-decoration:none;">Source</a></td></tr>
+            <tr><td style="padding:5px 0;font-size:14px;line-height:1.5;color:#222;">• <b>Fourth headline</b> — <a href="https://www.example.com/article" style="color:#1a6dd6;text-decoration:none;">Source</a></td></tr>
+          </table>
+        </td></tr>
+
+        <tr><td style="padding:18px 28px 6px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#c0392b;">🌍 Global / Geopolitics</div>
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:8px;">
+            <tr><td style="padding:5px 0;font-size:14px;line-height:1.5;color:#222;">• <b>One-line headline</b> — <a href="https://www.example.com/article" style="color:#1a6dd6;text-decoration:none;">Source</a></td></tr>
+            <tr><td style="padding:5px 0;font-size:14px;line-height:1.5;color:#222;">• <b>Second headline</b> — <a href="https://www.example.com/article" style="color:#1a6dd6;text-decoration:none;">Source</a></td></tr>
+            <tr><td style="padding:5px 0;font-size:14px;line-height:1.5;color:#222;">• <b>Third headline</b> — <a href="https://www.example.com/article" style="color:#1a6dd6;text-decoration:none;">Source</a></td></tr>
+            <tr><td style="padding:5px 0;font-size:14px;line-height:1.5;color:#222;">• <b>Fourth headline</b> — <a href="https://www.example.com/article" style="color:#1a6dd6;text-decoration:none;">Source</a></td></tr>
+          </table>
+        </td></tr>
+
+        <tr><td style="padding:18px 28px 6px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#c0392b;">💻 Tech &amp; AI</div>
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:8px;">
+            <tr><td style="padding:5px 0;font-size:14px;line-height:1.5;color:#222;">• <b>One-line headline</b> — <a href="https://www.example.com/article" style="color:#1a6dd6;text-decoration:none;">Source</a></td></tr>
+            <tr><td style="padding:5px 0;font-size:14px;line-height:1.5;color:#222;">• <b>Second headline</b> — <a href="https://www.example.com/article" style="color:#1a6dd6;text-decoration:none;">Source</a></td></tr>
+            <tr><td style="padding:5px 0;font-size:14px;line-height:1.5;color:#222;">• <b>Third headline</b> — <a href="https://www.example.com/article" style="color:#1a6dd6;text-decoration:none;">Source</a></td></tr>
+            <tr><td style="padding:5px 0;font-size:14px;line-height:1.5;color:#222;">• <b>Fourth headline</b> — <a href="https://www.example.com/article" style="color:#1a6dd6;text-decoration:none;">Source</a></td></tr>
+          </table>
+        </td></tr>
+
+        <tr><td style="padding:18px 28px 6px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#c0392b;">📈 Business &amp; Markets</div>
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:8px;">
+            <tr><td style="padding:5px 0;font-size:14px;line-height:1.5;color:#222;">• <b>One-line headline</b> — <a href="https://www.example.com/article" style="color:#1a6dd6;text-decoration:none;">Source</a></td></tr>
+            <tr><td style="padding:5px 0;font-size:14px;line-height:1.5;color:#222;">• <b>Second headline</b> — <a href="https://www.example.com/article" style="color:#1a6dd6;text-decoration:none;">Source</a></td></tr>
+            <tr><td style="padding:5px 0;font-size:14px;line-height:1.5;color:#222;">• <b>Third headline</b> — <a href="https://www.example.com/article" style="color:#1a6dd6;text-decoration:none;">Source</a></td></tr>
+            <tr><td style="padding:5px 0;font-size:14px;line-height:1.5;color:#222;">• <b>Fourth headline</b> — <a href="https://www.example.com/article" style="color:#1a6dd6;text-decoration:none;">Source</a></td></tr>
+          </table>
+        </td></tr>
+
+        <tr><td style="padding:18px 28px 6px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#c0392b;">🎾🏏🏎️ Sports</div>
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:8px;">
+            <tr><td style="padding:5px 0;font-size:14px;line-height:1.5;color:#222;">• <b>🎾 One-line headline</b> — <a href="https://www.example.com/article" style="color:#1a6dd6;text-decoration:none;">Source</a></td></tr>
+            <tr><td style="padding:5px 0;font-size:14px;line-height:1.5;color:#222;">• <b>🏏 Second headline</b> — <a href="https://www.example.com/article" style="color:#1a6dd6;text-decoration:none;">Source</a></td></tr>
+            <tr><td style="padding:5px 0;font-size:14px;line-height:1.5;color:#222;">• <b>🏎️ Third headline</b> — <a href="https://www.example.com/article" style="color:#1a6dd6;text-decoration:none;">Source</a></td></tr>
+            <tr><td style="padding:5px 0;font-size:14px;line-height:1.5;color:#222;">• <b>Fourth headline</b> — <a href="https://www.example.com/article" style="color:#1a6dd6;text-decoration:none;">Source</a></td></tr>
+          </table>
+        </td></tr>
+        <!-- ── end section blocks ── -->
+
+        <tr><td style="padding:18px 28px 26px;border-top:1px solid #eee;">
+          <div style="font-size:12px;color:#999;">
+            Full edition with analysis, spectrum framing, fun fact &amp; puzzle:
+            <a href="https://pbhat89.github.io/the-brief/archive/2026-06-05.html"
+               style="color:#1a6dd6;text-decoration:none;font-weight:600;">Link</a>
+          </div>
+        </td></tr>
+      </table>
+    </td></tr>
+  </table>
+</body></html>
