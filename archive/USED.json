@@ -1,16 +1,16 @@
 {
   "funfact_topics": [
-    {
-      "date": "2026-06-05",
-      "topic_key": "octopus",
-      "text": "An octopus has three hearts and blue, copper-based blood."
-    }
+    { "date": "2026-06-05", "topic_key": "octopus", "text": "An octopus has three hearts and blue, copper-based blood." },
+    { "date": "2026-06-06", "topic_key": "venus", "text": "A day on Venus is longer than its year." },
+    { "date": "2026-06-07", "topic_key": "university of oxford", "text": "The University of Oxford is older than the Aztec Empire." },
+    { "date": "2026-06-08", "topic_key": "run", "text": "The verb run has more meanings than any other word in the OED." },
+    { "date": "2026-06-09", "topic_key": "octopus", "text": "An octopus has three hearts and blue, copper-based blood." }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-06-05",
-      "type": "logic",
-      "title_key": "midnight-bridge"
-    }
+    { "date": "2026-06-05", "type": "logic", "title_key": "midnight-bridge" },
+    { "date": "2026-06-06", "type": "quantitative", "title_key": "" },
+    { "date": "2026-06-07", "type": "lateral", "title_key": "sealed-room" },
+    { "date": "2026-06-08", "type": "visual", "title_key": "drilling-cube" },
+    { "date": "2026-06-09", "type": "logic", "title_key": "" }
   ]
 }
