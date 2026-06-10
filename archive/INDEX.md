@@ -130,3 +130,26 @@ is empty until the first run.
 2026-06-10	Mannarino ends Diallo's 's-Hertogenbosch title defence in three sets	09cd3a95	mannarino,diallo,s-hertogenbosch,libema open
 2026-06-10	Antonelli wins chaotic Monaco Grand Prix to extend his title lead	4b4b2c81	antonelli,hamilton,verstappen,monaco,f1
 2026-06-10	Pliskova fights back to beat Nottingham champion Kessler at Queen's	73f04546	pliskova,kessler,queens,wta
+2026-06-11	Driver who staged 73 traffic accidents for insurance payouts jailed 32 weeks	d124ae7d	singapore,staged accidents,insurance fraud,court,jail
+2026-06-11	Singapore lines up free World Cup screenings as Mediacorp airs 28 matches free-to-air	33b4dffb	singapore,world cup,mediacorp,community clubs,screenings
+2026-06-11	Economists cut Singapore's 2026 growth forecast to 1.7% as Gulf conflict bites	f7c09369	singapore,mas survey,growth forecast,monetary policy
+2026-06-11	Modi becomes India's longest-serving elected PM as NDA marks 12 years in power	0c023d36	narendra modi,nda,nehru,longest-serving pm,congress
+2026-06-11	Fitch cuts India's FY27 growth forecast to 6.4%, citing the US-Iran war	278d7573	fitch,india,gdp forecast,us-iran war
+2026-06-11	Monsoon advances into the northeast as Delhi braces for a wet spell	40815a28	monsoon,imd,northeast,delhi,western disturbance
+2026-06-11	RBI deputy governor Swaminathan reappointed for two more years	9c967b78	rbi,swaminathan janakiraman,deputy governor,reappointment
+2026-06-11	Update: US strikes Iran after Apache downed in Hormuz; Iran hits Gulf bases	1c880c45	united states,iran,strait of hormuz,gulf bases,apache
+2026-06-11	Update: Israel keeps up Lebanon strikes, says its campaign is far from over	c4abe78f	israel,lebanon,tyre,katz,hezbollah
+2026-06-11	UK leaders urge calm after Belfast stabbing sparks anti-immigration protests	5f8395cf	united kingdom,belfast,northern ireland,protests,stabbing
+2026-06-11	Largest-ever World Cup kicks off as Mexico hosts South Africa	fcf274e1	fifa world cup,mexico,south africa,north america
+2026-06-11	Update: Apple shares slide after WWDC as Wall Street splits on the Gemini-Siri bet	3d1a8030	apple,wwdc,siri,google gemini,shares
+2026-06-11	Microsoft ships its largest-ever Patch Tuesday, fixing about 200 flaws	846def98	microsoft,patch tuesday,zero-day,windows,security
+2026-06-11	Nvidia races to meet surging China demand for its H200 AI chips	05eb4919	nvidia,h200,china,tsmc,ai chips
+2026-06-11	US inflation jumps to 4.2%, a three-year high, as energy costs surge	4cf3794b	united states,cpi,inflation,energy,federal reserve
+2026-06-11	Update: Wall Street tumbles as hot CPI and US-Iran strikes hit stocks	7e9af41b	wall street,dow,nasdaq,s&p 500,cpi
+2026-06-11	Oil swings as US-Iran strikes rattle the Strait of Hormuz	172b824f	brent crude,oil,strait of hormuz,us-iran,inventories
+2026-06-11	Update: SpaceX IPO four times oversubscribed before its June 12 debut	3627055e	spacex,ipo,nasdaq,elon musk
+2026-06-11	Maybank says it has funnelled $4.9 billion into the Johor-Singapore economic zone	82c3f833	maybank,johor-singapore sez,investment,family offices
+2026-06-11	India lose Kohli and Hardik Pandya to injury before Afghanistan ODIs	974e3282	india,virat kohli,hardik pandya,afghanistan,injury
+2026-06-11	India thrash Afghanistan by an innings and 300 runs in one-off Test	d97cb0c2	india,afghanistan,test,shubman gill,manav suthar
+2026-06-11	Defending champion Tatjana Maria beats Sakkari at Queen's	ebc948ba	tatjana maria,maria sakkari,queens,wta
+2026-06-11	Eala and Cirstea also reach the Queen's second round	c8d7fb91	alexandra eala,sorana cirstea,queens,wta

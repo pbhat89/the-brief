@@ -29,6 +29,11 @@
       "date": "2026-06-10",
       "topic_key": "lightning",
       "text": "A single lightning bolt is about five times hotter than the surface of the Sun."
+    },
+    {
+      "date": "2026-06-11",
+      "topic_key": "banana",
+      "text": "Bananas are berries, but strawberries are not."
     }
   ],
   "puzzle_log": [
@@ -61,6 +66,11 @@
       "date": "2026-06-10",
       "type": "quantitative",
       "title_key": "up-and-down-hill"
+    },
+    {
+      "date": "2026-06-11",
+      "type": "lateral",
+      "title_key": "diver-in-forest"
     }
   ]
 }
