@@ -34,6 +34,11 @@
       "date": "2026-06-11",
       "topic_key": "banana",
       "text": "Bananas are berries, but strawberries are not."
+    },
+    {
+      "date": "2026-06-12",
+      "topic_key": "chess",
+      "text": "There are more possible games of chess than atoms in the observable universe."
     }
   ],
   "puzzle_log": [
@@ -71,6 +76,11 @@
       "date": "2026-06-11",
       "type": "lateral",
       "title_key": "diver-in-forest"
+    },
+    {
+      "date": "2026-06-12",
+      "type": "visual",
+      "title_key": "paper-and-the-punch"
     }
   ]
 }

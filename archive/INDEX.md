@@ -153,3 +153,28 @@ is empty until the first run.
 2026-06-11	India thrash Afghanistan by an innings and 300 runs in one-off Test	d97cb0c2	india,afghanistan,test,shubman gill,manav suthar
 2026-06-11	Defending champion Tatjana Maria beats Sakkari at Queen's	ebc948ba	tatjana maria,maria sakkari,queens,wta
 2026-06-11	Eala and Cirstea also reach the Queen's second round	c8d7fb91	alexandra eala,sorana cirstea,queens,wta
+2026-06-12	Singapore brings forward S$500 CDC vouchers to June 11 as Gulf conflict lifts costs	90ea7f47	singapore,cdc vouchers,cost of living,fuel prices
+2026-06-12	Workers told to reapply for overseas roles are still retrenched, MOM and NTUC say	54223fed	singapore,retrenchment,mom,ntuc,jobs
+2026-06-12	Singapore police warn of resurgent concert-ticket and impersonation scams	9173956c	singapore,police,scams,ica,impersonation
+2026-06-12	Singapore Airlines keeps Dubai route suspended as Gulf airspace stays volatile	a9c6a64a	singapore airlines,dubai,gulf conflict,airspace,scoot
+2026-06-12	Three Indian seafarers killed in US strike on tanker off Oman; New Delhi summons US envoy	15211ac0	india,seafarers,mt settebello,oman,united states
+2026-06-12	Naga body enforces 24-hour Manipur shutdown after six abducted villagers found dead	f80546a7	manipur,united naga council,shutdown,kangpokpi,kuki
+2026-06-12	India's forex reserves rise to $682.32 billion in latest RBI data	771c1dd3	india,forex reserves,rbi,rupee
+2026-06-12	West Bengal becomes 36th state to roll out Ayushman Bharat health scheme	a6bf9b17	west bengal,ayushman bharat,pm-jay,health insurance
+2026-06-12	Update: Trump calls off Iran strikes, says ceasefire-and-Hormuz deal is close	ab897bb5	united states,iran,trump,strait of hormuz,ceasefire
+2026-06-12	Update: Northern Ireland sees second night of unrest after Belfast stabbing	87e3212c	northern ireland,belfast,unrest,stabbing,protests
+2026-06-12	Saudi Arabia lifts five-year ban on Lebanese imports in sign of thaw	00408ed8	saudi arabia,lebanon,import ban,mohammed bin salman,aoun
+2026-06-12	China bars Philippine defence chief Teodoro over South China Sea remarks	503d73f2	china,philippines,teodoro,south china sea,sanctions
+2026-06-12	Largest-ever World Cup opens as hosts Mexico beat South Africa 2-0	81b2de4b	fifa world cup,mexico,south africa,north america
+2026-06-12	EU orders Meta to open WhatsApp to rival AI assistants	2a60cb54	european union,meta,whatsapp,digital markets act,ai
+2026-06-12	OpenAI teams with Oracle to sell its models and Codex through OCI	3922a354	openai,oracle,oci,codex,cloud
+2026-06-12	Qualcomm strikes ByteDance deal to supply AI data-centre chips	c2328726	qualcomm,bytedance,ai chips,data centre,doubao
+2026-06-12	OpenAI says Chinese operations used ChatGPT for covert influence content	de9a5346	openai,chatgpt,china,influence operations,disinformation
+2026-06-12	Update: Wall Street surges as Trump cancels Iran strikes	726f32ab	wall street,s&p 500,dow,nasdaq,iran
+2026-06-12	Oracle shares slide about 8% on plan to raise $20 billion for AI build-out	7dfd9278	oracle,shares,ai capex,fundraising
+2026-06-12	Update: Oil tumbles as Trump cancels Iran strikes and touts Hormuz deal	09b5e7cd	oil,brent crude,strait of hormuz,iran,us
+2026-06-12	US wholesale prices post biggest annual jump in over three years	7a8aabc4	united states,producer prices,ppi,inflation,federal reserve
+2026-06-12	Bangladesh beat Australia to clinch their first ODI series win over Australia	ed4d79d8	bangladesh,australia,odi series,mirpur,cricket
+2026-06-12	Iva Jovic upsets Eala to reach her first Queen's quarter-final	e9576f78	iva jovic,alexandra eala,queens,wta,tennis
+2026-06-12	Pliskova reaches Queen's quarter-finals after Mboko retires	1a45deca	karolina pliskova,victoria mboko,queens,wta,tennis
+2026-06-12	Anisimova advances to the Queen's quarter-finals	812067ca	amanda anisimova,laura siegemund,queens,wta,tennis

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Fri, 12 June 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Friday, 12 June 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Friday, 12 June 2026 · 🔍 30 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eight entries in this exact order:
+     id    : one of "sg" | "india" | "geo" | "tech" | "biz" | "sports" | "fun" | "puzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 6 news tabs; fun/puzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+============================================================================= */
+
+const SECTIONS = [
+  { id:"sg", title:"🇸🇬 Singapore", color:"#e74c3c", items:[
+    { headline:"Singapore brings forward S$500 CDC vouchers to June 11 as Gulf conflict lifts costs", summary:"Eligible Singaporean households can claim a S$500 CDC voucher tranche from June 11, brought forward from January 2027 in response to higher fuel prices and cost-of-living anxieties from the Middle East conflict; the payout is split S$250 for hawkers and heartland merchants and S$250 for supermarkets.", source:"Mothership", url:"https://mothership.sg/2026/06/cdc-vouchers-june-2026/", date:"Jun 11", spectrum:null, bias:null },
+    { headline:"Workers told to reapply for overseas roles are still retrenched, MOM and NTUC say", summary:"The Ministry of Manpower and NTUC said employees who lose their jobs in Singapore count as retrenched even when asked to reapply for roles overseas within the same firm, as union-handled cases climb and total layoffs rose to 14,490 in 2025 from 13,020 in 2024.", source:"Mothership", url:"https://mothership.sg/2026/06/employees-reapply-roles-retrenchment/", date:"Jun 10", spectrum:null, bias:null },
+    { headline:"Singapore police warn of resurgent concert-ticket and impersonation scams", summary:"Singapore police renewed warnings over concert-ticket resale scams and government-official impersonation calls, after the ICA flagged scammers posing as officers on phone and video calls to extract payments and personal data.", source:"Mothership", url:"https://mothership.sg/2026/06/singapore-police-concert-ticket-scams/", date:"Jun 10", spectrum:null, bias:null },
+    { headline:"Singapore Airlines keeps Dubai route suspended as Gulf airspace stays volatile", summary:"Renewed US-Iran strikes this week kept Gulf airspace disrupted, with Singapore Airlines holding its Singapore-Dubai service (SQ494/SQ495) suspended through August 2, deferring its Riyadh launch to September and keeping Scoot's Jeddah flights halted.", source:"CNA", url:"https://www.channelnewsasia.com/singapore", date:"Jun 11", spectrum:null, bias:null },
+  ]},
+  { id:"india", title:"🇮🇳 India", color:"#e67e22", items:[
+    { headline:"Three Indian seafarers killed in US strike on tanker off Oman; New Delhi summons US envoy", summary:"India's foreign ministry confirmed three Indian crew were killed when a US aircraft struck the oil tanker MT Settebello in the Gulf of Oman, which Washington said it disabled for trying to smuggle Iranian oil past its blockade; the Indian Navy rescued 21 other Indian nationals and New Delhi summoned a senior US diplomat.", source:"The Times of India", url:"https://timesofindia.indiatimes.com/india", date:"Jun 11", spectrum:null, bias:"Indian outlets foreground the three civilian deaths and the foreign ministry's formal protest, while the US account frames the strike as enforcement of its oil blockade against alleged Iranian-oil smuggling." },
+    { headline:"Naga body enforces 24-hour Manipur shutdown after six abducted villagers found dead", summary:"The United Naga Council enforced a 24-hour shutdown across Naga-inhabited areas of Manipur from 6am on June 11 after the bodies of six Naga villagers, abducted on May 13 from Leilon Vaiphei, were recovered in Kangpokpi district; the council demanded arrests and the scrapping of the Suspension of Operations pact with Kuki militant groups.", source:"The Hindu", url:"https://www.thehindu.com/news/national/", date:"Jun 11", spectrum:null, bias:null },
+    { headline:"India's forex reserves rise to $682.32 billion in latest RBI data", summary:"India's foreign exchange reserves climbed to $682.32 billion in the latest weekly Reserve Bank of India data, extending a recovery even as the rupee stays under pressure from higher oil prices linked to the Gulf conflict.", source:"The Economic Times", url:"https://economictimes.indiatimes.com/news/economy/indicators", date:"Jun 11", spectrum:null, bias:null },
+    { headline:"West Bengal becomes 36th state to roll out Ayushman Bharat health scheme", summary:"West Bengal began implementing the Ayushman Bharat PM-JAY health insurance scheme on June 8, becoming the 36th state or union territory to do so and extending cover of up to 5 lakh rupees a family to its residents.", source:"The Economic Times", url:"https://economictimes.indiatimes.com/news/economy/policy", date:"Jun 9", spectrum:null, bias:null },
+  ]},
+  { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
+    { headline:"Update: Trump calls off Iran strikes, says ceasefire-and-Hormuz deal is close", summary:"President Trump said on June 11 he had cancelled planned strikes on Iran, hours after threatening to hit it very hard, and claimed a deal to extend the ceasefire, reopen the Strait of Hormuz and start 60 days of nuclear talks was nearly done; Iran's foreign ministry said no final agreement had been reached.", source:"Reuters", url:"https://www.reuters.com/world/middle-east/", date:"Jun 11", spectrum:{ left:"The Guardian and Al Jazeera lead on Iran's denial that any deal is final and on the civilian toll of US strikes on Gulf shipping.", center:"Reuters, AP and the BBC report the cancelled strikes and Trump's claim factually, stressing the still-unsigned status and the market relief that followed.", right:"US conservative outlets cast it as Trump extracting concessions — a reopened Strait of Hormuz and nuclear talks — through maximum pressure." }, bias:null },
+    { headline:"Update: Northern Ireland sees second night of unrest after Belfast stabbing", summary:"Rioters in Northern Ireland set fires and threw bricks and bottles at police for a second night on June 10 over an attempted-murder stabbing in Belfast, as anti-immigration violence spread and political leaders again appealed for calm.", source:"BBC", url:"https://www.bbc.com/news", date:"Jun 11", spectrum:null, bias:null },
+    { headline:"Saudi Arabia lifts five-year ban on Lebanese imports in sign of thaw", summary:"Saudi Arabia lifted a near-five-year ban on Lebanese imports on June 10, an order from Crown Prince Mohammed bin Salman that Riyadh tied to positive steps by Beirut, including moves to disarm Hezbollah; Lebanese President Joseph Aoun said it would help revive the economy.", source:"AP", url:"https://apnews.com/hub/middle-east", date:"Jun 11", spectrum:null, bias:null },
+    { headline:"China bars Philippine defence chief Teodoro over South China Sea remarks", summary:"China's foreign ministry said on June 11 it was banning Philippine Defence Secretary Gilberto Teodoro and his family from entering China, Hong Kong and Macau, and barring transactions with him, over his erroneous remarks on the South China Sea; Manila called it an unfriendly act.", source:"Reuters", url:"https://www.reuters.com/world/asia-pacific/", date:"Jun 11", spectrum:null, bias:null },
+    { headline:"Largest-ever World Cup opens as hosts Mexico beat South Africa 2-0", summary:"The 48-team, 104-match FIFA World Cup co-hosted by the US, Mexico and Canada opened on June 11 with hosts Mexico beating South Africa 2-0 before a packed Estadio Azteca in Mexico City.", source:"BBC", url:"https://www.bbc.com/sport/football", date:"Jun 11", spectrum:null, bias:null },
+  ]},
+  { id:"tech", title:"💻 Tech & AI", color:"#27ae60", items:[
+    { headline:"EU orders Meta to open WhatsApp to rival AI assistants", summary:"The European Commission ordered Meta to let third-party AI chatbots operate inside WhatsApp, saying users must be free to choose their AI assistant, in a fresh Digital Markets Act intervention against the messaging service.", source:"Reuters", url:"https://www.reuters.com/technology/", date:"Jun 11", spectrum:null, bias:null },
+    { headline:"OpenAI teams with Oracle to sell its models and Codex through OCI", summary:"OpenAI said Oracle Cloud customers will soon be able to apply their existing Oracle credits to buy OpenAI frontier models, including GPT-5.5, and its Codex coding tool through the OCI Marketplace.", source:"Bloomberg", url:"https://www.bloomberg.com/technology", date:"Jun 11", spectrum:null, bias:null },
+    { headline:"Qualcomm strikes ByteDance deal to supply AI data-centre chips", summary:"Qualcomm agreed to supply ByteDance with millions of custom ASIC chips for AI data centres powering agents in its Doubao chatbot, pushing the company deeper into the data-centre silicon market.", source:"The Information", url:"https://www.theinformation.com/", date:"Jun 11", spectrum:null, bias:null },
+    { headline:"OpenAI says Chinese operations used ChatGPT for covert influence content", summary:"OpenAI reported that China-linked operations had used ChatGPT to generate political content, including cartoons aimed at US policy debates, as part of covert influence campaigns it said it had detected and disrupted.", source:"The Verge", url:"https://www.theverge.com/", date:"Jun 11", spectrum:null, bias:null },
+  ]},
+  { id:"biz", title:"📈 Business & Markets", color:"#8e44ad", items:[
+    { headline:"Update: Wall Street surges as Trump cancels Iran strikes", summary:"US stocks jumped on June 11 after President Trump called off planned strikes on Iran and signalled a deal: the S&P 500 rose 1.75% to 7,394.30, the Dow climbed 929.97 points (1.86%) to 50,848.75 and the Nasdaq gained 2.54% to 25,809.66, led by a rebound in chip stocks.", source:"CNBC", url:"https://www.cnbc.com/2026/06/11/stock-market-today-live-updates.html", date:"Jun 11", spectrum:null, bias:null },
+    { headline:"Oracle shares slide about 8% on plan to raise $20 billion for AI build-out", summary:"Oracle shares fell roughly 8% on June 11 after the company unveiled plans to raise about $20 billion in debt and equity to fund its AI data-centre expansion, with capital-spending guidance above Wall Street estimates overshadowing an earnings beat.", source:"Bloomberg", url:"https://www.bloomberg.com/technology", date:"Jun 11", spectrum:null, bias:null },
+    { headline:"Update: Oil tumbles as Trump cancels Iran strikes and touts Hormuz deal", summary:"Crude prices fell sharply on June 11 after Trump called off strikes on Iran and said the Strait of Hormuz would reopen under a pending deal, unwinding part of the war-risk premium that had driven Brent toward the mid-$90s.", source:"Reuters", url:"https://www.reuters.com/markets/commodities/", date:"Jun 11", spectrum:null, bias:null },
+    { headline:"US wholesale prices post biggest annual jump in over three years", summary:"US producer prices rose more than expected in May for the largest annual increase in over three years, reinforcing bets the Federal Reserve will hold rates at its June 17 meeting even as equities rallied.", source:"CNBC", url:"https://www.cnbc.com/2026/06/11/ppi-producer-price-index-may-2026.html", date:"Jun 11", spectrum:null, bias:null },
+  ]},
+  { id:"sports", title:"🎾🏏🏎️ Sports", color:"#c0392b", items:[
+    { headline:"🏏 Bangladesh beat Australia to clinch their first ODI series win over Australia", summary:"Bangladesh beat Australia by five wickets in the second ODI at Mirpur on June 11, chasing a rain-revised target to take an unbeatable lead and seal their first-ever bilateral ODI series win over Australia.", source:"ESPNcricinfo", url:"https://www.espncricinfo.com/series/australia-in-bangladesh-2026-1532475/bangladesh-vs-australia-2nd-odi-1532481/match-report", date:"Jun 11", spectrum:null, bias:null },
+    { headline:"🎾 Iva Jovic upsets Eala to reach her first Queen's quarter-final", summary:"Sixth seed Iva Jovic beat Alexandra Eala 6-2, 6-2 at Queen's on June 11 to reach the quarter-finals of the grass-court WTA 500 event for the first time.", source:"WTA", url:"https://www.wtatennis.com/tournaments/1111/queens/2026/scores", date:"Jun 11", spectrum:null, bias:null },
+    { headline:"🎾 Pliskova reaches Queen's quarter-finals after Mboko retires", summary:"Karolina Pliskova advanced to the Queen's quarter-finals on June 11 when Victoria Mboko retired hurt while serving at 4-3 down in the second set, having lost the first set 6-2.", source:"WTA", url:"https://www.wtatennis.com/tournaments/1111/queens/2026/scores", date:"Jun 11", spectrum:null, bias:null },
+    { headline:"🎾 Anisimova advances to the Queen's quarter-finals", summary:"Amanda Anisimova came through her round-of-16 match against Laura Siegemund to reach the quarter-finals of the grass-court event at Queen's.", source:"WTA", url:"https://www.wtatennis.com/tournaments/1111/queens/2026/scores", date:"Jun 11", spectrum:null, bias:null },
+  ]},
+  { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
+  { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
+];
+
+const FUN_FACT = {
+  text: "There are more possible games of chess than there are atoms in the observable universe. Claude Shannon estimated the number of possible chess games at around 10^120, a figure now called the Shannon number, while the observable universe is thought to hold only about 10^80 atoms — leaving chess's possibilities greater by some 40 orders of magnitude.",
+  tag: "Category · Mathematics & Games"
+};
+
+const PUZZLE = {
+  type: "Visual",
+  title: "The Paper and the Punch",
+  how: "Picture how many layers your single punch actually goes through, then mentally unfold the sheet one crease at a time.",
+  question: "You take a square sheet of paper and fold it exactly in half from top to bottom, then fold it in half again from left to right, leaving a smaller square that is four sheets thick.\nYou punch one single round hole straight through the middle of this folded square, then carefully unfold the paper completely.\nHow many holes are in the sheet, and how are they arranged?",
+  answer: "Four holes.\nFolding twice stacks the paper into four layers, so the single punch passes through all four at once and makes four holes.\nWhen you unfold, the punched point is mirrored across both crease lines, so the holes land at the centres of the four quadrants — a neat 2x2 grid, evenly spaced around the middle of the sheet."
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn){var a=document.getElementById('ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>
