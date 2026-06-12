@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Sat, 13 June 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Saturday, 13 June 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Saturday, 13 June 2026 · 🔍 41 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eight entries in this exact order:
+     id    : one of "sg" | "india" | "geo" | "tech" | "biz" | "sports" | "fun" | "puzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 6 news tabs; fun/puzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+============================================================================= */
+
+const SECTIONS = [
+  { id:"sg", title:"🇸🇬 Singapore", color:"#e74c3c", items:[
+    { headline:"Three dead after supply boat sinks off Pasir Panjang Terminal in collision",
+      summary:"Three crew members aged 38 to 53 were found dead after a supply boat collided with a landing craft and sank off Pasir Panjang Terminal at about 9.30am on June 12. The Maritime and Port Authority said search-and-rescue and diving operations continued for anyone still missing, while the landing craft&rsquo;s crew were unhurt and port operations were not affected.",
+      source:"Mothership", url:"https://mothership.sg/2026/06/supply-boat-sinks-off-pasir-panjang-terminal/", date:"Jun 12",
+      spectrum:null, bias:null },
+    { headline:"Heavy downpours end Singapore&rsquo;s warm spell, bringing 2026&rsquo;s coolest day",
+      summary:"Heavy rain on June 12 brought Singapore its coolest day of 2026 so far, ending a prolonged warm, dry stretch as the inter-monsoon period gave way to wetter weather. Forecasters expect more frequent showers in the days ahead.",
+      source:"CNA", url:"https://www.channelnewsasia.com/singapore", date:"Jun 12",
+      spectrum:null, bias:null },
+    { headline:"PM Wong to deliver National Day Rally on Aug 23",
+      summary:"Prime Minister Lawrence Wong will deliver his 2026 National Day Rally address on Aug 23. The annual keynote traditionally sets out the government&rsquo;s major policy directions for the year ahead.",
+      source:"CNA", url:"https://www.channelnewsasia.com/singapore", date:"Jun 12",
+      spectrum:null, bias:null },
+  ]},
+  { id:"india", title:"🇮🇳 India", color:"#e67e22", items:[
+    { headline:"India marks one year since the Air India AI-171 crash that killed 260",
+      summary:"Families gathered at the Ahmedabad crash site on June 12 to mark a year since Air India flight AI-171, a London-bound Boeing 787, crashed seconds after take-off and killed 260 people, including 19 on the ground, with only one survivor. Civil Aviation Minister K. Rammohan Naidu said the investigation was proceeding rigorously, with the final report still pending.",
+      source:"The Hindu", url:"https://www.thehindu.com/news/national/", date:"Jun 12",
+      spectrum:null, bias:null },
+    { headline:"IMD issues red alert for Delhi as storms and heavy rain sweep 15 states",
+      summary:"The India Meteorological Department put Delhi under a red alert on June 12 for thunderstorms, lightning and gusty winds, and issued rain and storm warnings across about 15 states, including Uttar Pradesh and Bihar. Kerala&rsquo;s Ernakulam and Idukki districts were placed under an orange alert for very heavy rain.",
+      source:"The Hindu", url:"https://www.thehindu.com/news/national/", date:"Jun 12",
+      spectrum:null, bias:null },
+    { headline:"FSSAI issues notices to Nestl&eacute;, KFC and Flipkart over hygiene complaints",
+      summary:"India&rsquo;s food regulator, the FSSAI, issued notices to Nestl&eacute; India, KFC India and Flipkart on June 12 after social-media complaints alleging infestation in a Maggi pack, insects in a Flipkart Minutes order, and unhygienic conditions at a KFC outlet in Andhra Pradesh. Nestl&eacute; rejected the Maggi allegation, and the regulator sought quality-check logs and details of corrective action.",
+      source:"The Economic Times", url:"https://economictimes.indiatimes.com/industry/cons-products/food", date:"Jun 12",
+      spectrum:null, bias:null },
+    { headline:"Indian shares slip and rupee weakens as Middle East tensions and outflows weigh",
+      summary:"Indian equities eased on June 12, with the Sensex slipping toward 73,800, as elevated crude prices, Middle East tensions and persistent foreign-investor selling dampened sentiment. The rupee stayed under pressure near 95.5 per US dollar, with year-to-date foreign portfolio outflows running at a record of about US$30 billion.",
+      source:"The Economic Times", url:"https://economictimes.indiatimes.com/markets/stocks/news", date:"Jun 12",
+      spectrum:null, bias:null },
+  ]},
+  { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
+    { headline:"Update: Pakistan says final text of US-Iran deal reached as Trump eyes weekend signing",
+      summary:"Pakistan&rsquo;s prime minister said mediators had reached a &ldquo;final, agreed-upon text&rdquo; to end the US-Iran war on June 12, and Iran&rsquo;s foreign minister Abbas Araghchi said a deal had &ldquo;never been closer.&rdquo; President Trump said it could be signed in Europe over the weekend with Vice-President JD Vance attending, though Iran&rsquo;s supreme leader had yet to sign off and Israel said it was not a party.",
+      source:"Reuters", url:"https://www.reuters.com/world/middle-east/", date:"Jun 12",
+      spectrum:null, bias:null },
+    { headline:"China arrests US scholar Min Zin on suspicion of espionage",
+      summary:"China&rsquo;s foreign ministry confirmed on June 12 that it had placed Min Zin, a US citizen who heads the Myanmar-focused Institute for Strategy and Policy, under criminal detention on suspicion of espionage and endangering national security. He was detained on arrival at Kunming airport on June 3; his think-tank has documented Beijing&rsquo;s influence along the China-Myanmar border.",
+      source:"Reuters", url:"https://www.reuters.com/world/asia-pacific/", date:"Jun 12",
+      spectrum:null, bias:null },
+    { headline:"Canada earn first World Cup point in 1-1 draw with Bosnia as USA open at home",
+      summary:"Co-hosts Canada earned their first-ever World Cup point on June 12, with substitute Cyle Larin equalising in the 78th minute for a 1-1 draw against Bosnia and Herzegovina after Sasa Lukic had put the visitors ahead. The United States began their home tournament against Paraguay later the same day.",
+      source:"BBC", url:"https://www.bbc.com/sport/football", date:"Jun 12",
+      spectrum:null, bias:null },
+    { headline:"Al-Qaeda-linked JNIM blockade pushes Mali&rsquo;s junta into deepening crisis",
+      summary:"A months-long fuel blockade by the al-Qaeda-linked group JNIM has squeezed Mali&rsquo;s capital, Bamako, with residents queuing for scarce fuel and electricity reportedly cut to about six hours a day. The jihadist siege is piling pressure on General Assimi Goita&rsquo;s junta and has prompted several foreign governments to urge their citizens to leave.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/where/mali/", date:"Jun 12",
+      spectrum:null, bias:null },
+  ]},
+  { id:"tech", title:"💻 Tech & AI", color:"#27ae60", items:[
+    { headline:"OpenAI acquires cloud startup Ona to power long-running Codex agents",
+      summary:"OpenAI said on June 11 it would acquire Ona, the German cloud-environment startup formerly known as Gitpod, to let its Codex coding agent run longer, persistent tasks in secure cloud sandboxes. Terms were undisclosed, Ona&rsquo;s team will join the Codex group, and OpenAI said more than 5 million people now use Codex each week.",
+      source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-06-11/openai-to-acquire-cloud-platform-ona-to-support-ai-agents", date:"Jun 11", spectrum:null, bias:null },
+    { headline:"Jeff Bezos&rsquo;s Prometheus raises $12 billion at a $41 billion valuation",
+      summary:"Prometheus, the physical-AI startup co-founded by Jeff Bezos and Vik Bajaj, said on June 11 it had raised $12 billion at a $41 billion valuation from backers including Bezos, JPMorgan, Goldman Sachs and BlackRock. The company is building what it calls an &ldquo;artificial general engineer&rdquo; to automate the design and manufacture of complex physical systems.",
+      source:"TechCrunch", url:"https://techcrunch.com/2026/06/11/jeff-bezoss-prometheus-raises-12b-to-build-an-artificial-general-engineer-for-the-physical-world/", date:"Jun 11", spectrum:null, bias:null },
+    { headline:"Datadog veterans launch AI coding startup Niteshift with $7 million seed",
+      summary:"Niteshift, founded by former Datadog engineers, launched on June 10 with a $7 million seed round led by Greylock&rsquo;s Jerry Chen and angels including Reid Hoffman and Datadog chief executive Olivier Pomel. It is pitching an AI coding agent built as a bet against lock-in to any single big AI provider.",
+      source:"TechCrunch", url:"https://techcrunch.com/2026/06/10/datadog-veterans-launch-ai-coding-startup-niteshift-on-a-bet-against-big-ai-lock-in/", date:"Jun 10", spectrum:null, bias:null },
+    { headline:"Jedify raises $24 million to give AI agents business context",
+      summary:"Enterprise startup Jedify raised $24 million in a Series A led by Norwest on June 10 to help companies feed AI agents structured context about their operations. The round is part of a wave of funding aimed at making autonomous agents reliable enough for production use.",
+      source:"TechCrunch", url:"https://techcrunch.com/2026/06/10/jedify-raises-24m-to-help-companies-arm-ai-agents-with-context-on-their-business/", date:"Jun 10", spectrum:null, bias:null },
+  ]},
+  { id:"biz", title:"📈 Business & Markets", color:"#8e44ad", items:[
+    { headline:"Update: SpaceX soars 19% in record stock-market debut",
+      summary:"SpaceX shares jumped about 19% to close at $160.95 in their June 12 Nasdaq debut under the ticker SPCX, after the company priced the largest IPO in history at $135 a share to raise roughly $75 billion and value the rocket maker near $1.8 trillion. The stock touched $176 intraday before paring gains.",
+      source:"CNBC", url:"https://www.cnbc.com/2026/06/12/spacex-ipo-spcx-live-updates.html", date:"Jun 12", spectrum:null, bias:null },
+    { headline:"Update: Wall Street rises a second day on US-Iran peace hopes",
+      summary:"US stocks extended gains on June 12 as investors bet on a US-Iran deal and cheered SpaceX&rsquo;s debut. The S&amp;P 500 rose 0.5% to 7,431.46, the Dow added 353.51 points (0.7%) to 51,202.26 and the Nasdaq gained 0.31% to 25,888.84, leaving the major indexes higher for the week.",
+      source:"CNBC", url:"https://www.cnbc.com/2026/06/11/stock-market-today-live-updates.html", date:"Jun 12", spectrum:null, bias:null },
+    { headline:"US Justice Department clears Paramount&rsquo;s $110 billion Warner Bros takeover",
+      summary:"The US Justice Department&rsquo;s antitrust division has cleared Paramount Skydance&rsquo;s roughly $110 billion takeover of Warner Bros. Discovery without conditions, Politico reported on June 12. California and other states are preparing a lawsuit that could still challenge the deal, which would combine CNN, CBS, HBO and major film studios.",
+      source:"Reuters", url:"https://www.reuters.com/business/media-telecom/", date:"Jun 12", spectrum:null, bias:null },
+    { headline:"Update: Oil extends slide toward $85 as US-Iran deal nears Hormuz reopening",
+      summary:"Crude prices fell about 2% on June 12, sliding toward the mid-$80s, as hopes that a US-Iran agreement would reopen the Strait of Hormuz and lift sanctions unwound more of the war-risk premium that had driven oil higher this month.",
+      source:"Reuters", url:"https://www.reuters.com/markets/commodities/", date:"Jun 12", spectrum:null, bias:null },
+  ]},
+  { id:"sports", title:"🎾🏏🏎️ Sports", color:"#c0392b", items:[
+    { headline:"🎾 Boulter stuns top seed Rybakina to reach Queen&rsquo;s semi-finals",
+      summary:"British wildcard Katie Boulter beat world No. 2 and top seed Elena Rybakina 7-5, 2-6, 7-5 at Queen&rsquo;s on June 12 for the biggest win of her career, reaching the semi-finals where she will face Donna Vekic.",
+      source:"WTA", url:"https://www.wtatennis.com/news/4518528/katie-boulter-upsets-top-seed-elena-rybakina-donna-vekic-wins-czech-doubleheader", date:"Jun 12", spectrum:null, bias:null },
+    { headline:"🎾 Teenager Jovic beats Anisimova for first top-five win at Queen&rsquo;s",
+      summary:"Iva Jovic, 18, beat Wimbledon finalist and second seed Amanda Anisimova 6-2, 3-6, 6-3 at Queen&rsquo;s on June 12 for her first top-five win, reaching the semi-finals of the grass-court WTA 500 event.",
+      source:"WTA", url:"https://www.wtatennis.com/news/4518528/katie-boulter-upsets-top-seed-elena-rybakina-donna-vekic-wins-czech-doubleheader", date:"Jun 12", spectrum:null, bias:null },
+    { headline:"🎾 Vekic downs Pliskova to complete Queen&rsquo;s semi-final lineup",
+      summary:"Donna Vekic beat former world No. 1 Karolina Pliskova 6-4, 4-6, 6-3 at Queen&rsquo;s on June 12 to reach the semi-finals, setting up a last-four meeting with home favourite Katie Boulter.",
+      source:"WTA", url:"https://www.wtatennis.com/news/4518528/katie-boulter-upsets-top-seed-elena-rybakina-donna-vekic-wins-czech-doubleheader", date:"Jun 12", spectrum:null, bias:null },
+    { headline:"🏏 India begin first-ever ODI series against Afghanistan in Dharamsala",
+      summary:"India open a three-match ODI series against Afghanistan in Dharamsala on June 13, their first bilateral ODI series against the side. Captain Shubman Gill leads a new-look attack, with Virat Kohli, Hardik Pandya, Jasprit Bumrah and Mohammed Siraj all absent through rest or injury.",
+      source:"ESPNcricinfo", url:"https://www.espncricinfo.com/series/afghanistan-in-india-2026-1527147/india-vs-afghanistan-1st-odi-1527151/match-preview", date:"Jun 13", spectrum:null, bias:null },
+  ]},
+  { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
+  { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
+];
+
+const FUN_FACT = {
+  text: "Honey is one of the only foods that essentially never spoils &mdash; archaeologists have found pots of honey in ancient Egyptian tombs more than 3,000 years old that were still edible. Its remarkable shelf life comes from being very low in moisture and naturally acidic, with bees adding an enzyme that produces small amounts of hydrogen peroxide, creating an environment in which bacteria and microbes simply cannot survive.",
+  tag: "Category · Food & Chemistry"
+};
+
+const PUZZLE = {
+  type: "Logic",
+  title: "The Mislabeled Boxes",
+  how: "Every label is guaranteed to be wrong &mdash; lean on that, and start with the box whose wrong label tells you the most.",
+  question: "Three boxes sit in front of you. One contains only apples, one only oranges, and one a mix of both. Each box has a label &mdash; \"Apples\", \"Oranges\", and \"Apples & Oranges\" &mdash; but you are told that every single label is wrong.\nYou may reach into just one box and pull out one fruit, without looking inside. What is the fewest number of draws you need to label all three boxes correctly, and how do you do it?",
+  answer: "Just one draw, and it must come from the box labelled \"Apples & Oranges\".\nBecause every label is wrong, that box cannot be the mixed one, so it holds only apples or only oranges. Suppose you draw an apple: that box is therefore the Apples box. Now the box labelled \"Oranges\" cannot really be oranges (its label is wrong) and cannot be apples (already found), so it must be the Mixed box &mdash; which leaves the box labelled \"Apples\" as the Oranges box.\nIf you had drawn an orange instead, the same logic runs in mirror image. A single fruit from the double-labelled box unravels all three."
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn){var a=document.getElementById('ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>

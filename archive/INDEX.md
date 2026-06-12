@@ -178,3 +178,26 @@ is empty until the first run.
 2026-06-12	Iva Jovic upsets Eala to reach her first Queen's quarter-final	e9576f78	iva jovic,alexandra eala,queens,wta,tennis
 2026-06-12	Pliskova reaches Queen's quarter-finals after Mboko retires	1a45deca	karolina pliskova,victoria mboko,queens,wta,tennis
 2026-06-12	Anisimova advances to the Queen's quarter-finals	812067ca	amanda anisimova,laura siegemund,queens,wta,tennis
+2026-06-13	Three dead after supply boat sinks off Pasir Panjang Terminal in collision	0f3b10b0	singapore,pasir panjang,supply boat,collision,mpa
+2026-06-13	Heavy downpours end Singapore's warm spell, bringing 2026's coolest day	7f5a0824	singapore,weather,rain,temperature
+2026-06-13	PM Wong to deliver National Day Rally on Aug 23	2f33ba80	lawrence wong,national day rally,singapore
+2026-06-13	India marks one year since the Air India AI-171 crash that killed 260	9d17a5e5	air india,ai-171,ahmedabad,crash,anniversary
+2026-06-13	IMD issues red alert for Delhi as storms and heavy rain sweep 15 states	ea18b7e4	imd,delhi,red alert,rain,kerala
+2026-06-13	FSSAI issues notices to Nestle, KFC and Flipkart over hygiene complaints	8670371e	fssai,nestle,kfc,flipkart,food safety
+2026-06-13	Indian shares slip and rupee weakens as Middle East tensions and outflows weigh	a6f2f89e	sensex,rupee,fpi outflows,middle east,crude
+2026-06-13	Update: Pakistan says final text of US-Iran deal reached as Trump eyes weekend signing	f4f77a71	united states,iran,pakistan,trump,ceasefire
+2026-06-13	China arrests US scholar Min Zin on suspicion of espionage	cfc3c454	china,min zin,espionage,myanmar,united states
+2026-06-13	Canada earn first World Cup point in 1-1 draw with Bosnia as USA open at home	b47affa8	fifa world cup,canada,bosnia,united states,larin
+2026-06-13	Al-Qaeda-linked JNIM blockade pushes Mali's junta into deepening crisis	009303b3	mali,jnim,bamako,goita,blockade
+2026-06-13	OpenAI acquires cloud startup Ona to power long-running Codex agents	101feb2e	openai,ona,gitpod,codex,acquisition
+2026-06-13	Jeff Bezos's Prometheus raises $12 billion at a $41 billion valuation	033ab4c3	prometheus,jeff bezos,funding,physical ai,vik bajaj
+2026-06-13	Datadog veterans launch AI coding startup Niteshift with $7 million seed	615ceb37	niteshift,datadog,ai coding,greylock,seed
+2026-06-13	Jedify raises $24 million to give AI agents business context	a46ac5a5	jedify,norwest,ai agents,series a,enterprise
+2026-06-13	Update: SpaceX soars 19% in record stock-market debut	86225484	spacex,ipo,spcx,nasdaq,elon musk
+2026-06-13	Update: Wall Street rises a second day on US-Iran peace hopes	dfa3dfd6	wall street,s&p 500,dow,nasdaq,iran
+2026-06-13	US Justice Department clears Paramount's $110 billion Warner Bros takeover	5b3ebd2d	paramount,warner bros,justice department,antitrust,merger
+2026-06-13	Update: Oil extends slide toward $85 as US-Iran deal nears Hormuz reopening	63a12b0d	oil,crude,strait of hormuz,iran,us
+2026-06-13	Boulter stuns top seed Rybakina to reach Queen's semi-finals	92d2bc8b	katie boulter,elena rybakina,queens,wta,tennis
+2026-06-13	Teenager Jovic beats Anisimova for first top-five win at Queen's	3828ee1a	iva jovic,amanda anisimova,queens,wta,tennis
+2026-06-13	Vekic downs Pliskova to complete Queen's semi-final lineup	fd14e9d3	donna vekic,karolina pliskova,queens,wta,tennis
+2026-06-13	India begin first-ever ODI series against Afghanistan in Dharamsala	36c41ac8	india,afghanistan,odi series,dharamsala,cricket

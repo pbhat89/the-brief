@@ -39,6 +39,11 @@
       "date": "2026-06-12",
       "topic_key": "chess",
       "text": "There are more possible games of chess than atoms in the observable universe."
+    },
+    {
+      "date": "2026-06-13",
+      "topic_key": "honey",
+      "text": "Honey never spoils."
     }
   ],
   "puzzle_log": [
@@ -81,6 +86,11 @@
       "date": "2026-06-12",
       "type": "visual",
       "title_key": "paper-and-the-punch"
+    },
+    {
+      "date": "2026-06-13",
+      "type": "logic",
+      "title_key": "mislabeled-boxes"
     }
   ]
 }
