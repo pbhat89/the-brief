@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Sun, 14 June 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Sunday, 14 June 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Sunday, 14 June 2026 · 🔍 28 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eight entries in this exact order:
+     id    : one of "sg" | "india" | "geo" | "tech" | "biz" | "sports" | "fun" | "puzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 6 news tabs; fun/puzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+============================================================================= */
+
+const SECTIONS = [
+  { id:"sg", title:"🇸🇬 Singapore", color:"#e74c3c", items:[
+    { headline:"Six taken to hospital, about 120 evacuated after Sengkang HDB fire", summary:"A fire that broke out in a third-floor flat at Block 125 Rivervale Street at about 4.10pm on June 12 sent six people to hospital with smoke inhalation and forced the evacuation of around 120 residents; Sengkang GRC MP Louis Chua said temporary housing was being arranged for affected households.", source:"Mothership", url:"https://mothership.sg/2026/06/rivervale-street-fire/", date:"Jun 12", spectrum:null, bias:null },
+    { headline:"About 80 firefighters battle chemical-waste warehouse blaze in Tuas", summary:"The SCDF deployed about 80 firefighters and 20 emergency vehicles to a warehouse fire at 3 Gul Crescent in Tuas, alerted at around 3am on June 12; the blaze, involving stored waste and chemicals, was brought under control by about 7.44am with no reported injuries.", source:"CNA", url:"https://www.channelnewsasia.com/singapore", date:"Jun 12", spectrum:null, bias:null },
+    { headline:"HDB June BTO launch offers about 6,900 flats, including first Bishan project in 40 years", summary:"HDB's June 2026 Build-To-Order exercise offers about 6,900 flats across seven projects in five towns, headlined by roughly 1,210 units at a new Lakeview project in Bishan — the town's first BTO in more than 40 years — near Marymount MRT, with shorter-wait flats in Sembawang and Ang Mo Kio.", source:"Mothership", url:"https://mothership.sg/2026/06/hdb-swt/", date:"Jun 12", spectrum:null, bias:null },
+    { headline:"Singapore's IMDA and Microsoft sign pact on safe access to frontier AI models", summary:"On June 12, the Infocomm Media Development Authority and Microsoft signed a memorandum of understanding to jointly develop a white paper on how governments and critical-infrastructure operators can responsibly access and test frontier AI models; it was inked by IMDA deputy chief executive Kiren Kumar and Microsoft chief responsible-AI officer Natasha Crampton.", source:"CNA", url:"https://www.channelnewsasia.com/singapore", date:"Jun 12", spectrum:null, bias:null },
+  ]},
+  { id:"india", title:"🇮🇳 India", color:"#e67e22", items:[
+    { headline:"First batch of nine women officers commissioned at IMA in Dehradun", summary:"President Droupadi Murmu reviewed the Passing Out Parade at the Indian Military Academy in Dehradun on June 13, where 515 cadets were commissioned — including the first batch of nine women to receive a permanent commission, which Murmu called a watershed moment; 34 cadets from 16 friendly foreign nations also graduated.", source:"The Hindu", url:"https://www.thehindu.com/news/national/", date:"Jun 13", spectrum:null, bias:null },
+    { headline:"India's retail inflation rises to 3.93% in May as food and fuel costs climb", summary:"India's consumer price inflation accelerated to 3.93% in May from 3.48% in April, a fifth straight monthly rise, with food inflation climbing to 4.78%, government data released June 12 showed; the rate stays within the RBI's 2-6% band but reflects energy costs lifted by the Middle East war.", source:"The Economic Times", url:"https://economictimes.indiatimes.com/news/economy/indicators", date:"Jun 12", spectrum:null, bias:null },
+    { headline:"Supreme Court calls homemakers 'nation builders', sets ₹30,000 notional income", summary:"The Supreme Court ruled on June 11 that a homemaker's unpaid work must be valued at a notional income of at least ₹30,000 a month for accident compensation, raising one family's award from ₹8.43 lakh to ₹62.78 lakh; the bench of Justices Sanjay Karol and N.K. Singh said women contribute an estimated 15-17% of India's GDP through unpaid care.", source:"The Indian Express", url:"https://indianexpress.com/section/india/", date:"Jun 11", spectrum:null, bias:null },
+    { headline:"Noida International Airport set to open to commercial flights on June 15", summary:"IndiGo will operate the first commercial flights from the new Noida International Airport at Jewar from June 15, with the inaugural service arriving from Lucknow, bringing online the long-delayed airport intended to ease pressure on Delhi's airport.", source:"The Times of India", url:"https://timesofindia.indiatimes.com/india", date:"Jun 13", spectrum:null, bias:null },
+  ]},
+  { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
+    { headline:"Update: Trump says US-Iran deal to be signed Sunday; Iran disputes timeline", summary:"President Trump said on June 13 that an agreement to end the US-Iran war is scheduled to be signed on Sunday June 14 and that the Strait of Hormuz would reopen immediately, opening a 60-day window for nuclear talks; Iran's foreign ministry and the Revolutionary Guard pushed back, saying the framework was not finalised.", source:"CNN", url:"https://www.cnn.com/2026/06/13/world/live-news/iran-war-trump-israel", date:"Jun 13",
+      spectrum:{ left:"The Guardian and Al Jazeera stress that the draft terms favour Tehran — sanctions relief and the release of frozen assets — while key nuclear questions stay unresolved.", center:"Reuters and the BBC report that a text has been agreed but the signing is unconfirmed, noting Iran disputes Trump's Sunday timeline.", right:"Fox News and the New York Post frame it as Trump ending the war and forcing the Strait of Hormuz back open." },
+      bias:null },
+    { headline:"US strike kills Tren de Aragua gang leader 'Niño Guerrero', Trump says", summary:"Trump announced that a US military strike on June 12 killed Héctor Rusthenford Guerrero Flores, the 43-year-old leader of the Tren de Aragua gang known as Niño Guerrero, at a compound in Venezuela's Bolívar state in an operation Washington said was coordinated with Caracas; he had carried a US bounty of up to $5 million.", source:"CNN", url:"https://www.cnn.com/2026/06/12/politics/us-military-kills-tren-de-aragua-leader-strike", date:"Jun 12", spectrum:null, bias:null },
+    { headline:"Brazil held to 1-1 draw by Morocco at the World Cup", summary:"Vinícius Júnior struck in the 32nd minute to rescue a 1-1 draw for Brazil against Morocco at MetLife Stadium on June 13, after Ismael Saibari had put Morocco ahead in the 21st minute in their Group C opener.", source:"BBC", url:"https://www.bbc.com/sport/football", date:"Jun 13", spectrum:null, bias:null },
+    { headline:"Qatar earn first-ever World Cup point in 1-1 draw with Switzerland", summary:"Boualem Khoukhi headed home in second-half stoppage time on June 13 to cancel out Breel Embolo's first-half penalty, earning Qatar a 1-1 draw with Switzerland and their first-ever point at a World Cup.", source:"Al Jazeera", url:"https://www.aljazeera.com/sports/2026/6/13/qatar-net-dramatic-late-goal-to-draw-world-cup-opener-against-switzerland", date:"Jun 13", spectrum:null, bias:null },
+    { headline:"Pope Leo XIV's plane grounded in Tenerife as Spain's king lends his jet", summary:"Pope Leo XIV's charter back to Rome was grounded by a technical fault at Tenerife on June 12, prompting King Felipe VI to offer his Falcon jet, CNN reported; the pope departed more than three hours late at the end of a week-long visit to Spain.", source:"CNN", url:"https://www.cnn.com/2026/06/12/europe/pope-leo-plane-grounded-spain-rome-intl", date:"Jun 12", spectrum:null, bias:null },
+  ]},
+  { id:"tech", title:"💻 Tech & AI", color:"#27ae60", items:[
+    { headline:"US orders Anthropic to curb foreign access to its top AI models", summary:"TechCrunch and Bloomberg reported that the US Commerce Department on June 12 ordered Anthropic to block foreign nationals from its two newest frontier models, days after their launch; unable to filter users in real time, the company disabled the models worldwide while disputing the security claim behind the order.", source:"TechCrunch", url:"https://techcrunch.com/2026/06/12/anthropics-safety-warnings-may-have-just-backfired-the-government-has-pulled-the-plug-on-its-most-powerful-ai/", date:"Jun 12", spectrum:null, bias:null },
+    { headline:"Nvidia pitches new Vera CPUs to Chinese clients as H200 sales stay frozen", summary:"Nvidia told Chinese customers on June 12 that its new Vera data-centre CPUs could ship as early as August and that they can begin placing orders, pivoting to general-purpose chips not covered by US export controls while shipments of its H200 AI accelerators to China remain stalled, The Information reported.", source:"The Information", url:"https://www.theinformation.com/", date:"Jun 12", spectrum:null, bias:null },
+    { headline:"Coinbase debuts AI agents that can trade crypto and pay for research", summary:"Coinbase launched agent accounts on June 11 that run inside ChatGPT or Claude via its server, able to trade spot and derivatives and to autonomously pay for research and compute through the open x402 protocol, days after Robinhood unveiled its own trading agents.", source:"TechCrunch", url:"https://techcrunch.com/2026/06/11/coinbase-debuts-ai-agent-that-can-trade-and-pay-for-premium-research/", date:"Jun 11", spectrum:null, bias:null },
+    { headline:"Robinhood reports record traffic after SpaceX market debut", summary:"Robinhood said it saw record platform traffic on June 12 in the hours after SpaceX began trading, with some users hit by latency and intermittent outages as roughly 263 million SpaceX shares changed hands in the first hour.", source:"TechCrunch", url:"https://techcrunch.com/2026/06/12/robinhood-sees-record-breaking-traffic-after-spacex-stock-debuts/", date:"Jun 12", spectrum:null, bias:null },
+  ]},
+  { id:"biz", title:"📈 Business & Markets", color:"#8e44ad", items:[
+    { headline:"ECB raises rates for first time since 2023 to counter Iran-war inflation", summary:"The European Central Bank raised its three key rates by 25 basis points on June 11, lifting the deposit rate to 2.25% effective June 17 — its first hike since September 2023 — to stop an Iran-war energy-price surge from feeding broader inflation, and revised up its 2026 and 2027 inflation forecasts.", source:"CNBC", url:"https://www.cnbc.com/2026/06/11/ecb-hikes-interest-rates.html", date:"Jun 11", spectrum:null, bias:null },
+    { headline:"Bank of Japan's Ueda hospitalised, will miss June 15-16 policy meeting", summary:"Bank of Japan Governor Kazuo Ueda, 74, was hospitalised for treatment of an infected liver cyst and will miss the June 15-16 policy meeting — the first time a serving governor has missed one since 1998 — with Deputy Governor Ryozo Himino presiding; markets still widely expect a hike to 1%.", source:"CNBC", url:"https://www.cnbc.com/2026/06/10/bank-of-japan-governor-ueda-hospitalised-will-miss-june-meeting.html", date:"Jun 10", spectrum:null, bias:null },
+    { headline:"Gold slips below US$4,200, heading for a second straight weekly loss", summary:"Gold eased below US$4,200 an ounce on June 12 and was set for a second consecutive weekly decline, as optimism over an imminent US-Iran peace deal cooled inflation fears and lifted expectations of higher interest rates.", source:"Reuters", url:"https://www.reuters.com/markets/commodities/", date:"Jun 12", spectrum:null, bias:null },
+    { headline:"Update: Oil caps about 6% weekly loss as US-Iran deal nears Hormuz reopening", summary:"Crude posted roughly a 6% weekly loss after WTI fell about 3% to near $85 a barrel on June 12, as a Trump official put 80% odds on a US-Iran agreement within days that would reopen the Strait of Hormuz and lift the naval blockade, unwinding more of the war-risk premium.", source:"CNBC", url:"https://www.cnbc.com/2026/06/12/oil-prices-wti-brent-on-hopes-of-us-iran-deal-despite-tehran-pushback.html", date:"Jun 12", spectrum:null, bias:null },
+  ]},
+  { id:"sports", title:"🎾🏏🏎️ Sports", color:"#c0392b", items:[
+    { headline:"🏏 India beat Afghanistan by 7 wickets in rain-hit 1st ODI", summary:"India won the rain-reduced 25-over first ODI in Dharamsala by seven wickets on June 13 to lead the series 1-0, with Shubman Gill making 84 not out and KL Rahul 39 not out in reply to Afghanistan's 194, built on Rahmanullah Gurbaz's 51-ball 102; Gill was named Player of the Match.", source:"ESPNcricinfo", url:"https://www.espncricinfo.com/series/afghanistan-in-india-2026-1527147/india-vs-afghanistan-1st-odi-1527151/match-report", date:"Jun 13", spectrum:null, bias:null },
+    { headline:"🎾 Raducanu beats Jovic to reach her first grass-court final at Queen's", summary:"Emma Raducanu beat sixth seed Iva Jovic 6-2, 6-2 on June 13 to reach the first WTA 500 final of her career at Queen's; she will face Donna Vekic, who beat Britain's Katie Boulter, in Sunday's final.", source:"WTA", url:"https://www.wtatennis.com/news/4518815/raducanu-pulls-double-duty-to-reach-queens-final-set-first-meeting-with-vekic", date:"Jun 13", spectrum:null, bias:null },
+    { headline:"🏎️ Russell wins Canadian GP sprint and takes pole for Sunday's race", summary:"George Russell won the Saturday sprint race at the Canadian Grand Prix on June 13 after a wheel-to-wheel clash with Mercedes team-mate Kimi Antonelli, then took pole position for Sunday's Grand Prix with a last-gasp lap at the Circuit Gilles-Villeneuve.", source:"Sky Sports F1", url:"https://www.skysports.com/f1/news/12433/13547290/canadian-gp-sprint-george-russell-wins-as-mercedes-team-mate-kimi-antonelli-left-fuming-after-going-off-track-in-battle", date:"Jun 13", spectrum:null, bias:null },
+    { headline:"🎾 Shelton saves two match points to set up all-American Stuttgart final", summary:"Ben Shelton saved two match points to beat Jiri Lehecka 6-7(4), 7-6(14), 7-6(6) on June 13 and reach his first grass-court final at Stuttgart's BOSS Open, where he will meet defending champion and fellow American Taylor Fritz, who beat Alexander Bublik 6-4, 6-4.", source:"ATP Tour", url:"https://www.atptour.com/en/news/fritz-bublik-stuttgart-2026-sfs-saturday", date:"Jun 13", spectrum:null, bias:null },
+  ]},
+  { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
+  { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
+];
+
+const FUN_FACT = {
+  text: "The Eiffel Tower is measurably taller in summer than in winter. As the sun heats its puddled-iron frame, the metal expands and the 330-metre tower can grow by some 12 to 15 centimetres, leaning very slightly away from the sun in the process. When the iron cools again in winter, the tower shrinks back to its original height.",
+  tag: "Category · Physics & Engineering"
+};
+
+const PUZZLE = {
+  type: "Quantitative",
+  title: "The Wine and the Water",
+  how: "Don't try to track the messy mixing — just compare the final volume of liquid in each glass.",
+  question: "Two identical glasses sit side by side. One holds exactly 100 ml of red wine, the other exactly 100 ml of water.\nYou take a 5 ml spoonful of wine, pour it into the water glass, and stir thoroughly.\nThen you take a 5 ml spoonful of that wine-and-water mixture and pour it back into the wine glass.\nAfter these two transfers, is there more wine in the water glass, or more water in the wine glass — or are the two amounts equal?",
+  answer: "They are exactly equal.\nEach glass starts and ends with 100 ml of liquid — one spoon out and one spoon back in. So whatever volume of wine is now missing from the wine glass must have been replaced by an identical volume of water; there is nowhere else for that space to come from. By the same token, the water glass holds exactly that much wine in place of the water it gave up. The amount of wine in the water therefore equals the amount of water in the wine — no matter how much or how little you stirred."
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn){var a=document.getElementById('ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>

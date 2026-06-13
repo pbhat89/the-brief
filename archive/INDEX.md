@@ -201,3 +201,28 @@ is empty until the first run.
 2026-06-13	Teenager Jovic beats Anisimova for first top-five win at Queen's	3828ee1a	iva jovic,amanda anisimova,queens,wta,tennis
 2026-06-13	Vekic downs Pliskova to complete Queen's semi-final lineup	fd14e9d3	donna vekic,karolina pliskova,queens,wta,tennis
 2026-06-13	India begin first-ever ODI series against Afghanistan in Dharamsala	36c41ac8	india,afghanistan,odi series,dharamsala,cricket
+2026-06-14	Six taken to hospital, about 120 evacuated after Sengkang HDB fire	03a16f6a	singapore,sengkang,hdb fire,evacuation
+2026-06-14	About 80 firefighters battle chemical-waste warehouse blaze in Tuas	050ce2f2	singapore,tuas,warehouse fire,scdf
+2026-06-14	HDB June BTO launch offers about 6,900 flats, including first Bishan project in 40 years	ef76cba2	singapore,hdb,bto,bishan
+2026-06-14	Singapore's IMDA and Microsoft sign pact on safe access to frontier AI models	c8c4b04d	singapore,imda,microsoft,ai
+2026-06-14	First batch of nine women officers commissioned at IMA in Dehradun	6c1768ff	india,ima,women officers,murmu
+2026-06-14	India's retail inflation rises to 3.93% in May as food and fuel costs climb	edfbaeca	india,cpi,inflation,rbi
+2026-06-14	Supreme Court calls homemakers 'nation builders', sets ₹30,000 notional income	225566ff	supreme court,homemakers,notional income,compensation
+2026-06-14	Noida International Airport set to open to commercial flights on June 15	d9dfc8a5	india,noida airport,jewar,indigo
+2026-06-14	Update: Trump says US-Iran deal to be signed Sunday; Iran disputes timeline	c1ddd2b1	united states,iran,trump,hormuz,ceasefire
+2026-06-14	US strike kills Tren de Aragua gang leader 'Niño Guerrero', Trump says	e4dcc193	united states,venezuela,tren de aragua,nino guerrero
+2026-06-14	Brazil held to 1-1 draw by Morocco at the World Cup	15071792	world cup,brazil,morocco,vinicius
+2026-06-14	Qatar earn first-ever World Cup point in 1-1 draw with Switzerland	34f76634	world cup,qatar,switzerland,khoukhi
+2026-06-14	Pope Leo XIV's plane grounded in Tenerife as Spain's king lends his jet	271eeb06	pope leo xiv,spain,tenerife,felipe vi
+2026-06-14	US orders Anthropic to curb foreign access to its top AI models	366aaace	anthropic,us commerce department,ai models,export controls
+2026-06-14	Nvidia pitches new Vera CPUs to Chinese clients as H200 sales stay frozen	92055ba9	nvidia,vera cpu,china,h200
+2026-06-14	Coinbase debuts AI agents that can trade crypto and pay for research	90923681	coinbase,ai agents,crypto,x402
+2026-06-14	Robinhood reports record traffic after SpaceX market debut	fbcf09d7	robinhood,spacex,trading,outage
+2026-06-14	ECB raises rates for first time since 2023 to counter Iran-war inflation	2235ecb3	ecb,interest rates,inflation,iran war
+2026-06-14	Bank of Japan's Ueda hospitalised, will miss June 15-16 policy meeting	ad0f083a	bank of japan,ueda,policy meeting,rate hike
+2026-06-14	Gold slips below US$4,200, heading for a second straight weekly loss	c19e5c99	gold,commodities,us-iran,inflation
+2026-06-14	Update: Oil caps about 6% weekly loss as US-Iran deal nears Hormuz reopening	89a5d426	oil,wti,strait of hormuz,iran
+2026-06-14	India beat Afghanistan by 7 wickets in rain-hit 1st ODI	27b2404d	india,afghanistan,odi,gill,gurbaz
+2026-06-14	Raducanu beats Jovic to reach her first grass-court final at Queen's	e1cd5b51	raducanu,jovic,queens,wta
+2026-06-14	Russell wins Canadian GP sprint and takes pole for Sunday's race	7f9f0995	f1,canadian gp,russell,antonelli
+2026-06-14	Shelton saves two match points to set up all-American Stuttgart final	25bfd804	shelton,fritz,stuttgart,atp

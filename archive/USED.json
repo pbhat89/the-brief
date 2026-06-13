@@ -44,6 +44,11 @@
       "date": "2026-06-13",
       "topic_key": "honey",
       "text": "Honey never spoils."
+    },
+    {
+      "date": "2026-06-14",
+      "topic_key": "eiffel tower",
+      "text": "The Eiffel Tower grows 12-15 cm taller in summer due to thermal expansion."
     }
   ],
   "puzzle_log": [
@@ -91,6 +96,11 @@
       "date": "2026-06-13",
       "type": "logic",
       "title_key": "mislabeled-boxes"
+    },
+    {
+      "date": "2026-06-14",
+      "type": "quantitative",
+      "title_key": "wine-and-water"
     }
   ]
 }
