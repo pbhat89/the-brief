@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Mon, 15 June 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Monday, 15 June 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Monday, 15 June 2026 · 🔍 40 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eight entries in this exact order:
+     id    : one of "sg" | "india" | "geo" | "tech" | "biz" | "sports" | "fun" | "puzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 6 news tabs; fun/puzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+============================================================================= */
+
+const SECTIONS = [
+  { id:"sg", title:"🇸🇬 Singapore", color:"#e74c3c", items:[
+    { headline:"URA to expand non-invasive utility detection after avoiding S$300m in costs", summary:"National Development Minister Chee Hong Tat said on June 14 that coordinating about 272km of underground utility corridors has helped Singapore avoid roughly S$300 million in mid-construction re-routing costs since 2024; URA will scale up ground-penetrating radar and electromagnetic detection to cut exploratory road digging.", source:"Mothership", url:"https://mothership.sg/2026/06/ura-non-invasive-technologies-underground-utilities/", date:"Jun 14", spectrum:null, bias:null },
+    { headline:"Revised single family office framework takes effect in Singapore", summary:"From June 15, the Monetary Authority of Singapore's revised framework lets qualifying single family offices operate under a class exemption from licensing, needing only to notify MAS, hold an account with a MAS-licensed bank and file an annual return; existing offices have until June 15, 2027 to comply.", source:"CNA", url:"https://www.channelnewsasia.com/business", date:"Jun 15", spectrum:null, bias:null },
+    { headline:"NEA reports eight active dengue clusters as Singapore enters peak season", summary:"The National Environment Agency logged about 80 dengue cases in the week to June 6, up 13 on the week before, with eight active clusters, four of them on red alert; the largest, around Jalan Bangau and Jalan Jarak, had 16 cases, and about 65% of breeding sites in cluster areas were found inside homes.", source:"CNA", url:"https://www.channelnewsasia.com/singapore", date:"Jun 8", spectrum:null, bias:null },
+    { headline:"Singapore hosts World Dengue Day and 9th Asia Dengue Summit", summary:"Singapore hosted the flagship World Dengue Day event on June 15 alongside the 9th Asia Dengue Summit, running June 15 to 17, convening regional health officials on vaccination, vector control and surveillance as dengue cases climb across Southeast Asia.", source:"CNA", url:"https://www.channelnewsasia.com/singapore", date:"Jun 15", spectrum:null, bias:null },
+  ]},
+  { id:"india", title:"🇮🇳 India", color:"#e67e22", items:[
+    { headline:"Telangana begins biggest electoral roll revision in over two decades", summary:"Telangana launched its Special Intensive Revision of electoral rolls on June 15, the state's most thorough such exercise in nearly 24 years, after pre-revision mapping flagged about 89 lakh anomalies among roughly 3.39 crore voters; house-to-house enumeration by about 35,000 booth officers follows later in the month.", source:"The Hindu", url:"https://www.thehindu.com/news/national/telangana/", date:"Jun 15", spectrum:null, bias:null },
+    { headline:"Gujarat unveils Industrial Policy 2026 with new ultra-mega investment tier", summary:"Chief Minister Bhupendra Patel launched Gujarat's Industrial Policy 2026 in Gandhinagar on June 15, introducing an ultra-mega category offering up to 40% capital incentives for projects above ₹10,000 crore and 3,000 jobs, and expanding priority sectors from nine to 16, including semiconductors and drones.", source:"The Economic Times", url:"https://economictimes.indiatimes.com/news/economy/policy", date:"Jun 15", spectrum:null, bias:null },
+    { headline:"India's wholesale inflation eases to 14-month low of 0.39% in May", summary:"India's wholesale price index inflation slowed to 0.39% in May from 0.85% in April, its lowest in 14 months, as food and fuel prices cooled; WPI food inflation fell to 1.72% from 2.55%, commerce ministry data released June 15 showed.", source:"The Economic Times", url:"https://economictimes.indiatimes.com/news/economy/indicators", date:"Jun 15", spectrum:null, bias:null },
+    { headline:"Update: Commercial flights begin at Noida International Airport in Jewar", summary:"IndiGo operated the first commercial flights from the long-delayed Noida International Airport at Jewar on June 15, the third airport serving the Delhi region; the carrier plans to link more than 16 destinations, with Bengaluru-Noida-Jammu services from June 16 and further routes from July 1.", source:"The Times of India", url:"https://timesofindia.indiatimes.com/india", date:"Jun 15", spectrum:null, bias:null },
+  ]},
+  { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
+    { headline:"Update: Trump and Pakistan say US-Iran deal reached, signing set for June 19", summary:"President Trump and Pakistan's prime minister said on June 14 that the United States and Iran had reached a deal to end their war, with a signing ceremony planned for June 19 in Switzerland and the Strait of Hormuz to reopen; Iran disputed key terms, saying it had made no commitment to cede control of the strait.", source:"Reuters", url:"https://www.reuters.com/world/middle-east/", date:"Jun 14", spectrum:null, bias:null },
+    { headline:"Orban re-elected Fidesz leader months after losing power in Hungary", summary:"Viktor Orban was re-elected leader of Fidesz on June 13, winning 729 of 737 delegate votes while running unopposed, two months after his party lost Hungary's April 12 election to the centre-right Tisza party and ended his long stint in government.", source:"CNN", url:"https://www.cnn.com/2026/06/13/europe/hungary-viktor-orban-fidesz-reelection-intl", date:"Jun 13", spectrum:null, bias:null },
+    { headline:"Sweden scrambles Gripen jets to intercept Russian warplanes over Baltic", summary:"Sweden's armed forces said they scrambled JAS 39 Gripen fighters twice on June 13 to intercept Russian military aircraft over the Baltic Sea, with Danish jets also responding; commanders described it as part of a recurring pattern of Russian activity near NATO airspace.", source:"Reuters", url:"https://www.reuters.com/world/europe/", date:"Jun 13", spectrum:null, bias:null },
+    { headline:"Japan twice fight back to hold the Netherlands to a 2-2 World Cup draw", summary:"Japan came from two goals down in their Group F opener near Dallas on June 14, with Keito Nakamura and Daichi Kamada's 88th-minute strike cancelling out goals from Virgil van Dijk and Crysencio Summerville in a 2-2 draw.", source:"Al Jazeera", url:"https://www.aljazeera.com/sports/liveblog/2026/6/14/netherlands-vs-japan-live-world-cup-2026", date:"Jun 14", spectrum:null, bias:null },
+    { headline:"Scotland beat Haiti for first World Cup win in 36 years", summary:"John McGinn's deflected first-half strike gave Scotland a 1-0 win over Haiti in Boston on June 13, the team's first World Cup victory since 1990, sending Steve Clarke's side top of Group C after Brazil and Morocco drew.", source:"BBC", url:"https://www.bbc.com/sport/football", date:"Jun 13", spectrum:null, bias:null },
+  ]},
+  { id:"tech", title:"💻 Tech & AI", color:"#27ae60", items:[
+    { headline:"Coalition of 42 US state attorneys general subpoenas OpenAI", summary:"A coalition of 42 state attorneys general, led by New York's Letitia James, served OpenAI a subpoena on June 13 seeking records on advertising, user retention, handling of health data, treatment of minors and so-called model sycophancy, days after the company's confidential filing for a possible trillion-dollar IPO.", source:"TechCrunch", url:"https://techcrunch.com/2026/06/13/openai-faces-investigation-from-state-attorneys-general/", date:"Jun 13", spectrum:null, bias:null },
+    { headline:"KPMG withdraws agentic-AI report after firms dispute fabricated case studies", summary:"KPMG pulled its report Redefining Excellence in the Age of Agentic AI after UBS, Britain's NHS, Swiss Federal Railways and Transport for London said claims about their AI use were untrue; an analysis found only five of its 45 citations pointed to real sources.", source:"TechCrunch", url:"https://techcrunch.com/2026/06/13/kpmg-pulls-report-on-ai-usage-due-to-apparent-hallucinations/", date:"Jun 13", spectrum:null, bias:null },
+    { headline:"Anthropic's forced model shutdown fuels India's push for sovereign AI", summary:"After a US directive forced Anthropic to cut foreign access to its two newest models on June 12, India — among the company's largest markets, where Tata's TCS had been training tens of thousands of staff on them — debated accelerating domestic, open-source AI to reduce reliance on US frontier labs.", source:"TechCrunch", url:"https://techcrunch.com/2026/06/13/as-anthropic-suspends-access-to-new-models-india-debates-its-ai-future/", date:"Jun 13", spectrum:null, bias:null },
+  ]},
+  { id:"biz", title:"📈 Business & Markets", color:"#8e44ad", items:[
+    { headline:"Warsh chairs his first Fed meeting with rates expected to hold", summary:"Kevin Warsh, sworn in May 22 as Federal Reserve chair, leads his first policy meeting on June 16 to 17, with futures pricing a near-certain hold at 3.50-3.75% and fresh economic projections due; markets expect a tilt toward a neutral stance and few, if any, rate cuts in 2026.", source:"CNBC", url:"https://www.cnbc.com/economy/", date:"Jun 14", spectrum:null, bias:null },
+    { headline:"Update: Bank of Japan meets with rate seen rising to 1% for first time since 1995", summary:"The Bank of Japan opened its two-day policy meeting on June 15 with markets pricing roughly a 90% chance it lifts its short-term rate by 25 basis points to 1.00% — the highest since 1995 — when the decision lands June 16; Deputy Governor Ryozo Himino is presiding as Governor Kazuo Ueda recovers in hospital.", source:"Bloomberg", url:"https://www.bloomberg.com/economics", date:"Jun 15", spectrum:null, bias:null },
+    { headline:"Update: Oil set to extend losses as US-Iran deal nears Hormuz reopening", summary:"Brent crude, which ended last week near $86 a barrel after a roughly 6% weekly drop, looked set to fall further after the United States and Iran reached a deal on June 14 to reopen the Strait of Hormuz and lift oil sanctions, unwinding more of the war-risk premium.", source:"CNBC", url:"https://www.cnbc.com/energy/", date:"Jun 14", spectrum:null, bias:null },
+  ]},
+  { id:"sports", title:"🎾🏏🏎️ Sports", color:"#c0392b", items:[
+    { headline:"🏎️ Antonelli wins Canadian Grand Prix as Russell retires from the lead", summary:"Kimi Antonelli claimed his fourth win in a row at the Canadian Grand Prix on June 14, finishing ahead of Lewis Hamilton and Max Verstappen after Mercedes team-mate George Russell retired from the lead with a technical failure; Antonelli now leads the championship by 43 points.", source:"Sky Sports F1", url:"https://www.skysports.com/f1", date:"Jun 14", spectrum:null, bias:null },
+    { headline:"🎾 Vekic overpowers Raducanu to win the Queen's Club title", summary:"Donna Vekic beat home favourite Emma Raducanu 6-0, 7-6(6) in the HSBC Championships final at Queen's on June 14, with Raducanu saving four championship points in the second-set tie-break before Vekic clinched the grass-court title.", source:"WTA", url:"https://www.wtatennis.com/tournaments/1111/queens/2026/scores/LS001", date:"Jun 14", spectrum:null, bias:null },
+    { headline:"🎾 Shelton beats Fritz for his first grass-court title in Stuttgart", summary:"Ben Shelton dethroned defending champion Taylor Fritz 6-4, 2-6, 6-4 in the BOSS Open final in Stuttgart on June 14, claiming his third title of 2026 and his first on grass.", source:"ATP Tour", url:"https://www.atptour.com/en/news/stuttgart-atp-250-2026-history-draw-schedule", date:"Jun 14", spectrum:null, bias:null },
+    { headline:"🏏 Australia win 3rd ODI by one wicket but Bangladesh take the series", summary:"Cooper Connolly's 149 carried Australia to 277 for 9 and a one-wicket win in the third ODI in Mirpur on June 14, overhauling Bangladesh's 274 for 5 with three balls to spare; Bangladesh still took the series 2-1 despite Shoriful Islam's six wickets.", source:"ESPNcricinfo", url:"https://www.espncricinfo.com/series/australia-in-bangladesh-2026-1532475/bangladesh-vs-australia-3rd-odi-1532482/match-report", date:"Jun 14", spectrum:null, bias:null },
+  ]},
+  { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
+  { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
+];
+
+const FUN_FACT = {
+  text: "The Sahara has not always been the world's largest hot desert. As recently as about 5,000 to 11,000 years ago — during what scientists call the African Humid Period — much of it was a green savanna dotted with lakes and rivers, home to hippos, giraffes and the people whose rock art still survives. The shift was driven by slow, cyclical changes in Earth's orbit that periodically strengthen the African monsoon.",
+  tag: "Category · Geography & Climate"
+};
+
+const PUZZLE = {
+  type: "Lateral Thinking",
+  title: "The Bankrupt Driver",
+  how: "Take 'car', 'hotel' and 'bankrupt' less literally — what kind of place has all three at once?",
+  question: "A man is pushing his car along a road. When he reaches a hotel, he immediately realises he is bankrupt and hands over money.\n\nNo crime has been committed, and the man is not upset. What is going on?",
+  answer: "He is playing Monopoly.\n\nHe is moving his small car token around the board. When it lands on a property that has a hotel on it, he owes rent he cannot pay and goes bankrupt. The 'pushing' is simply him nudging his game piece along the squares."
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn){var a=document.getElementById('ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>

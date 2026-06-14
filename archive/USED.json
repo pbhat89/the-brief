@@ -49,6 +49,11 @@
       "date": "2026-06-14",
       "topic_key": "eiffel tower",
       "text": "The Eiffel Tower grows 12-15 cm taller in summer due to thermal expansion."
+    },
+    {
+      "date": "2026-06-15",
+      "topic_key": "sahara",
+      "text": "The Sahara was a green savanna with lakes and rivers during the African Humid Period."
     }
   ],
   "puzzle_log": [
@@ -101,6 +106,11 @@
       "date": "2026-06-14",
       "type": "quantitative",
       "title_key": "wine-and-water"
+    },
+    {
+      "date": "2026-06-15",
+      "type": "lateral",
+      "title_key": "bankrupt-driver"
     }
   ]
 }

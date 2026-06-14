@@ -226,3 +226,26 @@ is empty until the first run.
 2026-06-14	Raducanu beats Jovic to reach her first grass-court final at Queen's	e1cd5b51	raducanu,jovic,queens,wta
 2026-06-14	Russell wins Canadian GP sprint and takes pole for Sunday's race	7f9f0995	f1,canadian gp,russell,antonelli
 2026-06-14	Shelton saves two match points to set up all-American Stuttgart final	25bfd804	shelton,fritz,stuttgart,atp
+2026-06-15	URA to expand non-invasive utility detection after avoiding S$300m in costs	763b2a36	singapore,ura,underground utilities,chee hong tat
+2026-06-15	Revised single family office framework takes effect in Singapore	2348a840	singapore,mas,single family office,framework
+2026-06-15	NEA reports eight active dengue clusters as Singapore enters peak season	9d4d2bed	singapore,nea,dengue,clusters
+2026-06-15	Singapore hosts World Dengue Day and 9th Asia Dengue Summit	bff099ea	singapore,world dengue day,asia dengue summit,health
+2026-06-15	Telangana begins biggest electoral roll revision in over two decades	88e0e685	telangana,sir,electoral rolls,eci
+2026-06-15	Gujarat unveils Industrial Policy 2026 with new ultra-mega investment tier	8a2ec741	gujarat,industrial policy,bhupendra patel
+2026-06-15	India's wholesale inflation eases to 14-month low of 0.39% in May	74300d4d	india,wpi,inflation,wholesale prices
+2026-06-15	Update: Commercial flights begin at Noida International Airport in Jewar	b765ac20	india,noida airport,jewar,indigo
+2026-06-15	Update: Trump and Pakistan say US-Iran deal reached, signing set for June 19	fac36012	united states,iran,trump,pakistan,hormuz
+2026-06-15	Orban re-elected Fidesz leader months after losing power in Hungary	f0d6bf9e	hungary,orban,fidesz,tisza
+2026-06-15	Sweden scrambles Gripen jets to intercept Russian warplanes over Baltic	e93eb40e	sweden,russia,baltic,gripen
+2026-06-15	Japan twice fight back to hold the Netherlands to a 2-2 World Cup draw	cd0e7068	world cup,japan,netherlands,kamada
+2026-06-15	Scotland beat Haiti for first World Cup win in 36 years	0a680d7f	world cup,scotland,haiti,mcginn
+2026-06-15	Coalition of 42 US state attorneys general subpoenas OpenAI	4c260324	openai,attorneys general,letitia james,subpoena
+2026-06-15	KPMG withdraws agentic-AI report after firms dispute fabricated case studies	4437c804	kpmg,agentic ai,hallucination,report
+2026-06-15	Anthropic's forced model shutdown fuels India's push for sovereign AI	99952ebc	anthropic,india,sovereign ai,tcs
+2026-06-15	Warsh chairs his first Fed meeting with rates expected to hold	573b9d52	federal reserve,kevin warsh,interest rates,fomc
+2026-06-15	Update: Bank of Japan meets with rate seen rising to 1% for first time since 1995	9fb27b0c	bank of japan,rate hike,ueda,himino
+2026-06-15	Update: Oil set to extend losses as US-Iran deal nears Hormuz reopening	7e1f3fd7	oil,brent crude,strait of hormuz,iran
+2026-06-15	Antonelli wins Canadian Grand Prix as Russell retires from the lead	b05fbe3a	f1,canadian gp,antonelli,russell
+2026-06-15	Vekic overpowers Raducanu to win the Queen's Club title	ba70eba0	tennis,queens,vekic,raducanu
+2026-06-15	Shelton beats Fritz for his first grass-court title in Stuttgart	fb42d5a8	tennis,stuttgart,shelton,fritz
+2026-06-15	Australia win 3rd ODI by one wicket but Bangladesh take the series	2c5a4452	cricket,bangladesh,australia,connolly
