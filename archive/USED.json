@@ -54,6 +54,11 @@
       "date": "2026-06-15",
       "topic_key": "sahara",
       "text": "The Sahara was a green savanna with lakes and rivers during the African Humid Period."
+    },
+    {
+      "date": "2026-06-16",
+      "topic_key": "wombat",
+      "text": "Wombats are the only animals that produce cube-shaped droppings."
     }
   ],
   "puzzle_log": [
@@ -111,6 +116,11 @@
       "date": "2026-06-15",
       "type": "lateral",
       "title_key": "bankrupt-driver"
+    },
+    {
+      "date": "2026-06-16",
+      "type": "visual",
+      "title_key": "painted-cube"
     }
   ]
 }

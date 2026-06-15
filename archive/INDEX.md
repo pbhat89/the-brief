@@ -249,3 +249,29 @@ is empty until the first run.
 2026-06-15	Vekic overpowers Raducanu to win the Queen's Club title	ba70eba0	tennis,queens,vekic,raducanu
 2026-06-15	Shelton beats Fritz for his first grass-court title in Stuttgart	fb42d5a8	tennis,stuttgart,shelton,fritz
 2026-06-15	Australia win 3rd ODI by one wicket but Bangladesh take the series	2c5a4452	cricket,bangladesh,australia,connolly
+2026-06-16	Singapore unveils OTC gold-clearing system and central-bank gold vaulting	06c42d1c	singapore,mas,sgx,gan kim yong,gold
+2026-06-16	Sushil Sukumaran Nair appointed a Justice of Singapore's Court of Appeal	3e14deb9	singapore,court of appeal,sushil sukumaran nair,judiciary
+2026-06-16	Most Singapore fresh graduates earn below their expected pay, MOM study finds	85edc31d	singapore,mom,graduates,salary
+2026-06-16	Man, 28, jailed 8 years 9 months and caned for raping girl, 13, he met online	c29f105d	singapore,courts,rape,sentencing
+2026-06-16	India's May trade deficit widens to $28.21 billion as record exports lag imports	d1d0fcca	india,trade deficit,exports,commerce ministry
+2026-06-16	AAIB's final report on Air India AI-171 crash to come 'very soon', says minister	7f34eebc	india,aaib,air india,ai-171,ram mohan naidu
+2026-06-16	Sensex jumps 736 points and the rupee firms as US-Iran deal sinks oil	b58c4f7d	india,sensex,nifty,rupee,us-iran
+2026-06-16	Modi begins France visit, to join G7 outreach session at Evian	7b26220f	india,modi,g7,evian,macron
+2026-06-16	IMD widens heavy-rain and thunderstorm alerts as monsoon advances across India	e2f472d1	india,imd,monsoon,weather
+2026-06-16	Update: Trump says ships are moving through Hormuz as US-Iran signing set for Friday	b4530772	united states,iran,trump,hormuz,switzerland
+2026-06-16	Russian strike sets historic Kyiv-Pechersk Lavra cathedral ablaze, killing at least 5	5f9f01da	russia,ukraine,kyiv pechersk lavra,zelensky
+2026-06-16	G7 leaders open Evian summit and welcome the US-Iran deal	d926825b	g7,evian,macron,zelensky
+2026-06-16	World Cup debutants Cape Verde hold Spain to a 0-0 draw	41dca315	world cup,spain,cape verde,vozinha
+2026-06-16	Tunisia sack coach Sabri Lamouchi after 5-1 World Cup loss to Sweden	6ebf38b2	world cup,tunisia,sabri lamouchi,sweden
+2026-06-16	Salesforce to acquire AI customer-service firm Fin for $3.6 billion	772704da	salesforce,fin,intercom,agentforce
+2026-06-16	Nvidia sells $25 billion of bonds in its first debt offering since 2021	4431a666	nvidia,bonds,ai,debt
+2026-06-16	UK to bar under-16s from social media, including TikTok and YouTube	8fd7f1fb	united kingdom,starmer,social media,tiktok
+2026-06-16	SpaceX stock jumps 20% in its first full day of trading after record IPO	6504a358	spacex,ipo,nasdaq,stock
+2026-06-16	Update: Bank of Japan set to raise rates to 1% today as Ueda misses meeting	bbe9e79d	bank of japan,ueda,himino,interest rates
+2026-06-16	Nikkei 225 surges about 5% to a record high above 69,000	6813f6e1	nikkei,japan,equities,us-iran
+2026-06-16	Wall Street rallies on US-Iran deal as S&P 500 climbs 1.65% and the Dow hits a record	078ae8ce	s&p 500,dow jones,wall street,us-iran
+2026-06-16	Update: Oil slides further as US-Iran deal clears the way to reopen Hormuz	a7ae68a8	oil,crude,strait of hormuz,iran
+2026-06-16	🏏 India beat Pakistan by 64 runs at the Women's T20 World Cup	c9b7ba5b	india,pakistan,women's t20 world cup,deepti sharma
+2026-06-16	🏏 Bangladesh beat Netherlands by six wickets on the Dutch World Cup debut	0f236b18	bangladesh,netherlands,women's t20 world cup,ferdous
+2026-06-16	🎾 Tiafoe upsets French Open finalist Cobolli in the Halle first round	b4310036	tennis,halle open,tiafoe,cobolli
+2026-06-16	🏎️ Antonelli leads the F1 title race by 43 points as the season heads to Austria	b011016f	f1,antonelli,russell,austrian gp
