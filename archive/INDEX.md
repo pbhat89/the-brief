@@ -275,3 +275,30 @@ is empty until the first run.
 2026-06-16	🏏 Bangladesh beat Netherlands by six wickets on the Dutch World Cup debut	0f236b18	bangladesh,netherlands,women's t20 world cup,ferdous
 2026-06-16	🎾 Tiafoe upsets French Open finalist Cobolli in the Halle first round	b4310036	tennis,halle open,tiafoe,cobolli
 2026-06-16	🏎️ Antonelli leads the F1 title race by 43 points as the season heads to Austria	b011016f	f1,antonelli,russell,austrian gp
+2026-06-17	PM Wong to attend ASEAN-Russia summit in Kazan, first Russia trip since sanctions	65499b01	lawrence wong,kazan,asean-russia summit,putin,ukraine sanctions
+2026-06-17	Singapore retrenchments rose to 3,830 in the first quarter, highest since Q3 2023	ee632061	singapore,mom,retrenchments,labour market
+2026-06-17	Singapore to trial roadside electronic parking in August and phase out ERP gantries	a052b573	singapore,lta,erp 2,roadside parking,gantries
+2026-06-17	Jesus Christ Superstar musical given Advisory 16 rating over religious sensitivities	22cc0e0e	singapore,imda,jesus christ superstar,advisory 16,religion
+2026-06-17	HCLTech to buy 10.46% stake in Sarvam AI for 1,427 crore rupees	98b98d5a	hcltech,sarvam ai,axonwise,series b,sovereign ai
+2026-06-17	Vedanta's four demerged units begin trading, completing five-way split	12eaa8e6	vedanta,anil agarwal,demerger,nse,listing
+2026-06-17	Supreme Court orders single-phase Tripura village committee polls on September 27	93328ce7	supreme court,tripura,ttaadc,pradyot deb barma,tipra motha
+2026-06-17	Karnataka High Court dismisses PIL against Shivakumar cabinet, imposes 50,000 rupee cost	c3eddc02	karnataka high court,dk shivakumar,vibhu bakhru,pil,article 164
+2026-06-17	Update: US says Iran has signed accord to end war as ships move through Hormuz	bd62150d	united states,iran,trump,strait of hormuz,blockade
+2026-06-17	Norway crown prince's stepson jailed four years for rape	d866bc2f	marius borg hoiby,mette-marit,norway,oslo,rape conviction
+2026-06-17	Africa CDC warns DR Congo Ebola outbreak could become worst in history	bd7f4362	dr congo,ebola,africa cdc,bundibugyo virus
+2026-06-17	Mbappe brace fires France to 3-1 win over Senegal in World Cup opener	ff4d517e	kylian mbappe,france,senegal,barcola,world cup 2026
+2026-06-17	Trump's Iran deal leaves Netanyahu isolated ahead of Israeli elections	f94e3ebf	trump,netanyahu,iran,israel,elections
+2026-06-17	ChatGPT's market share slips below 50% for the first time as rivals gain	62ef6cb0	chatgpt,openai,gemini,claude,sensor tower
+2026-06-17	Robinhood cuts about 10% of staff without citing AI	eecb124d	robinhood,vlad tenev,layoffs,ai
+2026-06-17	NewCore launches with $66 million to give AI agents workplace identities	023258ba	newcore,ai agents,claude code,codex,mckinsey
+2026-06-17	Startup Probably raises $9 million from a16z to build low-hallucination AI	ef609234	probably,andreessen horowitz,hallucinations,data science
+2026-06-17	Malaysia's Respond.io raises $62.5 million Series B, eyes US and Europe deals	dbaded97	respond.io,camber partners,gerardo salandra,messaging,malaysia
+2026-06-17	Update: Bank of Japan hikes rate to 1%, highest since 1995, in 7-1 vote	29cf9b17	bank of japan,toichiro asada,ueda,himino,interest rates
+2026-06-17	Update: Dow closes at record near 52,000 as tech slides before Fed decision	cb254114	dow jones,s&p 500,nasdaq,kevin warsh,fed
+2026-06-17	Update: Brent crude falls below $80 as US-Iran deal set to restore Gulf supply	9257af62	brent crude,wti,strait of hormuz,iran,oil
+2026-06-17	Fox to acquire Roku for $160 a share in roughly $22 billion deal	b40f52ee	fox corporation,roku,m&a,streaming
+2026-06-17	Dave & Buster's stock plunges 14% after first-quarter earnings miss	66eb0cc9	dave & buster's,earnings,comparable sales,eps
+2026-06-17	🎾 Zverev survives Kopriva to equal Nadal's ATP 500 win record at Halle	75cde54f	zverev,kopriva,halle,atp 500,nadal
+2026-06-17	🎾 Defending champion Bublik dumped out of Halle by qualifier Bellucci	1ffaffb7	bublik,bellucci,halle,medvedev,upset
+2026-06-17	🏏 Sri Lanka beat New Zealand for first Women's T20 World Cup win over them	c2ffa9d9	sri lanka,new zealand,women's t20 world cup,nilakshika silva
+2026-06-17	🏏 England restrict Ireland to 98 for 8 to seal second Women's T20 World Cup win	ebc0f10e	england,ireland,women's t20 world cup,sciver-brunt

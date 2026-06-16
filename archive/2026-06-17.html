@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Wed, 17 June 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Wednesday, 17 June 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Wednesday, 17 June 2026 · 🔍 42 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eight entries in this exact order:
+     id    : one of "sg" | "india" | "geo" | "tech" | "biz" | "sports" | "fun" | "puzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 6 news tabs; fun/puzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+============================================================================= */
+
+const SECTIONS = [
+  { id:"sg", title:"🇸🇬 Singapore", color:"#e74c3c", items:[
+    { headline:"PM Wong to attend ASEAN-Russia summit in Kazan, first Russia trip since sanctions", summary:"Prime Minister Lawrence Wong will attend the ASEAN-Russia Commemorative Summit in Kazan from June 17 to 19, marking 35 years of dialogue ties and his first trip to Russia since Singapore became the only ASEAN member to sanction Moscow over the war in Ukraine. President Vladimir Putin is hosting the leaders, who include the Philippines' Ferdinand Marcos Jr.", source:"SCMP", url:"https://www.scmp.com/week-asia/politics/article/3356593/singapore-pm-lawrence-wong-visit-russias-kazan-first-ukraine-war-sanctions", date:"Jun 16", spectrum:null, bias:null },
+    { headline:"Singapore retrenchments rose to 3,830 in the first quarter, highest since Q3 2023", summary:"The Manpower Ministry's first-quarter 2026 labour market report, released June 15, showed retrenchments rose to 3,830 from 3,690 the previous quarter, the most since the third quarter of 2023, driven by restructuring in manufacturing, financial and professional services. Total employment still grew by 9,400, an 18th straight quarter of expansion.", source:"CNA", url:"https://www.channelnewsasia.com/singapore", date:"Jun 15", spectrum:null, bias:null },
+    { headline:"Singapore to trial roadside electronic parking in August and phase out ERP gantries", summary:"From August, the Land Transport Authority will pilot a satellite-based Roadside Electronic Parking system across 644 locations covering about 19,000 lots, the agency said on June 16. It also confirmed that Singapore's physical ERP gantries will be progressively removed and will stop charging from January 1, 2027, as the ERP 2 system takes over.", source:"Mothership", url:"https://mothership.sg/2026/06/erp-2-system-study/", date:"Jun 16", spectrum:null, bias:null },
+    { headline:"Jesus Christ Superstar musical given Advisory 16 rating over religious sensitivities", summary:"The Infocomm Media Development Authority, in consultation with the Culture and Home Affairs ministries, gave the August staging of Jesus Christ Superstar an Advisory 16 rating with the note 'Some Mature Content', citing community and religious sensitivities. Several churches, including the Assemblies of God of Singapore, urged caution over the musical's portrayal of Christ.", source:"CNA", url:"https://www.channelnewsasia.com/singapore/jesus-christ-superstar-advisory-16-rating-imda-mccy-mha-6176116", date:"Jun 12", spectrum:null, bias:null },
+  ]},
+  { id:"india", title:"🇮🇳 India", color:"#e67e22", items:[
+    { headline:"HCLTech to buy 10.46% stake in Sarvam AI for 1,427 crore rupees", summary:"HCLTech will invest 1,427.25 crore rupees (about $150 million) for a 10.46 per cent stake in Axonwise, the parent of sovereign-AI startup Sarvam AI, leading a Series B round that has raised $234 million of a planned $300 million at a $1.5 billion valuation. The all-cash deal is expected to close within two weeks.", source:"The Economic Times", url:"https://economictimes.indiatimes.com/tech/technology", date:"Jun 16", spectrum:null, bias:null },
+    { headline:"Vedanta's four demerged units begin trading, completing five-way split", summary:"Four businesses carved out of Anil Agarwal's Vedanta - aluminium, oil and gas, power, and iron and steel - began trading on the BSE and NSE on June 15, completing the conglomerate's split into five listed entities. Vedanta Aluminium, the largest, debuted at about 527 rupees, valuing it above 2 lakh crore rupees.", source:"The Economic Times", url:"https://economictimes.indiatimes.com/markets/stocks/news", date:"Jun 15", spectrum:null, bias:null },
+    { headline:"Supreme Court orders single-phase Tripura village committee polls on September 27", summary:"A Supreme Court vacation bench of Justices Joymalya Bagchi and Vipul M. Pancholi on June 16 directed Tripura to hold long-delayed village committee elections under the TTAADC in a single phase on September 27, ending a near-decade delay. The order came on a petition by Tipra Motha founder Pradyot Kishore Manikya Deb Barma.", source:"The Hindu", url:"https://www.thehindu.com/news/national/", date:"Jun 16", spectrum:null, bias:null },
+    { headline:"Karnataka High Court dismisses PIL against Shivakumar cabinet, imposes 50,000 rupee cost", summary:"The Karnataka High Court on June 16 dismissed as a 'publicity stunt' a public-interest plea challenging Chief Minister D.K. Shivakumar's 13-member council of ministers, imposing 50,000 rupees in costs on petitioner Mangalappa. The bench of Chief Justice Vibhu Bakhru and Justice K.S. Hemalekha held that the plea misread Article 164(1A) of the Constitution.", source:"The Indian Express", url:"https://indianexpress.com/section/india/", date:"Jun 16", spectrum:null, bias:null },
+  ]},
+  { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
+    { headline:"Update: US says Iran has signed accord to end war as ships move through Hormuz", summary:"Washington said on June 15 that Iran had signed a 14-point memorandum ending more than 100 days of war and lifting the US naval blockade, with President Trump saying shipping was 'starting to move' through the Strait of Hormuz. A formal signing ceremony is set for June 19 in Switzerland, though some terms remain disputed.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/6/15/trump-says-ships-starting-to-move-through-strait-of-hormuz", date:"Jun 15", spectrum:null, bias:null },
+    { headline:"Norway crown prince's stepson jailed four years for rape", summary:"An Oslo court sentenced Marius Borg Hoiby, 29, the eldest son of Crown Princess Mette-Marit, to four years in prison after convicting him on two of four rape counts as well as domestic-violence and narcotics charges. Prosecutors had sought seven years and seven months; Hoiby said he would appeal.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/6/15/stepson-of-norways-crown-prince-jailed-for-four-years-in-rape-case", date:"Jun 15", spectrum:null, bias:null },
+    { headline:"Africa CDC warns DR Congo Ebola outbreak could become worst in history", summary:"The head of the Africa Centres for Disease Control warned on June 16 that the Democratic Republic of Congo's Bundibugyo-strain Ebola outbreak could surpass the 2014-16 epidemic that killed more than 11,000 people. Government figures put the toll at 196 deaths from 837 confirmed cases, with conflict and patient escapes hampering containment.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/6/16/ebola-outbreak-in-dr-congo-could-become-worst-in-history-africa-cdc-warns", date:"Jun 16", spectrum:null, bias:null },
+    { headline:"Mbappe brace fires France to 3-1 win over Senegal in World Cup opener", summary:"Kylian Mbappe scored twice as France beat Senegal 3-1 in their World Cup Group I opener at MetLife Stadium on June 16, with Bradley Barcola also on target. The brace made Mbappe France's all-time leading scorer, passing Olivier Giroud, and took his World Cup tally to 14, two behind record-holder Miroslav Klose.", source:"Al Jazeera", url:"https://www.aljazeera.com/sports/2026/6/16/mbappe-brace-fires-france-to-3-1-win-over-senegal-in-world-cup-2026-opener", date:"Jun 16", spectrum:null, bias:null },
+    { headline:"Trump's Iran deal leaves Netanyahu isolated ahead of Israeli elections", summary:"A CNN analysis argued on June 15 that the US-Iran memorandum has left Israeli Prime Minister Benjamin Netanyahu exposed before October elections, after Washington pursued the diplomacy without him. Trump called Netanyahu 'a very difficult guy' and said Israel should be grateful for the agreement.", source:"CNN", url:"https://www.cnn.com/2026/06/15/middleeast/trump-netanyahu-iran-agreement-latam-intl", date:"Jun 15", spectrum:null, bias:null },
+  ]},
+  { id:"tech", title:"💻 Tech & AI", color:"#27ae60", items:[
+    { headline:"ChatGPT's market share slips below 50% for the first time as rivals gain", summary:"Sensor Tower's State of AI 2026 report found ChatGPT's share of consumer AI-assistant use fell to 46.4 per cent by the end of May, down from above 50 per cent in January, with Google's Gemini at 27.7 per cent and Anthropic's Claude at 10.3 per cent. ChatGPT still leads on scale with about 1.1 billion monthly users.", source:"TechCrunch", url:"https://techcrunch.com/2026/06/16/chatgpts-market-share-slips-below-50-for-first-time/", date:"Jun 16", spectrum:null, bias:null },
+    { headline:"Robinhood cuts about 10% of staff without citing AI", summary:"Robinhood said on June 16 it would lay off about 290 employees, roughly 10 per cent of its full-time staff, with chief executive Vlad Tenev framing the move as a shift toward flatter structures rather than blaming AI. TechCrunch read the wording as a sign that citing AI for layoffs is falling out of favour.", source:"TechCrunch", url:"https://techcrunch.com/2026/06/16/robinhoods-note-on-10-layoffs-shows-blaming-ai-isnt-cutting-it/", date:"Jun 16", spectrum:null, bias:null },
+    { headline:"NewCore launches with $66 million to give AI agents workplace identities", summary:"Identity startup NewCore emerged on June 15 with $66 million in funding to assign AI agents their own enterprise identities and manage their access, with integrations for Anthropic's Claude Code and OpenAI's Codex. It cited deployments such as McKinsey running 25,000 agents alongside its staff.", source:"TechCrunch", url:"https://techcrunch.com/2026/06/15/ai-agents-are-becoming-employees-newcore-emerges-with-66m-to-give-them-identities/", date:"Jun 15", spectrum:null, bias:null },
+    { headline:"Startup Probably raises $9 million from a16z to build low-hallucination AI", summary:"Probably raised $9 million in seed funding led by Andreessen Horowitz to build AI aimed at near-total reliability, the company said on June 16. Its first product is a citation-backed data-science tool that runs on a deliberately smaller model so it can operate on local hardware.", source:"TechCrunch", url:"https://techcrunch.com/2026/06/16/probably-raises-9m-to-build-a-more-reliable-kind-of-ai/", date:"Jun 16", spectrum:null, bias:null },
+    { headline:"Malaysia's Respond.io raises $62.5 million Series B, eyes US and Europe deals", summary:"Malaysian business-messaging firm Respond.io raised a $62.5 million Series B led by Camber Partners, reaching $35 million in annual recurring revenue, up 169 per cent year on year, the company said on June 15. Chief executive Gerardo Salandra said it plans acquisitions in North America and Europe.", source:"TechCrunch", url:"https://techcrunch.com/2026/06/15/malaysias-respond-io-raises-62-5m-eyes-acquisitions-in-north-america-and-europe/", date:"Jun 15", spectrum:null, bias:null },
+  ]},
+  { id:"biz", title:"📈 Business & Markets", color:"#8e44ad", items:[
+    { headline:"Update: Bank of Japan hikes rate to 1%, highest since 1995, in 7-1 vote", summary:"The Bank of Japan raised its policy rate by 25 basis points to 1 per cent on June 16, its highest level since 1995, in a 7-1 vote with board member Toichiro Asada dissenting in favour of a hold. Governor Kazuo Ueda missed the meeting while recovering from a liver infection, leaving Deputy Governor Ryozo Himino to preside.", source:"CNBC", url:"https://www.cnbc.com/2026/06/16/boj-rate-hike-historic-inflation.html", date:"Jun 16", spectrum:null, bias:null },
+    { headline:"Update: Dow closes at record near 52,000 as tech slides before Fed decision", summary:"The Dow Jones Industrial Average rose about 0.6 per cent to a record close near 52,000 on June 16, while the S&P 500 slipped 0.57 per cent and the Nasdaq fell 1.15 per cent as technology shares retreated. Investors weighed the Bank of Japan's hike and the first Federal Reserve meeting chaired by Kevin Warsh.", source:"CNBC", url:"https://www.cnbc.com/2026/06/16/cnbc-daily-open-relief-rally-rolls-on-as-mideast-deal-boosts-sentiment.html", date:"Jun 16", spectrum:null, bias:null },
+    { headline:"Update: Brent crude falls below $80 as US-Iran deal set to restore Gulf supply", summary:"Brent crude fell about 5 per cent to settle at $78.96 a barrel on June 16, its first close below $80 since March, and US WTI dropped to $76.05, as the US-Iran agreement cleared the way to reopen the Strait of Hormuz to all shipping. The deal extends the ceasefire by 60 days.", source:"CNBC", url:"https://www.cnbc.com/2026/06/16/us-iran-peace-agreement-oil-prices-tankers-strait-of-hormuz-transit.html", date:"Jun 16", spectrum:null, bias:null },
+    { headline:"Fox to acquire Roku for $160 a share in roughly $22 billion deal", summary:"Fox Corporation agreed to buy streaming-device maker Roku for $160 per share - $96 in cash plus 0.9693 Fox Class A shares - in a deal valuing Roku at about $22 billion, the companies announced on June 15. Fox shareholders would own roughly 73 per cent of the combined company.", source:"CNBC", url:"https://www.cnbc.com/2026/06/16/5-things-to-know-before-the-stock-market-opens.html", date:"Jun 15", spectrum:null, bias:null },
+    { headline:"Dave & Buster's stock plunges 14% after first-quarter earnings miss", summary:"Shares of Dave & Buster's fell about 14 per cent on June 16 after the entertainment chain reported first-quarter earnings of 16 cents a share against a forecast near 60 cents, with revenue of $559.2 million missing estimates. Comparable-store sales fell 5.4 per cent from a year earlier.", source:"CNBC", url:"https://www.cnbc.com/2026/06/15/stock-market-today-live-updates.html", date:"Jun 16", spectrum:null, bias:null },
+  ]},
+  { id:"sports", title:"🎾🏏🏎️ Sports", color:"#c0392b", items:[
+    { headline:"🎾 Zverev survives Kopriva to equal Nadal's ATP 500 win record at Halle", summary:"Top seed and French Open champion Alexander Zverev beat Vit Kopriva 6-3, 4-6, 6-2 in the Halle Open first round on June 16, in his first match since claiming his maiden Grand Slam title. The win was the 121st of his career at ATP 500 events, equalling Rafael Nadal's record.", source:"ATP Tour", url:"https://www.atptour.com/en/news/zverev-kopriva-halle-2026-tuesday", date:"Jun 16", spectrum:null, bias:null },
+    { headline:"🎾 Defending champion Bublik dumped out of Halle by qualifier Bellucci", summary:"Defending champion Alexander Bublik, seeded third, lost 7-6(6), 6-1 to Italian qualifier Mattia Bellucci in the Halle first round on June 16 - the first time the tournament's title-holder had fallen in the opening round since 2003. Daniil Medvedev advanced past Tomas Martin Etcheverry 6-3, 6-4 on the same day.", source:"ATP Tour", url:"https://www.atptour.com/en/news/halle-2026-results", date:"Jun 16", spectrum:null, bias:null },
+    { headline:"🏏 Sri Lanka beat New Zealand for first Women's T20 World Cup win over them", summary:"Sri Lanka chased down 151 with two balls to spare to beat defending champions New Zealand by five wickets at Southampton on June 16, their first victory over New Zealand at a Women's T20 World Cup. Nilakshika Silva made 54 not out, and New Zealand have now lost both their opening matches.", source:"ESPNcricinfo", url:"https://www.espncricinfo.com/series/icc-women-s-t20-world-cup-2026-1483859/new-zealand-women-vs-sri-lanka-women-7th-match-group-2-1490683/match-report", date:"Jun 16", spectrum:null, bias:null },
+    { headline:"🏏 England restrict Ireland to 98 for 8 to seal second Women's T20 World Cup win", summary:"England restricted Ireland to 98 for 8 at the Rose Bowl in Southampton on June 16 and knocked off the runs to make it two wins from two in Group 2 of the Women's T20 World Cup. Nat Sciver-Brunt finished not out as the hosts strengthened their qualification push.", source:"ESPNcricinfo", url:"https://www.espncricinfo.com/series/icc-women-s-t20-world-cup-2026-1483859/england-women-vs-ireland-women-8th-match-group-2-1490684/full-scorecard", date:"Jun 16", spectrum:null, bias:null },
+  ]},
+  { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
+  { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
+];
+
+const FUN_FACT = {
+  text: "Cleopatra lived closer in time to the first Moon landing than to the construction of the Great Pyramid of Giza. The pyramid was finished around 2560 BC - roughly 2,500 years before Cleopatra's death in 30 BC - whereas the Apollo 11 landing in 1969 came less than 2,000 years after she died.",
+  tag: "Category · History"
+};
+
+const PUZZLE = {
+  type: "Logic",
+  title: "The Bulb and the Three Switches",
+  how: "You can enter the room only once, so make the switches reveal more than just on or off.",
+  question: "Three on/off switches are mounted on a wall outside a closed, windowless room. Exactly one of them controls a single ordinary incandescent light bulb inside the room; the other two are connected to nothing. With the door shut, you cannot see the bulb.\nYou may flip the switches as often as you like, but you may open the door and enter the room only once. After that single entry you must name the switch that controls the bulb.\nHow can you always identify the correct switch?",
+  answer: "Use heat as a second clue.\n1) Turn switch A on and leave it on for about ten minutes.\n2) Turn switch A off, then immediately turn switch B on.\n3) Enter the room straight away.\nNow read the bulb:\n- If it is lit, switch B controls it.\n- If it is dark but warm to the touch, switch A controls it - it was on long enough to heat the filament.\n- If it is dark and cold, switch C controls it.\nAn ordinary incandescent bulb stores heat, which gives you a third state - warm but off - beyond the single on/off bit you could otherwise observe in just one visit."
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn){var a=document.getElementById('ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>

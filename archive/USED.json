@@ -59,6 +59,11 @@
       "date": "2026-06-16",
       "topic_key": "wombat",
       "text": "Wombats are the only animals that produce cube-shaped droppings."
+    },
+    {
+      "date": "2026-06-17",
+      "topic_key": "cleopatra",
+      "text": "Cleopatra lived closer in time to the Moon landing than to the Great Pyramid."
     }
   ],
   "puzzle_log": [
@@ -121,6 +126,11 @@
       "date": "2026-06-16",
       "type": "visual",
       "title_key": "painted-cube"
+    },
+    {
+      "date": "2026-06-17",
+      "type": "logic",
+      "title_key": "bulb-and-three-switches"
     }
   ]
 }
