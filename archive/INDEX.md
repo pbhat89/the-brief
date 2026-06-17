@@ -302,3 +302,31 @@ is empty until the first run.
 2026-06-17	🎾 Defending champion Bublik dumped out of Halle by qualifier Bellucci	1ffaffb7	bublik,bellucci,halle,medvedev,upset
 2026-06-17	🏏 Sri Lanka beat New Zealand for first Women's T20 World Cup win over them	c2ffa9d9	sri lanka,new zealand,women's t20 world cup,nilakshika silva
 2026-06-17	🏏 England restrict Ireland to 98 for 8 to seal second Women's T20 World Cup win	ebc0f10e	england,ireland,women's t20 world cup,sciver-brunt
+2026-06-18	HDB launches 6,952 BTO flats across seven projects in June exercise	6734ade7	singapore,hdb,bto flats,housing
+2026-06-18	Singapore's non-oil exports jump 38.4% in May on AI-driven electronics demand	06b63be5	singapore,nodx,exports,electronics
+2026-06-18	MAS survey trims Singapore's 2026 growth forecast to 3.5% on geopolitical risk	e0bbea38	singapore,mas,gdp forecast,economy
+2026-06-18	CNA tops Reuters Institute 2026 rankings for Singapore online news use	d2791e09	singapore,reuters institute,cna,news report
+2026-06-18	Car and taxi collide outside Bendemeer MRT, driver flees as cabby hospitalised	145b431a	singapore,bendemeer mrt,accident,taxi
+2026-06-18	NSE files for India's largest-ever IPO with up to 148.9 million shares on offer	0cf66d61	india,nse,ipo,sebi
+2026-06-18	Delhi Police bust ISI-backed terror module linked to D-Company, seven arrested	92431f44	india,delhi police,isi,d-company,terror module
+2026-06-18	India blocks Telegram until June 22 and curbs message editing before NEET re-exam	efa4bf3e	india,telegram,meity,neet
+2026-06-18	Nifty tops 24,000 as Indian shares rise a fourth day before the Fed decision	e14177b9	india,nifty,sensex,markets
+2026-06-18	G7 closes Evian summit with pledge to boost Ukraine air defences and Russia sanctions	7e6c6d95	g7,evian,ukraine,russia sanctions
+2026-06-18	Update: US-Iran accord set to be signed June 19 with Hormuz toll-free for 60 days	09596557	united states,iran,strait of hormuz,memorandum
+2026-06-18	Messi hat-trick equals Klose's World Cup goal record as Argentina beat Algeria 3-0	d72c399a	lionel messi,argentina,algeria,klose,world cup 2026
+2026-06-18	England beat Croatia 4-2 in their World Cup opener as Kane scores twice	7e9f508d	england,croatia,harry kane,world cup 2026
+2026-06-18	SpaceX to buy AI coding startup Cursor for $60 billion days after its IPO	1bdf2abf	spacex,cursor,anysphere,xai
+2026-06-18	Snap unveils $2,195 Specs augmented-reality glasses as shares slide	ce0b7235	snap,specs,ar glasses
+2026-06-18	World-model startup Odyssey raises $310 million at a $1.45 billion valuation	fae22d2f	odyssey,world models,amazon,series b
+2026-06-18	Google launches its first Gemini-built smart speaker at $99.99	482bd108	google,gemini,home speaker
+2026-06-18	Anthropic becomes first standalone AI firm to join Frontier carbon-removal group	af5112e1	anthropic,frontier,carbon removal
+2026-06-18	Fed holds rates at 3.5-3.75% but hawkish projections signal a 2026 hike	9b4228a3	federal reserve,kevin warsh,interest rates,fomc
+2026-06-18	Wall Street slides as hawkish Fed hits tech; Dow falls 507 points	e37a8b1f	dow jones,s&p 500,nasdaq,wall street
+2026-06-18	US Treasury yields jump as Fed dot plot lifts bets on a 2026 rate hike	8a3b84d7	us treasury yields,federal reserve,bonds
+2026-06-18	Yum! Brands sells Pizza Hut for $2.7 billion in two deals	b56658bf	yum brands,pizza hut,longrange capital,yum china
+2026-06-18	Olin and Huntsman to merge in all-stock deal creating a $12 billion chemicals firm	dc8f399f	olin,huntsman,merger,chemicals
+2026-06-18	India crush Afghanistan by 170 runs as Gill and Kishan hit centuries	2cd9fb35	india,afghanistan,shubman gill,ishan kishan,odi
+2026-06-18	India post record 209 for 5 to beat Netherlands by 95 at Women's T20 World Cup	e4e0bcd1	india,netherlands,women's t20 world cup,mandhana
+2026-06-18	Australia hold Bangladesh to 77 and win by nine wickets	da3ace69	australia,bangladesh,women's t20 world cup,voll
+2026-06-18	Badosa fights back to upset Coco Gauff and reach Berlin quarterfinals	3c1418af	badosa,gauff,berlin,tennis
+2026-06-18	Medvedev and Shelton advance at the Halle grass-court tournament	4dc68160	medvedev,shelton,halle,tennis

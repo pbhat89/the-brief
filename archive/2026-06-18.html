@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Thu, 18 June 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Thursday, 18 June 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Thursday, 18 June 2026 · 🔍 34 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eight entries in this exact order:
+     id    : one of "sg" | "india" | "geo" | "tech" | "biz" | "sports" | "fun" | "puzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 6 news tabs; fun/puzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+============================================================================= */
+
+const SECTIONS = [
+  { id:"sg", title:"🇸🇬 Singapore", color:"#e74c3c", items:[
+    { headline:"HDB launches 6,952 BTO flats across seven projects in June exercise", summary:"The Housing Board launched 6,952 Build-To-Order flats for sale on June 17 across seven projects in towns including Ang Mo Kio, Bishan, Bukit Merah, Sembawang and Woodlands. A Bishan project brings public housing to the Upper Thomson area for the first time, with applications running to June 24.", source:"Mothership", url:"https://mothership.sg/2026/06/june-2026-bto-exercise-6952-flats-launched/", date:"Jun 17", spectrum:null, bias:null },
+    { headline:"Singapore's non-oil exports jump 38.4% in May on AI-driven electronics demand", summary:"Non-oil domestic exports rose 38.4% year on year in May, well above forecasts and the fastest pace since December 2003, Enterprise Singapore data showed on June 17. Electronics shipments surged 94.8%, led by integrated circuits, PCs and disk media amid the global AI build-out.", source:"CNA", url:"https://www.channelnewsasia.com/business", date:"Jun 17", spectrum:null, bias:null },
+    { headline:"MAS survey trims Singapore's 2026 growth forecast to 3.5% on geopolitical risk", summary:"The Monetary Authority of Singapore's quarterly Survey of Professional Forecasters, released June 17, cut the median 2026 GDP growth forecast to 3.5% from 3.6%, citing Middle East conflict as the main downside risk. Most economists expect monetary policy to stay unchanged in July.", source:"CNA", url:"https://www.channelnewsasia.com/business", date:"Jun 17", spectrum:null, bias:null },
+    { headline:"CNA tops Reuters Institute 2026 rankings for Singapore online news use", summary:"The Reuters Institute Digital News Report 2026 ranked CNA the most-used online news source in Singapore at 47% weekly reach, ahead of Mothership and The Straits Times. Trust in news in Singapore stood at 46%, above the global average of 37%.", source:"Mothership", url:"https://mothership.sg/2026/06/reuters-institute-report-news-mothership/", date:"Jun 17", spectrum:null, bias:null },
+    { headline:"Car and taxi collide outside Bendemeer MRT, driver flees as cabby hospitalised", summary:"A rental car and a taxi collided near Bendemeer MRT station along Kallang Bahru on the morning of June 17, knocking down a stretch of central-divider railing and deploying both vehicles' airbags. The taxi driver was taken to hospital while the car driver fled the scene.", source:"Mothership", url:"https://mothership.sg/2026/06/bendemeer-accident-taxi-car/", date:"Jun 17", spectrum:null, bias:null }
+  ]},
+  { id:"india", title:"🇮🇳 India", color:"#e67e22", items:[
+    { headline:"NSE files for India's largest-ever IPO with up to 148.9 million shares on offer", summary:"The National Stock Exchange filed draft papers with SEBI on June 17 for what is set to be India's biggest IPO, an all offer-for-sale of up to 148.9 million shares, around a 5% stake. Sellers are eyeing roughly 20,000-25,000 crore rupees at a valuation near 5 lakh crore rupees.", source:"The Economic Times", url:"https://economictimes.indiatimes.com/markets", date:"Jun 17", spectrum:null, bias:null },
+    { headline:"Delhi Police bust ISI-backed terror module linked to D-Company, seven arrested", summary:"Delhi Police's Special Cell said on June 16 it had dismantled a Pakistan ISI-backed terror-crime syndicate tied to Dawood Ibrahim's D-Company, arresting seven men and seizing five pistols. Investigators said the network had scouted potential targets in Delhi and Mumbai.", source:"The Indian Express", url:"https://indianexpress.com/section/india/", date:"Jun 16", spectrum:null, bias:null },
+    { headline:"India blocks Telegram until June 22 and curbs message editing before NEET re-exam", summary:"The IT ministry restricted access to Telegram in India from June 16 to 22 under Section 69A and ordered the app to disable message editing until June 30, acting on the National Testing Agency's advice to curb cheating before the NEET-UG re-examination on June 21.", source:"The Times of India", url:"https://timesofindia.indiatimes.com/india", date:"Jun 16", spectrum:null, bias:null },
+    { headline:"Nifty tops 24,000 as Indian shares rise a fourth day before the Fed decision", summary:"The Nifty 50 closed above 24,000 and the Sensex added 347 points on June 17, a fourth straight gain, as easing oil prices lifted sentiment before the US Federal Reserve's policy decision. Mid- and small-cap stocks outperformed the main indices.", source:"The Economic Times", url:"https://economictimes.indiatimes.com/markets", date:"Jun 17", spectrum:null, bias:null }
+  ]},
+  { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
+    { headline:"G7 closes Evian summit with pledge to boost Ukraine air defences and Russia sanctions", summary:"G7 leaders ended their summit in Evian, France on June 17 vowing unwavering support for Ukraine, agreeing to send more air-defence systems and interceptors and to tighten sanctions on Russia's oil and gas sectors. The leaders said Russia had shown no serious willingness to make peace.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/6/17/g7-leaders-to-boost-ukraine-air-defences-tighten-sanctions-on-russia", date:"Jun 17", spectrum:null, bias:null },
+    { headline:"Update: US-Iran accord set to be signed June 19 with Hormuz toll-free for 60 days", summary:"The United States and Iran are due to formally sign their war-ending accord on June 19 in Switzerland, after a memorandum approved electronically set the Strait of Hormuz to stay toll-free for 60 days. Sanctioned Iranian tankers resumed sailing through the strait past the lifted US blockade.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/6/17/tehran-says-considering-plan-for-iran-us-presidents-to-sign-deal", date:"Jun 17", spectrum:null, bias:null },
+    { headline:"Messi hat-trick equals Klose's World Cup goal record as Argentina beat Algeria 3-0", summary:"Lionel Messi, 38, scored his first World Cup hat-trick to reach 16 goals at the tournament, equalling Miroslav Klose's all-time record, as holders Argentina beat Algeria 3-0 on June 17. He became the oldest player to score a hat-trick at a World Cup.", source:"Al Jazeera", url:"https://www.aljazeera.com/sports/2026/6/17/messi-fires-argentina-to-win-against-algeria-in-world-cup-defence-opener", date:"Jun 17", spectrum:null, bias:null },
+    { headline:"England beat Croatia 4-2 in their World Cup opener as Kane scores twice", summary:"Harry Kane scored twice and Jude Bellingham and Marcus Rashford added second-half goals as England beat Croatia 4-2 in their World Cup Group L opener in Dallas on June 17. The first half had ended 2-2 before England pulled clear.", source:"Al Jazeera", url:"https://www.aljazeera.com/sports/liveblog/2026/6/17/england-vs-croatia-live-world-cup-2026", date:"Jun 17", spectrum:null, bias:null }
+  ]},
+  { id:"tech", title:"💻 Tech & AI", color:"#27ae60", items:[
+    { headline:"SpaceX to buy AI coding startup Cursor for $60 billion days after its IPO", summary:"SpaceX agreed on June 16 to acquire Anysphere, the maker of the AI coding tool Cursor, in an all-stock deal valuing it at $60 billion, just days after its record Nasdaq debut. The takeover, expected to close in the third quarter, strengthens Elon Musk's xAI in AI coding.", source:"TechCrunch", url:"https://techcrunch.com/2026/06/16/spacex-to-acquire-cursor-for-60b-in-stock-days-after-blockbuster-ipo/", date:"Jun 16", spectrum:null, bias:null },
+    { headline:"Snap unveils $2,195 Specs augmented-reality glasses as shares slide", summary:"Snap opened preorders on June 16 for its long-promised consumer AR glasses, Specs, priced at $2,195 with a $200 refundable deposit and shipping in the autumn in the US, UK and France. The high price drew criticism and Snap's shares fell.", source:"TechCrunch", url:"https://techcrunch.com/2026/06/16/snap-finally-debuts-its-long-awaited-ar-glasses-specs-and-oof-they-arent-cheap/", date:"Jun 16", spectrum:null, bias:null },
+    { headline:"World-model startup Odyssey raises $310 million at a $1.45 billion valuation", summary:"Odyssey, founded by self-driving veterans Oliver Cameron and Jeff Hawke, raised a $310 million Series B at a $1.45 billion valuation led by Natural Capital, with Amazon, AMD Ventures and GV joining. AWS becomes its preferred cloud and it will tune its models for Amazon's Trainium chips.", source:"TechCrunch", url:"https://techcrunch.com/2026/06/17/world-model-maker-odyssey-nabs-1-45b-valuation-backed-by-amazon-and-other-big-names/", date:"Jun 17", spectrum:null, bias:null },
+    { headline:"Google launches its first Gemini-built smart speaker at $99.99", summary:"Google introduced the $99.99 Google Home Speaker on June 17, its first audio device built specifically for Gemini, swapping fixed Assistant commands for conversational, multi-step requests. A Google Home Premium tier costs $10 a month for advanced Gemini Live features.", source:"TechCrunch", url:"https://techcrunch.com/2026/06/17/google-bets-on-gemini-to-reinvent-the-smart-home-speaker/", date:"Jun 17", spectrum:null, bias:null },
+    { headline:"Anthropic becomes first standalone AI firm to join Frontier carbon-removal group", summary:"Anthropic joined the Frontier carbon-removal coalition on June 17, contributing to a new $915 million tranche that nearly doubles the group's pledges to about $1.8 billion. It is the first pure-play AI company to join, alongside founding member Google, as scrutiny of AI energy use grows.", source:"TechCrunch", url:"https://techcrunch.com/2026/06/17/anthropic-becomes-first-ai-startup-to-join-the-frontier-carbon-removal-coalition/", date:"Jun 17", spectrum:null, bias:null }
+  ]},
+  { id:"biz", title:"📈 Business & Markets", color:"#8e44ad", items:[
+    { headline:"Fed holds rates at 3.5-3.75% but hawkish projections signal a 2026 hike", summary:"At Kevin Warsh's first meeting as chair, the Federal Reserve voted 12-0 on June 17 to keep its benchmark rate at 3.5% to 3.75%, a fourth straight hold. New projections showed nine of 18 officials expect at least one rate hike this year, and Warsh declined to submit his own dot.", source:"CNBC", url:"https://www.cnbc.com/2026/06/17/fed-interest-rate-decision-june-2026.html", date:"Jun 17", spectrum:null, bias:null },
+    { headline:"Wall Street slides as hawkish Fed hits tech; Dow falls 507 points", summary:"US stocks fell after the Fed's hawkish projections on June 17, with the Dow dropping 507 points, or 0.98%, the S&P 500 down 1.21% and the Nasdaq off 1.34%. Big-tech names including Microsoft, Meta, Alphabet and Amazon all closed lower.", source:"CNBC", url:"https://www.cnbc.com/2026/06/17/stock-market-today-live-updates.html", date:"Jun 17", spectrum:null, bias:null },
+    { headline:"US Treasury yields jump as Fed dot plot lifts bets on a 2026 rate hike", summary:"Treasury yields rose sharply after the Fed's projections on June 17, with the two-year yield climbing more than 16 basis points to about 4.22% as traders priced in a possible rate increase as early as October. The move tracked the hawkish shift in officials' rate forecasts.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-06-17/us-yields-jump-as-fed-dots-boost-trader-bets-on-a-2026-rate-hike", date:"Jun 17", spectrum:null, bias:null },
+    { headline:"Yum! Brands sells Pizza Hut for $2.7 billion in two deals", summary:"Yum! Brands said on June 16 it would sell Pizza Hut for $2.7 billion in total, with the business outside mainland China going to private-equity firm LongRange Capital for about $1.5 billion and the China operations to Yum China for roughly $1.2 billion. Yum expects about $2.3 billion in net proceeds.", source:"CNBC", url:"https://www.cnbc.com/2026/06/16/yum-brands-sells-pizza-hut-to-private-equity-firm-longrange-capital-for-2point7-billion.html", date:"Jun 16", spectrum:null, bias:null },
+    { headline:"Olin and Huntsman to merge in all-stock deal creating a $12 billion chemicals firm", summary:"Olin and Huntsman agreed on June 16 to combine in an all-stock merger of equals to form OlinHuntsman, a North American chemicals company with about $12.5 billion in combined 2025 revenue. Huntsman holders receive 0.5476 Olin shares each, and the deal is expected to close in the first half of 2027.", source:"CNBC", url:"https://www.cnbc.com/2026/06/16/stocks-making-the-biggest-moves-premarket-spcx-hood-hun.html", date:"Jun 16", spectrum:null, bias:null }
+  ]},
+  { id:"sports", title:"🎾🏏🏎️ Sports", color:"#c0392b", items:[
+    { headline:"🏏 India crush Afghanistan by 170 runs as Gill and Kishan hit centuries", summary:"Shubman Gill made 154 and Ishan Kishan 125 as India piled up 402 and bowled Afghanistan out for 232 to win the second ODI by 170 runs in Lucknow on June 17, taking an unbeatable 2-0 series lead. Their third-wicket stand was worth 224.", source:"ESPNcricinfo", url:"https://www.espncricinfo.com/series/afghanistan-in-india-2026-1527147/india-vs-afghanistan-2nd-odi-1527152/match-report", date:"Jun 17", spectrum:null, bias:null },
+    { headline:"🏏 India post record 209 for 5 to beat Netherlands by 95 at Women's T20 World Cup", summary:"Smriti Mandhana hit 74 and Shafali Verma chipped in with bat and ball as India made 209 for 5, their highest Women's T20 World Cup total, then held the Netherlands to 114 to win by 95 runs at Headingley on June 17. Shree Charani took four wickets.", source:"ESPNcricinfo", url:"https://www.espncricinfo.com/series/icc-women-s-t20-world-cup-2026-1483859/india-women-vs-netherlands-women-10th-match-group-1-1490686/match-report", date:"Jun 17", spectrum:null, bias:null },
+    { headline:"🏏 Australia hold Bangladesh to 77 and win by nine wickets", summary:"Australia restricted Bangladesh to 77 for 8, the lowest total of this Women's T20 World Cup, and knocked off the runs in 9.3 overs to win by nine wickets at Headingley on June 17. Georgia Voll finished 45 not out.", source:"ESPNcricinfo", url:"https://www.espncricinfo.com/series/icc-women-s-t20-world-cup-2026-1483859/australia-women-vs-bangladesh-women-9th-match-group-1-1490685/full-scorecard", date:"Jun 17", spectrum:null, bias:null },
+    { headline:"🎾 Badosa fights back to upset Coco Gauff and reach Berlin quarterfinals", summary:"Paula Badosa recovered from a set down to beat fifth seed Coco Gauff 1-6, 6-3, 6-2 in Berlin on June 17, reaching the grass-court quarterfinals where she will meet defending champion Jessica Pegula.", source:"WTA", url:"https://www.wtatennis.com/news/4521020/badosa-upsets-gauff-to-set-up-pegula-quarterfinal-clash-in-berlin", date:"Jun 17", spectrum:null, bias:null },
+    { headline:"🎾 Medvedev and Shelton advance at the Halle grass-court tournament", summary:"Daniil Medvedev beat France's Terence Atmane and Ben Shelton saw off Lorenzo Sonego 7-5, 6-3 to progress at the Terra Wortmann Open in Halle on June 17, as the grass-court swing built towards Wimbledon.", source:"ATP Tour", url:"https://www.atptour.com/en/news/halle-2026-results", date:"Jun 17", spectrum:null, bias:null }
+  ]},
+  { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
+  { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
+];
+
+const FUN_FACT = {
+  text: "There are more trees on Earth than there are stars in the Milky Way. A landmark 2015 global census published in the journal Nature put the planet's tree count at roughly 3 trillion, while NASA estimates the Milky Way holds about 100 to 400 billion stars. That makes trees outnumber our galaxy's stars by something like ten to one.",
+  tag: "Category · Nature & Astronomy"
+};
+
+const PUZZLE = {
+  type: "Quantitative",
+  title: "The Two-Egg Drop",
+  how: "Plan the first egg's jumps so that the worst case always costs the same number of drops.",
+  question: "A building has 100 floors. You have two identical glass eggs. There is some floor N such that an egg dropped from floor N or higher breaks, while an egg dropped from any floor below N survives and can be reused. An egg that breaks is gone for good.\nUsing the strategy that minimises the number of drops needed in the WORST case, how many drops do you need to be certain of finding N?",
+  answer: "14.\nGoing up one floor at a time would need up to 99 drops. Instead, make the first egg do the coarse search with shrinking jumps. Drop it from floor 14; if it survives, go up 13 to floor 27, then 12 to 39, then 11, and so on.\nWhenever the first egg breaks, switch to the second egg and walk it up one floor at a time through the small untested gap below.\nThe first jump uses one drop, and each later survival uses one more, so the worst case always totals 14. The shrinking jumps cover 14 + 13 + 12 + ... + 1 = 105 floors, which is at least 100 — and no smaller starting number reaches 100 (13 only covers 91)."
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn){var a=document.getElementById('ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>
