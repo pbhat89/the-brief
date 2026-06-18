@@ -330,3 +330,30 @@ is empty until the first run.
 2026-06-18	Australia hold Bangladesh to 77 and win by nine wickets	da3ace69	australia,bangladesh,women's t20 world cup,voll
 2026-06-18	Badosa fights back to upset Coco Gauff and reach Berlin quarterfinals	3c1418af	badosa,gauff,berlin,tennis
 2026-06-18	Medvedev and Shelton advance at the Halle grass-court tournament	4dc68160	medvedev,shelton,halle,tennis
+2026-06-19	Singapore reclaims top spot in IMD World Competitiveness Ranking 2026	1eecb93b	Singapore,IMD World Competitiveness Ranking,Hong Kong,Switzerland,reclaims
+2026-06-19	NUS slips to 10th and NTU holds 12th in QS World University Rankings 2027	9036042f	National University of Singapore,Nanyang Technological University,QS World University Rankings,ranked
+2026-06-19	Indonesia market rout sparks a cross-border Sell Singapore online feud	c32f4209	Sell Singapore,Sell Indonesia,rupiah,Jakarta,feud
+2026-06-19	Singapore Air Force Museum reopens after revamp with augmented-reality exhibits	a674c6fd	Singapore Air Force Museum,RSAF,Zaqy Mohamad,Paya Lebar,reopens
+2026-06-19	Update: Delhi High Court issues notice on Telegram's plea against India ban	d5fd39c3	Delhi High Court,Telegram,NEET,India ban,notice
+2026-06-19	Six women killed as a speeding tractor hits an e-rickshaw in UP's Badaun	c5d989ad	Badaun,Uttar Pradesh,e-rickshaw,tractor,killed
+2026-06-19	Rupee firms to 94.29 and Brent hits a three-month low as Hormuz reopens	87899d3b	rupee,Brent crude,Strait of Hormuz,US-Iran,firms
+2026-06-19	Modi to release 2,400 crore rupees in job incentives under PM-VBRY scheme	120dc96f	Narendra Modi,PM-VBRY,employment incentives,India,disburses
+2026-06-19	Update: Trump and Iran sign accord to end the war and reopen the Strait of Hormuz	ae612a77	Donald Trump,Masoud Pezeshkian,Strait of Hormuz,Iran,signed
+2026-06-19	Ukraine launches its largest drone assault on Moscow, hitting an oil refinery	9e38e6ef	Ukraine,Moscow,Gazprom Neft,Zelenskyy,drone attack
+2026-06-19	Hegseth orders a six-month review of US forces in Europe and demands a NATO overhaul	0d63d5d0	Pete Hegseth,NATO,Europe,Pentagon,review
+2026-06-19	Gaza death toll since the October ceasefire passes 1,000, officials say	595fd350	Gaza,Israel,ceasefire,health ministry,death toll
+2026-06-19	Vance warns Israel it cannot kill its way out of insecurity and is deeply isolated	85d44d35	JD Vance,Israel,Netanyahu,Iran deal,isolated
+2026-06-19	Amazon in talks to sell its Nvidia-rival AI chips to outside customers	01798d6a	Amazon,AWS,Trainium,Nvidia,chips
+2026-06-19	Transformer co-author Noam Shazeer leaves Google to join OpenAI	fa0f4f4b	Noam Shazeer,OpenAI,Google,Gemini,joins
+2026-06-19	Intel jumps about 10% after Trump says it will make chips with Apple	c9a54695	Intel,Apple,Donald Trump,TSMC,shares
+2026-06-19	General Intuition in talks to raise $300 million at a $2 billion valuation	be4c4eec	General Intuition,Medal,Jeff Bezos,Eric Schmidt,funding
+2026-06-19	Pramaana Labs raises $27 million to bring formal verification to AI	4feb987a	Pramaana Labs,Khosla Ventures,formal verification,AI,funding
+2026-06-19	EQT agrees to buy UK testing group Intertek for 60 pounds a share	82e5d49b	EQT,Intertek,London Stock Exchange,takeover,private equity
+2026-06-19	Accenture shares slump to worst day in years on a weak revenue outlook	11bc3bcd	Accenture,Dragos,runZero,NetRise,shares fall
+2026-06-19	Norway's Norges Bank holds its rate at 4.25% and signals another hike	2bac35d4	Norges Bank,Norway,policy rate,hold,hike
+2026-06-19	SpaceX ends its first public week up about 37%, worth near $2.4 trillion	9c070f10	SpaceX,Nasdaq,IPO,market cap,Elon Musk
+2026-06-19	Eala stuns world No. 2 Rybakina to reach the Berlin quarterfinals	0bdf75e6	Alexandra Eala,Elena Rybakina,Berlin Open,Svitolina,upset
+2026-06-19	Zverev reaches the Halle quarterfinals as a Shelton-Fritz clash is set	5f98a54d	Alexander Zverev,Yannick Hanfmann,Taylor Fritz,Ben Shelton,Halle
+2026-06-19	Keys beats Muchova to set a Berlin quarterfinal against Pegula	14486ee0	Madison Keys,Karolina Muchova,Jessica Pegula,Berlin Open,quarterfinal
+2026-06-19	West Indies edge Scotland by seven runs at the Women's T20 World Cup	a9b7dda5	West Indies,Scotland,Stafanie Taylor,Women's T20 World Cup,Headingley
+2026-06-19	South Africa edge Pakistan by two wickets in a Women's T20 World Cup thriller	5caf9e25	South Africa,Pakistan,Annerie Dercksen,Women's T20 World Cup,Birmingham

@@ -69,6 +69,11 @@
       "date": "2026-06-18",
       "topic_key": "tree",
       "text": "There are more trees on Earth than stars in the Milky Way"
+    },
+    {
+      "date": "2026-06-19",
+      "topic_key": "neutron star",
+      "text": "A neutron star is so dense that a single teaspoon of its material would weigh about a billion tonnes on Earth."
     }
   ],
   "puzzle_log": [
@@ -141,6 +146,11 @@
       "date": "2026-06-18",
       "type": "quantitative",
       "title_key": "two-egg-drop"
+    },
+    {
+      "date": "2026-06-19",
+      "type": "lateral",
+      "title_key": "glass-of-water"
     }
   ]
 }

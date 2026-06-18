@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Thu, 19 June 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Thursday, 19 June 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Thursday, 19 June 2026 · 🔍 22 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eight entries in this exact order:
+     id    : one of "sg" | "india" | "geo" | "tech" | "biz" | "sports" | "fun" | "puzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 6 news tabs; fun/puzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+============================================================================= */
+
+const SECTIONS = [
+  { id:"sg", title:"🇸🇬 Singapore", color:"#e74c3c", items:[
+    { headline:"Singapore reclaims top spot in IMD World Competitiveness Ranking 2026", summary:"Singapore returned to first place in IMD&rsquo;s 2026 World Competitiveness Ranking of 70 economies, pushing Hong Kong to second and Switzerland to third on the back of strong business-efficiency scores. It last held the top spot in 2024.", source:"Mothership", url:"https://mothership.sg/2026/06/world-competitiveness-ranking/", date:"Jun 18", spectrum:null, bias:null },
+    { headline:"NUS slips to 10th and NTU holds 12th in QS World University Rankings 2027", summary:"In the QS World University Rankings 2027 released on June 18, the National University of Singapore fell two places to 10th but remained the only Asian university in the global top 10, while Nanyang Technological University held 12th. MIT again topped the list.", source:"South China Morning Post", url:"https://www.scmp.com/news/hong-kong/education/article/3357454/2-universities-hku-and-cuhk-rank-among-worlds-top-20-first-hong-kong", date:"Jun 18", spectrum:null, bias:null },
+    { headline:"Indonesia market rout sparks a cross-border Sell Singapore online feud", summary:"A &lsquo;Sell Singapore&rsquo; hashtag spread among Indonesian social-media users in response to a &lsquo;Sell Indonesia&rsquo; narrative, after the rupiah slid past 18,000 per US dollar and Jakarta&rsquo;s stock index shed roughly a third of its value this year. The online spat drew in Indonesian political figures.", source:"South China Morning Post", url:"https://www.scmp.com/week-asia/economics/article/3357599/sellindonesia-vs-sellsingapore-market-sell-fuels-cross-border-digital-feud", date:"Jun 18", spectrum:null, bias:null },
+    { headline:"Singapore Air Force Museum reopens after revamp with augmented-reality exhibits", summary:"The RSAF&rsquo;s Air Force Museum near Paya Lebar reopened to the public on June 17 after a months-long renovation, adding immersive exhibits including a simulated fighter-jet scramble. Senior Minister of State for Defence Zaqy Mohamad officiated the relaunch.", source:"The Straits Times", url:"https://www.straitstimes.com/singapore", date:"Jun 17", spectrum:null, bias:null },
+  ]},
+  { id:"india", title:"🇮🇳 India", color:"#e67e22", items:[
+    { headline:"Update: Delhi High Court issues notice on Telegram&rsquo;s plea against India ban", summary:"The Delhi High Court issued notice to the Centre on Telegram&rsquo;s challenge to the temporary block on the platform, in place until June 22 to curb paper leaks before the June 21 NEET-UG re-exam, but granted no interim relief. The government said Telegram was repeatedly warned over leaked exam material; the platform says it removed more than 900 unlawful links.", source:"The Indian Express", url:"https://indianexpress.com/section/india/", date:"Jun 18", spectrum:null, bias:null },
+    { headline:"Six women killed as a speeding tractor hits an e-rickshaw in UP&rsquo;s Badaun", summary:"Six women returning from a wedding-invitation visit were killed when a speeding tractor struck their e-rickshaw in Badaun district, Uttar Pradesh, on June 17. Both tractor drivers were taken into custody; Prime Minister Narendra Modi and Chief Minister Yogi Adityanath offered condolences.", source:"The Times of India", url:"https://timesofindia.indiatimes.com/india", date:"Jun 17", spectrum:null, bias:null },
+    { headline:"Rupee firms to 94.29 and Brent hits a three-month low as Hormuz reopens", summary:"The rupee strengthened about 31 paise to 94.29 per US dollar on June 17 as Brent crude eased toward a three-month low near $79 a barrel, with the reopening of the Strait of Hormuz under the US-Iran framework calming oil-supply fears. India imports the bulk of its crude.", source:"The Economic Times", url:"https://economictimes.indiatimes.com/markets", date:"Jun 17", spectrum:null, bias:null },
+    { headline:"Modi to release 2,400 crore rupees in job incentives under PM-VBRY scheme", summary:"Prime Minister Narendra Modi is set to disburse about 2,400 crore rupees in employment-linked incentives under the Pradhan Mantri Viksit Bharat Rozgar Yojana at an event in New Delhi on June 19. The scheme rewards firms for net new hiring and first-time formal-sector workers.", source:"Hindustan Times", url:"https://www.hindustantimes.com/india-news", date:"Jun 18", spectrum:null, bias:null },
+  ]},
+  { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
+    { headline:"Update: Trump and Iran sign accord to end the war and reopen the Strait of Hormuz", summary:"President Donald Trump and Iranian President Masoud Pezeshkian signed a 14-point memorandum to end their conflict, with the accord lifting the US naval blockade, reopening the Strait of Hormuz toll-free, and opening a 60-day window to settle the fate of Iran&rsquo;s enriched-uranium stockpile. The signing converts the previously announced framework into a concluded deal.", source:"CNN", url:"https://www.cnn.com/2026/06/18/world/live-news/iran-war-trump-israel-lebanon", date:"Jun 18", spectrum:null, bias:null },
+    { headline:"Ukraine launches its largest drone assault on Moscow, hitting an oil refinery", summary:"Ukraine struck Moscow with what Kyiv called its biggest drone assault on the capital of the war, hitting the Gazprom Neft refinery in Kapotnya and injuring at least 17 people. All four Moscow airports suspended flights; Russia said it downed hundreds of drones overnight.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/6/18/ukraine-hits-moscow-refinery-as-zelenskyy-seeks-trump-support-to-end-war", date:"Jun 18", spectrum:null, bias:null },
+    { headline:"Hegseth orders a six-month review of US forces in Europe and demands a NATO overhaul", summary:"US Defense Secretary Pete Hegseth, in Brussels, announced a six-month Pentagon review of US troop posture in Europe and called for a &lsquo;NATO 3.0&rsquo;, urging allies to reach 5% of GDP on defence by 2035. He said the review is one some allies would fail.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/6/18/pentagon-chief-announces-review-of-us-forces-in-europe-slams-nato-allies", date:"Jun 18", spectrum:null, bias:null },
+    { headline:"Gaza death toll since the October ceasefire passes 1,000, officials say", summary:"Gaza&rsquo;s health ministry said at least 1,005 Palestinians have been killed by Israeli fire since the US-brokered ceasefire began on October 10, 2025. Gaza&rsquo;s media office logged thousands of alleged ceasefire violations and says Israel controls roughly two-thirds of the territory.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/6/17/death-toll-in-gaza-since-ceasefire-with-israel-goes-past-1000", date:"Jun 17", spectrum:null, bias:null },
+    { headline:"Vance warns Israel it cannot kill its way out of insecurity and is deeply isolated", summary:"A day after the US-Iran signing, Vice-President JD Vance told the New York Times that Israel is &lsquo;deeply isolated&rsquo; and urged its leaders to back the Iran deal, singling out far-right ministers Bezalel Smotrich and Itamar Ben-Gvir. He framed Trump as Israel&rsquo;s last sympathetic major ally.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/6/18/jd-vance-tells-israel-you-cant-kill-your-way-out-of-security-problems", date:"Jun 18", spectrum:null, bias:null },
+  ]},
+  { id:"tech", title:"💻 Tech & AI", color:"#27ae60", items:[
+    { headline:"Amazon in talks to sell its Nvidia-rival AI chips to outside customers", summary:"Amazon&rsquo;s AI infrastructure chief Peter DeSantis said AWS is in early talks to sell its custom Trainium AI chips to other companies, a more direct challenge to Nvidia. CEO Andy Jassy has said the chip unit would run at roughly a $50 billion annual rate as a standalone business.", source:"TechCrunch", url:"https://techcrunch.com/2026/06/18/amazon-hopes-to-challenge-nvidia-more-directly-by-selling-its-ai-chips/", date:"Jun 18", spectrum:null, bias:null },
+    { headline:"Transformer co-author Noam Shazeer leaves Google to join OpenAI", summary:"Noam Shazeer, a co-author of the 2017 &lsquo;Attention Is All You Need&rsquo; paper and a Gemini co-lead, is joining OpenAI as lead for AI architecture research ahead of the company&rsquo;s planned IPO. Former White House AI policy official Dean Ball is also joining.", source:"TechCrunch", url:"https://techcrunch.com/2026/06/18/openai-is-bringing-on-some-big-guns-in-the-lead-up-to-its-ipo/", date:"Jun 18", spectrum:null, bias:null },
+    { headline:"Intel jumps about 10% after Trump says it will make chips with Apple", summary:"Intel shares rose roughly 10% after President Trump said Intel and Apple had struck a deal to design and manufacture semiconductors in the US, reducing Apple&rsquo;s reliance on TSMC. Analysts expect Intel to produce lower-end Apple silicon rather than flagship chips.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-06-18/intel-intc-share-price-soars-after-trump-says-it-struck-apple-chip-deal", date:"Jun 18", spectrum:null, bias:null },
+    { headline:"General Intuition in talks to raise $300 million at a $2 billion valuation", summary:"General Intuition, which trains AI agents on spatial reasoning using a dataset of about two billion game clips a year, is in talks to raise around $300 million at just over a $2 billion valuation. Backers reportedly include Jeff Bezos, Eric Schmidt and Khosla Ventures.", source:"TechCrunch", url:"https://techcrunch.com/2026/06/18/general-intuition-in-talks-to-raise-300m-at-around-2b-valuation/", date:"Jun 18", spectrum:null, bias:null },
+    { headline:"Pramaana Labs raises $27 million to bring formal verification to AI", summary:"Pramaana Labs raised a $27 million seed round led by Khosla Ventures to apply mathematical formal-verification methods to AI in high-stakes fields such as tax law, drug discovery and cybersecurity. Backers include Accel, Nexus and Premji Invest.", source:"TechCrunch", url:"https://techcrunch.com/2026/06/17/pramaana-labs-raises-27-million-seed-round-from-khosla-ventures-to-bring-formal-verification-to-ai/", date:"Jun 17", spectrum:null, bias:null },
+  ]},
+  { id:"biz", title:"📈 Business & Markets", color:"#8e44ad", items:[
+    { headline:"EQT agrees to buy UK testing group Intertek for 60 pounds a share", summary:"Swedish buyout firm EQT agreed to acquire product-testing company Intertek for 60 pounds a share in cash, valuing it at roughly 11 billion pounds including debt, after months of bidding. Intertek will leave the London Stock Exchange, the latest FTSE 100 firm taken private.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-06-18/eqt-buys-uk-s-intertek-for-9-3-billion-in-latest-lse-exit", date:"Jun 18", spectrum:null, bias:null },
+    { headline:"Accenture shares slump to worst day in years on a weak revenue outlook", summary:"Accenture cut the top of its annual revenue-growth forecast to 3-4% from 3-5%, citing cautious client spending, sending shares to their steepest drop in years despite a quarterly earnings beat. It also unveiled $4.18 billion in cybersecurity deals, taking a majority stake in Dragos and acquiring runZero and NetRise.", source:"Bloomberg", url:"https://www.bnnbloomberg.ca/business/company-news/2026/06/18/accenture-strikes-us418-billion-cybersecurity-deal-shares-fall-on-forecast-cut/", date:"Jun 18", spectrum:null, bias:null },
+    { headline:"Norway&rsquo;s Norges Bank holds its rate at 4.25% and signals another hike", summary:"Norges Bank kept its policy rate at 4.25% on June 18, matching all forecasts in a Bloomberg survey, while lifting its projected rate path to signal borrowing costs rising above 4.5% by year-end. The bank cited persistent price pressures.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-06-18/norway-keeps-rate-steady-with-signal-for-another-hike-this-year", date:"Jun 18", spectrum:null, bias:null },
+    { headline:"SpaceX ends its first public week up about 37%, worth near $2.4 trillion", summary:"SpaceX closed its first week on the Nasdaq about 37% above its IPO price, giving it a market value near $2.4 trillion despite a two-day pullback. The offering, which priced at $135 to raise about $75 billion, was the largest IPO on record.", source:"CNBC", url:"https://www.cnbc.com/amp/2026/06/18/5-wild-spacex-stats-from-the-companys-first-week-on-the-nasdaq.html", date:"Jun 18", spectrum:null, bias:null },
+  ]},
+  { id:"sports", title:"🎾🏏🏎️ Sports", color:"#c0392b", items:[
+    { headline:"🎾 Eala stuns world No. 2 Rybakina to reach the Berlin quarterfinals", summary:"Wild card Alexandra Eala upset second seed Elena Rybakina 7-5, 6-4 in the Berlin Open round of 16, rallying from a break down in the first set. She next faces Elina Svitolina in the quarterfinals.", source:"WTA Tour", url:"https://www.wtatennis.com/news/4521872/im-still-shaking-eala-delivers-berlin-shocker-ousts-world-no-2-rybakina-in-straight-sets", date:"Jun 18", spectrum:null, bias:null },
+    { headline:"🎾 Zverev reaches the Halle quarterfinals as a Shelton-Fritz clash is set", summary:"Top seed Alexander Zverev beat Yannick Hanfmann 6-3, 7-6(4) to reach the Halle quarterfinals without facing a break point. Wins for Taylor Fritz and Ben Shelton set up an all-American last-eight tie days after the Stuttgart final.", source:"ATP Tour", url:"https://www.atptour.com/en/news/zverev-hanfmann-halle-2026-thursday", date:"Jun 18", spectrum:null, bias:null },
+    { headline:"🎾 Keys beats Muchova to set a Berlin quarterfinal against Pegula", summary:"Madison Keys served past Karolina Muchova in straight sets to reach the Berlin quarterfinals, where she will meet Jessica Pegula. It is Keys&rsquo; second time in the Berlin last eight.", source:"WTA Tour", url:"https://www.wtatennis.com/news/4521778/keys-serves-past-muchova-sets-pegula-clash-in-berlin-quarterfinals", date:"Jun 18", spectrum:null, bias:null },
+    { headline:"🏏 West Indies edge Scotland by seven runs at the Women&rsquo;s T20 World Cup", summary:"West Indies posted 153 for 6, with Stafanie Taylor unbeaten on 47 off 19 balls, and held Scotland to 146 to win their Group 2 match at Headingley by seven runs. The result keeps West Indies in contention.", source:"ESPNcricinfo", url:"https://www.espncricinfo.com/series/icc-women-s-t20-world-cup-2026-1483859/scotland-women-vs-west-indies-women-12th-match-group-2-1490688/full-scorecard", date:"Jun 18", spectrum:null, bias:null },
+    { headline:"🏏 South Africa edge Pakistan by two wickets in a Women&rsquo;s T20 World Cup thriller", summary:"South Africa scrambled to 127 for 8 to chase down Pakistan&rsquo;s 126 for 9 with three overs to spare in Birmingham, winning by two wickets. Annerie Dercksen made 52 and was named player of the match.", source:"ESPNcricinfo", url:"https://www.espncricinfo.com/series/icc-women-s-t20-world-cup-2026-1483859/pakistan-women-vs-south-africa-women-11th-match-group-1-1490687/match-report", date:"Jun 17", spectrum:null, bias:null },
+  ]},
+  { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
+  { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
+];
+
+const FUN_FACT = {
+  text: "A neutron star squeezes up to twice the mass of our Sun into a sphere only about 20 kilometres across &mdash; roughly the size of a city. The matter is so dense that a single teaspoon of it would weigh about a billion tonnes on Earth.",
+  tag: "Category · Space & Physics"
+};
+
+const PUZZLE = {
+  type: "Lateral Thinking",
+  title: "A Glass of Water",
+  how: "Ask why a request for water and a sudden scare could solve the very same problem; think of a harmless, everyday bodily condition.",
+  question: "A man walks into a bar and asks the bartender for a glass of water.\nInstead of pouring one, the bartender reaches under the counter, pulls out a gun, and points it straight at the man.\nThe man pauses, smiles, says \"Thank you,\" and walks out &mdash; without ever drinking anything.\nNo angry words are exchanged, and the bartender is not a criminal.\nWhy did the man thank someone who had just pointed a gun at him?",
+  answer: "The man had the hiccups.\nHe had come to the bar hoping a glass of water would cure them.\nThe bartender realised this and chose a faster remedy: a sudden shock.\nPointing the gun frightened the man enough that his hiccups vanished &mdash; so the cure worked, the water was no longer needed, and the grateful man thanked him and left."
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn){var a=document.getElementById('ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>
