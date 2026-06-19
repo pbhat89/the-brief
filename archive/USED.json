@@ -74,6 +74,11 @@
       "date": "2026-06-19",
       "topic_key": "neutron star",
       "text": "A neutron star is so dense that a single teaspoon of its material would weigh about a billion tonnes on Earth."
+    },
+    {
+      "date": "2026-06-20",
+      "topic_key": "birthday paradox",
+      "text": "In a room of 23 people there is a better-than-even chance two share a birthday."
     }
   ],
   "puzzle_log": [
@@ -151,6 +156,11 @@
       "date": "2026-06-19",
       "type": "lateral",
       "title_key": "glass-of-water"
+    },
+    {
+      "date": "2026-06-20",
+      "type": "visual",
+      "title_key": "triangles-within-the-triangle"
     }
   ]
 }

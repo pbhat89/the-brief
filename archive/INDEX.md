@@ -357,3 +357,29 @@ is empty until the first run.
 2026-06-19	Keys beats Muchova to set a Berlin quarterfinal against Pegula	14486ee0	Madison Keys,Karolina Muchova,Jessica Pegula,Berlin Open,quarterfinal
 2026-06-19	West Indies edge Scotland by seven runs at the Women's T20 World Cup	a9b7dda5	West Indies,Scotland,Stafanie Taylor,Women's T20 World Cup,Headingley
 2026-06-19	South Africa edge Pakistan by two wickets in a Women's T20 World Cup thriller	5caf9e25	South Africa,Pakistan,Annerie Dercksen,Women's T20 World Cup,Birmingham
+2026-06-20	COE premiums fall across most categories in the second June bidding exercise	b73b783b	coe,lta,category a,category b,premiums
+2026-06-20	Singapore to review its waste blueprint as recycling slips and Semakau fills up	d25659a7	singapore,zero waste masterplan,semakau,recycling,review
+2026-06-20	Singapore Cruise Centre to move ferry and cruise operations to a new HarbourFront terminal	7caca246	singapore cruise centre,harbourfront,ferry,cruise,relocation
+2026-06-20	Singapore shares edge up as the Straits Times Index gains about 0.7%	8015571f	straits times index,sti,singapore stocks,rises
+2026-06-20	Jio Platforms files for a mega IPO after its board clears the DRHP at the Reliance AGM	f616f524	jio platforms,reliance,mukesh ambani,ipo,drhp
+2026-06-20	Sensex slides 608 points and the Nifty ends at 24,013 as IT stocks lead a selloff	1e4bed29	sensex,nifty,infosys,tcs,selloff
+2026-06-20	South Delhi doctor arrested over the killing of his domestic helper	ad386df1	delhi,manish gupta,domestic helper,mount kailash,murder
+2026-06-20	IMD says the monsoon will advance across more of east and central India by June 23	6bac4022	imd,monsoon,delhi,heatwave,forecast
+2026-06-20	Meloni rejects Trump's claim she begged for a photo as Italy cancels a US visit	b5c1e9ea	giorgia meloni,donald trump,italy,tajani,g7
+2026-06-20	Trump unveils a Qatar-gifted Boeing 747 as the new Air Force One	adb1fc84	donald trump,air force one,boeing 747,qatar,unveils
+2026-06-20	Andy Burnham wins a by-election, returning to Parliament to set up a Starmer challenge	ca16c6ad	andy burnham,makerfield,by-election,keir starmer,labour
+2026-06-20	Cuba's Communist Party approves an emergency plan to open the economy	426b5524	cuba,communist party,economy,private enterprise,reforms
+2026-06-20	EU leaders agree their first joint Ukraine conclusions since early 2025	cc1a4be9	european union,brussels summit,ukraine,china,conclusions
+2026-06-20	Waymo recalls nearly 4,000 robotaxis after cars drove into freeway construction zones	e34935db	waymo,robotaxis,recall,construction zones,software
+2026-06-20	Meta strikes 1.6-gigawatt AI computing deals with data-centre firm Crusoe	3bedc5af	meta,crusoe,ai data centre,gigawatt,deal
+2026-06-20	AI inference startup Baseten is reportedly raising $1.5 billion at a $13 billion valuation	ef8e02ab	baseten,ai inference,funding,valuation,series
+2026-06-20	Apple's Tim Cook says price increases are unavoidable amid an AI-driven memory shortage	9040e7bf	apple,tim cook,memory chips,prices,shortage
+2026-06-20	Bank of England holds its rate at 3.75% in a 7-2 vote as inflation eases	91d768aa	bank of england,interest rate,mpc,inflation,hold
+2026-06-20	Wall Street rebounds as the Nasdaq jumps about 1.9% after the Fed-driven selloff	da9bf588	wall street,nasdaq,s&p 500,rebound,fed
+2026-06-20	Kroger's quarterly sales top estimates at $46.1 billion as e-commerce jumps 19%	06b580d4	kroger,earnings,revenue,e-commerce,guidance
+2026-06-20	Gold slips below $4,200 an ounce as a hawkish Fed offsets the Iran peace boost	641773fb	gold,brent crude,federal reserve,prices,fall
+2026-06-20	Eala beats Svitolina to reach the Berlin Open semifinals	b676a72a	alexandra eala,elina svitolina,berlin open,semifinals,tennis
+2026-06-20	Pegula edges Keys in two tiebreaks to make the Berlin semifinals	5c9a5d67	jessica pegula,madison keys,berlin open,semifinals,tennis
+2026-06-20	Zverev saves two set points to reach the Halle semifinals	700a320b	alexander zverev,raphael collignon,halle,semifinals,tennis
+2026-06-20	Fritz saves a match point against Shelton to set up a Zverev semifinal	ede7191c	taylor fritz,ben shelton,halle,semifinals,tennis
+2026-06-20	New Zealand edge Ireland by four runs at the Women's T20 World Cup	d188f639	new zealand,ireland,women's t20 world cup,southampton,cricket

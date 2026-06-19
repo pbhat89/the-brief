@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Sat, 20 June 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Saturday, 20 June 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Saturday, 20 June 2026 · 🔍 52 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eight entries in this exact order:
+     id    : one of "sg" | "india" | "geo" | "tech" | "biz" | "sports" | "fun" | "puzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 6 news tabs; fun/puzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+============================================================================= */
+
+const SECTIONS = [
+  { id:"sg", title:"🇸🇬 Singapore", color:"#e74c3c", items:[
+    { headline:"COE premiums fall across most categories in the second June bidding exercise", summary:"At the June 17 close, premiums dipped in four of five categories: Category B fell S$3,487 to S$123,502 and Category A eased S$2,162 to S$123,847, with school-holiday demand softer.", source:"The Straits Times", url:"https://www.straitstimes.com/singapore", date:"Jun 18", spectrum:null, bias:null },
+    { headline:"Singapore to review its waste blueprint as recycling slips and Semakau fills up", summary:"With recycling rates drifting from national targets, the authorities will review the Zero Waste Masterplan to stretch the lifespan of the Semakau landfill, which is projected to run out of space around 2035.", source:"CNA", url:"https://www.channelnewsasia.com/singapore", date:"Jun 18", spectrum:null, bias:null },
+    { headline:"Singapore Cruise Centre to move ferry and cruise operations to a new HarbourFront terminal", summary:"All ferry and cruise services will shift to a new HarbourFront terminal in two phases from July 7, with no changes to existing routes, destinations or schedules.", source:"The Straits Times", url:"https://www.straitstimes.com/singapore", date:"Jun 17", spectrum:null, bias:null },
+    { headline:"Singapore shares edge up as the Straits Times Index gains about 0.7%", summary:"The benchmark Straits Times Index rose around 0.7% to about 5,213 on June 18, tracking firmer regional sentiment even as several index heavyweights slipped.", source:"The Straits Times", url:"https://www.straitstimes.com/business", date:"Jun 18", spectrum:null, bias:null },
+  ]},
+  { id:"india", title:"🇮🇳 India", color:"#e67e22", items:[
+    { headline:"Jio Platforms files for a mega IPO after its board clears the DRHP at the Reliance AGM", summary:"At Reliance Industries' 49th AGM on June 19, Mukesh Ambani said Jio Platforms' board had approved its draft red herring prospectus, filed with SEBI the same day, offering 27 crore fresh shares; RIL also declared a Rs 6 dividend.", source:"The Economic Times", url:"https://economictimes.indiatimes.com/markets/ipos/fpos", date:"Jun 19", spectrum:null, bias:null },
+    { headline:"Sensex slides 608 points and the Nifty ends at 24,013 as IT stocks lead a selloff", summary:"Indian benchmarks snapped a five-day winning run on June 19, with the Sensex down 0.78% to 76,803 and the Nifty 50 off 0.64% to 24,013, dragged by Infosys, TCS and Tech Mahindra after Accenture's weak outlook.", source:"The Economic Times", url:"https://economictimes.indiatimes.com/markets/stocks/news", date:"Jun 19", spectrum:null, bias:null },
+    { headline:"South Delhi doctor arrested over the killing of his domestic helper", summary:"Police said dermatologist Manish Gupta was arrested after his domestic helper, Meena, was found dead at a Mount Kailash flat on June 18; he allegedly attacked her, telling investigators he believed she brought &lsquo;bad energy&rsquo; to his home.", source:"Hindustan Times", url:"https://www.hindustantimes.com/cities/delhi-news", date:"Jun 18", spectrum:null, bias:null },
+    { headline:"IMD says the monsoon will advance across more of east and central India by June 23", summary:"The India Meteorological Department forecast the southwest monsoon to cover more of Bihar, Jharkhand, Odisha and Chhattisgarh by around June 23, even as Delhi sweltered with highs near 42 degrees Celsius on June 19.", source:"The Hindu", url:"https://www.thehindu.com/sci-tech/energy-and-environment/", date:"Jun 19", spectrum:null, bias:null },
+  ]},
+  { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
+    { headline:"Meloni rejects Trump&rsquo;s claim she &lsquo;begged&rsquo; for a photo as Italy cancels a US visit", summary:"Italian PM Giorgia Meloni said she was &lsquo;stunned&rsquo; by Trump&rsquo;s claim that she begged him for a photo at the G7, calling it made up; Foreign Minister Antonio Tajani cancelled a June 21-22 trip to Washington.", source:"CNN", url:"https://www.cnn.com/2026/06/19/politics/italy-trump-meloni-tajani", date:"Jun 19",
+      spectrum:{ left:"Left-leaning outlets cast it as Trump publicly humiliating a close ally and deepening a transatlantic rift.", center:"Wire services reported the exchange plainly: Trump&rsquo;s &lsquo;begged&rsquo; claim, Meloni&rsquo;s denial, and Tajani scrapping his Washington trip.", right:"Right-leaning coverage treated it as a passing spat, foregrounding Meloni&rsquo;s firm &lsquo;Italy does not beg&rsquo; rebuttal." },
+      bias:null },
+    { headline:"Trump unveils a Qatar-gifted Boeing 747 as the new Air Force One", summary:"Trump showed off a refitted, Qatari-donated Boeing 747-8 at Joint Base Andrews on June 19, a roughly $400 million jet the US accepted as a gift; the White House says it will pass to his presidential library foundation after he leaves office.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-06-19/trump-unveils-refitted-qatar-donated-jet-to-be-new-air-force-one", date:"Jun 19",
+      spectrum:{ left:"Liberal outlets stressed the ethics of accepting a $400 million foreign gift and the questions it raises.", center:"Reports detailed the refitted jet, its cost and the plan to transfer it to Trump&rsquo;s library foundation after his term.", right:"Conservative coverage cast it as a pragmatic, cost-saving stopgap for Boeing&rsquo;s long-delayed replacements." },
+      bias:null },
+    { headline:"Andy Burnham wins a by-election, returning to Parliament to set up a Starmer challenge", summary:"Greater Manchester Mayor Andy Burnham won the Makerfield by-election with 24,927 votes, beating Reform UK&rsquo;s Robert Kenyon by more than 9,000, giving him a Commons seat from which to mount a Labour leadership bid against Keir Starmer.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/6/19/andy-burnham-wins-crucial-uk-by-election-in-blow-to-keir-starmer", date:"Jun 19", spectrum:null, bias:null },
+    { headline:"Cuba&rsquo;s Communist Party approves an emergency plan to open the economy", summary:"Cuba&rsquo;s Communist Party approved unprecedented free-market measures, widening private enterprise and foreign investment and allowing private real estate development, as a Trump-imposed oil blockade pushes the island toward economic collapse.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/6/18/cubas-communist-party-approves-opening-economy-in-unprecedented-move", date:"Jun 18", spectrum:null, bias:null },
+    { headline:"EU leaders agree their first joint Ukraine conclusions since early 2025", summary:"At a June 18-19 summit in Brussels, the 27 EU leaders endorsed joint conclusions on Ukraine for the first time since March 2025, urging Russia to accept an immediate ceasefire, and backed tougher action on China.", source:"Reuters", url:"https://www.reuters.com/world/europe/", date:"Jun 19", spectrum:null, bias:null },
+  ]},
+  { id:"tech", title:"💻 Tech & AI", color:"#27ae60", items:[
+    { headline:"Waymo recalls nearly 4,000 robotaxis after cars drove into freeway construction zones", summary:"Waymo recalled about 3,900 robotaxis running its 5th-generation software after vehicles failed to recognise ramp closures in roughly a dozen incidents in Phoenix and the San Francisco Bay Area, and temporarily barred them from freeways while it issues a fix.", source:"TechCrunch", url:"https://techcrunch.com/2026/06/18/waymo-recalls-nearly-4000-robotaxis-to-stop-them-driving-into-highway-construction-zones/", date:"Jun 18", spectrum:null, bias:null },
+    { headline:"Meta strikes 1.6-gigawatt AI computing deals with data-centre firm Crusoe", summary:"Meta agreed to buy about 1.6 gigawatts of computing capacity from Crusoe across data centres in Childress, Texas, and Warrenton, Missouri, deepening the infrastructure behind its AI push.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-06-18/meta-strikes-new-ai-computing-deals-with-data-center-firm-crusoe", date:"Jun 18", spectrum:null, bias:null },
+    { headline:"AI inference startup Baseten is reportedly raising $1.5 billion at a $13 billion valuation", summary:"Baseten is close to a $1.5 billion round that would value it at about $13 billion, just five months after a $300 million Series E at a $5 billion valuation, with Spark, Sands, Altimeter and Wellington co-leading.", source:"TechCrunch", url:"https://techcrunch.com/2026/06/18/ai-inference-startup-baseten-reportedly-raising-1-5b-months-after-its-last-mega-round/", date:"Jun 18", spectrum:null, bias:null },
+    { headline:"Apple&rsquo;s Tim Cook says price increases are &lsquo;unavoidable&rsquo; amid an AI-driven memory shortage", summary:"Cook told the Wall Street Journal that surging AI demand for DRAM and NAND chips has made device price increases unavoidable, comparing the squeeze to a &lsquo;hundred-year flood,&rsquo; though he did not say which products would rise or when.", source:"Reuters", url:"https://www.reuters.com/technology/", date:"Jun 17", spectrum:null, bias:null },
+  ]},
+  { id:"biz", title:"📈 Business & Markets", color:"#8e44ad", items:[
+    { headline:"Bank of England holds its rate at 3.75% in a 7-2 vote as inflation eases", summary:"The Monetary Policy Committee kept Bank Rate at 3.75%, with two members voting for a hike to 4%, after May inflation eased to 2.8%, below forecasts, while energy-price risks from the Iran conflict lingered.", source:"CNBC", url:"https://www.cnbc.com/2026/06/18/inflation-interest-rates-uk-bank-of-england-iran-deal.html", date:"Jun 18", spectrum:null, bias:null },
+    { headline:"Wall Street rebounds as the Nasdaq jumps about 1.9% after the Fed-driven selloff", summary:"US stocks recovered on June 18, with the Nasdaq up about 1.9%, the S&P 500 up 1.1% and the Russell 2000 up 2.1%, as Treasury yields eased and Trump&rsquo;s interim Iran deal steadied sentiment.", source:"CNBC", url:"https://www.cnbc.com/2026/06/18/stock-market-today-live-updates.html", date:"Jun 18", spectrum:null, bias:null },
+    { headline:"Kroger&rsquo;s quarterly sales top estimates at $46.1 billion as e-commerce jumps 19%", summary:"Kroger reported first-quarter sales of $46.1 billion, ahead of forecasts, with adjusted EPS of $1.58 and adjusted e-commerce sales up 19%, and maintained its full-year guidance even as margins narrowed.", source:"Reuters", url:"https://www.reuters.com/business/retail-consumer/", date:"Jun 18", spectrum:null, bias:null },
+    { headline:"Gold slips below $4,200 an ounce as a hawkish Fed offsets the Iran peace boost", summary:"Gold fell below $4,200 on June 19, erasing the week&rsquo;s gains, after the Fed signalled possible rate hikes; Brent crude eased to about $79 a barrel as Gulf supply risks receded.", source:"Reuters", url:"https://www.reuters.com/markets/commodities/", date:"Jun 19", spectrum:null, bias:null },
+  ]},
+  { id:"sports", title:"🎾🏏🏎️ Sports", color:"#c0392b", items:[
+    { headline:"🎾 Eala beats Svitolina to reach the Berlin Open semifinals", summary:"Wild card Alexandra Eala followed her upset of Elena Rybakina by beating Elina Svitolina 6-3, 6-4 to reach the Berlin grass-court semifinals.", source:"WTA Tour", url:"https://www.wtatennis.com/tournaments/2012/berlin/2026/scores", date:"Jun 19", spectrum:null, bias:null },
+    { headline:"🎾 Pegula edges Keys in two tiebreaks to make the Berlin semifinals", summary:"Jessica Pegula beat Madison Keys 7-6(5), 7-6(8) to reach the Berlin semifinals, where she meets Alexandra Eala.", source:"WTA Tour", url:"https://www.wtatennis.com/tournaments/2012/berlin/2026/scores", date:"Jun 19", spectrum:null, bias:null },
+    { headline:"🎾 Zverev saves two set points to reach the Halle semifinals", summary:"Top seed Alexander Zverev beat qualifier Raphael Collignon 7-6(10), 7-6(3), saving set points in the opening tie-break, to reach the Halle semifinals.", source:"ATP Tour", url:"https://www.atptour.com/en/scores/current", date:"Jun 19", spectrum:null, bias:null },
+    { headline:"🎾 Fritz saves a match point against Shelton to set up a Zverev semifinal", summary:"Taylor Fritz hit 24 aces and saved a match point to beat Ben Shelton in three tie-break sets at Halle, setting up a semifinal against Alexander Zverev.", source:"ATP Tour", url:"https://www.atptour.com/en/news/fritz-shelton-halle-2026-friday", date:"Jun 19", spectrum:null, bias:null },
+    { headline:"🏏 New Zealand edge Ireland by four runs at the Women&rsquo;s T20 World Cup", summary:"New Zealand defended a modest total to beat Ireland by four runs at Southampton for their first win of the tournament; Orla Prendergast (59) and captain Gaby Lewis (58) fell just short in the chase.", source:"ESPNcricinfo", url:"https://www.espncricinfo.com/series/icc-women-s-t20-world-cup-2026-1483859/ireland-women-vs-new-zealand-women-13th-match-group-2-1490689/full-scorecard", date:"Jun 19", spectrum:null, bias:null },
+  ]},
+  { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
+  { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
+];
+
+const FUN_FACT = {
+  text: "In a group of just 23 people, there is a better-than-even chance &mdash; about 50.7% &mdash; that two of them share the same birthday. With 70 people the odds climb above 99.9%. The result is so counterintuitive that mathematicians call it the &lsquo;birthday paradox.&rsquo;",
+  tag: "Category · Mathematics & Probability"
+};
+
+const PUZZLE = {
+  type: "Visual",
+  title: "Triangles within the Triangle",
+  how: "Count by size and orientation &mdash; tally upward-pointing triangles from smallest to largest, then the downward-pointing ones.",
+  question: "A large equilateral triangle has each side divided into 4 equal parts, with lines drawn parallel to all three sides. This splits it into 16 small congruent triangles &mdash; an upward-pointing grid that is 4 rows tall.\n\nHow many triangles of ALL sizes can you count in the whole figure?",
+  answer: "27.\n\nUpward-pointing triangles: size 1 = 10, size 2 = 6, size 3 = 3, size 4 = 1 &rarr; 20.\nDownward-pointing triangles: size 1 = 6, size 2 = 1 &rarr; 7.\n20 + 7 = 27."
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn){var a=document.getElementById('ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>
