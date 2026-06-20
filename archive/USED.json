@@ -79,6 +79,11 @@
       "date": "2026-06-20",
       "topic_key": "birthday paradox",
       "text": "In a room of 23 people there is a better-than-even chance two share a birthday."
+    },
+    {
+      "date": "2026-06-21",
+      "topic_key": "anglo-zanzibar war",
+      "text": "The Anglo-Zanzibar War of 1896 was the shortest war in history, lasting under 45 minutes."
     }
   ],
   "puzzle_log": [
@@ -161,6 +166,11 @@
       "date": "2026-06-20",
       "type": "visual",
       "title_key": "triangles-within-the-triangle"
+    },
+    {
+      "date": "2026-06-21",
+      "type": "logic",
+      "title_key": "one-question-two-guards"
     }
   ]
 }

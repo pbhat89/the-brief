@@ -383,3 +383,24 @@ is empty until the first run.
 2026-06-20	Zverev saves two set points to reach the Halle semifinals	700a320b	alexander zverev,raphael collignon,halle,semifinals,tennis
 2026-06-20	Fritz saves a match point against Shelton to set up a Zverev semifinal	ede7191c	taylor fritz,ben shelton,halle,semifinals,tennis
 2026-06-20	New Zealand edge Ireland by four runs at the Women's T20 World Cup	d188f639	new zealand,ireland,women's t20 world cup,southampton,cricket
+2026-06-21	PM Wong meets Putin at the ASEAN-Russia summit in Kazan	d36841c1	lawrence wong,putin,asean-russia summit,kazan,meets
+2026-06-21	PM Wong and Erdogan agree to deepen ties in Istanbul talks	60540562	lawrence wong,erdogan,istanbul,turkey,ties
+2026-06-21	Singapore enters its dengue peak season as weekly cases hit a 2026 high	cf23aa4f	singapore,dengue,nea,peak season,clusters
+2026-06-21	Singapore households can claim $500 in CDC vouchers brought forward to June	17967343	singapore,cdc vouchers,cost of living,disbursement
+2026-06-21	NEET-UG re-exam goes ahead for 22.79 lakh candidates under tight security	a1869b7c	neet-ug,re-exam,nta,paper leak,candidates
+2026-06-21	Amit Shah reviews security for the Amarnath Yatra starting July 3	5d080ebc	amit shah,amarnath yatra,security,jammu kashmir,review
+2026-06-21	Monsoon set to miss Delhi's normal June 27 onset as Mumbai gets a yellow alert	63321f78	imd,monsoon,delhi,mumbai,yellow alert
+2026-06-21	Update: Iran declares the Strait of Hormuz closed over Israel's strikes in Lebanon	31800250	iran,strait of hormuz,israel,lebanon,closed
+2026-06-21	Brazil beat Haiti 3-0 as Cunha scores twice at the World Cup	fe4c6444	brazil,haiti,cunha,vinicius,world cup
+2026-06-21	United States beat Australia 2-0 to reach the World Cup knockout round	0a8a3486	united states,australia,world cup,knockout,pulisic
+2026-06-21	Trump urges the EU to hit China and India with steep tariffs over Russia	c231612d	trump,european union,china,india,tariffs
+2026-06-21	Manus's early backers reportedly plan a $2 billion buyback from Meta	ef7e5c1f	manus,meta,buyback,beijing,the information
+2026-06-21	Oil rises on Friday but ends the week down about 8% as the Iran truce holds	3fcd367e	brent crude,wti,oil,iran,hormuz
+2026-06-21	Asian markets end Friday mixed with US markets shut for Juneteenth	68a67f65	nikkei,hang seng,asian markets,juneteenth
+2026-06-21	Indian rupee logs its best week in about 11 weeks on foreign inflows	bebba238	rupee,india,foreign inflows,currency,week
+2026-06-21	Pegula beats Sabalenka to reach the Berlin Open final	97d31a85	jessica pegula,aryna sabalenka,berlin open,final,tennis
+2026-06-21	Noskova ends Eala's run to set up a Berlin final with Pegula	bf180e92	linda noskova,alexandra eala,berlin open,final,tennis
+2026-06-21	Fritz beats Zverev again to reach the Halle Open final	73e376b0	taylor fritz,alexander zverev,halle open,final,tennis
+2026-06-21	Tiafoe routs Altmaier to set up an all-American Halle final	00f04f8c	frances tiafoe,daniel altmaier,halle open,final,tennis
+2026-06-21	India sweep Afghanistan 3-0 as Jaiswal hits a century	47e10378	india,afghanistan,jaiswal,prasidh krishna,odi
+2026-06-21	Australia thrash the Netherlands by 98 runs at the Women's T20 World Cup	cec6f532	australia,netherlands,womens t20 world cup,southampton,cricket

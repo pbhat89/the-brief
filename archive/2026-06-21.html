@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Sun, 21 June 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Sunday, 21 June 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Sunday, 21 June 2026 · 🔍 64 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eight entries in this exact order:
+     id    : one of "sg" | "india" | "geo" | "tech" | "biz" | "sports" | "fun" | "puzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 6 news tabs; fun/puzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+============================================================================= */
+
+const SECTIONS = [
+  { id:"sg", title:"🇸🇬 Singapore", color:"#e74c3c", items:[
+    { headline:"PM Wong meets Putin at the ASEAN-Russia summit in Kazan",
+      summary:"Prime Minister Lawrence Wong met Russian President Vladimir Putin on the sidelines of the ASEAN-Russia Commemorative Summit in Kazan on June 18, his first trip to Russia since Singapore — the only ASEAN member to sanction Moscow over Ukraine — imposed those measures in 2022. Putin told Wong that sanctions had held back economic ties between the two countries.",
+      source:"South China Morning Post", url:"https://www.scmp.com/week-asia/politics/article/3356593/singapore-pm-lawrence-wong-visit-russias-kazan-first-ukraine-war-sanctions", date:"Jun 18",
+      spectrum:null, bias:null },
+    { headline:"PM Wong and Erdogan agree to deepen ties in Istanbul talks",
+      summary:"On his way home from Kazan, PM Wong met Turkish President Recep Tayyip Erdogan in Istanbul on June 19. The two leaders agreed to strengthen cooperation in defence, aviation, maritime affairs and finance, and exchanged views on the Middle East.",
+      source:"The Straits Times", url:"https://www.straitstimes.com/singapore", date:"Jun 19",
+      spectrum:null, bias:null },
+    { headline:"Singapore enters its dengue peak season as weekly cases hit a 2026 high",
+      summary:"Singapore is in its annual dengue peak season, with the National Environment Agency reporting the highest weekly case count of the year so far and several clusters under red-alert status. Authorities urged residents, especially in northern estates, to clear stagnant water and stay vigilant.",
+      source:"CNA", url:"https://www.channelnewsasia.com/singapore", date:"Jun 19",
+      spectrum:null, bias:null },
+    { headline:"Singapore households can claim $500 in CDC vouchers brought forward to June",
+      summary:"A $500 CDC Vouchers package — split equally between participating heartland merchants and supermarkets — became claimable this month, after the government brought the disbursement forward to help households with living costs. Officials warned that any SMS with a clickable link to claim the vouchers is a scam.",
+      source:"CNA", url:"https://www.channelnewsasia.com/singapore", date:"Jun 19",
+      spectrum:null, bias:null },
+  ]},
+  { id:"india", title:"🇮🇳 India", color:"#e67e22", items:[
+    { headline:"NEET-UG re-exam goes ahead for 22.79 lakh candidates under tight security",
+      summary:"The NEET-UG medical-entrance re-examination was held on June 21, from 2pm to 5.15pm, for about 22.79 lakh candidates across roughly 5,400 centres in 565 cities, after the May 3 paper was scrapped over a leak. The Indian Air Force was used to ferry question papers, with CCTV surveillance and police escorts at centres.",
+      source:"The Hindu", url:"https://www.thehindu.com/news/national/", date:"Jun 21",
+      spectrum:null, bias:null },
+    { headline:"Amit Shah reviews security for the Amarnath Yatra starting July 3",
+      summary:"Home Minister Amit Shah chaired a high-level meeting to review preparations for the 52-day Amarnath Yatra, which begins on July 3. About 670 companies of security forces are being deployed, with a new Army unit, the Vikas Battalion, guarding heights along the Pahalgam route for the first time.",
+      source:"Hindustan Times", url:"https://www.hindustantimes.com/india-news", date:"Jun 19",
+      spectrum:null, bias:null },
+    { headline:"Monsoon set to miss Delhi&rsquo;s normal June 27 onset as Mumbai gets a yellow alert",
+      summary:"The India Meteorological Department said the southwest monsoon is unlikely to reach Delhi by its usual June 27 onset date, with pre-monsoon heat persisting in the capital. Mumbai was placed under a yellow alert for thunderstorms and gusty winds on June 22 and 23 as moisture builds over the Arabian Sea.",
+      source:"The Hindu", url:"https://www.thehindu.com/sci-tech/energy-and-environment/", date:"Jun 20",
+      spectrum:null, bias:null },
+  ]},
+  { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
+    { headline:"Update: Iran declares the Strait of Hormuz closed over Israel&rsquo;s strikes in Lebanon",
+      summary:"Iran&rsquo;s Revolutionary Guard said on June 20 that the Strait of Hormuz was closed in response to Israeli strikes on Hezbollah in southern Lebanon, putting the interim US-Iran deal signed days earlier under strain; US Central Command countered that commercial traffic through the strait actually rose. Technical talks to implement the deal were set for Switzerland on June 21.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/news/liveblog/2026/6/20/iran-war-live-tehran-says-us-must-ensure-israel-ends-attacks-on-lebanon", date:"Jun 20",
+      spectrum:{ left:"The Guardian and Al Jazeera foreground Israel&rsquo;s strikes on Lebanon as the trigger and ask whether Washington can rein in its ally.", center:"Reuters and the BBC stress the threat to the fragile truce and to oil shipping, noting US Central Command disputes that Hormuz is actually shut.", right:"Right-leaning outlets cast Tehran&rsquo;s announcement as brinkmanship that exposes how shaky the deal is." },
+      bias:"Coverage splits on a basic fact: Iran says Hormuz is closed, while US Central Command says traffic rose — outlets differ on which claim they lead with." },
+    { headline:"Brazil beat Haiti 3-0 as Cunha scores twice at the World Cup",
+      summary:"Matheus Cunha scored twice and Vinicius Junior added a third as Brazil beat Haiti 3-0 in Philadelphia on June 20, recovering from their opening draw with Morocco to top Group C. Coach Carlo Ancelotti&rsquo;s decision to start Cunha over Igor Thiago paid off.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/sports/2026/6/20/cunha-hits-brazil-double-against-haiti-to-seal-first-world-cup-2026-win", date:"Jun 20",
+      spectrum:null, bias:null },
+    { headline:"United States beat Australia 2-0 to reach the World Cup knockout round",
+      summary:"The United States beat Australia 2-0 in Seattle on June 19, through a Cameron Burgess own goal and an Alex Freeman header, to clinch a place in the round of 32 with a game to spare — their first back-to-back World Cup wins since 1930 — despite missing the injured Christian Pulisic.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/sports/2026/6/19/usa-beat-australia-2-0-to-book-knockout-spot-at-world", date:"Jun 19",
+      spectrum:null, bias:null },
+    { headline:"Trump urges the EU to hit China and India with steep tariffs over Russia",
+      summary:"President Donald Trump has urged the European Union to impose tariffs of up to 100% on China and India to ramp up pressure on Moscow over the war in Ukraine, Reuters reported, citing the Financial Times. The push signals fresh friction between Washington and Brussels over how to squeeze Russia&rsquo;s trading partners.",
+      source:"Reuters", url:"https://www.reuters.com/world/", date:"Jun 20",
+      spectrum:null, bias:null },
+  ]},
+  { id:"tech", title:"💻 Tech & AI", color:"#27ae60", items:[
+    { headline:"Manus&rsquo;s early backers reportedly plan a $2 billion buyback from Meta",
+      summary:"The early investors in AI-agent startup Manus are reportedly preparing to buy the company back from Meta at roughly the same $2 billion valuation Meta paid, after Beijing ordered the December deal unwound on national-security grounds, according to The Information. Backers said to be involved include HSG, Tencent and ZhenFund.",
+      source:"The Information", url:"https://www.theinformation.com", date:"Jun 18", spectrum:null, bias:null },
+  ]},
+  { id:"biz", title:"📈 Business & Markets", color:"#8e44ad", items:[
+    { headline:"Oil rises on Friday but ends the week down about 8% as the Iran truce holds",
+      summary:"Brent crude rose 0.9% to $80.57 a barrel on June 19 and WTI added about 1.2% to $77.54 after US-Iran talks in Switzerland were abruptly postponed, but both benchmarks still fell roughly 8% on the week as shipping through the Strait of Hormuz recovered under the interim truce.",
+      source:"CNBC", url:"https://www.cnbc.com/2026/06/19/oil-prices-wti-brent-crude-us-iran-deal-strait-hormuz-shipping-recovery.html", date:"Jun 19", spectrum:null, bias:null },
+    { headline:"Asian markets end Friday mixed with US markets shut for Juneteenth",
+      summary:"Asian equities closed mixed on June 19: Japan&rsquo;s Nikkei 225 edged up about 0.3% while Hong Kong&rsquo;s Hang Seng fell around 1.6%. US markets were closed for the Juneteenth holiday, leaving Wall Street without a Friday session.",
+      source:"CNBC", url:"https://www.cnbc.com/markets/", date:"Jun 19", spectrum:null, bias:null },
+    { headline:"Indian rupee logs its best week in about 11 weeks on foreign inflows",
+      summary:"The Indian rupee posted its strongest weekly performance in around 11 weeks, supported by a surge of foreign investment into local markets, even as benchmark indices slipped on Friday in an IT-led selloff after Accenture&rsquo;s weak outlook.",
+      source:"The Economic Times", url:"https://economictimes.indiatimes.com/markets", date:"Jun 19", spectrum:null, bias:null },
+  ]},
+  { id:"sports", title:"🎾🏏🏎️ Sports", color:"#c0392b", items:[
+    { headline:"🎾 Pegula beats Sabalenka to reach the Berlin Open final",
+      summary:"Defending champion Jessica Pegula rallied past world No. 1 Aryna Sabalenka 6-2, 6-7(4), 6-0 to reach the Berlin grass-court final, her fourth career win over Sabalenka.",
+      source:"WTA Tour", url:"https://www.wtatennis.com/news/4522854/pegula-nears-second-berlin-crown-after-fourth-win-over-sabalenka-sends-her-into-final", date:"Jun 20", spectrum:null, bias:null },
+    { headline:"🎾 Noskova ends Eala&rsquo;s run to set up a Berlin final with Pegula",
+      summary:"Eighth seed Linda Noskova beat wild card Alexandra Eala 6-2, 6-4 to reach her first Berlin final, ending Eala&rsquo;s breakout grass-court run; she meets Jessica Pegula for the title.",
+      source:"WTA Tour", url:"https://www.wtatennis.com/tournaments/2012/berlin/2026/scores", date:"Jun 20", spectrum:null, bias:null },
+    { headline:"🎾 Fritz beats Zverev again to reach the Halle Open final",
+      summary:"Taylor Fritz beat top seed Alexander Zverev 6-7(4), 6-4, 7-5 in Halle for his seventh straight win over the German, ending Zverev&rsquo;s winning streak and reaching his first final there.",
+      source:"ATP Tour", url:"https://www.atptour.com/en/news/zverev-fritz-halle-2026-saturday", date:"Jun 20", spectrum:null, bias:null },
+    { headline:"🎾 Tiafoe routs Altmaier to set up an all-American Halle final",
+      summary:"Frances Tiafoe beat Germany&rsquo;s Daniel Altmaier 6-1, 6-3 in just over an hour to reach the Halle final, where he faces compatriot Taylor Fritz in their first meeting on grass.",
+      source:"ATP Tour", url:"https://www.atptour.com/en/scores/current", date:"Jun 20", spectrum:null, bias:null },
+    { headline:"🏏 India sweep Afghanistan 3-0 as Jaiswal hits a century",
+      summary:"Yashasvi Jaiswal struck an unbeaten century and Prasidh Krishna took 5/23 as India beat Afghanistan by nine wickets in the third ODI in Chennai on June 20 to complete a 3-0 series sweep; Shubman Gill was named player of the series.",
+      source:"ESPNcricinfo", url:"https://www.espncricinfo.com/series/afghanistan-in-india-2026-1527147/india-vs-afghanistan-3rd-odi-1527153/full-scorecard", date:"Jun 20", spectrum:null, bias:null },
+    { headline:"🏏 Australia thrash the Netherlands by 98 runs at the Women&rsquo;s T20 World Cup",
+      summary:"Australia kept up their unbeaten Women&rsquo;s T20 World Cup run with a 98-run win over the Netherlands in Southampton on June 20, tightening their grip on top spot in Group 1.",
+      source:"ESPNcricinfo", url:"https://www.espncricinfo.com/series/icc-women-s-t20-world-cup-2026-1483859/australia-women-vs-netherlands-women-14th-match-group-1-1490690/full-scorecard", date:"Jun 20", spectrum:null, bias:null },
+  ]},
+  { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
+  { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
+];
+
+const FUN_FACT = {
+  text: "The shortest war in recorded history lasted well under an hour. On 27 August 1896, a dispute over the throne of Zanzibar led British warships to open fire on the Sultan&rsquo;s palace at around 9am; the Sultan&rsquo;s forces surrendered roughly 38 minutes later. Historians put the whole Anglo-Zanzibar War at somewhere between 38 and 45 minutes.",
+  tag: "Category · History & War"
+};
+
+const PUZZLE = {
+  type: "Logic",
+  title: "One Question, Two Guards",
+  how: "You cannot trust either answer on its own — so design a question whose answer is routed through BOTH guards, cancelling out the lie.",
+  question: "You reach a fork in the road. One path leads to freedom, the other to certain doom, but you do not know which is which.\nTwo guards stand at the fork: one always tells the truth, the other always lies, and you cannot tell them apart.\nYou may ask only ONE yes/no question, to ONE of the guards, and then you must choose a path.\nWhat single question guarantees you pick the path to freedom?",
+  answer: "Ask either guard: &lsquo;If I asked the OTHER guard whether the left path leads to freedom, would he say yes?&rsquo; Then take the OPPOSITE of the answer.\n\nWhy it works: ask the truth-teller and he honestly reports the liar&rsquo;s false answer; ask the liar and he falsely reports the truth-teller&rsquo;s true answer. Either way the reply is the reverse of the truth.\n\nSo if the guard says &lsquo;yes,&rsquo; the left path is NOT freedom — take the right path. If he says &lsquo;no,&rsquo; take the left path."
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn){var a=document.getElementById('ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>
