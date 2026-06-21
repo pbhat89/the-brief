@@ -64,6 +64,13 @@
   .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
   .answer.show{display:block;animation:fade .3s ease}
   .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .wpuzzle-box{background:linear-gradient(135deg,#0e1a1a,#0d1620);border:1px solid #234a44;border-left:3px solid #16a085;padding:24px 28px;border-radius:2px}
+  .wptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#16a085;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .wpuzzle-box .puzzle-title{color:#cdeae3}
+  .wpuzzle-box .puzzle-how{color:#8fb8ac;background:#08140f;border-left-color:#1a6a5a}
+  .wpuzzle-box .puzzle-q{color:#dfeae6;font-family:'Source Sans 3',sans-serif}
+  .wpuzzle-box .answer{color:#bfe0d6}
+  .wpuzzle-box .answer .alabel{color:#16a085}
   .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
   .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
   @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
@@ -92,11 +99,11 @@
    Do NOT touch anything below this comment block other than the data inside
    SECTIONS, FUN_FACT, and PUZZLE.
 
-   SECTIONS shape — eight entries in this exact order:
-     id    : one of "sg" | "india" | "geo" | "tech" | "biz" | "sports" | "fun" | "puzzle"
+   SECTIONS shape — eleven entries in this exact order:
+     id    : one of "sg" | "india" | "uk" | "geo" | "tech" | "biz" | "sports" | "misc" | "fun" | "puzzle" | "wpuzzle"
      title : tab label as shown in the chip row (use the emoji prefixes shown below)
      color : hex color used for the active-tab fill and the section's gradient rule
-     items : array of news items (only for the 6 news tabs; fun/puzzle use custom flag)
+     items : array of news items (only for the 8 news tabs; fun/puzzle/wpuzzle use custom flag)
        headline : string — declarative headline, no clickbait
        summary  : string — 1-2 specific sentences with names, numbers, outcomes
        source   : string — outlet name (must be on the allowed list for this tab)
@@ -118,6 +125,13 @@
      how      : one-line "how to approach" hint
      question : the puzzle itself; supports \n for line breaks
      answer   : the answer; supports \n for line breaks; appears inside a toggle
+
+   WORD_PUZZLE shape (separate, daily word game — NYT-style, static reveal):
+     type     : one of "Connections" | "Word Ladder" | "Anagram" | "Spelling Bee" | "Letter Boxed" | "Mini Crossword"
+     title    : short evocative name for the word puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle body; supports \n for line breaks (grids render as pre-formatted text)
+     answer   : the answer; supports \n for line breaks; appears inside its own toggle (id "wpans")
 ============================================================================= */
 
 const SECTIONS = [
@@ -132,6 +146,12 @@ const SECTIONS = [
       spectrum:{ left:"{{LEFT_FRAMING}}", center:"{{CENTER_FRAMING}}", right:"{{RIGHT_FRAMING}}" },
       bias:"{{BIAS_NOTE_OR_NULL}}" },
     // ADD 2-3 MORE INDIA ITEMS HERE.
+  ]},
+  { id:"uk", title:"🇬🇧 UK News", color:"#3949ab", items:[
+    { headline:"{{HEADLINE}}", summary:"{{SUMMARY}}", source:"{{OUTLET}}", url:"{{URL}}", date:"{{DATE}}",
+      spectrum:{ left:"{{LEFT_FRAMING}}", center:"{{CENTER_FRAMING}}", right:"{{RIGHT_FRAMING}}" },
+      bias:"{{BIAS_NOTE_OR_NULL}}" },
+    // ADD 3-4 MORE UK ITEMS HERE. Sources: BBC, Sky News. Spectrum + bias only on political items.
   ]},
   { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
     { headline:"{{HEADLINE}}", summary:"{{SUMMARY}}", source:"{{OUTLET}}", url:"{{URL}}", date:"{{DATE}}",
@@ -149,10 +169,15 @@ const SECTIONS = [
   ]},
   { id:"sports", title:"🎾🏏🏎️ Sports", color:"#c0392b", items:[
     { headline:"🎾 {{HEADLINE}}", summary:"{{SUMMARY}}", source:"{{OUTLET}}", url:"{{URL}}", date:"{{DATE}}", spectrum:null, bias:null },
-    // ADD 1-2 MORE SPORTS ITEMS HERE. Prefix headlines with 🎾 (tennis), 🏏 (cricket), or 🏎️ (F1).
+    // ADD 1-2 MORE SPORTS ITEMS HERE. Prefix headlines with 🎾 (tennis), 🏏 (cricket), or 🏎️ (F1). Carry at least one 🏎️ F1 item daily (driver moves, team news, standings — not only on race weekends).
+  ]},
+  { id:"misc", title:"🔬 Other Miscellaneous News", color:"#1abc9c", items:[
+    { headline:"{{HEADLINE}}", summary:"{{SUMMARY}}", source:"{{OUTLET}}", url:"{{URL}}", date:"{{DATE}}", spectrum:null, bias:null },
+    // ADD 3-4 MORE MISC ITEMS HERE. Trending frontier news: science, space, medicine, breakthrough tech not covered elsewhere.
   ]},
   { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
   { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
+  { id:"wpuzzle", title:"🔤 Word Puzzles", color:"#16a085", custom:"wpuzzle" },
 ];
 
 const FUN_FACT = {
@@ -166,6 +191,14 @@ const PUZZLE = {
   how: "{{PUZZLE_APPROACH_HINT}}",
   question: "{{PUZZLE_QUESTION}}",
   answer: "{{PUZZLE_ANSWER}}"
+};
+
+const WORD_PUZZLE = {
+  type: "{{WORD_PUZZLE_TYPE}}",
+  title: "{{WORD_PUZZLE_TITLE}}",
+  how: "{{WORD_PUZZLE_APPROACH_HINT}}",
+  question: "{{WORD_PUZZLE_QUESTION}}",
+  answer: "{{WORD_PUZZLE_ANSWER}}"
 };
 
 /* =============================================================================
@@ -187,7 +220,17 @@ function renderPuzzle(){
   h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
   return h;
 }
-function toggleAns(btn){var a=document.getElementById('ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+function renderWordPuzzle(){
+  let h='<div class="sec-title">🔤 Word Puzzle of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#16a085,transparent)"></div>';
+  h+='<div class="wpuzzle-box"><span class="wptype">'+WORD_PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+WORD_PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+WORD_PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+WORD_PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this,\'wpans\')">Show Answer</button>';
+  h+='<div class="answer" id="wpans"><span class="alabel">Answer</span>'+WORD_PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn,ansId){var a=document.getElementById(ansId||'ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
 
 function render(){
   const tabs=document.getElementById('tabs');const content=document.getElementById('content');
@@ -204,6 +247,7 @@ function render(){
     const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
     if(sec.custom==="fun"){div.innerHTML=renderFun();}
     else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else if(sec.custom==="wpuzzle"){div.innerHTML=renderWordPuzzle();}
     else{
       let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
       sec.items.forEach(it=>{

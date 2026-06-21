@@ -42,6 +42,20 @@ For every item in the draft, run this checklist against a SECOND named source be
 
 8. **Source-list compliance.** Confirm the source for each item is on the allowed list for that tab (see `routine-prompt.md` for the per-tab source lists). If the writer pulled from an outlet not on the list, either drop the item or replace it with an equivalent story from an allowed source. No exceptions for "but the story is good."
 
+9. **UK News scope.** Every UK News item must be UK-domestic (Westminster, the UK economy, courts, public services, society) and sourced from BBC or Sky News. Reject items that merely restate a Global / Geopolitics story from a UK angle, or that duplicate a headline already carried in another tab today.
+
+---
+
+## 2b. F1 Race-Currency Check (Sports — high priority)
+
+F1 is the single most error-prone Sports item because the calendar moves week to week and stale race recaps read as current. For **every** 🏎️ F1 item:
+
+1. **Identify the Grand Prix named** (or implied) in the headline/summary.
+2. **Cross-check the official calendar** (Formula1.com) for today's SGT date. Determine whether that race is: (a) this weekend's / today's round, (b) the genuinely next upcoming round, or (c) a round the season has already moved past.
+3. **If the race is already in the past relative to the current round, the location is STALE.** A "X won the [Place] Grand Prix" result is publishable only on race day and the ~48h after it. If the calendar has advanced to a new round, REJECT the item — it is the "still saying Montreal after the season moved to Barcelona" failure. Replace it with fresh inter-race F1 news (driver moves, team news, standings, penalties) or drop it.
+4. **Confirm the winner / pole / standings names against a second allowed source** (Sky Sports F1, Autosport, BBC Sport, The Athletic) AND the location against Formula1.com.
+5. **Always-on check:** if Sports carries no F1 item at all, confirm that is because the allowed F1 sources genuinely had nothing in a 72h window — not because the writer only looked at race results. F1 should appear daily when any credible development exists.
+
 ---
 
 ## 3. Spectrum / Bias Check Verification
@@ -74,6 +88,22 @@ Do not invent outlet names. Do not use "a left-leaning outlet" as a placeholder.
 - If your solution does not match, investigate: is the puzzle wording ambiguous, is the published answer wrong, or did you misread? Do not auto-trust the draft.
 - If you cannot confidently re-derive the answer in a reasonable time, the puzzle is too hard or under-specified for the audience — replace it.
 - Confirm the answer stays hidden behind the "Show Answer" toggle in the template (see `template.html` — the `renderPuzzle()` function wraps the answer in a `.answer` div that's `display:none` until the button is clicked). A spoiled puzzle is a dead puzzle.
+
+---
+
+## 5b. Word Puzzle Verification
+
+The brief carries a SECOND, separate puzzle — the **Word Puzzle** (NYT-style word game). Verify it independently of the lateral-thinking puzzle.
+
+- **Re-solve it from scratch** without reading the answer first, then compare to `WORD_PUZZLE.answer`. If your solution does not match, the puzzle is broken — replace it, do not patch.
+- **Format-specific traps:**
+  - *Spelling Bee:* every listed word must contain the center letter and use ONLY the seven given letters; the claimed pangram must use all seven. Spot-check several words — this is the easiest format to author wrong.
+  - *Letter Boxed:* the claimed word chain must respect the side-adjacency rule (no two consecutive letters from the same side) and cover all 12 letters; if you cannot verify the chain, reject it.
+  - *Anagram:* the answer's letter multiset must exactly equal the prompt's.
+  - *Word Ladder:* every rung must be a real word and change exactly one letter; the step count must match.
+  - *Connections:* each of the four groups must be a real, tight category; all 16 words must be assigned to exactly one group.
+- **Established format only.** Reject anything that is really Wordle, Strands, or a full crossword (none work as a static reveal), or that is a silly/trivial filler. Target solve time 1-3 minutes.
+- **Spoiler check:** confirm the answer stays hidden behind its own "Show Answer" toggle — the Word Puzzle uses a separate answer element id (`wpans`) so it does not collide with the lateral puzzle's `ans`. Confirm clicking one card's button does not reveal the other's answer.
 
 ---
 

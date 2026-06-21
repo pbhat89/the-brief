@@ -21,13 +21,13 @@ Each morning the routine executes five stages in order:
   skipping anything in the EXCLUDE set, and expand searches (widening 48h→72h)
   until each news section has at least 4 candidates.
 - Stage 2 — Draft. Substitute today's data into `template.html` (date
-  placeholders + the `SECTIONS` / `FUN_FACT` / `PUZZLE` JS arrays) to produce
+  placeholders + the `SECTIONS` / `FUN_FACT` / `PUZZLE` / `WORD_PUZZLE` JS arrays) to produce
   the day's rich HTML brief.
 - Stage 3 — Verify. Run every item past `verifier-checklist.md` (sourcing,
   dates, named entities, claims). Re-do anything that fails, backfilling to keep
   each section at 4-5 items.
 - Stage 4 — Publish & Archive. Create a Gmail draft: a styled one-line HTML
-  digest (`htmlBody`, built from `email-digest-sample.html`) of the six news
+  digest (`htmlBody`, built from `email-digest-sample.html`) of the eight news
   sections, with a plain-text fallback, sent to every address in the recipient
   list. Write today's HTML + JSON to `archive/`, append story rows to
   `archive/INDEX.md`, and update `archive/USED.json`. Push to `main`; GitHub
@@ -36,14 +36,16 @@ Each morning the routine executes five stages in order:
 The full brief lives at
 `https://pbhat89.github.io/the-brief/archive/YYYY-MM-DD.html` and uses the
 interactive tabbed UI from `template.html` (anchor chips, spectrum framing
-blocks on political items, fun-fact and puzzle cards). The email is a clean,
-scannable HTML digest — one line per headline, four to five per section, no
-fun fact or puzzle — that links to that URL.
+blocks on political items, fun-fact, puzzle, and word-puzzle cards). The email
+is a clean, scannable HTML digest — one line per headline, four to five per
+section, no fun fact or puzzles — opened by a prominent full-width button that
+links to that URL.
 
 The email subject line uses a ☕ prefix. The Pages-hosted brief is split
-across labelled tabs: 🇸🇬 Singapore, 🇮🇳 India, 🌍 Global / Geopolitics,
-💻 Tech & AI, 📈 Business & Markets, 🎾🏏🏎️ Sports, ✦ Fun Fact, and
-🧩 Puzzle, as defined in the template.
+across labelled tabs: 🇸🇬 Singapore, 🇮🇳 India, 🇬🇧 UK News,
+🌍 Global / Geopolitics, 💻 Tech & AI, 📈 Business & Markets,
+🎾🏏🏎️ Sports, 🔬 Other Miscellaneous News, ✦ Fun Fact, 🧩 Puzzle, and
+🔤 Word Puzzles, as defined in the template.
 
 ## Repo layout
 
@@ -59,7 +61,7 @@ the-brief/
   .gitignore
   archive/
     INDEX.md              Append-only log of past headlines (the story dedup source).
-    USED.json             Rolling fun-fact / puzzle ledger (30-day dedup memory).
+    USED.json             Rolling fun-fact / puzzle / word-puzzle ledger (30-day dedup memory).
     .gitkeep
 ```
 

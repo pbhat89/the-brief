@@ -71,9 +71,13 @@ Use the SGT-derived date everywhere:
   - *Internal (dedup):* lowercase `visual`, `logic`, `quantitative`, `lateral` — used in the `USED.json` puzzle log, the `EXCLUDE_PUZZLE_TYPES_4D` set, and the JSON `puzzle.type` field for the archive.
   - *Display (in the HTML's `PUZZLE.type`):* Title Case `"Visual"`, `"Logic"`, `"Quantitative"`, `"Lateral Thinking"` — used in the rendered puzzle card.
   - Both versions are stored: HTML uses display, JSON uses internal. Map between them as needed.
+- **Word-puzzle type — two namespaces (the SEPARATE daily word game, in addition to the puzzle above):**
+  - *Internal (dedup):* lowercase `grouping`, `ladder`, `anagram`, `spellingbee`, `letterboxed`, `minicross` — used in `USED.json.word_puzzle_log`, the `EXCLUDE_WORD_PUZZLE_TYPES_4D` set, and the JSON `word_puzzle.type` field.
+  - *Display (in the HTML's `WORD_PUZZLE.type`):* Title Case `"Connections"`, `"Word Ladder"`, `"Anagram"`, `"Spelling Bee"`, `"Letter Boxed"`, `"Mini Crossword"` — used in the rendered word-puzzle card.
+  - Both versions are stored: HTML uses display, JSON uses internal. Map between them as needed.
 - **Tabs — two namespaces:**
-  - *Template SECTIONS `id` (internal, CSS-friendly):* `sg`, `india`, `geo`, `tech`, `biz`, `sports`, `fun`, `puzzle` — used for HTML rendering only.
-  - *Display labels / JSON `tab` field:* `Singapore`, `India`, `Global / Geopolitics`, `Tech & AI`, `Business & Markets`, `Sports`, `Fun Fact`, `Puzzle` — used in the rendered HTML titles, the JSON archive, and `dedup.md`. (The email digest carries the six news sections only — no Fun Fact, no Puzzle.)
+  - *Template SECTIONS `id` (internal, CSS-friendly):* `sg`, `india`, `uk`, `geo`, `tech`, `biz`, `sports`, `misc`, `fun`, `puzzle`, `wpuzzle` — used for HTML rendering only.
+  - *Display labels / JSON `tab` field:* `Singapore`, `India`, `UK News`, `Global / Geopolitics`, `Tech & AI`, `Business & Markets`, `Sports`, `Other Miscellaneous News`, `Fun Fact`, `Puzzle`, `Word Puzzles` — used in the rendered HTML titles, the JSON archive, and `dedup.md`. (The email digest carries the EIGHT news sections only — no Fun Fact, no Puzzle, no Word Puzzles.)
   - Fixed order in both namespaces.
 
 ---
@@ -92,11 +96,12 @@ Use the SGT-derived date everywhere:
 4. **Read `archive/USED.json` — the rolling fun-fact / puzzle ledger (REQUIRED for dedup to work).** This file is the long-window memory that the per-day JSON files cannot provide (they only cover the last 2-3 days). Its shape:
    ```json
    {
-     "funfact_topics": [ { "date": "YYYY-MM-DD", "topic_key": "octopus", "text": "..." } ],
-     "puzzle_log":     [ { "date": "YYYY-MM-DD", "type": "logic", "title_key": "two-trains-and-a-bird" } ]
+     "funfact_topics":  [ { "date": "YYYY-MM-DD", "topic_key": "octopus", "text": "..." } ],
+     "puzzle_log":      [ { "date": "YYYY-MM-DD", "type": "logic", "title_key": "two-trains-and-a-bird" } ],
+     "word_puzzle_log": [ { "date": "YYYY-MM-DD", "type": "grouping", "title_key": "hidden-in-plain-sight" } ]
    }
    ```
-   - `funfact_topics` retains the last **60 days**; `puzzle_log` retains the last **30 days**.
+   - `funfact_topics` retains the last **60 days**; `puzzle_log` and `word_puzzle_log` retain the last **30 days**.
    - If `USED.json` is missing (first run after this change), treat both lists as empty and create the file in Stage 4b.
    - **You MUST read this at Stage 0 and write it at Stage 4b every run.** If the archive isn't read here, topic dedup silently does nothing; if it isn't written there, tomorrow repeats today.
 5. Build the in-memory exclude sets for this run:
@@ -104,12 +109,15 @@ Use the SGT-derived date everywhere:
    - `EXCLUDE_FUNFACT_TOPICS` — every `topic_key` in `funfact_topics` dated within the last **30 days**
    - `EXCLUDE_PUZZLE_TYPES_4D` — every `type` in `puzzle_log` dated within the last **4 days**
    - `EXCLUDE_PUZZLE_TITLES_30D` — every `title_key` in `puzzle_log` dated within the last **30 days**
+   - `EXCLUDE_WORD_PUZZLE_TYPES_4D` — every `type` in `word_puzzle_log` dated within the last **4 days**
+   - `EXCLUDE_WORD_PUZZLE_TITLES_30D` — every `title_key` in `word_puzzle_log` dated within the last **30 days**
 6. Open and re-read `dedup.md` now. Its rules govern Stage 1 and Stage 2; treat them as authoritative. The core rules you must enforce:
    - Drop any candidate story whose short hash is in `EXCLUDE_HASHES`.
    - Drop any candidate story whose key-entities + event substantially match a prior item, even if the headline is reworded.
    - **Exception:** if there is a material new development on a prior story, you may include it — lead the summary with the new fact and prefix the headline with `Update:`. Compute a fresh hash for the new headline.
    - **Fun fact (TOPIC-based, 30 days):** compute the candidate's `topic_key` (see Stage 2's FUN_FACT rules). If it is in `EXCLUDE_FUNFACT_TOPICS`, REJECT it even if the wording is different, and generate another.
    - **Puzzle:** reject any candidate whose `type` is in `EXCLUDE_PUZZLE_TYPES_4D` or whose `title_key` is in `EXCLUDE_PUZZLE_TITLES_30D`.
+   - **Word Puzzle:** reject any candidate whose `type` is in `EXCLUDE_WORD_PUZZLE_TYPES_4D` or whose `title_key` is in `EXCLUDE_WORD_PUZZLE_TITLES_30D`. Also avoid reusing the same core answer set (same 16 grouping words, same ladder endpoints, same Spelling Bee letter bag) within 30 days even under a new title.
 
 ---
 
@@ -121,13 +129,29 @@ For each tab, gather real, specific, current news. You may web-search broadly, b
 
 - **Singapore:** CNA, The Straits Times, BBC, Reuters, SCMP, Mothership
 - **India:** The Hindu, The Indian Express, Hindustan Times, The Times of India, NDTV, The Economic Times
+- **UK News:** BBC, Sky News. (UK-domestic focus: Westminster politics, the economy, courts, public services, society. Do NOT duplicate stories already carried in Global / Geopolitics — UK News is about Britain's own affairs, not the UK's role in a global story.)
 - **Global / Geopolitics:** BBC, CNN, Reuters, AP, The Guardian, Al Jazeera, NYT
 - **Tech & AI:** The Verge, TechCrunch, Ars Technica, Wired, MIT Tech Review, Bloomberg, The Information, Reuters
 - **Business & Markets:** The Economist, Financial Times, Bloomberg, Reuters, WSJ, CNBC, The Economic Times
 - **Sports:**
   - Tennis → ATP/WTA, BBC Sport, ESPN
   - Cricket → ESPNcricinfo, Cricbuzz, BBC Sport
-  - F1 → Sky Sports F1, Autosport, BBC Sport, The Athletic
+  - F1 → Sky Sports F1, Autosport, BBC Sport, The Athletic, Formula1.com (use the official site to confirm the CURRENT race weekend / next race location and the live standings)
+- **Other Miscellaneous News:** BBC, Reuters, AP, The Guardian, Nature, Scientific American, New Scientist, MIT Tech Review, Ars Technica, NASA, ESA, NYT. (Groundbreaking, trending stories at the frontier of science, space, medicine, biology, energy, or technology that do NOT fit the Tech & AI / Business tabs. Must be genuinely notable and currently trending — not routine product news.)
+
+### F1 must appear every day — not only on race weekends
+
+F1 generates real, citable news continuously, not just on Grand Prix weekends. **Carry at least one 🏎️ F1 item in Sports every day** when any credible development exists in the window — and it almost always does. Off-race-weekend F1 angles to search for:
+
+- Driver contracts, transfers, and silly-season rumours (confirmed by a named outlet, not paddock gossip).
+- Team principal / personnel changes, restructuring, sponsor and engine-supplier deals.
+- Pre-season or in-season testing, car upgrades, technical-directive and regulation changes.
+- Championship standings shifts, penalties, stewards' decisions, appeals.
+- Driver injury / absence / return news.
+
+On a Grand Prix weekend, carry **two** F1 items (e.g. qualifying + race, or practice + a paddock story). Only drop F1 entirely if the allowed F1 sources genuinely have nothing in a 72h window — log "F1 quiet" in the run log if so.
+
+**Race recaps are time-locked.** A "X won the [Place] Grand Prix" result may run only in the brief for the race day and the ~48h after it. By the time the calendar has moved to the next race, an item still naming the previous round's location/winner is **stale** — drop it or replace it with fresh inter-race F1 news. Always confirm the race location you name is the CURRENT or genuinely upcoming round against Formula1.com before publishing (this is what prevents "still saying Montreal when the race has moved to Barcelona").
 
 ### What "specific" means
 
@@ -155,12 +179,15 @@ These are the **research** (over-collection) targets:
 
 - Singapore: 6-8 candidates (final 4-5)
 - India: 6-8 candidates (final 4-5)
+- UK News: 6-8 candidates (final 4-5; BBC + Sky News, UK-domestic focus)
 - Global / Geopolitics: 6-8 candidates (final 4-5)
 - Tech & AI: 6-8 candidates (final 4-5)
 - Business & Markets: 6-8 candidates (final 4-5)
-- Sports: 6-8 candidates (final 4-6; mix tennis / cricket / F1; only include sports that have real news in the window)
+- Sports: 6-8 candidates (final 4-6; mix tennis / cricket / F1; **always carry ≥1 F1 item, ≥2 on a race weekend**; only include sports that have real news in the window)
+- Other Miscellaneous News: 6-8 candidates (final 4-5; trending frontier science / space / medicine / tech)
 - Fun Fact: 2-3 candidates (final 1)
 - Puzzle: 2-3 candidates (final 1)
+- Word Puzzle: 2-3 candidates (final 1; separate from the Puzzle above)
 
 **The expand-don't-prune rule (FIX 3).** If, after your first search pass, a section has fewer than 4 candidates that survive research-time dedup:
 
@@ -188,15 +215,17 @@ Every other byte of `template.html` (the `<style>` block, the `render()` functio
 
 ### Filling `SECTIONS`
 
-The template ships with one placeholder item per news tab (six placeholders in total) and a comment indicating where to add more. Replace each placeholder item with a real item, and add more items so each tab has the right count.
+The template ships with one placeholder item per news tab (eight placeholders in total: Singapore, India, UK News, Global, Tech & AI, Business & Markets, Sports, Other Miscellaneous News) and a comment indicating where to add more. Replace each placeholder item with a real item, and add more items so each tab has the right count.
 
 **Items per tab (floor 4, ceiling 5 — see Stage 1's expand-don't-prune rule):**
 - Singapore: 4-5 items
 - India: 4-5 items
+- UK News: 4-5 items (BBC, Sky News; UK-domestic focus)
 - Global / Geopolitics: 4-5 items
 - Tech & AI: 4-5 items
 - Business & Markets: 4-5 items
-- Sports: 4-6 items (mix tennis 🎾, cricket 🏏, F1 🏎️; only sports with real news in the 48h window)
+- Sports: 4-6 items (mix tennis 🎾, cricket 🏏, F1 🏎️; **carry ≥1 F1 item daily, ≥2 on a race weekend**; only sports with real news in the 48h window)
+- Other Miscellaneous News: 4-5 items (trending frontier science / space / medicine / breakthrough tech not covered by other tabs)
 
 **Per item, the object shape is:**
 
@@ -261,6 +290,38 @@ Rules:
 - Genuinely challenging — not trivia, not a 5-second riddle. Two minutes of real thinking is the target.
 - The answer must be unambiguous. Re-solve the puzzle yourself before writing the answer to confirm.
 
+### Filling `WORD_PUZZLE`
+
+The brief carries a SECOND puzzle each day — a **Word Puzzle** — separate from and in addition to the lateral-thinking `PUZZLE` above. Both render every day. The Word Puzzle is a static card with the same "Show Answer" reveal mechanism (no interactive JavaScript), but it uses its own answer element id (`wpans`) so the two reveal toggles never collide. It is inspired by the New York Times word games.
+
+```javascript
+const WORD_PUZZLE = {
+  type: "Connections",             // DISPLAY (Title Case). One of:
+                                   // "Connections" | "Word Ladder" | "Anagram" |
+                                   // "Spelling Bee" | "Letter Boxed" | "Mini Crossword"
+  title: "Hidden in Plain Sight",  // short evocative name
+  how: "Look for the word that could fit two groups...",  // one-line approach hint
+  question: "...",                 // the puzzle body; use \n for line breaks; grids OK
+  answer: "..."                    // the full solution; \n for line breaks; inside the toggle
+};
+```
+
+Rules:
+- **Format rotation (4-day type rule).** The internal type — one of `grouping`, `ladder`, `anagram`, `spellingbee`, `letterboxed`, `minicross` (mapping to the display names above) — must NOT be in `EXCLUDE_WORD_PUZZLE_TYPES_4D` (no repeat of a word-puzzle format used in the last 4 days). Rotate through the formats. Treat `grouping`, `ladder`, `anagram`, `spellingbee`, `letterboxed` as the core five; use `minicross` (a text-described Mini Crossword) only occasionally — it is the slowest to render and parse.
+- **Title rotation (30-day rule).** Compute `title_key` from the title: lowercase, kebab-case, leading articles (`a`/`an`/`the`) stripped (e.g. "Hidden in Plain Sight" → `hidden-in-plain-sight`). It must NOT be in `EXCLUDE_WORD_PUZZLE_TITLES_30D`. If it collides, pick a different puzzle.
+- **No repeated words/answers (30-day rule).** Do not reuse the same core answer set within 30 days — a grouping puzzle with the same 16 words, a ladder with the same endpoints, or a Spelling Bee with the same letter bag is a repeat even under a new title.
+- **Use only well-established, popular formats.** NYT-style Connections (grouping), Word Ladder, Anagram, Spelling Bee, Letter Boxed. **Do NOT use Wordle (needs interactive guessing), Strands (needs drag-to-trace), or a full-size crossword (too large) — none survive a static reveal.** No silly or trivial fillers.
+- **Difficulty / time target.** A genuine mind-twister but quick: target **1-3 minutes** to solve. Popular and clever, never tedious.
+- **Re-solve it yourself (mandatory).** The answer must be correct and self-consistent. Re-solve the puzzle from scratch before writing the answer. This matters most for **Spelling Bee** (every listed word must contain the center letter and use only the given letters; the pangram must use all the letters) and **Letter Boxed** (construct the box FROM a known-good solution — pick two chaining words covering 12 distinct letters, then assign letters to sides so no word ever uses two same-side letters in a row; never claim a chain you have not adjacency-checked). If your solution does not match, the puzzle is broken — replace it, do not patch it.
+- **Self-contained presentation.** Render grids (the Connections list, the Letter Boxed square, any Mini grid) as pre-formatted text with `\n` line breaks and separators (e.g. `·` between words) rather than relying on column alignment — the card font is proportional. Confirm the answer stays hidden behind "Show Answer" until clicked.
+
+Reference examples (each re-solved and verified — use as style/quality models, not verbatim):
+
+- **Connections (`grouping`) — "Hidden in Plain Sight":** Sort 16 words into 4 groups of 4 by a hidden link, with one deliberate overlap trap per group. e.g. music-notation terms (FLAT, SHARP, NATURAL, MAJOR), fish (BASS, SOLE, PIKE, PERCH), wading birds (CRANE, HERON, STORK, EGRET), and a residual group — where BASS, PERCH and CRANE are the traps. The four categories must each be a real, tight set.
+- **Word Ladder (`ladder`) — "Cold Front":** COLD → CORD → CARD → WARD → WARM (one letter per step, each a real word, 4 steps). State the step count so the answer is bounded.
+- **Anagram (`anagram`) — "Star Quality":** Rearrange "MOON STARER" into a 10-letter profession → ASTRONOMER (identical letter multiset A,E,M,N,O,O,R,R,S,T).
+- **Spelling Bee (`spellingbee`) — "Center of Attention":** Center letter A; outer C,E,L,N,O,T. Pangram = LACTONE (uses all seven, contains A). Reveal lists ~15 valid words (ATONE, OCEAN, CANOE, CLEAN, LANCE, ENACT, OCTAL, TALON, LOCATE, ECLAT, …) so the solver can self-grade.
+
 ### Other rules
 
 - **Update items:** When including a story that's an `Update:` per the dedup rules, prefix the `headline` field with `"Update: "` and lead the `summary` with the new fact.
@@ -273,8 +334,8 @@ Before proceeding to Stage 3, run these checks on the draft. Any one failure mea
 
 1. Does the file still contain ANY `{{...}}` placeholder string (e.g. `{{DATE_LONG}}`, `{{HEADLINE}}`, `{{SUMMARY}}`)? **FAIL** — every placeholder must be substituted with real data before Stage 3.
 2. Does the `<script>` block still contain the `render()` function and the `SECTIONS`, `FUN_FACT`, `PUZZLE` constants? If any is missing, **FAIL** — the template's render code was wrongly stripped.
-3. Does `SECTIONS` have exactly 8 entries in this order: `sg`, `india`, `geo`, `tech`, `biz`, `sports`, `fun`, `puzzle`? If not, **FAIL**.
-4. Does every news tab hit the floor of 4 (SG, India, Global, Tech, Biz all 4-5; Sports 4-6)? If any tab is under 4, **regenerate that section** by backfilling from your Stage 1 over-collection, and if that is not enough, return to Stage 1's expand-don't-prune loop (more searches, widen 48h→72h) before proceeding. Only a documented "fewer stories today" (sources genuinely exhausted) excuses a section below 4.
+3. Does `SECTIONS` have exactly 11 entries in this order: `sg`, `india`, `uk`, `geo`, `tech`, `biz`, `sports`, `misc`, `fun`, `puzzle`, `wpuzzle`? If not, **FAIL**. (And is the `WORD_PUZZLE` constant present alongside `FUN_FACT` and `PUZZLE`?)
+4. Does every news tab hit the floor of 4 (SG, India, UK News, Global, Tech, Biz, Misc all 4-5; Sports 4-6)? If any tab is under 4, **regenerate that section** by backfilling from your Stage 1 over-collection, and if that is not enough, return to Stage 1's expand-don't-prune loop (more searches, widen 48h→72h) before proceeding. Only a documented "fewer stories today" (sources genuinely exhausted) excuses a section below 4.
 5. For every item with `spectrum` non-null, do all three fields (`left`, `center`, `right`) have substantive content? If any is empty or `null` inside the object, **FAIL** — either fill it or set the whole `spectrum` to `null`.
 6. Does any `headline`, `summary`, `source`, or `url` field contain unescaped single quotes (`'`) inside a single-quoted JS string, or unescaped backticks inside a template literal? **FAIL** — fix the escaping, the JS won't parse otherwise.
 7. Are the dates in `<title>`, `.sub`, and `.metrics` all today's date in Asia/Singapore?  If any are stale or still `{{...}}`, **FAIL**.
@@ -297,6 +358,7 @@ For **every** item in the draft:
    - **All numbers:** scores, percentages, prices, counts, ages, dates. A mismatch means re-check; if still unclear, drop the number.
    - **Attributions:** right person tied to the right team / role / company / country. Spelling matters.
    - **Recency:** the underlying event happened within the last 48 hours. If the event is older but a fresh development just dropped, recast it as an `Update:` with the new development leading.
+   - **F1 race currency (Sports):** for any F1 item that names a Grand Prix, confirm against Formula1.com that the named round is the CURRENT or genuinely upcoming race — not a round the calendar has already moved past. A race result is publishable only on race day and the ~48h after; a stale recap of a previous round (e.g. naming Montreal once the season has moved to Barcelona) must be dropped or replaced with fresh inter-race F1 news.
    - **Links:** click-resolve mentally — does the URL go to the actual article? No paywalled stubs, no 404s, no homepage redirects. If you cannot confirm the URL points to the story, swap to a different in-list source.
    - **Outcome logic:** won vs. lost, passed vs. failed, up vs. down, approved vs. rejected, indicted vs. acquitted. Reversed outcomes are the single most common error — check each one.
 3. **Edit in place.** Prefer **omitting** a contested detail to stating it confidently. Where sources are thin but the story is real, hedge with "reportedly" or "according to <outlet>". Drop anything you cannot confirm against two sources.
@@ -305,7 +367,7 @@ For **every** item in the draft:
 
 ### Hard stop condition
 
-If after backfilling you have fewer than **eight confirmed items across the whole brief** (excluding Fun Fact and Puzzle), do not send the brief. This threshold matches `verifier-checklist.md`. Instead, send a short plain note to every address in `<<RECIPIENT_EMAILS>>` via Gmail (`create_draft` with the recipient array in `to`, plain-text `body`, no `htmlBody`):
+If after backfilling you have fewer than **eight confirmed items across the whole brief** (excluding Fun Fact, Puzzle, and Word Puzzles), do not send the brief. This threshold matches `verifier-checklist.md`. Instead, send a short plain note to every address in `<<RECIPIENT_EMAILS>>` via Gmail (`create_draft` with the recipient array in `to`, plain-text `body`, no `htmlBody`):
 
 > Subject: ☕ The Brief · {today's long date} — skipped
 > Body: A one-paragraph explanation of why today was skipped (e.g., "Sources were thin in the 48-hour window and verification dropped too many items. No brief sent today.").
@@ -334,8 +396,8 @@ Call the Gmail connector's `create_draft` tool ONCE with these arguments:
 Build it from `email-digest-sample.html` — that file is the canonical reference layout. Substitute real content into its structure. Construction rules:
 
 - **All CSS inline.** Email clients strip `<style>` blocks, `<head>` CSS, and JavaScript. Every style must be an inline `style="..."` attribute. Use `<table>` layout (not flexbox/grid) — it is the only layout that renders consistently across Gmail, Outlook, and Apple Mail.
-- **Header:** `☕ The Brief`, then `{today's long date} · headlines`, then a top line `Full edition with analysis, fun fact & puzzle: <a>Link</a>` pointing at today's Pages URL (see FIX-5 link rules below).
-- **Six news sections, in this fixed order:** 🇸🇬 Singapore, 🇮🇳 India, 🌍 Global / Geopolitics, 💻 Tech & AI, 📈 Business & Markets, 🎾🏏🏎️ Sports. No Fun Fact section. No Puzzle section. No spectrum, no bias notes.
+- **Header:** `☕ The Brief`, then `{today's long date} · headlines`, then — directly below — a **prominent, full-width tappable BUTTON** linking to today's Pages URL (see FIX-5 link rules below). The button is a block-level `<a>` styled inline with a solid fill (`background:#1a6dd6;color:#ffffff`), large bold centered text (~17px), generous padding (`padding:16px 22px`), and rounded corners (`border-radius:10px`), reading `☕ Read the full edition →`. Put a small muted caption under it (`Analysis · UK · spectrum framing · fun fact · puzzles`). This replaces the old tiny one-word top "Link" — make it big and obvious so it is the first thing the reader can tap. The footer keeps a smaller muted "Link" repeat.
+- **Eight news sections, in this fixed order:** 🇸🇬 Singapore, 🇮🇳 India, 🇬🇧 UK News, 🌍 Global / Geopolitics, 💻 Tech & AI, 📈 Business & Markets, 🎾🏏🏎️ Sports, 🔬 Other Miscellaneous News. No Fun Fact section. No Puzzle section. No Word Puzzles section. No spectrum, no bias notes.
 - **Per section, 4-5 items, ONE LINE each**, in this exact shape:
   `• <b>{Headline in ~10-14 words}</b> — <a href="{real article URL}">{Source}</a>`
   The headline is the same wording as the HTML brief's headline (carry the sport emoji prefix 🎾/🏏/🏎️ on Sports items). No summary paragraph. No Left/Center/Right. The `{Source}` link is the publisher's real, absolute `https://` article URL — an external news site that opens directly (no GitHub involved).
@@ -353,7 +415,7 @@ Build it from `email-digest-sample.html` — that file is the canonical referenc
 
 #### The plain-text fallback (`body`)
 
-A minimal text version mirroring the digest — same six sections, one headline + outlet per line, the archive URL at top and bottom. No fun fact, no puzzle.
+A minimal text version mirroring the digest — same eight sections, one headline + outlet per line, the archive URL at top and bottom. No fun fact, no puzzle, no word puzzle.
 
 ```
 ☕ THE BRIEF · {today's long date}
@@ -369,6 +431,9 @@ SINGAPORE
 INDIA
 • ... (4-5 lines)
 
+UK NEWS
+• ... (4-5 lines; BBC / Sky News)
+
 GLOBAL / GEOPOLITICS
 • ... (3-4 lines)
 
@@ -379,10 +444,13 @@ BUSINESS & MARKETS
 • ... (3-5 lines)
 
 SPORTS
-• ... (4-6 lines)
+• ... (4-6 lines; include ≥1 F1 line)
+
+OTHER MISCELLANEOUS NEWS
+• ... (4-5 lines; trending frontier science / space / medicine / tech)
 
 —
-Full brief with analysis, spectrum framing, fun fact & puzzle:
+Full brief with analysis, spectrum framing, fun fact & puzzles:
 https://pbhat89.github.io/the-brief/archive/YYYY-MM-DD.html
 ```
 
@@ -431,6 +499,15 @@ Write four files into `archive/`:
        "approach": "...",
        "answer": "...",
        "puzzle_hash": "c2d3e4f5"
+     },
+     "word_puzzle": {
+       "type": "grouping",
+       "title": "Hidden in Plain Sight",
+       "title_key": "hidden-in-plain-sight",
+       "body": "...",
+       "approach": "...",
+       "answer": "...",
+       "word_puzzle_hash": "ab12cd34"
      }
    }
    ```
@@ -440,12 +517,13 @@ Write four files into `archive/`:
    ```
    `INDEX.md` carries story rows only. The fun-fact ID and puzzle type for the day live in the JSON file written above — tomorrow's run reads them from there for fun-fact / puzzle dedup.
    Always append; never rewrite existing rows. Replace any literal tabs inside a headline with a single space before writing.
-4. **Update `archive/USED.json` — the rolling fun-fact / puzzle ledger (do this BEFORE creating the Gmail draft, so a crash mid-send still records the choice).** Load the file read in Stage 0 (or start `{ "funfact_topics": [], "puzzle_log": [] }` if absent), then:
+4. **Update `archive/USED.json` — the rolling fun-fact / puzzle / word-puzzle ledger (do this BEFORE creating the Gmail draft, so a crash mid-send still records the choice).** Load the file read in Stage 0 (or start `{ "funfact_topics": [], "puzzle_log": [], "word_puzzle_log": [] }` if absent), then:
    - Append `{ "date": today, "topic_key": <fun fact topic_key>, "text": <fun fact one-liner> }` to `funfact_topics`.
    - Append `{ "date": today, "type": <internal puzzle type>, "title_key": <puzzle title_key> }` to `puzzle_log`.
-   - **Prune:** drop `funfact_topics` entries older than 60 days and `puzzle_log` entries older than 30 days (compare against today's SGT date).
+   - Append `{ "date": today, "type": <internal word-puzzle type>, "title_key": <word-puzzle title_key> }` to `word_puzzle_log`.
+   - **Prune:** drop `funfact_topics` entries older than 60 days and `puzzle_log` / `word_puzzle_log` entries older than 30 days (compare against today's SGT date).
    - Write the file back as pretty-printed JSON. This file is committed with the rest of the archive (it is intentionally NOT gitignored — it is the dedup memory).
-   If today is a skipped day (Stage 3 hard-stop), do not append fun-fact/puzzle entries (none were chosen).
+   If today is a skipped day (Stage 3 hard-stop), do not append fun-fact/puzzle/word-puzzle entries (none were chosen).
 
 ### 4c. Commit and push to `main` — authorized
 
@@ -480,10 +558,10 @@ If the push to `main` fails with a 403 or other permission error:
 - Spectrum lines should be observational, not editorial. "The Guardian frames X as Y; The Telegraph emphasizes Z." Not "The Guardian shamefully ignored Z."
 - No emojis in headlines, summaries, or spectrum / bias text. The only emojis permitted are those already baked into the template's tab titles and the section markers:
   - Subject prefix: ☕
-  - Tab titles: 🇸🇬 Singapore, 🇮🇳 India, 🌍 Global / Geopolitics, 💻 Tech & AI, 📈 Business & Markets, 🎾🏏🏎️ Sports, ✦ Fun Fact, 🧩 Puzzle
+  - Tab titles: 🇸🇬 Singapore, 🇮🇳 India, 🇬🇧 UK News, 🌍 Global / Geopolitics, 💻 Tech & AI, 📈 Business & Markets, 🎾🏏🏎️ Sports, 🔬 Other Miscellaneous News, ✦ Fun Fact, 🧩 Puzzle, 🔤 Word Puzzles
   - Sports item headline prefixes (use to mark the sport): 🎾 (tennis), 🏏 (cricket), 🏎️ (F1)
-  - Email digest section headers reuse the tab-title emoji above; the email carries no fun-fact or puzzle markers.
-  - Do not invent new emoji uses. Do not add country flags to non-Singapore/India items, decorative emojis to summaries, etc.
+  - Email digest section headers reuse the tab-title emoji above (the eight news sections); the email carries no fun-fact, puzzle, or word-puzzle markers.
+  - Do not invent new emoji uses. Country flags are limited to the Singapore (🇸🇬), India (🇮🇳), and UK News (🇬🇧) tab titles — do not add flags to non-flag tabs, decorative emojis to summaries, etc.
 
 ---
 

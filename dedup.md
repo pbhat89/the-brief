@@ -27,6 +27,7 @@ The EXCLUDE set is the union of signals from the last 2-3 days, partitioned by i
 - **Stories** — union of all `short-hash` values, plus a "soft" set of `(key-entities, event)` tuples for entity-based matching when hashes don't match but the story is clearly the same. Window: last 2-3 days (from `INDEX.md` / per-day JSON).
 - **Fun facts** — set of `topic_key` values from `USED.json.funfact_topics` dated within the last **30 days** (see §7).
 - **Puzzles** — set of `type` values from the last **4 days** plus `title_key` values from the last **30 days**, both from `USED.json.puzzle_log` (see §8).
+- **Word puzzles** — set of `type` values from the last **4 days** plus `title_key` values from the last **30 days**, both from `USED.json.word_puzzle_log` (see §8b). Tracked separately from the lateral-thinking puzzle above.
 
 The STORY window is 2-3 days: always include yesterday and the day before; include 3 days back when the topical density warrants it (e.g., a multi-day rolling story like an election or trial). Default story window is 3 days. The fun-fact and puzzle windows are the longer 30/4-day windows above, which is why they are tracked in `USED.json` rather than only the per-day files.
 
@@ -128,6 +129,18 @@ Puzzle TYPE rotates across: `visual`, `logic`, `quantitative`, `lateral`. Backed
 - **Title:** today's `title_key` must NOT appear in `USED.json.puzzle_log` within the last **30 days**, regardless of type. If it collides, pick a different puzzle.
 - Beyond those hard rules, prefer types not seen recently when a free choice exists.
 
+## 8b. Word Puzzle Dedup
+
+The brief carries a SECOND, separate daily puzzle — the **Word Puzzle** (NYT-style word game) — tracked independently of the lateral-thinking puzzle in §8. Word-puzzle TYPE rotates across: `grouping`, `ladder`, `anagram`, `spellingbee`, `letterboxed`, `minicross`. Backed by `archive/USED.json.word_puzzle_log`.
+
+**`title_key`.** Same normalization as §8: lowercase, kebab-case, articles stripped (e.g. "Hidden in Plain Sight" → `hidden-in-plain-sight`).
+
+**Rules:**
+- **Type:** today's `type` must NOT equal any `type` used in the last **4 days** (`USED.json.word_puzzle_log`). With six formats and a 4-day window the rotation is always satisfiable.
+- **Title:** today's `title_key` must NOT appear in `USED.json.word_puzzle_log` within the last **30 days**, regardless of type. If it collides, pick a different puzzle.
+- **Answer set (content) repeat:** do not reuse the same core answer set within **30 days** even under a new title — a grouping puzzle with the same 16 words, a ladder with the same endpoints, or a Spelling Bee with the same letter bag is a repeat. This is the "same word doesn't come up again" guarantee.
+- Prefer formats not seen recently when a free choice exists.
+
 ## 9. Writing the Archive After the Run
 
 At the end of the daily routine, write three artifacts under `/archive`:
@@ -172,20 +185,21 @@ At the end of the daily routine, write three artifacts under `/archive`:
 
 3. **`archive/YYYY-MM-DD.html`** — the rendered brief, produced from `template.html`.
 
-4. **`archive/USED.json`** — the rolling fun-fact / puzzle ledger. Load the existing file (or start `{ "funfact_topics": [], "puzzle_log": [] }`), then:
+4. **`archive/USED.json`** — the rolling fun-fact / puzzle / word-puzzle ledger. Load the existing file (or start `{ "funfact_topics": [], "puzzle_log": [], "word_puzzle_log": [] }`), then:
 
    ```json
    {
-     "funfact_topics": [ { "date": "YYYY-MM-DD", "topic_key": "octopus", "text": "Octopuses have three hearts." } ],
-     "puzzle_log":     [ { "date": "YYYY-MM-DD", "type": "logic", "title_key": "two-trains-and-a-bird" } ]
+     "funfact_topics":  [ { "date": "YYYY-MM-DD", "topic_key": "octopus", "text": "Octopuses have three hearts." } ],
+     "puzzle_log":      [ { "date": "YYYY-MM-DD", "type": "logic", "title_key": "two-trains-and-a-bird" } ],
+     "word_puzzle_log": [ { "date": "YYYY-MM-DD", "type": "grouping", "title_key": "hidden-in-plain-sight" } ]
    }
    ```
 
    Rules:
-   - Append today's fun-fact entry to `funfact_topics` and today's puzzle entry to `puzzle_log`.
-   - Prune `funfact_topics` to the last **60 days** and `puzzle_log` to the last **30 days** (relative to today's SGT date). The 60-day fun-fact retention gives headroom above the 30-day enforcement window so an edge-of-window topic is never lost early.
+   - Append today's fun-fact entry to `funfact_topics`, today's puzzle entry to `puzzle_log`, and today's word-puzzle entry to `word_puzzle_log`.
+   - Prune `funfact_topics` to the last **60 days** and `puzzle_log` / `word_puzzle_log` to the last **30 days** (relative to today's SGT date). The 60-day fun-fact retention gives headroom above the 30-day enforcement window so an edge-of-window topic is never lost early.
    - This file IS committed (it is the dedup memory; do not gitignore it).
-   - On a skipped day, write no fun-fact/puzzle entries (none were chosen) but still prune.
+   - On a skipped day, write no fun-fact/puzzle/word-puzzle entries (none were chosen) but still prune.
 
 All four writes happen atomically at the end of the routine. If any write fails, none are committed (so a partial archive never poisons tomorrow's EXCLUDE set).
 
