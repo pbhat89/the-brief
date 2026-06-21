@@ -404,3 +404,36 @@ is empty until the first run.
 2026-06-21	Tiafoe routs Altmaier to set up an all-American Halle final	00f04f8c	frances tiafoe,daniel altmaier,halle open,final,tennis
 2026-06-21	India sweep Afghanistan 3-0 as Jaiswal hits a century	47e10378	india,afghanistan,jaiswal,prasidh krishna,odi
 2026-06-21	Australia thrash the Netherlands by 98 runs at the Women's T20 World Cup	cec6f532	australia,netherlands,womens t20 world cup,southampton,cricket
+2026-06-22	Three Malaysians charged after collecting S$200,000 for a scam syndicate	c04daeca	malaysians,scam syndicate,singapore police,charged
+2026-06-22	Singapore electricity tariff set to rise from July as gas prices climb	4ade349c	ema,electricity tariff,singapore,gas prices,rise
+2026-06-22	HDB launches 6,952 BTO flats including the first ever in Lakeview	6502994b	hdb,bto flats,lakeview,singapore,launch
+2026-06-22	Counterfeit Sanrio seller fined S$13,000 as director jailed eight months	404ea6da	sanrio,counterfeit,gem story biz,trade marks act,jailed
+2026-06-22	Operation Sindhu evacuates over 4,400 Indians from Iran and Israel	bc0570fd	operation sindhu,india,iran,israel,evacuation
+2026-06-22	Modi leads the 12th International Yoga Day at Kolkata's Red Road	f52edc45	narendra modi,international yoga day,kolkata,red road,leads
+2026-06-22	Railway worker killed as Avadh Assam Express hits a trolley in Bihar	3eaa2b99	avadh assam express,bihar,katihar,railway,killed
+2026-06-22	Update: IMD forecasts very heavy rain over northeast India as monsoon nears Delhi	9b54825c	imd,monsoon,northeast india,delhi,forecast
+2026-06-22	Update: Starmer pressed to set a departure date as Burnham enters the Commons	6c0a11e4	keir starmer,andy burnham,labour,commons,departure
+2026-06-22	Met Office issues an amber extreme-heat warning as June record is threatened	38614dfd	met office,heatwave,amber warning,england,record
+2026-06-22	Farage breached MPs' rules 17 times over £384,000 in unregistered interests	b4118e19	nigel farage,reform uk,standards commissioner,interests,breach
+2026-06-22	Tribunal finds an NHS trust discriminated against eight nurses over a changing room	85173074	employment tribunal,nhs trust,nurses,county durham,discrimination
+2026-06-22	Russian-occupied Crimea halts civilian fuel sales after Ukrainian strikes	bff17566	crimea,ukraine,aksyonov,fuel,drone strikes
+2026-06-22	Colombia votes in a knife-edge runoff between de la Espriella and Cepeda	cd3a19a8	colombia,de la espriella,ivan cepeda,runoff,election
+2026-06-22	Poland strips Zelensky of its top honour in a WWII-era history dispute	1018a32b	poland,zelensky,nawrocki,order of the white eagle,dispute
+2026-06-22	Zimbabwe parliament passes a bill scrapping direct presidential elections	f2c326c3	zimbabwe,national assembly,mnangagwa,constitution,elections
+2026-06-22	Spain thrash Saudi Arabia 4-0 as Yamal and Oyarzabal star at the World Cup	52ae62b4	spain,saudi arabia,lamine yamal,oyarzabal,world cup
+2026-06-22	Pacific Fusion's Series A tops $1 billion, the largest in the fusion sector	8afde4ef	pacific fusion,series a,fusion energy,funding,techcrunch
+2026-06-22	Qualcomm in talks to buy Jim Keller's Tenstorrent for up to $10 billion	fb1313aa	qualcomm,tenstorrent,jim keller,acquisition,ai chips
+2026-06-22	SpaceX agrees a $60 billion takeover of AI coding startup Cursor	b0031844	spacex,anysphere,cursor,takeover,bloomberg
+2026-06-22	OpenAI reportedly prepares a confidential IPO filing at a $730 billion valuation	b3073f63	openai,ipo,valuation,filing,reuters
+2026-06-22	Wall Street reopens after Juneteenth to a data-heavy week and a hawkish Fed	4c0666ad	wall street,federal reserve,juneteenth,gdp,inflation
+2026-06-22	Oil holds near $80 as US-Iran talks in Geneva are abruptly postponed	bc290d83	brent crude,wti,oil,us-iran talks,geneva
+2026-06-22	Update: SpaceX shares swing after a record IPO week as leveraged ETFs pile in	82bea967	spacex,spcx,ipo,leveraged etfs,shares
+2026-06-22	Tiafoe beats Fritz to win his first grass title at the Halle Open	df599b10	frances tiafoe,taylor fritz,halle open,final,tennis
+2026-06-22	Noskova beats Pegula in the Berlin final to close on the top 10	d561783b	linda noskova,jessica pegula,berlin open,final,tennis
+2026-06-22	Cerundolo beats Paul for his first ATP 500 title at Queen's Club	95916d77	francisco cerundolo,tommy paul,queens club,final,tennis
+2026-06-22	South Africa beat India by six wickets at the Women's T20 World Cup	903f827c	south africa,india,marizanne kapp,womens t20 world cup,cricket
+2026-06-22	Antonelli leads the F1 title race as the Austrian Grand Prix looms	93f514d3	kimi antonelli,lewis hamilton,formula 1,austrian grand prix,standings
+2026-06-22	JUNO neutrino observatory delivers a landmark first precision measurement	85ab4e41	juno,neutrino,oscillation,observatory,measurement
+2026-06-22	Webb measures a black hole that formed before its own galaxy	5bca7e51	james webb space telescope,black hole,early universe,galaxy,nasa
+2026-06-22	Ancient DNA shows plague was killing humans 5,500 years ago	410d8ba6	plague,ancient dna,lake baikal,siberia,nature
+2026-06-22	Study finds developing neurons break their own DNA to build the brain	c6e7a6bd	neurons,dna,brain development,cerebral cortex,nature

@@ -84,6 +84,11 @@
       "date": "2026-06-21",
       "topic_key": "anglo-zanzibar war",
       "text": "The Anglo-Zanzibar War of 1896 was the shortest war in history, lasting under 45 minutes."
+    },
+    {
+      "date": "2026-06-22",
+      "topic_key": "flamingo",
+      "text": "Flamingos are not born pink."
     }
   ],
   "puzzle_log": [
@@ -171,7 +176,18 @@
       "date": "2026-06-21",
       "type": "logic",
       "title_key": "one-question-two-guards"
+    },
+    {
+      "date": "2026-06-22",
+      "type": "quantitative",
+      "title_key": "two-candles"
     }
   ],
-  "word_puzzle_log": []
+  "word_puzzle_log": [
+    {
+      "date": "2026-06-22",
+      "type": "grouping",
+      "title_key": "tack-it-on"
+    }
+  ]
 }
