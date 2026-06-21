@@ -64,6 +64,13 @@
   .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
   .answer.show{display:block;animation:fade .3s ease}
   .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .wpuzzle-box{background:linear-gradient(135deg,#0e1a1a,#0d1620);border:1px solid #234a44;border-left:3px solid #16a085;padding:24px 28px;border-radius:2px}
+  .wptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#16a085;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .wpuzzle-box .puzzle-title{color:#cdeae3}
+  .wpuzzle-box .puzzle-how{color:#8fb8ac;background:#08140f;border-left-color:#1a6a5a}
+  .wpuzzle-box .puzzle-q{color:#dfeae6;font-family:'Source Sans 3',sans-serif}
+  .wpuzzle-box .answer{color:#bfe0d6}
+  .wpuzzle-box .answer .alabel{color:#16a085}
   .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
   .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
   @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
@@ -82,7 +89,7 @@
   <div class="tabs" id="tabs"></div>
   <div id="content"></div>
   <div class="rule" style="margin-top:48px"></div>
-  <div class="metrics">⏱ Compiled Sunday, 21 June 2026 · 🔍 64 web searches · tap any source to read in full</div>
+  <div class="metrics">⏱ Compiled Sunday, 21 June 2026 · 🔍 84 web searches · tap any source to read in full</div>
   <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
 </div>
 
@@ -92,11 +99,11 @@
    Do NOT touch anything below this comment block other than the data inside
    SECTIONS, FUN_FACT, and PUZZLE.
 
-   SECTIONS shape — eight entries in this exact order:
-     id    : one of "sg" | "india" | "geo" | "tech" | "biz" | "sports" | "fun" | "puzzle"
+   SECTIONS shape — eleven entries in this exact order:
+     id    : one of "sg" | "india" | "uk" | "geo" | "tech" | "biz" | "sports" | "misc" | "fun" | "puzzle" | "wpuzzle"
      title : tab label as shown in the chip row (use the emoji prefixes shown below)
      color : hex color used for the active-tab fill and the section's gradient rule
-     items : array of news items (only for the 6 news tabs; fun/puzzle use custom flag)
+     items : array of news items (only for the 8 news tabs; fun/puzzle/wpuzzle use custom flag)
        headline : string — declarative headline, no clickbait
        summary  : string — 1-2 specific sentences with names, numbers, outcomes
        source   : string — outlet name (must be on the allowed list for this tab)
@@ -118,6 +125,13 @@
      how      : one-line "how to approach" hint
      question : the puzzle itself; supports \n for line breaks
      answer   : the answer; supports \n for line breaks; appears inside a toggle
+
+   WORD_PUZZLE shape (separate, daily word game — NYT-style, static reveal):
+     type     : one of "Connections" | "Word Ladder" | "Anagram" | "Spelling Bee" | "Letter Boxed" | "Mini Crossword"
+     title    : short evocative name for the word puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle body; supports \n for line breaks (grids render as pre-formatted text)
+     answer   : the answer; supports \n for line breaks; appears inside its own toggle (id "wpans")
 ============================================================================= */
 
 const SECTIONS = [
@@ -151,6 +165,24 @@ const SECTIONS = [
     { headline:"Monsoon set to miss Delhi&rsquo;s normal June 27 onset as Mumbai gets a yellow alert",
       summary:"The India Meteorological Department said the southwest monsoon is unlikely to reach Delhi by its usual June 27 onset date, with pre-monsoon heat persisting in the capital. Mumbai was placed under a yellow alert for thunderstorms and gusty winds on June 22 and 23 as moisture builds over the Arabian Sea.",
       source:"The Hindu", url:"https://www.thehindu.com/sci-tech/energy-and-environment/", date:"Jun 20",
+      spectrum:null, bias:null },
+  ]},
+  { id:"uk", title:"🇬🇧 UK News", color:"#3949ab", items:[
+    { headline:"Andy Burnham wins the Makerfield by-election, returning to Parliament",
+      summary:"Greater Manchester mayor Andy Burnham won the Makerfield by-election on June 18 with about 54.8% of the vote, beating Reform UK&rsquo;s candidate by roughly 9,200 votes to return to the Commons for the first time since 2017. The result fuels speculation about a future Labour leadership challenge to Sir Keir Starmer, who says he will fight any contest.",
+      source:"Sky News", url:"https://news.sky.com/politics", date:"Jun 18",
+      spectrum:null, bias:null },
+    { headline:"Bank of England holds interest rates at 3.75% for a fourth meeting running",
+      summary:"The Monetary Policy Committee voted 7-2 on June 18 to keep Bank Rate at 3.75%, with two members preferring a rise to 4%, as CPI inflation eased to 2.8%. The Bank warned inflation could climb back above 3% later in 2026 on volatile energy prices, after the economy shrank 0.1% in April.",
+      source:"BBC", url:"https://www.bbc.co.uk/news/business", date:"Jun 18",
+      spectrum:null, bias:null },
+    { headline:"Met Office issues an amber extreme-heat warning as a UK heatwave builds",
+      summary:"The Met Office issued an amber extreme-heat warning for parts of England and Wales covering June 22 and 23, with temperatures forecast to reach the mid-30s Celsius and roughly a 40% chance of beating the June record of 35.6C. The UK Health Security Agency issued its first amber heat-health alert of 2026 for southern and central England.",
+      source:"BBC", url:"https://www.bbc.co.uk/weather", date:"Jun 20",
+      spectrum:null, bias:null },
+    { headline:"Resident doctors suspend strikes to vote on a 6.6% government pay offer",
+      summary:"The British Medical Association&rsquo;s Resident Doctors Committee called off strikes planned for June 15-19 and opened a member referendum on a government offer averaging a 6.6% pay uplift by April 2027, plus up to 4,500 new training posts. The vote opened on June 18 and closes at noon on June 26.",
+      source:"BBC", url:"https://www.bbc.co.uk/news/health", date:"Jun 19",
       spectrum:null, bias:null },
   ]},
   { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
@@ -208,8 +240,26 @@ const SECTIONS = [
       summary:"Australia kept up their unbeaten Women&rsquo;s T20 World Cup run with a 98-run win over the Netherlands in Southampton on June 20, tightening their grip on top spot in Group 1.",
       source:"ESPNcricinfo", url:"https://www.espncricinfo.com/series/icc-women-s-t20-world-cup-2026-1483859/australia-women-vs-netherlands-women-14th-match-group-1-1490690/full-scorecard", date:"Jun 20", spectrum:null, bias:null },
   ]},
+  { id:"misc", title:"🔬 Other Miscellaneous News", color:"#1abc9c", items:[
+    { headline:"JWST detects salt clouds on the cold &lsquo;pink&rsquo; planet GJ504b, 57 light-years away",
+      summary:"Astronomers led by Northwestern&rsquo;s Aneesh Baburaj used the James Webb Space Telescope to find chloride and sulfide salt clouds shaping the atmosphere of GJ504b, a roughly 550F, 25-Jupiter-mass companion 57 light-years away. The work, published in The Astrophysical Journal, offers some of the first direct evidence of the salt clouds long theorized for such cold worlds.",
+      source:"Scientific American", url:"https://www.scientificamerican.com/article/salty-clouds-discovered-on-pink-puffball-planet/", date:"Jun 18", spectrum:null, bias:null },
+    { headline:"NASA&rsquo;s Lucy flyby reveals asteroid Donaldjohanson as a tumbling contact binary",
+      summary:"Data from NASA&rsquo;s Lucy spacecraft show the 9-kilometre asteroid Donaldjohanson tumbling on two axes and bearing water-altered clay minerals, with the bilobed rock dated to a collision roughly 150-155 million years ago. The Southwest Research Institute&rsquo;s Simone Marchi led the study, published in Science.",
+      source:"Scientific American", url:"https://www.scientificamerican.com/article/nasas-lucy-mission-reveals-an-asteroids-hidden-history/", date:"Jun 18", spectrum:null, bias:null },
+    { headline:"JWST &lsquo;cosmic imposters&rsquo; turn out to be nearby brown dwarfs, not distant galaxies",
+      summary:"Two ultracool objects, Bullet-BD1 and Bullet-BD2, first flagged as far-distant young galaxies in James Webb observations of the Bullet Cluster, were shown by spectroscopic follow-up to be among the lowest-mass, lowest-temperature brown dwarfs known, with surface temperatures around 125C and 27C, residing in our own Milky Way.",
+      source:"Scientific American", url:"https://www.scientificamerican.com/article/jwst-catches-cosmic-imposters-spoofing-faraway-galaxies/", date:"Jun 19", spectrum:null, bias:null },
+    { headline:"Burned bones suggest human ancestors used fire 1.79 million years ago",
+      summary:"A PLOS One study using infrared spectroscopy and luminescence to detect burning on bone found Homo erectus likely used fire deep inside South Africa&rsquo;s Wonderwerk Cave as far back as 1.79 million years ago, pushing back the earliest cave-fire evidence by hundreds of thousands of years.",
+      source:"Scientific American", url:"https://www.scientificamerican.com/article/ancient-human-ancestors-may-have-first-used-fire-1-79-million-years-ago/", date:"Jun 19", spectrum:null, bias:null },
+    { headline:"A wooden &lsquo;prototype Stonehenge&rsquo; built 500 years earlier aligned with the solstices",
+      summary:"New analysis of 48 pits at a Bulford site about five kilometres from Stonehenge, dated to around 2950 BCE, indicates two wooden poles set 120 metres apart pointed within one degree of the summer and winter solstice sun. The Wessex Archaeology team led by Phil Harding suggests it was a temporary ritual site predating the stone circle by about 500 years.",
+      source:"Scientific American", url:"https://www.scientificamerican.com/article/ancient-worshipers-gathered-at-a-prototype-stonehenge-to-celebrate-the-solstices-new-analysis-reveals/", date:"Jun 18", spectrum:null, bias:null },
+  ]},
   { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
   { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
+  { id:"wpuzzle", title:"🔤 Word Puzzles", color:"#16a085", custom:"wpuzzle" },
 ];
 
 const FUN_FACT = {
@@ -223,6 +273,14 @@ const PUZZLE = {
   how: "You cannot trust either answer on its own — so design a question whose answer is routed through BOTH guards, cancelling out the lie.",
   question: "You reach a fork in the road. One path leads to freedom, the other to certain doom, but you do not know which is which.\nTwo guards stand at the fork: one always tells the truth, the other always lies, and you cannot tell them apart.\nYou may ask only ONE yes/no question, to ONE of the guards, and then you must choose a path.\nWhat single question guarantees you pick the path to freedom?",
   answer: "Ask either guard: &lsquo;If I asked the OTHER guard whether the left path leads to freedom, would he say yes?&rsquo; Then take the OPPOSITE of the answer.\n\nWhy it works: ask the truth-teller and he honestly reports the liar&rsquo;s false answer; ask the liar and he falsely reports the truth-teller&rsquo;s true answer. Either way the reply is the reverse of the truth.\n\nSo if the guard says &lsquo;yes,&rsquo; the left path is NOT freedom — take the right path. If he says &lsquo;no,&rsquo; take the left path."
+};
+
+const WORD_PUZZLE = {
+  type: "Connections",
+  title: "Common Ground",
+  how: "Each group of four shares the SAME hidden word, added AFTER every entry to make a compound word. Find the four hidden words.",
+  question: "Sort these 16 words into 4 groups of 4. Every word in a group becomes a compound word when the SAME hidden word is added after it.\n\nCAT · WATER · BLUE · FARM · SWORD · RAIN · STRAW · LIGHT\nJELLY · FREE · BLACK · GREEN · STAR · PIT · RASP · WARE\n\nWatch out: a few words could take more than one ending — only one grouping makes all four sets work at once.",
+  answer: "The four hidden words are FISH, FALL, BERRY and HOUSE.\n\n+ FISH: CAT, SWORD, JELLY, STAR (catfish, swordfish, jellyfish, starfish)\n+ FALL: WATER, RAIN, FREE, PIT (waterfall, rainfall, freefall, pitfall)\n+ BERRY: BLUE, STRAW, BLACK, RASP (blueberry, strawberry, blackberry, raspberry)\n+ HOUSE: FARM, LIGHT, GREEN, WARE (farmhouse, lighthouse, greenhouse, warehouse)\n\nThe traps: BLACK (blackfish), BLUE (bluefish), FREE (free house) and CAT (cathouse) all look like they could switch groups — but only this split fills every set with exactly four."
 };
 
 /* =============================================================================
@@ -244,7 +302,17 @@ function renderPuzzle(){
   h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
   return h;
 }
-function toggleAns(btn){var a=document.getElementById('ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+function renderWordPuzzle(){
+  let h='<div class="sec-title">🔤 Word Puzzle of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#16a085,transparent)"></div>';
+  h+='<div class="wpuzzle-box"><span class="wptype">'+WORD_PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+WORD_PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+WORD_PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+WORD_PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this,\'wpans\')">Show Answer</button>';
+  h+='<div class="answer" id="wpans"><span class="alabel">Answer</span>'+WORD_PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn,ansId){var a=document.getElementById(ansId||'ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
 
 function render(){
   const tabs=document.getElementById('tabs');const content=document.getElementById('content');
@@ -261,6 +329,7 @@ function render(){
     const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
     if(sec.custom==="fun"){div.innerHTML=renderFun();}
     else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else if(sec.custom==="wpuzzle"){div.innerHTML=renderWordPuzzle();}
     else{
       let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
       sec.items.forEach(it=>{
