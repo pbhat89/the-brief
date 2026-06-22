@@ -437,3 +437,36 @@ is empty until the first run.
 2026-06-22	Webb measures a black hole that formed before its own galaxy	5bca7e51	james webb space telescope,black hole,early universe,galaxy,nasa
 2026-06-22	Ancient DNA shows plague was killing humans 5,500 years ago	410d8ba6	plague,ancient dna,lake baikal,siberia,nature
 2026-06-22	Study finds developing neurons break their own DNA to build the brain	c6e7a6bd	neurons,dna,brain development,cerebral cortex,nature
+2026-06-23	Three men charged over an alleged US$18 million fake 'made in Singapore' mattress scam	3e2c86ca	singapore,mattress scam,us tariffs,customs
+2026-06-23	CNA tops Singapore's online news rankings, with Mothership second	a25e317c	singapore,reuters institute,cna,mothership
+2026-06-23	Man jailed 11 weeks for filming upskirt videos of four women at VivoCity	2d500061	singapore,voyeurism,vivocity,court
+2026-06-23	Yishun mother jailed four years for giving her teenage son methamphetamine	782f2fcf	singapore,drugs,methamphetamine,court
+2026-06-23	India's top court reconsiders a 1908 rule excluding children of Parsi women	7d8f143b	india,supreme court,parsi,gender
+2026-06-23	India records its driest June in over a century as the monsoon finally reaches Mumbai	d318b10b	india,monsoon,rainfall deficit,mumbai
+2026-06-23	Modi commissions three indigenous warships in a single day at Kolkata	4ff68f55	india,modi,indian navy,warships
+2026-06-23	India beat New Zealand 2-0 to win the FIH Women's Nations Cup	78a68596	india,womens hockey,fih nations cup,new zealand
+2026-06-23	Update: Keir Starmer resigns as UK prime minister, triggering a Labour leadership contest	c7aa9efd	uk,keir starmer,labour,andy burnham
+2026-06-23	UK borrowing hit GBP23.3 billion in May, GBP5.6bn above forecast	ed45cfbf	uk,public borrowing,ons,obr
+2026-06-23	Met Office issues a rare red extreme-heat warning as the UK's June record looks set to fall	176b2d11	uk,met office,heatwave,temperature record
+2026-06-23	Two men jailed over arson attacks on properties linked to Keir Starmer	54bb6427	uk,arson,starmer,old bailey
+2026-06-23	Update: US and Iran agree a 60-day roadmap toward a final deal in Switzerland	c931c7e8	united states,iran,switzerland talks,nuclear
+2026-06-23	Update: De la Espriella wins Colombia's presidential runoff as Cepeda vows to contest	843919d9	colombia,de la espriella,cepeda,election
+2026-06-23	China adds 10 US firms, including rare-earth miners, to its export-control list	ebc09082	china,united states,rare earths,export controls
+2026-06-23	France closes 845 schools as a second heat dome pushes Europe toward 44C	45383937	europe,france,heatwave,spain
+2026-06-23	Two teenagers arrested after a school shooting in the Philippines kills three	ab0c1157	philippines,tacloban,school shooting
+2026-06-23	SpaceX signs a compute deal worth up to $6.3 billion with open-source lab Reflection AI	08bb7340	spacex,reflection ai,nvidia,compute
+2026-06-23	Groq confirms a $650 million raise and rebuilds after Nvidia's $20 billion talent deal	3fdea98e	groq,nvidia,funding,ai chips
+2026-06-23	Google DeepMind invests $75 million in studio A24 to build AI filmmaking tools	e94bc8ae	google deepmind,a24,ai filmmaking,investment
+2026-06-23	Microsoft and Chevron plan a 2.67-gigawatt gas plant to power a West Texas data centre	d14c5d83	microsoft,chevron,data center,texas
+2026-06-23	Alphabet suffers its worst day in over a year as two top AI researchers defect	25395171	alphabet,google,ai talent,stocks
+2026-06-23	AeroVironment sinks 11% on a restatement as Salesforce extends its losing streak	c7ced8d3	aerovironment,salesforce,super micro,stocks
+2026-06-23	Jio Platforms files for what would be India's biggest-ever IPO	2c9616ae	jio platforms,reliance,ipo,sebi
+2026-06-23	The yen languishes near multi-decade lows despite a $72.8 billion intervention and a BOJ hike	ba2d9a0a	japan,yen,bank of japan,intervention
+2026-06-23	Mercedes weigh team orders for Russell and Antonelli as Hamilton's title threat grows	f702da4e	formula 1,mercedes,antonelli,hamilton
+2026-06-23	West Indies beat Sri Lanka to move closer to the Women's T20 World Cup semis	e56d21ef	cricket,womens t20 world cup,west indies,sri lanka
+2026-06-23	Bangladesh stun Pakistan as hosts England stay unbeaten at the Women's T20 World Cup	012cc227	cricket,womens t20 world cup,bangladesh,england
+2026-06-23	Jack Draper wins his first match under new coach Andy Murray at Eastbourne	237f0bef	tennis,jack draper,andy murray,eastbourne
+2026-06-23	NASA's Roman Space Telescope arrives in Florida for final launch preparations	a8a88d2d	nasa,roman space telescope,kennedy space center
+2026-06-23	NASA's Lucy reveals a wobbling, peanut-shaped asteroid with signs of ancient water	13a32dc0	nasa,lucy,donaldjohanson,asteroid
+2026-06-23	A tropical butterfly that barely ages could hold clues to longevity	6e81604a	heliconius,butterfly,longevity,ageing
+2026-06-23	T. rex took about 40 years to reach full size, a new fossil study finds	8fb73f49	t rex,dinosaur,growth study,paleontology

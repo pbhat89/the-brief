@@ -89,6 +89,11 @@
       "date": "2026-06-22",
       "topic_key": "flamingo",
       "text": "Flamingos are not born pink."
+    },
+    {
+      "date": "2026-06-23",
+      "topic_key": "shark",
+      "text": "Sharks are older than trees."
     }
   ],
   "puzzle_log": [
@@ -181,6 +186,11 @@
       "date": "2026-06-22",
       "type": "quantitative",
       "title_key": "two-candles"
+    },
+    {
+      "date": "2026-06-23",
+      "type": "lateral",
+      "title_key": "same-hour-not-twins"
     }
   ],
   "word_puzzle_log": [
@@ -188,6 +198,11 @@
       "date": "2026-06-22",
       "type": "grouping",
       "title_key": "tack-it-on"
+    },
+    {
+      "date": "2026-06-23",
+      "type": "ladder",
+      "title_key": "from-less-to-more"
     }
   ]
 }
