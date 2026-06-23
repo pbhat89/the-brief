@@ -94,6 +94,11 @@
       "date": "2026-06-23",
       "topic_key": "shark",
       "text": "Sharks are older than trees."
+    },
+    {
+      "date": "2026-06-24",
+      "topic_key": "mauna kea",
+      "text": "Measured from base to summit rather than from sea level, the tallest mountain on Earth is Hawaii’s Mauna Kea, which rises about 10,210 metres from its base on the Pacific seafloor."
     }
   ],
   "puzzle_log": [
@@ -191,6 +196,11 @@
       "date": "2026-06-23",
       "type": "lateral",
       "title_key": "same-hour-not-twins"
+    },
+    {
+      "date": "2026-06-24",
+      "type": "visual",
+      "title_key": "the-unfolded-cube"
     }
   ],
   "word_puzzle_log": [
@@ -203,6 +213,11 @@
       "date": "2026-06-23",
       "type": "ladder",
       "title_key": "from-less-to-more"
+    },
+    {
+      "date": "2026-06-24",
+      "type": "anagram",
+      "title_key": "adding-up"
     }
   ]
 }

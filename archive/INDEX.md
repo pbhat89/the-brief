@@ -470,3 +470,39 @@ is empty until the first run.
 2026-06-23	NASA's Lucy reveals a wobbling, peanut-shaped asteroid with signs of ancient water	13a32dc0	nasa,lucy,donaldjohanson,asteroid
 2026-06-23	A tropical butterfly that barely ages could hold clues to longevity	6e81604a	heliconius,butterfly,longevity,ageing
 2026-06-23	T. rex took about 40 years to reach full size, a new fossil study finds	8fb73f49	t rex,dinosaur,growth study,paleontology
+2026-06-24	Civil servants to get a 0.45-month mid-year bonus, with extra payouts for junior officers	47289325	public service division, civil servants, mid-year bonus, singapore
+2026-06-24	Just 14% of Singapore workers are engaged at work, the lowest rate in the region	499bcf87	gallup, singapore institute of directors, worker engagement, report
+2026-06-24	Household refuse collection fees to rise from 1 July in the first revision since 2024	07c33e7f	nea, refuse collection fee, hdb, increase
+2026-06-24	Driver jailed 32 weeks and fined S$6,000 over 73 mostly-staged traffic accidents	c2c6c02c	singapore, staged accidents, insurance fraud, jailed
+2026-06-24	Man, 59, jailed 12 weeks for exposing himself to a police officer after a Sembawang molestation	ca2ec1f9	chandru suryakanth, sembawang, outrage of modesty, jailed
+2026-06-24	George Kurian resigns as Union minister after his Rajya Sabha term ends, amid reshuffle buzz	e6f04b8b	george kurian, bjp, rajya sabha, resignation
+2026-06-24	Sensex sinks 893 points to 76,201 in its biggest June fall as weak data hits sentiment	903a5759	sensex, nifty, stock market, selloff
+2026-06-24	Vedanta slumps about 9% after a Rs 2,149-crore promoter block deal	82662baa	vedanta, twin star holdings, block deal, shares
+2026-06-24	India's flash PMI eases to a three-month low as services growth slows to a 17-month low	0071d42d	hsbc, flash pmi, services, slowdown
+2026-06-24	Kerala High Court admits the state's appeal to overturn Dileep's acquittal in the 2017 actress assault case	14964db5	kerala high court, dileep, actress assault case, appeal
+2026-06-24	Update: Streeting backs Burnham as Labour's leadership race opens, raising the prospect of a coronation	e3ebbec8	andy burnham, wes streeting, labour leadership, starmer
+2026-06-24	Bank of England scraps individual stablecoin holding limits and sets a 40 billion pound issuance cap	d02b8c35	bank of england, stablecoin, issuance cap, regulation
+2026-06-24	Update: Met Office red extreme-heat warning takes effect as England and Wales near the all-time June record	76b210da	met office, red heat warning, heat dome, june record
+2026-06-24	Labour sets out its leadership timetable, with nominations opening on 9 July and a new leader by September	aaf1ab05	labour party, leadership timetable, nominations, parliament
+2026-06-24	US Senate passes the first war powers resolution to clear both chambers, seeking to halt the Iran campaign	f842e980	us senate, war powers resolution, iran, trump
+2026-06-24	EU hosts a Taliban delegation in Brussels for the first time in talks on Afghan deportations	75745ed3	european union, taliban, brussels, afghan deportations
+2026-06-24	Iran's President Pezeshkian makes his first post-war foreign trip, to Pakistan	333161f0	pezeshkian, iran, pakistan, islamabad memorandum
+2026-06-24	Lebanon and Israel resume US-mediated talks as a fragile Hezbollah ceasefire holds	b70e7902	lebanon, israel, ceasefire, washington talks
+2026-06-24	South Africa sees deadly anti-migrant attacks and mass repatriations ahead of a 30 June deadline	95935b32	south africa, xenophobia, repatriation, migrants
+2026-06-24	Nvidia slips below a $5 trillion value as a chip-led selloff deepens on AI-spending worries	b6bd3f52	nvidia, micron, ai spending, selloff
+2026-06-24	Menlo Ventures raises a record $3 billion on the back of its Anthropic bet	27f76ba4	menlo ventures, anthropic, venture fund, raise
+2026-06-24	A startup, Subquadratic, emerges from stealth claiming a breakthrough on the LLM attention bottleneck	724f4364	subquadratic, llm, sparse attention, benchmark
+2026-06-24	World-model startup Odyssey raises a $310 million round at a $1.45 billion valuation	3bd1d557	odyssey, world model, series b, valuation
+2026-06-24	US Treasury issues a 60-day license letting Iran sell oil for the first time in 35 years	1efbe790	us treasury, iran, oil license, sanctions
+2026-06-24	Oil falls to a three-month low as the Iran sales waiver eases supply fears	5e99c6bb	brent crude, wti, oil prices, iran waiver
+2026-06-24	South Korea's KOSPI crashes nearly 10%, triggering a circuit breaker as Samsung and SK Hynix dive	869a74e6	kospi, south korea, circuit breaker, leveraged etfs
+2026-06-24	Wall Street sinks as a chip rout drives bets on a second Fed rate hike	749aaf86	nasdaq, s&p 500, federal reserve, kevin warsh
+2026-06-24	🏎️ F1 heads to the Red Bull Ring for the Austrian GP with Antonelli leading the title race	5ebd3aa3	formula 1, austrian grand prix, antonelli, red bull ring
+2026-06-24	🎾 Naomi Osaka beats Mertens to reach her first quarter-final of 2026 at Bad Homburg	d02f299e	naomi osaka, bad homburg, wta, grass
+2026-06-24	🏏 Australia thrash Pakistan to move to the brink of the Women's T20 World Cup semi-finals	5c26cc9a	australia, pakistan, womens t20 world cup, headingley
+2026-06-24	🏏 Athapaththu century revives Sri Lanka's Women's T20 World Cup semi-final hopes	b4cb4df2	chamari athapaththu, sri lanka, ireland, womens t20 world cup
+2026-06-24	🎾 Grigor Dimitrov notches his 50th career grass-court win in his Mallorca opener	a5330d39	grigor dimitrov, mallorca, atp, grass
+2026-06-24	The first ticking 'nuclear clocks' arrive, promising timekeeping beyond today's best atomic clocks	8fb3e18a	nuclear clock, thorium-229, timekeeping, physics
+2026-06-24	NASA's upgraded Cold Atom Lab makes quantum matter five times larger aboard the space station	a3187688	nasa, cold atom lab, bose-einstein condensate, iss
+2026-06-24	ESA's Euclid mission releases a deep new survey of the Milky Way's inner bulge	34f52a54	esa, euclid, galactic bulge survey, exoplanets
+2026-06-24	Stem-cell transplants put a severe spinal-cord and optic-nerve autoimmune disease into 15-year remission	21345b97	stem cell transplant, neuromyelitis optica, remission, autoimmune disease
