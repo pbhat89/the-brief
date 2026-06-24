@@ -506,3 +506,39 @@ is empty until the first run.
 2026-06-24	NASA's upgraded Cold Atom Lab makes quantum matter five times larger aboard the space station	a3187688	nasa, cold atom lab, bose-einstein condensate, iss
 2026-06-24	ESA's Euclid mission releases a deep new survey of the Milky Way's inner bulge	34f52a54	esa, euclid, galactic bulge survey, exoplanets
 2026-06-24	Stem-cell transplants put a severe spinal-cord and optic-nerve autoimmune disease into 15-year remission	21345b97	stem cell transplant, neuromyelitis optica, remission, autoimmune disease
+2026-06-25	Two self-radicalised Singaporeans issued ISA orders over Gaza-linked extremism	b893bc46	isd,internal security act,tarmizi mohd taha,gaza
+2026-06-25	Singapore faces a rare 'red' transboundary haze risk for the August-September window	487172fc	siia,transboundary haze,el nino,singapore
+2026-06-25	NTUC offers cash and 150 jobs to about 400 migrant workers owed wages by two firms	b5aff4f3	ntuc,ng chee meng,kpa engineering,migrant workers
+2026-06-25	Man jailed six months for molesting a Singapore Airlines stewardess mid-flight	bb7deea2	akash tiwari,singapore airlines,molestation,jailed
+2026-06-25	Man who exploited a PayPal glitch for free laptops avoids a criminal record	89ea45d5	jonathan wee jianwei,paypal,detention order,laptops
+2026-06-25	Sensex rebounds about 791 points and Nifty reclaims 24,000 on bank and IT buying	e481551a	sensex,nifty,stock market,rebound
+2026-06-25	At least four killed as an under-construction Kolkata warehouse roof collapses	ae6efa41	kolkata,taratala,warehouse collapse,ndrf
+2026-06-25	Parliament's monsoon session to run 21 July to 21 August, with Delimitation Bill set to return	e864d922	parliament,monsoon session,kiren rijiju,delimitation bill
+2026-06-25	Goyal says a 50% US tariff is delaying the India-US trade deal	f11cfaba	piyush goyal,india-us trade deal,tariff,commerce
+2026-06-25	Update: UK records its hottest June day at 36.1C as the heatwave shuts schools	b0dfab1d	met office,gosport,june heat record,heatwave
+2026-06-25	Update: Burnham to pledge loyalty to Reeves' fiscal rules as he readies an economy plan	92a7a124	andy burnham,rachel reeves,fiscal rules,labour leadership
+2026-06-25	Southern Water imposes a hosepipe ban on about a million customers as drought bites	4b254dc5	southern water,hosepipe ban,hampshire,drought
+2026-06-25	Scotland orders an urgent review of 'anomalous' business rates after a near-500% rise	268d2788	jenny gilruth,business rates,scotland,review
+2026-06-25	Niger becomes the third country to formally quit the International Criminal Court	cb9ee994	niger,international criminal court,rome statute,sahel
+2026-06-25	Gunmen kill at least 21 farmers in a massacre in Nigeria's Plateau state	7b8a273c	nigeria,plateau state,bokkos,massacre
+2026-06-25	Guyana boosts military surveillance as tensions with Venezuela over Essequibo rise	be554d40	guyana,venezuela,essequibo,omar khan
+2026-06-25	Update: Russia launches an overnight drone barrage on Ukraine as rival ceasefire offers fail	01443ee8	russia,ukraine,crimea,drone strikes
+2026-06-25	Update: Colombia's president-elect says the country will join a US-led anti-cartel bloc	32b531b7	colombia,de la espriella,shield of the americas,petro
+2026-06-25	Qualcomm to buy AI-software firm Modular for about $3.9 billion to challenge Nvidia	a604014a	qualcomm,modular,chris lattner,nvidia
+2026-06-25	AI inference startup Baseten raises $1.5 billion at a valuation of up to $13 billion	f08421ab	baseten,ai inference,altimeter,funding
+2026-06-25	Tata Electronics confirms a breach after data from an Apple and Tesla supplier leaks	1ea61cce	tata electronics,apple,tesla,data breach
+2026-06-25	Superhuman acquires AI-detection startup GPTZero	0c032485	superhuman,gptzero,edward tian,acquisition
+2026-06-25	India's MoEngage buys AI-agent startup Aampe in an all-cash deal	7c2ecb86	moengage,aampe,ai agents,acquisition
+2026-06-25	Micron guides to record $50 billion in quarterly revenue as AI memory demand booms	19f8a0ed	micron,hbm,earnings,ai memory
+2026-06-25	Gold tumbles below $4,000 for the first time since November as the dollar jumps	4a938bd1	gold,silver,dollar,federal reserve
+2026-06-25	FedEx beats on earnings but slides about 6% on a soft 2026 profit outlook	6eef0b7e	fedex,earnings,guidance,freight spin-off
+2026-06-25	Wendy's jumps 26% as Reddit traders make it the latest meme stock	d734e652	wendys,meme stock,short squeeze,steven cirulis
+2026-06-25	🏎️ Red Bull bring their biggest upgrade of the season to a tense home Austrian GP	5d203142	red bull,austrian grand prix,max verstappen,isack hadjar
+2026-06-25	🏎️ Verstappen rejects a new Red Bull deal as exit-clause talk builds before Austria	a80670bd	max verstappen,red bull,contract,exit clause
+2026-06-25	🎾 Emma Navarro stuns top seed Iga Swiatek at Bad Homburg	75968a35	emma navarro,iga swiatek,bad homburg,grass
+2026-06-25	🎾 Jack Draper reaches the Eastbourne quarter-finals in his second event under Andy Murray	88794ec0	jack draper,jack pinnington jones,andy murray,eastbourne
+2026-06-25	🏏 England become the first team into the Women's T20 World Cup semi-finals	69e09778	england,west indies,womens t20 world cup,lords
+2026-06-25	Interstellar comet 3I/ATLAS may be up to 12 billion years old, older than the Sun	288783af	3i/atlas,james webb space telescope,martin cordiner,comet
+2026-06-25	Hubble spots a tiny early galaxy that helped clear the universe's hydrogen fog	9e76ee0d	hubble space telescope,mxdfz4.4,reionization,galaxy
+2026-06-25	DNA reveals why South Africa's Cape leopards shrank to half the usual size	4ea9ebd1	cape leopard,genome,south africa,adaptation
+2026-06-25	CAR-T therapy drives deep responses in early myeloma but carries serious risks	81818af5	car-t,smoldering myeloma,nature medicine,cancer

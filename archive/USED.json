@@ -99,6 +99,11 @@
       "date": "2026-06-24",
       "topic_key": "mauna kea",
       "text": "Measured from base to summit rather than from sea level, the tallest mountain on Earth is Hawaii’s Mauna Kea, which rises about 10,210 metres from its base on the Pacific seafloor."
+    },
+    {
+      "date": "2026-06-25",
+      "topic_key": "saturn",
+      "text": "Saturn is the only planet less dense than water, so it would float."
     }
   ],
   "puzzle_log": [
@@ -201,6 +206,11 @@
       "date": "2026-06-24",
       "type": "visual",
       "title_key": "the-unfolded-cube"
+    },
+    {
+      "date": "2026-06-25",
+      "type": "logic",
+      "title_key": "island-of-knights-and-knaves"
     }
   ],
   "word_puzzle_log": [
@@ -218,6 +228,11 @@
       "date": "2026-06-24",
       "type": "anagram",
       "title_key": "adding-up"
+    },
+    {
+      "date": "2026-06-25",
+      "type": "spellingbee",
+      "title_key": "mind-your-ts"
     }
   ]
 }
