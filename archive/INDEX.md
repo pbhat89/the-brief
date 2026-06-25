@@ -542,3 +542,37 @@ is empty until the first run.
 2026-06-25	Hubble spots a tiny early galaxy that helped clear the universe's hydrogen fog	9e76ee0d	hubble space telescope,mxdfz4.4,reionization,galaxy
 2026-06-25	DNA reveals why South Africa's Cape leopards shrank to half the usual size	4ea9ebd1	cape leopard,genome,south africa,adaptation
 2026-06-25	CAR-T therapy drives deep responses in early myeloma but carries serious risks	81818af5	car-t,smoldering myeloma,nature medicine,cancer
+2026-06-26	Motorcyclist, 25, and his 21-year-old pillion die in a Yio Chu Kang crash	ed232bfe	yio chu kang,motorcycle accident,singapore,fatal crash
+2026-06-26	Property agent jailed over an Australian scheme that cost investors S$16 million	961e3bc6	wendy kwek,property scheme,mas,jailed
+2026-06-26	Man gets a lifetime driving ban for a fourth drink-driving offence	5b88c14b	kenny yeap,drink driving,lifetime ban,tampines
+2026-06-26	HDB launches about 6,900 June BTO flats, including 2,520 with short waits	7ece5931	hdb,bto,short wait flats,sembawang
+2026-06-26	Operation Sindhu winds down after evacuating 4,415 Indians from Iran and Israel	3cd2264f	operation sindhu,mea,iran,israel
+2026-06-26	India-China border trade resumes through the Lipulekh Pass after six years	3fe258b2	lipulekh pass,india,china,border trade
+2026-06-26	Centre extends emergency powers to keep Tata's Mundra plant running on weak monsoon	29b5319f	tata power,mundra,section 11,electricity
+2026-06-26	Supreme Court to hear a plea against surrendering 152 Tamil Nadu medical seats	13e56d91	supreme court,tamil nadu,medical seats,all-india quota
+2026-06-26	Update: UK breaks its June temperature record for a second straight day at 36.7C	1bfd0ba5	june heat record,merryfield,somerset,heatwave
+2026-06-26	UK private sector shrinks for a second month as the flash PMI hits a 14-month low	e84adc5b	s&p global,flash pmi,uk economy,contraction
+2026-06-26	Resident doctors in England vote on a pay deal to end strikes, with the ballot closing today	21d9ecdc	resident doctors,bma,pay offer,strikes
+2026-06-26	Met Office warns of thunderstorms, hail and flash flooding as the heatwave breaks	1fc2b6f8	thunderstorms,hail,flooding,lightning
+2026-06-26	Twin earthquakes kill at least 188 in Venezuela as buildings collapse near Caracas	41094887	venezuela,caracas,earthquake,usgs
+2026-06-26	Kenya arrests 355 as it marks two years since deadly Gen Z protests	eabc0b97	kenya,murkomen,gen z protests,nairobi
+2026-06-26	Iran's IRGC rejects a new Oman-IMO shipping route through the Strait of Hormuz	ee927f94	iran,irgc,strait of hormuz,oman
+2026-06-26	A US-backed push to unify Libya's rival governments gains ground in the east	40a60bb6	libya,massad boulos,haftar,united states
+2026-06-26	OpenAI unveils Jalapeno, its first custom AI chip, built with Broadcom	b54ce532	openai,broadcom,jalapeno,ai chip
+2026-06-26	Ex-Infosys chief Vishal Sikka launches Hang Ten Systems with $32 million	c721c88a	vishal sikka,hang ten systems,mayfield,it services
+2026-06-26	AI revenue outpaces data-center depreciation for a second straight quarter	6cd78cc7	ai revenue,data centers,depreciation,capex
+2026-06-26	Robotics startup HaloBraid raises $7 million to speed up salon hair-braiding	a8086db3	halobraid,seven seven six,robotics,funding
+2026-06-26	US Supreme Court shields Bayer from Roundup cancer-warning lawsuits	628ef7c5	bayer,roundup,supreme court,monsanto
+2026-06-26	The Fed's preferred inflation gauge hits a three-year high as May PCE reaches 4.1%	944108d8	pce,inflation,federal reserve,core pce
+2026-06-26	Apple raises Mac and iPad prices as a memory-chip shortage bites	436c0c5e	apple,microsoft,memory shortage,prices
+2026-06-26	Germany's Merck KGaA to buy Bio-Techne for $11.3 billion	949a9b39	merck kgaa,bio-techne,acquisition,life sciences
+2026-06-26	Qualcomm jumps 15% as it unveils Dragonfly data-center chips with Meta and Microsoft	973adfb3	qualcomm,dragonfly,meta,microsoft
+2026-06-26	🏎️ McLaren bring an upgraded rear wing to the Austrian GP, eyeing the top step	51aeefaf	mclaren,austrian grand prix,norris,red bull ring
+2026-06-26	🏎️ The Austrian GP weekend opens at the Red Bull Ring with Hamilton a title threat	813bb997	formula 1,austrian grand prix,hamilton,ferrari
+2026-06-26	🎾 Jack Draper thrashes Diallo 6-1, 6-4 to reach the Eastbourne semi-finals	1bbd6d35	jack draper,gabriel diallo,eastbourne,atp
+2026-06-26	🎾 Naomi Osaka reaches the Bad Homburg semi-finals with a 6-2, 6-2 win	c64b5c23	naomi osaka,alexandrova,bad homburg,wta
+2026-06-26	🏏 Shafali's 53 lifts India past Bangladesh by five wickets to keep semis alive	77ec92b3	shafali verma,india,bangladesh,womens t20 world cup
+2026-06-26	AI screen turns up new antibiotics against drug-resistant gonorrhoea	11cfa088	gonorrhoea,antibiotics,machine learning,nature
+2026-06-26	Burnt bones push possible human fire use back to 1.79 million years ago	b6e2e8e8	wonderwerk cave,fire,homo erectus,archaeology
+2026-06-26	Summer sun fails to fix a year-round vitamin D shortfall in at-risk Britons	efba5ab0	vitamin d,newcastle university,nutrition,study
+2026-06-26	Webb finds the first signs of salt clouds on a cold 'pink' world	20513f14	james webb space telescope,gj 504b,salt clouds,exoplanet

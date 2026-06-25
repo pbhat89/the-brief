@@ -104,6 +104,11 @@
       "date": "2026-06-25",
       "topic_key": "saturn",
       "text": "Saturn is the only planet less dense than water, so it would float."
+    },
+    {
+      "date": "2026-06-26",
+      "topic_key": "human microbiome",
+      "text": "You are roughly half microbe by cell count"
     }
   ],
   "puzzle_log": [
@@ -211,6 +216,11 @@
       "date": "2026-06-25",
       "type": "logic",
       "title_key": "island-of-knights-and-knaves"
+    },
+    {
+      "date": "2026-06-26",
+      "type": "quantitative",
+      "title_key": "hands-of-the-clock"
     }
   ],
   "word_puzzle_log": [
@@ -233,6 +243,11 @@
       "date": "2026-06-25",
       "type": "spellingbee",
       "title_key": "mind-your-ts"
+    },
+    {
+      "date": "2026-06-26",
+      "type": "letterboxed",
+      "title_key": "boxed-in"
     }
   ]
 }
