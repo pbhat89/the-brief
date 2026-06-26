@@ -576,3 +576,20 @@ is empty until the first run.
 2026-06-26	Burnt bones push possible human fire use back to 1.79 million years ago	b6e2e8e8	wonderwerk cave,fire,homo erectus,archaeology
 2026-06-26	Summer sun fails to fix a year-round vitamin D shortfall in at-risk Britons	efba5ab0	vitamin d,newcastle university,nutrition,study
 2026-06-26	Webb finds the first signs of salt clouds on a cold 'pink' world	20513f14	james webb space telescope,gj 504b,salt clouds,exoplanet
+2026-06-27	Update: Venezuela earthquake death toll passes 920 as rescuers race the clock	aea51ac0	venezuela,earthquake,caracas,death-toll,rescue
+2026-06-27	Update: US announces an Israel-Lebanon framework deal requiring Hezbollah to leave the south	58de25bf	israel,lebanon,hezbollah,rubio,framework-deal
+2026-06-27	IAEA chief demands a strong verification system for Iran's nuclear programme	afb34621	iaea,grossi,iran,nuclear,verification
+2026-06-27	Ukraine carries the war deep into Russia as Moscow says it downed 555 drones overnight	e3938d72	ukraine,russia,drones,overnight-strikes
+2026-06-27	OpenAI leans toward delaying its IPO to 2027 as Altman holds firm on a $1 trillion valuation	e5665009	openai,ipo,altman,valuation
+2026-06-27	Chip stocks slide again as fears mount over the cost of AI infrastructure	d6c13463	chip-stocks,softbank,micron,ai-infrastructure,selloff
+2026-06-27	AI-linked tech layoffs mount in 2026 as Oracle and Meta restructure around data centres	a52592ce	oracle,meta,layoffs,ai,data-centres
+2026-06-27	Oil drops below $70 after a cargo ship is struck near Oman and Iraq threatens to leave OPEC	f7a6ae56	oil,brent,wti,opec,iraq
+2026-06-27	ON Semiconductor agrees to buy Synaptics in a $7 billion all-stock deal	efd4399c	on-semiconductor,synaptics,acquisition,chips
+2026-06-27	Boeing wins a $3.62 billion freight-jet order from China Southern Airlines	23f07d99	boeing,china-southern,freight-jet,order
+2026-06-27	Strait of Hormuz shipping recovers but stays fragile after the first post-truce ship attack	50fe8335	strait-of-hormuz,shipping,imo,ever-lovely
+2026-06-27	🏎️ Antonelli completes a Friday sweep at the Austrian GP, topping both practice sessions	ff7049a0	f1,antonelli,austrian-gp,practice,fp2
+2026-06-27	🏎️ Cadillac's big Austrian GP upgrade is derailed as Bottas' car catches fire in FP2	42839013	f1,cadillac,bottas,fire,austrian-gp
+2026-06-27	🎾 Naomi Osaka reaches her first grass-court final, beating Wang Xinyu in Bad Homburg	adcf0c49	tennis,osaka,bad-homburg,final,wang-xinyu
+2026-06-27	🎾 Wimbledon draw: Sinner defends with Alcaraz out injured as Serena Williams is handed a wildcard	59db6038	tennis,wimbledon,draw,sinner,serena-williams,alcaraz
+2026-06-27	🎾 Jack Draper's Eastbourne run ends in the semi-finals against Ugo Humbert	8c21cb46	tennis,draper,eastbourne,humbert
+2026-06-27	🏏 England reach the Women's T20 World Cup semis as India face a must-win decider with Australia	9a0a623e	cricket,womens-t20-world-cup,england,india,australia

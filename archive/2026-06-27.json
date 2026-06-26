@@ -1,0 +1,315 @@
+{
+  "date": "2026-06-27",
+  "items": [
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "Update: Venezuela earthquake death toll passes 920 as rescuers race the clock",
+      "summary": "Officials said at least 920 people were killed and more than 3,300 injured after back-to-back magnitude-7.2 and 7.5 quakes flattened buildings near Caracas and La Guaira. The US pledged warships, transport aircraft and $150 million in aid, while Brazil and El Salvador sent rescue teams.",
+      "url": "https://www.cnn.com/2026/06/26/world/live-news/venezuela-earthquake-hnk",
+      "outlet": "CNN",
+      "publish_date": "Jun 26",
+      "short_hash": "aea51ac0",
+      "key_entities": [
+        "venezuela",
+        "earthquake",
+        "caracas",
+        "death-toll",
+        "rescue"
+      ],
+      "is_update": true
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "Update: US announces an Israel-Lebanon framework deal requiring Hezbollah to leave the south",
+      "summary": "Secretary of State Marco Rubio said Israel and Lebanon reached a US-mediated framework for lasting peace and security after four days of talks in Washington. It hinges on Hezbollah halting all fire and pulling out of southern Lebanon, while Israel keeps its buffer zone until the group disarms.",
+      "url": "https://www.aljazeera.com/news/2026/6/26/us-announces-framework-agreement-between-israel-and-lebanon",
+      "outlet": "Al Jazeera",
+      "publish_date": "Jun 26",
+      "short_hash": "58de25bf",
+      "key_entities": [
+        "israel",
+        "lebanon",
+        "hezbollah",
+        "rubio",
+        "framework-deal"
+      ],
+      "is_update": true
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "IAEA chief demands a strong verification system for Iran's nuclear programme",
+      "summary": "Rafael Grossi said inspectors must be given full access to verify Iran's nuclear work, warning of a war of statements between Washington and Tehran. Iran has agreed to readmit IAEA inspectors but has not yet opened bombed sites, and its stock of enriched uranium remains unaccounted for.",
+      "url": "https://www.aljazeera.com/news/2026/6/26/iaea-demands-strong-verification-of-irans-nuclear-programme",
+      "outlet": "Al Jazeera",
+      "publish_date": "Jun 26",
+      "short_hash": "afb34621",
+      "key_entities": [
+        "iaea",
+        "grossi",
+        "iran",
+        "nuclear",
+        "verification"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "Ukraine carries the war deep into Russia as Moscow says it downed 555 drones overnight",
+      "summary": "Russia's defence ministry said air defences destroyed 555 Ukrainian drones across several regions in one of the largest overnight barrages of the war. Kyiv has pressed long-range strikes far beyond the front, bringing the conflict home to Russian cities.",
+      "url": "https://www.aljazeera.com/news/2026/6/25/as-ukraine-seizes-first-chance-to-win-war-horrors-come-home-to-russia",
+      "outlet": "Al Jazeera",
+      "publish_date": "Jun 25",
+      "short_hash": "e3938d72",
+      "key_entities": [
+        "ukraine",
+        "russia",
+        "drones",
+        "overnight-strikes"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "OpenAI leans toward delaying its IPO to 2027 as Altman holds firm on a $1 trillion valuation",
+      "summary": "The New York Times reported OpenAI may wait until 2027 to go public rather than cut its target, with Sam Altman calling any reduction from the $1 trillion goal a non-starter. Bankers cited recent tech-stock volatility and SpaceX's post-IPO slide as reasons for caution.",
+      "url": "https://www.bloomberg.com/news/articles/2026-06-25/openai-leans-toward-waiting-until-2027-for-ipo-ny-times-says",
+      "outlet": "Bloomberg",
+      "publish_date": "Jun 26",
+      "short_hash": "e5665009",
+      "key_entities": [
+        "openai",
+        "ipo",
+        "altman",
+        "valuation"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "Chip stocks slide again as fears mount over the cost of AI infrastructure",
+      "summary": "SoftBank fell more than 5% and Micron dropped over 5% the day after blockbuster earnings, while Arm, Marvell and Intel also slid on worries that soaring AI-data-centre costs will squeeze margins. European names ASML and Infineon fell in tandem.",
+      "url": "https://www.cnbc.com/2026/06/26/global-tech-stocks-ai-infrastructure-costs-selloff-softbank-apple.html",
+      "outlet": "CNBC",
+      "publish_date": "Jun 26",
+      "short_hash": "d6c13463",
+      "key_entities": [
+        "chip-stocks",
+        "softbank",
+        "micron",
+        "ai-infrastructure",
+        "selloff"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "AI-linked tech layoffs mount in 2026 as Oracle and Meta restructure around data centres",
+      "summary": "Oracle has cut about 21,000 roles over the past year, roughly 13% of staff, redirecting savings to AI data centres, while Meta shed about 8,000 jobs and moved thousands of workers into AI roles. The reshuffle shows how the AI build-out is reshaping headcount across Big Tech.",
+      "url": "https://techcrunch.com/2026/06/22/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/",
+      "outlet": "TechCrunch",
+      "publish_date": "Jun 22",
+      "short_hash": "a52592ce",
+      "key_entities": [
+        "oracle",
+        "meta",
+        "layoffs",
+        "ai",
+        "data-centres"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Oil drops below $70 after a cargo ship is struck near Oman and Iraq threatens to leave OPEC",
+      "summary": "US crude fell about 3.5% to $69.40 and Brent slid to $74.43 as a temporary US waiver on Iranian sales added supply and traders eyed a 2026 glut. The drop held even after the Singapore-flagged Ever Lovely was hit by a projectile off Oman, with Iraq threatening to quit OPEC unless its quota is raised.",
+      "url": "https://www.cnbc.com/2026/06/26/oil-prices-middle-east-iran-strait-of-hormuz-opec-iraq-wti-brent-crude.html",
+      "outlet": "CNBC",
+      "publish_date": "Jun 26",
+      "short_hash": "f7a6ae56",
+      "key_entities": [
+        "oil",
+        "brent",
+        "wti",
+        "opec",
+        "iraq"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "ON Semiconductor agrees to buy Synaptics in a $7 billion all-stock deal",
+      "summary": "The chipmaker said it will acquire Synaptics in an all-stock transaction valued at about $7 billion in enterprise value, expanding its edge-AI and connectivity reach. It was among the biggest corporate moves on Wall Street on Friday.",
+      "url": "https://www.cnbc.com/2026/06/26/the-clubs-top-10-things-to-watch-in-the-stock-market-friday.html",
+      "outlet": "CNBC",
+      "publish_date": "Jun 26",
+      "short_hash": "efd4399c",
+      "key_entities": [
+        "on-semiconductor",
+        "synaptics",
+        "acquisition",
+        "chips"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Boeing wins a $3.62 billion freight-jet order from China Southern Airlines",
+      "summary": "China Southern ordered two 777F and five 777-8F freighters worth $3.62 billion, with options for three more 777-8F jets. The order is a notable vote of confidence in Boeing's wide-body cargo line.",
+      "url": "https://www.cnbc.com/2026/06/26/the-clubs-top-10-things-to-watch-in-the-stock-market-friday.html",
+      "outlet": "CNBC",
+      "publish_date": "Jun 26",
+      "short_hash": "23f07d99",
+      "key_entities": [
+        "boeing",
+        "china-southern",
+        "freight-jet",
+        "order"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Strait of Hormuz shipping recovers but stays fragile after the first post-truce ship attack",
+      "summary": "Traffic through the vital chokepoint is rebuilding a week after the US-Iran interim deal, but the strike on the Ever Lovely prompted the UN's IMO to pause evacuations after moving about 2,500 stranded seafarers. President Trump said the strait remains open.",
+      "url": "https://www.cnbc.com/2026/06/26/strait-of-hormuz-shipping-oil-us-iran.html",
+      "outlet": "CNBC",
+      "publish_date": "Jun 26",
+      "short_hash": "50fe8335",
+      "key_entities": [
+        "strait-of-hormuz",
+        "shipping",
+        "imo",
+        "ever-lovely"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🏎️ Antonelli completes a Friday sweep at the Austrian GP, topping both practice sessions",
+      "summary": "Championship leader Kimi Antonelli set the pace in FP2 with a 1:07.014, edging Oscar Piastri by 0.237s with Lando Norris third and Max Verstappen fourth for a struggling Red Bull at its home race. It was the first time a driver had led both Friday sessions all season.",
+      "url": "https://www.formula1.com/en/latest/article/fp2-antonelli-sets-the-pace-from-piastri-and-norris-during-second-practice-in-austria.SXfZLlntvyYCzyvkPTNPv",
+      "outlet": "Formula 1",
+      "publish_date": "Jun 26",
+      "short_hash": "ff7049a0",
+      "key_entities": [
+        "f1",
+        "antonelli",
+        "austrian-gp",
+        "practice",
+        "fp2"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🏎️ Cadillac's big Austrian GP upgrade is derailed as Bottas' car catches fire in FP2",
+      "summary": "Cadillac brought its largest upgrade package of the season to Spielberg, but a titanium skid block on Valtteri Bottas' floor scraped the track and caught fire, ending his session and cutting short the team's evaluation. Neither Bottas nor Sergio Perez returned to the track.",
+      "url": "https://www.autosport.com/f1/news/what-we-learned-from-friday-practice-at-the-2026-austrian-grand-prix/10833739/",
+      "outlet": "Autosport",
+      "publish_date": "Jun 26",
+      "short_hash": "42839013",
+      "key_entities": [
+        "f1",
+        "cadillac",
+        "bottas",
+        "fire",
+        "austrian-gp"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🎾 Naomi Osaka reaches her first grass-court final, beating Wang Xinyu in Bad Homburg",
+      "summary": "The four-time Grand Slam champion hit eight aces and won 79% of her first-serve points in a 6-3, 6-3 win over Wang Xinyu to make her first WTA grass-court final. She will face Karolina Muchova, who is also into a first grass final.",
+      "url": "https://www.wtatennis.com/news/4527265/osaka-reaches-new-heights-on-grass-by-making-bad-homburg-final",
+      "outlet": "WTA",
+      "publish_date": "Jun 26",
+      "short_hash": "adcf0c49",
+      "key_entities": [
+        "tennis",
+        "osaka",
+        "bad-homburg",
+        "final",
+        "wang-xinyu"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🎾 Wimbledon draw: Sinner defends with Alcaraz out injured as Serena Williams is handed a wildcard",
+      "summary": "Defending champion Jannik Sinner opens against Miomir Kecmanovic and is seeded above Alexander Zverev after Carlos Alcaraz withdrew with a wrist injury. Seven-time champion Serena Williams, 44, returns on a wildcard to face Australia's Maya Joint when play begins on 29 June.",
+      "url": "https://www.atptour.com/en/news/wimbledon-2026-seeds",
+      "outlet": "ATP Tour",
+      "publish_date": "Jun 26",
+      "short_hash": "59db6038",
+      "key_entities": [
+        "tennis",
+        "wimbledon",
+        "draw",
+        "sinner",
+        "serena-williams",
+        "alcaraz"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🎾 Jack Draper's Eastbourne run ends in the semi-finals against Ugo Humbert",
+      "summary": "Home favourite Jack Draper was beaten by France's Ugo Humbert in the Eastbourne semi-finals, ending his grass-court tune-up before a daunting Wimbledon draw. Draper had thrashed Gabriel Diallo a day earlier to reach the last four.",
+      "url": "https://www.skysports.com/tennis/news/12110/13558095/jack-drapers-eastbourne-run-ends-in-semi-final-at-hands-of-ugo-humbert-as-briton-prepares-for-daunting-wimbledon-draw",
+      "outlet": "Sky Sports",
+      "publish_date": "Jun 26",
+      "short_hash": "8c21cb46",
+      "key_entities": [
+        "tennis",
+        "draper",
+        "eastbourne",
+        "humbert"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🏏 England reach the Women's T20 World Cup semis as India face a must-win decider with Australia",
+      "summary": "Hosts England became the first side into the last four after beating West Indies, while unbeaten Australia sit on the brink of qualification. India know that beating Australia in their final group game would all but secure a semi-final place.",
+      "url": "https://www.cricinfo.com/story/women-s-t20-world-cup-2026-semi-final-scenarios-india-s-chances-take-a-hit-australia-almost-there-1542348",
+      "outlet": "ESPNcricinfo",
+      "publish_date": "Jun 26",
+      "short_hash": "9a0a623e",
+      "key_entities": [
+        "cricket",
+        "womens-t20-world-cup",
+        "england",
+        "india",
+        "australia"
+      ],
+      "is_update": false
+    }
+  ],
+  "fun_fact": {
+    "headline": "Scotland's national animal is the unicorn",
+    "body": "Scotland's official national animal is the unicorn. The mythical beast has appeared in Scottish royal heraldry since the 12th century, and before 1603 the kingdom's coat of arms was held up by two unicorns. When James VI of Scotland also became James I of England that year, one unicorn was swapped for England's lion, which is why the British royal arms still pair the two creatures today.",
+    "source": "National Trust for Scotland; Historic UK; VisitScotland",
+    "fun_fact_id": "funfact-fbcd9382",
+    "topic": "history",
+    "topic_key": "unicorn"
+  },
+  "puzzle": {
+    "type": "lateral",
+    "title": "The Short Ride Up",
+    "title_key": "short-ride-up",
+    "body": "Every morning a man takes the lift from his flat on the 10th floor down to the ground and goes to work. Each evening he returns, rides the lift up to the 7th floor, and walks the last three floors up the stairs, except when it is raining, or when other people are in the lift, when he rides all the way to the 10th. Why?",
+    "approach": "Don't assume the choice is about the lift; think about the man himself, and what is different on rainy days or when he has company.",
+    "answer": "He is of short stature. Going down he can reach the lowest (ground-floor) button, so that trip is fine. Going up he can only reach the 7th-floor button, so he normally rides to 7 and walks the rest. On rainy days he has an umbrella to poke the higher button, and when others are in the lift he can ask them to press it (or they are going higher anyway).",
+    "puzzle_hash": "9df243c1"
+  },
+  "word_puzzle": {
+    "type": "grouping",
+    "title": "Four of a Kind",
+    "title_key": "four-of-a-kind",
+    "body": "Sort 16 words into 4 groups of 4 by the hidden word each group shares. Grid: THUNDER, CAT, JAB, BLUE, STAR, MOCKING, CROSS, RASP, LADY, SWORD, BLACK, UPPER, HOOK, STRAW, JELLY, CRAN.",
+    "approach": "Each word pairs with the same hidden second word to join a family of four; several words look like they fit two families.",
+    "answer": "___BERRY: STRAW, BLUE, RASP, CRAN | ___BIRD: BLACK, MOCKING, THUNDER, LADY | ___FISH: CAT, SWORD, JELLY, STAR | Boxing punches: JAB, HOOK, CROSS, UPPER. Traps: bluebird, blackberry, catbird, ladyfish.",
+    "word_puzzle_hash": "fc01f5b3"
+  }
+}
