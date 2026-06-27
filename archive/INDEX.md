@@ -593,3 +593,37 @@ is empty until the first run.
 2026-06-27	🎾 Wimbledon draw: Sinner defends with Alcaraz out injured as Serena Williams is handed a wildcard	59db6038	tennis,wimbledon,draw,sinner,serena-williams,alcaraz
 2026-06-27	🎾 Jack Draper's Eastbourne run ends in the semi-finals against Ugo Humbert	8c21cb46	tennis,draper,eastbourne,humbert
 2026-06-27	🏏 England reach the Women's T20 World Cup semis as India face a must-win decider with Australia	9a0a623e	cricket,womens-t20-world-cup,england,india,australia
+2026-06-28	Singapore graduates take traineeships at half the median starting pay as hiring cools	0647e95d	singapore, graduates, grit, tan see leng, jobs
+2026-06-28	Singapore-flagged cargo ship struck by a projectile while crossing the Strait of Hormuz	bbbb4ccd	singapore, evergreen marine, strait of hormuz, ukmto
+2026-06-28	Analysts say Wong-Putin meeting does not signal Singapore softening on Russia	99870642	lawrence wong, vladimir putin, asean, russia
+2026-06-28	New speed camera on the BKE near Woodlands goes live on 1 July	73186185	bukit timah expressway, traffic police, woodlands, speed camera
+2026-06-28	Banks pledge an ATM or cashpoint within 500m of every HDB block by end-2027	75ae7dfb	association of banks in singapore, dbs, ocbc, uob, nets
+2026-06-28	George Kurian resigns ahead of an expected Modi cabinet reshuffle this weekend	a122c780	george kurian, narendra modi, cabinet reshuffle, council of ministers
+2026-06-28	S&P pegs India's FY27 growth at 6.6% as a weak monsoon clouds the outlook	230c411d	s&p global, india, gdp, monsoon, fy27
+2026-06-28	GSTN flags e-invoice and e-way bill API changes; flood-hit Maharashtra gets filing relief	458950ed	gstn, cbic, gst, maharashtra, e-way bill
+2026-06-28	Burnham becomes front-runner for Labour leadership after Starmer's resignation	19592cf6	keir starmer, andy burnham, labour party, leadership, makerfield
+2026-06-28	Resident doctors' ballot on a 6.6% pay offer closes; result will decide the strikes	bd592d5d	resident doctors, bma, pay offer, nhs england, strikes
+2026-06-28	OBR puts UK welfare spending at 314.9bn pounds, or 10.7% of GDP	a81a1fbc	obr, welfare trends report, uk, welfare spending, gdp
+2026-06-28	Update: Venezuela quake toll passes 1,400 as the 72-hour rescue window closes	5655bbac	venezuela, caracas, earthquake, rescue
+2026-06-28	Update: US strikes Iran for a second night after a tanker is hit near Hormuz	0a66843e	united states, iran, centcom, strait of hormuz, m/t kiku
+2026-06-28	Germany sets an all-time heat record of 41.5C as Europe's heatwave shifts east	46a6c14d	germany, europe, heatwave, temperature record
+2026-06-28	Aid groups warn of imminent atrocities as the RSF encircles Sudan's el-Obeid	afddd8ad	sudan, rsf, el-obeid, north kordofan, amnesty international
+2026-06-28	Tropical Storm Mekkhala floods Taiwan, killing two before heading for Japan	1db74759	taiwan, japan, tropical storm mekkhala, flooding
+2026-06-28	US clears Anthropic's Mythos 5 model for about 100 trusted partners	a66cd48c	anthropic, commerce department, howard lutnick, mythos 5, fable 5
+2026-06-28	Asian AI labs rush out rival models as the US export curbs drag on	e78e2153	360, sakana ai, tulongfeng, fugu, export controls
+2026-06-28	Despite the AI hype, engineering is the most resilient tech job, new data shows	6fcf2c18	signalfire, engineering, tech hiring, ai
+2026-06-28	Cybersecurity startup NewCore raises $66m to give AI agents identities	68a96b1e	newcore, cyberstarts, ai agents, funding
+2026-06-28	Equal-weight S&P 500 hits a record as the rally broadens away from chipmakers	2019e579	s&p 500 equal weight, s&p 500, nasdaq, rotation
+2026-06-28	Caterpillar jumps about 6% as industrials carry the Dow to a record	06214c2b	caterpillar, dow jones, industrials, data centers
+2026-06-28	Silver slides below $65 an ounce as the Fed flags a possible rate hike	04d2ebe7	silver, gold, federal reserve, us dollar
+2026-06-28	Nasdaq logs a fifth straight loss as money rotates into defensives	afe11dc5	nasdaq composite, s&p 500, dow jones, markets
+2026-06-28	🏎️ Russell takes a dramatic Austrian GP pole as Verstappen crashes out in Q3	eb116fe8	george russell, max verstappen, austrian grand prix, red bull ring, pole
+2026-06-28	🏎️ Mercedes sweep Austrian practice as Russell pips Antonelli in final practice	10e02ca8	george russell, kimi antonelli, mercedes, austrian grand prix, practice
+2026-06-28	🎾 Muchova wins her first grass title at Bad Homburg as Osaka retires in the final	c2af3d8d	karolina muchova, naomi osaka, bad homburg open, wimbledon
+2026-06-28	🎾 Keys becomes a three-time Eastbourne champion without dropping a set	0f463c08	madison keys, tatjana maria, eastbourne open, wimbledon
+2026-06-28	🏏 England rout New Zealand by nine wickets to knock out the holders	274f5417	england, new zealand, womens t20 world cup, danni wyatt-hodge
+2026-06-28	🏏 West Indies reach the T20 World Cup semis despite Ireland's first-ever win	dc700fc1	west indies, ireland, womens t20 world cup, orla prendergast
+2026-06-28	NASA prepares the first robotic rescue of a falling space telescope	3b406392	nasa, swift observatory, katalyst space, link, orbit boost
+2026-06-28	Euclid maps the Milky Way's crowded heart, imaging more than 60 million stars	b9558562	esa, euclid, galactic bulge survey, exoplanets, milky way
+2026-06-28	Adaptive deep brain stimulation cuts falls for Parkinson's patients in a trial	f647ff73	nature medicine, deep brain stimulation, parkinsons disease, gait
+2026-06-28	NASA's Roman Space Telescope arrives in Florida for final launch preparations	a8a88d2d	nasa, roman space telescope, kennedy space center, dark energy

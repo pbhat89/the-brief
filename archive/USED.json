@@ -114,6 +114,11 @@
       "date": "2026-06-27",
       "topic_key": "unicorn",
       "text": "Scotland's national animal is the unicorn"
+    },
+    {
+      "date": "2026-06-28",
+      "topic_key": "westray to papa westray flight",
+      "text": "The world's shortest scheduled commercial flight, Westray to Papa Westray, lasts under two minutes."
     }
   ],
   "puzzle_log": [
@@ -231,6 +236,11 @@
       "date": "2026-06-27",
       "type": "lateral",
       "title_key": "short-ride-up"
+    },
+    {
+      "date": "2026-06-28",
+      "type": "visual",
+      "title_key": "hidden-rectangles"
     }
   ],
   "word_puzzle_log": [
@@ -263,6 +273,11 @@
       "date": "2026-06-27",
       "type": "grouping",
       "title_key": "four-of-a-kind"
+    },
+    {
+      "date": "2026-06-28",
+      "type": "ladder",
+      "title_key": "from-head-to-tail"
     }
   ]
 }
