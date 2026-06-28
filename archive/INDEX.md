@@ -627,3 +627,37 @@ is empty until the first run.
 2026-06-28	Euclid maps the Milky Way's crowded heart, imaging more than 60 million stars	b9558562	esa, euclid, galactic bulge survey, exoplanets, milky way
 2026-06-28	Adaptive deep brain stimulation cuts falls for Parkinson's patients in a trial	f647ff73	nature medicine, deep brain stimulation, parkinsons disease, gait
 2026-06-28	NASA's Roman Space Telescope arrives in Florida for final launch preparations	a8a88d2d	nasa, roman space telescope, kennedy space center, dark energy
+2026-06-29	Workers' Party keeps Pritam Singh as chief in a special cadre confidence vote	efb506cc	workers party,pritam singh,cadre vote,singapore
+2026-06-29	Singapore's new Online Safety Commission opens, letting victims file harm reports online	0458016e	online safety commission,francis ng,singapore,online harms
+2026-06-29	Stars Engrg director jailed over the 2021 Tuas blast that killed three workers	18949220	stars engrg,chua xing da,tuas explosion,singapore
+2026-06-29	Singapore think-tank issues a rare 'red' haze alert for the August-September peak	b37e2cd7	siia,haze outlook,singapore,transboundary haze
+2026-06-29	Modi gifts Seychelles a made-in-India patrol vessel and a 1,250-crore credit line	370d439e	narendra modi,seychelles,ps lespwar,line of credit
+2026-06-29	CBI's Operation Chakra-VI raids 80-plus sites in 16 states over 'digital arrest' scams	deae947c	cbi,operation chakra-vi,digital arrest,scam
+2026-06-29	Amarnath Yatra's Pratham Puja held as security tightens before the 3 July start	154187ad	amarnath yatra,pratham puja,project hawk eye,jammu and kashmir
+2026-06-29	Centre reappoints RBI Deputy Governor Swaminathan Janakiraman for two more years	a033e480	rbi,swaminathan janakiraman,deputy governor,reappointment
+2026-06-29	South East Water orders a Kent hosepipe ban for 850,000 customers from 3 July	20c2ae4d	south east water,hosepipe ban,kent,heatwave
+2026-06-29	Update: Reeves backs Burnham as the Labour leadership race heads toward a coronation	f2c444c8	rachel reeves,andy burnham,labour party,leadership
+2026-06-29	UK retail sales slump deepens as consumer confidence holds at minus 23	e614f050	cbi,gfk,retail sales,consumer confidence
+2026-06-29	Reform UK extends its polling lead over Labour and the Conservatives	69baab5d	reform uk,labour,conservatives,polling
+2026-06-29	DR Congo files a case against Rwanda at the World Court over decades of alleged abuses	199ef47e	dr congo,rwanda,icj,abuses
+2026-06-29	Update: Hezbollah rejects the US-brokered Israel-Lebanon deal as 'null and void'	62feb339	hezbollah,naim qassem,israel,lebanon
+2026-06-29	Morocco jails 29, including politicians and sports figures, in a major drug trial	bd0dbaef	morocco,drug trial,politicians,court
+2026-06-29	USMCA faces a make-or-break review on 1 July as Trump hints he may not renew it	22154860	usmca,trump,trade,review
+2026-06-29	Apple lobbies Washington to buy memory chips from blacklisted Chinese maker CXMT	f8006571	apple,cxmt,commerce department,memory chips
+2026-06-29	A startup founder used Anthropic's Claude to read his cancer scans and skip radiotherapy	03485cc9	anthropic,claude,cancer scans,founder
+2026-06-29	AI networking startup Netris raises a $15 million Series A led by a16z	0b85c9b0	netris,andreessen horowitz,funding,ai networking
+2026-06-29	Menlo Ventures raises a record $3 billion fund on the strength of its Anthropic bet	d8a21a93	menlo ventures,anthropic,fund,venture capital
+2026-06-29	SoftBank shares plunge over 12% on a report OpenAI may delay its IPO to 2027	bef46269	softbank,openai,ipo,shares
+2026-06-29	Cyber firm Varonis weighs a sale after takeover interest from Blackstone and Thoma Bravo	3a6a7dc0	varonis,blackstone,thoma bravo,sale
+2026-06-29	FedEx beats with $25 billion in quarterly revenue but shares slide about 6%	23ea71cb	fedex,earnings,revenue,shares
+2026-06-29	Qualcomm is in advanced talks to buy AI-software firm Modular for about $4 billion	ceb844bd	qualcomm,modular,acquisition,ai
+2026-06-29	🏎️ Russell holds off Verstappen to win the Austrian Grand Prix	9deb4dcf	george russell,max verstappen,austrian grand prix,f1
+2026-06-29	🏎️ Antonelli stays top of the standings as F1 heads to a Silverstone sprint	6b37ccd5	kimi antonelli,standings,silverstone,f1
+2026-06-29	🎾 Sinner opens his Wimbledon title defence against Kecmanovic as the draw begins	19f215d9	jannik sinner,wimbledon,kecmanovic,tennis
+2026-06-29	🎾 Serena Williams returns on a wildcard as Alcaraz misses Wimbledon injured	4d59cd20	serena williams,carlos alcaraz,wimbledon,tennis
+2026-06-29	🏏 Australia knock India out of the Women's T20 World Cup with a six-wicket win	df60100c	australia,india,womens t20 world cup,cricket
+2026-06-29	🏏 Women's T20 World Cup semi-finals set as Australia and South Africa seal spots	ef8fda1d	womens t20 world cup,australia,south africa,semi-finals
+2026-06-29	Great apes and humans have laughed to the same beat for 15 million years	1c427950	apes,humans,laughter,evolution
+2026-06-29	Gene-editing's next act: switching genes off without cutting DNA	e2e68213	epigenetic editing,crispr,gene therapy,dna
+2026-06-29	Hubble spots an early galaxy clearing the universe's primordial fog	1570323b	hubble,galaxy,reionization,nasa
+2026-06-29	Scientists build the first ticking 'nuclear clocks'	895d845d	nuclear clock,thorium-229,timekeeping,physics

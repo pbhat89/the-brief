@@ -119,6 +119,11 @@
       "date": "2026-06-28",
       "topic_key": "westray to papa westray flight",
       "text": "The world's shortest scheduled commercial flight, Westray to Papa Westray, lasts under two minutes."
+    },
+    {
+      "date": "2026-06-29",
+      "topic_key": "bubble wrap",
+      "text": "Bubble wrap was originally invented as textured wallpaper, not packaging."
     }
   ],
   "puzzle_log": [
@@ -241,6 +246,11 @@
       "date": "2026-06-28",
       "type": "visual",
       "title_key": "hidden-rectangles"
+    },
+    {
+      "date": "2026-06-29",
+      "type": "logic",
+      "title_key": "last-ball"
     }
   ],
   "word_puzzle_log": [
@@ -278,6 +288,11 @@
       "date": "2026-06-28",
       "type": "ladder",
       "title_key": "from-head-to-tail"
+    },
+    {
+      "date": "2026-06-29",
+      "type": "anagram",
+      "title_key": "mixed-messages"
     }
   ]
 }
