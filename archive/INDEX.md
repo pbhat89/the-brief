@@ -661,3 +661,39 @@ is empty until the first run.
 2026-06-29	Gene-editing's next act: switching genes off without cutting DNA	e2e68213	epigenetic editing,crispr,gene therapy,dna
 2026-06-29	Hubble spots an early galaxy clearing the universe's primordial fog	1570323b	hubble,galaxy,reionization,nasa
 2026-06-29	Scientists build the first ticking 'nuclear clocks'	895d845d	nuclear clock,thorium-229,timekeeping,physics
+2026-06-30	Director of three firms in a migrant wage dispute returns to Singapore, passport impounded	abbfb868	ramu palani velu,mom,migrant workers,kpa engineering,returns
+2026-06-30	Household refuse collection fees rise from 1 July, adding S$0.44 a month for HDB flats	c6aff938	nea,hdb,refuse collection fees,u-save,rise
+2026-06-30	Singapore's regulated electricity tariff is set to rise significantly from July	7541b24f	ema,electricity tariff,natural gas,u-save,rise
+2026-06-30	LTA enforcement blitz uncovers 380 illegal vehicle modifications islandwide	c90e84ed	lta,illegal modifications,number plates,enforcement,uncovers
+2026-06-30	ERP 2 roadside electronic parking trial to begin at 644 car parks in August	838b50ca	lta,erp 2,roadside parking,gantries,trial
+2026-06-30	Assam's first flood wave of 2026 affects 22,124 people as a Dhemaji rail bridge collapses	ac98d07e	assam,dhemaji,floods,simen bridge,affects
+2026-06-30	Sensex falls 372 points to 76,728 as investors book profits amid US-Iran caution	0a032c31	sensex,nifty,rupee,profit-booking,falls
+2026-06-30	Delhi court extends judicial custody of 10 NEET-UG paper-leak accused to 11 July	bead474c	neet-ug,rouse avenue court,cbi,paper leak,extends
+2026-06-30	India's eight core industries grew just 0.5% in May as five sectors contracted	1e991b3c	core industries,steel,coal,commerce ministry,slows
+2026-06-30	Arunachal Pradesh flash-flood toll rises to three as 12 districts are hit	684ac994	arunachal pradesh,keyi panyor,flash floods,ndrf,rises
+2026-06-30	Update: Resident doctors in England vote to accept the 6.6% pay deal, ending the dispute	23b355c1	resident doctors,bma,pay deal,strikes,accept
+2026-06-30	Mahmood to replace immigration judges with a public appeals body to clear the asylum backlog	c8bbbe5b	shabana mahmood,immigration appeals authority,asylum backlog,home office,replace
+2026-06-30	England endures a third straight record-breaking June day before storms break the heatwave	05418b2d	met office,heatwave,ukhsa,temperature record,breaks
+2026-06-30	Hosepipe bans hit millions as England endures its driest spring in over a century	892830f2	hosepipe ban,water companies,drought,southern england,impose
+2026-06-30	Pakistan strikes inside Afghanistan as Kabul says 36 civilians were killed	db346fbc	pakistan,afghanistan,taliban,jamaat-ul-ahrar,strikes
+2026-06-30	Six killed in a shooting at a youth welfare centre in Germany's Stade	bfe1dcc1	stade,germany,shooting,custody dispute,killed
+2026-06-30	Russia kills at least eight in Ukraine as Putin rejects a mutual halt on long-range strikes	82c73212	russia,ukraine,putin,zelenskyy,strikes
+2026-06-30	Update: Trump says the US and Iran will meet in Qatar, but Tehran denies talks are planned	63599267	trump,iran,qatar,doha,talks
+2026-06-30	Google caps Meta's access to its Gemini models amid an AI compute crunch	da523a4d	google,meta,gemini,compute shortage,caps
+2026-06-30	BIS warns an AI bust could spill from growth into credit markets	d4386cb5	bis,ai bust,hyperscalers,capex,warns
+2026-06-30	South Korea lines up about $880 billion from Samsung and SK Hynix for AI chips	225962e1	south korea,samsung,sk hynix,chips,invest
+2026-06-30	General Intuition raises $320 million to train AI agents on video-game footage	9c21c99b	general intuition,khosla ventures,gameplay,medal,raises
+2026-06-30	OpenAI unveils its first in-house inference chip, co-designed with Broadcom	7612ce9f	openai,broadcom,inference chip,nvidia,unveils
+2026-06-30	Comcast to split in two, spinning off NBCUniversal and Sky	89b3f0ff	comcast,nbcuniversal,sky,spin-off,splits
+2026-06-30	Martin Marietta to buy Lhoist North America in a $13.5 billion deal	e2c02f5c	martin marietta,lhoist,limestone,acquisition,buys
+2026-06-30	Rocket Lab agrees to buy Iridium in an $8 billion satellite deal	a89572d8	rocket lab,iridium,satellite,spectrum,acquires
+2026-06-30	Dow closes above 52,000 for the first time as Alphabet joins the index	33650f9d	dow jones,alphabet,verizon,index,closes
+2026-06-30	🎾 Sinner survives a five-set scare against Kecmanovic to open his title defence	580c5dbe	sinner,kecmanovic,wimbledon,five sets,survives
+2026-06-30	🎾 Seeds Rublev and Ruud crash out on Wimbledon's opening day	2636e137	rublev,ruud,hurkacz,wimbledon,crash out
+2026-06-30	🎾 Sabalenka and Gauff cruise into the Wimbledon second round	75f23862	sabalenka,gauff,wimbledon,second round,cruise
+2026-06-30	🏏 Australia warned to fear Matthews ahead of their T20 World Cup semi-final	bec49eac	australia,west indies,gardner,matthews,semi-final
+2026-06-30	🏎️ Red Bull boss Mekies admits uncertainty over Verstappen's 2027 future	14f03bc2	mekies,verstappen,red bull,exit clause,admits
+2026-06-30	🏎️ F1 heads to a Silverstone sprint weekend with Antonelli 40 points clear	578aa91a	british grand prix,silverstone,antonelli,sprint,heads
+2026-06-30	Astronomers find two Jupiter-sized 'super-puff' planets lighter than cotton candy	d0b789a4	tess,toi-791,exoplanet,low density,find
+2026-06-30	Webb suggests interstellar comet 3I/ATLAS formed in an ancient, frigid part of the galaxy	f6c79db1	webb,3i/atlas,comet,deuterium,forms
+2026-06-30	NASA's Lucy reveals a wobbling, peanut-shaped asteroid with signs of ancient water	13a32dc0	lucy,donaldjohanson,asteroid,ancient water,reveals

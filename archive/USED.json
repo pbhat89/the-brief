@@ -124,6 +124,11 @@
       "date": "2026-06-29",
       "topic_key": "bubble wrap",
       "text": "Bubble wrap was originally invented as textured wallpaper, not packaging."
+    },
+    {
+      "date": "2026-06-30",
+      "topic_key": "antarctica",
+      "text": "Antarctica is the largest desert on Earth"
     }
   ],
   "puzzle_log": [
@@ -251,6 +256,11 @@
       "date": "2026-06-29",
       "type": "logic",
       "title_key": "last-ball"
+    },
+    {
+      "date": "2026-06-30",
+      "type": "quantitative",
+      "title_key": "two-ferries"
     }
   ],
   "word_puzzle_log": [
@@ -293,6 +303,11 @@
       "date": "2026-06-29",
       "type": "anagram",
       "title_key": "mixed-messages"
+    },
+    {
+      "date": "2026-06-30",
+      "type": "spellingbee",
+      "title_key": "pod-of-letters"
     }
   ]
 }
