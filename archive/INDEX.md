@@ -697,3 +697,36 @@ is empty until the first run.
 2026-06-30	Astronomers find two Jupiter-sized 'super-puff' planets lighter than cotton candy	d0b789a4	tess,toi-791,exoplanet,low density,find
 2026-06-30	Webb suggests interstellar comet 3I/ATLAS formed in an ancient, frigid part of the galaxy	f6c79db1	webb,3i/atlas,comet,deuterium,forms
 2026-06-30	NASA's Lucy reveals a wobbling, peanut-shaped asteroid with signs of ancient water	13a32dc0	lucy,donaldjohanson,asteroid,ancient water,reveals
+2026-07-01	Pritam Singh re-elected Workers&rsquo; Party chief, winning a confidence vote with about 80% of cadres	f3016a13	pritam singh,workers party,sylvia lim,cadre conference,singapore
+2026-07-01	Singapore&rsquo;s Online Safety Commission opens, letting victims report five online harms	bfba4a61	online safety commission,doxxing,mddi,online harms,singapore
+2026-07-01	Singapore raises the retirement age to 64 and re-employment age to 69 from 1 July	a2e5f8eb	retirement age,re-employment age,mom,cpf,singapore
+2026-07-01	Local Qualifying Salary rises to S$1,800 a month from 1 July	d145cc4b	local qualifying salary,work permit,s pass,foreign worker quota,singapore
+2026-07-01	Congress files a privilege motion against Rajnath Singh over Operation Sindoor casualties	1e95a9e9	kc venugopal,rajnath singh,operation sindoor,lok sabha,national war memorial
+2026-07-01	India&rsquo;s April-May fiscal deficit reaches 9.6% of the full-year target	6c0392e5	fiscal deficit,controller general of accounts,fy27,budget estimate,india
+2026-07-01	Amarnath Yatra registration opens in Jammu with record security ahead of the 3 July start	695f0199	amarnath yatra,manoj sinha,baltal,pahalgam,capf
+2026-07-01	Update: Assam&rsquo;s flood wave worsens, with over 45,000 people now affected across seven districts	9b1787f5	assam floods,dhemaji,himanta biswa sarma,ndrf,displacement
+2026-07-01	Update: Labour leadership nominations to open on 9 July with Burnham the only declared candidate	2028dedc	labour leadership,andy burnham,keir starmer,nec,nominations
+2026-07-01	Met Office issues thunderstorm and flooding warnings as downpours follow England&rsquo;s record heat	6bd747b3	met office,thunderstorm warning,flooding,scotland,northern ireland
+2026-07-01	UK job vacancies fall to a five-year low as young people not in work or education top one million	89c63f2d	ons,job vacancies,neet,labour market,uk economy
+2026-07-01	US Supreme Court expands Trump&rsquo;s power to fire agency heads, overturning a 1935 precedent	522d7561	us supreme court,donald trump,rebecca slaughter,humphreys executor,federal reserve
+2026-07-01	Ukraine strikes a Russian satellite-communications centre near Moscow a second time	4126e129	ukraine,zelensky,dubna,moscow,drone strike
+2026-07-01	Floods and landslides kill dozens across Ghana and Ivory Coast after days of heavy rain	b2f34e01	ghana,ivory coast,accra,floods,west africa
+2026-07-01	Update: Iran says it controls the Strait of Hormuz and denies planned talks with the US	a8d2a776	iran,abbas araghchi,strait of hormuz,united states,doha
+2026-07-01	Schneider Electric to buy industrial-AI firm Cognite for $3.1 billion	8257107d	schneider electric,cognite,industrial ai,acquisition,software
+2026-07-01	Nvidia rival Etched books $1 billion in orders for its transformer-only AI chip	cccd14be	etched,sohu,nvidia,tsmc,ai chips
+2026-07-01	Anthropic launches Claude Science to court researchers with workflow tools	b05ba56e	anthropic,claude science,scientific research,ai tools,software
+2026-07-01	Google Cloud to offer SandboxAQ&rsquo;s specialist scientific AI models	02fed999	google cloud,sandboxaq,gemini,scientific ai,drug discovery
+2026-07-01	DeepMind poker-AI founders&rsquo; startup EquiLibre hits a $500 million valuation trading for hedge funds	cb4169ff	equilibre technologies,deepmind,tower research capital,reinforcement learning,quant funds
+2026-07-01	Nike tops estimates even as China sales fall 12% and a tariff refund lifts profit	7e4e94c0	nike,greater china,tariff refund,earnings,ieepa
+2026-07-01	The yen sinks to a 40-year low against the dollar, keeping intervention in focus	b96a0fb7	japanese yen,bank of japan,us dollar,currency intervention,markets
+2026-07-01	Wall Street closes out its best first half in five years; Nasdaq posts best quarter since 2020	6eca2d3b	sp 500,nasdaq,wall street,quarter,markets
+2026-07-01	US job openings unexpectedly rise to 7.59 million, denting 2026 rate-cut bets	2957e650	jolts,job openings,federal reserve,treasury yields,labor market
+2026-07-01	🏏 Australia thrash West Indies to reach the Women&rsquo;s T20 World Cup final	12d651b1	australia,west indies,beth mooney,t20 world cup,the oval
+2026-07-01	🎾 Michael Zheng knocks Cameron Norrie out of Wimbledon in five sets	1306edec	michael zheng,cameron norrie,wimbledon,first round,tennis
+2026-07-01	🎾 Fourth seed Ben Shelton crashes out to qualifier Otto Virtanen at Wimbledon	8944e6ad	ben shelton,otto virtanen,wimbledon,upset,tennis
+2026-07-01	🎾 British number two Katie Boulter exits Wimbledon in the first round	0d58f75f	katie boulter,tyra grant,wimbledon,first round,tennis
+2026-07-01	🏎️ McLaren plays down Verstappen talk as F1&rsquo;s silly season heats up before Silverstone	ee5eb857	max verstappen,mclaren,zak brown,red bull,silverstone
+2026-07-01	NASA launches a robotic mission to rescue its falling Swift telescope	28427789	nasa,swift observatory,link servicer,katalyst space,pegasus xl
+2026-07-01	Webb and Hubble reveal Terzan 5 as a surviving &lsquo;fossil fragment&rsquo; of the Milky Way&rsquo;s birth	35d8108f	terzan 5,james webb space telescope,hubble,milky way,bulge fossil fragment
+2026-07-01	China&rsquo;s Tianwen-2 closes in on the quasi-moon Kamooalewa ahead of a sample grab	f2580ef9	tianwen-2,kamooalewa,china,quasi-moon,sample return
+2026-07-01	NASA&rsquo;s Webb resolves millions of stars in the starburst galaxy Messier 82	7bd0774a	james webb space telescope,messier 82,starburst galaxy,stars,nasa

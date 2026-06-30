@@ -129,6 +129,11 @@
       "date": "2026-06-30",
       "topic_key": "antarctica",
       "text": "Antarctica is the largest desert on Earth"
+    },
+    {
+      "date": "2026-07-01",
+      "topic_key": "pando",
+      "text": "Pando, a single aspen, is one of Earth's heaviest living organisms"
     }
   ],
   "puzzle_log": [
@@ -261,6 +266,11 @@
       "date": "2026-06-30",
       "type": "quantitative",
       "title_key": "two-ferries"
+    },
+    {
+      "date": "2026-07-01",
+      "type": "lateral",
+      "title_key": "bartenders-cure"
     }
   ],
   "word_puzzle_log": [
@@ -308,6 +318,11 @@
       "date": "2026-06-30",
       "type": "spellingbee",
       "title_key": "pod-of-letters"
+    },
+    {
+      "date": "2026-07-01",
+      "type": "letterboxed",
+      "title_key": "twelve-in-two"
     }
   ]
 }
