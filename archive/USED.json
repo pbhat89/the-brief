@@ -134,6 +134,11 @@
       "date": "2026-07-01",
       "topic_key": "pando",
       "text": "Pando, a single aspen, is one of Earth's heaviest living organisms"
+    },
+    {
+      "date": "2026-07-02",
+      "topic_key": "moon",
+      "text": "The Moon is drifting away from Earth at about 3.8 cm a year."
     }
   ],
   "puzzle_log": [
@@ -271,6 +276,11 @@
       "date": "2026-07-01",
       "type": "lateral",
       "title_key": "bartenders-cure"
+    },
+    {
+      "date": "2026-07-02",
+      "type": "visual",
+      "title_key": "hidden-stack"
     }
   ],
   "word_puzzle_log": [
@@ -323,6 +333,11 @@
       "date": "2026-07-01",
       "type": "letterboxed",
       "title_key": "twelve-in-two"
+    },
+    {
+      "date": "2026-07-02",
+      "type": "grouping",
+      "title_key": "compound-interest"
     }
   ]
 }

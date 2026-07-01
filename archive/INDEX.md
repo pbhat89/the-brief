@@ -730,3 +730,42 @@ is empty until the first run.
 2026-07-01	Webb and Hubble reveal Terzan 5 as a surviving &lsquo;fossil fragment&rsquo; of the Milky Way&rsquo;s birth	35d8108f	terzan 5,james webb space telescope,hubble,milky way,bulge fossil fragment
 2026-07-01	China&rsquo;s Tianwen-2 closes in on the quasi-moon Kamooalewa ahead of a sample grab	f2580ef9	tianwen-2,kamooalewa,china,quasi-moon,sample return
 2026-07-01	NASA&rsquo;s Webb resolves millions of stars in the starburst galaxy Messier 82	7bd0774a	james webb space telescope,messier 82,starburst galaxy,stars,nasa
+2026-07-02	HDB resale prices fall for a second straight quarter as private-home gains cool	4cf07e49	hdb,ura,resale price index,private home prices,fall
+2026-07-02	Police seize a S$55 million bungalow and lay fresh charges in the Nvidia chip-fraud probe	b51fb729	singapore police,aperia group,good class bungalow,nvidia,seize
+2026-07-02	Singapore Airlines and Air China sign an MoU for a commercial joint venture	eb04118a	singapore airlines,air china,joint venture,star alliance,sign
+2026-07-02	New Progressive Wage Model floors for administrative staff take effect on 1 July	5a466902	progressive wage model,administrative staff,wages,mom,rise
+2026-07-02	June GST collections rise 13.9% to Rs 1.94 lakh crore on surging import revenue	ee59349e	gst collection,import revenue,cbic,indirect tax,rise
+2026-07-02	Supreme Court says magistrates need not record pre-charge evidence in sessions-triable cases	232f910b	supreme court,section 244 crpc,magistrate,sessions court,rules
+2026-07-02	Meghalaya High Court upholds bail for Sonam Raghuvanshi in the honeymoon-murder case	e8ef3f7b	meghalaya high court,sonam raghuvanshi,raja raghuvanshi,honeymoon murder,bail
+2026-07-02	Passport fees rise and Aadhaar email updates go free among rule changes from 1 July	ae91bcc0	passport fee,tatkaal,uidai,aadhaar,changes
+2026-07-02	India's manufacturing PMI eases to a three-month low of 54.5 in June	28fe0d29	hsbc,manufacturing pmi,sp global,new orders,eases
+2026-07-02	Starmer unveils a Defence Investment Plan lifting spending toward 2.7% of GDP	2aff1911	keir starmer,defence investment plan,gdp,rachel reeves,unveils
+2026-07-02	Nationwide says annual house-price growth edged up to 2.2% in June	bbe78cf4	nationwide,house prices,uk economy,annual growth,rises
+2026-07-02	UK factory growth slows as the manufacturing PMI slips to 52.5 in June	ac967867	sp global,manufacturing pmi,uk economy,new orders,slows
+2026-07-02	Mortgage rates ease further as major lenders keep cutting fixed deals	9c8b5e9d	mortgage rates,nationwide,yorkshire building society,fixed deals,ease
+2026-07-02	Amnesty says Sudan's RSF committed ethnic cleansing and crimes against humanity in El Fasher	568bf396	sudan,rsf,el fasher,amnesty international,ethnic cleansing
+2026-07-02	US says it will not yet agree to renew the USMCA trade pact with Canada and Mexico	6ace844e	usmca,jamieson greer,united states,canada,mexico
+2026-07-02	More than 30 students remain missing after an ISWAP raid on a Nigerian school	26d7bf06	nigeria,iswap,borno state,lassa,missing
+2026-07-02	Venezuela's earthquake death toll passes 1,900 as survivors dig for the missing	ecf82d9b	venezuela,la guaira,earthquake,death toll,rescue
+2026-07-02	Europe braces for a third record heatwave as heat-linked deaths top 1,300	70bb6494	europe,heatwave,who,climate change,deaths
+2026-07-02	Together AI raises $800 million at an $8.3 billion valuation	b4a84de3	together ai,aramco ventures,nvidia,valuation,raises
+2026-07-02	Meta is building a cloud business to sell its excess AI computing power	5343ce60	meta,cloud,ai compute,aws,build
+2026-07-02	Apple is in talks to buy memory chips from blacklisted Chinese suppliers	dcbb5045	apple,changxin memory,yangtze memory,memory shortage,talks
+2026-07-02	Taiwan detains Super Micro workers in an Nvidia chip-smuggling probe	de3c6c82	super micro,nvidia,taiwan,chip smuggling,detains
+2026-07-02	SpaceX reportedly shows investors a phone-like AI device; Musk denies the report	7f6afd52	spacex,elon musk,xai,ai device,denies
+2026-07-02	Fed Chair Warsh says inflation is still too high and gives no July rate signal	b134f134	kevin warsh,federal reserve,sintra,inflation,signals
+2026-07-02	US private payrolls rose just 98,000 in June, below expectations	ebc0e3c1	adp,private payrolls,labor market,nonfarm payrolls,slows
+2026-07-02	Oil slips as Trump says US-Iran talks in Qatar are going well	f5166a82	brent crude,wti,iran,doha,slips
+2026-07-02	General Mills beats estimates and targets $3 billion in cost cuts	6d0d8586	general mills,earnings,cost cuts,gis,beats
+2026-07-02	Stocks cool from records as chipmakers drag the Nasdaq lower	2395d8ab	dow jones,sp 500,nasdaq,semiconductors,cool
+2026-07-02	Krejcikova upsets fifth seed Andreeva to reach the Wimbledon third round	23378bf9	krejcikova,andreeva,wimbledon,third round,upsets
+2026-07-02	Djokovic sweeps past Tsitsipas into the Wimbledon third round	5e52710f	djokovic,tsitsipas,wimbledon,third round,sweeps
+2026-07-02	Sabalenka saves set points to beat Kessler and reach the last 32	a37baad9	sabalenka,kessler,ostapenko,wimbledon,saves
+2026-07-02	Sciver-Brunt passed fit for England's T20 World Cup semi-final with South Africa	41c76d60	sciver-brunt,england,south africa,t20 world cup,semi-final
+2026-07-02	Silverstone set for a record British GP crowd of about 565,000	e093051e	silverstone,british grand prix,attendance,sprint,record
+2026-07-02	Wolff shuts Mercedes' door on Verstappen, backing Russell and Antonelli for 2027	104df215	wolff,verstappen,mercedes,russell,antonelli
+2026-07-02	AI uncovers a hidden ECG signal that flags sudden-cardiac-death risk	aff73096	ecg,sudden cardiac death,deep learning,avl lead,nature
+2026-07-02	Single neurons found to act as the brain's building blocks for language	04eacb13	single-neuron recording,frontotemporal cortex,language,syntax,nature
+2026-07-02	NASA's TESS detects its first planet using gravitational microlensing	edce5160	tess,gravitational microlensing,super-jupiter,nasa,detects
+2026-07-02	China's LineShine supercomputer tops the global rankings at 2.19 exaflops	8ff1c88f	lineshine,top500,exaflops,el capitan,shenzhen
+2026-07-02	NASA awards about $600 million for four commercial Moon landings	1a6c5e78	nasa,astrobotic,firefly,intuitive machines,moon base
