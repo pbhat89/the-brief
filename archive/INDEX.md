@@ -769,3 +769,43 @@ is empty until the first run.
 2026-07-02	NASA's TESS detects its first planet using gravitational microlensing	edce5160	tess,gravitational microlensing,super-jupiter,nasa,detects
 2026-07-02	China's LineShine supercomputer tops the global rankings at 2.19 exaflops	8ff1c88f	lineshine,top500,exaflops,el capitan,shenzhen
 2026-07-02	NASA awards about $600 million for four commercial Moon landings	1a6c5e78	nasa,astrobotic,firefly,intuitive machines,moon base
+2026-07-03	Singtel CEO takes a 17% pay cut to S$6.8 million after a run of network outages	01fe0bf3	singtel,ng tian chong,ceo pay,network outages,pay cut
+2026-07-03	SIA chief's pay rises to S$9.7 million as the group posts record revenue	e742c3d1	singapore airlines,goh choon phong,record revenue,annual report,pay
+2026-07-03	All drink containers must carry the 10-cent deposit from 1 July as the return scheme's transition ends	c082203f	beverage container return scheme,nea,deposit,recycling,singapore
+2026-07-03	Teenager and four men arrested over a scheme to fraudulently obtain Singpass and bank accounts	589988e1	anti-scam command,singpass,bank accounts,syndicate,arrests
+2026-07-03	Former bank manager, 65, charged over S$1.72 million missing from a Serangoon Road vault	39af87b9	bank manager,criminal breach of trust,serangoon road,marina bay sands,charged
+2026-07-03	MGNREGA replaced by the new VB-G RAM G rural jobs law from 1 July	ae098eee	mgnrega,vb-g ram g,rural employment,viksit bharat,replaced
+2026-07-03	Gen Dhiraj Seth takes charge as Army Chief in a reshuffle of India's military top brass	1127656c	dhiraj seth,upendra dwivedi,army chief,indian army,appointment
+2026-07-03	Supreme Court declines to disturb the extension of Manipur panchayat polls to October	a9d046d9	supreme court,manipur,panchayat elections,high court,ruling
+2026-07-03	Sensex jumps 579 points as IT stocks rebound and crude eases	52534034	sensex,nifty,it stocks,infosys,rises
+2026-07-03	At least four killed in Mumbai-area monsoon accidents as heavy rain lashes the city	f23972ec	mumbai,monsoon,electrocution,chembur,deaths
+2026-07-03	Court of Appeal jails two teenagers who had been spared custody for a Fordingbridge rape	edee5d96	court of appeal,baroness carr,fordingbridge,rape sentence,ruling
+2026-07-03	Starmer issues a state apology for decades of forced adoptions of unmarried mothers	147c0ee9	keir starmer,forced adoptions,commons,apology,unmarried mothers
+2026-07-03	Channel small-boat crossings fall sharply in the first half of 2026	16192f49	home office,channel crossings,small boats,migration,fall
+2026-07-03	Standards commissioner finds Farage broke MPs' rules 17 times over £384,000 in interests	60ab6cd6	nigel farage,standards commissioner,reform uk,financial interests,ruling
+2026-07-03	UK business confidence slumps as the IoD's economic sentiment index falls to -61	0efa056a	institute of directors,economic confidence,business sentiment,uk economy,falls
+2026-07-03	Vatican declares the traditionalist Society of St Pius X in schism and excommunicates its bishops	39c7f50b	vatican,society of st pius x,pope leo xiv,schism,excommunication
+2026-07-03	Germany's Merz coalition agrees a sweeping tax, pension and labour reform package	ddeeaf2b	friedrich merz,germany,coalition,reform package,economy
+2026-07-03	Update: Russia's largest strike on Kyiv in weeks kills at least 22	d19381ce	russia,ukraine,kyiv,missile strike,casualties
+2026-07-03	Iran sets a multi-day state funeral for Khamenei as US-Iran talks in Doha report progress	ac51d174	iran,ali khamenei,funeral,us-iran talks,doha
+2026-07-03	US judge blocks Trump-backed mail-in ballot restrictions in a win for the NAACP	8ed3a564	naacp,emmet sullivan,us postal service,mail-in ballots,ruling
+2026-07-03	Anthropic is in talks with Samsung to build its own custom AI chip	6bb760a1	anthropic,samsung,custom ai chip,clive chan,talks
+2026-07-03	OpenAI floats giving the US government a 5% stake to ease Washington scrutiny	63734255	openai,sam altman,us government,stake,valuation
+2026-07-03	Microsoft launches a $2.5 billion unit to embed 6,000 AI engineers with clients	217c9bcc	microsoft,microsoft frontier,ai engineers,enterprise,launch
+2026-07-03	Privacy-focused Venice AI hits a $1 billion valuation on a $65 million round	55b215e8	venice ai,erik voorhees,dragonfly,unicorn,funding
+2026-07-03	Video-AI startup TwelveLabs raises $100 million with Amazon backing	57314bbf	twelvelabs,amazon,aws,video ai,funding
+2026-07-03	US adds just 57,000 jobs in June, far below forecasts	8cd56a96	nonfarm payrolls,us jobs,unemployment,federal reserve,slows
+2026-07-03	Tesla posts record Q2 deliveries of 480,126 but the stock still falls about 7%	13012743	tesla,deliveries,byd,electric vehicles,stock
+2026-07-03	AOL owner Bending Spoons surges 40% in its $1.68 billion Nasdaq debut	10982431	bending spoons,aol,ipo,nasdaq,debut
+2026-07-03	Gold jumps more than 2% past $4,100 after the weak US jobs report	96d91f48	gold,commodities,federal reserve,jobs report,rises
+2026-07-03	Genuine Parts jumps as O'Reilly is reported to bid for its NAPA auto unit	f993cea8	genuine parts,o'reilly automotive,napa,acquisition,bid
+2026-07-03	Swiatek reaches the third round as Rybakina and Anisimova also advance	8597ff34	swiatek,rybakina,anisimova,wimbledon,third round
+2026-07-03	Zverev, de Minaur and Fritz cruise into the Wimbledon third round	52307b89	zverev,de minaur,fritz,wimbledon,third round
+2026-07-03	England beat South Africa to set up a T20 World Cup final against Australia	a4690849	england,south africa,sciver-brunt,t20 world cup,final
+2026-07-03	Hamilton eyes a record 10th British GP win on home soil as Ferrari brings upgrades	b4d0375f	lewis hamilton,british grand prix,silverstone,ferrari,f1
+2026-07-03	Verstappen plays down Red Bull's Silverstone hopes despite an upturn in Austria	be2313eb	max verstappen,red bull,silverstone,british grand prix,f1
+2026-07-03	Scientists recover ancient human DNA from cave-art walls for the first time	c0a45171	ancient dna,escoural cave,cave art,nature communications,archaeology
+2026-07-03	Webb watches a giant planet survive the death of its star	3351fb92	james webb space telescope,wd 1856 b,white dwarf,exoplanet,nature
+2026-07-03	Rubin Observatory begins its 10-year survey to map the entire southern sky	e32ab842	rubin observatory,lsst,survey,asteroids,astronomy
+2026-07-03	Global oceans record their hottest June ever measured	5d71a74f	copernicus,ocean temperature,marine heatwave,climate,record
+2026-07-03	A sea anemone protein reveals a 'reversed' antiviral immune system	10524cb9	sea anemone,cardib,antiviral,immune system,evolution
