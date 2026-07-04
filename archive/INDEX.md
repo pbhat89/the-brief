@@ -809,3 +809,30 @@ is empty until the first run.
 2026-07-03	Rubin Observatory begins its 10-year survey to map the entire southern sky	e32ab842	rubin observatory,lsst,survey,asteroids,astronomy
 2026-07-03	Global oceans record their hottest June ever measured	5d71a74f	copernicus,ocean temperature,marine heatwave,climate,record
 2026-07-03	A sea anemone protein reveals a 'reversed' antiviral immune system	10524cb9	sea anemone,cardib,antiviral,immune system,evolution
+2026-07-05	Four people and four firms charged as Singapore seizes over S$55 million in an Nvidia-chip fraud	529369f6	aperia group,alan wei,nvidia,good class bungalow,charged
+2026-07-05	US backs a US$22.3 million Hellfire missile package for Singapore's Apache fleet	d17d1bff	rsaf,hellfire missile,apache,lockheed martin,approved
+2026-07-05	Gym operator behind Anytime Fitness and BFT outlets charged over late CPF payments	7a0a500e	watchtower holdings,anytime fitness,bft,cpf board,charged
+2026-07-05	Plaza Singapura begins a S$160 million revamp in August, leaving some tenants uncertain	23241bfb	plaza singapura,golden village,tim ho wan,revamp,closing
+2026-07-05	US refuses to renew the USMCA, shifting the North American trade pact to annual reviews	28e26946	usmca,donald trump,jamieson greer,canada,declined
+2026-07-05	South Africa arrests more than 900 in nationwide anti-migrant marches	02b4f9e5	south africa,anti-migrant marches,zimbabwe,malawi,arrests
+2026-07-05	Amnesty says Sudan's RSF committed ethnic cleansing in its seizure of El Fasher	cc41f2c5	sudan,rsf,el fasher,amnesty international,accused
+2026-07-05	Update: Iran's new supreme leader stays hidden as millions mourn Khamenei	20a8f26d	iran,mojtaba khamenei,ali khamenei,tehran,mourn
+2026-07-05	Venezuela's earthquake death toll passes 2,500 as morgues overflow	293c68be	venezuela,la guaira,caracas,delcy rodriguez,died
+2026-07-05	Zuckerberg tells Meta staff AI-agent progress has fallen short of expectations	00cd614c	meta,zuckerberg,ai agents,town hall,concedes
+2026-07-05	GPU cloud Together AI raises $800 million at an $8.3 billion valuation	d58e0294	together ai,nvidia,neocloud,valuation,raises
+2026-07-05	Serial founder Bhavin Turakhia bets $30 million to build an AI rival to Microsoft Office	62e7bb79	bhavin turakhia,neo,enterprise software,microsoft,launches
+2026-07-05	Mistral says a new open-weight frontier model will hit early access in July	da0ec500	mistral,arthur mensch,open-weight model,early access,plans
+2026-07-05	SK Hynix files for a Nasdaq listing seeking up to $29 billion, set to be the largest-ever ADR	9d646c58	sk hynix,nasdaq,adr,alibaba,files
+2026-07-05	South Korea's Kospi jumps about 6% as Samsung and SK Hynix rebound	cf37cd47	kospi,samsung,sk hynix,sidecar,rebound
+2026-07-05	Oil edges up before the long US weekend as Middle East peace efforts hold	0e52e741	brent crude,wti,kuwait,opec,rises
+2026-07-05	Stocks close a strong first half, but the biggest winners sat outside the US	407df271	magnificent seven,emerging markets,nvidia,first half,gains
+2026-07-05	🎾 Eala stuns defending champion Swiatek to become the first Filipina in a Slam's second week	5431fcaa	alexandra eala,iga swiatek,jasmine paolini,wimbledon,upsets
+2026-07-05	🎾 Djokovic equals Federer's record of 105 Wimbledon match wins	d2260588	novak djokovic,roger federer,arthur rinderknech,wimbledon,record
+2026-07-05	🎾 Sabalenka downs Ostapenko to set up a fourth-round showdown with Osaka	892392c1	aryna sabalenka,jelena ostapenko,naomi osaka,wimbledon,showdown
+2026-07-05	🏎️ Antonelli beats Hamilton to win the Silverstone sprint and stretch his title lead	8ce8834e	kimi antonelli,lewis hamilton,lando norris,silverstone,sprint
+2026-07-05	🏎️ Antonelli takes British Grand Prix pole ahead of Leclerc and Hamilton	42fab870	kimi antonelli,charles leclerc,lewis hamilton,silverstone,pole
+2026-07-05	🏏 Suryavanshi becomes India's youngest men's cricketer as England win the 2nd T20I	b72aa611	vaibhav suryavanshi,jacob bethell,old trafford,sachin tendulkar,debuts
+2026-07-05	Scientists identify conserved targets that could enable a universal malaria vaccine	04988aa2	plasmodium,cd8 t cells,malaria,conserved antigens,identified
+2026-07-05	Atlantic 'cold blob' offers fresh evidence that a key ocean current is weakening	321d14ce	cold blob,amoc,atlantic,climate,weakening
+2026-07-05	Webb finds an exoplanet whose carbon-rich atmosphere defies explanation	28cfc7c3	james webb space telescope,exoplanet,atmosphere,carbon,observes
+2026-07-05	NASA sets an August launch for the Roman Space Telescope, months ahead of schedule	f6a92031	nancy grace roman,space telescope,kennedy space center,dark energy,launch
