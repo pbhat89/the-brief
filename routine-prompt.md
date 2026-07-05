@@ -118,6 +118,14 @@ Use the SGT-derived date everywhere:
    - **Fun fact (TOPIC-based, 30 days):** compute the candidate's `topic_key` (see Stage 2's FUN_FACT rules). If it is in `EXCLUDE_FUNFACT_TOPICS`, REJECT it even if the wording is different, and generate another.
    - **Puzzle:** reject any candidate whose `type` is in `EXCLUDE_PUZZLE_TYPES_4D` or whose `title_key` is in `EXCLUDE_PUZZLE_TITLES_30D`.
    - **Word Puzzle:** reject any candidate whose `type` is in `EXCLUDE_WORD_PUZZLE_TYPES_4D` or whose `title_key` is in `EXCLUDE_WORD_PUZZLE_TITLES_30D`. Also avoid reusing the same core answer set (same 16 grouping words, same ladder endpoints, same Spelling Bee letter bag) within 30 days even under a new title.
+   - **Never write an unkeyed ledger row (anti-repeat hardening).** The dedup keys (`topic_key`, `title_key`) are the *only* thing that stops a future repeat. A row with an empty or missing key is invisible to dedup and lets that fact/puzzle come back freely. So: every fun fact, puzzle, and word puzzle you choose MUST have a non-empty, normalized key before you commit `USED.json` in Stage 4b. If you cannot derive a clean key, that is a signal to pick a different item, not to write a blank.
+   - **Fun fact — also reject near-duplicates, not just exact-key collisions.** `topic_key` is an exact-string check, so a fact about the *same underlying phenomenon* phrased under a slightly different key would slip through (e.g. "a day on Venus is longer than its year" vs "Venus rotates slower than it orbits"). Before accepting a fun fact, scan the `text` of every entry in `funfact_topics` from the last 60 days and reject the candidate if it restates the same core phenomenon, even under a different `topic_key`. When in doubt, pick a fact from a different one of the rotation categories.
+
+**0c. Detect a missed prior run (the schedule sometimes skips a day).** After locking `today` and listing `archive/`, compute `yesterday` = the SGT calendar day immediately before `today`. If **no** `archive/{yesterday}.html` (or `{yesterday}.json` with `"status": "skipped"`) exists, the previous day's run did not fire. When that happens:
+
+- **Do not try to regenerate yesterday's brief.** News older than the 48-72h window would be stale and would collide with today's dedup. Today's edition is still today's.
+- **Surface the gap so it is visible, not silent.** Add a line to the archive JSON `notes` (e.g. `"No edition published for {yesterday} — prior run did not fire."`), and log the grep-able marker `MISSED RUN {yesterday}`. This is the in-run half of the missed-run safety net; the external `.github/workflows/watchdog.yml` Action is the half that can catch a day where the routine does not fire at all (a routine that never starts cannot report on itself).
+- Then proceed with today's run normally.
 
 ---
 
@@ -196,6 +204,21 @@ These are the **research** (over-collection) targets:
 3. Repeat until you reach 4-5 (Sports up to 6) candidates, or you have genuinely exhausted the allowed sources.
 
 Only fall short if the allowed sources truly have fewer than 4 confirmable, non-repeat stories. In that case, note "fewer stories today" for that section (in the run log, and reflected by simply rendering fewer items) rather than padding with vague or off-list items.
+
+### Unreachable sources vs. no news — the 3-attempt retry rule (FIX 6)
+
+**A section coming up empty because you could not *reach* its outlets is a different failure from a section that genuinely has no news, and it must be retried, not accepted.** Some days the compute environment cannot fetch specific news domains (DNS/egress blocks, timeouts, 403s) — e.g. all of India's outlets or both UK outlets are unreachable. Do NOT treat "the fetch failed" as "there is no news today." Distinguish the two by the signal:
+
+- **No news** = the outlets loaded fine and you searched them, but nothing in the window clears dedup/verification.
+- **Unreachable** = searches/fetches for that section's allowed domains error out, time out, return 403, or return zero results across *every* allowed outlet at once (a strong tell that the domains are blocked, not that the world went quiet).
+
+When a section is **empty because its sources were unreachable**, run a bounded retry loop for that section:
+
+1. **Retry the section up to 3 full attempts** before giving up. Between attempts, vary the approach: a different allowed outlet from the section's list, a different query phrasing, the outlet's Google-cached or AMP/mobile variant, a wire-service mirror of the same story (Reuters/AP/BBC where they are on that section's allowed list), and widen the window 48h→72h. Add a short backoff (a few seconds) between attempts so a transient block can clear.
+2. **Only after all 3 attempts still fail** to yield a single reachable, verifiable item may the section fall back to a placeholder card. The placeholder is a single item: headline `"{Region} coverage is unavailable in today's edition"`, a one-sentence summary naming which outlets were unreachable, `source` `"The Brief"`, empty `url`, `spectrum`/`bias` `null`. Never fabricate or link an unverified item to avoid a placeholder.
+3. **Record it.** In the archive JSON `notes` field, state exactly which sections fell back and which outlets were unreachable, and note "N retry attempts made" so a reader (and the watchdog) can see it was retried, not skipped.
+
+This retry loop applies per section and is separate from the whole-brief Stage 3 hard-stop (which still fires only if fewer than 8 verified items remain **across the entire brief**). A single placeholdered section does not by itself trip the hard-stop.
 
 ---
 
@@ -537,7 +560,14 @@ Steps:
 2. Stage the four archive files: `archive/YYYY-MM-DD.html`, `archive/YYYY-MM-DD.json`, updated `archive/INDEX.md`, and updated `archive/USED.json`. The filenames must use the **SGT-derived `YYYY-MM-DD`** from the Conventions section — never the UTC date. The filename must match the Pages URL in the email body and the date in the HTML masthead.
 3. Commit on `main` with author `Claude <noreply@anthropic.com>` (or whatever the MCP-side default is) and message `the-brief: YYYY-MM-DD`.
 4. **Push to `main`.** Do not create a `claude/...` branch. Do not open a PR. Do not stop to ask for confirmation.
-5. After the push succeeds, **verify Pages is serving the new file** by HEAD-requesting `https://pbhat89.github.io/the-brief/archive/YYYY-MM-DD.html`. If the request returns 404 for more than 60 seconds after a successful push, log the Pages-not-serving failure; do not retry (Pages often takes 30-60s to build).
+5. After the push succeeds, **verify Pages is serving the new file, and auto-heal a stuck build if it is not.** Pages usually builds in 30-60s, but the *legacy* branch builder occasionally hangs a build in the `building` state for hours — when that happens the whole site freezes at the last good deploy and today's URL 404s even though the file is on `main`. Do this:
+   1. Wait ~60s after the push, then HEAD-request `https://pbhat89.github.io/the-brief/archive/YYYY-MM-DD.html`.
+   2. If it returns 200, you are done — Pages is serving today's file.
+   3. If it still 404s, **trigger a fresh Pages build** and re-check. Repeat this rebuild-then-recheck cycle **up to 3 times**, waiting ~45s between attempts:
+      - Trigger: `gh api -X POST repos/pbhat89/the-brief/pages/builds` (or, if `gh` is unavailable, `curl -s -X POST -H "Authorization: Bearer $GITHUB_TOKEN" -H "Accept: application/vnd.github+json" https://api.github.com/repos/pbhat89/the-brief/pages/builds`).
+      - You can confirm the stuck state first with `gh api repos/pbhat89/the-brief/pages/builds/latest` — a `status` of `building` with `duration: 0` that is more than a couple of minutes old is a hung build; a POST re-queues it.
+   4. If it still 404s after 3 rebuild attempts, log the exact grep-able marker `PAGES NOT SERVING pbhat89/the-brief YYYY-MM-DD` (the raw `main` file is still correct, so the deploy is degraded, not the data). The `.github/workflows/watchdog.yml` GitHub Action is the external backstop and will re-attempt the rebuild on its own schedule.
+   - If the routine environment has neither `gh` nor a `GITHUB_TOKEN` with Pages scope, skip the in-run rebuild (do not fail the run) and rely on the watchdog Action, which always has the token it needs. Still log the `PAGES NOT SERVING` marker so the state is visible.
 
 If the push to `main` fails with a 403 or other permission error:
 

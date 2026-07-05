@@ -1,0 +1,84 @@
+name: Brief watchdog
+
+# External safety net for the daily routine. Two failure modes it catches:
+#   1. The scheduled routine never fired  -> today's archive file is missing on main -> open an alert issue.
+#   2. The routine fired but GitHub Pages hung on a stuck "building" state -> file is on main but the
+#      Pages URL 404s -> re-queue the Pages build (up to 3x) so the email's link works.
+#
+# It runs on GitHub's own cron, so it works even on a day the Claude routine does not run at all
+# (a routine that never starts cannot report on itself), and it needs no re-paste of routine-prompt.md.
+#
+# A watchdog cannot re-fire the Claude routine itself (there is no external trigger API on the Max plan
+# without incurring API cost). For a genuinely missed run it ALERTS so you re-run it in one tap; the
+# Pages half it heals fully and automatically.
+
+on:
+  schedule:
+    # 00:30 UTC == 08:30 Asia/Singapore, ~1.5h after the 07:00 SGT routine publishes.
+    - cron: '30 0 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  issues: write
+  pages: write
+
+jobs:
+  watchdog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check publish + heal Pages + alert
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -uo pipefail
+          DATE=$(TZ='Asia/Singapore' date +%F)
+          PAGES="https://pbhat89.github.io/the-brief/archive/${DATE}.html"
+          echo "Watchdog for SGT date: $DATE"
+
+          # 1. Did the routine publish today's file to main? (source of truth for "did it run")
+          if gh api "repos/${REPO}/contents/archive/${DATE}.html?ref=main" >/dev/null 2>&1; then
+            PUBLISHED=true
+          else
+            PUBLISHED=false
+          fi
+          echo "published=$PUBLISHED"
+
+          code() { curl -s -o /dev/null -w '%{http_code}' "$PAGES" || echo 000; }
+
+          # 2. Is Pages serving it? If the file is on main but Pages 404s, the build is stuck -> rebuild.
+          CODE=$(code)
+          echo "pages initial: $CODE"
+          if [ "$PUBLISHED" = "true" ] && [ "$CODE" != "200" ]; then
+            for i in 1 2 3; do
+              echo "Pages not serving a file that is on main - rebuild attempt $i"
+              gh api -X POST "repos/${REPO}/pages/builds" >/dev/null || true
+              sleep 45
+              CODE=$(code)
+              echo "pages after attempt $i: $CODE"
+              [ "$CODE" = "200" ] && break
+            done
+          fi
+
+          # 3. Alert (deduped by day) if something is still wrong.
+          open_issue() {  # $1=title  $2=body
+            local n
+            n=$(gh issue list --repo "$REPO" --state open --search "$1 in:title" --json number --jq 'length' 2>/dev/null || echo 0)
+            if [ "$n" = "0" ]; then
+              printf '%s\n' "$2" | gh issue create --repo "$REPO" --title "$1" --body-file -
+            else
+              echo "Alert already open for: $1"
+            fi
+          }
+
+          MISSED="The daily routine did not produce archive/${DATE}.html on main by 08:30 SGT (checked by the watchdog). The scheduled run was skipped or failed before publishing. To recover: open https://claude.ai/code/routines -> 'The Brief - daily' -> Run now. A re-fire on the same SGT day overwrites cleanly (Standing Authorization #2 in routine-prompt.md). Opened automatically by .github/workflows/watchdog.yml."
+          STUCK="archive/${DATE}.html is on main but GitHub Pages still returns ${CODE} after 3 rebuild attempts - the site may be stuck on a hung legacy build. Diagnose with: gh api repos/${REPO}/pages/builds/latest (a status of 'building' with duration 0 that is minutes old is hung). Re-queue with: gh api -X POST repos/${REPO}/pages/builds. Opened automatically by .github/workflows/watchdog.yml."
+
+          if [ "$PUBLISHED" = "false" ]; then
+            open_issue "The Brief did not publish for ${DATE}" "$MISSED"
+          elif [ "$CODE" != "200" ]; then
+            open_issue "Pages not serving The Brief for ${DATE}" "$STUCK"
+          else
+            echo "OK: ${DATE} published and Pages serving."
+          fi
