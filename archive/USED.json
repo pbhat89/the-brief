@@ -149,14 +149,14 @@
       "date": "2026-07-05",
       "topic_key": "gallium",
       "text": "Gallium melts in the warmth of your hand, below body temperature."
+    },
+    {
+      "date": "2026-07-06",
+      "topic_key": "tittle",
+      "text": "The dot above a lowercase i or j is called a tittle."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-06-05",
-      "type": "logic",
-      "title_key": "midnight-bridge"
-    },
     {
       "date": "2026-06-06",
       "type": "quantitative",
@@ -301,6 +301,11 @@
       "date": "2026-07-05",
       "type": "quantitative",
       "title_key": "numbered-book"
+    },
+    {
+      "date": "2026-07-06",
+      "type": "lateral",
+      "title_key": "open-field"
     }
   ],
   "word_puzzle_log": [
@@ -368,6 +373,11 @@
       "date": "2026-07-05",
       "type": "anagram",
       "title_key": "words-in-motion"
+    },
+    {
+      "date": "2026-07-06",
+      "type": "spellingbee",
+      "title_key": "pour-decisions"
     }
   ]
 }

@@ -836,3 +836,30 @@ is empty until the first run.
 2026-07-05	Atlantic 'cold blob' offers fresh evidence that a key ocean current is weakening	321d14ce	cold blob,amoc,atlantic,climate,weakening
 2026-07-05	Webb finds an exoplanet whose carbon-rich atmosphere defies explanation	28cfc7c3	james webb space telescope,exoplanet,atmosphere,carbon,observes
 2026-07-05	NASA sets an August launch for the Roman Space Telescope, months ahead of schedule	f6a92031	nancy grace roman,space telescope,kennedy space center,dark energy,launch
+2026-07-06	Greater Sentosa master plan targets double the visitors and a Super Nintendo World	268cc100	sentosa,pulau brani,universal studios,master plan,unveils
+2026-07-06	New HarbourFront cruise and ferry terminal opens July 7 with passport-free clearance	0e17561f	harbourfront,cruise centre,batam fast ferry,opens
+2026-07-06	Eminent Frog Porridge owner charged with 30 counts over S$3.8m tax evasion	7247a3d9	eminent frog porridge,buntono,iras,tax evasion,charged
+2026-07-06	Singapore police arrest 519 after island-wide June anti-crime operations	5dbddec5	singapore police,cid,cnb,raids,arrest
+2026-07-06	Man with S$32 in the bank posed as a millionaire to cheat victims of S$400,000	cb551b4b	daichi khamkrasin,ocbc,fraud,forged statement,pleads guilty
+2026-07-06	Germany's AfD re-elects Weidel and Chrupalla as 31,000 protest the Erfurt congress	11c3baa8	afd,alice weidel,tino chrupalla,erfurt,re-elects
+2026-07-06	UN issues a 'red alert' over a feared RSF assault on Sudan's el-Obeid	9b7e1247	un,volker turk,rsf,el-obeid,sudan,red alert
+2026-07-06	Iran signals it will charge Strait of Hormuz 'service fees', with breaks for allies	af9d7d5c	iran,strait of hormuz,china,service fees,levy
+2026-07-06	Al-Qaeda-linked JNIM mounts coordinated attacks across western Mali	bca26997	jnim,al-qaeda,mali,kayes,attacks
+2026-07-06	Pope Leo XIV visits Lampedusa and urges the US to welcome migrants	2ddd3547	pope leo xiv,lampedusa,migrants,united states,visits
+2026-07-06	Kuaishou spins out Kling AI with $2.8bn from Alibaba, Tencent and Baidu	dad4ff42	kuaishou,kling ai,alibaba,tencent,baidu,raises
+2026-07-06	Foxconn Q2 revenue jumps 39.8% to a record T$2.51 trillion on AI-server demand	98e41dff	foxconn,hon hai,nvidia,ai servers,revenue
+2026-07-06	Micron breaks ground on a $9.3bn Hiroshima fab expansion for AI memory	04ae22e0	micron,hiroshima,hbm,japan,fab,breaks ground
+2026-07-06	ElevenLabs in early talks for a tender offer at a $22bn valuation, Bloomberg reports	88db5d44	elevenlabs,tender offer,sequoia,valuation,talks
+2026-07-06	OPEC+ agrees another 188,000 bpd oil output hike for August	63f72b3c	opec,saudi arabia,russia,oil output,hike
+2026-07-06	European stocks close at records as the STOXX 600 books a fourth straight weekly gain	dc3ae160	stoxx 600,dax,european stocks,record,gain
+2026-07-06	'Trump Accounts' launch, seeding newborns with $1,000 in US index funds	75969fc7	trump accounts,treasury,robinhood,index funds,launch
+2026-07-06	easyJet agrees a £5.2bn take-private by US investor Castlelake	fed14c56	easyjet,castlelake,takeover,stelios haji-ioannou,agrees
+2026-07-06	Leclerc wins the British Grand Prix for the first time; Hamilton third	b7fefd99	charles leclerc,british grand prix,silverstone,hamilton,wins
+2026-07-06	Osaka stuns world No. 1 Sabalenka to reach her first Wimbledon quarter-final	ac6f328b	naomi osaka,aryna sabalenka,wimbledon,quarter-final,beats
+2026-07-06	Sinner sweeps past qualifier Mochizuki into a fifth straight Wimbledon quarter-final	7748145b	jannik sinner,shintaro mochizuki,wimbledon,quarter-final,reaches
+2026-07-06	Muchova outlasts Krejcikova in an all-Czech last-16 to reach the quarter-finals	785e8065	karolina muchova,barbora krejcikova,wimbledon,quarter-final,beats
+2026-07-06	Australia beat England to win a record seventh Women's T20 World Cup	b733131a	australia,england,womens t20 world cup,beth mooney,win
+2026-07-06	China's Tianwen-2 reaches Earth's quasi-moon Kamo'oalewa to attempt a first sample return	fa64945f	tianwen-2,kamooalewa,china,quasi-moon,sample return
+2026-07-06	New study argues a 2025 LIGO signal may be the first primordial black hole	643e5c9b	ligo,primordial black hole,dark matter,astrophysical journal,study
+2026-07-06	Men may be twice as likely as women to 'hit the wall' in marathons, study finds	4748258d	marathon,berlin marathon,glycogen,study,hit the wall
+2026-07-06	Astronomers confirm a third galaxy with almost no dark matter	49aaf745	ngc 1052-df9,dark matter,yale,keck observatory,galaxy,confirm
