@@ -863,3 +863,27 @@ is empty until the first run.
 2026-07-06	New study argues a 2025 LIGO signal may be the first primordial black hole	643e5c9b	ligo,primordial black hole,dark matter,astrophysical journal,study
 2026-07-06	Men may be twice as likely as women to 'hit the wall' in marathons, study finds	4748258d	marathon,berlin marathon,glycogen,study,hit the wall
 2026-07-06	Astronomers confirm a third galaxy with almost no dark matter	49aaf745	ngc 1052-df9,dark matter,yale,keck observatory,galaxy,confirm
+2026-07-07	Man, 24, dies after being struck by lightning while paddleboarding off Pasir Ris Beach	0dc0cbd2	pasir ris beach,lightning strike,paddleboarding,singapore,death
+2026-07-07	TikTok confirms Singapore layoffs as it restructures its Trust and Safety operations	72186b47	tiktok,trust and safety,content moderation,singapore,layoffs
+2026-07-07	Youth jailed 23 months for soliciting nude images from two underage girls he met online	722ae2a6	children and young persons act,underage girls,sexual assault,gag order,singapore court
+2026-07-07	Two men arrested after a knife fight outside an Orchard nightclub leaves four injured	ab45284e	buyong road,orchard,knife attack,nightclub brawl,arrests
+2026-07-07	Hamas dissolves the committee that governed Gaza, ceding civilian rule to a technocratic body	bdf2b891	hamas,gaza,mohammed al-farra,ncag,ali shaath
+2026-07-07	China test-fires a submarine-launched ballistic missile into the Pacific, drawing regional protests	9157dae5	china,penny wong,japan,new zealand,ballistic missile
+2026-07-07	Super Typhoon Bavi makes landfall on the US island of Rota as a Category 5 storm	f2597372	typhoon bavi,rota,northern mariana islands,guam,category 5
+2026-07-07	FIFA suspends Balogun's red-card ban after a Trump call, prompting protests from UEFA and Belgium	131c7581	folarin balogun,fifa,gianni infantino,donald trump,uefa
+2026-07-07	Israeli drone strike kills at least four in south Lebanon despite a two-week-old ceasefire	c2ca5159	israel,lebanon,nabatieh,hezbollah,ceasefire
+2026-07-07	Broadcom extends its custom-chip partnership with Apple through 2031	076ef4e0	broadcom,apple,custom chips,asic,2031
+2026-07-07	Paris hub Station F reopens its F/ai accelerator after its first AI cohort raised $34 million	5b54cbf9	station f,xavier niel,f/ai accelerator,europe ai,startups
+2026-07-07	Nearly 90 startups have reached unicorn status in 2026, most of them AI companies	996bc9f7	unicorns,prometheus,jeff bezos,genspark,venture capital
+2026-07-07	Microsoft cuts 4,800 jobs and will spin off four gaming studios in an Xbox overhaul	a548c4fa	microsoft,xbox,layoffs,gaming studios,asha sharma
+2026-07-07	The Dow closes above 53,000 for the first time in a chip-led post-holiday rally	2cb749c4	dow jones,nasdaq,s&p 500,semiconductors,record
+2026-07-07	Saudi Arabia makes its biggest crude price cut in over two decades as supply swells	673b7a07	saudi aramco,opec+,arab light,brent crude,price war
+2026-07-07	SpaceX joins the Nasdaq-100, forcing billions in passive-fund buying	8de6779e	spacex,nasdaq-100,qqq,passive funds,elon musk
+2026-07-07	🎾 Djokovic beats Safiullin for a record 106th Wimbledon win and a place in the quarter-finals	c7972139	novak djokovic,roman safiullin,roger federer,wimbledon,record
+2026-07-07	🎾 Struff, 36, becomes the oldest man in the Open Era to reach a first Grand Slam quarter-final	2d05d444	jan-lennard struff,hubert hurkacz,jannik sinner,wimbledon,quarter-final
+2026-07-07	🏏 India, trailing 1-0, face England in the third T20I at Trent Bridge	5b667eef	india,england,shreyas iyer,trent bridge,t20i
+2026-07-07	🏎️ Antonelli's title lead narrows after a Silverstone failure as F1 breaks before Spa	c79658ec	kimi antonelli,mercedes,silverstone,belgian grand prix,f1
+2026-07-07	A robotic spacecraft launches to grab and reboost NASA's ageing Swift telescope	727b96ca	nasa swift observatory,katalyst space,link spacecraft,pegasus xl,reboost
+2026-07-07	Scientists record single neurons assembling sentences word by word before speech	759f468a	single-neuron recording,frontotemporal cortex,language,massachusetts general hospital,nature
+2026-07-07	NASA's TESS spots a giant planet 40,000 light-years away using a new method	66fbd02d	tess,gaia23bra b,super-jupiter,microlensing,nasa
+2026-07-07	Scientists race to save coffee as climate change threatens its wild species	117aa3ae	coffea arabica,coffea stenophylla,climate change,wild coffee,extinction

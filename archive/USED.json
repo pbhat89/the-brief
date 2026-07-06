@@ -154,14 +154,14 @@
       "date": "2026-07-06",
       "topic_key": "tittle",
       "text": "The dot above a lowercase i or j is called a tittle."
+    },
+    {
+      "date": "2026-07-07",
+      "topic_key": "pringles",
+      "text": "The inventor of the Pringles can was buried in one."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-06-06",
-      "type": "quantitative",
-      "title_key": ""
-    },
     {
       "date": "2026-06-07",
       "type": "lateral",
@@ -306,6 +306,11 @@
       "date": "2026-07-06",
       "type": "lateral",
       "title_key": "open-field"
+    },
+    {
+      "date": "2026-07-07",
+      "type": "visual",
+      "title_key": "tumbling-die"
     }
   ],
   "word_puzzle_log": [
@@ -378,6 +383,11 @@
       "date": "2026-07-06",
       "type": "spellingbee",
       "title_key": "pour-decisions"
+    },
+    {
+      "date": "2026-07-07",
+      "type": "grouping",
+      "title_key": "crossed-wires"
     }
   ]
 }
