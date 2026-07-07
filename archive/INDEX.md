@@ -887,3 +887,33 @@ is empty until the first run.
 2026-07-07	Scientists record single neurons assembling sentences word by word before speech	759f468a	single-neuron recording,frontotemporal cortex,language,massachusetts general hospital,nature
 2026-07-07	NASA's TESS spots a giant planet 40,000 light-years away using a new method	66fbd02d	tess,gaia23bra b,super-jupiter,microlensing,nasa
 2026-07-07	Scientists race to save coffee as climate change threatens its wild species	117aa3ae	coffea arabica,coffea stenophylla,climate change,wild coffee,extinction
+2026-07-08	No parliamentary action against WP's Sylvia Lim and Faisal Manap over 2021 case	6d334a60	indranee rajah,sylvia lim,faisal manap,workers party,raeesah khan,ruled
+2026-07-08	Aperia CEO charged with laundering S$38 million through a S$55 million bungalow	9d2eacef	alan wei zhaolun,aperia group,nvidia,good class bungalow,money laundering,charged
+2026-07-08	Singapore and Indonesia pledge to keep the Malacca Strait open at leaders' retreat	991f6545	lawrence wong,prabowo subianto,malacca strait,indonesia,unclos,agreed
+2026-07-08	New bill would make merely holding a phone while driving an offence	690bcf5b	road traffic act,mobile device,drink driving,home affairs ministry,singapore,tabled
+2026-07-08	Singapore to open construction and marine jobs to Timor-Leste workers from 2027	64b3635c	lawrence wong,timor-leste,east timor,work permit,manpower ministry,opened
+2026-07-08	Explosions rock Damascus during Macron's visit, wounding at least 18	8a35dbb6	emmanuel macron,damascus,syria,al-sharaa,explosions,france
+2026-07-08	NATO summit opens in Ankara amid a rift over the US war on Iran	1d211fd3	nato,ankara,donald trump,mark rutte,iran,defence spending
+2026-07-08	US strikes Iran and reimposes oil sanctions after Strait of Hormuz ship attacks	cecd2a90	united states,iran,strait of hormuz,sanctions,centcom,ceasefire
+2026-07-08	Cuba suffers a nationwide blackout, its third grid collapse of 2026	def7cb9e	cuba,blackout,power grid,havana,fuel shortage,collapse
+2026-07-08	Venezuela's earthquake death toll passes 3,500 two weeks after twin quakes	df89a247	venezuela,earthquake,san felipe,united nations,death toll,rises
+2026-07-08	DeepSeek is developing its own inference chip to cut its reliance on Nvidia	4bda9d23	deepseek,nvidia,huawei,inference chip,china,reuters
+2026-07-08	German fusion start-up Proxima raises 411 million euros from backers including Google	79b2599b	proxima fusion,google,rwe,stellarator,germany,fusion
+2026-07-08	SK Hynix launches a roughly $28 billion US listing to ride the AI-memory boom	c05b36cf	sk hynix,nasdaq,adr,hbm,coatue,listing
+2026-07-08	Smart-glasses maker Even Realities reaches a $1 billion valuation	ebe79fce	even realities,meituan,tencent,smart glasses,shenzhen,valuation
+2026-07-08	AI law start-up Norm raises $120 million at a $1.2 billion valuation	b0ec5d24	norm,khosla ventures,legal ai,unicorn,series c,raises
+2026-07-08	Wall Street slips from records as chip stocks lead an AI selloff	ebe65c72	nasdaq,s&p 500,dow jones,micron,semiconductors,falls
+2026-07-08	Samsung guides to a record 89.4 trillion won quarterly profit, but its shares fall	590ad10b	samsung electronics,ai memory,earnings,kospi,record,profit
+2026-07-08	Amazon raises at least $25 billion in bonds to fund its AI build-out	a2019dc1	amazon,corporate bonds,ai infrastructure,capex,debt markets,raises
+2026-07-08	Oil jumps 3% after Iran attacks a tanker near the Strait of Hormuz	0c86749e	brent crude,wti,strait of hormuz,iran,qatar lng,jumps
+2026-07-08	Rivian shares plunge 18% on a 75-million-share capital raise	1da54431	rivian,electric vehicles,equity offering,dilution,department of energy,plunges
+2026-07-08	🎾 Djokovic outlasts Auger-Aliassime in a five-set epic to reach the Wimbledon semis	bbe5019f	novak djokovic,felix auger-aliassime,jannik sinner,wimbledon,semi-final
+2026-07-08	🎾 Sinner ends Struff's fairytale run to reach the Wimbledon semi-finals	a79aed7f	jannik sinner,jan-lennard struff,novak djokovic,wimbledon,semi-final
+2026-07-08	🎾 Gauff rallies past Pegula to reach her first Wimbledon semi-final	413a35b2	coco gauff,jessica pegula,wimbledon,semi-final,reaches
+2026-07-08	🎾 Muchova beats Osaka to set up a semi-final against Gauff	831bdd04	karolina muchova,naomi osaka,coco gauff,wimbledon,semi-final
+2026-07-08	🏏 England thrash India by 125 runs to lead the T20I series 2-0	de1f75cd	england,india,phil salt,josh tongue,jofra archer,t20i
+2026-07-08	🏎️ Belgian Grand Prix at Spa is next as Antonelli leads the title race	5c2c086f	kimi antonelli,george russell,charles leclerc,belgian grand prix,spa,standings
+2026-07-08	Euclid telescope spots the two most ancient quasars ever seen	adbf72d0	euclid,esa,quasars,black holes,early universe,redshift
+2026-07-08	Climate change is erasing temperate species faster than tropical ones	62aed657	climate change,local extinction,biodiversity,temperate,tropical,warming
+2026-07-08	A giant planet that survived its star's death is found keeping its atmosphere	885e735d	wd 1856 b,white dwarf,james webb space telescope,atmosphere,exoplanet,survivor
+2026-07-08	Webb reveals baby stars flaring to life in the dusty FS Tau system	977f1e88	jwst,protostars,fs tau,star formation,accretion,nasa

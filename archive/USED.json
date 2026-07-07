@@ -159,14 +159,14 @@
       "date": "2026-07-07",
       "topic_key": "pringles",
       "text": "The inventor of the Pringles can was buried in one."
+    },
+    {
+      "date": "2026-07-08",
+      "topic_key": "cashew",
+      "text": "Cashews are in the same family as poison ivy; raw cashew shells contain urushiol."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-06-07",
-      "type": "lateral",
-      "title_key": "sealed-room"
-    },
     {
       "date": "2026-06-08",
       "type": "visual",
@@ -311,6 +311,11 @@
       "date": "2026-07-07",
       "type": "visual",
       "title_key": "tumbling-die"
+    },
+    {
+      "date": "2026-07-08",
+      "type": "logic",
+      "title_key": "poisoned-cask"
     }
   ],
   "word_puzzle_log": [
@@ -388,6 +393,11 @@
       "date": "2026-07-07",
       "type": "grouping",
       "title_key": "crossed-wires"
+    },
+    {
+      "date": "2026-07-08",
+      "type": "ladder",
+      "title_key": "alchemist"
     }
   ]
 }
