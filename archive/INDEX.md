@@ -917,3 +917,34 @@ is empty until the first run.
 2026-07-08	Climate change is erasing temperate species faster than tropical ones	62aed657	climate change,local extinction,biodiversity,temperate,tropical,warming
 2026-07-08	A giant planet that survived its star's death is found keeping its atmosphere	885e735d	wd 1856 b,white dwarf,james webb space telescope,atmosphere,exoplanet,survivor
 2026-07-08	Webb reveals baby stars flaring to life in the dusty FS Tau system	977f1e88	jwst,protostars,fs tau,star formation,accretion,nasa
+2026-07-09	Man who walked dementia widow home returned to rape her, admits guilt	e72f1f08	zakir-jaafar,rape,dementia-widow,pleads-guilty
+2026-07-09	Opposition figure Lim Tean ordered to begin jail term on 20 July	a582c1ac	lim-tean,jail,practising-law,court-of-appeal
+2026-07-09	Go-Ahead takes over Tampines bus routes from SBS Transit after 40 years	b614da2e	go-ahead,sbs-transit,tampines-bus-package,handover
+2026-07-09	280 motorcyclists screened at Admiralty Road West; 15 caught unlicensed	df92f3b7	traffic-police,motorcyclists,admiralty-road-west,enforcement
+2026-07-09	Singapore Garden Festival returns to Gardens by the Bay for 10th edition	8974f56d	singapore-garden-festival,gardens-by-the-bay,marketplace
+2026-07-09	India coverage is unavailable in today's edition	e3cdb7aa	india,coverage-unavailable
+2026-07-09	UK coverage is unavailable in today's edition	b61e7b4f	uk,coverage-unavailable
+2026-07-09	Nigel Farage resigns as MP amid funding scandal, forcing a by-election	d6399ece	nigel-farage,reform-uk,resigns-mp,funding-scandal
+2026-07-09	Sara Duterte's impeachment trial opens in the Philippine Senate	c2bb609a	sara-duterte,impeachment-trial,philippine-senate,marcos
+2026-07-09	Russian missiles hit Kyiv for the third time in a week	511b7386	russia,kyiv,missile-strike,ukraine
+2026-07-09	Trump declares the Iran ceasefire 'over' after a fresh exchange of strikes	4c9b7b16	trump,iran,ceasefire-over,strait-of-hormuz
+2026-07-09	UN inquiry demands release of Gaza doctor held by Israel for 18 months	95728b31	un-inquiry,hussam-abu-safia,gaza,israel-detention
+2026-07-09	SambaNova raises $1 billion at an $11 billion valuation for AI chips	b8d9d447	sambanova,series-f,general-atlantic,ai-chips
+2026-07-09	ECB orders eurozone banks to plan for frontier-AI cyber threats	93e974fe	ecb,claudia-buch,banks,ai-cybersecurity
+2026-07-09	Bank of America U-turns on an OpenAI loan to chase its IPO	934ec6b4	bank-of-america,openai,loan,ipo
+2026-07-09	Tencent seeks to sell up to $1.6 billion Kuaishou stake in AI pivot	4f11ee44	tencent,kuaishou,stake-sale,ai-pivot
+2026-07-09	Tech layoffs that name-check AI top 120,000 roles in 2026	29fbaba9	tech-layoffs,ai,atlassian,2026
+2026-07-09	Wall Street ends mixed as Iran tensions drag the Dow lower	5ee80759	wall-street,dow,sp-500,nasdaq
+2026-07-09	Fed's June minutes reveal a split over the path for interest rates	6fb1a02d	federal-reserve,june-minutes,interest-rates,fomc
+2026-07-09	Levi Strauss beats estimates and raises its full-year guidance	a44f46dc	levi-strauss,earnings,guidance-raise,q2
+2026-07-09	ITV agrees to sell its media arm to Comcast's Sky for up to 1.6 billion pounds	b510cf1f	itv,sky,comcast,media-sale
+2026-07-09	Thales wins Exail Technologies with a 3.9 billion euro deal, beating Safran	3a8239c2	thales,exail-technologies,safran,acquisition
+2026-07-09	🎾 Zverev beats Fritz to reach his first Wimbledon semi-final	8e5e8221	zverev,fritz,wimbledon,semi-final
+2026-07-09	🎾 British wild card Arthur Fery stuns Cobolli to reach the semis	9c50df3d	arthur-fery,cobolli,wimbledon,semi-final
+2026-07-09	🏏 Cornered India face England in the fourth T20I at Bristol	b71519d5	india,england,fourth-t20i,bristol
+2026-07-09	🏎️ Russell says Antonelli 'deserves to be ahead' before Spa	1bcd658f	george-russell,antonelli,mercedes,belgian-gp
+2026-07-09	🏎️ Mercedes drivers address contracts amid Verstappen rumours	2016c925	mercedes,russell,antonelli,verstappen-rumours
+2026-07-09	Blood protein GDF15 may flag dementia risk decades before symptoms	93773fdc	gdf15,dementia,biomarker,study
+2026-07-09	Long-held dogma that female mammals can't make new eggs may be wrong	5711c75b	ovary,oocytes,egg-cells,reproductive-biology
+2026-07-09	Machine learning uncovers new antibiotics for drug-resistant gonorrhoea	9c373e79	machine-learning,antibiotics,gonorrhoea,drug-resistance
+2026-07-09	Apes and humans have shared rhythmic laughter for 15 million years	7fc0cbeb	laughter,great-apes,evolution,isochrony

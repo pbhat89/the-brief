@@ -164,14 +164,14 @@
       "date": "2026-07-08",
       "topic_key": "cashew",
       "text": "Cashews are in the same family as poison ivy; raw cashew shells contain urushiol."
+    },
+    {
+      "date": "2026-07-09",
+      "topic_key": "vantablack",
+      "text": "Vantablack absorbs up to 99.965% of visible light using carbon nanotubes."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-06-08",
-      "type": "visual",
-      "title_key": "drilling-cube"
-    },
     {
       "date": "2026-06-09",
       "type": "logic",
@@ -316,6 +316,11 @@
       "date": "2026-07-08",
       "type": "logic",
       "title_key": "poisoned-cask"
+    },
+    {
+      "date": "2026-07-09",
+      "type": "quantitative",
+      "title_key": "marching-column"
     }
   ],
   "word_puzzle_log": [
@@ -398,6 +403,11 @@
       "date": "2026-07-08",
       "type": "ladder",
       "title_key": "alchemist"
+    },
+    {
+      "date": "2026-07-09",
+      "type": "letterboxed",
+      "title_key": "around-the-block"
     }
   ]
 }
