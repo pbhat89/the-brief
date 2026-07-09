@@ -169,14 +169,14 @@
       "date": "2026-07-09",
       "topic_key": "vantablack",
       "text": "Vantablack absorbs up to 99.965% of visible light using carbon nanotubes."
+    },
+    {
+      "date": "2026-07-10",
+      "topic_key": "cloud",
+      "text": "A typical fair-weather cumulus cloud weighs on the order of a million pounds (about 1.1 million lb)."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-06-09",
-      "type": "logic",
-      "title_key": ""
-    },
     {
       "date": "2026-06-10",
       "type": "quantitative",
@@ -321,6 +321,11 @@
       "date": "2026-07-09",
       "type": "quantitative",
       "title_key": "marching-column"
+    },
+    {
+      "date": "2026-07-10",
+      "type": "lateral",
+      "title_key": "left-on-the-lawn"
     }
   ],
   "word_puzzle_log": [
@@ -408,6 +413,11 @@
       "date": "2026-07-09",
       "type": "letterboxed",
       "title_key": "around-the-block"
+    },
+    {
+      "date": "2026-07-10",
+      "type": "anagram",
+      "title_key": "countries-in-disguise"
     }
   ]
 }

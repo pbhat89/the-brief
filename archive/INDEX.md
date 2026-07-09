@@ -948,3 +948,33 @@ is empty until the first run.
 2026-07-09	Long-held dogma that female mammals can't make new eggs may be wrong	5711c75b	ovary,oocytes,egg-cells,reproductive-biology
 2026-07-09	Machine learning uncovers new antibiotics for drug-resistant gonorrhoea	9c373e79	machine-learning,antibiotics,gonorrhoea,drug-resistance
 2026-07-09	Apes and humans have shared rhythmic laughter for 15 million years	7fc0cbeb	laughter,great-apes,evolution,isochrony
+2026-07-10	Police arrest 17 in island-wide illegal gambling raids, seize over S$720,000	896a08c5	Singapore Police,illegal gambling,Gambling Control Act
+2026-07-10	Two Malaysian men charged over impersonation scam ring tied to S$1.4m in losses	a767b93f	Singapore Police,Cyber Command,impersonation scam
+2026-07-10	Super Typhoon Bavi forces SIA and Scoot to cancel 16 Singapore flights	5b74e84d	Super Typhoon Bavi,Singapore Airlines,Scoot
+2026-07-10	Kitchen assistant, 24, jailed 17 months for scalding colleague over noodles	e744f699	Chong Kai Wen,Bedok,assault
+2026-07-10	India coverage is unavailable in today's edition	e3cdb7aa	
+2026-07-10	UK coverage is unavailable in today's edition	b61e7b4f	
+2026-07-10	Trump moves to remove Syria from US state-sponsors-of-terrorism list	39b9c74a	Trump,Syria,Ahmed al-Sharaa,state sponsors of terrorism
+2026-07-10	Update: US and Iran trade strikes a second night as mediators scramble to save truce	4e30c06f	United States,Iran,CENTCOM,IRGC
+2026-07-10	UN inquiry finds Sudan's RSF committed genocide in el-Fasher	bb3b4f04	United Nations,Sudan,RSF,el-Fasher,genocide
+2026-07-10	DR Congo Ebola deaths reach 600 in outbreak Africa CDC calls the fastest-growing on record	06fcb0e3	DR Congo,Ebola,Africa CDC
+2026-07-10	Trump pledges Ukraine a licence to manufacture Patriot interceptors	59270c5b	Trump,Zelensky,Ukraine,Patriot
+2026-07-10	Prime Intellect raises $130m at a $1bn valuation to build enterprise AI agents	0e852239	Prime Intellect,Radical Ventures,AI agents
+2026-07-10	Apollo's $35bn Broadcom-Anthropic AI chip credit deal begins trading	81129d4a	Apollo,Broadcom,Anthropic,private credit
+2026-07-10	China to let Alibaba, ByteDance and DeepSeek buy limited Nvidia H200 chips	f68fb859	China,Nvidia,H200,Alibaba,DeepSeek
+2026-07-10	OpenAI releases new voice models for more natural live conversations	affa48a2	OpenAI,voice models
+2026-07-10	AI startups report revenue accelerating, with Anthropic near a $47bn run rate	7f15daaf	Anthropic,Glean,AI revenue
+2026-07-10	Wall Street rallies as chips rebound; Nasdaq climbs 1.3% and S&P 500 gains 0.8%	e40232c8	Wall Street,Nasdaq,S&P 500,Dow
+2026-07-10	Micron shares rise 7% on up to $3bn in new US chipmaking investment	9eeca43a	Micron,GlobalWafers,semiconductors
+2026-07-10	PepsiCo beats on revenue but misses on profit as US beverage volumes fall 4%	5a84ffd8	PepsiCo,earnings
+2026-07-10	Qiagen shares jump about 10% on takeover interest from EQT, Advent and KKR	5a0ca798	Qiagen,EQT,Advent,KKR
+2026-07-10	China's CXMT to raise $4.3bn in the country's biggest IPO since 2022	b6cebd79	CXMT,China,IPO,memory chips
+2026-07-10	🎾 Muchova saves match point to stun Gauff and reach the Wimbledon final	5819ea7f	Muchova,Gauff,Wimbledon
+2026-07-10	🎾 Noskova beats Kostyuk to set up an all-Czech Wimbledon final with Muchova	6b250d6c	Noskova,Kostyuk,Muchova,Wimbledon
+2026-07-10	🎾 Sinner-Djokovic and Zverev-Fery to decide Wimbledon men's finalists today	afead933	Sinner,Djokovic,Zverev,Fery,Wimbledon
+2026-07-10	🏏 England beat India by 9 wickets to take an unassailable 3-0 T20I series lead	00258c19	England,India,T20I,Brook,Salt
+2026-07-10	🏎️ Norris calls McLaren's British GP pace 'shocking' as team targets Spa fixes	1801dbd8	Norris,McLaren,British GP,Spa,Antonelli
+2026-07-10	Satellites measure Earth dragging spacetime, tightening a key Einstein test tenfold	eac8c3a8	frame-dragging,LARES-2,general relativity,Ciufolini
+2026-07-10	Webb pierces the dust to reveal the churning heart of galaxy Centaurus A	65ff485c	James Webb Space Telescope,Centaurus A,MIRI
+2026-07-10	Ancient DNA shows Europe's last Neanderthals were diverse, not inbred to extinction	07cbe7fc	Neanderthals,ancient DNA,Goyet
+2026-07-10	DESI galaxy map finds giant-scale structure that challenges cosmological principle	8b1f38b5	DESI,cosmological principle,galaxy map
