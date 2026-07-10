@@ -42,7 +42,7 @@ For every item in the draft, run this checklist against a SECOND named source be
 
 8. **Source-list compliance.** Confirm the source for each item is on the allowed list for that tab (see `routine-prompt.md` for the per-tab source lists). If the writer pulled from an outlet not on the list, either drop the item or replace it with an equivalent story from an allowed source. No exceptions for "but the story is good."
 
-9. **UK News scope.** Every UK News item must be UK-domestic (Westminster, the UK economy, courts, public services, society) and sourced from BBC or Sky News. Reject items that merely restate a Global / Geopolitics story from a UK angle, or that duplicate a headline already carried in another tab today.
+9. **UK News scope.** Every UK News item must be UK-domestic (Westminster, the UK economy, courts, public services, society) and sourced from the UK News allowed list in `routine-prompt.md` — BBC or Sky News normally; on a day the run notes record that both primary outlets were unreachable (FIX 6), the UK fallback tier (The Guardian, CNN, Al Jazeera, Bloomberg, CNBC) is also compliant. Reject items that merely restate a Global / Geopolitics story from a UK angle, or that duplicate a headline already carried in another tab today.
 
 ---
 

@@ -94,6 +94,37 @@ In billing, keep both overage and credit top-ups OFF. The routine is sized to
 fit inside Max-plan usage; leaving overage off prevents any accidental charge
 if usage spikes.
 
+## Environment network allowlist (why India/UK can go dark)
+
+The routine's cloud environment enforces a network egress policy: requests to
+hosts outside its allowlist are rejected at the proxy with a 403 before they
+reach the site. In July 2026 this blocked every primary India and UK outlet
+(plus Reuters, AP, The Guardian, NYT, and even `pbhat89.github.io`), so those
+sections ran on placeholders or fallback sources for days.
+
+`routine-prompt.md` mitigates this in-run (FIX 6 retries, then the India/UK
+**fallback source tiers** — SCMP, Al Jazeera, CNN, Bloomberg, CNBC, The
+Guardian), but the real fix is widening the environment's network access
+where the routine is configured (claude.ai → Code → the routine's environment
+settings; see code.claude.com/docs/en/claude-code-on-the-web for network
+policy details). Domains to allow:
+
+```
+# India (primary outlets)
+thehindu.com  indianexpress.com  hindustantimes.com
+timesofindia.indiatimes.com  ndtv.com  economictimes.indiatimes.com
+# UK (primary outlets)
+bbc.com  bbc.co.uk  news.sky.com
+# Also on allowed lists but currently blocked
+reuters.com  apnews.com  theguardian.com  nytimes.com
+# Self-verification of the published brief
+pbhat89.github.io
+```
+
+Until those are allowed, expect India/UK to run on the fallback tier and the
+`PAGES CHECK BLOCKED` marker in run logs (the GitHub Actions watchdog covers
+the Pages check from outside the environment).
+
 ## Auto-send the Gmail draft
 
 The claude.ai Gmail connector only exposes `create_draft` — there's no `send`
