@@ -174,14 +174,14 @@
       "date": "2026-07-10",
       "topic_key": "cloud",
       "text": "A typical fair-weather cumulus cloud weighs on the order of a million pounds (about 1.1 million lb)."
+    },
+    {
+      "date": "2026-07-11",
+      "topic_key": "canada",
+      "text": "Canada holds about 60% of the world's lakes, more than any other country."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-06-10",
-      "type": "quantitative",
-      "title_key": "up-and-down-hill"
-    },
     {
       "date": "2026-06-11",
       "type": "lateral",
@@ -326,6 +326,11 @@
       "date": "2026-07-10",
       "type": "lateral",
       "title_key": "left-on-the-lawn"
+    },
+    {
+      "date": "2026-07-11",
+      "type": "visual",
+      "title_key": "counting-the-board"
     }
   ],
   "word_puzzle_log": [
@@ -418,6 +423,11 @@
       "date": "2026-07-10",
       "type": "anagram",
       "title_key": "countries-in-disguise"
+    },
+    {
+      "date": "2026-07-11",
+      "type": "spellingbee",
+      "title_key": "tea-for-seven"
     }
   ]
 }

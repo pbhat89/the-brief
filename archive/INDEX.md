@@ -978,3 +978,38 @@ is empty until the first run.
 2026-07-10	Webb pierces the dust to reveal the churning heart of galaxy Centaurus A	65ff485c	James Webb Space Telescope,Centaurus A,MIRI
 2026-07-10	Ancient DNA shows Europe's last Neanderthals were diverse, not inbred to extinction	07cbe7fc	Neanderthals,ancient DNA,Goyet
 2026-07-10	DESI galaxy map finds giant-scale structure that challenges cosmological principle	8b1f38b5	DESI,cosmological principle,galaxy map
+2026-07-11	Opposition politician Lim Tean ordered to begin a three-month jail term on July 20	8c0e486c	lim tean,court of appeal,legal profession act,jail
+2026-07-11	Aperia Group CEO charged with laundering S$38m via a bungalow in Nvidia-chips fraud case	6d2d10fd	alan wei,aperia group,nvidia chips,money laundering
+2026-07-11	Singapore marriages fell 6.2% in 2025, but most couples report being happy	38d03f83	msf,family trends report,marriages,divorce
+2026-07-11	New bill proposes up to 15 years' jail for purposeful endangerment with a vehicle	96ca6d74	road traffic bill,purposeful endangerment,mha
+2026-07-11	Baruipur child rape-murder ignites a BJP-TMC clash after a suspect dies in police custody	4f3598ce	west bengal,baruipur,bjp,trinamool congress,custodial death
+2026-07-11	RBI faces a $100 billion challenge unwinding its record rupee-defence position	42c60cf9	reserve bank of india,rupee,forward book
+2026-07-11	Milky Mist Dairy plans India's largest dairy-sector IPO at about $213 million	32f047c7	milky mist,tamil nadu,ipo,dairy
+2026-07-11	India's IT majors head into earnings under AI and Middle East pressure	93407c0c	hcl,wipro,tech mahindra,it earnings
+2026-07-11	Andy Burnham on course to become UK PM after 322 of 403 Labour MPs back him	bb5b2905	andy burnham,keir starmer,labour party,prime minister
+2026-07-11	Nigel Farage resigns as an MP amid a funding scandal, forcing a Clacton by-election	737b3d19	nigel farage,reform uk,clacton,christopher harborne
+2026-07-11	Police open an investigation into donations to Reform UK	d7f3d154	reform uk,nigel farage,fiona cottrell,police probe
+2026-07-11	Main UK parties say they will boycott Farage's Clacton by-election	9d1c1c74	clacton by-election,kemi badenoch,ed davey,boycott
+2026-07-11	Update: Trump declares the US-Iran ceasefire 'over' as Washington adds fresh sanctions	ba9dc567	united states,iran,strait of hormuz,ceasefire,sanctions
+2026-07-11	US senators reach a deal with the Trump administration to advance a Russia sanctions bill	fc38fc12	lindsey graham,russia sanctions,trump administration,zelensky
+2026-07-11	US charges gangster Lawrence Bishnoi over the 2023 assassination of activist Hardeep Singh Nijjar	be55b57d	lawrence bishnoi,hardeep singh nijjar,goldy brar,indictment
+2026-07-11	China expands its anti-sanctions toolkit, raising risks for foreign firms	96976286	china,anti-sanctions,european union,export controls
+2026-07-11	Israeli strikes kill at least nine in Gaza despite the ceasefire, including an aid worker	5a3025ba	gaza,israel,world central kitchen,al-mawasi
+2026-07-11	Apple sues OpenAI, alleging a coordinated theft of trade secrets for AI hardware	5b57b92a	apple,openai,trade secrets,chang liu,tang tan
+2026-07-11	Big Tech has doubled its debt load to about $350 billion in the AI spending spree	38bb66b2	big tech,debt,ai capex,data centers
+2026-07-11	Paris voice-AI startup Gradium raises a $100 million seed round backed by Nvidia	6b9ea505	gradium,nvidia,voice ai,seed round
+2026-07-11	Hugging Face's CEO says companies are done renting their AI	548f8ea7	hugging face,clem delangue,open-source ai
+2026-07-11	SK Hynix raises $26.5 billion in the largest-ever US listing by a foreign company	d11298fb	sk hynix,ipo,nasdaq,high-bandwidth memory
+2026-07-11	Circle wins final OCC approval for a national trust bank, and its shares surge	178fc5c7	circle,occ,usdc,national trust bank
+2026-07-11	Apollo trumps Castlelake with a £5.7bn bid for easyJet, and shares jump	19be8032	easyjet,apollo,castlelake,takeover
+2026-07-11	Xavier Niel becomes Vodafone's biggest shareholder in a $6 billion deal	d50acc57	vodafone,xavier niel,emirates telecom,stake sale
+2026-07-11	Wall Street ends the week higher as tech leads; S&P 500 gains 0.4% on Friday	4240dd88	s&p 500,nasdaq,dow jones,wall street
+2026-07-11	🎾 Sinner beats Djokovic in straight sets to reach the Wimbledon final	391f2976	jannik sinner,novak djokovic,alexander zverev,wimbledon
+2026-07-11	🎾 An all-Czech Wimbledon women's final guarantees a first-time champion	f236fd02	karolina muchova,linda noskova,wimbledon,final
+2026-07-11	🏏 England eye a 4-0 sweep as a winless India seek pride in the 5th T20I	3f2a695e	england,india,t20i,southampton,shreyas iyer
+2026-07-11	🏎️ Verstappen's 2027 market heats up as McLaren becomes the last top seat	78fe95c5	max verstappen,mclaren,mercedes,george russell,2027
+2026-07-11	🏎️ Antonelli leads by 25 points heading into the Belgian GP after a British GP failure	e97bbace	kimi antonelli,george russell,charles leclerc,belgian grand prix
+2026-07-11	Scientists capture a mid-ocean ridge tearing open in real time for the first time	f8d51fb5	southeast indian ridge,seafloor spreading,lava,tectonics
+2026-07-11	Euclid telescope finds the two oldest quasars ever observed	21decba0	euclid,quasars,early universe,redshift
+2026-07-11	Eli Lilly's weight-loss pill outperforms oral semaglutide in a head-to-head trial	7555b282	orforglipron,oral semaglutide,glp-1,type 2 diabetes
+2026-07-11	Researchers eavesdrop on the single neurons that build human sentences	0e9a1d5a	single-neuron recording,language,grammar,brain
