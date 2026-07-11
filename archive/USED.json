@@ -179,19 +179,14 @@
       "date": "2026-07-11",
       "topic_key": "canada",
       "text": "Canada holds about 60% of the world's lakes, more than any other country."
+    },
+    {
+      "date": "2026-07-12",
+      "topic_key": "hummingbird",
+      "text": "A hummingbird is the only bird that can fly backwards; its heart can exceed 1,200 beats per minute."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-06-11",
-      "type": "lateral",
-      "title_key": "diver-in-forest"
-    },
-    {
-      "date": "2026-06-12",
-      "type": "visual",
-      "title_key": "paper-and-the-punch"
-    },
     {
       "date": "2026-06-13",
       "type": "logic",
@@ -331,6 +326,11 @@
       "date": "2026-07-11",
       "type": "visual",
       "title_key": "counting-the-board"
+    },
+    {
+      "date": "2026-07-12",
+      "type": "logic",
+      "title_key": "census-taker"
     }
   ],
   "word_puzzle_log": [
@@ -428,6 +428,11 @@
       "date": "2026-07-11",
       "type": "spellingbee",
       "title_key": "tea-for-seven"
+    },
+    {
+      "date": "2026-07-12",
+      "type": "grouping",
+      "title_key": "tail-ends"
     }
   ]
 }

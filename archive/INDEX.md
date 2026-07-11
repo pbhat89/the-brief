@@ -1013,3 +1013,34 @@ is empty until the first run.
 2026-07-11	Euclid telescope finds the two oldest quasars ever observed	21decba0	euclid,quasars,early universe,redshift
 2026-07-11	Eli Lilly's weight-loss pill outperforms oral semaglutide in a head-to-head trial	7555b282	orforglipron,oral semaglutide,glp-1,type 2 diabetes
 2026-07-11	Researchers eavesdrop on the single neurons that build human sentences	0e9a1d5a	single-neuron recording,language,grammar,brain
+2026-07-12	HDB unveils plans for up to 18,000 homes at Gillman Barracks and Sunset Way	251608f4	hdb,gillman barracks,sunset way,redevelopment,flats
+2026-07-12	Repeat drink-driver and lawyer Steven John Lam is struck off for lying to police	b66fdbde	steven john lam,drink driving,struck off,court
+2026-07-12	Father jailed 15 months for holding a karambit knife to his daughter's neck	b0b8422b	karambit knife,father,daughter,jail,abuse
+2026-07-12	Thirteen public libraries to close phone-charging stations after safety incidents	236ce66d	national library board,charging stations,libraries,closure
+2026-07-12	India's $50 billion IPO pipeline led by Jio and NSE faces delay as oil spikes	4bf0c6cc	jio platforms,national stock exchange,ipo,oil,rupee
+2026-07-12	Adani secures nearly $15 billion in a week as its US legal cloud lifts	0eddd94c	gautam adani,adani enterprises,ihc,odisha aluminium,fundraise
+2026-07-12	India agrees to supply BrahMos missiles to Indonesia in a third regional deal	53cf8fc3	brahmos,india,indonesia,missiles,defence
+2026-07-12	India's cricket board to review the T20 team after its tour of England	d18eb89b	bcci,t20,india,england,review
+2026-07-12	Record heatwave pushes the UK power grid to its limit	18183ca7	uk power grid,heatwave,national grid,emergency
+2026-07-12	UK construction shrinks again in June, denting Starmer's housebuilding pledge	54471488	uk construction,pmi,starmer,housebuilding
+2026-07-12	Burnham plans to expand the prime minister's grip on economic policy	6f0cc74c	andy burnham,treasury,economic policy,prime minister
+2026-07-12	Typhoon Bavi triggers landslides that kill at least 15 in the southern Philippines	fd82d3df	typhoon bavi,philippines,mindanao,landslides
+2026-07-12	Typhoon Bavi makes landfall in eastern China after 1.7 million are evacuated	7e177bdc	typhoon bavi,china,zhejiang,evacuation
+2026-07-12	US Representative Ro Khanna says Israeli settlers and soldiers detained him in the West Bank	423a45a1	ro khanna,israel,west bank,settlers,detained
+2026-07-12	Ukraine chokes fuel supplies to Crimea and Russia to squeeze the military	39c9d12a	ukraine,russia,crimea,fuel,refineries
+2026-07-12	Ollama raises $65 million as its open-source AI runtime nears 9 million developers	1a215d66	ollama,series b,theory ventures,open source ai
+2026-07-12	Morgan Stanley warns AI chipmakers' pricing power is fading as the rally cools	066be5eb	morgan stanley,chipmakers,lisa shalett,ai stocks
+2026-07-12	AI startup Lyzr lets its own agent run its $100 million fundraise	3bf815bd	lyzr,ai agent,series b,fundraise
+2026-07-12	Microsoft starts replacing OpenAI and Anthropic models with its own AI in Office	6826e855	microsoft,mai,openai,anthropic,office
+2026-07-12	Delta beats estimates as premium revenue overtakes the main cabin for the first time	3fcc1219	delta,earnings,premium revenue,q2
+2026-07-12	Meta posts its best stock week since early 2024 on AI optimism	fb44d571	meta,stock,ai,muse
+2026-07-12	Oil posts a weekly gain of about 6% as Strait of Hormuz disruption persists	54a29873	oil,brent,strait of hormuz,weekly gain
+2026-07-12	China sets its yuan fixing below 6.80 per dollar for the first time since 2023	ac6e2418	china,yuan,pboc,fixing
+2026-07-12	🎾 Noskova beats Muchova in an all-Czech final for her first Wimbledon title	018a004e	linda noskova,karolina muchova,wimbledon,final,title
+2026-07-12	🎾 Sinner meets Zverev in the Wimbledon men's final	0f2479ee	jannik sinner,alexander zverev,wimbledon,final
+2026-07-12	🏏 Buttler 131 and Brook 95 not out carry England to a 4-0 T20I sweep of India	4eddcc27	england,india,t20i,buttler,brook,sweep
+2026-07-12	🏎️ F1 heads to Spa for the Belgian GP with Antonelli 25 points clear	0098231c	formula 1,belgian gp,spa,antonelli,russell
+2026-07-12	Astronomers capture a 'dark' comet growing a tail for the first time	3efaab25	dark comet,nasa jpl,farnocchia,nature astronomy
+2026-07-12	Harvard's silicon chip writes 64 DNA strands at once using electricity and water	eff7e4a7	harvard,dna synthesis,silicon chip,nature electronics
+2026-07-12	Study finds every pregnancy rewires the brain in its own way	30678239	pregnancy,brain,nature communications,study
+2026-07-12	China's Tianwen-2 returns the first close-up image of Earth's quasi-moon	1e778b75	tianwen-2,kamooalewa,china,quasi-moon,image
