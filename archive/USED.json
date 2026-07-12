@@ -184,6 +184,11 @@
       "date": "2026-07-12",
       "topic_key": "hummingbird",
       "text": "A hummingbird is the only bird that can fly backwards; its heart can exceed 1,200 beats per minute."
+    },
+    {
+      "date": "2026-07-13",
+      "topic_key": "sea otter",
+      "text": "Sea otters hold hands while sleeping and keep a favourite rock in a skin pouch under one arm."
     }
   ],
   "puzzle_log": [
@@ -331,6 +336,11 @@
       "date": "2026-07-12",
       "type": "logic",
       "title_key": "census-taker"
+    },
+    {
+      "date": "2026-07-13",
+      "type": "quantitative",
+      "title_key": "careless-teller"
     }
   ],
   "word_puzzle_log": [
@@ -433,6 +443,11 @@
       "date": "2026-07-12",
       "type": "grouping",
       "title_key": "tail-ends"
+    },
+    {
+      "date": "2026-07-13",
+      "type": "ladder",
+      "title_key": "in-the-pink"
     }
   ]
 }

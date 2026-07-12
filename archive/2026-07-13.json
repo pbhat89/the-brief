@@ -1,0 +1,616 @@
+{
+  "date": "2026-07-13",
+  "items": [
+    {
+      "tab": "Singapore",
+      "headline": "Circle Line loop completed as three new MRT stations open",
+      "summary": "Singapore's Circle Line Stage 6 opened for passenger service on July 12, adding Keppel, Cantonment and Prince Edward Road stations to close the 39km, 33-station loop from HarbourFront to Marina Bay. LTA says the link cuts about 10 minutes off a Telok Blangah-to-Marina Bay trip.",
+      "url": "https://mothership.sg/2026/07/circle-line-stage-6-opens/",
+      "outlet": "Mothership",
+      "publish_date": "Jul 12",
+      "short_hash": "e4f11e99",
+      "key_entities": [
+        "circle-line",
+        "lta",
+        "mrt",
+        "stage-6",
+        "opens"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "Businessman loses S$4.9 million in a deepfake Zoom scam impersonating PM Wong",
+      "summary": "SCMP detailed how a Singapore businessman was duped into wiring S$4.9 million after joining a fabricated Zoom 'summit' featuring AI deepfakes of Prime Minister Lawrence Wong and other officials. A second scammer posing as a lawyer directed the transfers.",
+      "url": "https://www.scmp.com/news/asia/southeast-asia/article/3353868/how-victim-lost-us38-million-singapore-deepfake-zoom-scam-impersonating-pm-wong",
+      "outlet": "SCMP",
+      "publish_date": "Jul 11",
+      "short_hash": "6a4f0b72",
+      "key_entities": [
+        "deepfake",
+        "scam",
+        "lawrence-wong",
+        "zoom",
+        "businessman"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "Woman jailed 23 months for a chopper attack at People's Park Complex",
+      "summary": "Chinese national He Longfeng, 37, was sentenced on July 10 to 23 months' jail for slashing two employees at a cooked-food stall in Chinatown; a 42-year-old victim suffered an abdominal stab wound. The court heard she had untreated schizophreniform disorder.",
+      "url": "https://mothership.sg/2026/07/chinese-woman-jailed-knife-attack-people-park-complex/",
+      "outlet": "Mothership",
+      "publish_date": "Jul 10",
+      "short_hash": "3e767eab",
+      "key_entities": [
+        "he-longfeng",
+        "peoples-park",
+        "chopper-attack",
+        "jailed",
+        "chinatown"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "Pioneer Generation seniors to get MediSave top-ups of up to S$1,200",
+      "summary": "About S$145 million in MediSave top-ups will be credited to Pioneer Generation seniors' CPF accounts from mid-July, ranging from S$300 for those born 1945-1949 to S$1,200 for those born in 1934 or earlier. The funds can offset MediShield Life and CareShield Life premiums.",
+      "url": "https://mothership.sg/2026/06/pioneer-generation-tops-july-2026/",
+      "outlet": "Mothership",
+      "publish_date": "Jul",
+      "short_hash": "943e040f",
+      "key_entities": [
+        "pioneer-generation",
+        "medisave",
+        "cpf",
+        "top-up",
+        "seniors"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "Indian sailor missing after a tanker is attacked near the Strait of Hormuz",
+      "summary": "India's Ministry of External Affairs said an Indian national is missing after a container vessel was struck near the Strait of Hormuz, causing an engine-room fire, and condemned the attack while demanding unimpeded navigation. The incident came amid a third round of US strikes on Iran.",
+      "url": "https://www.cnn.com/2026/07/11/world/live-news/iran-war-trump",
+      "outlet": "CNN",
+      "publish_date": "Jul 11",
+      "short_hash": "d780a1e5",
+      "key_entities": [
+        "mea",
+        "indian-sailor",
+        "hormuz",
+        "tanker",
+        "missing"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "Indian stocks and the rupee slide as renewed Iran tensions lift oil",
+      "summary": "Indian equities and the rupee gave up recent gains after President Trump said the Iran ceasefire was over, pushing oil higher; the Nifty 50 fell 2.1% and the rupee closed at its weakest since June 11. Foreign funds bought a net 20 billion rupees of shares on the dip.",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-08/indian-stocks-rupee-slide-after-trump-reignites-iran-tensions",
+      "outlet": "Bloomberg",
+      "publish_date": "Jul 8",
+      "short_hash": "52b7958d",
+      "key_entities": [
+        "nifty",
+        "rupee",
+        "iran",
+        "oil",
+        "slide"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "India weighs talks with Iran to secure safe passage for stranded tankers",
+      "summary": "With oil tankers waiting in the Persian Gulf amid the Strait of Hormuz crisis, New Delhi is considering options including direct talks with Tehran to secure safe passage, as the rupee comes under renewed pressure from higher energy prices.",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-07-09/india-s-rupee-back-under-pressure-as-us-iran-tensions-increase-inr-usd",
+      "outlet": "Bloomberg",
+      "publish_date": "Jul 9",
+      "short_hash": "50e3800b",
+      "key_entities": [
+        "india",
+        "iran",
+        "tankers",
+        "gulf",
+        "talks"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "India ranks 157th on press freedom as scrutiny grows over Modi's media access",
+      "summary": "A report examined why Prime Minister Narendra Modi does not hold unscripted press conferences, amid India's 157th-of-180 ranking in the 2026 World Press Freedom Index. The scrutiny comes as the opposition prepares to press the government during the coming monsoon parliament session.",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/7/12/why-doesnt-indian-pm-modi-hold-unscripted-press-conferences",
+      "outlet": "Al Jazeera",
+      "publish_date": "Jul 12",
+      "short_hash": "ab558e29",
+      "key_entities": [
+        "modi",
+        "press-freedom",
+        "index",
+        "media",
+        "scrutiny"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "Reeves to push wider AI use across financial services in Mansion House speech",
+      "summary": "Chancellor Rachel Reeves is set to use her July 14 Mansion House address to promote greater adoption of AI in UK financial services, part of a growth-focused deregulation push. The speech may be among her last, with Andy Burnham poised to become prime minister and reshape the Cabinet.",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-11/uk-s-reeves-to-focus-on-ai-opportunities-in-speech-to-city",
+      "outlet": "Bloomberg",
+      "publish_date": "Jul 11",
+      "short_hash": "315d5278",
+      "key_entities": [
+        "reeves",
+        "mansion-house",
+        "ai",
+        "financial-services",
+        "speech"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "Thames Water edges toward temporary nationalisation as its rescue stalls",
+      "summary": "Britain's biggest water supplier moved closer to temporary state control after ministers deemed a creditor rescue insufficient. The London & Valley Water consortium, which includes Elliott, Apollo and BlackRock, has offered a £3.35 billion equity injection and a £9.4 billion debt write-down.",
+      "url": "https://www.cnbc.com/2026/07/01/thames-water-andy-burnham-creditors-apollo-blackrock-privatization.html",
+      "outlet": "CNBC",
+      "publish_date": "Jul 1",
+      "short_hash": "cdf7a94d",
+      "key_entities": [
+        "thames-water",
+        "nationalisation",
+        "creditors",
+        "rescue",
+        "ofwat"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "Economists urge Britain's next prime minister to consider sweeping tax reform",
+      "summary": "A group of economists including former Goldman Sachs chief Jim O'Neill, an adviser to Andy Burnham, urged the incoming government to pursue a wide-ranging tax overhaul to revive sluggish growth, warning that 'incrementalism will not fix Britain'.",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-05/burnham-adviser-urges-next-pm-to-consider-radical-tax-overhaul",
+      "outlet": "Bloomberg",
+      "publish_date": "Jul 5",
+      "short_hash": "fdfd5d4a",
+      "key_entities": [
+        "jim-oneill",
+        "burnham",
+        "tax-reform",
+        "economists",
+        "growth"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "UK firms plan to keep raising prices even as inflation eases",
+      "summary": "A Bank of England survey found British companies grew more optimistic about inflation in June yet still expect to raise their own prices by about 4% over the coming year, double the Bank's 2% target, complicating the path for interest-rate cuts.",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-03/uk-firms-expect-to-keep-raising-prices-even-as-inflation-falls",
+      "outlet": "Bloomberg",
+      "publish_date": "Jul 3",
+      "short_hash": "e0b7d687",
+      "key_entities": [
+        "bank-of-england",
+        "inflation",
+        "prices",
+        "firms",
+        "survey"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "Iran strikes five Gulf states and declares Hormuz closed as the US bombs again",
+      "summary": "Iran launched missiles and drones at Bahrain, Kuwait, Jordan, Qatar and Oman on July 12 and said it was closing the Strait of Hormuz, after US forces struck more than 300 Iranian targets over three nights. Maritime authorities kept the strait's southern route open despite Tehran's closure claim.",
+      "url": "https://www.aljazeera.com/news/2026/7/12/iran-attacks-five-gulf-nations-shuts-hormuz-after-us-bombing-all-to-know",
+      "outlet": "Al Jazeera",
+      "publish_date": "Jul 12",
+      "short_hash": "4af0da06",
+      "key_entities": [
+        "iran",
+        "gulf-states",
+        "hormuz",
+        "us-strikes",
+        "closure"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "US Senator Lindsey Graham dies at 71 after a sudden illness",
+      "summary": "The longtime South Carolina Republican and Trump ally died late on July 11 of an aortic dissection, according to preliminary findings, hours after returning from a trip to Kyiv where he was a leading champion of Ukraine aid. His death triggers a contest for his Senate seat.",
+      "url": "https://www.cnn.com/2026/07/12/politics/sen-lindsey-graham-dies-at-71-hnk",
+      "outlet": "CNN",
+      "publish_date": "Jul 12",
+      "short_hash": "088028c1",
+      "key_entities": [
+        "lindsey-graham",
+        "senator",
+        "dies",
+        "aortic-dissection",
+        "south-carolina"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "Former Qatar emir Sheikh Hamad bin Khalifa Al Thani dies at 74",
+      "summary": "Qatar's 'Father Emir', who ruled from 1995 until his rare 2013 abdication and turned the small Gulf state into a diplomatic and LNG power, died on July 12 and was buried in Doha the same day. Qatar declared four days of mourning and his son, Emir Tamim, led the funeral.",
+      "url": "https://www.aljazeera.com/news/2026/7/12/former-emir-of-qatar-sheikh-hamad-bin-khalifa-al-thani-dies-at-74",
+      "outlet": "Al Jazeera",
+      "publish_date": "Jul 12",
+      "short_hash": "e2049987",
+      "key_entities": [
+        "sheikh-hamad",
+        "qatar",
+        "emir",
+        "dies",
+        "doha"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "Zelenskyy replaces PM Svyrydenko in a broad Ukraine cabinet reshuffle",
+      "summary": "President Volodymyr Zelenskyy announced on July 12 that Prime Minister Yulia Svyrydenko, who negotiated last year's US-Ukraine minerals deal, will step down, part of a shake-up assigning each foreign-policy priority to a dedicated official. Naftogaz CEO Sergii Koretskyi and ex-PM Denys Shmyhal are among the possible successors.",
+      "url": "https://www.aljazeera.com/news/2026/7/12/ukraines-zelenskyy-announces-cabinet-reshuffle-replaces-pm-svyrydenko",
+      "outlet": "Al Jazeera",
+      "publish_date": "Jul 12",
+      "short_hash": "974cfeac",
+      "key_entities": [
+        "zelenskyy",
+        "svyrydenko",
+        "ukraine",
+        "cabinet",
+        "reshuffle"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "OpenAI's head of safety Johannes Heidecke departs in a research reshuffle",
+      "summary": "OpenAI's head of safety Johannes Heidecke is leaving after a reorganisation that folds safety teams under alignment chief Mia Glaese, with Saachi Jain named interim head of safety systems. The exit is part of a wider leadership shake-up at the company.",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-11/openai-safety-head-heidecke-to-leave-firm-after-reshuffle-wired",
+      "outlet": "Bloomberg",
+      "publish_date": "Jul 11",
+      "short_hash": "58063280",
+      "key_entities": [
+        "openai",
+        "heidecke",
+        "safety",
+        "reshuffle",
+        "departs"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "Meta pulls an Instagram AI image feature within days after a backlash",
+      "summary": "Meta removed a Muse Image feature that let anyone generate AI images of a person by @-mentioning their public Instagram account, after criticism from SAG-AFTRA and users over its opt-out design. Meta said the feature 'missed the mark', scrapping it about three days after launch.",
+      "url": "https://techcrunch.com/2026/07/10/meta-removes-controversial-ai-feature-on-instagram-after-backlash/",
+      "outlet": "TechCrunch",
+      "publish_date": "Jul 10",
+      "short_hash": "f89bfdfa",
+      "key_entities": [
+        "meta",
+        "instagram",
+        "muse-image",
+        "backlash",
+        "removed"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "SpaceXAI and Cursor launch Grok 4.5 after a $60 billion Cursor deal",
+      "summary": "SpaceXAI and Cursor released Grok 4.5, a model tuned for finance, legal and coding tasks, weeks after SpaceX agreed to acquire Cursor in a deal valuing the coding startup at about $60 billion. Elon Musk's firm is chasing OpenAI and Anthropic.",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-08/spacexai-cursor-unveil-grok-ai-model-for-legal-finance-tasks",
+      "outlet": "Bloomberg",
+      "publish_date": "Jul 8",
+      "short_hash": "827f7ac8",
+      "key_entities": [
+        "spacexai",
+        "cursor",
+        "grok",
+        "acquisition",
+        "launch"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "SambaNova raises $1 billion at an $11 billion valuation",
+      "summary": "AI chip maker SambaNova drew $1 billion in the first close of a Series F round at an $11 billion valuation, roughly five months after its last mega-round, as it scales production of its inference systems. JPMorgan has named it an inference-infrastructure partner.",
+      "url": "https://techcrunch.com/2026/07/08/sambanova-draws-1b-at-11b-valuation-in-series-f-first-close/",
+      "outlet": "TechCrunch",
+      "publish_date": "Jul 8",
+      "short_hash": "a0ff65f0",
+      "key_entities": [
+        "sambanova",
+        "funding",
+        "series-f",
+        "valuation",
+        "ai-chip"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "MGM Resorts opens talks over Barry Diller's $48.30-a-share buyout offer",
+      "summary": "MGM Resorts formed a special committee to weigh a proposal from Barry Diller's People Inc to buy the roughly 26% of MGM it does not already own at $48.30 per share, valuing the casino operator at about $12.4 billion. MGM closed Friday at $46.88, just below the offer.",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-10/mgm-resorts-engaged-in-deal-talks-with-diller-wsj-says",
+      "outlet": "Bloomberg",
+      "publish_date": "Jul 10",
+      "short_hash": "d913da94",
+      "key_entities": [
+        "mgm",
+        "barry-diller",
+        "buyout",
+        "people-inc",
+        "talks"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Prologis presses Segro investors over its £12.6 billion takeover bid",
+      "summary": "Prologis publicly urged shareholders of UK warehouse group Segro to back its £12.6 billion all-stock bid, worth about 925p a share, arguing Segro's standalone data-centre plan would rely on excess debt. Takeover rules require Prologis to make a firm offer or walk away by July 22.",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-09/segro-s-data-center-defense-relies-on-excess-debt-prologis-says",
+      "outlet": "Bloomberg",
+      "publish_date": "Jul 9",
+      "short_hash": "0e3e1c75",
+      "key_entities": [
+        "prologis",
+        "segro",
+        "takeover",
+        "warehouses",
+        "bid"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "US Q2 earnings season opens as five big banks and June CPI land Tuesday",
+      "summary": "JPMorgan, Goldman Sachs, Bank of America, Wells Fargo and Citigroup all report second-quarter results on July 14 alongside the June CPI print, which economists expect to cool to about 3.8% from May's 4.2%. Investors are watching for signals on the Federal Reserve's next move.",
+      "url": "https://www.cnbc.com/2026/07/12/here-are-the-3-big-things-were-watching-in-the-stock-market-this-week.html",
+      "outlet": "CNBC",
+      "publish_date": "Jul 12",
+      "short_hash": "143951a1",
+      "key_entities": [
+        "earnings",
+        "banks",
+        "cpi",
+        "jpmorgan",
+        "fed"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Vista Equity and Quinti Capital bid to take adtech firm Criteo private",
+      "summary": "Vista Equity Partners and Quinti Capital offered to acquire French digital-advertising company Criteo at a more than 50% premium, valuing it at roughly $3.7 billion. Criteo's US-listed shares jumped about 21% on the news; the company has not yet responded.",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-06/advertising-technology-firm-criteo-attracts-vista-equity-backed-takeover-offer",
+      "outlet": "Bloomberg",
+      "publish_date": "Jul 6",
+      "short_hash": "67ccaed6",
+      "key_entities": [
+        "criteo",
+        "vista-equity",
+        "quinti",
+        "take-private",
+        "adtech"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🎾 Sinner defends his Wimbledon title, beating Zverev in four sets",
+      "summary": "Jannik Sinner won back-to-back Wimbledon titles and his fifth Grand Slam, beating first-time finalist Alexander Zverev 6-7(7), 7-6(2), 6-3, 6-4 on Centre Court. He became the 10th man to successfully defend the men's singles title.",
+      "url": "https://www.atptour.com/en/news/sinner-zverev-wimbledon-2026-final-sunday",
+      "outlet": "ATP Tour",
+      "publish_date": "Jul 12",
+      "short_hash": "14f57044",
+      "key_entities": [
+        "sinner",
+        "zverev",
+        "wimbledon",
+        "final",
+        "title"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🏏 India call up Prince Yadav and Ravi Bishnoi after injuries before the ODIs",
+      "summary": "The BCCI named Prince Yadav as cover for the injured Harshit Rana (hamstring) in India's ODI squad and Ravi Bishnoi to replace Varun Chakaravarthy for the Zimbabwe T20Is. India's three-match ODI series in England begins July 14 at Edgbaston.",
+      "url": "https://www.espncricinfo.com/story/india-news-ravi-bishnoi-replaces-injured-varun-chakravarthy-in-squad-for-zimbabwe-t20i-tour-1545315",
+      "outlet": "ESPNcricinfo",
+      "publish_date": "Jul 12",
+      "short_hash": "d493e0e9",
+      "key_entities": [
+        "india",
+        "prince-yadav",
+        "bishnoi",
+        "injury",
+        "squad"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🏏 West Indies beat New Zealand by seven wickets in the first ODI",
+      "summary": "West Indies chased 268 with seven balls to spare in Guyana on July 11, with Keacy Carty named Player of the Match. Alzarri Joseph took four wickets and debutant spinner Vitel Lawes three as New Zealand collapsed from 234 for 4.",
+      "url": "https://www.espncricinfo.com/series/new-zealand-tour-of-west-indies-2026-1538619/west-indies-vs-new-zealand-1st-odi-1538624/match-report",
+      "outlet": "ESPNcricinfo",
+      "publish_date": "Jul 11",
+      "short_hash": "43677bc1",
+      "key_entities": [
+        "west-indies",
+        "new-zealand",
+        "odi",
+        "guyana",
+        "win"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🏏 Bangladesh win the consolation ODI but Zimbabwe take the series 2-1",
+      "summary": "Bangladesh beat Zimbabwe by seven wickets in the third ODI in Harare on July 11, with Tanzid Hasan's 94 and Shoriful Islam's four wickets sealing the win. Zimbabwe still claimed the series 2-1.",
+      "url": "https://www.espncricinfo.com/series/bangladesh-in-zimbabwe-2026-1538288/zimbabwe-vs-bangladesh-3rd-odi-1538300/match-report",
+      "outlet": "ESPNcricinfo",
+      "publish_date": "Jul 11",
+      "short_hash": "59f045d5",
+      "key_entities": [
+        "bangladesh",
+        "zimbabwe",
+        "odi",
+        "series",
+        "harare"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🏎️ Russell signals a fifth Mercedes season as Antonelli leads into Spa",
+      "summary": "Ahead of the July 17-19 Belgian Grand Prix, George Russell said he intends to extend with Mercedes for a fifth season amid Max Verstappen speculation. Teammate Kimi Antonelli leads the drivers' championship on 179 points, 25 clear of Russell after nine rounds.",
+      "url": "https://www.formula1.com/en/latest/article/russell-and-antonelli-offer-update-on-mercedes-contract-talks-amid.3mSVROWEFLCKzRpooWsGZ0",
+      "outlet": "Formula1.com",
+      "publish_date": "Jul 12",
+      "short_hash": "201b7127",
+      "key_entities": [
+        "russell",
+        "mercedes",
+        "antonelli",
+        "belgian-gp",
+        "standings"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "China catches a rocket booster in a sea net, a spaceflight first",
+      "summary": "On July 10 China's Long March 10B made its debut launch and recovered its first stage by snagging it in a net strung across a ship, using four hooks instead of landing legs, making China only the second nation to recover an orbital-class booster. CASC says it will refly the same stage this year.",
+      "url": "https://www.scientificamerican.com/article/chinas-long-march-10b-rocket-successfully-launches-and-lands-in-a-global-spaceflight-milestone/",
+      "outlet": "Scientific American",
+      "publish_date": "Jul 10",
+      "short_hash": "3c5bd3e9",
+      "key_entities": [
+        "china",
+        "long-march-10b",
+        "booster",
+        "net",
+        "recovery"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "Physicists extract energy from a lab-made 'spinning black hole'",
+      "summary": "A CUNY team built a ring of electronic resonators, switched in a timed sequence, so that electromagnetic waves behaved as if striking an ultrafast-rotating body and were amplified, realising the Penrose-Zel'dovich energy-extraction process with no moving parts. The result confirms a 50-year-old black-hole prediction.",
+      "url": "https://www.nature.com/articles/s41586-026-10725-y",
+      "outlet": "Nature",
+      "publish_date": "Jul 11",
+      "short_hash": "170b96fe",
+      "key_entities": [
+        "cuny",
+        "black-hole",
+        "superradiance",
+        "penrose",
+        "energy"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "Interstellar comet 3I/ATLAS may be the oldest object ever observed",
+      "summary": "Isotope measurements from the VLT and JWST suggest interstellar comet 3I/ATLAS formed in a cold, metal-poor system possibly 3 to 11 billion years old, older than the Sun, making it perhaps the most ancient comet ever directly studied. It is only the third confirmed interstellar object.",
+      "url": "https://www.scientificamerican.com/article/interstellar-comet-3i-atlas-is-almost-as-old-as-the-universe-itself/",
+      "outlet": "Scientific American",
+      "publish_date": "Jul 8",
+      "short_hash": "5ba294d0",
+      "key_entities": [
+        "3i-atlas",
+        "comet",
+        "interstellar",
+        "jwst",
+        "oldest"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "NASA satellites track an undersea eruption that may build a new island",
+      "summary": "NASA and ESA satellites are imaging an ongoing submarine eruption along Titan Ridge in the Bismarck Sea near Papua New Guinea, capturing steam plumes, thermal hotspots and pumice rafts drifting toward the Admiralty Islands. Scientists are watching for a possible new island.",
+      "url": "https://science.nasa.gov/earth/earth-observatory/new-eruption-in-the-bismarck-sea/",
+      "outlet": "NASA",
+      "publish_date": "Jul 10",
+      "short_hash": "266565b0",
+      "key_entities": [
+        "nasa",
+        "bismarck-sea",
+        "eruption",
+        "pumice",
+        "island"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "A commercial robot spacecraft moves to rescue NASA's falling Swift telescope",
+      "summary": "Katalyst Space Technologies' LINK spacecraft, launched July 3 on the final Pegasus XL rocket, is being commissioned to dock with and boost NASA's Neil Gehrels Swift Observatory, whose orbit is decaying, in a first-of-its-kind in-orbit rescue of a NASA science satellite.",
+      "url": "https://www.nature.com/articles/d41586-026-01949-z",
+      "outlet": "Nature",
+      "publish_date": "Jul 10",
+      "short_hash": "398e90f6",
+      "key_entities": [
+        "katalyst",
+        "swift-telescope",
+        "nasa",
+        "servicing",
+        "rescue"
+      ],
+      "is_update": false
+    }
+  ],
+  "fun_fact": {
+    "headline": "Sea otters hold hands while they sleep",
+    "body": "Sea otters often hold hands while they sleep, drifting in groups called rafts so the current cannot pull them apart. Many also keep a favourite rock tucked into a loose pouch of skin under one forearm, using it for years as an anvil to crack open clams and mussels.",
+    "source": "Monterey Bay Aquarium; Denver Museum of Nature & Science",
+    "fun_fact_id": "funfact-7af12dac",
+    "topic": "biology",
+    "topic_key": "sea otter"
+  },
+  "puzzle": {
+    "type": "quantitative",
+    "title": "The Careless Teller",
+    "title_key": "careless-teller",
+    "body": "A man takes a cheque to the bank. It is written for a whole number of dollars and a whole number of cents. A distracted teller misreads it and pays him the number of dollars that should have been cents, and the number of cents that should have been dollars.\n\nThe man pockets the cash, buys a newspaper for 5 cents, and then notices he has exactly twice the amount the cheque was written for.\n\nWhat was the original amount of the cheque?",
+    "approach": "Let the cheque be X dollars and Y cents, write what the teller actually paid, subtract the 5 cents, and set it equal to twice the cheque — then hunt for the whole-number solution.",
+    "answer": "$31.63.\n\nLet the cheque be X dollars and Y cents, i.e. 100X + Y cents. The teller paid Y dollars and X cents, i.e. 100Y + X cents. After spending 5 cents:\n\n100Y + X − 5 = 2(100X + Y)\n\nwhich simplifies to 98Y − 199X = 5. The only whole-number solution with X and Y each between 0 and 99 is X = 31, Y = 63. So the cheque was $31.63; the teller handed over $63.31; after the 5-cent paper he held $63.26 — exactly twice $31.63.",
+    "puzzle_hash": "4516f8a2"
+  },
+  "word_puzzle": {
+    "type": "ladder",
+    "title": "In the Pink",
+    "title_key": "in-the-pink",
+    "body": "Turn PALE into PINK by changing one letter at a time. Each step must be a common English word. It can be done in three steps (four rungs, start and end included).\n\nPALE → _ _ _ _ → _ _ _ _ → PINK",
+    "approach": "Three of the four letters change on the way from PALE to PINK — plan the order of the swaps so that every rung is a real, common word.",
+    "answer": "PALE → PILE → PINE → PINK.\n\nPALE→PILE (A→I), PILE→PINE (L→N), PINE→PINK (E→K). Every rung is a common word, and only the first letter, P, stays put the whole way down.",
+    "word_puzzle_hash": "249a173d"
+  },
+  "notes": [
+    "India ran on FALLBACK sources (CNN, Bloomberg, Al Jazeera): all six primary Indian outlets (The Hindu, Indian Express, Hindustan Times, Times of India, NDTV, Economic Times) were unreachable this session (crawler/egress blocked). 3 retry attempts made; in-window domestic hard news on reachable outlets was thin and Iran-spillover-heavy.",
+    "UK ran on FALLBACK sources (Bloomberg, CNBC): BBC and Sky News were unreachable this session; window widened past 48h for several items.",
+    "Singapore built from Mothership and SCMP (allowed); CNA/ST/Reuters unreachable this session.",
+    "F1 item is an inter-race build-up/standings piece; the Belgian GP (Spa) is July 17-19, confirmed upcoming, so no stale race recap.",
+    "No missed run: archive/2026-07-12 edition exists."
+  ]
+}

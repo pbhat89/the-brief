@@ -1044,3 +1044,37 @@ is empty until the first run.
 2026-07-12	Harvard's silicon chip writes 64 DNA strands at once using electricity and water	eff7e4a7	harvard,dna synthesis,silicon chip,nature electronics
 2026-07-12	Study finds every pregnancy rewires the brain in its own way	30678239	pregnancy,brain,nature communications,study
 2026-07-12	China's Tianwen-2 returns the first close-up image of Earth's quasi-moon	1e778b75	tianwen-2,kamooalewa,china,quasi-moon,image
+2026-07-13	Circle Line loop completed as three new MRT stations open	e4f11e99	circle-line, lta, mrt, stage-6, opens
+2026-07-13	Businessman loses S$4.9 million in a deepfake Zoom scam impersonating PM Wong	6a4f0b72	deepfake, scam, lawrence-wong, zoom, businessman
+2026-07-13	Woman jailed 23 months for a chopper attack at People's Park Complex	3e767eab	he-longfeng, peoples-park, chopper-attack, jailed, chinatown
+2026-07-13	Pioneer Generation seniors to get MediSave top-ups of up to S$1,200	943e040f	pioneer-generation, medisave, cpf, top-up, seniors
+2026-07-13	Indian sailor missing after a tanker is attacked near the Strait of Hormuz	d780a1e5	mea, indian-sailor, hormuz, tanker, missing
+2026-07-13	Indian stocks and the rupee slide as renewed Iran tensions lift oil	52b7958d	nifty, rupee, iran, oil, slide
+2026-07-13	India weighs talks with Iran to secure safe passage for stranded tankers	50e3800b	india, iran, tankers, gulf, talks
+2026-07-13	India ranks 157th on press freedom as scrutiny grows over Modi's media access	ab558e29	modi, press-freedom, index, media, scrutiny
+2026-07-13	Reeves to push wider AI use across financial services in Mansion House speech	315d5278	reeves, mansion-house, ai, financial-services, speech
+2026-07-13	Thames Water edges toward temporary nationalisation as its rescue stalls	cdf7a94d	thames-water, nationalisation, creditors, rescue, ofwat
+2026-07-13	Economists urge Britain's next prime minister to consider sweeping tax reform	fdfd5d4a	jim-oneill, burnham, tax-reform, economists, growth
+2026-07-13	UK firms plan to keep raising prices even as inflation eases	e0b7d687	bank-of-england, inflation, prices, firms, survey
+2026-07-13	Iran strikes five Gulf states and declares Hormuz closed as the US bombs again	4af0da06	iran, gulf-states, hormuz, us-strikes, closure
+2026-07-13	US Senator Lindsey Graham dies at 71 after a sudden illness	088028c1	lindsey-graham, senator, dies, aortic-dissection, south-carolina
+2026-07-13	Former Qatar emir Sheikh Hamad bin Khalifa Al Thani dies at 74	e2049987	sheikh-hamad, qatar, emir, dies, doha
+2026-07-13	Zelenskyy replaces PM Svyrydenko in a broad Ukraine cabinet reshuffle	974cfeac	zelenskyy, svyrydenko, ukraine, cabinet, reshuffle
+2026-07-13	OpenAI's head of safety Johannes Heidecke departs in a research reshuffle	58063280	openai, heidecke, safety, reshuffle, departs
+2026-07-13	Meta pulls an Instagram AI image feature within days after a backlash	f89bfdfa	meta, instagram, muse-image, backlash, removed
+2026-07-13	SpaceXAI and Cursor launch Grok 4.5 after a $60 billion Cursor deal	827f7ac8	spacexai, cursor, grok, acquisition, launch
+2026-07-13	SambaNova raises $1 billion at an $11 billion valuation	a0ff65f0	sambanova, funding, series-f, valuation, ai-chip
+2026-07-13	MGM Resorts opens talks over Barry Diller's $48.30-a-share buyout offer	d913da94	mgm, barry-diller, buyout, people-inc, talks
+2026-07-13	Prologis presses Segro investors over its £12.6 billion takeover bid	0e3e1c75	prologis, segro, takeover, warehouses, bid
+2026-07-13	US Q2 earnings season opens as five big banks and June CPI land Tuesday	143951a1	earnings, banks, cpi, jpmorgan, fed
+2026-07-13	Vista Equity and Quinti Capital bid to take adtech firm Criteo private	67ccaed6	criteo, vista-equity, quinti, take-private, adtech
+2026-07-13	🎾 Sinner defends his Wimbledon title, beating Zverev in four sets	14f57044	sinner, zverev, wimbledon, final, title
+2026-07-13	🏏 India call up Prince Yadav and Ravi Bishnoi after injuries before the ODIs	d493e0e9	india, prince-yadav, bishnoi, injury, squad
+2026-07-13	🏏 West Indies beat New Zealand by seven wickets in the first ODI	43677bc1	west-indies, new-zealand, odi, guyana, win
+2026-07-13	🏏 Bangladesh win the consolation ODI but Zimbabwe take the series 2-1	59f045d5	bangladesh, zimbabwe, odi, series, harare
+2026-07-13	🏎️ Russell signals a fifth Mercedes season as Antonelli leads into Spa	201b7127	russell, mercedes, antonelli, belgian-gp, standings
+2026-07-13	China catches a rocket booster in a sea net, a spaceflight first	3c5bd3e9	china, long-march-10b, booster, net, recovery
+2026-07-13	Physicists extract energy from a lab-made 'spinning black hole'	170b96fe	cuny, black-hole, superradiance, penrose, energy
+2026-07-13	Interstellar comet 3I/ATLAS may be the oldest object ever observed	5ba294d0	3i-atlas, comet, interstellar, jwst, oldest
+2026-07-13	NASA satellites track an undersea eruption that may build a new island	266565b0	nasa, bismarck-sea, eruption, pumice, island
+2026-07-13	A commercial robot spacecraft moves to rescue NASA's falling Swift telescope	398e90f6	katalyst, swift-telescope, nasa, servicing, rescue

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Mon, 13 July 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .wpuzzle-box{background:linear-gradient(135deg,#0e1a1a,#0d1620);border:1px solid #234a44;border-left:3px solid #16a085;padding:24px 28px;border-radius:2px}
+  .wptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#16a085;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .wpuzzle-box .puzzle-title{color:#cdeae3}
+  .wpuzzle-box .puzzle-how{color:#8fb8ac;background:#08140f;border-left-color:#1a6a5a}
+  .wpuzzle-box .puzzle-q{color:#dfeae6;font-family:'Source Sans 3',sans-serif}
+  .wpuzzle-box .answer{color:#bfe0d6}
+  .wpuzzle-box .answer .alabel{color:#16a085}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Monday, 13 July 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Monday, 13 July 2026 · 🔍 48 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eleven entries in this exact order:
+     id    : one of "sg" | "india" | "uk" | "geo" | "tech" | "biz" | "sports" | "misc" | "fun" | "puzzle" | "wpuzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 8 news tabs; fun/puzzle/wpuzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+
+   WORD_PUZZLE shape (separate, daily word game — NYT-style, static reveal):
+     type     : one of "Connections" | "Word Ladder" | "Anagram" | "Spelling Bee" | "Letter Boxed" | "Mini Crossword"
+     title    : short evocative name for the word puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle body; supports \n for line breaks (grids render as pre-formatted text)
+     answer   : the answer; supports \n for line breaks; appears inside its own toggle (id "wpans")
+============================================================================= */
+
+const SECTIONS = [
+  { id:"sg", title:"🇸🇬 Singapore", color:"#e74c3c", items:[
+    {"headline": "Circle Line loop completed as three new MRT stations open", "summary": "Singapore's Circle Line Stage 6 opened for passenger service on July 12, adding Keppel, Cantonment and Prince Edward Road stations to close the 39km, 33-station loop from HarbourFront to Marina Bay. LTA says the link cuts about 10 minutes off a Telok Blangah-to-Marina Bay trip.", "source": "Mothership", "url": "https://mothership.sg/2026/07/circle-line-stage-6-opens/", "date": "Jul 12", "spectrum": null, "bias": null},
+    {"headline": "Businessman loses S$4.9 million in a deepfake Zoom scam impersonating PM Wong", "summary": "SCMP detailed how a Singapore businessman was duped into wiring S$4.9 million after joining a fabricated Zoom 'summit' featuring AI deepfakes of Prime Minister Lawrence Wong and other officials. A second scammer posing as a lawyer directed the transfers.", "source": "SCMP", "url": "https://www.scmp.com/news/asia/southeast-asia/article/3353868/how-victim-lost-us38-million-singapore-deepfake-zoom-scam-impersonating-pm-wong", "date": "Jul 11", "spectrum": null, "bias": null},
+    {"headline": "Woman jailed 23 months for a chopper attack at People's Park Complex", "summary": "Chinese national He Longfeng, 37, was sentenced on July 10 to 23 months' jail for slashing two employees at a cooked-food stall in Chinatown; a 42-year-old victim suffered an abdominal stab wound. The court heard she had untreated schizophreniform disorder.", "source": "Mothership", "url": "https://mothership.sg/2026/07/chinese-woman-jailed-knife-attack-people-park-complex/", "date": "Jul 10", "spectrum": null, "bias": null},
+    {"headline": "Pioneer Generation seniors to get MediSave top-ups of up to S$1,200", "summary": "About S$145 million in MediSave top-ups will be credited to Pioneer Generation seniors' CPF accounts from mid-July, ranging from S$300 for those born 1945-1949 to S$1,200 for those born in 1934 or earlier. The funds can offset MediShield Life and CareShield Life premiums.", "source": "Mothership", "url": "https://mothership.sg/2026/06/pioneer-generation-tops-july-2026/", "date": "Jul", "spectrum": null, "bias": null}
+  ]},
+  { id:"india", title:"🇮🇳 India", color:"#e67e22", items:[
+    {"headline": "Indian sailor missing after a tanker is attacked near the Strait of Hormuz", "summary": "India's Ministry of External Affairs said an Indian national is missing after a container vessel was struck near the Strait of Hormuz, causing an engine-room fire, and condemned the attack while demanding unimpeded navigation. The incident came amid a third round of US strikes on Iran.", "source": "CNN", "url": "https://www.cnn.com/2026/07/11/world/live-news/iran-war-trump", "date": "Jul 11", "spectrum": null, "bias": null},
+    {"headline": "Indian stocks and the rupee slide as renewed Iran tensions lift oil", "summary": "Indian equities and the rupee gave up recent gains after President Trump said the Iran ceasefire was over, pushing oil higher; the Nifty 50 fell 2.1% and the rupee closed at its weakest since June 11. Foreign funds bought a net 20 billion rupees of shares on the dip.", "source": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-07-08/indian-stocks-rupee-slide-after-trump-reignites-iran-tensions", "date": "Jul 8", "spectrum": null, "bias": null},
+    {"headline": "India weighs talks with Iran to secure safe passage for stranded tankers", "summary": "With oil tankers waiting in the Persian Gulf amid the Strait of Hormuz crisis, New Delhi is considering options including direct talks with Tehran to secure safe passage, as the rupee comes under renewed pressure from higher energy prices.", "source": "Bloomberg", "url": "https://www.bloomberg.com/news/newsletters/2026-07-09/india-s-rupee-back-under-pressure-as-us-iran-tensions-increase-inr-usd", "date": "Jul 9", "spectrum": null, "bias": null},
+    {"headline": "India ranks 157th on press freedom as scrutiny grows over Modi's media access", "summary": "A report examined why Prime Minister Narendra Modi does not hold unscripted press conferences, amid India's 157th-of-180 ranking in the 2026 World Press Freedom Index. The scrutiny comes as the opposition prepares to press the government during the coming monsoon parliament session.", "source": "Al Jazeera", "url": "https://www.aljazeera.com/video/newsfeed/2026/7/12/why-doesnt-indian-pm-modi-hold-unscripted-press-conferences", "date": "Jul 12", "spectrum": null, "bias": null}
+  ]},
+  { id:"uk", title:"🇬🇧 UK News", color:"#3949ab", items:[
+    {"headline": "Reeves to push wider AI use across financial services in Mansion House speech", "summary": "Chancellor Rachel Reeves is set to use her July 14 Mansion House address to promote greater adoption of AI in UK financial services, part of a growth-focused deregulation push. The speech may be among her last, with Andy Burnham poised to become prime minister and reshape the Cabinet.", "source": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-07-11/uk-s-reeves-to-focus-on-ai-opportunities-in-speech-to-city", "date": "Jul 11", "spectrum": null, "bias": null},
+    {"headline": "Thames Water edges toward temporary nationalisation as its rescue stalls", "summary": "Britain's biggest water supplier moved closer to temporary state control after ministers deemed a creditor rescue insufficient. The London & Valley Water consortium, which includes Elliott, Apollo and BlackRock, has offered a £3.35 billion equity injection and a £9.4 billion debt write-down.", "source": "CNBC", "url": "https://www.cnbc.com/2026/07/01/thames-water-andy-burnham-creditors-apollo-blackrock-privatization.html", "date": "Jul 1", "spectrum": null, "bias": null},
+    {"headline": "Economists urge Britain's next prime minister to consider sweeping tax reform", "summary": "A group of economists including former Goldman Sachs chief Jim O'Neill, an adviser to Andy Burnham, urged the incoming government to pursue a wide-ranging tax overhaul to revive sluggish growth, warning that 'incrementalism will not fix Britain'.", "source": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-07-05/burnham-adviser-urges-next-pm-to-consider-radical-tax-overhaul", "date": "Jul 5", "spectrum": null, "bias": null},
+    {"headline": "UK firms plan to keep raising prices even as inflation eases", "summary": "A Bank of England survey found British companies grew more optimistic about inflation in June yet still expect to raise their own prices by about 4% over the coming year, double the Bank's 2% target, complicating the path for interest-rate cuts.", "source": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-07-03/uk-firms-expect-to-keep-raising-prices-even-as-inflation-falls", "date": "Jul 3", "spectrum": null, "bias": null}
+  ]},
+  { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
+    {"headline": "Iran strikes five Gulf states and declares Hormuz closed as the US bombs again", "summary": "Iran launched missiles and drones at Bahrain, Kuwait, Jordan, Qatar and Oman on July 12 and said it was closing the Strait of Hormuz, after US forces struck more than 300 Iranian targets over three nights. Maritime authorities kept the strait's southern route open despite Tehran's closure claim.", "source": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/7/12/iran-attacks-five-gulf-nations-shuts-hormuz-after-us-bombing-all-to-know", "date": "Jul 12", "spectrum": {"left": "The Guardian and Al Jazeera foreground the civilian toll and warn that repeated US strikes risk dragging the region into a wider war.", "center": "Reuters and the BBC report the exchange of strikes and the disputed Hormuz closure, stressing the threat to global oil shipping.", "right": "Right-leaning US commentary frames Iran's attacks on its Gulf neighbours as unprovoked aggression that justifies a firm American response."}, "bias": "Outlets diverge on the strait itself: some lead with Tehran's 'closed' declaration, while shipping-focused coverage notes that vessels are still transiting the southern lane."},
+    {"headline": "US Senator Lindsey Graham dies at 71 after a sudden illness", "summary": "The longtime South Carolina Republican and Trump ally died late on July 11 of an aortic dissection, according to preliminary findings, hours after returning from a trip to Kyiv where he was a leading champion of Ukraine aid. His death triggers a contest for his Senate seat.", "source": "CNN", "url": "https://www.cnn.com/2026/07/12/politics/sen-lindsey-graham-dies-at-71-hnk", "date": "Jul 12", "spectrum": null, "bias": null},
+    {"headline": "Former Qatar emir Sheikh Hamad bin Khalifa Al Thani dies at 74", "summary": "Qatar's 'Father Emir', who ruled from 1995 until his rare 2013 abdication and turned the small Gulf state into a diplomatic and LNG power, died on July 12 and was buried in Doha the same day. Qatar declared four days of mourning and his son, Emir Tamim, led the funeral.", "source": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/7/12/former-emir-of-qatar-sheikh-hamad-bin-khalifa-al-thani-dies-at-74", "date": "Jul 12", "spectrum": null, "bias": null},
+    {"headline": "Zelenskyy replaces PM Svyrydenko in a broad Ukraine cabinet reshuffle", "summary": "President Volodymyr Zelenskyy announced on July 12 that Prime Minister Yulia Svyrydenko, who negotiated last year's US-Ukraine minerals deal, will step down, part of a shake-up assigning each foreign-policy priority to a dedicated official. Naftogaz CEO Sergii Koretskyi and ex-PM Denys Shmyhal are among the possible successors.", "source": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/7/12/ukraines-zelenskyy-announces-cabinet-reshuffle-replaces-pm-svyrydenko", "date": "Jul 12", "spectrum": null, "bias": null}
+  ]},
+  { id:"tech", title:"💻 Tech & AI", color:"#27ae60", items:[
+    {"headline": "OpenAI's head of safety Johannes Heidecke departs in a research reshuffle", "summary": "OpenAI's head of safety Johannes Heidecke is leaving after a reorganisation that folds safety teams under alignment chief Mia Glaese, with Saachi Jain named interim head of safety systems. The exit is part of a wider leadership shake-up at the company.", "source": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-07-11/openai-safety-head-heidecke-to-leave-firm-after-reshuffle-wired", "date": "Jul 11", "spectrum": null, "bias": null},
+    {"headline": "Meta pulls an Instagram AI image feature within days after a backlash", "summary": "Meta removed a Muse Image feature that let anyone generate AI images of a person by @-mentioning their public Instagram account, after criticism from SAG-AFTRA and users over its opt-out design. Meta said the feature 'missed the mark', scrapping it about three days after launch.", "source": "TechCrunch", "url": "https://techcrunch.com/2026/07/10/meta-removes-controversial-ai-feature-on-instagram-after-backlash/", "date": "Jul 10", "spectrum": null, "bias": null},
+    {"headline": "SpaceXAI and Cursor launch Grok 4.5 after a $60 billion Cursor deal", "summary": "SpaceXAI and Cursor released Grok 4.5, a model tuned for finance, legal and coding tasks, weeks after SpaceX agreed to acquire Cursor in a deal valuing the coding startup at about $60 billion. Elon Musk's firm is chasing OpenAI and Anthropic.", "source": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-07-08/spacexai-cursor-unveil-grok-ai-model-for-legal-finance-tasks", "date": "Jul 8", "spectrum": null, "bias": null},
+    {"headline": "SambaNova raises $1 billion at an $11 billion valuation", "summary": "AI chip maker SambaNova drew $1 billion in the first close of a Series F round at an $11 billion valuation, roughly five months after its last mega-round, as it scales production of its inference systems. JPMorgan has named it an inference-infrastructure partner.", "source": "TechCrunch", "url": "https://techcrunch.com/2026/07/08/sambanova-draws-1b-at-11b-valuation-in-series-f-first-close/", "date": "Jul 8", "spectrum": null, "bias": null}
+  ]},
+  { id:"biz", title:"📈 Business & Markets", color:"#8e44ad", items:[
+    {"headline": "MGM Resorts opens talks over Barry Diller's $48.30-a-share buyout offer", "summary": "MGM Resorts formed a special committee to weigh a proposal from Barry Diller's People Inc to buy the roughly 26% of MGM it does not already own at $48.30 per share, valuing the casino operator at about $12.4 billion. MGM closed Friday at $46.88, just below the offer.", "source": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-07-10/mgm-resorts-engaged-in-deal-talks-with-diller-wsj-says", "date": "Jul 10", "spectrum": null, "bias": null},
+    {"headline": "Prologis presses Segro investors over its £12.6 billion takeover bid", "summary": "Prologis publicly urged shareholders of UK warehouse group Segro to back its £12.6 billion all-stock bid, worth about 925p a share, arguing Segro's standalone data-centre plan would rely on excess debt. Takeover rules require Prologis to make a firm offer or walk away by July 22.", "source": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-07-09/segro-s-data-center-defense-relies-on-excess-debt-prologis-says", "date": "Jul 9", "spectrum": null, "bias": null},
+    {"headline": "US Q2 earnings season opens as five big banks and June CPI land Tuesday", "summary": "JPMorgan, Goldman Sachs, Bank of America, Wells Fargo and Citigroup all report second-quarter results on July 14 alongside the June CPI print, which economists expect to cool to about 3.8% from May's 4.2%. Investors are watching for signals on the Federal Reserve's next move.", "source": "CNBC", "url": "https://www.cnbc.com/2026/07/12/here-are-the-3-big-things-were-watching-in-the-stock-market-this-week.html", "date": "Jul 12", "spectrum": null, "bias": null},
+    {"headline": "Vista Equity and Quinti Capital bid to take adtech firm Criteo private", "summary": "Vista Equity Partners and Quinti Capital offered to acquire French digital-advertising company Criteo at a more than 50% premium, valuing it at roughly $3.7 billion. Criteo's US-listed shares jumped about 21% on the news; the company has not yet responded.", "source": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-07-06/advertising-technology-firm-criteo-attracts-vista-equity-backed-takeover-offer", "date": "Jul 6", "spectrum": null, "bias": null}
+  ]},
+  { id:"sports", title:"🎾🏏🏎️ Sports", color:"#c0392b", items:[
+    {"headline": "🎾 Sinner defends his Wimbledon title, beating Zverev in four sets", "summary": "Jannik Sinner won back-to-back Wimbledon titles and his fifth Grand Slam, beating first-time finalist Alexander Zverev 6-7(7), 7-6(2), 6-3, 6-4 on Centre Court. He became the 10th man to successfully defend the men's singles title.", "source": "ATP Tour", "url": "https://www.atptour.com/en/news/sinner-zverev-wimbledon-2026-final-sunday", "date": "Jul 12", "spectrum": null, "bias": null},
+    {"headline": "🏏 India call up Prince Yadav and Ravi Bishnoi after injuries before the ODIs", "summary": "The BCCI named Prince Yadav as cover for the injured Harshit Rana (hamstring) in India's ODI squad and Ravi Bishnoi to replace Varun Chakaravarthy for the Zimbabwe T20Is. India's three-match ODI series in England begins July 14 at Edgbaston.", "source": "ESPNcricinfo", "url": "https://www.espncricinfo.com/story/india-news-ravi-bishnoi-replaces-injured-varun-chakravarthy-in-squad-for-zimbabwe-t20i-tour-1545315", "date": "Jul 12", "spectrum": null, "bias": null},
+    {"headline": "🏏 West Indies beat New Zealand by seven wickets in the first ODI", "summary": "West Indies chased 268 with seven balls to spare in Guyana on July 11, with Keacy Carty named Player of the Match. Alzarri Joseph took four wickets and debutant spinner Vitel Lawes three as New Zealand collapsed from 234 for 4.", "source": "ESPNcricinfo", "url": "https://www.espncricinfo.com/series/new-zealand-tour-of-west-indies-2026-1538619/west-indies-vs-new-zealand-1st-odi-1538624/match-report", "date": "Jul 11", "spectrum": null, "bias": null},
+    {"headline": "🏏 Bangladesh win the consolation ODI but Zimbabwe take the series 2-1", "summary": "Bangladesh beat Zimbabwe by seven wickets in the third ODI in Harare on July 11, with Tanzid Hasan's 94 and Shoriful Islam's four wickets sealing the win. Zimbabwe still claimed the series 2-1.", "source": "ESPNcricinfo", "url": "https://www.espncricinfo.com/series/bangladesh-in-zimbabwe-2026-1538288/zimbabwe-vs-bangladesh-3rd-odi-1538300/match-report", "date": "Jul 11", "spectrum": null, "bias": null},
+    {"headline": "🏎️ Russell signals a fifth Mercedes season as Antonelli leads into Spa", "summary": "Ahead of the July 17-19 Belgian Grand Prix, George Russell said he intends to extend with Mercedes for a fifth season amid Max Verstappen speculation. Teammate Kimi Antonelli leads the drivers' championship on 179 points, 25 clear of Russell after nine rounds.", "source": "Formula1.com", "url": "https://www.formula1.com/en/latest/article/russell-and-antonelli-offer-update-on-mercedes-contract-talks-amid.3mSVROWEFLCKzRpooWsGZ0", "date": "Jul 12", "spectrum": null, "bias": null}
+  ]},
+  { id:"misc", title:"🔬 Other Miscellaneous News", color:"#1abc9c", items:[
+    {"headline": "China catches a rocket booster in a sea net, a spaceflight first", "summary": "On July 10 China's Long March 10B made its debut launch and recovered its first stage by snagging it in a net strung across a ship, using four hooks instead of landing legs, making China only the second nation to recover an orbital-class booster. CASC says it will refly the same stage this year.", "source": "Scientific American", "url": "https://www.scientificamerican.com/article/chinas-long-march-10b-rocket-successfully-launches-and-lands-in-a-global-spaceflight-milestone/", "date": "Jul 10", "spectrum": null, "bias": null},
+    {"headline": "Physicists extract energy from a lab-made 'spinning black hole'", "summary": "A CUNY team built a ring of electronic resonators, switched in a timed sequence, so that electromagnetic waves behaved as if striking an ultrafast-rotating body and were amplified, realising the Penrose-Zel'dovich energy-extraction process with no moving parts. The result confirms a 50-year-old black-hole prediction.", "source": "Nature", "url": "https://www.nature.com/articles/s41586-026-10725-y", "date": "Jul 11", "spectrum": null, "bias": null},
+    {"headline": "Interstellar comet 3I/ATLAS may be the oldest object ever observed", "summary": "Isotope measurements from the VLT and JWST suggest interstellar comet 3I/ATLAS formed in a cold, metal-poor system possibly 3 to 11 billion years old, older than the Sun, making it perhaps the most ancient comet ever directly studied. It is only the third confirmed interstellar object.", "source": "Scientific American", "url": "https://www.scientificamerican.com/article/interstellar-comet-3i-atlas-is-almost-as-old-as-the-universe-itself/", "date": "Jul 8", "spectrum": null, "bias": null},
+    {"headline": "NASA satellites track an undersea eruption that may build a new island", "summary": "NASA and ESA satellites are imaging an ongoing submarine eruption along Titan Ridge in the Bismarck Sea near Papua New Guinea, capturing steam plumes, thermal hotspots and pumice rafts drifting toward the Admiralty Islands. Scientists are watching for a possible new island.", "source": "NASA", "url": "https://science.nasa.gov/earth/earth-observatory/new-eruption-in-the-bismarck-sea/", "date": "Jul 10", "spectrum": null, "bias": null},
+    {"headline": "A commercial robot spacecraft moves to rescue NASA's falling Swift telescope", "summary": "Katalyst Space Technologies' LINK spacecraft, launched July 3 on the final Pegasus XL rocket, is being commissioned to dock with and boost NASA's Neil Gehrels Swift Observatory, whose orbit is decaying, in a first-of-its-kind in-orbit rescue of a NASA science satellite.", "source": "Nature", "url": "https://www.nature.com/articles/d41586-026-01949-z", "date": "Jul 10", "spectrum": null, "bias": null}
+  ]},
+  { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
+  { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
+  { id:"wpuzzle", title:"🔤 Word Puzzles", color:"#16a085", custom:"wpuzzle" },
+];
+
+const FUN_FACT = {"text": "Sea otters often hold hands while they sleep, drifting in groups called rafts so the current cannot pull them apart. Many also keep a favourite rock tucked into a loose pouch of skin under one forearm, using it for years as an anvil to crack open clams and mussels.", "tag": "Category · Biology & Animals"};
+
+const PUZZLE = {"type": "Quantitative", "title": "The Careless Teller", "how": "Let the cheque be X dollars and Y cents, write what the teller actually paid, subtract the 5 cents, and set it equal to twice the cheque — then hunt for the whole-number solution.", "question": "A man takes a cheque to the bank. It is written for a whole number of dollars and a whole number of cents. A distracted teller misreads it and pays him the number of dollars that should have been cents, and the number of cents that should have been dollars.\n\nThe man pockets the cash, buys a newspaper for 5 cents, and then notices he has exactly twice the amount the cheque was written for.\n\nWhat was the original amount of the cheque?", "answer": "$31.63.\n\nLet the cheque be X dollars and Y cents, i.e. 100X + Y cents. The teller paid Y dollars and X cents, i.e. 100Y + X cents. After spending 5 cents:\n\n100Y + X − 5 = 2(100X + Y)\n\nwhich simplifies to 98Y − 199X = 5. The only whole-number solution with X and Y each between 0 and 99 is X = 31, Y = 63. So the cheque was $31.63; the teller handed over $63.31; after the 5-cent paper he held $63.26 — exactly twice $31.63."};
+
+const WORD_PUZZLE = {"type": "Word Ladder", "title": "In the Pink", "how": "Three of the four letters change on the way from PALE to PINK — plan the order of the swaps so that every rung is a real, common word.", "question": "Turn PALE into PINK by changing one letter at a time. Each step must be a common English word. It can be done in three steps (four rungs, start and end included).\n\nPALE → _ _ _ _ → _ _ _ _ → PINK", "answer": "PALE → PILE → PINE → PINK.\n\nPALE→PILE (A→I), PILE→PINE (L→N), PINE→PINK (E→K). Every rung is a common word, and only the first letter, P, stays put the whole way down."};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function renderWordPuzzle(){
+  let h='<div class="sec-title">🔤 Word Puzzle of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#16a085,transparent)"></div>';
+  h+='<div class="wpuzzle-box"><span class="wptype">'+WORD_PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+WORD_PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+WORD_PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+WORD_PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this,\'wpans\')">Show Answer</button>';
+  h+='<div class="answer" id="wpans"><span class="alabel">Answer</span>'+WORD_PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn,ansId){var a=document.getElementById(ansId||'ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else if(sec.custom==="wpuzzle"){div.innerHTML=renderWordPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>
