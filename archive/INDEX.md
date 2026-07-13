@@ -1078,3 +1078,40 @@ is empty until the first run.
 2026-07-13	Interstellar comet 3I/ATLAS may be the oldest object ever observed	5ba294d0	3i-atlas, comet, interstellar, jwst, oldest
 2026-07-13	NASA satellites track an undersea eruption that may build a new island	266565b0	nasa, bismarck-sea, eruption, pumice, island
 2026-07-13	A commercial robot spacecraft moves to rescue NASA's falling Swift telescope	398e90f6	katalyst, swift-telescope, nasa, servicing, rescue
+
+2026-07-14	Singapore Exchange full-year turnover hits S$455.7 billion, an 18-year high	4854459d	sgx,singapore exchange,turnover,record
+2026-07-14	Man, 24, jailed 22 months for underage sex with a girl he vowed to marry	c234afc7	singapore man,14-year-old,children and young persons act,jailed
+2026-07-14	Team Singapore athlete charged with rape of a 12-year-old, carding suspended	bb99b8d0	team singapore,athlete,12-year-old,charged
+2026-07-14	Man, 40, charged over hoax bomb threats to the HTX building and Parliament House	35878b1f	koh jye shyang,htx,parliament house,bomb threats
+2026-07-14	India's retail inflation climbs to 4.38% in June, breaching the RBI's target	9ac8e3da	rbi,cpi inflation,food inflation,breaches
+2026-07-14	Update: Rupee slides toward a record low as the Hormuz oil spike hits Indian markets	5a95ba4f	rupee,rbi,nifty,hormuz,oil
+2026-07-14	State Bank of India raises over $1.5 billion via an overseas-citizen deposit scheme	003d253f	state bank of india,sbi,foreign currency deposits,overseas indians
+2026-07-14	Foreign funds buy $1.2 billion of Indian equities in a week despite Middle East jitters	c659326a	foreign funds,fii,indian equities,inflows
+2026-07-14	Andy Burnham set to become UK prime minister on 20 July as Labour MPs rally behind him	0a91c702	andy burnham,keir starmer,labour,prime minister
+2026-07-14	Burnham signals he will keep Reeves's fiscal rules but reshuffle the cabinet	07bcac80	andy burnham,rachel reeves,wes streeting,fiscal rules
+2026-07-14	Ofwat finds Severn Trent breached wastewater duties but imposes no fine	21416b24	ofwat,severn trent,wastewater,regulator
+2026-07-14	Update: Trump declares the US 'guardian' of Hormuz, imposing a 20% cargo toll	0bb4fd0c	donald trump,strait of hormuz,iran,araghchi,toll
+2026-07-14	Ukraine and nine nations launch a coalition against Russian ballistic missiles	fa328ed7	zelenskyy,freyja,patriot,coalition of the willing,russia
+2026-07-14	Japan to build a new national intelligence agency to counter China, Russia and North Korea	02bbb953	japan,tokyo,intelligence agency,china,north korea
+2026-07-14	DR Congo's Ebola deaths reach 600 as the outbreak spreads to a fourth province	69834f7c	dr congo,ebola,who,ituri,outbreak
+2026-07-14	Brazil braces for a 15 July US decision on 25% Section 301 tariffs	0dbb5fd9	brazil,lula,section 301,tariffs,trump
+2026-07-14	Intel to invest €5 billion to expand its Ireland hub in the AI chip race	c4553315	intel,ireland,ai chips,semiconductors
+2026-07-14	General Fusion debuts on the Nasdaq as the first publicly traded fusion company	4a334f5b	general fusion,gfuz,nasdaq,fusion energy
+2026-07-14	Xi Jinping to deliver his first keynote at China's World AI Conference in Shanghai	5dd5e45d	xi jinping,world ai conference,shanghai,china
+2026-07-14	Nadella warns companies 'pay for intelligence twice' when adopting AI	8ccfa6a4	satya nadella,microsoft,ai adoption,data ownership
+2026-07-14	Update: Apple's trade-secret lawsuit threatens OpenAI's bid to rival the iPhone	679d8e58	apple,openai,tang tan,jony ive,trade secrets
+2026-07-14	TSMC posts record second-quarter revenue, up 36%, on surging AI-chip demand	db03bb30	tsmc,taiwan semiconductor,ai chips,revenue
+2026-07-14	SK Hynix raises $26.5 billion in the largest-ever foreign listing on a US exchange	3012d399	sk hynix,adr,us listing,memory chips
+2026-07-14	AkzoNobel rejects Nippon Paint's $8.6 billion bid for its decorative-paints unit	b81a2108	akzonobel,nippon paint,axalta,bid
+2026-07-14	Wall Street slides and gold sinks as Trump reimposes a Hormuz shipping toll	33c909ca	s&p 500,nasdaq,gold,hormuz,dollar
+2026-07-14	Circle jumps 13% after winning OCC approval for a national trust bank	c3539716	circle,crcl,occ,usdc,stablecoin
+2026-07-14	🏎️ Verstappen's Red Bull exit clause is active as his future dominates pre-Spa talk	7374d546	max verstappen,red bull,mercedes,belgian grand prix
+2026-07-14	🏎️ Ferrari surge into race week as Antonelli defends a 25-point championship lead	2ac67ed1	kimi antonelli,george russell,ferrari,aston martin,adrian newey
+2026-07-14	🎾 Zverev climbs to World No. 2 past the injured Alcaraz after his Wimbledon final run	0de6a920	alexander zverev,carlos alcaraz,jannik sinner,atp rankings
+2026-07-14	🎾 Noskova and Muchova crack the WTA top 10 after their Wimbledon breakthrough	dfc712ee	linda noskova,karolina muchova,wta rankings,wimbledon
+2026-07-14	🏏 Rohit, Kohli and Bumrah return as India face England in the ODI series opener	07139b1e	rohit sharma,virat kohli,jasprit bumrah,edgbaston,odi
+2026-07-14	Hubble finds the first of a star cluster's long-sought 'missing' black holes	d2c32931	omega centauri,omegacat bh-2,hubble,black hole
+2026-07-14	An undersea observatory records Earth's oceanic crust being born in real time	e021c663	southeast indian ridge,seafloor spreading,amsterdam island
+2026-07-14	Webb detects the first atmosphere on a planet orbiting a dead star	1a830b12	wd 1856 b,white dwarf,james webb,exoplanet atmosphere
+2026-07-14	Gene therapy restores more hearing on a second dose, beating immune antibodies	c0b26970	otof gene therapy,aav,congenital deafness,antibodies
+2026-07-14	Great apes and humans laugh in the same rhythm, hinting at ancient vocal control	8805c1a2	laughter,great apes,isochrony,human evolution

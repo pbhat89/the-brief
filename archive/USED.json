@@ -189,14 +189,14 @@
       "date": "2026-07-13",
       "topic_key": "sea otter",
       "text": "Sea otters hold hands while sleeping and keep a favourite rock in a skin pouch under one arm."
+    },
+    {
+      "date": "2026-07-14",
+      "topic_key": "tardigrade",
+      "text": "Tardigrades can survive the open vacuum of space (ESA FOTON-M3, 2007) and near absolute zero."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-06-13",
-      "type": "logic",
-      "title_key": "mislabeled-boxes"
-    },
     {
       "date": "2026-06-14",
       "type": "quantitative",
@@ -341,6 +341,11 @@
       "date": "2026-07-13",
       "type": "quantitative",
       "title_key": "careless-teller"
+    },
+    {
+      "date": "2026-07-14",
+      "type": "lateral",
+      "title_key": "slow-drinker"
     }
   ],
   "word_puzzle_log": [
@@ -448,6 +453,11 @@
       "date": "2026-07-13",
       "type": "ladder",
       "title_key": "in-the-pink"
+    },
+    {
+      "date": "2026-07-14",
+      "type": "letterboxed",
+      "title_key": "four-sides-two-words"
     }
   ]
 }
