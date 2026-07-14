@@ -1115,3 +1115,40 @@ is empty until the first run.
 2026-07-14	Webb detects the first atmosphere on a planet orbiting a dead star	1a830b12	wd 1856 b,white dwarf,james webb,exoplanet atmosphere
 2026-07-14	Gene therapy restores more hearing on a second dose, beating immune antibodies	c0b26970	otof gene therapy,aav,congenital deafness,antibodies
 2026-07-14	Great apes and humans laugh in the same rhythm, hinting at ancient vocal control	8805c1a2	laughter,great apes,isochrony,human evolution
+2026-07-15	President Tharman makes first state visit to Malaysia, urges non-transactional ties	e4d544ef	tharman,anwar ibrahim,malaysia,js-sez,state-visit
+2026-07-15	Sheng Siong breaks ground on S$520 million Sungei Kadut headquarters and warehouse	0157f8bf	sheng siong,sungei kadut,gan kim yong,warehouse,groundbreaking
+2026-07-15	Lorry driver jailed 13 months for S$1.4 million damage to CTE tunnel ceiling	c136e99d	lai daohong,cte tunnel,cairnhill,crane-lorry,jailed
+2026-07-15	Singapore proposes a new 'purposeful endangerment' driving offence carrying up to 15 years' jail	10e084d3	road traffic bill,purposeful endangerment,mha,caning,proposed
+2026-07-15	Aperia Group chief charged with laundering S$38 million in a Nvidia-chip fraud case	7fdf326a	alan wei,aperia group,nvidia,money-laundering,charged
+2026-07-15	Sonam Wangchuk's exam-leak hunger strike enters day 17 as opposition urges him to stop	3b761883	sonam wangchuk,dharmendra pradhan,neet-ug,jantar mantar,hunger-strike
+2026-07-15	India pulls the Diljit Dosanjh film 'Satluj' from streaming 48 hours after its release	50e8d408	satluj,jaswant singh khalra,diljit dosanjh,zee5,banned
+2026-07-15	India women crush England by 270 runs to win the first Test staged at Lord's	fc33a3ca	india women,england,lords,kranti gaud,yastika bhatia
+2026-07-15	Counter-terror police lead the Ann Widdecombe murder inquiry, calling it a 'targeted attack'	dae7a5ea	ann widdecombe,reform uk,counter terrorism policing,devon,murder
+2026-07-15	Twelve arrested over an alleged far-right plot targeting a 15,000-strong Muslim festival in Suffolk	55c54ab5	uk ijtima,shrubland hall,suffolk,shabana mahmood,terror-plot
+2026-07-15	Study estimates more than 2,700 excess deaths in England and Wales from the May-June heatwaves	7fe9a3fc	lshtm,imperial college,met office,heatwave,excess-deaths
+2026-07-15	Investors trim UK gilt holdings, wary that Burnham could 'do a Truss'	cc2935fa	rathbones,gilts,andy burnham,bond-market,fiscal
+2026-07-15	Sudan court sentences RSF chief Hemedti and 15 commanders to death in absentia	c60840c4	hemedti,rapid support forces,port sudan,khamis abbakar,death-sentence
+2026-07-15	Israel and Lebanon hold a sixth round of US-brokered talks in Rome on a troop pullout	a755b22d	israel,lebanon,joseph aoun,hezbollah,litani river
+2026-07-15	Fire tears through a Bangkok beer hall near Chatuchak, killing 27	413dd07f	bangkok,chatuchak,beer-hall-fire,thailand,27-dead
+2026-07-15	Water-bombers battle a wildfire in France's Fontainebleau forest as Europe's heat persists	f635f6d4	fontainebleau,paris,almeria,european heatwave,wildfire
+2026-07-15	Nigeria rescues 39 schoolchildren and six teachers abducted 56 days earlier in Oyo	a7139242	nigeria,oyo state,oriire,bola tinubu,schoolchildren-rescued
+2026-07-15	DeepSeek in talks to raise $1.5 billion at a $71 billion valuation ahead of a China IPO	8065fc05	deepseek,funding-round,71bn-valuation,china ipo,raise
+2026-07-15	AI video startup PixVerse raises a $439 million Series C at a $2 billion valuation	d5e65522	pixverse,series c,alibaba,video-generation,raise
+2026-07-15	BIS warns AI's debt-fuelled investment boom risks turning to bust	a6fe1fac	bis,hyperscalers,capex,ai-boom,warning
+2026-07-15	Anthropic and OpenAI press Washington to treat AI 'distillation' as a security threat	136b379f	anthropic,openai,alibaba,distillation,daamta
+2026-07-15	Chinese open-weight models overtake US models in Hugging Face downloads	22c66765	hugging face,open-weight models,openrouter,china,downloads
+2026-07-15	JPMorgan posts a record $21.2 billion quarterly profit on booming equities trading	5fc56771	jpmorgan,jamie dimon,record-profit,equities,visa
+2026-07-15	Goldman Sachs sets an all-time equities-trading record with a $7.4 billion haul	191de2d8	goldman sachs,david solomon,equities-record,earnings,q2
+2026-07-15	IBM suffers its worst-ever day, sliding about 25% after a Q2 earnings warning	180fd926	ibm,arvind krishna,stock-crash,earnings-miss,q2
+2026-07-15	US consumer prices fall 0.4% in June, cooling annual inflation to 3.5%	2c022eca	cpi,inflation,bls,federal reserve,june
+2026-07-15	Citigroup profit jumps 45% to $5.8 billion but shares fall on spending plans	baa5315d	citigroup,jane fraser,earnings-beat,equities,q2
+2026-07-15	India beat England by six wickets in the first ODI at Edgbaston	712cdbbb	india,england,1st-odi,edgbaston,axar patel
+2026-07-15	Maria Sakkari reaches the round of 16 at the inaugural Athens Open	2233781a	maria sakkari,polina kudermetova,athens open,wta,round-of-16
+2026-07-15	Top seed Andrey Rublev reaches the Bastad semi-finals	ed24858f	andrey rublev,jesper de jong,nordea open,bastad,semi-final
+2026-07-15	Zheng Qinwen opens her Athens Open campaign with a straight-sets win	c14be0b4	zheng qinwen,jessica bouzas maneiro,athens open,wta,first-round
+2026-07-15	Update: Verstappen's camp opens 2027 talks with McLaren as F1 heads into Spa race week	c92ca646	max verstappen,mclaren,red bull,belgian gp,2027
+2026-07-15	Webb's fourth-anniversary image reveals a galaxy scarred by an ancient collision	e8fab03f	james webb,centaurus a,galaxy-merger,nasa,anniversary
+2026-07-15	Euclid telescope spots the two most ancient quasars yet seen	147e0b0a	euclid,esa,quasar,early-universe,redshift
+2026-07-15	Semaglutide slowed markers of biological ageing in a controlled trial	f3c667a4	semaglutide,glp-1,epigenetic-ageing,nature communications,trial
+2026-07-15	NASA's Perseverance rover clocks a full marathon of driving on Mars	59663b36	perseverance,mars,jezero crater,hirise,marathon
+2026-07-15	NASA modelling cracks the mystery of the Sun's razor-thin tachocline	798201c5	tachocline,solar dynamo,coffies,nasa,solar-cycle

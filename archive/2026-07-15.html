@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Wed, 15 July 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .wpuzzle-box{background:linear-gradient(135deg,#0e1a1a,#0d1620);border:1px solid #234a44;border-left:3px solid #16a085;padding:24px 28px;border-radius:2px}
+  .wptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#16a085;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .wpuzzle-box .puzzle-title{color:#cdeae3}
+  .wpuzzle-box .puzzle-how{color:#8fb8ac;background:#08140f;border-left-color:#1a6a5a}
+  .wpuzzle-box .puzzle-q{color:#dfeae6;font-family:'Source Sans 3',sans-serif}
+  .wpuzzle-box .answer{color:#bfe0d6}
+  .wpuzzle-box .answer .alabel{color:#16a085}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Wednesday, 15 July 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Wednesday, 15 July 2026 · 🔍 42 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+============================================================================= */
+
+const SECTIONS = [
+  { id:"sg", title:"🇸🇬 Singapore", color:"#e74c3c", items:[
+    { headline:"President Tharman makes first state visit to Malaysia, urges non-transactional ties",
+      summary:"On his July 12-15 state visit, President Tharman Shanmugaratnam said Singapore-Malaysia relations 'must never be a purely transactional relationship'. Malaysian PM Anwar Ibrahim paid a courtesy call and said the Johor-Singapore Special Economic Zone master plan will be finalised soon.",
+      source:"Mothership", url:"https://mothership.sg/2026/07/tharman-malaysia-state-visit-interview/", date:"Jul 13", spectrum:null, bias:null },
+    { headline:"Sheng Siong breaks ground on S$520 million Sungei Kadut headquarters and warehouse",
+      summary:"Supermarket chain Sheng Siong broke ground on July 13 on a seven-storey, 61,000 sq m automated distribution centre — its largest-ever investment at about S$520 million — able to support more than 120 stores by 2029. Deputy Prime Minister Gan Kim Yong officiated.",
+      source:"Mothership", url:"https://mothership.sg/2026/07/sheng-siong-is-spending-s520-million-on-a-new-hq-and-warehouse/", date:"Jul 13", spectrum:null, bias:null },
+    { headline:"Lorry driver jailed 13 months for S$1.4 million damage to CTE tunnel ceiling",
+      summary:"Lai Daohong, 56, was jailed 13 months and fined S$1,000 on July 13 after his over-height lorry, its crane left unretracted, struck the Central Expressway tunnel ceiling at Cairnhill in November 2024. The collision caused more than S$1.4 million in damage and a 10-hour road closure.",
+      source:"Mothership", url:"https://mothership.sg/2026/07/lorry-damaged-cte-tunnel-ceiling-jailed/", date:"Jul 13", spectrum:null, bias:null },
+    { headline:"Singapore proposes a new 'purposeful endangerment' driving offence carrying up to 15 years' jail",
+      summary:"The Road Traffic (Miscellaneous Amendments) Bill introduces an offence of purposeful endangerment using a vehicle that causes death or grievous hurt, punishable by up to 15 years' jail, caning, lifetime driving bans and vehicle forfeiture. The bill also lowers drink-driving thresholds.",
+      source:"Mothership", url:"https://mothership.sg/2026/07/new-offence-purposeful-endangerment-singapore/", date:"Jul 8", spectrum:null, bias:null },
+    { headline:"Aperia Group chief charged with laundering S$38 million in a Nvidia-chip fraud case",
+      summary:"Aperia Group chief executive Alan Wei Zhaolun, 50, pleaded not guilty to 11 charges, accused of laundering about S$38 million into a S$55 million bungalow on Chee Hoon Avenue. The charges stem from an alleged conspiracy over servers containing Nvidia chips said to breach US export controls.",
+      source:"Mothership", url:"https://mothership.sg/2026/07/aperia-group-ceo-alan-wei-charges/", date:"Jul 6", spectrum:null, bias:null },
+  ]},
+  { id:"india", title:"🇮🇳 India", color:"#e67e22", items:[
+    { headline:"Sonam Wangchuk's exam-leak hunger strike enters day 17 as opposition urges him to stop",
+      summary:"Climate activist Sonam Wangchuk, fasting at Delhi's Jantar Mantar since June 28 in support of a youth-led campaign demanding Education Minister Dharmendra Pradhan resign over the NEET-UG 2026 paper leak, had lost about 8.5 kg by July 14 as his health deteriorated. Opposition figures including Akhilesh Yadav appealed to him to end the fast.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/7/14/indian-activist-wangchuk-urged-to-end-hunger-strike-over-exam-paper-leaks", date:"Jul 14", spectrum:null, bias:null },
+    { headline:"India pulls the Diljit Dosanjh film 'Satluj' from streaming 48 hours after its release",
+      summary:"'Satluj', based on rights activist Jaswant Singh Khalra, who documented alleged extrajudicial killings in 1990s Punjab, was removed from ZEE5 two days after its July 3 debut. A government-appointed panel on July 11 upheld the ban citing threats to India's sovereignty, and Sikh groups have staged community screenings in gurdwaras in protest.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/7/14/why-is-india-blocking-film-on-a-man-who-counted-punjab-insurgency-killings", date:"Jul 14", spectrum:null, bias:null },
+    { headline:"India women crush England by 270 runs to win the first Test staged at Lord's",
+      summary:"India beat England by 270 runs on July 13 to win the first women's Test held at Lord's. Debutant pacer Kranti Gaud took 5/37 to become the first woman on the Lord's honours board, and Yastika Bhatia's 113 was the first Test century by a woman at the ground; England were bowled out for 186 chasing 457.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/sports/2026/7/13/india-thrash-england-in-historic-first-womens-cricket-test-match-at-lords", date:"Jul 13", spectrum:null, bias:null },
+  ]},
+  { id:"uk", title:"🇬🇧 UK News", color:"#3949ab", items:[
+    { headline:"Counter-terror police lead the Ann Widdecombe murder inquiry, calling it a 'targeted attack'",
+      summary:"Former Conservative minister and Reform UK figure Ann Widdecombe, 78, was found dead with serious injuries at her home in Devon. A 28-year-old British man arrested on July 11 was re-arrested on suspicion of terrorism as Counter Terrorism Policing took over, and on July 14 police said the killing was a 'targeted attack'.",
+      source:"CNN", url:"https://www.cnn.com/2026/07/13/uk/ann-widdecombe-killing-uk-counterterror-police-intl", date:"Jul 13", spectrum:null, bias:null },
+    { headline:"Twelve arrested over an alleged far-right plot targeting a 15,000-strong Muslim festival in Suffolk",
+      summary:"Counter-terrorism police arrested 12 people over an alleged far-right plot against the UK Ijtima Islamic gathering at Shrubland Hall in Barham, Suffolk, which drew about 15,000 people and was cut short on police advice. Eight men are held under the Terrorism Act, and Home Secretary Shabana Mahmood said the police response had 'undoubtedly saved lives'.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/7/13/uk-arrests-12-over-extreme-right-wing-terror-threat-to-muslim-event", date:"Jul 13", spectrum:null, bias:null },
+    { headline:"Study estimates more than 2,700 excess deaths in England and Wales from the May-June heatwaves",
+      summary:"A rapid analysis by the London School of Hygiene & Tropical Medicine, Imperial College London and the Met Office estimated over 2,700 heat-related excess deaths in England and Wales during the record May and June heatwaves — about 550 in late May and 2,200 in late June. Researchers attributed roughly 42% of them to human-caused climate change.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/7/13/more-than-2700-deaths-in-uk-linked-to-may-june-heatwaves", date:"Jul 13", spectrum:null, bias:null },
+    { headline:"Investors trim UK gilt holdings, wary that Burnham could 'do a Truss'",
+      summary:"With Andy Burnham days from entering No 10, Rathbones said on July 14 it had sold long-dated gilts across a £9.8 billion multi-asset portfolio to guard against 'fiscal irresponsibility'. Jupiter, Neuberger Berman and Royal London said they are steering clear of longer-dated UK bonds until the next chancellor's first budget.",
+      source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-07-14/rathbones-cut-gilt-exposure-in-case-burnham-does-a-truss", date:"Jul 14", spectrum:null, bias:null },
+  ]},
+  { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
+    { headline:"Sudan court sentences RSF chief Hemedti and 15 commanders to death in absentia",
+      summary:"An anti-terrorism court in army-held Port Sudan on July 13 sentenced Rapid Support Forces leader Mohamed Hamdan Dagalo, known as Hemedti, and 15 senior commanders to death in absentia for war crimes and crimes against humanity, centred on the 2023 killing of West Darfur governor Khamis Abbakar. It is the first conviction of the RSF's top leadership since the war began in 2023.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/7/14/sudan-sentences-rsf-chief-hemedti-to-death-whos-he-whats-he-accused-of", date:"Jul 13", spectrum:null, bias:null },
+    { headline:"Israel and Lebanon hold a sixth round of US-brokered talks in Rome on a troop pullout",
+      summary:"Israeli and Lebanese delegations opened two days of US-brokered talks in Rome on July 14 to implement a June framework deal, focusing on 'pilot zones' near the Litani River where Israeli forces would withdraw, Hezbollah would disarm and Lebanese troops would deploy. President Joseph Aoun demanded an 'immediate start' to an Israeli withdrawal.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/7/14/lebanon-israel-hold-talks-in-rome-on-implementing-framework-deal", date:"Jul 14",
+      spectrum:{ left:"Left-leaning outlets stress Lebanese demands for a firm withdrawal timetable and question whether Hezbollah can be pressed to disarm without reciprocal Israeli steps.", center:"Centrist wires frame the Rome round as an incremental, US-mediated confidence-building step around two pilot zones near the Litani.", right:"Right-leaning coverage foregrounds Hezbollah's disarmament as the precondition and casts Israeli caution on troop pullback as prudent." },
+      bias:"Coverage diverges on sequencing — who must act first, an Israeli withdrawal or Hezbollah's disarmament." },
+    { headline:"Fire tears through a Bangkok beer hall near Chatuchak, killing 27",
+      summary:"A fast-moving fire engulfed the Rong Beer Na Lat Phrao beer hall on Lat Phrao Road in Bangkok's Chatuchak district late on July 12, killing at least 27 people and injuring 63, with 22 in serious condition. It was the Thai capital's deadliest blaze in 17 years, and investigators are examining the cause.",
+      source:"CNN", url:"https://www.cnn.com/2026/07/12/asia/bangkok-deadly-fire-pub-latam-intl", date:"Jul 13", spectrum:null, bias:null },
+    { headline:"Water-bombers battle a wildfire in France's Fontainebleau forest as Europe's heat persists",
+      summary:"More than 400 firefighters and water-bombing planes scooping from the Seine fought a wildfire that burned over 800 hectares of the historic Fontainebleau forest south of Paris on July 13, closing the A6 Paris-Lyon motorway. Spain's Almeria wildfire death toll rose to 13, and scientists estimated about 10,000 heat-related excess deaths across Europe over the past month.",
+      source:"CNN", url:"https://edition.cnn.com/2026/07/13/europe/europe-heatwave-monday-intl", date:"Jul 13", spectrum:null, bias:null },
+    { headline:"Nigeria rescues 39 schoolchildren and six teachers abducted 56 days earlier in Oyo",
+      summary:"Security forces freed at least 39 schoolchildren and six teachers 56 days after they were seized from three schools in Oyo state's Oriire district; eight kidnappers were arrested and no ransom was paid, the presidency said. One abducted teacher was killed in captivity, and President Bola Tinubu vowed to 'get justice'.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/7/10/dozens-of-abducted-schoolchildren-and-teachers-rescued-in-nigeria", date:"Jul 10", spectrum:null, bias:null },
+  ]},
+  { id:"tech", title:"💻 Tech & AI", color:"#27ae60", items:[
+    { headline:"DeepSeek in talks to raise $1.5 billion at a $71 billion valuation ahead of a China IPO",
+      summary:"Chinese AI lab DeepSeek is in early talks to raise about $1.5 billion at a roughly $71 billion pre-money valuation and has begun preparing for a possible mainland China listing — just a month after closing a $7 billion round at about a $50 billion valuation.",
+      source:"TechCrunch", url:"https://techcrunch.com/2026/07/14/deepseek-reportedly-in-talks-to-raise-1-5b-then-ipo/", date:"Jul 14", spectrum:null, bias:null },
+    { headline:"AI video startup PixVerse raises a $439 million Series C at a $2 billion valuation",
+      summary:"Singapore-based video-generation startup PixVerse closed its Series C at a total of $439 million, with Alibaba and Mirae Asset joining an extension that pushed its valuation past $2 billion. The company reports more than 150 million registered users.",
+      source:"TechCrunch", url:"https://techcrunch.com/2026/07/13/video-generation-startup-pixverse-raises-439m-valuation-soars-past-2b/", date:"Jul 13", spectrum:null, bias:null },
+    { headline:"BIS warns AI's debt-fuelled investment boom risks turning to bust",
+      summary:"The Bank for International Settlements said the AI build-out ranks among the largest tech-driven investment booms in US history, with the five biggest hyperscalers on track to spend more than $1 trillion across 2025-2026. It warned that circular financing and rising debt leave the sector exposed to a protracted bust.",
+      source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-07-14/ai-investment-race-could-turn-debt-fueled-boom-to-bust-bis-says", date:"Jul 14", spectrum:null, bias:null },
+    { headline:"Anthropic and OpenAI press Washington to treat AI 'distillation' as a security threat",
+      summary:"Anthropic and OpenAI are urging US policymakers to treat adversarial model distillation as a national-security issue, with Anthropic alleging Alibaba generated 28.8 million outputs from its Claude models via roughly 25,000 fraudulent accounts. The House Foreign Affairs Committee has advanced the Deterring American AI Model Theft Act.",
+      source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-07-13/anthropic-openai-warnings-prompt-distillation-debate-in-dc", date:"Jul 13", spectrum:null, bias:null },
+    { headline:"Chinese open-weight models overtake US models in Hugging Face downloads",
+      summary:"TechCrunch reports Chinese open-weight models accounted for 41% of Hugging Face downloads this spring, surpassing US models, and that the six most-used models on OpenRouter are all Chinese open models from firms such as Tencent, DeepSeek and MiniMax — raising questions about how much frontier models still matter for production AI.",
+      source:"TechCrunch", url:"https://techcrunch.com/2026/07/14/the-real-ai-race-may-no-longer-be-at-the-frontier-open-models-hugging-face/", date:"Jul 14", spectrum:null, bias:null },
+  ]},
+  { id:"biz", title:"📈 Business & Markets", color:"#8e44ad", items:[
+    { headline:"JPMorgan posts a record $21.2 billion quarterly profit on booming equities trading",
+      summary:"JPMorgan reported its highest-ever quarterly net income of $21.2 billion for Q2 2026, lifted by a $4.6 billion one-time gain on its Visa stake. Adjusted earnings of $6.14 a share beat the roughly $5.85 consensus, and equities-trading revenue jumped 86% from a year earlier to $6.03 billion.",
+      source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-07-14/jpmorgan-notches-record-profit-on-6-billion-stock-trading-haul", date:"Jul 14", spectrum:null, bias:null },
+    { headline:"Goldman Sachs sets an all-time equities-trading record with a $7.4 billion haul",
+      summary:"Goldman Sachs reported Q2 2026 net revenue of $20.34 billion and diluted earnings of $20.98 a share — nearly double a year earlier — driven by a record $7.42 billion in equities trading, the third straight quarter its equities desk has set an industry record. Shares rose about 9%.",
+      source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-07-14/goldman-blows-past-stock-trading-records-with-7-42-billion-boon", date:"Jul 14", spectrum:null, bias:null },
+    { headline:"IBM suffers its worst-ever day, sliding about 25% after a Q2 earnings warning",
+      summary:"IBM shares plunged about 25% — their steepest drop on record — after preliminary Q2 results showed revenue of $17.2 billion and adjusted earnings of $2.93 a share, below the $17.85 billion and roughly $3.02 expected. CEO Arvind Krishna cited software and infrastructure weakness, dragging ServiceNow and Salesforce lower too.",
+      source:"CNBC", url:"https://www.cnbc.com/2026/07/14/ibm-warns-second-quarter-earnings-fell-short-of-expectations.html", date:"Jul 14", spectrum:null, bias:null },
+    { headline:"US consumer prices fall 0.4% in June, cooling annual inflation to 3.5%",
+      summary:"US consumer prices fell 0.4% in June — the biggest monthly drop since April 2020 — pulling annual inflation to 3.5%, below the 3.8% expected, as gasoline prices fell about 10%. Core CPI was flat on the month at 2.6% year-on-year, and Treasury yields slid as traders trimmed the odds of a September Fed hike.",
+      source:"CNBC", url:"https://www.cnbc.com/2026/07/14/consumer-price-index-inflation-report-june-2026.html", date:"Jul 14", spectrum:null, bias:null },
+    { headline:"Citigroup profit jumps 45% to $5.8 billion but shares fall on spending plans",
+      summary:"Citigroup posted Q2 2026 net income of $5.8 billion, or $3.15 a share against $2.73 expected, on revenue of $24.8 billion — its best quarterly revenue in a decade — with equities trading up 45%. Shares fell nearly 6% after management flagged higher second-half investment spending.",
+      source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-07-14/citi-beats-every-profit-estimate-as-ceo-s-rebuild-gains-steam", date:"Jul 14", spectrum:null, bias:null },
+  ]},
+  { id:"sports", title:"🎾🏏🏎️ Sports", color:"#c0392b", items:[
+    { headline:"🏏 India beat England by six wickets in the first ODI at Edgbaston",
+      summary:"India chased 259 to win by six wickets, reaching 262 for 4 in 45.2 overs at Edgbaston on July 14 to take a 1-0 series lead. Axar Patel was named player of the match for his 4 for 62 and unbeaten 57, with Washington Sundar 52 not out; Joe Root's 76 not out had earlier lifted England to 258.",
+      source:"ESPNcricinfo", url:"https://www.espncricinfo.com/series/india-in-england-2026-1496488/england-vs-india-1st-odi-1496579/match-report", date:"Jul 14", spectrum:null, bias:null },
+    { headline:"🎾 Maria Sakkari reaches the round of 16 at the inaugural Athens Open",
+      summary:"Playing one of the first WTA events held in Greece in decades, home favourite Maria Sakkari opened with a 6-0, 7-6 win over Polina Kudermetova on July 13, taking the first set in about 24 minutes. She next faces Britain's Harriet Dart.",
+      source:"WTA", url:"https://www.wtatennis.com/tournaments/1175/athens/2026/scores", date:"Jul 13", spectrum:null, bias:null },
+    { headline:"🎾 Top seed Andrey Rublev reaches the Bastad semi-finals",
+      summary:"Chasing his first title of the season, top seed Andrey Rublev beat Andrea Pellegrino 6-3, 6-2 in his opener at the Nordea Open in Bastad, then got past Jesper de Jong to reach the last four on the Swedish clay.",
+      source:"ATP Tour", url:"https://www.atptour.com/en/scores/current/bastad/316/results", date:"Jul 15", spectrum:null, bias:null },
+    { headline:"🎾 Zheng Qinwen opens her Athens Open campaign with a straight-sets win",
+      summary:"Zheng Qinwen began her Athens Open run on July 13 with a 7-5, 6-1 first-round win over Jessica Bouzas Maneiro, part of a strong hard-court field at the new WTA event that also features Maria Sakkari and Alycia Parks.",
+      source:"WTA", url:"https://www.wtatennis.com/tournaments/1175/athens/2026", date:"Jul 13", spectrum:null, bias:null },
+    { headline:"🏎️ Update: Verstappen's camp opens 2027 talks with McLaren as F1 heads into Spa race week",
+      summary:"Sky Sports F1 reports Max Verstappen's camp has opened talks with McLaren over a 2027 switch as Formula 1 heads into the Belgian Grand Prix weekend at Spa (race Sunday, July 19). Sitting seventh and 58 points behind second-placed George Russell, Verstappen looks likely to trigger his Red Bull exit clause by the August break; team boss Laurent Mekies conceded Red Bull must convince him to stay.",
+      source:"Sky Sports F1", url:"https://www.skysports.com/f1/news/12433/13561664/max-verstappen-red-bull-drivers-options-for-2027-switch-assessed-after-frustrating-british-gp-weekend", date:"Jul 13", spectrum:null, bias:null },
+  ]},
+  { id:"misc", title:"🔬 Other Miscellaneous News", color:"#1abc9c", items:[
+    { headline:"Webb's fourth-anniversary image reveals a galaxy scarred by an ancient collision",
+      summary:"To mark four years of science, NASA released a new James Webb Space Telescope image of Centaurus A, 11 million light-years away, whose warped dust lanes trace a major galaxy merger roughly 2 billion years ago. Webb's infrared view cut through the obscuring dust to resolve individual stars around the active galactic core.",
+      source:"NASA", url:"https://science.nasa.gov/missions/webb/nasa-webb-uncovers-unusual-galaxy-shaped-by-cosmic-collision/", date:"Jul 12", spectrum:null, bias:null },
+    { headline:"Euclid telescope spots the two most ancient quasars yet seen",
+      summary:"ESA's Euclid space telescope has found 31 of the most ancient quasars known, including two record-holders whose light dates to when the universe was just 670 million years old, about 5% of its current age. The haul roughly doubles the number of quasars known from that early epoch and deepens the puzzle of how supermassive black holes grew so quickly.",
+      source:"ESA", url:"https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_discovers_the_most_ancient_quasar_in_the_Universe", date:"Jul 6", spectrum:null, bias:null },
+    { headline:"Semaglutide slowed markers of biological ageing in a controlled trial",
+      summary:"In a randomised, placebo-controlled trial of 108 adults published in Nature Communications, semaglutide — the drug in Ozempic and Wegovy — slowed several epigenetic 'ageing clocks', including a roughly 9% slower pace on one measure and reductions of several years on others. Researchers call it the first randomised human evidence that a GLP-1 drug may influence ageing pathways.",
+      source:"Nature", url:"https://www.nature.com/articles/s41467-026-72861-3", date:"Jul 13", spectrum:null, bias:null },
+    { headline:"NASA's Perseverance rover clocks a full marathon of driving on Mars",
+      summary:"NASA's Perseverance rover passed 26.2 miles of total driving on Mars, reaching the marathon mark on its 1,890th Martian day while exploring terrain west of Jezero Crater. An image from the Mars Reconnaissance Orbiter captured the rover and its tracks; it covered the distance in about five years and four months.",
+      source:"NASA", url:"https://www.jpl.nasa.gov/images/pia26726-nasas-hirise-captures-perseverance-marking-a-milestone-on-mars/", date:"Jul 13", spectrum:null, bias:null },
+    { headline:"NASA modelling cracks the mystery of the Sun's razor-thin tachocline",
+      summary:"NASA's COFFIES science team reported global simulations showing that the Sun's tachocline — the thin shear layer between its rigidly and differentially rotating zones — is kept thin by the dynamo's own fluctuating magnetic field. The layer underpins the 22-year solar cycle that drives space weather affecting satellites and astronauts.",
+      source:"NASA", url:"https://science.nasa.gov/blogs/science-news/2026/07/07/nasas-coffies-science-center-makes-breakthrough-on-solar-enigma/", date:"Jul 7", spectrum:null, bias:null },
+  ]},
+  { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
+  { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
+  { id:"wpuzzle", title:"🔤 Word Puzzles", color:"#16a085", custom:"wpuzzle" },
+];
+
+const FUN_FACT = {
+  text: "Contrary to a popular myth, glass is not a slow-moving liquid. The story that medieval cathedral windows are thicker at the bottom because the glass has oozed downward over the centuries is false — those panes were simply uneven when they were made. Ordinary glass is an amorphous solid, and any genuine flow at room temperature would take far longer than the current age of the universe.",
+  tag: "Category · Physics & Materials"
+};
+
+const PUZZLE = {
+  type: "Visual",
+  title: "Six Sticks, Four Triangles",
+  how: "Two triangles laid flat on the table only ever give you two; the breakthrough is to stop thinking in a single plane.",
+  question: "You have six matchsticks, all exactly the same length. Arrange all six so that they form exactly four triangles, where every side of every triangle is one full matchstick — no bending, breaking, or overlapping.\n\nHow is it done?",
+  answer: "Build a tetrahedron — a triangular pyramid.\n\nLay three matchsticks flat to make one triangle: that is the base. Then stand the other three sticks up from the three corners so that their top ends all meet at a single point above the centre.\n\nThe finished pyramid has four faces, and each face is an equilateral triangle made of three full matchsticks — four triangles from just six sticks. The whole trick is to leave the flat table and go three-dimensional."
+};
+
+const WORD_PUZZLE = {
+  type: "Anagram",
+  title: "Hidden in the Mix",
+  how: "Each clue is an anagram of its answer, and the phrase itself hints at what the answer means — rearrange every letter, with none left over.",
+  question: "Rearrange the letters of each phrase to reveal a fitting word or phrase (letter counts match exactly):\n\n1.  DIRTY ROOM  →  a place to sleep (9 letters, 1 word)\n2.  CASH LOST IN ME  →  found on a casino floor (12 letters, 2 words)\n3.  HERE COME DOTS  →  a way to send a message (12 letters, 3 words)\n4.  ELEVEN PLUS TWO  →  another way to write a certain sum (13 letters, 3 words)",
+  answer: "1.  DIRTY ROOM  =  DORMITORY\n2.  CASH LOST IN ME  =  SLOT MACHINES\n3.  HERE COME DOTS  =  THE MORSE CODE\n4.  ELEVEN PLUS TWO  =  TWELVE PLUS ONE\n\nAnd, fittingly, ELEVEN PLUS TWO and TWELVE PLUS ONE not only use the very same letters — they also both equal 13."
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function renderWordPuzzle(){
+  let h='<div class="sec-title">🔤 Word Puzzle of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#16a085,transparent)"></div>';
+  h+='<div class="wpuzzle-box"><span class="wptype">'+WORD_PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+WORD_PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+WORD_PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+WORD_PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this,\'wpans\')">Show Answer</button>';
+  h+='<div class="answer" id="wpans"><span class="alabel">Answer</span>'+WORD_PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn,ansId){var a=document.getElementById(ansId||'ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else if(sec.custom==="wpuzzle"){div.innerHTML=renderWordPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>

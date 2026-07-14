@@ -194,14 +194,14 @@
       "date": "2026-07-14",
       "topic_key": "tardigrade",
       "text": "Tardigrades can survive the open vacuum of space (ESA FOTON-M3, 2007) and near absolute zero."
+    },
+    {
+      "date": "2026-07-15",
+      "topic_key": "glass",
+      "text": "Glass is not a slow-moving liquid; the thick-bottomed cathedral-window story is a myth. It is an amorphous solid."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-06-14",
-      "type": "quantitative",
-      "title_key": "wine-and-water"
-    },
     {
       "date": "2026-06-15",
       "type": "lateral",
@@ -346,6 +346,11 @@
       "date": "2026-07-14",
       "type": "lateral",
       "title_key": "slow-drinker"
+    },
+    {
+      "date": "2026-07-15",
+      "type": "visual",
+      "title_key": "six-sticks-four-triangles"
     }
   ],
   "word_puzzle_log": [
@@ -458,6 +463,11 @@
       "date": "2026-07-14",
       "type": "letterboxed",
       "title_key": "four-sides-two-words"
+    },
+    {
+      "date": "2026-07-15",
+      "type": "anagram",
+      "title_key": "hidden-in-the-mix"
     }
   ]
 }
