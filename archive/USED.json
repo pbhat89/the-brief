@@ -199,14 +199,14 @@
       "date": "2026-07-15",
       "topic_key": "glass",
       "text": "Glass is not a slow-moving liquid; the thick-bottomed cathedral-window story is a myth. It is an amorphous solid."
+    },
+    {
+      "date": "2026-07-16",
+      "topic_key": "koala",
+      "text": "Koala fingerprints are nearly indistinguishable from human ones, an independent evolution for gripping eucalyptus."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-06-15",
-      "type": "lateral",
-      "title_key": "bankrupt-driver"
-    },
     {
       "date": "2026-06-16",
       "type": "visual",
@@ -351,6 +351,11 @@
       "date": "2026-07-15",
       "type": "visual",
       "title_key": "six-sticks-four-triangles"
+    },
+    {
+      "date": "2026-07-16",
+      "type": "logic",
+      "title_key": "mislabeled-jars"
     }
   ],
   "word_puzzle_log": [
@@ -468,6 +473,11 @@
       "date": "2026-07-15",
       "type": "anagram",
       "title_key": "hidden-in-the-mix"
+    },
+    {
+      "date": "2026-07-16",
+      "type": "spellingbee",
+      "title_key": "a-list"
     }
   ]
 }

@@ -1152,3 +1152,37 @@ is empty until the first run.
 2026-07-15	Semaglutide slowed markers of biological ageing in a controlled trial	f3c667a4	semaglutide,glp-1,epigenetic-ageing,nature communications,trial
 2026-07-15	NASA's Perseverance rover clocks a full marathon of driving on Mars	59663b36	perseverance,mars,jezero crater,hirise,marathon
 2026-07-15	NASA modelling cracks the mystery of the Sun's razor-thin tachocline	798201c5	tachocline,solar dynamo,coffies,nasa,solar-cycle
+2026-07-16	High Court awards ministers Shanmugam and Tan See Leng S$230,000 each over Bloomberg article	38ff124c	shanmugam, tan see leng, bloomberg, defamation, awarded
+2026-07-16	Singapore economy grows 5.7% in the second quarter as AI-driven manufacturing leads	73d77b27	singapore, gdp, mti, q2, manufacturing
+2026-07-16	Man who financed a WhatsApp and WeChat scam-account syndicate jailed four years	42db0e1a	ronnie low, whatsapp, wechat, scam syndicate, jailed
+2026-07-16	Driver jailed five weeks after crashing a Porsche into Suntec City's Fountain of Wealth	1ebd7247	suntec city, fountain of wealth, porsche, driver, jailed
+2026-07-16	India-UK free trade agreement takes effect, cutting tariffs on both sides	24e4abdb	india, uk, free trade agreement, tariffs, takes-effect
+2026-07-16	India's June merchandise trade deficit widens to a record $30.43 billion	1b37ed53	india, trade deficit, exports, imports, record
+2026-07-16	RBI proposes easing rules for repeat large stake purchases in banks by funds	f92f0167	rbi, banks, stake purchases, funds, proposes
+2026-07-16	India's inflation outlook clouded by renewed US-Iran tensions and an El Nino threat	d75e665d	india, inflation, us-iran, el nino, rbi
+2026-07-16	Starmer delivers an emotional final PMQs and wins a rare standing ovation from MPs	3f4edfa8	keir starmer, pmqs, andy burnham, commons, ovation
+2026-07-16	Incoming OBR chief Haskel warns the next prime minister against debt-funded spending	44f430da	jonathan haskel, obr, debt, fiscal policy, warns
+2026-07-16	Pound climbs to its highest against the euro in more than a year	3811a07d	pound, sterling, euro, uk markets, climbs
+2026-07-16	Burnham faces a day-one warning of a souring economy and oil-price risk	73ffe2c8	andy burnham, uk economy, oil, inflation, warning
+2026-07-16	Israeli air strike kills a family of three in central Gaza's Deir al-Balah	a9b23400	israel, gaza, deir al-balah, air strike, killed
+2026-07-16	Russian strike on Odesa kills three as Ukraine hits Black Sea vessels	08ef14b9	russia, odesa, ukraine, black sea, strike
+2026-07-16	Update: US strikes Iranian-held Greater Tunb as Iran hits Gulf bases	2f3bce25	us, iran, greater tunb, gulf, strikes
+2026-07-16	Trump hosts new Iraqi PM al-Zaidi and vows deals and a Basra-to-Ceyhan oil pipeline	b02ec4ae	trump, al-zaidi, iraq, pipeline, white house
+2026-07-16	OpenAI's first hardware device is reportedly a screenless, self-moving smart speaker	f47e56df	openai, hardware, smart speaker, chatgpt, device
+2026-07-16	ASML raises its 2026 sales forecast again and plans a 30% capacity expansion	4610f44a	asml, forecast, capacity, ai chips, raises
+2026-07-16	Nvidia ships a small number of H200 AI chips to China under a US license	4420dffb	nvidia, h200, china, us license, ships
+2026-07-16	Indian AI coding startup Emergent hits unicorn status with a $130 million Series C	4e802e7e	emergent, unicorn, series c, creaegis, funding
+2026-07-16	OpenAI researcher Miles Wang in talks to launch a $2 billion AI drug-discovery startup	789a945d	miles wang, openai, drug discovery, lightspeed, startup
+2026-07-16	Morgan Stanley posts record second-quarter revenue as equities trading surges	86b2cfa0	morgan stanley, q2, revenue, equities, record
+2026-07-16	PayPal draws a $53 billion joint takeover bid from Stripe and Advent	b5e100fa	paypal, stripe, advent, takeover, bid
+2026-07-16	United Airlines beats on the second quarter and lifts its full-year profit forecast	6ebe7c08	united airlines, q2, earnings, forecast, beats
+2026-07-16	Traders ramp up July Fed rate-hike bets as Warsh calls inflation too high	fbd3405b	fed, kevin warsh, rate hike, inflation, bets
+2026-07-16	🎾 Wawrinka bows out of Gstaad for the last time, beaten by Faria	7c706bf1	stan wawrinka, gstaad, jaime faria, atp, farewell
+2026-07-16	🎾 Badosa routs fourth seed Kalinina to extend her win streak in Iasi	33ed2871	paula badosa, kalinina, iasi open, wta, win
+2026-07-16	🏏 India eye a series clincher against England in the second ODI at Cardiff	89dcf6c6	india, england, cardiff, 2nd odi, series
+2026-07-16	🏎️ McLaren bring a new rear wing and the latest Mercedes engine to Spa	c969bd0a	mclaren, mercedes, spa, belgian gp, upgrade
+2026-07-16	🏎️ Pirelli picks the C2, C3, and C4 tyres for a demanding Spa weekend	d50e5b3e	pirelli, tyres, spa, belgian gp, compounds
+2026-07-16	Webb uncovers a hidden third giant planet in the famous Beta Pictoris system	15711400	james webb, beta pictoris, exoplanet, nasa, discovery
+2026-07-16	An asteroid is unmasked as a 'dark comet' after its mysterious orbital drift	8dffdc07	dark comet, asteroid, nasa jpl, farnocchia, coma
+2026-07-16	Astronomers detect the first genuine sugar molecule floating in interstellar space	3090f5d0	erythrulose, sugar, interstellar, molecular cloud, rna
+2026-07-16	Four deep-sea technologies race to detect deadly earthquakes and tsunamis	23d5db2c	deep sea, earthquakes, tsunamis, seafloor, sensors
