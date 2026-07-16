@@ -204,14 +204,14 @@
       "date": "2026-07-16",
       "topic_key": "koala",
       "text": "Koala fingerprints are nearly indistinguishable from human ones, an independent evolution for gripping eucalyptus."
+    },
+    {
+      "date": "2026-07-17",
+      "topic_key": "carrot",
+      "text": "Carrots were originally purple, white, and yellow; the orange carrot was bred to prominence by Dutch growers in the 16th-17th centuries."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-06-16",
-      "type": "visual",
-      "title_key": "painted-cube"
-    },
     {
       "date": "2026-06-17",
       "type": "logic",
@@ -356,6 +356,11 @@
       "date": "2026-07-16",
       "type": "logic",
       "title_key": "mislabeled-jars"
+    },
+    {
+      "date": "2026-07-17",
+      "type": "quantitative",
+      "title_key": "bridge-in-the-dark"
     }
   ],
   "word_puzzle_log": [
@@ -478,6 +483,11 @@
       "date": "2026-07-16",
       "type": "spellingbee",
       "title_key": "a-list"
+    },
+    {
+      "date": "2026-07-17",
+      "type": "grouping",
+      "title_key": "missing-half"
     }
   ]
 }

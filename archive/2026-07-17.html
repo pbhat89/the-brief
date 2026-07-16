@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Fri, 17 July 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .wpuzzle-box{background:linear-gradient(135deg,#0e1a1a,#0d1620);border:1px solid #234a44;border-left:3px solid #16a085;padding:24px 28px;border-radius:2px}
+  .wptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#16a085;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .wpuzzle-box .puzzle-title{color:#cdeae3}
+  .wpuzzle-box .puzzle-how{color:#8fb8ac;background:#08140f;border-left-color:#1a6a5a}
+  .wpuzzle-box .puzzle-q{color:#dfeae6;font-family:'Source Sans 3',sans-serif}
+  .wpuzzle-box .answer{color:#bfe0d6}
+  .wpuzzle-box .answer .alabel{color:#16a085}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Friday, 17 July 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Friday, 17 July 2026 · 🔍 74 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eleven entries in this exact order:
+     id    : one of "sg" | "india" | "uk" | "geo" | "tech" | "biz" | "sports" | "misc" | "fun" | "puzzle" | "wpuzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 8 news tabs; fun/puzzle/wpuzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+
+   WORD_PUZZLE shape (separate, daily word game — NYT-style, static reveal):
+     type     : one of "Connections" | "Word Ladder" | "Anagram" | "Spelling Bee" | "Letter Boxed" | "Mini Crossword"
+     title    : short evocative name for the word puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle body; supports \n for line breaks (grids render as pre-formatted text)
+     answer   : the answer; supports \n for line breaks; appears inside its own toggle (id "wpans")
+============================================================================= */
+
+const SECTIONS = [
+  { id:"sg", title:"🇸🇬 Singapore", color:"#e74c3c", items:[
+    { headline:"RTS Link could shift over S$1 billion of Singapore spending to Johor Bahru", summary:"A joint study by the Singapore Business Federation, the Restaurant Association of Singapore and the Singapore Retailers Association projects Singaporeans will spend an extra S$1.05 billion a year in Johor Bahru once the RTS Link opens in 2027, against S$756 million flowing in — a net S$290 million outflow. Cross-border trips are forecast to rise 51%, adding 11.2 million return journeys.", source:"SCMP", url:"https://www.scmp.com/week-asia/economics/article/3360806/new-johor-rail-link-us815m-challenge-singapores-retail-and-fb", date:"Jul 16", spectrum:null, bias:null },
+    { headline:"Lawyer-politician Lim Tean ordered to surrender on 20 July to begin jail term", summary:"The Court of Appeal ordered People's Alliance for Reform figure Lim Tean, 61, to surrender at the State Courts on 20 July to serve three months and one week in jail. He was convicted under the Legal Profession Act for attending hearings and filing documents on 32 occasions in 2021 without a valid practising certificate.", source:"Mothership", url:"https://mothership.sg/2026/07/lim-tean-ordered-jail/", date:"Jul 15", spectrum:null, bias:null },
+    { headline:"Over-height lorry driver jailed 13 months for S$1.45 million CTE tunnel damage", summary:"Lai Daohong, a 56-year-old Chinese national, was jailed 13 months, fined S$1,000 and banned from driving for two years after an over-height lorry with a mounted crane struck the Central Expressway tunnel ceiling at Cairnhill Circle in November 2024. The strike closed the road for about 10 hours and caused roughly S$1.45 million in damage.", source:"Mothership", url:"https://mothership.sg/2026/07/lorry-damaged-cte-tunnel-ceiling-jailed/", date:"Jul 13", spectrum:null, bias:null },
+    { headline:"Man, 23, jailed four months over 181km/h CTE midnight joyride crash", summary:"Lee Jun En Gilviz, 23, was jailed four months and banned from driving for three years for dangerous driving after a six-car midnight joyride in October 2024 that ended in a crash near the Fort Canning Tunnel. He had been travelling at between 141km/h and 181km/h on the Central Expressway, where the limit is 90km/h.", source:"Mothership", url:"https://mothership.sg/2026/07/cte-midnight-joyride-jail/", date:"Jul 13", spectrum:null, bias:null },
+  ]},
+  { id:"india", title:"🇮🇳 India", color:"#e67e22", items:[
+    { headline:"Skyroot to attempt India's first private orbital launch, Vikram-1, on 18 July", summary:"Hyderabad-based Skyroot Aerospace plans to launch Vikram-1, India's first privately developed orbital rocket, from Sriharikota on 18 July in a mission it calls Aagaman. The seven-storey, all-carbon-composite vehicle uses in-house propulsion including 3D-printed engines and will carry technology-demonstration payloads.", source:"The Indian Express", url:"https://indianexpress.com/article/india/skyroot-vikram-1-india-first-private-orbital-launch-10789367/", date:"Jul 16", spectrum:null, bias:null },
+    { headline:"Re-NEET-UG 2026 results declared; two candidates share the top rank at 715", summary:"The National Testing Agency declared the re-conducted NEET-UG 2026 results on 16 July, with Punjab's Aryan Gupta and Haryana's Panshul Bansal sharing All India Rank 1 at 715 out of 720. About 11.21 lakh candidates qualified in the retest, held on 21 June after a paper-leak scandal forced a re-examination.", source:"The Times of India", url:"https://timesofindia.indiatimes.com/education/news/re-neet-ug-2026-result-declared-at-neet-nta-nic-in-aryan-gupta-panshul-bansal-top-with-715-marks/articleshow/132444457.cms", date:"Jul 16", spectrum:null, bias:null },
+    { headline:"Supreme Court says a third language should begin in Class 6, not Class 9", summary:"Hearing a challenge to CBSE's three-language policy on 16 July, the Supreme Court said a compulsory third language beginning in Class 9 would impose avoidable exam stress and should instead start around Class 6 and end by Class 9. The bench declined an interim stay and listed the matter for detailed hearing on 22 July.", source:"The Economic Times", url:"https://economictimes.indiatimes.com/news/india/supreme-court-says-third-language-should-start-in-class-6-not-class-9/articleshow/132447459.cms", date:"Jul 16", spectrum:null, bias:null },
+    { headline:"ED raids 13 locations in a Rohingya-Bangladeshi infiltration and terror-funding probe", summary:"The Enforcement Directorate searched 13 premises across Uttar Pradesh, Delhi, Haryana and West Bengal under the money-laundering law on 16 July, targeting an alleged syndicate accused of smuggling Rohingya and Bangladeshi nationals into India and arranging forged identity documents. The case stems from a 2024 FIR by the Uttar Pradesh Anti-Terrorist Squad.", source:"The Economic Times", url:"https://economictimes.indiatimes.com/news/india/ed-raids-13-locations-in-rohingya-bangladeshi-illegal-infiltration-and-terror-funding-probe/articleshow/132446533.cms", date:"Jul 16", spectrum:null, bias:null },
+    { headline:"Prashant Kishor's Jan Suraaj loses leaders to the BJP before the Bankipur bypoll", summary:"In a setback for Jan Suraaj founder Prashant Kishor, several party leaders — including mathematician K.C. Sinha and former 2025 candidates Bittu Singh and Gopal Singh — joined the BJP in Bihar ahead of the 30 July Bankipur bypoll, where Kishor is contesting against the BJP's Neeraj Kumar Sinha.", source:"The Indian Express", url:"https://indianexpress.com/article/india/prashant-kishors-electoral-debut-jan-suraaj-bihar-bjp-10788395/", date:"Jul 15", spectrum:null, bias:null },
+  ]},
+  { id:"uk", title:"🇬🇧 UK News", color:"#3949ab", items:[
+    { headline:"Burnham set to name Shabana Mahmood as chancellor, passing over Miliband", summary:"Incoming prime minister Andy Burnham is expected to make Home Secretary Shabana Mahmood his chancellor, according to Financial Times reporting, passing over early frontrunner Ed Miliband as well as Yvette Cooper and Wes Streeting. Formal cabinet appointments are due on Monday, 20 July.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-07-15/burnham-set-to-name-shabana-mahmood-as-uk-chancellor-ft-says", date:"Jul 15", spectrum:null, bias:null },
+    { headline:"IMF warns Burnham against raising the top income-tax rate as it nudges up growth", summary:"In its 2026 Article IV assessment, the IMF cautioned incoming prime minister Andy Burnham that raising the top rate of income tax would discourage work and hurt growth, and said Britain is near 'peak tax' with VAT and property levies already above international averages. The Fund lifted its 2026 UK growth forecast to about 1.0%.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-07-16/imf-cautions-burnham-against-raising-uk-s-top-income-tax-rate", date:"Jul 16", spectrum:null, bias:null },
+    { headline:"UK economy grew 0.1% in May as services offset falls in industry", summary:"Office for National Statistics data showed GDP rose 0.1% in May, reversing April's 0.1% fall, driven by 0.3% growth in services while production dropped 0.5% and construction 0.8%. Output was up 0.7% over the three months to May, though the FTSE 100 and gilts still slipped on the day.", source:"Bloomberg", url:"https://www.bloomberg.com/news/live-blog/2026-07-16/ftse-100-live-uk-gdp-iip-pound-gilts-mahmood-burnham-hormuz-oil-prices-iran-war-what-s-moving-uk-markets-right-now-markets-today", date:"Jul 16", spectrum:null, bias:null },
+    { headline:"UK proposes an overnight social-media curfew for 16- and 17-year-olds", summary:"The government announced plans for a default lockout from midnight to 6am for 16- and 17-year-olds on Instagram, TikTok and YouTube, with autoplay and infinite scrolling switched off by default and an option to opt out. Expected to take effect by spring 2027, it follows an under-16 social-media ban announced last month.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/7/16/uk-proposes-voluntary-overnight-social-media-curfew-for-older-teens", date:"Jul 16", spectrum:null, bias:null },
+  ]},
+  { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
+    { headline:"Update: US launches a sixth night of strikes on Iran and disables a tanker as Tehran hits the Gulf", summary:"US Central Command said it struck sites near Qeshm Island, Bandar Abbas and Chabahar and disabled an oil tanker in the Strait of Hormuz, in a sixth consecutive night of attacks that has left at least 35 people dead and more than 300 wounded. Tehran said it retaliated against US assets in Kuwait, Bahrain and Jordan and ruled out negotiations.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/7/16/us-strikes-iran-tanker-as-tehran-hits-kuwait-jordan-whats-the-latest", date:"Jul 16", spectrum:{ left:"Al Jazeera foregrounds the rising civilian toll and Tehran's framing of an 'existential war' after the collapse of an April ceasefire.", center:"CNN centres the strategic aim of keeping the Strait of Hormuz open and Iran's warning that the strait is an 'unbreakable red line'.", right:"US conservative coverage emphasises deterrence and President Trump's vow that strikes will 'continue' until Iran stands down." }, bias:"Casualty figures and 'ceasefire' framing dominate on one side; shipping security and Iranian escalation lead on the other." },
+    { headline:"French parliament approves a landmark assisted-dying bill", summary:"France's parliament gave final approval to a bill legalising assisted dying for adults with incurable, life-threatening illnesses, one of the most significant social reforms of President Macron's second term after months of debate. Eligible patients meeting strict conditions will be able to receive help to end their lives.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/7/15/french-parliament-approves-landmark-assisted-dying-bill", date:"Jul 15", spectrum:null, bias:null },
+    { headline:"Hundreds protest in Kyiv over Zelenskyy's dismissal of his defence minister", summary:"Hundreds gathered in central Kyiv to protest President Volodymyr Zelenskyy's abrupt sacking of the defence minister, in one of the largest wartime demonstrations against the government. Protesters demanded transparency over the reshuffle as Ukraine presses on with the war against Russia.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/7/16/hundreds-protest-in-kyiv-over-zelenskyys-dismissal-of-defence-minister", date:"Jul 16", spectrum:null, bias:null },
+    { headline:"US to impose 25% tariffs on a range of Brazilian imports under Section 301", summary:"The White House said it will levy 25% duties on thousands of Brazilian goods, including sugar, apparel, paper and steel, the first tariffs deployed under a new trade strategy using Section 301 of US trade law. The move follows weeks of warnings and threatens to strain ties with Latin America's largest economy.", source:"Al Jazeera", url:"https://www.aljazeera.com/economy/2026/7/16/us-to-impose-new-25-percent-tariffs-on-some-brazilian-imports", date:"Jul 16", spectrum:null, bias:null },
+    { headline:"Update: DR Congo's Ebola outbreak passes 2,000 cases as health workers strike", summary:"The Democratic Republic of Congo's Ebola outbreak has surpassed 2,000 recorded cases, the WHO and health authorities said, as more health workers began strike action over pay and conditions that threatens the response. The outbreak, centred on the country's east, has now spread across several provinces.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/7/15/drc-ebola-cases-surpass-2000-as-more-health-workers-begin-strike", date:"Jul 15", spectrum:null, bias:null },
+  ]},
+  { id:"tech", title:"💻 Tech & AI", color:"#27ae60", items:[
+    { headline:"Mira Murati's Thinking Machines releases its first open model, Inkling", summary:"Thinking Machines Lab, founded by former OpenAI CTO Mira Murati, released Inkling, a mixture-of-experts model with 975 billion total parameters (about 41 billion active) trained on 45 trillion tokens of text, image, audio and video. It ships under the Apache 2.0 licence with open weights, with the startup monetising via its Tinker fine-tuning platform rather than the model itself.", source:"TechCrunch", url:"https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/", date:"Jul 15", spectrum:null, bias:null },
+    { headline:"Apple Intelligence cleared for China launch via Alibaba's Qwen model", summary:"Apple secured Chinese regulatory approval to bring Apple Intelligence to the mainland by integrating Alibaba's Qwen model across iOS, iPadOS, macOS and visionOS, clearing a long-standing block on its generative-AI features. The deal, confirmed by Alibaba, follows talks that also involved Baidu.", source:"TechCrunch", url:"https://techcrunch.com/2026/07/16/apple-intelligence-approved-for-launch-in-china-with-alibabas-qwen-ai/", date:"Jul 16", spectrum:null, bias:null },
+    { headline:"Toyota-backed Walden Robotics exits stealth at a $1.1 billion valuation", summary:"Walden Robotics, a humanoid-robot startup spun out of a Toyota research lab, emerged from stealth with roughly $300 million in seed funding at a $1.1 billion valuation, co-led by Deviation Capital and Toyota with backing from Nvidia, Boeing and Samsung Ventures. The Cambridge, Massachusetts firm is already piloting a robot on eight-hour shifts at a North American Toyota factory.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-07-15/toyota-backed-robotics-startup-walden-launches-with-1-1-billion-valuation", date:"Jul 15", spectrum:null, bias:null },
+    { headline:"Google's AI Mode can now link to and act inside third-party apps", summary:"Google began rolling out 'Connected Apps' in AI Mode for US users on 16 July, letting people link outside services and act within search — adding ingredients to an Instacart cart, generating Canva templates, or building a YouTube Music playlist. Google said more partner apps will follow.", source:"TechCrunch", url:"https://techcrunch.com/2026/07/16/googles-ai-mode-now-lets-you-link-and-interact-with-select-apps/", date:"Jul 16", spectrum:null, bias:null },
+    { headline:"Roblox launches an AI 'Build' feature to make games from text prompts", summary:"Roblox added a mobile feature called Build that turns plain-text prompts into playable games with no coding. A public alpha begins 28 July, initially limited to users aged nine and up in New Zealand.", source:"TechCrunch", url:"https://techcrunch.com/2026/07/16/roblox-launches-an-ai-powered-game-creation-feature-in-its-mobile-app/", date:"Jul 16", spectrum:null, bias:null },
+  ]},
+  { id:"biz", title:"📈 Business & Markets", color:"#8e44ad", items:[
+    { headline:"Netflix falls 8% despite Q2 revenue rising 13% to $12.56 billion", summary:"Netflix reported second-quarter revenue of $12.56 billion, up 13% year over year, and earnings of 80 cents a share, narrowly beating profit estimates while slightly missing on revenue. Shares fell more than 8% after hours as investors focused on a narrowed full-year revenue outlook of $51.0-$51.4 billion.", source:"CNBC", url:"https://www.cnbc.com/2026/07/16/netflix-nflx-earnings-q2-2026.html", date:"Jul 16", spectrum:null, bias:null },
+    { headline:"Bank of America profit jumps 27% as trading and dealmaking rebound", summary:"Bank of America posted second-quarter net income of $9.1 billion, up 27%, on revenue up 15% to $31.6 billion, beating estimates. Equities-trading revenue surged about 70% to $3.6 billion, extending Wall Street's trading boom into a 17th straight quarter of year-over-year growth.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-07-14/bofa-earnings-profit-soars-as-stock-traders-dealmakers-see-resurgence", date:"Jul 14", spectrum:null, bias:null },
+    { headline:"GE Aerospace lifts its full-year profit outlook as engine demand stays strong", summary:"GE Aerospace raised its full-year adjusted earnings guidance to $7.65-$7.85 a share after second-quarter adjusted revenue rose 24% to $12.6 billion and adjusted EPS climbed 22% to $2.02. The company cited strong commercial-services growth and a 31% jump in engine deliveries.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-07-16/ge-aerospace-boosts-profit-outlook-with-aviation-holding-strong", date:"Jul 16", spectrum:null, bias:null },
+    { headline:"UnitedHealth raises its 2026 profit outlook as Q2 revenue hits $112 billion", summary:"UnitedHealth reported second-quarter revenue of $112.0 billion and adjusted earnings of $6.38 a share, and lifted full-year adjusted guidance to $19.50-$20.00. Management credited improved margins after exiting unprofitable contracts and a $1.5 billion investment in AI.", source:"CNBC", url:"https://www.cnbc.com/2026/07/16/unitedhealth-group-unh-earnings-q2-2026.html", date:"Jul 16", spectrum:null, bias:null },
+    { headline:"Wall Street slips as a chip selloff overshadows strong earnings", summary:"The S&amp;P 500 fell 0.51% to 7,533.77 and the Nasdaq dropped 1.47% to 25,881.95 as chip stocks slid, with the VanEck Semiconductor ETF down nearly 4% after TSMC's raised capital-spending forecast unsettled investors. Arm Holdings fell more than 5%.", source:"CNBC", url:"https://www.cnbc.com/2026/07/15/stock-market-today-live-updates.html", date:"Jul 16", spectrum:null, bias:null },
+  ]},
+  { id:"sports", title:"🎾🏏🏎️ Sports", color:"#c0392b", items:[
+    { headline:"🏏 England level the ODI series as Root falls one short of a hundred in Cardiff", summary:"Joe Root anchored England's chase with an unbeaten 99 off 133 balls to steer them past India's 233 for a four-wicket win in the second ODI at Cardiff, levelling the three-match series 1-1. Root was named Player of the Match; the decider is at Lord's on Sunday, 19 July.", source:"ESPNcricinfo", url:"https://www.espncricinfo.com/series/india-in-england-2026-1496488/england-vs-india-2nd-odi-1496580/full-scorecard", date:"Jul 16", spectrum:null, bias:null },
+    { headline:"🏎️ F1 heads to Spa as the Belgian Grand Prix weekend gets under way", summary:"The 2026 Belgian Grand Prix runs 17-19 July at Spa-Francorchamps, with the 44-lap race on Sunday. Championship leader Kimi Antonelli arrives 25 points clear of George Russell after Charles Leclerc's British Grand Prix win, with rain forecast across the weekend.", source:"Formula1.com", url:"https://www.formula1.com/en/latest/article/what-time-is-the-formula-1-2026-belgian-grand-prix-and-how-can-i-watch-it.2tkW6m4Z9v4nsrUhAwcwWj", date:"Jul 16", spectrum:null, bias:null },
+    { headline:"🏎️ Verstappen stonewalls future questions at Spa: 'There's nothing to say'", summary:"In the Spa press conference, Max Verstappen again refused to address McLaren speculation or commit to Red Bull for 2027, saying 'there's nothing to say from my side' while calling the team 'like a second family.' He arrives seventh in the standings on 76 points.", source:"Sky Sports F1", url:"https://www.skysports.com/f1/video/33726/13564031/belgian-gp-max-verstappen-quizzed-on-red-bull-future", date:"Jul 16", spectrum:null, bias:null },
+    { headline:"🎾 Sakkari delights the home crowd, routing Dart to reach the Athens quarters", summary:"Maria Sakkari dropped just three games in a 6-1, 6-2 win over Britain's Harriet Dart to reach the quarterfinals of the Athens Open on home soil. She next faces Alycia Parks.", source:"WTA", url:"https://www.wtatennis.com/videos/4536522/on-home-soil-sakkari-drops-three-games-vs-dart-to-make-athens-quarters", date:"Jul 16", spectrum:null, bias:null },
+    { headline:"🎾 Zheng Qinwen reaches her first quarterfinal in 13 months at Athens", summary:"Olympic champion Zheng Qinwen beat qualifier Elena Micic 6-4, 6-1 in Athens to reach her first WTA quarterfinal since June 2025, continuing her return from injury.", source:"WTA", url:"https://www.wtatennis.com/videos/4536442/zheng-defeats-micic-in-athens-into-first-quarterfinal-in-13-months", date:"Jul 16", spectrum:null, bias:null },
+  ]},
+  { id:"misc", title:"🔬 Other Miscellaneous News", color:"#1abc9c", items:[
+    { headline:"A Maya wall formula reveals the first named ancient mathematician, Sak Tahn Waax", summary:"Researchers deciphering faint 'microtexts' on a wall at Xultun in Guatemala found a set of astronomical calculations signed 'so says Sak Tahn Waax' ('White-chested Fox'), dated to 781 CE. Published in Antiquity, it is the only known Classic-period Maya mathematician-astronomer identified by name and claiming credit for their work.", source:"Nature", url:"https://www.nature.com/articles/d41586-026-02170-8", date:"Jul 14", spectrum:null, bias:null },
+    { headline:"Mathematicians close in on the hidden order inside chaos", summary:"A new result in Ramsey theory — the study of how much disorder a system can hold before order must emerge — comes astonishingly close to an upper bound that has stood largely unchanged since the 1930s. Emeritus NYU mathematician Joel Spencer, a frequent Erdős collaborator, called it 'a tremendous breakthrough.'", source:"Scientific American", url:"https://www.scientificamerican.com/article/mathematicians-are-closing-in-on-the-hidden-order-inside-chaos/", date:"Jul 15", spectrum:null, bias:null },
+    { headline:"A 'remarkable' new monkey species with orange lips and a froglike roar is described in Congo", summary:"Scientists formally described Colobus congoensis, locally known as Likweli, from Congo's Lomami National Park — a monkey with a distinctive orange mouth-patch and a deep, croaky roar, confirmed as a new species by genetic analysis published in PLOS One. It is only the fifth new African monkey species named in 75 years, and researchers already propose an Endangered listing.", source:"Scientific American", url:"https://www.scientificamerican.com/video/scientists-discover-a-remarkable-new-monkey-species-with-orange-lips-and-a-froglike-roar/", date:"Jul 15", spectrum:null, bias:null },
+    { headline:"Stem cells are coaxed into early human sperm inside a lab-grown mini-testis", summary:"Researchers turned human induced pluripotent stem cells into primordial germ-cell-like cells that self-organised with mouse fetal testis tissue into seminiferous-tubule-like structures, producing spermatogonia six months after transplant. The cells stalled before maturity, but the system, reported via Nature, offers a new window on male infertility.", source:"Nature", url:"https://www.nature.com/articles/d41586-026-02172-6", date:"Jul 10", spectrum:null, bias:null },
+    { headline:"TESS finds a planet 40,000 light-years away using an Einstein prediction", summary:"Astronomers found a super-Jupiter, Gaia23bra b, hidden in archived data from NASA's TESS telescope — a world roughly 40,000 light-years away, over 250 times TESS's usual search radius. It was spotted through gravitational microlensing, the light-bending effect Einstein predicted, after a 2023 Gaia flash pointed to the same patch of sky.", source:"Scientific American", url:"https://www.scientificamerican.com/article/nasas-exoplanet-mission-accidentally-discovers-a-world-it-was-never-meant-to-find/", date:"Jul 15", spectrum:null, bias:null },
+  ]},
+  { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
+  { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
+  { id:"wpuzzle", title:"🔤 Word Puzzles", color:"#16a085", custom:"wpuzzle" },
+];
+
+const FUN_FACT = {
+  text: "Carrots were not always orange. For centuries the cultivated carrot was mostly purple, white, and yellow, tracing back to Persia around a thousand years ago. The familiar orange root rose to dominance only in the 16th and 17th centuries, when Dutch growers crossbred yellow and other strains into a sweeter, hardier variety that gradually crowded the older colours off the world&rsquo;s dinner plates.",
+  tag: "Category · Food &amp; History"
+};
+
+const PUZZLE = {
+  type: "Quantitative",
+  title: "Bridge in the Dark",
+  how: "The instinct is to shuttle the fastest walker back every time. Before assuming that&rsquo;s optimal, check whether sending the two slowest across together ever saves time.",
+  question: "Four travellers must cross a rickety bridge at night. They share one torch, and the bridge holds at most two people at a time. Whoever crosses must carry the torch, so it has to be walked back for the others.\nThey cross at different speeds — 1, 2, 5, and 10 minutes. A pair moves at the slower person&rsquo;s pace.\nWhat is the least total time in which all four can reach the far side?",
+  answer: "17 minutes.\nThe key is to make the two slowest cross together, and to use the two fastest as torch-bearers.\n1) The 1 and 2 cross together — 2 min.\n2) The 1 returns with the torch — 1 min.\n3) The 5 and 10 cross together — 10 min.\n4) The 2 returns with the torch — 2 min.\n5) The 1 and 2 cross together — 2 min.\nTotal: 2 + 1 + 10 + 2 + 2 = 17 minutes.\nSending the 10 back even once already costs at least 20 minutes, so pairing the two slowest is what makes 17 optimal."
+};
+
+const WORD_PUZZLE = {
+  type: "Connections",
+  title: "The Missing Half",
+  how: "Each of the sixteen words is only half of a compound. Pair every word with the SAME hidden second word to build four groups of four — and watch the overlaps, because some words could take more than one ending.",
+  question: "Sort these 16 words into 4 groups of 4. In each group, every word can be followed by the same hidden word to make a longer word.\n\nBUTTER · DRAGON · HORSE · MAY\nSUN · WALL · CORN · WILD\nFIRE · LIGHT · GREEN · WARE\nWATER · RAIN · WIND · FREE\n\n(The four hidden endings are common everyday words.)",
+  answer: "The four hidden endings are FLY, FLOWER, HOUSE, and FALL.\n\n…FLY: BUTTER, DRAGON, HORSE, MAY (butterfly, dragonfly, horsefly, mayfly)\n…FLOWER: SUN, WALL, CORN, WILD (sunflower, wallflower, cornflower, wildflower)\n…HOUSE: FIRE, LIGHT, GREEN, WARE (firehouse, lighthouse, greenhouse, warehouse)\n…FALL: WATER, RAIN, WIND, FREE (waterfall, rainfall, windfall, freefall)\n\nThe traps: MAY fits both -fly and -flower; FIRE and GREEN could tempt -fly (firefly, greenfly); FREE could pass for -house (a freehouse). Fixing MAY in FLY and WILD in FLOWER resolves the overlap."
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function renderWordPuzzle(){
+  let h='<div class="sec-title">🔤 Word Puzzle of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#16a085,transparent)"></div>';
+  h+='<div class="wpuzzle-box"><span class="wptype">'+WORD_PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+WORD_PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+WORD_PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+WORD_PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this,\'wpans\')">Show Answer</button>';
+  h+='<div class="answer" id="wpans"><span class="alabel">Answer</span>'+WORD_PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn,ansId){var a=document.getElementById(ansId||'ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else if(sec.custom==="wpuzzle"){div.innerHTML=renderWordPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>

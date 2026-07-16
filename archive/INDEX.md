@@ -1186,3 +1186,42 @@ is empty until the first run.
 2026-07-16	An asteroid is unmasked as a 'dark comet' after its mysterious orbital drift	8dffdc07	dark comet, asteroid, nasa jpl, farnocchia, coma
 2026-07-16	Astronomers detect the first genuine sugar molecule floating in interstellar space	3090f5d0	erythrulose, sugar, interstellar, molecular cloud, rna
 2026-07-16	Four deep-sea technologies race to detect deadly earthquakes and tsunamis	23d5db2c	deep sea, earthquakes, tsunamis, seafloor, sensors
+
+2026-07-17	RTS Link could shift over S$1 billion of Singapore spending to Johor Bahru	62bd8c52	rts link,singapore,johor bahru,retail,spending
+2026-07-17	Lawyer-politician Lim Tean ordered to surrender on 20 July to begin jail term	d0e24be5	lim tean,court of appeal,jail,practising certificate
+2026-07-17	Over-height lorry driver jailed 13 months for S$1.45 million CTE tunnel damage	48152832	lai daohong,cte tunnel,cairnhill,jailed,damage
+2026-07-17	Man, 23, jailed four months over 181km/h CTE midnight joyride crash	63bf05e4	lee jun en gilviz,cte,joyride,dangerous driving,jailed
+2026-07-17	Skyroot to attempt India's first private orbital launch, Vikram-1, on 18 July	49989442	skyroot,vikram-1,sriharikota,orbital rocket,launch
+2026-07-17	Re-NEET-UG 2026 results declared; two candidates share the top rank at 715	f64e0fee	neet-ug,nta,aryan gupta,panshul bansal,results
+2026-07-17	Supreme Court says a third language should begin in Class 6, not Class 9	e3a94e2e	supreme court,cbse,three-language policy,class 6
+2026-07-17	ED raids 13 locations in a Rohingya-Bangladeshi infiltration and terror-funding probe	2dec31c1	enforcement directorate,rohingya,bangladeshi,terror funding,raids
+2026-07-17	Prashant Kishor's Jan Suraaj loses leaders to the BJP before the Bankipur bypoll	16f58e88	prashant kishor,jan suraaj,bjp,bankipur,bypoll
+2026-07-17	Burnham set to name Shabana Mahmood as chancellor, passing over Miliband	4c51cb1e	andy burnham,shabana mahmood,chancellor,cabinet
+2026-07-17	IMF warns Burnham against raising the top income-tax rate as it nudges up growth	f2915ba3	imf,andy burnham,income tax,article iv,warning
+2026-07-17	UK economy grew 0.1% in May as services offset falls in industry	42ca738d	uk,gdp,ons,may,services
+2026-07-17	UK proposes an overnight social-media curfew for 16- and 17-year-olds	9a409794	uk,social media,curfew,teenagers,instagram
+2026-07-17	Update: US launches a sixth night of strikes on Iran and disables a tanker as Tehran hits the Gulf	ba5514c5	us,iran,hormuz,centcom,strikes
+2026-07-17	French parliament approves a landmark assisted-dying bill	dd0b73b8	france,parliament,assisted dying,macron,bill
+2026-07-17	Hundreds protest in Kyiv over Zelenskyy's dismissal of his defence minister	ea070d6d	kyiv,zelenskyy,defence minister,protest,ukraine
+2026-07-17	US to impose 25% tariffs on a range of Brazilian imports under Section 301	085fabaf	us,brazil,section 301,tariffs,trump
+2026-07-17	Update: DR Congo's Ebola outbreak passes 2,000 cases as health workers strike	2f2f817e	dr congo,ebola,who,health workers,outbreak
+2026-07-17	Mira Murati's Thinking Machines releases its first open model, Inkling	e6928117	thinking machines,mira murati,inkling,open model,release
+2026-07-17	Apple Intelligence cleared for China launch via Alibaba's Qwen model	4432a1bc	apple,apple intelligence,alibaba,qwen,china
+2026-07-17	Toyota-backed Walden Robotics exits stealth at a $1.1 billion valuation	881f7380	walden robotics,toyota,humanoid,valuation,stealth
+2026-07-17	Google's AI Mode can now link to and act inside third-party apps	e8b781ca	google,ai mode,instacart,canva,apps
+2026-07-17	Roblox launches an AI 'Build' feature to make games from text prompts	f447a873	roblox,build,ai,games,prompts
+2026-07-17	Netflix falls 8% despite Q2 revenue rising 13% to $12.56 billion	4d2506ce	netflix,q2,revenue,earnings,stock
+2026-07-17	Bank of America profit jumps 27% as trading and dealmaking rebound	8b6aaa44	bank of america,q2,profit,trading,earnings
+2026-07-17	GE Aerospace lifts its full-year profit outlook as engine demand stays strong	e7ab879f	ge aerospace,guidance,engines,earnings,q2
+2026-07-17	UnitedHealth raises its 2026 profit outlook as Q2 revenue hits $112 billion	d4a0fcb6	unitedhealth,q2,revenue,guidance,earnings
+2026-07-17	Wall Street slips as a chip selloff overshadows strong earnings	94a49faf	s&p 500,nasdaq,chips,tsmc,selloff
+2026-07-17	England level the ODI series as Root falls one short of a hundred in Cardiff	594d9415	india,england,2nd odi,cardiff,root
+2026-07-17	F1 heads to Spa as the Belgian Grand Prix weekend gets under way	6c650800	belgian grand prix,spa,antonelli,f1,weekend
+2026-07-17	Verstappen stonewalls future questions at Spa: There's nothing to say	6b726c54	max verstappen,spa,red bull,mclaren,future
+2026-07-17	Sakkari delights the home crowd, routing Dart to reach the Athens quarters	20c1ec21	maria sakkari,harriet dart,athens open,quarterfinals
+2026-07-17	Zheng Qinwen reaches her first quarterfinal in 13 months at Athens	82887eb4	zheng qinwen,elena micic,athens open,quarterfinal
+2026-07-17	A Maya wall formula reveals the first named ancient mathematician, Sak Tahn Waax	d955ad57	sak tahn waax,xultun,maya,mathematician,antiquity
+2026-07-17	Mathematicians close in on the hidden order inside chaos	99ec6ebf	ramsey theory,joel spencer,mathematics,chaos,breakthrough
+2026-07-17	A remarkable new monkey species with orange lips and a froglike roar is described in Congo	9ab658de	colobus congoensis,likweli,lomami,monkey,species
+2026-07-17	Stem cells are coaxed into early human sperm inside a lab-grown mini-testis	7ffa2edc	stem cells,mini-testis,spermatogonia,fertility,sperm
+2026-07-17	TESS finds a planet 40,000 light-years away using an Einstein prediction	8977fe49	tess,gaia23bra b,microlensing,einstein,exoplanet
