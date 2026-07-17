@@ -209,14 +209,14 @@
       "date": "2026-07-17",
       "topic_key": "carrot",
       "text": "Carrots were originally purple, white, and yellow; the orange carrot was bred to prominence by Dutch growers in the 16th-17th centuries."
+    },
+    {
+      "date": "2026-07-18",
+      "topic_key": "nintendo",
+      "text": "Nintendo was founded in 1889 as a hanafuda playing-card company and only became a games company decades later."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-06-17",
-      "type": "logic",
-      "title_key": "bulb-and-three-switches"
-    },
     {
       "date": "2026-06-18",
       "type": "quantitative",
@@ -361,6 +361,11 @@
       "date": "2026-07-17",
       "type": "quantitative",
       "title_key": "bridge-in-the-dark"
+    },
+    {
+      "date": "2026-07-18",
+      "type": "lateral",
+      "title_key": "bankrupt-at-the-hotel"
     }
   ],
   "word_puzzle_log": [
@@ -488,6 +493,11 @@
       "date": "2026-07-17",
       "type": "grouping",
       "title_key": "missing-half"
+    },
+    {
+      "date": "2026-07-18",
+      "type": "ladder",
+      "title_key": "daily-bread"
     }
   ]
 }

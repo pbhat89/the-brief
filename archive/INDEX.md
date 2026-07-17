@@ -1225,3 +1225,37 @@ is empty until the first run.
 2026-07-17	A remarkable new monkey species with orange lips and a froglike roar is described in Congo	9ab658de	colobus congoensis,likweli,lomami,monkey,species
 2026-07-17	Stem cells are coaxed into early human sperm inside a lab-grown mini-testis	7ffa2edc	stem cells,mini-testis,spermatogonia,fertility,sperm
 2026-07-17	TESS finds a planet 40,000 light-years away using an Einstein prediction	8977fe49	tess,gaia23bra b,microlensing,einstein,exoplanet
+
+2026-07-18	Gasoline-like smell blankets parts of central Singapore overnight; NEA says air quality normal	29042030	nea,central singapore,gas smell,air quality
+2026-07-18	Man, 22, jailed more than nine years with caning for raping two 13-year-old girls	dbdf0035	singapore court,rape,jail,caning
+2026-07-18	Teen and four men arrested over Singpass accounts funnelled to an overseas scam syndicate	bea4e3f4	singpass,scam syndicate,singapore police,arrests
+2026-07-18	Two Malaysian men brought to Singapore over government-impersonation scams tied to 50-plus cases	6d66d025	malaysian men,government impersonation scam,singapore police
+2026-07-18	Drink-driver who fled nearly 10km after a crash jailed and banned for five years	43691e7b	xie junliang,drink driving,singapore,jail
+2026-07-18	SBI Funds Management's roughly $1 billion IPO, India's biggest of 2026, is subscribed 41.66 times	85c9c6e6	sbi funds management,ipo,india,subscription
+2026-07-18	Modi's cabinet clears a 1.9 trillion-rupee push to cut India's reliance on imports	6afd88de	modi,cabinet,import substitution,chips
+2026-07-18	India's inflation climbs above the RBI's 4% target for the first time in nearly 18 months	73243ce7	rbi,sanjay malhotra,india inflation,rupee
+2026-07-18	Burnham confirmed as Labour leader, to become UK prime minister on Monday	6d48940a	andy burnham,labour,uk prime minister,starmer
+2026-07-18	Burnham inherits a decade of political turmoil, with the economy, NHS and Reform UK all pressing	d68fc656	andy burnham,uk,economy,reform uk
+2026-07-18	Update: US launches a seventh straight night of strikes on Iran, hitting bridges near Bandar Abbas	96ff1b88	united states,iran,strikes,bandar abbas,kuwait
+2026-07-18	Update: Russian drones strike Mykolaiv port, killing two aboard a foreign ship, as Ukraine hits Black Sea vessels	a50e1a76	russia,ukraine,mykolaiv,black sea
+2026-07-18	Update: Israeli strikes kill at least 14 across Gaza, including a drone strike on a funeral procession	7f74e60e	israel,gaza,air strikes,funeral
+2026-07-18	FIFA opens an investigation into Argentina's 'Malvinas' banner at the World Cup semi-final	a1b56f31	fifa,argentina,malvinas banner,world cup
+2026-07-18	Israel and Lebanon agree a framework to pull back from two southern 'pilot zones' at a sixth Rome round	4c86579f	israel,lebanon,rome talks,pilot zones,katz
+2026-07-18	China's Moonshot unveils Kimi K3, the world's largest open-weight AI model, triggering a chip selloff	8f6b69f1	moonshot,kimi k3,open-weight model,chip selloff
+2026-07-18	Google's flagship Gemini 3.5 Pro is running months behind schedule	23c65ac1	google,gemini 35 pro,delay,ai model
+2026-07-18	Anthropic lines up investor meetings for a potential October IPO	ded6b080	anthropic,ipo,october,valuation
+2026-07-18	Identity startup Oak exits stealth with $60 million to secure AI agents	c5696852	oak,stealth,funding,ai agents
+2026-07-18	Voice-AI startup Rime raises $24 million to field enterprise phone calls	805b9331	rime,voice ai,series a,enterprise calls
+2026-07-18	TSMC posts a record Q2 profit, up 77%, and adds $100 billion to its Arizona plan	4d509319	tsmc,q2 profit,arizona,chips
+2026-07-18	Brent crude jumps 4.6% to $88 after Kuwait reports an Iranian attack on a power and water plant	1f90403e	brent crude,oil price,kuwait,iran
+2026-07-18	Travelers jumps 8% as Q2 profit climbs 46% on lower catastrophe losses	59e87410	travelers,q2 profit,insurance,catastrophe losses
+2026-07-18	US retail sales cool to 0.2% in June as weekly jobless claims fall to 208,000	86cf4353	us retail sales,jobless claims,consumer,june
+2026-07-18	World Cup final set: Spain to face Argentina at MetLife on Sunday after Argentina end England	af6b596c	world cup,spain,argentina,england,messi
+2026-07-18	Antonelli tops second practice at Spa as Gasly crashes heavily	b42fd40c	belgian grand prix,spa,antonelli,gasly
+2026-07-18	What Friday practice at Spa revealed ahead of qualifying	cc62f4ae	belgian grand prix,spa,friday practice,f1
+2026-07-18	Cerundolo stuns Ruud to reach the Gstaad semi-finals	2b259ed6	cerundolo,ruud,gstaad,tennis
+2026-07-18	Rublev battles back to reach the Bastad quarter-finals	c438738c	rublev,bastad,quarter-finals,tennis
+2026-07-18	Webb finds a lava world's atmosphere is surprisingly rich in volcanic hydrogen	c6c0ddcd	james webb,55 cancri e,exoplanet,hydrogen
+2026-07-18	An AI screen flags more than 250,000 cancer papers as likely 'paper-mill' fakes	892adbe0	cancer research,paper mills,ai screening,bmj
+2026-07-18	NASA astronaut Anil Menon and two cosmonauts reach the ISS, raising the crew to 10	2e187353	nasa,anil menon,iss,soyuz
+2026-07-18	Serbia becomes the 69th nation to sign the Artemis Accords	45cf76a7	serbia,artemis accords,nasa,space
