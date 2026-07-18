@@ -214,14 +214,14 @@
       "date": "2026-07-18",
       "topic_key": "nintendo",
       "text": "Nintendo was founded in 1889 as a hanafuda playing-card company and only became a games company decades later."
+    },
+    {
+      "date": "2026-07-19",
+      "topic_key": "astronaut",
+      "text": "Astronauts grow taller in space"
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-06-18",
-      "type": "quantitative",
-      "title_key": "two-egg-drop"
-    },
     {
       "date": "2026-06-19",
       "type": "lateral",
@@ -366,6 +366,11 @@
       "date": "2026-07-18",
       "type": "lateral",
       "title_key": "bankrupt-at-the-hotel"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "visual",
+      "title_key": "painted-cube"
     }
   ],
   "word_puzzle_log": [
@@ -498,6 +503,11 @@
       "date": "2026-07-18",
       "type": "ladder",
       "title_key": "daily-bread"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "letterboxed",
+      "title_key": "cornered"
     }
   ]
 }

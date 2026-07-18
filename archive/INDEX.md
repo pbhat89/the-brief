@@ -1259,3 +1259,37 @@ is empty until the first run.
 2026-07-18	An AI screen flags more than 250,000 cancer papers as likely 'paper-mill' fakes	892adbe0	cancer research,paper mills,ai screening,bmj
 2026-07-18	NASA astronaut Anil Menon and two cosmonauts reach the ISS, raising the crew to 10	2e187353	nasa,anil menon,iss,soyuz
 2026-07-18	Serbia becomes the 69th nation to sign the Artemis Accords	45cf76a7	serbia,artemis accords,nasa,space
+2026-07-19	Auditor-General flags 136 lapses, including S$148m in MOH savings left undeclared	bafb9678	auditor-general,moh,marina bay sands,resorts world sentosa
+2026-07-19	Coroner rules two Singapore teenagers died after making and inhaling their own meth	242cb7ba	adam nakhoda,methamphetamine,coroner,singapore
+2026-07-19	British man convicted after assaulting a private-hire driver who died a year later	6d9d27e5	oruche morgan fidelis,private-hire driver,sunset way,conviction
+2026-07-19	Singaporean man, 25, to be charged with murder over his girlfriend's death in Bali	399e04d6	singaporean man,bali,murder charge,denpasar
+2026-07-19	Police forcibly hospitalise activist Sonam Wangchuk after a 20-day hunger strike	f466ca17	sonam wangchuk,safdarjung hospital,hunger strike,dharmendra pradhan
+2026-07-19	India moves against youth protesters in Delhi ahead of the monsoon parliament session	31aa6e61	india,youth protesters,monsoon session,modi
+2026-07-19	HDFC Bank's June-quarter profit misses estimates as margins shrink	21dd392a	hdfc bank,q1 results,net interest margin,nifty
+2026-07-19	Reliance beats profit estimates as strong refining offsets an Iran-war drag	e63a090e	reliance industries,q1 earnings,refining margins,ambani
+2026-07-19	UK takes British Steel into full public ownership, ending Jingye's control	36a93d3b	british steel,jingye,nationalisation,steelmaking
+2026-07-19	Record 34 candidates to contest the Clacton by-election as Farage seeks a return	04a32f1a	nigel farage,clacton,by-election,reform uk
+2026-07-19	Burnham's path to No 10 is dogged by a policy vacuum and a Labour-left rebellion	e63d52ce	andy burnham,labour,downing street,labour left
+2026-07-19	More than 2,700 UK deaths are linked to the May and June heatwaves	5b1ea6a6	uk heatwave,excess deaths,england,met office
+2026-07-19	Update: Two US troops killed and one missing in an Iranian strike on a Jordan base	6ccdb625	centcom,jordan,iran,us troops
+2026-07-19	Update: Iran declares its US memorandum dead as strikes hit critical infrastructure	30fcbf7a	iran,mojtaba khamenei,trump,memorandum
+2026-07-19	Update: Ukrainian drones kill eight at Russian warehouses in the deadliest such strike in two years	61426362	ukraine,russia,wildberries,drone strike
+2026-07-19	Magnitude 7.3 quake strikes off Mexico's Chiapas coast; tsunami alert later lifted	861202b4	chiapas,mexico,earthquake,tsunami
+2026-07-19	Databricks raises at a $188 billion valuation in a Coatue-led round	20cbafbd	databricks,coatue,funding round,valuation
+2026-07-19	Microsoft preps Project Perception, a multi-model rival to Anthropic's security AI	4d0390f2	microsoft,project perception,anthropic,ai security
+2026-07-19	A $400 million loan uses AI inference chips as collateral in a first for the sector	518b0911	general compute,upper90,inference chips,loan
+2026-07-19	AI travel agency Fora reaches unicorn status with a $60 million Series D	cd71a160	fora,forerunner,travel agency,unicorn
+2026-07-19	Ex-DeepMind researcher raises $55 million at a $300 million valuation before any launch	b0742707	andrew dai,deepmind,nvidia,seed round
+2026-07-19	Apple overtakes Nvidia as the world's most valuable company amid an AI rotation	b07821b9	apple,nvidia,market cap,ai rotation
+2026-07-19	Gold heads for its biggest weekly loss in about six months as war revives inflation bets	5020d56b	gold,inflation,oil,interest rates
+2026-07-19	Abbott beats estimates and raises its 2026 profit forecast, shares jump 11%	4d19c3d8	abbott,q2 earnings,guidance,medical devices
+2026-07-19	ManpowerGroup surges 33% on an upbeat third-quarter revenue outlook	55d8efa3	manpowergroup,staffing,revenue outlook,guidance
+2026-07-19	Antonelli beats Verstappen to pole for the Belgian Grand Prix at Spa	f89c1f88	antonelli,verstappen,belgian grand prix,spa
+2026-07-19	Antonelli's title lead shrinks to 25 points over Russell heading into Spa	5cb31639	antonelli,russell,hamilton,title race
+2026-07-19	India and England meet at Lord's in a series-deciding third ODI	6a1e45f9	india,england,lord's,rohit sharma
+2026-07-19	Tsitsipas reaches his first final in 16 months at Gstaad	5d15e26e	tsitsipas,collignon,gstaad,final
+2026-07-19	Rublev sets up a Bastad final against defending champion Darderi	390e7518	rublev,darderi,bastad,final
+2026-07-19	Hubble and Webb find the first of Omega Centauri's thousands of hidden black holes	9b5ea562	omega centauri,hubble,webb,black hole
+2026-07-19	NASA's Psyche returns its first Mars flyby images and a time-lapse of the encounter	095f83ba	psyche,mars,huygens crater,jpl
+2026-07-19	A semaglutide trial reports the first human evidence a GLP-1 drug slows biological aging	cbd11c66	semaglutide,epigenetic aging,glp-1,dunedinpace
+2026-07-19	New spectra suggest Earth's quasi-moon Kamo'oalewa may not be lunar debris	4da48ba9	kamooalewa,tianwen-2,flora family,quasi-moon
