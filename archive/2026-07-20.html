@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Mon, 20 July 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .wpuzzle-box{background:linear-gradient(135deg,#0e1a1a,#0d1620);border:1px solid #234a44;border-left:3px solid #16a085;padding:24px 28px;border-radius:2px}
+  .wptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#16a085;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .wpuzzle-box .puzzle-title{color:#cdeae3}
+  .wpuzzle-box .puzzle-how{color:#8fb8ac;background:#08140f;border-left-color:#1a6a5a}
+  .wpuzzle-box .puzzle-q{color:#dfeae6;font-family:'Source Sans 3',sans-serif}
+  .wpuzzle-box .answer{color:#bfe0d6}
+  .wpuzzle-box .answer .alabel{color:#16a085}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Monday, 20 July 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Monday, 20 July 2026 · 🔍 42 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eleven entries in this exact order:
+     id    : one of "sg" | "india" | "uk" | "geo" | "tech" | "biz" | "sports" | "misc" | "fun" | "puzzle" | "wpuzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 8 news tabs; fun/puzzle/wpuzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+
+   WORD_PUZZLE shape (separate, daily word game — NYT-style, static reveal):
+     type     : one of "Connections" | "Word Ladder" | "Anagram" | "Spelling Bee" | "Letter Boxed" | "Mini Crossword"
+     title    : short evocative name for the word puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle body; supports \n for line breaks (grids render as pre-formatted text)
+     answer   : the answer; supports \n for line breaks; appears inside its own toggle (id "wpans")
+============================================================================= */
+
+const SECTIONS = [
+  {
+    "id": "sg",
+    "title": "🇸🇬 Singapore",
+    "color": "#e74c3c",
+    "items": [
+      {
+        "headline": "Filipina domestic helper jailed 3 years 2 months for stealing over S$217,000 from her employer",
+        "summary": "Raguindin Alma Bassig, 47, was sentenced on July 17 after pleading guilty to two counts of theft as a servant, having looted her employer’s safe of cash and jewellery — including Van Cleef & Arpels and Bulgari pieces — over four years to buy condominiums, cars and land in the Philippines. District Judge Koo Zhi Xuan called the sum staggering; none of the S$217,000 has been recovered.",
+        "source": "Mothership",
+        "url": "https://mothership.sg/2026/07/domestic-helper-steal-buy-condo-car-philippines/",
+        "date": "Jul 17",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Two former Certis officers jailed a week each for tipping off a colleague in a CPIB vaping probe",
+        "summary": "Tan Wee Keong, 38, and Reggie Choo Beng Kwang, 33, were each sentenced on July 17 for obstructing justice by disclosing a Corrupt Practices Investigation Bureau probe and advising the disposal of implicated items. They were the last of a group of former Certis officers convicted over misappropriated vapes and contraband cigarettes at the Health Sciences Authority’s enforcement unit.",
+        "source": "Mothership",
+        "url": "https://mothership.sg/2026/07/certis-officers-tip-off-vape-jail/",
+        "date": "Jul 17",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "High Court orders Bloomberg to pay two ministers S$460,000 over a defamatory bungalow report",
+        "summary": "Justice Audrey Lim ruled that a December 2024 Bloomberg article on Good Class Bungalow deals defamed ministers K. Shanmugam and Tan See Leng with malice, ordering Bloomberg and reporter Low De Wei to pay S$230,000 to each minister — S$170,000 in general and S$60,000 in aggravated damages. Bloomberg said it stands by its reporting.",
+        "source": "Mothership",
+        "url": "https://mothership.sg/2026/07/k-shanmugam-tan-see-leng-awarded-230000-each-defamation-suit-bloomberg-low-de-wei/",
+        "date": "Jul 14",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Singapore’s economy grows 5.7% in the second quarter as AI chip demand powers manufacturing",
+        "summary": "Advance estimates from the Ministry of Trade and Industry show GDP rose 5.7% year-on-year in the second quarter, beating a 5.5% Reuters poll but easing from the first quarter’s 6.3%. Manufacturing surged 12.2% on AI-related semiconductor demand, while chemicals contracted on Middle East feedstock disruption; the full-year forecast was held at 2-4%.",
+        "source": "SCMP",
+        "url": "https://www.scmp.com/news/asia/southeast-asia/article/3354711/singapores-economy-grows-back-ai-boom-defying-iran-war-slowdown",
+        "date": "Jul 14",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Man who financed a scam-account syndicate tied to S$51 million in losses jailed four years",
+        "summary": "Ronnie Low, 50, was sentenced on July 14 to four years’ jail and fined S$52,000 after pleading guilty to charges including membership of an organised crime group. The syndicate sold anonymised WhatsApp and WeChat accounts, and seized SIM cards were linked to 2,393 police reports and S$51 million in scam losses.",
+        "source": "Mothership",
+        "url": "https://mothership.sg/2026/07/man-financed-whatsapp-wechat-scam-syndicate/",
+        "date": "Jul 14",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "india",
+    "title": "🇮🇳 India",
+    "color": "#e67e22",
+    "items": [
+      {
+        "headline": "Update: Gen Z ‘Cockroach’ protesters march on Parliament as the monsoon session opens",
+        "summary": "Tens of thousands of young protesters answered Cockroach Janta Party founder Abhijeet Dipke’s call to march on Parliament on July 20, the opening day of the monsoon session, demanding the resignations of Prime Minister Narendra Modi and Education Minister Dharmendra Pradhan over the NEET-UG paper leak. Dipke began his own hunger strike after police forcibly removed activist Sonam Wangchuk to hospital on the 21st day of his fast, amid heavy security across New Delhi.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/features/2026/7/19/why-have-indias-gen-z-protesters-called-for-a-march-to-parliament",
+        "date": "Jul 19",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Consumer court orders Maruti Suzuki to replace a car damaged by E20 ethanol-blended fuel",
+        "summary": "An Indian consumer court ordered Maruti Suzuki to replace a vehicle that a driver said was damaged by E20 petrol — a first-of-its-kind ruling that could embolden motorists challenging the government’s accelerated biofuel rollout. Maruti Suzuki said it would appeal, maintaining the car was E20-compatible, as complaints over reduced mileage and engine wear mount against the policy.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-07-16/india-s-maruti-to-fight-order-to-replace-car-over-ethanol-damage",
+        "date": "Jul 16",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Update: RBI governor flags the US-Iran war and a weak monsoon as key risks to India’s economy",
+        "summary": "Reserve Bank of India Governor Sanjay Malhotra said the intensity and duration of the US-Iran conflict and the prospect of a deficient monsoon pose risks to both inflation and growth, after June consumer inflation rose to 4.38% — above the RBI’s 4% target — and the rupee traded near record lows around 95.78 per dollar. The central bank has held the repo rate at 5.25%.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-07-17/iran-war-monsoons-key-risk-for-india-economy-rbi-governor-says",
+        "date": "Jul 17",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Ayodhya Ram temple donation-theft probe shadows the BJP as the monsoon session opens",
+        "summary": "Police arrested eight officials of the Shri Ram Janmabhoomi Teerth Kshetra Trust and two office-bearers resigned over the alleged embezzlement of temple donations — monthly cash offerings said to range from 40 million to 100 million rupees, plus gold and silver. Opposition leader Akhilesh Yadav has seized on the scandal ahead of Uttar Pradesh state polls due early next year.",
+        "source": "South China Morning Post",
+        "url": "https://www.scmp.com/news/asia/south-asia/article/3358973/indias-ruling-party-risks-being-sucked-uttar-pradesh-temple-donation-probe-row",
+        "date": "Jul 17",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "uk",
+    "title": "🇬🇧 UK News",
+    "color": "#3949ab",
+    "items": [
+      {
+        "headline": "Update: Andy Burnham enters Downing Street as prime minister, pledging ‘honesty and reflection’",
+        "summary": "Andy Burnham travelled to Buckingham Palace on Monday, July 20 to be appointed by King Charles III as the United Kingdom’s seventh prime minister in just over a decade, succeeding Keir Starmer. In his first Downing Street speech he cast his rise as ‘a moment not for triumphalism but for honesty and reflection’ and vowed more stable politics after six prime ministers in 10 years.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-07-19/burnham-vows-unity-after-lightning-ascent-to-uk-premiership",
+        "date": "Jul 20",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Burnham to back new North Sea oil and gas drilling in a break with the Labour left",
+        "summary": "The incoming prime minister is preparing to approve new North Sea oil and gas drilling to shore up domestic energy supply — a striking move for a Labour leader elected with support from the party’s left. The decision is expected among his first-day priorities in Downing Street.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-07-16/burnham-to-back-north-sea-oil-and-take-control-of-thames-water",
+        "date": "Jul 16",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Burnham to take Thames Water into public control as its cash crisis deepens",
+        "summary": "Within days of taking office Burnham is preparing to bring Thames Water — Britain’s biggest water utility, serving about 16 million customers — into public ownership, having said public ownership ‘is absolutely an option.’ The debt-laden company faces temporary nationalisation under the Special Administration Regime if a creditor rescue fails.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-07-16/burnham-to-back-north-sea-oil-and-take-control-of-thames-water",
+        "date": "Jul 16",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Burnham handed a day-one Treasury warning as UK inflation is forecast to rise to 3.2%",
+        "summary": "On his first day in office Burnham receives Treasury forecasts painting a challenging outlook, with internal projections revising fourth-quarter inflation up to 3.2%. Gilt yields near multi-decade highs and a souring growth picture constrain the new prime minister’s room for the borrowing and spending his supporters want.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-07-14/burnham-faces-day-one-warning-of-souring-uk-economy-and-oil-risk",
+        "date": "Jul 14",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "geo",
+    "title": "🌍 Global / Geopolitics",
+    "color": "#2980b9",
+    "items": [
+      {
+        "headline": "Update: Iran strikes US bases in Kuwait and fires missiles at Jordan on the eighth night of the war",
+        "summary": "On the eighth consecutive night of US air strikes, Iran’s army said on July 19 it hit a US ammunition depot at Al-Adiri camp and a Patriot radar at Kuwait’s Ali Al Salem air base, igniting a fire at a Kuwaiti power-and-desalination plant, while Jordan intercepted missiles fired toward Aqaba. US Central Command said its strikes near Sirik and Qeshm Island aimed to degrade Iran’s ability to threaten Strait of Hormuz shipping.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/7/19/kuwaiti-power-plant-ablaze-as-iran-hits-us-gulf-allies",
+        "date": "Jul 19",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Update: Russia hits Kyiv with what Ukraine calls the largest ballistic missile barrage of the war",
+        "summary": "Russia fired 41 ballistic missiles and 125 attack drones at Kyiv overnight on July 19, which Ukraine’s acting foreign minister Andrii Sybiha called the largest number of ballistic missiles launched since the war began in February 2022, killing at least one person and wounding 16. Ukraine’s air force said it shot down 18 of the missiles and 108 of the drones as fires broke out across several districts.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/7/19/russia-launches-largest-ballistic-missile-attack-on-kyiv-since-start-of-war",
+        "date": "Jul 19",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Spain beat 10-man Argentina 1-0 in extra time to win the 2026 World Cup",
+        "summary": "Substitute Ferran Torres struck in the 106th minute to give Spain a 1-0 extra-time win over Argentina in the World Cup final at MetLife Stadium in New Jersey on July 19, sealing Spain’s second world title, 16 years after its first. Defending champions Argentina played the closing stages a man down after Enzo Fernandez was sent off, and Lionel Messi’s side were shut out.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/sports/2026/7/19/spain-battle-past-10-man-argentina-1-0-in-extra-time-to-win-2026-world-cup",
+        "date": "Jul 19",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Lebanon’s President Aoun meets Rubio in Washington ahead of talks with Trump",
+        "summary": "Lebanese President Joseph Aoun held talks with US Secretary of State Marco Rubio in Washington on July 19, telling him the two countries must work together to implement the US-backed June 26 framework signed by Lebanon and Israel, starting with an initial Israeli troop withdrawal from southern Lebanon. Aoun, on the first visit to Washington by a Lebanese head of state since 2009, is due to meet President Donald Trump on Tuesday. (Al Jazeera)",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/7/19/lebanons-president-joseph-aoun-meets-rubio-ahead-of-trump-talks",
+        "date": "Jul 19",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "tech",
+    "title": "💻 Tech & AI",
+    "color": "#27ae60",
+    "items": [
+      {
+        "headline": "Netflix reveals it paid $587 million for Ben Affleck’s AI film startup InterPositive",
+        "summary": "A newly surfaced filing shows Netflix paid $587 million in cash for InterPositive, the AI post-production startup co-founded by Ben Affleck that reframes shots and fixes lighting; the March acquisition had previously been reported only as ‘up to $600 million.’ Affleck joined Netflix as a senior adviser as part of the deal.",
+        "source": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/19/netflix-paid-587m-for-ben-afflecks-ai-filmmaking-startup/",
+        "date": "Jul 19",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "China’s Zhipu is on track to be the first Chinese AI firm to reach $1 billion in annual sales",
+        "summary": "Zhipu’s July run-rate would annualise to roughly $1 billion in recurring revenue, a milestone no Chinese generative-AI startup has reached, months after its $558 million Hong Kong IPO. The stock has rallied about 1,500% since its January debut, and the company just placed $4 billion in new shares.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-07-17/z-ai-set-to-be-first-china-ai-firm-with-1-billion-annual-sales",
+        "date": "Jul 17",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Apple’s trade-secret lawsuit threatens OpenAI’s hardware ambitions",
+        "summary": "OpenAI’s push to build an iPhone rival is under a legal cloud as Apple’s July 10 lawsuit accuses hardware chief Tang Tan, a 24-year Apple veteran, and others of a coordinated trade-secret theft campaign, noting that more than 400 former Apple employees now work at OpenAI. OpenAI says it is ‘not aware of any evidence that this complaint has merit.’",
+        "source": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/19/can-an-apple-lawsuit-derail-openais-hardware-plans/",
+        "date": "Jul 19",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Palmer Luckey-backed nuclear startup Valar Atomics in talks to raise at a $6 billion valuation",
+        "summary": "Valar Atomics, which builds small modular reactors to power AI data centres, is in talks for a round that would value it at $6 billion, triple the $2 billion valuation from its $450 million March round. Its Ward 250 reactor reached criticality on June 18 and powered an Nvidia AI chip in a US first.",
+        "source": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/17/nuclear-startup-valar-atomics-in-talks-to-raise-new-funding-at-6b-valuation/",
+        "date": "Jul 17",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "biz",
+    "title": "📈 Business & Markets",
+    "color": "#8e44ad",
+    "items": [
+      {
+        "headline": "Update: Wall Street ends the week in the red as a chip selloff deepens; S&P 500 falls 1% Friday",
+        "summary": "The S&P 500 closed Friday, July 17 down 1.0% at 7,457.69, the Nasdaq slid 1.4% to 25,520.24 and the Dow dropped 407 points to 52,146.42. For the week the S&P lost 1.6%, the Nasdaq 2.9% and the Dow 0.9%, as a semiconductor rout dragged the benchmarks lower.",
+        "source": "CNBC",
+        "url": "https://www.cnbc.com/2026/07/16/stock-market-today-live-updates.html",
+        "date": "Jul 17",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "IBM sinks 25% in its worst day on record after a Q2 earnings warning",
+        "summary": "IBM shares plunged about 25% — its steepest one-day fall ever, wiping out roughly $67 billion in value — after preliminary Q2 results showed adjusted EPS of $2.93 on $17.2 billion of revenue, missing estimates of $3.01 and $17.86 billion. CEO Arvind Krishna blamed soft software and mainframe sales; full results are due July 22.",
+        "source": "CNBC",
+        "url": "https://www.cnbc.com/2026/07/14/ibm-warns-second-quarter-earnings-fell-short-of-expectations.html",
+        "date": "Jul 14",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "PayPal’s board deems a $53 billion Stripe-Advent takeover bid inadequate",
+        "summary": "PayPal’s board views the joint Stripe and Advent International offer of $60.50 a share — valuing it at more than $53 billion, a 28% premium — as undervaluing the company and facing financing and regulatory hurdles, Reuters reported. The cash-and-financing deal carries about $50 billion in committed bank funding.",
+        "source": "CNBC",
+        "url": "https://www.cnbc.com/2026/07/15/stripe-advent-offer-to-buy-paypal-for-more-than-53-billion-reuters.html",
+        "date": "Jul 19",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Big Tech earnings loom as Alphabet, Tesla and Intel test a bruised AI trade",
+        "summary": "The week of July 20-24 brings a pivotal earnings slate led by Alphabet and Tesla on Wednesday and Intel on Thursday, alongside Coca-Cola, GM and IBM’s full results. With roughly $6 trillion of market value reporting, results will test whether the AI-spending narrative can steady markets after the chip-led selloff.",
+        "source": "CNBC",
+        "url": "https://www.cnbc.com/2026/07/19/earnings-playbook-alphabet-tesla-headline-this-weeks-big-reports.html",
+        "date": "Jul 19",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "sports",
+    "title": "🎾🏏🏎️ Sports",
+    "color": "#c0392b",
+    "items": [
+      {
+        "headline": "🏎️ Antonelli wins the Belgian Grand Prix and stretches his title lead to 45 points as Russell crashes out",
+        "summary": "Kimi Antonelli reeled in Charles Leclerc in the closing laps at Spa to win the Belgian Grand Prix by 1.9 seconds — his sixth victory of 2026 — with Max Verstappen third. Title rival George Russell retired on the opening lap after contact with Lewis Hamilton, doubling Antonelli’s championship lead to 45 points over Hamilton.",
+        "source": "Formula1.com",
+        "url": "https://www.formula1.com/en/latest/article/antonelli-beats-leclerc-to-belgian-grand-prix-win-to-extend-title-lead-as-russell-retires.MAqSJSgXvRP6dLbwiRbWI",
+        "date": "Jul 19",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "🏎️ Hamilton handed a five-second penalty for the lap-one clash that ended Russell’s race",
+        "summary": "Stewards gave Lewis Hamilton a five-second penalty for the Les Combes contact that pitched his Mercedes team-mate George Russell into the gravel on the opening lap at Spa, though Hamilton still finished fourth. Hamilton characterised the incident as a racing one.",
+        "source": "Formula1.com",
+        "url": "https://www.formula1.com/en/latest/article/belgium-lowdown-all-the-key-moments-as-antonelli-returns-to-glory-and-russell-endures-heartbreak.5R3MMcMUQQW59iFcR7vOX7",
+        "date": "Jul 19",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "🏏 England beat India by 27 runs at Lord’s to clinch the ODI series 2-1",
+        "summary": "England posted 387 for 3, built on Ben Duckett’s 141, then held off India (360 for 7) by 27 runs at Lord’s to take the three-match series 2-1. Rohit Sharma’s 138 in the chase was not enough for the visitors.",
+        "source": "ESPNcricinfo",
+        "url": "https://www.espncricinfo.com/series/india-in-england-2026-1496488/england-vs-india-3rd-odi-1496581/match-report",
+        "date": "Jul 19",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "🎾 Tsitsipas wins Gstaad to end a 16-month title drought",
+        "summary": "Stefanos Tsitsipas beat Raphael Collignon 6-4, 6-7(3), 6-3 to win the Swiss Open in Gstaad, his first ATP title in 16 months and the 13th of his career.",
+        "source": "ATP Tour",
+        "url": "https://www.atptour.com/en/scores/current/gstaad/314/results",
+        "date": "Jul 19",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "🎾 Rublev defends his Bastad title, beating top seed Darderi",
+        "summary": "Andrey Rublev beat Luciano Darderi 6-4, 6-3 in just over an hour to retain the Nordea Open in Bastad, his first clay-court title since Madrid in 2024.",
+        "source": "ATP Tour",
+        "url": "https://www.atptour.com/en/news/rublev-darderi-bastad-2026-final",
+        "date": "Jul 19",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "misc",
+    "title": "🔬 Other Miscellaneous News",
+    "color": "#1abc9c",
+    "items": [
+      {
+        "headline": "Escaping helium reveals the first atmosphere on a habitable-zone rocky planet, LHS 1140b",
+        "summary": "Using the ground-based Magellan Clay telescope, astronomers detected helium streaming off LHS 1140b — a 5.6-Earth-mass super-Earth in its M-dwarf star’s habitable zone — the strongest sign yet that a temperate rocky world can hold onto an atmosphere. The helium signal appeared in 2024 but not 2025, pointing to time-variable escape from a helium-rich upper layer, per a study in Science.",
+        "source": "Nature",
+        "url": "https://www.nature.com/articles/d41586-026-02200-5",
+        "date": "Jul 16",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Astronomers detect the first ‘true sugar’ in interstellar space",
+        "summary": "Using the Yebes 40m and IRAM 30m radio telescopes, researchers identified erythrulose — a four-carbon sugar — in the molecular cloud G+0.693-0.027 near the galactic centre, the first genuine sugar detected beyond the Solar System. In water erythrulose can convert to threose, a possible precursor of RNA, bolstering the idea that life’s building blocks form in space.",
+        "source": "Nature",
+        "url": "https://www.nature.com/articles/d41586-026-02173-5",
+        "date": "Jul 15",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Webb finds a hidden third planet, Beta Pictoris d, by its chemical fingerprint",
+        "summary": "Astronomers using the James Webb Space Telescope’s NIRSpec discovered Beta Pictoris d — a giant of at least about two Jupiter masses orbiting at roughly 30 AU — not as a point of light but via carbon monoxide, water and methane signatures in its atmosphere, making Beta Pictoris only the second system with three directly imaged planets. It is the first planet imaged primarily through moderate-resolution spectroscopy.",
+        "source": "NASA",
+        "url": "https://science.nasa.gov/missions/webb/nasas-webb-discovers-hidden-planet-in-famous-star-system/",
+        "date": "Jul 15",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Astronauts capture the first diagnostic human X-rays in space",
+        "summary": "A study in the journal Radiology reports that the SpaceX Fram2 crew — none of them medical experts, trained for four hours — produced diagnostic-quality X-rays of a hand, forearm, abdomen, pelvis and chest in polar orbit using a portable wireless system. Reviewers found no significant difference in image quality versus the crew’s pre-flight scans, giving space medicine a second imaging option beyond ultrasound.",
+        "source": "Scientific American",
+        "url": "https://www.scientificamerican.com/article/see-the-first-x-rays-of-humans-taken-in-space/",
+        "date": "Jul 15",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "fun",
+    "title": "✦ Fun Fact",
+    "color": "#27ae60",
+    "custom": "fun"
+  },
+  {
+    "id": "puzzle",
+    "title": "🧩 Puzzle",
+    "color": "#e67e22",
+    "custom": "puzzle"
+  },
+  {
+    "id": "wpuzzle",
+    "title": "🔤 Word Puzzles",
+    "color": "#16a085",
+    "custom": "wpuzzle"
+  }
+];
+
+const FUN_FACT = {
+  "text": "Africa is so vast that the United States, China, India and much of Europe could all fit inside its borders at the same time — a scale the familiar Mercator map hides by shrinking land near the equator. The continent covers about 30.3 million square kilometres, more than three times the area of the United States.",
+  "tag": "Category · Geography & Maps"
+};
+
+const PUZZLE = {
+  "type": "Logic",
+  "title": "The Broken Window",
+  "how": "Assume each student in turn is the culprit, then count how many of the four statements are true; only the real culprit leaves exactly one true.",
+  "question": "A window at school is broken by one of four students — Priya, Quentin, Rahul, or Sofia. Questioned by the head teacher, they each say one thing:\n\nPriya: “Quentin broke it.”\nQuentin: “Sofia broke it.”\nRahul: “I didn’t break it.”\nSofia: “Quentin is lying.”\n\nExactly one of these four statements is true. Who broke the window?",
+  "answer": "Rahul broke the window.\n\nTest each suspect and count the true statements:\n• If Priya did it: Rahul (true) and Sofia (true) — two true. No.\n• If Quentin did it: Priya, Rahul and Sofia all true — three true. No.\n• If Rahul did it: Quentin’s claim about Sofia is false, so Quentin IS lying and Sofia’s statement is true — the only true one. Yes.\n• If Sofia did it: Quentin (true) and Rahul (true) — two true. No.\n\nOnly Rahul as the culprit leaves exactly one true statement."
+};
+
+const WORD_PUZZLE = {
+  "type": "Anagram",
+  "title": "The Perfect Fit",
+  "how": "Each phrase is a perfect anagram of a word or phrase meaning the same thing — every letter is reused exactly once.",
+  "question": "Each clue below is an ‘aptagram’: its letters rearrange into a word or phrase that describes it, using every letter exactly once. Unscramble each:\n\n1. LISTEN  →  a 6-letter word for ‘quiet’\n2. THE EYES  →  THEY _ _ _\n3. DORMITORY  →  a ‘DIRTY _ _ _ _’\n4. A GENTLEMAN  →  an ‘ELEGANT _ _ _’\n5. ELEVEN PLUS TWO  →  a number phrase that equals it",
+  "answer": "1. SILENT\n2. THEY SEE\n3. DIRTY ROOM\n4. ELEGANT MAN\n5. TWELVE PLUS ONE\n\nEach answer reuses the exact letters of its clue — for example, ELEVEN PLUS TWO and TWELVE PLUS ONE share the same 13 letters, and both equal 13."
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function renderWordPuzzle(){
+  let h='<div class="sec-title">🔤 Word Puzzle of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#16a085,transparent)"></div>';
+  h+='<div class="wpuzzle-box"><span class="wptype">'+WORD_PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+WORD_PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+WORD_PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+WORD_PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this,\'wpans\')">Show Answer</button>';
+  h+='<div class="answer" id="wpans"><span class="alabel">Answer</span>'+WORD_PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn,ansId){var a=document.getElementById(ansId||'ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else if(sec.custom==="wpuzzle"){div.innerHTML=renderWordPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>

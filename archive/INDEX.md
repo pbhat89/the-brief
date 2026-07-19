@@ -1293,3 +1293,37 @@ is empty until the first run.
 2026-07-19	NASA's Psyche returns its first Mars flyby images and a time-lapse of the encounter	095f83ba	psyche,mars,huygens crater,jpl
 2026-07-19	A semaglutide trial reports the first human evidence a GLP-1 drug slows biological aging	cbd11c66	semaglutide,epigenetic aging,glp-1,dunedinpace
 2026-07-19	New spectra suggest Earth's quasi-moon Kamo'oalewa may not be lunar debris	4da48ba9	kamooalewa,tianwen-2,flora family,quasi-moon
+2026-07-20	Filipina domestic helper jailed 3 years 2 months for stealing over S$217,000 from her employer	cdb23e55	raguindin alma bassig,domestic helper,theft,singapore
+2026-07-20	Two former Certis officers jailed a week each for tipping off a colleague in a CPIB vaping probe	17bd4ba5	certis,cpib,vape,obstruction of justice
+2026-07-20	High Court orders Bloomberg to pay two ministers S$460,000 over a defamatory bungalow report	93407ea5	bloomberg,shanmugam,tan see leng,defamation
+2026-07-20	Singapore’s economy grows 5.7% in the second quarter as AI chip demand powers manufacturing	400663f8	singapore,gdp,manufacturing,mti
+2026-07-20	Man who financed a scam-account syndicate tied to S$51 million in losses jailed four years	98448d2e	ronnie low,scam syndicate,whatsapp,organised crime
+2026-07-20	Update: Gen Z ‘Cockroach’ protesters march on Parliament as the monsoon session opens	bc1a414d	cockroach janta party,abhijeet dipke,parliament,monsoon session,modi
+2026-07-20	Consumer court orders Maruti Suzuki to replace a car damaged by E20 ethanol-blended fuel	d1e6bf50	maruti suzuki,e20,ethanol,consumer court
+2026-07-20	Update: RBI governor flags the US-Iran war and a weak monsoon as key risks to India’s economy	9f1bc1be	rbi,sanjay malhotra,inflation,rupee
+2026-07-20	Ayodhya Ram temple donation-theft probe shadows the BJP as the monsoon session opens	882466bc	ram janmabhoomi trust,ayodhya,donation,bjp,akhilesh yadav
+2026-07-20	Update: Andy Burnham enters Downing Street as prime minister, pledging ‘honesty and reflection’	87e73a32	andy burnham,downing street,prime minister,starmer
+2026-07-20	Burnham to back new North Sea oil and gas drilling in a break with the Labour left	ac5986e6	andy burnham,north sea oil,drilling,energy
+2026-07-20	Burnham to take Thames Water into public control as its cash crisis deepens	732eee67	andy burnham,thames water,nationalisation,water
+2026-07-20	Burnham handed a day-one Treasury warning as UK inflation is forecast to rise to 3.2%	3a9a75b8	andy burnham,treasury,inflation,gilts
+2026-07-20	Update: Iran strikes US bases in Kuwait and fires missiles at Jordan on the eighth night of the war	bf23fab8	iran,united states,kuwait,jordan,strikes
+2026-07-20	Update: Russia hits Kyiv with what Ukraine calls the largest ballistic missile barrage of the war	64f797a9	russia,ukraine,kyiv,ballistic missiles
+2026-07-20	Spain beat 10-man Argentina 1-0 in extra time to win the 2026 World Cup	e44973ad	spain,argentina,world cup,ferran torres,metlife
+2026-07-20	Lebanon’s President Aoun meets Rubio in Washington ahead of talks with Trump	9d2870ff	lebanon,joseph aoun,rubio,washington,israel
+2026-07-20	Netflix reveals it paid $587 million for Ben Affleck’s AI film startup InterPositive	003b9119	netflix,ben affleck,interpositive,ai
+2026-07-20	China’s Zhipu is on track to be the first Chinese AI firm to reach $1 billion in annual sales	43256854	zhipu,china,ai revenue,ipo
+2026-07-20	Apple’s trade-secret lawsuit threatens OpenAI’s hardware ambitions	cbb74ad0	apple,openai,trade secret,lawsuit
+2026-07-20	Palmer Luckey-backed nuclear startup Valar Atomics in talks to raise at a $6 billion valuation	bb2c6291	valar atomics,palmer luckey,nuclear,valuation
+2026-07-20	Update: Wall Street ends the week in the red as a chip selloff deepens; S&P 500 falls 1% Friday	82bd5f6b	s&p 500,nasdaq,chip selloff,wall street
+2026-07-20	IBM sinks 25% in its worst day on record after a Q2 earnings warning	52a4f6ad	ibm,earnings,arvind krishna,stock
+2026-07-20	PayPal’s board deems a $53 billion Stripe-Advent takeover bid inadequate	77123967	paypal,stripe,advent,takeover
+2026-07-20	Big Tech earnings loom as Alphabet, Tesla and Intel test a bruised AI trade	686ba9b2	alphabet,tesla,intel,earnings
+2026-07-20	🏎️ Antonelli wins the Belgian Grand Prix and stretches his title lead to 45 points as Russell crashes out	5b046efd	antonelli,belgian grand prix,spa,russell,verstappen
+2026-07-20	🏎️ Hamilton handed a five-second penalty for the lap-one clash that ended Russell’s race	4593e49d	lewis hamilton,george russell,penalty,spa
+2026-07-20	🏏 England beat India by 27 runs at Lord’s to clinch the ODI series 2-1	9c72ac3b	england,india,lord's,odi series,duckett
+2026-07-20	🎾 Tsitsipas wins Gstaad to end a 16-month title drought	4e050a8c	tsitsipas,collignon,gstaad,atp title
+2026-07-20	🎾 Rublev defends his Bastad title, beating top seed Darderi	afde1126	rublev,darderi,bastad,nordea open
+2026-07-20	Escaping helium reveals the first atmosphere on a habitable-zone rocky planet, LHS 1140b	ba2d5af4	lhs 1140b,helium,atmosphere,exoplanet
+2026-07-20	Astronomers detect the first ‘true sugar’ in interstellar space	41ae3528	erythrulose,interstellar,sugar,molecular cloud
+2026-07-20	Webb finds a hidden third planet, Beta Pictoris d, by its chemical fingerprint	3b6f0b53	beta pictoris d,jwst,exoplanet,spectroscopy
+2026-07-20	Astronauts capture the first diagnostic human X-rays in space	085b4f7f	fram2,x-rays,space medicine,radiology

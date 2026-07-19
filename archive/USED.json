@@ -219,14 +219,14 @@
       "date": "2026-07-19",
       "topic_key": "astronaut",
       "text": "Astronauts grow taller in space"
+    },
+    {
+      "date": "2026-07-20",
+      "topic_key": "africa",
+      "text": "Africa is so vast that the US, China, India and much of Europe could all fit inside it at once."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-06-19",
-      "type": "lateral",
-      "title_key": "glass-of-water"
-    },
     {
       "date": "2026-06-20",
       "type": "visual",
@@ -371,6 +371,11 @@
       "date": "2026-07-19",
       "type": "visual",
       "title_key": "painted-cube"
+    },
+    {
+      "date": "2026-07-20",
+      "type": "logic",
+      "title_key": "broken-window"
     }
   ],
   "word_puzzle_log": [
@@ -508,6 +513,11 @@
       "date": "2026-07-19",
       "type": "letterboxed",
       "title_key": "cornered"
+    },
+    {
+      "date": "2026-07-20",
+      "type": "anagram",
+      "title_key": "perfect-fit"
     }
   ]
 }
