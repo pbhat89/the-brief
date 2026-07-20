@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Tue, 21 July 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .wpuzzle-box{background:linear-gradient(135deg,#0e1a1a,#0d1620);border:1px solid #234a44;border-left:3px solid #16a085;padding:24px 28px;border-radius:2px}
+  .wptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#16a085;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .wpuzzle-box .puzzle-title{color:#cdeae3}
+  .wpuzzle-box .puzzle-how{color:#8fb8ac;background:#08140f;border-left-color:#1a6a5a}
+  .wpuzzle-box .puzzle-q{color:#dfeae6;font-family:'Source Sans 3',sans-serif}
+  .wpuzzle-box .answer{color:#bfe0d6}
+  .wpuzzle-box .answer .alabel{color:#16a085}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Tuesday, 21 July 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Tuesday, 21 July 2026 · 🔍 46 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+============================================================================= */
+
+const SECTIONS = [
+  { id:"sg", title:"🇸🇬 Singapore", color:"#e74c3c", items:[
+    { headline:"Muslim affairs minister Faishal Ibrahim resigns over inappropriate online interactions",
+      summary:"Associate Professor Muhammad Faishal Ibrahim, 58, quit the Cabinet, Parliament and the PAP on 20 July after PM Lawrence Wong disclosed that his mostly-online interactions with a woman fell short of the standards expected of an office-holder. Police and the AGC found no criminal offence by either party despite mutual harassment allegations.",
+      source:"SCMP", url:"https://www.scmp.com/week-asia/politics/article/3361166/singapore-minister-faishal-ibrahim-resigns-over-inappropriate-interactions-woman", date:"Jul 20",
+      spectrum:null,
+      bias:"SCMP framed PM Wong's swift response as damage control given the sensitivity to the Malay-Muslim community; Mothership foregrounded the succession gap and the loss of a rare Malay office-holder." },
+    { headline:"Zaqy Mohamad takes over Muslim affairs as analysts call Faishal's exit a community loss",
+      summary:"Senior Minister of State Zaqy Mohamad was appointed Acting Minister-in-Charge of Muslim Affairs after Faishal Ibrahim's resignation. Former president Halimah Yacob and analysts called it a setback for the Malay-Muslim community, noting Masagos Zulkifli is now the only Malay full minister.",
+      source:"Mothership", url:"https://mothership.sg/2026/07/faishal-ibrahim-resigns-zaqy-mohamad-acting-minister-in-charge-of-muslim-affairs/", date:"Jul 21",
+      spectrum:null, bias:null },
+    { headline:"Ex-actor Edmund Chen's careless-driving jail term cut from five days to one on appeal",
+      summary:"Justice Hri Kumar reduced Edmund Chen's sentence to a single day's jail on 20 July, finding the original five days excessive. The 64-year-old, who collided with and injured a motorcyclist on the Ayer Rajah Expressway in March 2025, began serving the term immediately and remains barred from driving for five years.",
+      source:"Mothership", url:"https://mothership.sg/2026/07/edmund-chen-jail-term-1-day/", date:"Jul 20",
+      spectrum:null, bias:null },
+    { headline:"Family of teen killed on Maldives school trip sues SJI International for negligence",
+      summary:"The family of Jenna Chan, 15, killed by a boat propeller during an SJI International snorkelling excursion in the Maldives in November 2024, filed a High Court negligence claim on 20 July. They allege the school failed to properly vet the destination and the marine-tourism vendor despite prior fatal incidents in the same waters.",
+      source:"Mothership", url:"https://mothership.sg/2026/07/jenna-chan-sji-family-sue-school/", date:"Jul 20",
+      spectrum:null, bias:null },
+    { headline:"Reform Party chief Kenneth Jeyaretnam dies in his sleep, aged 67",
+      summary:"Kenneth Jeyaretnam, long-time secretary-general of the opposition Reform Party and son of veteran politician J.B. Jeyaretnam, died peacefully in his sleep on 18 July; his wife announced the death on 19 July. He had been seriously ill in the UK and was the subject of several POFMA correction orders in recent years.",
+      source:"Mothership", url:"https://mothership.sg/2026/07/kenneth-jeyaretnam-died/", date:"Jul 19",
+      spectrum:null, bias:null },
+  ]},
+  { id:"india", title:"🇮🇳 India", color:"#e67e22", items:[
+    { headline:"Update: Police tear-gas 10,000-strong 'Cockroach' march on Parliament",
+      summary:"More than 10,000 demonstrators were met with tear gas and baton charges on 20 July while marching toward Parliament on the monsoon session's opening day, demanding the education minister's resignation and an exam-corruption crackdown. Turnout was swelled by anger over the forcible hospitalisation of hunger-striking activist Sonam Wangchuk.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/7/20/police-attack-cockroach-activists-as-thousands-march-on-indian-parliament", date:"Jul 20",
+      spectrum:null, bias:null },
+    { headline:"Floods and landslides kill at least 25 as Amarnath and Vaishno Devi yatras are suspended",
+      summary:"Weekend monsoon rain triggered flash floods and landslides across northern and northeastern India, killing at least 25 by 20 July — about 15 in Jammu and Kashmir's Poonch, Rajouri and Doda districts. Authorities suspended the Amarnath and Vaishno Devi pilgrimages as the weather office warned of more very heavy rain.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/7/20/at-least-25-killed-as-floods-and-landslides-hit-northern-india", date:"Jul 20",
+      spectrum:null, bias:null },
+    { headline:"RBI intervenes to defend the rupee as the currency nears a record low",
+      summary:"The Reserve Bank of India sold dollars in onshore and offshore markets on 20 July to support the rupee, which weakened toward its record low near 96 per dollar as a renewed surge in crude prices stoked import-cost and inflation worries. The currency has hit multiple record lows this year.",
+      source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-07-20/rbi-intervenes-to-support-rupee-as-currency-nears-record-low", date:"Jul 20",
+      spectrum:null, bias:null },
+    { headline:"Skyroot's Vikram-1 becomes India's first privately built rocket to reach orbit",
+      summary:"Hyderabad-based Skyroot Aerospace's three-stage, 22-metre Vikram-1 lifted off from Sriharikota and placed payloads into a roughly 450 km low-Earth orbit, making India the third country — after the US and China — with private-sector orbital launch capability. The rocket can carry up to 350 kg to orbit.",
+      source:"SCMP", url:"https://www.scmp.com/news/asia/south-asia/article/3361049/india-launches-first-private-orbital-rocket-space-start-ups-expand", date:"Jul 18",
+      spectrum:null, bias:null },
+  ]},
+  { id:"uk", title:"🇬🇧 UK News", color:"#3949ab", items:[
+    { headline:"Update: Burnham names Healey chancellor as Reeves and Lammy leave the cabinet",
+      summary:"New PM Andy Burnham appointed former defence secretary John Healey as chancellor in a surprise choice, with Angela Rayner returning as housing secretary, Ed Miliband made foreign secretary and Yvette Cooper moved to health. Rachel Reeves and David Lammy both left the cabinet as Starmer loyalists were cleared out.",
+      source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-07-20/healey-haigh-mahmood-who-s-who-in-burnham-s-new-uk-cabinet", date:"Jul 20",
+      spectrum:null,
+      bias:"With BBC and Sky News unreachable in the compile environment, UK coverage here runs on the fallback tier (Bloomberg, CNN, CNBC); the Healey appointment was independently confirmed by ITV News." },
+    { headline:"Update: Burnham's first act pledges an extra £340m to end rough sleeping",
+      summary:"In his first instruction as prime minister on 20 July, Burnham vowed to “end rough sleeping in our country,” with his team allocating an additional £340 million (about $457m) alongside promises of more council homes and youth-employment support.",
+      source:"CNN", url:"https://www.cnn.com/2026/07/20/uk/andy-burnham-new-uk-prime-minister-intl", date:"Jul 20",
+      spectrum:null, bias:null },
+    { headline:"Update: Burnham scraps the government's digital ID scheme to fund cost-of-living help",
+      summary:"Incoming PM Burnham confirmed he would cancel the previous government's planned digital ID scheme, with allies saying freed-up resources would be redirected primarily to cost-of-living support. Interim measures are due to be outlined from Tuesday.",
+      source:"CNBC", url:"https://www.cnbc.com/2026/07/19/uks-incoming-pm-andy-burnham-to-prioritize-cost-of-living-say-allies.html", date:"Jul 19",
+      spectrum:null, bias:null },
+    { headline:"Gilts sell off and the pound slips after Burnham's fiscal-flexibility remarks",
+      summary:"Long-dated UK gilt yields jumped to their highest since late May on 20 July after Burnham said he would seek “any flexibility” within the borrowing rules, stoking fears of heavier debt. The pound slipped as the comments unnerved bond investors.",
+      source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-07-20/gilts-fall-as-burnham-s-fiscal-flexibility-comments-spook-market", date:"Jul 20",
+      spectrum:null, bias:null },
+  ]},
+  { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
+    { headline:"Update: US launches fresh strikes on Iran after service members' deaths",
+      summary:"The US carried out new strikes on Iran after President Trump warned of strong retaliation for the deaths of American service members, extending more than a week of renewed bombing. Iran's Health Ministry said at least 12 people were killed in the past day, raising the toll to about 50 since this phase began.",
+      source:"CNN", url:"https://www.cnn.com/2026/07/20/world/live-news/iran-war-trump", date:"Jul 20",
+      spectrum:null, bias:null },
+    { headline:"Update: Russian missiles hit an Odesa grain ship, killing 10; Ukraine sends drones at Moscow",
+      summary:"Three Russian cruise missiles struck the Guinea-Bissau-flagged corn carrier Golden Leo off Odesa, killing 10 — nine crew from India and Syria plus a Ukrainian maritime pilot — in the deadliest Black Sea attack in weeks. Ukraine responded by launching hundreds of drones toward Moscow.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/7/20/russian-strike-on-ship-near-odesa-kills-10-ukraine-hits-moscow-with-drones", date:"Jul 20",
+      spectrum:null, bias:null },
+    { headline:"DR Congo Ebola death toll passes 930 in the third-largest outbreak on record",
+      summary:"The WHO says DR Congo's Ebola outbreak has killed at least 930 people from more than 2,344 confirmed cases and is spreading faster than any previous outbreak. Intense transmission in Ituri province and an attack on a Bunia treatment centre are hampering the response.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/7/20/ebola-death-toll-in-drc-surges-to-at-least-930-as-outbreak-gathers-pace", date:"Jul 20",
+      spectrum:null, bias:null },
+    { headline:"Two Palestinians killed in an Israeli settler raid on a West Bank village",
+      summary:"Two Palestinians — Ahmed Adel Abu Mukh, 26, and Awda Abdul Rahim Farakhna, 53 — were killed by gunfire when Israeli settlers, backed by soldiers, raided Deir Jarir near Ramallah overnight into 20 July. A public World Cup final screening in the village was halted after news of the deaths.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/video/newsfeed/2026/7/20/occupied-west-bank-world-cup-screening-halted-for-funeral", date:"Jul 20",
+      spectrum:null, bias:null },
+    { headline:"Prominent Cuban dissident artist Otero Alcántara is exiled and arrives in the US",
+      summary:"Luis Manuel Otero Alcántara, 38, co-founder of Cuba's San Isidro Movement, arrived in Miami after being released from a five-year sentence on condition he leave the country, a move confirmed by US Secretary of State Marco Rubio. He was Cuba's highest-profile jailed dissident since the July 2021 protests.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/7/19/exiled-cuban-artist-otero-alcantara-has-arrived-in-us-rubio-confirms", date:"Jul 19",
+      spectrum:null, bias:null },
+  ]},
+  { id:"tech", title:"💻 Tech & AI", color:"#27ae60", items:[
+    { headline:"AI-agent payments startup Natural raises $30m Series A to take on Stripe",
+      summary:"Natural raised a $30 million Series A led by Forerunner's Kirsten Green, lifting total funding to $40 million. The startup builds an orchestration layer that lets AI agents autonomously move, store and collect funds.",
+      source:"TechCrunch", url:"https://techcrunch.com/2026/07/20/natural-raises-30m-to-reinvent-payments-for-ai-agents-and-take-on-stripe/", date:"Jul 20",
+      spectrum:null, bias:null },
+    { headline:"Inference startup Infinity raises $15m at a $100m valuation",
+      summary:"Infinity announced a $15 million raise at a $100 million valuation from Touring Capital, Principal VC and researchers at OpenAI and Anthropic. Its agent, Ignition, writes the low-level code needed to run AI inference on Nvidia-alternative chips.",
+      source:"TechCrunch", url:"https://techcrunch.com/2026/07/20/inference-startup-infinity-raises-15m-from-touring-capital-openai-and-athropic-researchers/", date:"Jul 20",
+      spectrum:null, bias:null },
+    { headline:"China's Z.AI fires up a 1-gigawatt data centre built entirely with Chinese chips",
+      summary:"Z.AI has completed and begun partially operating a 1-gigawatt data centre housing only Chinese-made chips to train its GLM models, sidestepping US export controls. It is one of the first large clusters designed to run without Nvidia silicon.",
+      source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-07-20/z-ai-completes-giant-data-center-with-chinese-chips-to-train-ai", date:"Jul 20",
+      spectrum:null, bias:null },
+    { headline:"Nonprofit Current AI unveils an offline device running AI in 22 Indian languages",
+      summary:"Nonprofit Current AI showed Suno Sutra, a pocket-sized device that runs AI models offline in 22 Indian languages with no internet connection, as part of a push to build open, public AI infrastructure that is free to use.",
+      source:"TechCrunch", url:"https://techcrunch.com/2026/07/19/nonprofit-current-ai-is-racing-to-build-the-world-wide-web-of-ai-free-for-all/", date:"Jul 19",
+      spectrum:null, bias:null },
+    { headline:"Study finds AI models can stereotype job applicants more than human recruiters do",
+      summary:"Research reported by MIT Technology Review found that large language models can develop their own hiring biases from experience, with OpenAI's reasoning model o3 scoring 1.83 on the study's segregation scale — close to the maximum possible.",
+      source:"MIT Tech Review", url:"https://www.technologyreview.com/2026/07/20/1140655/ai-biases-hiring-humans/", date:"Jul 20",
+      spectrum:null, bias:null },
+  ]},
+  { id:"biz", title:"📈 Business & Markets", color:"#8e44ad", items:[
+    { headline:"US stocks rebound as the Nasdaq 100 climbs 1% before a wave of Big Tech earnings",
+      summary:"US equities pared last week's slump on Monday 20 July, with the Nasdaq 100 rising about 1% led by semiconductors after its worst week in nearly a month. Investors braced for a deluge of megacap results, with Alphabet due to report on 22 July.",
+      source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-07-20/us-stocks-rebound-from-selloff-as-nvidia-other-chipmakers-rise", date:"Jul 20",
+      spectrum:null, bias:null },
+    { headline:"Brent tops $90 intraday as US-Iran fighting threatens Strait of Hormuz flows",
+      summary:"Brent crude jumped nearly 4% overnight to break $90 a barrel before settling near $89 (up about 1.3%) on 20 July, with WTI around $83, after the US confirmed service members died in recent fighting with Iran. Crude is up roughly 20% this month.",
+      source:"CNBC", url:"https://www.cnbc.com/2026/07/20/oil-prices-today-brent-wti-crude-us-iran-centcom-hormuz.html", date:"Jul 20",
+      spectrum:null, bias:null },
+    { headline:"Brookfield and CPPIB agree to buy warehouse REIT LXP Industrial for $5.2bn",
+      summary:"Brookfield Asset Management and the Canada Pension Plan Investment Board agreed to acquire LXP Industrial Trust in an all-cash deal valued at about $5.2 billion including net debt and preferred equity.",
+      source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-07-20/brookfield-cppib-agree-to-buy-lxp-industrial-for-5-2-billion", date:"Jul 20",
+      spectrum:null, bias:null },
+    { headline:"Samsung Biologics agrees to buy Switzerland's PolyPeptide for $1.8bn",
+      summary:"Samsung Biologics agreed to acquire contract drugmaker PolyPeptide Group in an all-cash deal, offering 44.31 Swiss francs a share and valuing the equity at about 1.46 billion Swiss francs ($1.8 billion).",
+      source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-07-19/samsung-biologics-agrees-to-buy-polypeptide-in-1-8-billion-deal", date:"Jul 19",
+      spectrum:null, bias:null },
+    { headline:"War and AI turbocharge Wall Street: five banks' equities desks reap ~$26bn, up 71%",
+      summary:"Second-quarter equity-trading revenue at Goldman Sachs, Morgan Stanley, JPMorgan, Bank of America and Citigroup totalled nearly $26 billion, up 71% from a year earlier, as the AI boom and policy swings supercharged market activity.",
+      source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-07-20/how-war-and-ai-turbocharged-banks-equity-trading", date:"Jul 20",
+      spectrum:null, bias:null },
+  ]},
+  { id:"sports", title:"🎾🏏🏎️ Sports", color:"#c0392b", items:[
+    { headline:"🏎️ Antonelli leads into the Hungaroring, the last race before F1's summer break",
+      summary:"Kimi Antonelli heads to the Hungarian Grand Prix on 26 July at the top of the drivers' championship, with the Hungaroring round the final event before Formula 1's three-week August shutdown after his Belgian GP win.",
+      source:"Sky Sports F1", url:"https://www.skysports.com/f1/grandprix/hungary", date:"Jul 20",
+      spectrum:null, bias:null },
+    { headline:"🏎️ Verstappen's 2027 future in doubt as Red Bull's Mekies admits uncertainty",
+      summary:"Red Bull team principal Laurent Mekies acknowledged uncertainty over Max Verstappen's future with the team as silly-season talks intensify. The four-time champion, mired in seventh in the standings, is weighing his options for 2027 amid reported contact with rival teams.",
+      source:"Sky Sports F1", url:"https://www.skysports.com/f1/news/12433/13557956/max-verstappen-red-bull-boss-laurent-mekies-admits-uncertainty-over-dutch-drivers-future-with-team", date:"Jul 20",
+      spectrum:null, bias:null },
+    { headline:"🎾 Peruvian qualifier Buse stuns Tommy Paul for a maiden Hamburg title",
+      summary:"Ignacio Buse, a 22-year-old qualifier, upset sixth seed Tommy Paul 7-6(6), 4-6, 6-3 in the Hamburg Open final for his first ATP Tour title, becoming the first Peruvian tour-level champion since Luis Horna in 2007.",
+      source:"ATP Tour", url:"https://www.atptour.com/en/news/paul-buse-hamburg-2026-final", date:"Jul 19",
+      spectrum:null, bias:null },
+    { headline:"🎾 Krejcikova beats hometown favourite Sakkari in Athens for a ninth WTA title",
+      summary:"Barbora Krejcikova defeated Maria Sakkari 7-6(5), 6-3 in the Athens Open final for her ninth career WTA singles title and first since Wimbledon 2024, staying a perfect 4-0 head-to-head against Sakkari.",
+      source:"WTA Tour", url:"https://www.wtatennis.com/news/4538822/krejcikova-halts-greek-hopes-beats-sakkari-in-athens-for-9th-wta-singles-crown", date:"Jul 19",
+      spectrum:null, bias:null },
+    { headline:"🏏 Samson left out as Shreyas Iyer is named India's T20I captain for Zimbabwe",
+      summary:"India omitted Sanju Samson from the T20I squad for the three-match Zimbabwe series (Harare, 23, 25 and 26 July), with Shreyas Iyer named captain and Tilak Varma his deputy. Selectors rested Samson to give wicketkeeper-batter Prabhsimran Singh a look.",
+      source:"ESPNcricinfo", url:"https://www.espncricinfo.com/story/sanju-samson-left-out-of-india-s-t20i-squad-for-zimbabwe-tour-1544584", date:"Jul 19",
+      spectrum:null, bias:null },
+  ]},
+  { id:"misc", title:"🔬 Other Miscellaneous News", color:"#1abc9c", items:[
+    { headline:"A discarded SpaceX Falcon 9 stage is on course to hit the Moon around 5 August",
+      summary:"A stray Falcon 9 upper stage, adrift since a January 2025 lunar-lander launch, is projected to strike the Moon around 5 August. Astronomers in a new paper are urging observers to record the impact, with NASA's Lunar Reconnaissance Orbiter and South Korea's Danuri orbiter set to image the fresh crater.",
+      source:"Scientific American", url:"https://www.scientificamerican.com/article/a-spacex-rocket-is-about-to-crash-into-the-moon-scientists-will-be-watching/", date:"Jul 20",
+      spectrum:null, bias:null },
+    { headline:"Isotopes suggest interstellar comet 3I/ATLAS formed cold around an ancient star",
+      summary:"JWST and ground-based measurements found extreme deuterium and carbon-isotope ratios in interstellar comet 3I/ATLAS, pointing to formation below about 30 K around an old, metal-poor star. Researchers say it may be up to 12 billion years old — a preserved fragment of an ancient planetary system.",
+      source:"Nature", url:"https://www.nature.com/articles/s41586-026-10771-6", date:"Jul 20",
+      spectrum:null, bias:null },
+    { headline:"World-first: doctors restore sperm from testicular tissue frozen 16 years earlier",
+      summary:"Brussels doctors restored sperm production in a man by re-implanting fragments of testicular tissue removed and frozen in 2008, when he was 10, before sickle-cell chemotherapy. A year after the grafts, some tissue is producing mature, motile sperm — a world first for tissue frozen before puberty.",
+      source:"Nature", url:"https://www.nature.com/articles/d41586-026-02191-3", date:"Jul 17",
+      spectrum:null, bias:null },
+    { headline:"Naked mole-rat queens enforce colony infertility with a single chemical",
+      summary:"A Nature study identified isopropyl myristate, abundant in queens and peaking at ovulation, as the odour that suppresses reproduction in colony-mates by raising prolactin and lowering progesterone. Dosing a queenless colony blocked new queens from emerging; withdrawing it triggered reproductive competition.",
+      source:"Nature", url:"https://www.nature.com/articles/d41586-026-02221-0", date:"Jul 16",
+      spectrum:null, bias:null },
+    { headline:"Skeletons suggest ancient Egyptian princesses were trained weapon users",
+      summary:"An 'osteobiography' of roughly 4,000-year-old royal women buried at Dahshur, including Princess Ita, found robust muscle attachments and an 'archer's grip' bowing of a hand bone. The analysis implies their gold-and-lapis daggers were functional weapons rather than purely ceremonial grave goods.",
+      source:"Scientific American", url:"https://www.scientificamerican.com/article/ancient-egyptian-princesses-were-powerful-weapon-users-new-analysis-suggests/", date:"Jul 18",
+      spectrum:null, bias:null },
+  ]},
+  { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
+  { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
+  { id:"wpuzzle", title:"🔤 Word Puzzles", color:"#16a085", custom:"wpuzzle" },
+];
+
+const FUN_FACT = {
+  text: "Nutmeg is more than a baking spice — in quantity it is mildly hallucinogenic. It contains myristicin, which the body partly converts into an amphetamine-like compound, and as little as two tablespoons (about 5 grams) can trigger hallucinations, nausea and a delirium that may last up to two days. In large enough doses it is genuinely toxic, and poison-control centres record occasional cases of nutmeg intoxication.",
+  tag: "Category · Food & Chemistry"
+};
+
+const PUZZLE = {
+  type: "Quantitative",
+  title: "The Counterfeit Bag",
+  how: "You get only ONE weighing on an accurate scale — so make each bag contribute a different, identifiable amount.",
+  question: "You have 10 bags of gold coins. Every genuine coin weighs exactly 10 grams. One entire bag is counterfeit: every coin in it weighs only 9 grams. All the bags look identical.\n\nYou have a single accurate digital scale that reads total weight, but you may use it only ONCE. How can you identify the counterfeit bag in that one weighing?",
+  answer: "Number the bags 1 to 10. Take 1 coin from bag 1, 2 coins from bag 2, 3 from bag 3, and so on up to 10 coins from bag 10 — 55 coins in all. Weigh them together in a single go.\n\nIf every coin were genuine the pile would weigh 55 × 10 = 550 grams. Each counterfeit coin is 1 gram light, so the scale reads below 550, and the shortfall names the bag: a 1-gram deficit means bag 1, 2 grams means bag 2, and so on.\n\nExample: a reading of 543 grams is 7 grams short, so bag 7 is counterfeit."
+};
+
+const WORD_PUZZLE = {
+  type: "Spelling Bee",
+  title: "Central Casting",
+  how: "Every word must use the centre letter A and only the seven given letters (letters may repeat). Find the pangram that uses all seven.",
+  question: "Centre letter:  A\nOuter letters:  C  E  N  T  R  L\n\nRules: make words of 4+ letters. Every word must contain the centre letter A. Use only these seven letters; letters may repeat. Exactly one pangram uses all seven letters at least once.\n\nTarget: find the pangram plus a dozen or more words.",
+  answer: "Pangram: CENTRAL (uses all seven letters).\n\nA generous sample of valid words — all contain A and use only C, E, N, T, R, L, A:\nANTE · NEAR · LEAN · LANE · CANE · RACE · CARE · ACRE · LACE · LATE · RATE · TEAR · TALE · TEAL · ALERT · ALTER · LATER · REACT · TRACE · CRATE · CATER · CARET · ENACT · CLEAN · CLEAR · LANCE · NECTAR · CANTER · RECANT · TRANCE · RENTAL · ANTLER · CARTEL · CLARET · LEARNT · LANCET · LATTER · RATTLE · CANCEL · CLATTER · CENTRAL\n\n(Many more qualify — CANAL, NACRE, LANCER and others all work.)"
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function renderWordPuzzle(){
+  let h='<div class="sec-title">🔤 Word Puzzle of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#16a085,transparent)"></div>';
+  h+='<div class="wpuzzle-box"><span class="wptype">'+WORD_PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+WORD_PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+WORD_PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+WORD_PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this,\'wpans\')">Show Answer</button>';
+  h+='<div class="answer" id="wpans"><span class="alabel">Answer</span>'+WORD_PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn,ansId){var a=document.getElementById(ansId||'ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else if(sec.custom==="wpuzzle"){div.innerHTML=renderWordPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>

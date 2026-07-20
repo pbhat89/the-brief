@@ -1327,3 +1327,41 @@ is empty until the first run.
 2026-07-20	Astronomers detect the first ‘true sugar’ in interstellar space	41ae3528	erythrulose,interstellar,sugar,molecular cloud
 2026-07-20	Webb finds a hidden third planet, Beta Pictoris d, by its chemical fingerprint	3b6f0b53	beta pictoris d,jwst,exoplanet,spectroscopy
 2026-07-20	Astronauts capture the first diagnostic human X-rays in space	085b4f7f	fram2,x-rays,space medicine,radiology
+2026-07-21	Muslim affairs minister Faishal Ibrahim resigns over inappropriate online interactions	0f265c3f	faishal ibrahim,lawrence wong,pap,muslim affairs,resigns
+2026-07-21	Zaqy Mohamad takes over Muslim affairs as analysts call Faishal's exit a community loss	bb7924e0	zaqy mohamad,muslim affairs,malay-muslim,succession,appointed
+2026-07-21	Ex-actor Edmund Chen's careless-driving jail term cut from five days to one on appeal	bbb547d4	edmund chen,hri kumar,careless driving,appeal,sentence cut
+2026-07-21	Family of teen killed on Maldives school trip sues SJI International for negligence	f36b1d5b	jenna chan,sji international,maldives,negligence,lawsuit
+2026-07-21	Reform Party chief Kenneth Jeyaretnam dies in his sleep, aged 67	3eb341bc	kenneth jeyaretnam,reform party,opposition,dies
+2026-07-21	Update: Police tear-gas 10,000-strong 'Cockroach' march on Parliament	cf5aa591	cockroach janta party,parliament,monsoon session,police,tear gas
+2026-07-21	Floods and landslides kill at least 25 as Amarnath and Vaishno Devi yatras are suspended	3b6eb541	jammu kashmir,floods,landslides,amarnath yatra,monsoon
+2026-07-21	RBI intervenes to defend the rupee as the currency nears a record low	be001a36	rbi,rupee,record low,crude,intervention
+2026-07-21	Skyroot's Vikram-1 becomes India's first privately built rocket to reach orbit	b2f840b3	skyroot,vikram-1,sriharikota,orbit,private rocket
+2026-07-21	Update: Burnham names Healey chancellor as Reeves and Lammy leave the cabinet	41232778	andy burnham,john healey,chancellor,reshuffle,reeves
+2026-07-21	Update: Burnham's first act pledges an extra £340m to end rough sleeping	a2d83e62	andy burnham,rough sleeping,340 million,housing
+2026-07-21	Update: Burnham scraps the government's digital ID scheme to fund cost-of-living help	713eea8c	andy burnham,digital id,cost of living,scraps
+2026-07-21	Gilts sell off and the pound slips after Burnham's fiscal-flexibility remarks	a93dd988	gilts,pound,burnham,borrowing rules,selloff
+2026-07-21	Update: US launches fresh strikes on Iran after service members' deaths	a143ea97	united states,iran,trump,strikes,service members
+2026-07-21	Update: Russian missiles hit an Odesa grain ship, killing 10; Ukraine sends drones at Moscow	7d5deed6	russia,ukraine,odesa,golden leo,drones
+2026-07-21	DR Congo Ebola death toll passes 930 in the third-largest outbreak on record	34ac4dcd	dr congo,ebola,who,ituri,outbreak
+2026-07-21	Two Palestinians killed in an Israeli settler raid on a West Bank village	67b96891	west bank,deir jarir,israeli settlers,palestinians,killed
+2026-07-21	Prominent Cuban dissident artist Otero Alcántara is exiled and arrives in the US	6f740737	cuba,otero alcantara,san isidro,exiled,rubio
+2026-07-21	AI-agent payments startup Natural raises $30m Series A to take on Stripe	1cab641d	natural,series a,ai agents,payments,stripe
+2026-07-21	Inference startup Infinity raises $15m at a $100m valuation	51701936	infinity,inference,valuation,touring capital,chips
+2026-07-21	China's Z.AI fires up a 1-gigawatt data centre built entirely with Chinese chips	b4740ee0	z.ai,data centre,chinese chips,glm,export controls
+2026-07-21	Nonprofit Current AI unveils an offline device running AI in 22 Indian languages	ad889d60	current ai,suno sutra,offline,indian languages,device
+2026-07-21	Study finds AI models can stereotype job applicants more than human recruiters do	38daf6a6	llms,hiring bias,o3,study,recruiters
+2026-07-21	US stocks rebound as the Nasdaq 100 climbs 1% before a wave of Big Tech earnings	6c60d4bf	nasdaq 100,stocks,chipmakers,earnings,rebound
+2026-07-21	Brent tops $90 intraday as US-Iran fighting threatens Strait of Hormuz flows	cdbf7ffe	brent crude,oil,strait of hormuz,iran,90 dollars
+2026-07-21	Brookfield and CPPIB agree to buy warehouse REIT LXP Industrial for $5.2bn	0f15bc1d	brookfield,cppib,lxp industrial,acquisition,reit
+2026-07-21	Samsung Biologics agrees to buy Switzerland's PolyPeptide for $1.8bn	f77c574c	samsung biologics,polypeptide,acquisition,switzerland,drugmaker
+2026-07-21	War and AI turbocharge Wall Street: five banks' equities desks reap ~$26bn, up 71%	bfb75351	wall street,equities trading,banks,26 billion,q2
+2026-07-21	🏎️ Antonelli leads into the Hungaroring, the last race before F1's summer break	4cfe636e	kimi antonelli,hungarian grand prix,hungaroring,f1,standings
+2026-07-21	🏎️ Verstappen's 2027 future in doubt as Red Bull's Mekies admits uncertainty	c488d1d4	max verstappen,red bull,mekies,2027,future
+2026-07-21	🎾 Peruvian qualifier Buse stuns Tommy Paul for a maiden Hamburg title	c172efc8	ignacio buse,tommy paul,hamburg open,atp title,peru
+2026-07-21	🎾 Krejcikova beats hometown favourite Sakkari in Athens for a ninth WTA title	29e7991f	barbora krejcikova,maria sakkari,athens open,wta title,final
+2026-07-21	🏏 Samson left out as Shreyas Iyer is named India's T20I captain for Zimbabwe	6a1aa163	sanju samson,shreyas iyer,india t20i,zimbabwe,squad
+2026-07-21	A discarded SpaceX Falcon 9 stage is on course to hit the Moon around 5 August	83d0596c	spacex,falcon 9,moon,impact,lunar reconnaissance orbiter
+2026-07-21	Isotopes suggest interstellar comet 3I/ATLAS formed cold around an ancient star	7cebeed2	3i/atlas,interstellar comet,isotopes,jwst,ancient star
+2026-07-21	World-first: doctors restore sperm from testicular tissue frozen 16 years earlier	adb5c3cb	testicular tissue,sperm,fertility,world first,brussels
+2026-07-21	Naked mole-rat queens enforce colony infertility with a single chemical	2bc40841	naked mole-rat,queen,isopropyl myristate,infertility,pheromone
+2026-07-21	Skeletons suggest ancient Egyptian princesses were trained weapon users	a9e8d0b8	ancient egypt,princess ita,dahshur,skeletons,weapons

@@ -224,14 +224,14 @@
       "date": "2026-07-20",
       "topic_key": "africa",
       "text": "Africa is so vast that the US, China, India and much of Europe could all fit inside it at once."
+    },
+    {
+      "date": "2026-07-21",
+      "topic_key": "nutmeg",
+      "text": "Nutmeg is mildly hallucinogenic in quantity due to myristicin, and toxic in large doses."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-06-20",
-      "type": "visual",
-      "title_key": "triangles-within-the-triangle"
-    },
     {
       "date": "2026-06-21",
       "type": "logic",
@@ -376,6 +376,11 @@
       "date": "2026-07-20",
       "type": "logic",
       "title_key": "broken-window"
+    },
+    {
+      "date": "2026-07-21",
+      "type": "quantitative",
+      "title_key": "counterfeit-bag"
     }
   ],
   "word_puzzle_log": [
@@ -518,6 +523,11 @@
       "date": "2026-07-20",
       "type": "anagram",
       "title_key": "perfect-fit"
+    },
+    {
+      "date": "2026-07-21",
+      "type": "spellingbee",
+      "title_key": "central-casting"
     }
   ]
 }
