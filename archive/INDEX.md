@@ -1365,3 +1365,37 @@ is empty until the first run.
 2026-07-21	World-first: doctors restore sperm from testicular tissue frozen 16 years earlier	adb5c3cb	testicular tissue,sperm,fertility,world first,brussels
 2026-07-21	Naked mole-rat queens enforce colony infertility with a single chemical	2bc40841	naked mole-rat,queen,isopropyl myristate,infertility,pheromone
 2026-07-21	Skeletons suggest ancient Egyptian princesses were trained weapon users	a9e8d0b8	ancient egypt,princess ita,dahshur,skeletons,weapons
+2026-07-22	HDB plans new homes at Gillman Barracks and Sunset Way while keeping heritage blocks	8bda9ca2	HDB, Gillman Barracks, Sunset Way, Clementi, Maju Forest, redevelopment
+2026-07-22	Man, 72, jailed 23 years for sexually abusing his step-granddaughter from age nine	52a38444	State Courts, aggravated statutory rape, sentencing
+2026-07-22	Man, 59, dies after a stabbing at a Lengkok Bahru block; neighbour arrested	3eb11925	Singapore Police Force, Lengkok Bahru, Redhill, arrest
+2026-07-22	Power bank catches fire at Woodlands MRT station; commuter suffers minor burns	313c1d48	Woodlands MRT, Thomson-East Coast Line, power bank fire
+2026-07-22	Sikkim hydropower tunnel collapse kills 10, with 17 workers still missing	b23e78fe	NHPC, Teesta Stage-VI, Sikkim, tunnel collapse
+2026-07-22	Update: Police detain Rahul Gandhi and opposition leaders outside PM Modi’s residence	5871e9b9	Rahul Gandhi, Narendra Modi, Congress, NEET, protests
+2026-07-22	India’s top court upholds scrapping of a passport and visa outsourcing tender	ade8da05	Supreme Court of India, passport tender, consular services
+2026-07-22	Shapoorji Pallonji closes a 151-billion-rupee private credit deal, among India’s largest	8e93ed34	Shapoorji Pallonji, private credit, financing
+2026-07-22	Resident doctors in England to stage a five-day strike from 25 July	92c8d06d	BMA, resident doctors, Wes Streeting, NHS, strike
+2026-07-22	Standards commissioner opens an inquiry into a 5-million-pound crypto gift to Farage	cc221659	Nigel Farage, Christopher Harborne, Reform UK, Electoral Commission
+2026-07-22	Burnham cuts VAT on household electricity bills to zero for six months	e3a103bd	Andy Burnham, VAT, energy price cap, Treasury
+2026-07-22	Louise Haigh named First Secretary of State despite a past fraud conviction	ad3ab496	Louise Haigh, Andy Burnham, First Secretary of State
+2026-07-22	Millions face hosepipe bans as a third heatwave grips England	cef0b582	Anglian Water, hosepipe ban, heatwave, drought
+2026-07-22	Hamas elects Khalil al-Hayya as its new overall leader	df2880d6	Khalil al-Hayya, Khaled Meshaal, Hamas, Yahya Sinwar
+2026-07-22	Yemen’s Houthis declare a naval blockade of Saudi Arabia	b56185a3	Houthis, Saudi Arabia, naval blockade, Red Sea
+2026-07-22	Update: US strikes Iran for a tenth straight night as mediators float a truce	46948f7b	US Central Command, Iran, Pete Hegseth, ceasefire, Oman, Qatar
+2026-07-22	Tropical Storm Bertha crawls along the Gulf Coast, threatening heavy flooding	abf2bb58	Tropical Storm Bertha, Gulf Coast, flooding
+2026-07-22	Google releases Gemini 3.6 Flash and two new models, but still no 3.5 Pro	29335fdf	Google DeepMind, Gemini 3.6 Flash, Gemini 3.5 Pro
+2026-07-22	CuspAI raises $450 million at a $2.6 billion valuation with Bezos backing	0c81cbd9	CuspAI, Kleiner Perkins, Jeff Bezos, Nvidia, Meta
+2026-07-22	BlackRock markets more than $12 billion in bonds to fund a Meta data centre	d2353851	BlackRock, Meta, El Paso, data centre, JPMorgan
+2026-07-22	OpenAI says its Codex and ChatGPT Work agents have reached 10 million users	03e2b53b	OpenAI, Codex, ChatGPT Work, AI agents
+2026-07-22	Wall Street rebounds as chip stocks rally; Nasdaq climbs 1.29% to 25,837	174ae77f	Nasdaq, S&P 500, Dow, chip stocks, Nvidia
+2026-07-22	General Motors beats estimates and raises its 2026 profit outlook	b31e4791	General Motors, earnings, guidance
+2026-07-22	Domino’s beats on revenue but misses on profit as US sales barely grow	cb283995	Domino's Pizza, earnings, same-store sales
+2026-07-22	Update: Brent slips toward $88 as US-Iran truce hopes cool the oil rally	ac2490c8	Brent crude, oil prices, US, Iran, Strait of Hormuz
+2026-07-22	🏎️ Hamilton says he must raise his game at the Hungarian Grand Prix	20aada9e	Lewis Hamilton, Ferrari, Kimi Antonelli, Hungarian Grand Prix
+2026-07-22	🏏 India begin their Zimbabwe T20I tour on Thursday with Iyer under pressure	d3da4ac4	India, Zimbabwe, Shreyas Iyer, Vaibhav Sooryavanshi, Ravi Bishnoi
+2026-07-22	🎾 Krejcikova extends her winning run to six at the Prague Open	fcf3ff58	Barbora Krejcikova, Linda Fruhvirtova, Prague Open
+2026-07-22	🎾 Struff and Trungelliti advance as the Kitzbuhel ATP 250 begins	c31df524	Jan-Lennard Struff, Marco Trungelliti, Kitzbuhel
+2026-07-22	Influenza A dissolves cells’ nuclear ‘paraspeckles’ to hijack them, study finds	067927ed	EMBL Hamburg, influenza A, paraspeckles, antivirals
+2026-07-22	Neanderthals may have been as intelligent as early modern humans, brain study suggests	63b70947	Neanderthals, brain, intelligence, evolution
+2026-07-22	Rare footage captures an Arctic bobtail squid mother guarding her eggs	09c7a264	bobtail squid, cephalopod, marine biology, North Atlantic
+2026-07-22	Astronomers find the first binary system where both sibling stars went supernova	deba65d8	Fermi telescope, supernova, binary star, Jellyfish Nebula
+2026-07-22	A thymus hormone may curb age-related inflammation, mouse study finds	21da75ff	thymus, thymulin, inflammation, ageing

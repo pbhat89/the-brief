@@ -229,14 +229,14 @@
       "date": "2026-07-21",
       "topic_key": "nutmeg",
       "text": "Nutmeg is mildly hallucinogenic in quantity due to myristicin, and toxic in large doses."
+    },
+    {
+      "date": "2026-07-22",
+      "topic_key": "napoleon",
+      "text": "Napoleon was about average height for his era; the 'short' image is a myth."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-06-21",
-      "type": "logic",
-      "title_key": "one-question-two-guards"
-    },
     {
       "date": "2026-06-22",
       "type": "quantitative",
@@ -381,6 +381,11 @@
       "date": "2026-07-21",
       "type": "quantitative",
       "title_key": "counterfeit-bag"
+    },
+    {
+      "date": "2026-07-22",
+      "type": "lateral",
+      "title_key": "romeo-and-juliet"
     }
   ],
   "word_puzzle_log": [
@@ -528,6 +533,11 @@
       "date": "2026-07-21",
       "type": "spellingbee",
       "title_key": "central-casting"
+    },
+    {
+      "date": "2026-07-22",
+      "type": "grouping",
+      "title_key": "hook-line-and-sinker"
     }
   ]
 }
