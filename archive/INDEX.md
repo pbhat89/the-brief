@@ -1399,3 +1399,37 @@ is empty until the first run.
 2026-07-22	Rare footage captures an Arctic bobtail squid mother guarding her eggs	09c7a264	bobtail squid, cephalopod, marine biology, North Atlantic
 2026-07-22	Astronomers find the first binary system where both sibling stars went supernova	deba65d8	Fermi telescope, supernova, binary star, Jellyfish Nebula
 2026-07-22	A thymus hormone may curb age-related inflammation, mouse study finds	21da75ff	thymus, thymulin, inflammation, ageing
+2026-07-23	Singapore Cabinet reshuffle promotes five office-holders, effective 27 July	ac129e45	Singapore Cabinet,reshuffle,Tan See Leng,Ng Chee Meng,Shanmugam
+2026-07-23	IRAS recovers S$6.8 million from eight nightclubs over flower-garland sales	781e140e	IRAS,nightclubs,flower garland,tax penalties
+2026-07-23	No MRT delay over 30 minutes since November 2025, the best run since 2011: LTA	85fe7f9e	LTA,MRT,rail reliability,delays
+2026-07-23	S$230,000 Mercedes electric car catches fire at a Woodlands carpark	1d3c3729	Mercedes EV,Woodlands,car fire
+2026-07-23	Man who set fire to Joo Seng flat over neighbour delusions gets treatment order	ab5ec501	Joo Seng,fire,mandatory treatment order,court
+2026-07-23	Update: Rahul Gandhi freed after detention as MPs stage a Parliament 'Black Day'	481eb8ef	Rahul Gandhi,NEET,Cockroach,Parliament,Black Day
+2026-07-23	Update: Sikkim tunnel blast toll rises to 20, with 13 bodies recovered	19364b42	Sikkim,Teesta,NHPC,tunnel collapse,death toll
+2026-07-23	India presses China on market access and the trade gap at ASEAN talks in Manila	f22fdd9c	Jaishankar,Wang Yi,China,ASEAN,Manila
+2026-07-23	India's largest asset manager makes a muted market debut after a $1 billion IPO	3bf72743	SBI,asset manager,IPO,market debut
+2026-07-23	UK inflation cools to a 15-month low as petrol and food prices ease	f3d3ab0a	UK inflation,CPI,Bank of England
+2026-07-23	Update: Conservatives urge HMRC to investigate Farage's GBP5 million gift	18ca2bca	Nigel Farage,HMRC,Conservatives,Reform UK,gift
+2026-07-23	Burnham stakes welfare reform on further education to cut youth unemployment	7cf7ffda	Andy Burnham,welfare,further education,unemployment
+2026-07-23	Burnham urges fiscal discipline at his first Cabinet meeting	8e86a394	Andy Burnham,fiscal discipline,Cabinet
+2026-07-23	Update: Trump vows to hit Iranian infrastructure for each Hormuz ship attack	c91b1ffc	Trump,Iran,Strait of Hormuz,strikes,Britain
+2026-07-23	Ukraine's new military chief vows to intensify offensive operations on Russia	d5563966	Ukraine,Drapatyi,Zelenskyy,Russia,military
+2026-07-23	Ukrainian drones again strike warehouses of Russian retail giant Wildberries	323a30de	Ukraine,drones,Wildberries,Russia
+2026-07-23	Update: DR Congo Ebola outbreak nears 1,000 deaths, spreading faster than ever	bd42f7cb	DR Congo,Ebola,WHO,outbreak
+2026-07-23	Cybersecurity startup Glow leaves stealth at a $1.2 billion valuation	172bf214	Glow,cybersecurity,Sequoia,Series A,valuation
+2026-07-23	An Anthropic-Physical Intelligence acquisition rumour sweeps AI circles	e8930d22	Anthropic,Physical Intelligence,acquisition,rumour
+2026-07-23	Dimension Capital raises an $800 million fund for science-meets-compute startups	57fcddfe	Dimension Capital,fund,venture,science compute
+2026-07-23	AMD launches Helios, its first rack-scale AI system, with Microsoft as a buyer	a43f3f64	AMD,Helios,Nvidia,Microsoft,AI system
+2026-07-23	Alphabet beats estimates as Google Cloud revenue jumps 82%	780b1c20	Alphabet,Google Cloud,earnings,capex
+2026-07-23	Tesla profit weakens even as revenue climbs 26%; shares slide	c44b6827	Tesla,earnings,revenue,margin
+2026-07-23	IBM revenue disappoints as mainframe sales soften	92bf4b5c	IBM,earnings,mainframe,Krishna
+2026-07-23	Wall Street dips as oil jumps ahead of a wave of Big Tech earnings	9b2e63f2	Wall Street,S&P 500,Nasdaq,oil,earnings
+2026-07-23	🏎️ Antonelli and Piastri among five drivers to sit out Hungarian GP first practice	932e6f3b	Kimi Antonelli,Oscar Piastri,Hungarian Grand Prix,first practice
+2026-07-23	🏎️ Aston Martin to debut its first big upgrade of 2026 at the Hungarian GP	5e5b84f1	Aston Martin,Adrian Newey,Alonso,Hungarian Grand Prix,upgrade
+2026-07-23	🏏 Sooryavanshi stays confident as India open their Zimbabwe T20I series	fbbc1a63	Vaibhav Sooryavanshi,India,Zimbabwe,T20I,Shreyas Iyer
+2026-07-23	🎾 Baez beats Kecmanovic in a battle of former champions at Kitzbuhel	d040f385	Sebastian Baez,Miomir Kecmanovic,Kitzbuhel,Generali Open
+2026-07-23	Astronomers spot the best candidate yet for a planet-sized 'exomoon'	752f039e	exomoon,exosatellite,brown dwarf,CD-35 2722
+2026-07-23	A quantum computer learns to correct its own errors in real time	5b9ca18a	quantum computer,error correction,reinforcement learning
+2026-07-23	The most complex sugar yet is detected in interstellar space	ba5e62ad	erythrulose,interstellar,sugar,Milky Way
+2026-07-23	Scientists watch the ocean floor tear open and ooze lava in real time	a91e1f13	seafloor spreading,Southeast Indian Ridge,lava,ocean crust
+2026-07-23	Researchers describe a new monkey with orange lips and a frog-like roar	24e48d4d	new monkey species,primate,discovery

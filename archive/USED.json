@@ -234,14 +234,14 @@
       "date": "2026-07-22",
       "topic_key": "napoleon",
       "text": "Napoleon was about average height for his era; the 'short' image is a myth."
+    },
+    {
+      "date": "2026-07-23",
+      "topic_key": "great wall of china",
+      "text": "The Great Wall of China cannot be seen from space with the naked eye; it is a myth."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-06-22",
-      "type": "quantitative",
-      "title_key": "two-candles"
-    },
     {
       "date": "2026-06-23",
       "type": "lateral",
@@ -386,14 +386,14 @@
       "date": "2026-07-22",
       "type": "lateral",
       "title_key": "romeo-and-juliet"
+    },
+    {
+      "date": "2026-07-23",
+      "type": "visual",
+      "title_key": "punch-and-unfold"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-06-22",
-      "type": "grouping",
-      "title_key": "tack-it-on"
-    },
     {
       "date": "2026-06-23",
       "type": "ladder",
@@ -538,6 +538,11 @@
       "date": "2026-07-22",
       "type": "grouping",
       "title_key": "hook-line-and-sinker"
+    },
+    {
+      "date": "2026-07-23",
+      "type": "ladder",
+      "title_key": "cats-and-dogs"
     }
   ]
 }
