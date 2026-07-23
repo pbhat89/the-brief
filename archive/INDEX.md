@@ -1433,3 +1433,43 @@ is empty until the first run.
 2026-07-23	The most complex sugar yet is detected in interstellar space	ba5e62ad	erythrulose,interstellar,sugar,Milky Way
 2026-07-23	Scientists watch the ocean floor tear open and ooze lava in real time	a91e1f13	seafloor spreading,Southeast Indian Ridge,lava,ocean crust
 2026-07-23	Researchers describe a new monkey with orange lips and a frog-like roar	24e48d4d	new monkey species,primate,discovery
+2026-07-24	Man, 59, charged with murder over fatal stabbing of neighbour at Lengkok Bahru	b292fdc7	ng swee seng,thiyagarajan karunakaran,lengkok bahru,murder,charged
+2026-07-24	Malaysian man jailed 11.5 years and nine strokes for raping colleague after work dinner	4f15015e	beh kien tai,rape,company dinner,caning,sentenced
+2026-07-24	Hair salon staffer jailed six weeks for spending customers' CDC vouchers	716a5854	phang koh xing,cdc vouchers,yun nam,criminal breach of trust,jailed
+2026-07-24	Green Lamborghini Gallardo bursts into flames on the East Coast Parkway	9bfdb906	lamborghini,east coast parkway,scdf,fire
+2026-07-24	Man, 23, charged over taser possession after pre-dawn Boat Quay brawl	625521d7	boat quay,taser,upper circular road,charged
+2026-07-24	DRDO conducts maiden flight test of indigenous Kusha long-range air-defence missile	78c4315c	drdo,kusha,rajnath singh,odisha,tests
+2026-07-24	Sonam Wangchuk ends 26-day hunger strike after Union ministers intervene	26da244a	sonam wangchuk,narendra modi,ladakh,hunger strike,ends
+2026-07-24	Kerala suspends ADGP Ajith Kumar over cover-up in Youth Congress assault probe	28807b5a	m r ajith kumar,youth congress,kerala,nava kerala sadas,suspended
+2026-07-24	Homes razed and 2,500 detained across Kashmir after Anantnag policeman's killing	f10353ec	anantnag,omar abdullah,kashmir,detentions,demolished
+2026-07-24	Centre splits urban affairs ministry to create a Delhi-focused capital development department	d2d4a74b	housing and urban affairs,manohar lal khattar,d thara,delhi,bifurcates
+2026-07-24	Burnham cuts business rates 20% for England's pubs, clubs and music venues	560d4226	andy burnham,business rates,pubs,hospitality,cuts
+2026-07-24	Burnham tells Scotland a fresh independence referendum is off limits	0f659cf1	andy burnham,john swinney,scotland,independence referendum,rules out
+2026-07-24	More than 100 UK millionaires urge PM Burnham to raise their taxes	694d4a43	andy burnham,millionaires,wealth tax,urge
+2026-07-24	Markets steady as John Healey replaces sacked Rachel Reeves as Chancellor	75f969a3	john healey,rachel reeves,chancellor,gilts,appointed
+2026-07-24	Hedge funds ramp up bets against UK stocks as Burnham pledges 'new economic model'	a6168c5c	andy burnham,hedge funds,short selling,uk equities,reindustrialisation
+2026-07-24	Rubio and Lavrov meet in Manila in first US-Russia talks since September	78b9a29b	marco rubio,sergei lavrov,manila,asean,ukraine,meet
+2026-07-24	Trump says signed Saudi nuclear deal now hinges on normalising ties with Israel	5295a085	trump,saudi arabia,abraham accords,israel,nuclear,condition
+2026-07-24	Wildfires force more than 20,000 to flee southwest France as Spain and Italy burn	537f00f1	france,spain,italy,bordeaux,wildfires,evacuate
+2026-07-24	US judge sets June 2027 trial date for Venezuela's Maduro and his wife	88bf62ce	maduro,cilia flores,hellerstein,venezuela,trial
+2026-07-24	Monsoon floods kill at least 82 across India, Pakistan and Afghanistan	6956f360	india,pakistan,afghanistan,nuristan,monsoon,floods
+2026-07-24	AI chip startup Etched doubles to $10.3 billion valuation in Sequoia-led round	79b2b56d	etched,sequoia,ai chip,valuation,raises
+2026-07-24	AMD to invest up to $5 billion in Anthropic in a new AI-chip supply deal	2d5767ad	amd,anthropic,instinct mi450,invests
+2026-07-24	EU hits Google with first Digital Markets Act fines, totalling €890 million	72ce0274	google,european commission,digital markets act,play store,fines
+2026-07-24	US Treasury threatens sanctions over China's Kimi K3 AI model	f12ed8f5	moonshot,kimi k3,anthropic,treasury,sanctions
+2026-07-24	AMD launches 256-core EPYC 'Venice' server chip on TSMC's 2nm process	7fcfd100	amd,epyc venice,zen 6,tsmc,launches
+2026-07-24	Wall Street sells off as Alphabet and Tesla slump and oil tops $100	6d981590	s&p 500,nasdaq,alphabet,tesla,oil,fall
+2026-07-24	Intel revenue jumps 25% to $16.1 billion on AI demand; shares leap	9185ada8	intel,earnings,data center,revenue,beat
+2026-07-24	ECB holds rates at 2.25% as Lagarde leaves the door open to a September hike	981ddd4c	ecb,christine lagarde,deposit rate,hold
+2026-07-24	US jobless claims fall to 187,000, the fewest since 1969	410fbdc1	jobless claims,labour market,1969,fall
+2026-07-24	Update: Brent crude tops $100 after Houthi strike on two Saudi tankers	bf0ae5a5	brent crude,wti,houthis,saudi tankers,surge
+2026-07-24	🏎️ Corner-heavy Hungaroring could revive Hamilton and Ferrari's title fight with Antonelli	2077796e	kimi antonelli,lewis hamilton,ferrari,hungarian grand prix,title
+2026-07-24	🏎️ Red Bull says top drivers are calling but backs Verstappen to stay for 2027	0c67db2d	laurent mekies,max verstappen,red bull,exit clause
+2026-07-24	🏏 India beat Zimbabwe by seven wickets in the first T20I in Harare	3badc6ec	india,zimbabwe,mayank yadav,harare,t20i,won
+2026-07-24	🏏 Manchester Super Giants crush London Spirit at Lord's in The Hundred opener	8a5b8996	manchester super giants,london spirit,ryana macdonald-gay,lords,the hundred,beat
+2026-07-24	🎾 Defending champion Bublik reaches the Kitzbuhel semi-finals	48bc44aa	alexander bublik,alex molcan,kitzbuhel,generali open,semi-finals
+2026-07-24	Webb uncovers a hidden third giant planet in the Beta Pictoris system	84178138	beta pictoris d,james webb,methane,hr 8799,discovered
+2026-07-24	Decades-old near-Earth 'asteroid' turns out to be a faint dark comet	d81bb9c1	1998 sh2,davide farnocchia,jpl,dark comet,reclassified
+2026-07-24	Scientists grow early human sperm cells from stem cells inside a mouse 'mini-testis'	6c187759	university of pennsylvania,spermatogonia,ips cells,testis,generated
+2026-07-24	Astronomers find the first atmosphere on a rocky planet in a habitable zone	d06a1eda	lhs 1140 b,helium,red dwarf,atmosphere,detected
+2026-07-24	First Classic Maya astronomer identified by name from a 1,200-year-old wall	065ca2fa	sak tahn waax,xultun,venus,maya,deciphered

@@ -239,14 +239,14 @@
       "date": "2026-07-23",
       "topic_key": "great wall of china",
       "text": "The Great Wall of China cannot be seen from space with the naked eye; it is a myth."
+    },
+    {
+      "date": "2026-07-24",
+      "topic_key": "deck of cards",
+      "text": "A shuffled 52-card deck is almost certainly in an order that has never existed before (52! is about 8e67)."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-06-23",
-      "type": "lateral",
-      "title_key": "same-hour-not-twins"
-    },
     {
       "date": "2026-06-24",
       "type": "visual",
@@ -391,14 +391,14 @@
       "date": "2026-07-23",
       "type": "visual",
       "title_key": "punch-and-unfold"
+    },
+    {
+      "date": "2026-07-24",
+      "type": "logic",
+      "title_key": "three-logicians"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-06-23",
-      "type": "ladder",
-      "title_key": "from-less-to-more"
-    },
     {
       "date": "2026-06-24",
       "type": "anagram",
@@ -543,6 +543,11 @@
       "date": "2026-07-23",
       "type": "ladder",
       "title_key": "cats-and-dogs"
+    },
+    {
+      "date": "2026-07-24",
+      "type": "letterboxed",
+      "title_key": "sides-of-the-story"
     }
   ]
 }

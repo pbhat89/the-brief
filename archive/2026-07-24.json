@@ -1,0 +1,718 @@
+{
+  "date": "2026-07-24",
+  "items": [
+    {
+      "tab": "Singapore",
+      "headline": "Man, 59, charged with murder over fatal stabbing of neighbour at Lengkok Bahru",
+      "summary": "Ng Swee Seng, 59, charged on 22 July with murdering neighbour Thiyagarajan Karunakaran, found stabbed at a Lengkok Bahru lift lobby on 20 July.",
+      "url": "https://mothership.sg/2026/07/man-charged-murder-neighbour-lengkok-bahru/",
+      "outlet": "Mothership",
+      "publish_date": "2026-07-22",
+      "short_hash": "b292fdc7",
+      "key_entities": [
+        "ng swee seng",
+        "thiyagarajan karunakaran",
+        "lengkok bahru",
+        "murder",
+        "charged"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "Malaysian man jailed 11.5 years and nine strokes for raping colleague after work dinner",
+      "summary": "Beh Kien Tai, 37, jailed 11.5 years and nine strokes for raping a 39-year-old woman after a company dinner.",
+      "url": "https://mothership.sg/2026/07/man-rapes-woman-drunk-company-dinner-jail-cane/",
+      "outlet": "Mothership",
+      "publish_date": "2026-07-23",
+      "short_hash": "4f15015e",
+      "key_entities": [
+        "beh kien tai",
+        "rape",
+        "company dinner",
+        "caning",
+        "sentenced"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "Hair salon staffer jailed six weeks for spending customers' CDC vouchers",
+      "summary": "Phang Koh Xing, 31, jailed six weeks for spending S$1,167 of two customers' CDC vouchers at Yun Nam Hair Care.",
+      "url": "https://mothership.sg/2026/07/woman-jail-spending-customers-cdc-vouchers/",
+      "outlet": "Mothership",
+      "publish_date": "2026-07-22",
+      "short_hash": "716a5854",
+      "key_entities": [
+        "phang koh xing",
+        "cdc vouchers",
+        "yun nam",
+        "criminal breach of trust",
+        "jailed"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "Green Lamborghini Gallardo bursts into flames on the East Coast Parkway",
+      "summary": "A green Lamborghini Gallardo caught fire on the ECP on 23 July; SCDF put it out, no injuries.",
+      "url": "https://mothership.sg/2026/07/lamborghini-catches-fire/",
+      "outlet": "Mothership",
+      "publish_date": "2026-07-23",
+      "short_hash": "9bfdb906",
+      "key_entities": [
+        "lamborghini",
+        "east coast parkway",
+        "scdf",
+        "fire"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "Man, 23, charged over taser possession after pre-dawn Boat Quay brawl",
+      "summary": "A 23-year-old charged on 21 July with taser possession over a 19 July Boat Quay fight.",
+      "url": "https://mothership.sg/2026/07/boat-quay-fight-taser/",
+      "outlet": "Mothership",
+      "publish_date": "2026-07-21",
+      "short_hash": "625521d7",
+      "key_entities": [
+        "boat quay",
+        "taser",
+        "upper circular road",
+        "charged"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "DRDO conducts maiden flight test of indigenous Kusha long-range air-defence missile",
+      "summary": "DRDO tested the Kusha long-range SAM off Odisha on 23 July; Rajnath Singh said it cuts import dependence.",
+      "url": "https://indianexpress.com/article/india/drdo-flight-test-of-kusha-takes-off-10800880/",
+      "outlet": "The Indian Express",
+      "publish_date": "2026-07-24",
+      "short_hash": "78c4315c",
+      "key_entities": [
+        "drdo",
+        "kusha",
+        "rajnath singh",
+        "odisha",
+        "tests"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "Sonam Wangchuk ends 26-day hunger strike after Union ministers intervene",
+      "summary": "Ladakh activist Sonam Wangchuk ended his 26-day fast on 23 July after Union ministers intervened.",
+      "url": "https://indianexpress.com/article/india/sonam-wangchuk-ends-hunger-strike-after-26-days-in-presence-of-union-ministers-after-pms-announcement-10800743/",
+      "outlet": "The Indian Express",
+      "publish_date": "2026-07-24",
+      "short_hash": "26da244a",
+      "key_entities": [
+        "sonam wangchuk",
+        "narendra modi",
+        "ladakh",
+        "hunger strike",
+        "ends"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "Kerala suspends ADGP Ajith Kumar over cover-up in Youth Congress assault probe",
+      "summary": "Kerala suspended ADGP M R Ajith Kumar on 23 July for shielding police who assaulted Youth Congress workers.",
+      "url": "https://indianexpress.com/article/india/kerala-adgp-m-r-ajith-kumar-suspended-youth-congress-attack-probe-10800611/",
+      "outlet": "The Indian Express",
+      "publish_date": "2026-07-23",
+      "short_hash": "28807b5a",
+      "key_entities": [
+        "m r ajith kumar",
+        "youth congress",
+        "kerala",
+        "nava kerala sadas",
+        "suspended"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "Homes razed and 2,500 detained across Kashmir after Anantnag policeman's killing",
+      "summary": "Forces razed two suspected militants' homes and detained ~2,500 after the Anantnag attack; Omar Abdullah criticised the crackdown.",
+      "url": "https://indianexpress.com/article/india/anantnag-terror-attack-terrorists-homes-demolished-omar-abdullah-kashmir-10800147/",
+      "outlet": "The Indian Express",
+      "publish_date": "2026-07-23",
+      "short_hash": "f10353ec",
+      "key_entities": [
+        "anantnag",
+        "omar abdullah",
+        "kashmir",
+        "detentions",
+        "demolished"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "Centre splits urban affairs ministry to create a Delhi-focused capital development department",
+      "summary": "Govt split the Housing and Urban Affairs ministry into a Delhi-NCR capital department and a national urban department on 23 July.",
+      "url": "https://indianexpress.com/article/india/urban-development-ministry-split-delhi-gets-own-department-10800899/",
+      "outlet": "The Indian Express",
+      "publish_date": "2026-07-24",
+      "short_hash": "d2d4a74b",
+      "key_entities": [
+        "housing and urban affairs",
+        "manohar lal khattar",
+        "d thara",
+        "delhi",
+        "bifurcates"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "Burnham cuts business rates 20% for England's pubs, clubs and music venues",
+      "summary": "PM Andy Burnham cut business rates 20% for ~32,000 pubs, clubs and venues from April 2026, ~£100m cost.",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-23/uk-burnham-cuts-business-rates-pubs-clubs-live-venues",
+      "outlet": "Bloomberg",
+      "publish_date": "2026-07-23",
+      "short_hash": "560d4226",
+      "key_entities": [
+        "andy burnham",
+        "business rates",
+        "pubs",
+        "hospitality",
+        "cuts"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "Burnham tells Scotland a fresh independence referendum is off limits",
+      "summary": "Meeting John Swinney in Glasgow on 23 July, Burnham ruled out a second independence vote.",
+      "url": "https://www.aljazeera.com/news/2026/7/23/uks-burnham-tells-scotland-new-independence-vote-is-off-limits",
+      "outlet": "Al Jazeera",
+      "publish_date": "2026-07-23",
+      "short_hash": "0f659cf1",
+      "key_entities": [
+        "andy burnham",
+        "john swinney",
+        "scotland",
+        "independence referendum",
+        "rules out"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "More than 100 UK millionaires urge PM Burnham to raise their taxes",
+      "summary": "Over 100 wealthy Britons publicly asked PM Burnham to raise taxes on the richest.",
+      "url": "https://www.aljazeera.com/news/2026/7/23/more-than-100-uk-millionaires-ask-new-pm-andy-burnham-to-tax-them-more",
+      "outlet": "Al Jazeera",
+      "publish_date": "2026-07-23",
+      "short_hash": "694d4a43",
+      "key_entities": [
+        "andy burnham",
+        "millionaires",
+        "wealth tax",
+        "urge"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "Markets steady as John Healey replaces sacked Rachel Reeves as Chancellor",
+      "summary": "Burnham named John Healey Chancellor after sacking Rachel Reeves; gilt yields eased on 21 July.",
+      "url": "https://www.cnbc.com/2026/07/21/andy-burnham-john-healey-chancellor-gilts-jamie-dimon.html",
+      "outlet": "CNBC",
+      "publish_date": "2026-07-21",
+      "short_hash": "75f969a3",
+      "key_entities": [
+        "john healey",
+        "rachel reeves",
+        "chancellor",
+        "gilts",
+        "appointed"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "Hedge funds ramp up bets against UK stocks as Burnham pledges 'new economic model'",
+      "summary": "UK short positions rose fivefold in H1 2026 as funds bet against Burnham's reindustrialisation plan.",
+      "url": "https://www.cnbc.com/2026/07/23/andy-burnham-labour-hedge-funds-short-selling-uk.html",
+      "outlet": "CNBC",
+      "publish_date": "2026-07-23",
+      "short_hash": "a6168c5c",
+      "key_entities": [
+        "andy burnham",
+        "hedge funds",
+        "short selling",
+        "uk equities",
+        "reindustrialisation"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "Rubio and Lavrov meet in Manila in first US-Russia talks since September",
+      "summary": "Rubio and Lavrov held ~35 minutes of talks at the ASEAN forum in Manila on 23 July; Lavrov cited readiness for a settlement.",
+      "url": "https://www.aljazeera.com/news/2026/7/23/top-us-and-russian-diplomats-discuss-ukraine-war-in-manila",
+      "outlet": "Al Jazeera",
+      "publish_date": "2026-07-23",
+      "short_hash": "78b9a29b",
+      "key_entities": [
+        "marco rubio",
+        "sergei lavrov",
+        "manila",
+        "asean",
+        "ukraine",
+        "meet"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "Trump says signed Saudi nuclear deal now hinges on normalising ties with Israel",
+      "summary": "Trump said the 22 July US-Saudi nuclear pact is 'totally subject' to Riyadh joining the Abraham Accords.",
+      "url": "https://www.aljazeera.com/news/2026/7/23/trump-says-saudi-nuclear-pact-hinges-on-kingdom-joining-abraham-accords",
+      "outlet": "Al Jazeera",
+      "publish_date": "2026-07-23",
+      "short_hash": "5295a085",
+      "key_entities": [
+        "trump",
+        "saudi arabia",
+        "abraham accords",
+        "israel",
+        "nuclear",
+        "condition"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "Wildfires force more than 20,000 to flee southwest France as Spain and Italy burn",
+      "summary": "~20,000 evacuated near Bordeaux on 23 July; three firefighters dead this week, Spain's Guadalajara blaze ~32,000 ha.",
+      "url": "https://www.aljazeera.com/news/2026/7/23/france-wildfires-force-evacuation-of-over-20000-people-from-tourist-town",
+      "outlet": "Al Jazeera",
+      "publish_date": "2026-07-23",
+      "short_hash": "537f00f1",
+      "key_entities": [
+        "france",
+        "spain",
+        "italy",
+        "bordeaux",
+        "wildfires",
+        "evacuate"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "US judge sets June 2027 trial date for Venezuela's Maduro and his wife",
+      "summary": "Judge Hellerstein set 1 June 2027 for the trial of Maduro and Cilia Flores; both pleaded not guilty on 22 July.",
+      "url": "https://www.aljazeera.com/news/2026/7/22/us-judge-sets-2027-trial-date-for-venezuelas-maduro-and-wife",
+      "outlet": "Al Jazeera",
+      "publish_date": "2026-07-22",
+      "short_hash": "88bf62ce",
+      "key_entities": [
+        "maduro",
+        "cilia flores",
+        "hellerstein",
+        "venezuela",
+        "trial"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "Monsoon floods kill at least 82 across India, Pakistan and Afghanistan",
+      "summary": "At least 82 died this week in floods across India, Pakistan and Afghanistan; Nuristan alone 20+ dead, 100+ missing.",
+      "url": "https://www.aljazeera.com/news/2026/7/21/rescuers-search-for-survivors-amid-risk-of-fresh-floods-in-afghanistan",
+      "outlet": "Al Jazeera",
+      "publish_date": "2026-07-21",
+      "short_hash": "6956f360",
+      "key_entities": [
+        "india",
+        "pakistan",
+        "afghanistan",
+        "nuristan",
+        "monsoon",
+        "floods"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "AI chip startup Etched doubles to $10.3 billion valuation in Sequoia-led round",
+      "summary": "Etched closed a $300m Series C at a $10.3bn valuation on 23 July, doubling its December mark; ~$1bn in orders.",
+      "url": "https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/",
+      "outlet": "TechCrunch",
+      "publish_date": "2026-07-23",
+      "short_hash": "79b2b56d",
+      "key_entities": [
+        "etched",
+        "sequoia",
+        "ai chip",
+        "valuation",
+        "raises"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "AMD to invest up to $5 billion in Anthropic in a new AI-chip supply deal",
+      "summary": "AMD to invest up to $5bn in Anthropic and supply Instinct MI450 GPUs; Anthropic to buy up to 2GW from H1 2027.",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-22/amd-to-invest-up-to-5-billion-in-anthropic-chip-deal-wsj-says",
+      "outlet": "Bloomberg",
+      "publish_date": "2026-07-22",
+      "short_hash": "2d5767ad",
+      "key_entities": [
+        "amd",
+        "anthropic",
+        "instinct mi450",
+        "invests"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "EU hits Google with first Digital Markets Act fines, totalling €890 million",
+      "summary": "The EU fined Google €890m on 23 July under the DMA (€460m Search, €430m Play Store); 60 days to pay.",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-23/google-fined-890-million-in-eu-over-search-app-store-breaches",
+      "outlet": "Bloomberg",
+      "publish_date": "2026-07-23",
+      "short_hash": "72ce0274",
+      "key_entities": [
+        "google",
+        "european commission",
+        "digital markets act",
+        "play store",
+        "fines"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "US Treasury threatens sanctions over China's Kimi K3 AI model",
+      "summary": "Treasury's Bessent said sanctions remain possible after the White House accused Moonshot of distilling Anthropic's Fable for Kimi K3.",
+      "url": "https://techcrunch.com/2026/07/22/treasury-threatens-sanctions-after-white-house-claims-moonshot-distilled-anthropics-fable/",
+      "outlet": "TechCrunch",
+      "publish_date": "2026-07-22",
+      "short_hash": "f12ed8f5",
+      "key_entities": [
+        "moonshot",
+        "kimi k3",
+        "anthropic",
+        "treasury",
+        "sanctions"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "AMD launches 256-core EPYC 'Venice' server chip on TSMC's 2nm process",
+      "summary": "At Advancing AI 2026, AMD unveiled the Zen 6 EPYC 'Venice' with up to 256 cores on TSMC 2nm.",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-23/amd-unveils-new-products-in-pursuit-of-2-trillion-opportunity",
+      "outlet": "Bloomberg",
+      "publish_date": "2026-07-23",
+      "short_hash": "7fcfd100",
+      "key_entities": [
+        "amd",
+        "epyc venice",
+        "zen 6",
+        "tsmc",
+        "launches"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Wall Street sells off as Alphabet and Tesla slump and oil tops $100",
+      "summary": "S&P 500 fell 1.21% to 7,408.30, Nasdaq -2.15% to 25,137.69 on 23 July as Alphabet (-7%) and Tesla (-14%) slid.",
+      "url": "https://www.cnbc.com/2026/07/22/stock-market-today-live-updates.html",
+      "outlet": "CNBC",
+      "publish_date": "2026-07-23",
+      "short_hash": "6d981590",
+      "key_entities": [
+        "s&p 500",
+        "nasdaq",
+        "alphabet",
+        "tesla",
+        "oil",
+        "fall"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Intel revenue jumps 25% to $16.1 billion on AI demand; shares leap",
+      "summary": "Intel Q2 revenue rose 25% to $16.1bn with adj EPS $0.42, stock +11%; data-centre and AI revenue up 59%.",
+      "url": "https://www.cnbc.com/2026/07/23/intel-intc-earnings-report-q2-2026.html",
+      "outlet": "CNBC",
+      "publish_date": "2026-07-23",
+      "short_hash": "9185ada8",
+      "key_entities": [
+        "intel",
+        "earnings",
+        "data center",
+        "revenue",
+        "beat"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "ECB holds rates at 2.25% as Lagarde leaves the door open to a September hike",
+      "summary": "The ECB held its deposit rate at 2.25% on 23 July; Lagarde signalled a possible September increase.",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-23/ecb-keeps-rate-steady-to-gauge-iran-war-s-impact-on-inflation",
+      "outlet": "Bloomberg",
+      "publish_date": "2026-07-23",
+      "short_hash": "981ddd4c",
+      "key_entities": [
+        "ecb",
+        "christine lagarde",
+        "deposit rate",
+        "hold"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "US jobless claims fall to 187,000, the fewest since 1969",
+      "summary": "Initial US claims fell 22,000 to 187,000 for the week ended 18 July, the lowest since September 1969.",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-23/us-initial-jobless-claims-fall-to-lowest-level-since-1969",
+      "outlet": "Bloomberg",
+      "publish_date": "2026-07-23",
+      "short_hash": "410fbdc1",
+      "key_entities": [
+        "jobless claims",
+        "labour market",
+        "1969",
+        "fall"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Update: Brent crude tops $100 after Houthi strike on two Saudi tankers",
+      "summary": "Brent jumped 7% to $100.66 on 23 July after Houthis struck two Saudi tankers; WTI +6.3% to $92.28.",
+      "url": "https://www.cnbc.com/2026/07/23/oil-prices-today-wti-brent-trump-iran-hormuz.html",
+      "outlet": "CNBC",
+      "publish_date": "2026-07-23",
+      "short_hash": "bf0ae5a5",
+      "key_entities": [
+        "brent crude",
+        "wti",
+        "houthis",
+        "saudi tankers",
+        "surge"
+      ],
+      "is_update": true
+    },
+    {
+      "tab": "Sports",
+      "headline": "🏎️ Corner-heavy Hungaroring could revive Hamilton and Ferrari's title fight with Antonelli",
+      "summary": "Antonelli leads Hamilton by 45 points at the Hungarian GP, but the Hungaroring is tipped to suit Ferrari.",
+      "url": "https://www.skysports.com/f1/news/12433/13565886/hungarian-gp-why-budapest-could-ignite-lewis-hamilton-and-ferrari-title-fight-against-kimi-antonelli",
+      "outlet": "Sky Sports F1",
+      "publish_date": "2026-07-23",
+      "short_hash": "2077796e",
+      "key_entities": [
+        "kimi antonelli",
+        "lewis hamilton",
+        "ferrari",
+        "hungarian grand prix",
+        "title"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🏎️ Red Bull says top drivers are calling but backs Verstappen to stay for 2027",
+      "summary": "Laurent Mekies said Red Bull is fielding calls from 'good drivers' as Verstappen's exit clause looms but expects him to stay.",
+      "url": "https://www.skysports.com/f1/news/12433/13565601/f1-driver-market-red-bull-getting-calls-from-good-drivers-says-laurent-mekies-but-optimistic-on-max-verstappen-stay",
+      "outlet": "Sky Sports F1",
+      "publish_date": "2026-07-23",
+      "short_hash": "0c67db2d",
+      "key_entities": [
+        "laurent mekies",
+        "max verstappen",
+        "red bull",
+        "exit clause"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🏏 India beat Zimbabwe by seven wickets in the first T20I in Harare",
+      "summary": "India led 1-0, restricting Zimbabwe to 125/7 and chasing 126/3 in 13.2 overs; Mayank Yadav 2/18, player of the match.",
+      "url": "https://www.espncricinfo.com/series/india-in-zimbabwe-2026-1530058/zimbabwe-vs-india-1st-t20i-1530060/full-scorecard",
+      "outlet": "ESPNcricinfo",
+      "publish_date": "2026-07-23",
+      "short_hash": "3badc6ec",
+      "key_entities": [
+        "india",
+        "zimbabwe",
+        "mayank yadav",
+        "harare",
+        "t20i",
+        "won"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🏏 Manchester Super Giants crush London Spirit at Lord's in The Hundred opener",
+      "summary": "Manchester Super Giants beat London Spirit by seven wickets; Ryana MacDonald-Gay 4/17 bowled Spirit out for 80.",
+      "url": "https://www.espncricinfo.com/series/the-hundred-women-s-competition-2026-1521193/london-spirit-women-vs-manchester-super-giants-women-3rd-match-1521199/match-report",
+      "outlet": "ESPNcricinfo",
+      "publish_date": "2026-07-23",
+      "short_hash": "8a5b8996",
+      "key_entities": [
+        "manchester super giants",
+        "london spirit",
+        "ryana macdonald-gay",
+        "lords",
+        "the hundred",
+        "beat"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🎾 Defending champion Bublik reaches the Kitzbuhel semi-finals",
+      "summary": "Top seed Alexander Bublik beat Alex Molcan 6-3, 6-2 to reach the Generali Open semi-finals on 23 July.",
+      "url": "https://www.atptour.com/en/video/highlights-bublik-books-sf-return-in-kitzbuhel-2026",
+      "outlet": "ATP Tour",
+      "publish_date": "2026-07-23",
+      "short_hash": "48bc44aa",
+      "key_entities": [
+        "alexander bublik",
+        "alex molcan",
+        "kitzbuhel",
+        "generali open",
+        "semi-finals"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "Webb uncovers a hidden third giant planet in the Beta Pictoris system",
+      "summary": "Astronomers detected Beta Pictoris d (2-4 Jupiter masses, 63 ly) via its atmosphere; the system's third directly detected planet.",
+      "url": "https://science.nasa.gov/missions/webb/nasas-webb-discovers-hidden-planet-in-famous-star-system/",
+      "outlet": "NASA",
+      "publish_date": "2026-07-22",
+      "short_hash": "84178138",
+      "key_entities": [
+        "beta pictoris d",
+        "james webb",
+        "methane",
+        "hr 8799",
+        "discovered"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "Decades-old near-Earth 'asteroid' turns out to be a faint dark comet",
+      "summary": "JPL's Farnocchia predicted 1998 SH2 was outgassing and confirmed a faint tail; reclassified as comet P/1998 SH2.",
+      "url": "https://www.jpl.nasa.gov/news/nasa-study-finds-near-earth-asteroid-is-actually-comet/",
+      "outlet": "NASA",
+      "publish_date": "2026-07-20",
+      "short_hash": "d81bb9c1",
+      "key_entities": [
+        "1998 sh2",
+        "davide farnocchia",
+        "jpl",
+        "dark comet",
+        "reclassified"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "Scientists grow early human sperm cells from stem cells inside a mouse 'mini-testis'",
+      "summary": "A Penn-led team grew human spermatogonia for 6+ months inside mouse-hosted testis structures, short of mature sperm.",
+      "url": "https://www.nature.com/articles/d41586-026-02172-6",
+      "outlet": "Nature",
+      "publish_date": "2026-07-16",
+      "short_hash": "6c187759",
+      "key_entities": [
+        "university of pennsylvania",
+        "spermatogonia",
+        "ips cells",
+        "testis",
+        "generated"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "Astronomers find the first atmosphere on a rocky planet in a habitable zone",
+      "summary": "Researchers found helium escaping LHS 1140 b, a super-Earth 48 ly away, the first atmosphere on a rocky habitable-zone world.",
+      "url": "https://www.nature.com/articles/d41586-026-02200-5",
+      "outlet": "Nature",
+      "publish_date": "2026-07-16",
+      "short_hash": "d06a1eda",
+      "key_entities": [
+        "lhs 1140 b",
+        "helium",
+        "red dwarf",
+        "atmosphere",
+        "detected"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "First Classic Maya astronomer identified by name from a 1,200-year-old wall",
+      "summary": "Researchers deciphered the name Sak Tahn Waax beside a 781 CE astronomical formula at Xultun, Guatemala.",
+      "url": "https://www.nature.com/articles/d41586-026-02170-8",
+      "outlet": "Nature",
+      "publish_date": "2026-07-14",
+      "short_hash": "065ca2fa",
+      "key_entities": [
+        "sak tahn waax",
+        "xultun",
+        "venus",
+        "maya",
+        "deciphered"
+      ],
+      "is_update": false
+    }
+  ],
+  "fun_fact": {
+    "headline": "A shuffled 52-card deck is almost certainly a never-before-seen order",
+    "body": "Shuffle a standard 52-card deck thoroughly and you have almost certainly produced an ordering that has never existed before. The number of possible arrangements is 52 factorial (about 8 x 10^67), which utterly dwarfs the roughly 4 x 10^17 seconds that have elapsed since the Big Bang.",
+    "source": "McGill Office for Science and Society",
+    "fun_fact_id": "funfact-65921917",
+    "topic": "mathematics",
+    "topic_key": "deck of cards"
+  },
+  "puzzle": {
+    "type": "logic",
+    "title": "The Three Logicians",
+    "title_key": "three-logicians",
+    "body": "Three perfect logicians are asked if everyone wants a drink; the first two say 'I don't know' and the third says 'Yes'.",
+    "approach": "Treat each 'I don't know' as information about the speaker's own wish.",
+    "answer": "Yes, all three want a drink. Each 'I don't know' reveals that speaker wants one but is unsure of the others; the third, having heard both, knows all three do.",
+    "puzzle_hash": "74697414"
+  },
+  "word_puzzle": {
+    "type": "letterboxed",
+    "title": "Sides of the Story",
+    "title_key": "sides-of-the-story",
+    "body": "Letter Boxed square, sides Top D G R, Right A H N, Bottom U T O, Left E S I; use all 12 letters.",
+    "approach": "Chain two words using all 12 letters; consecutive letters from different sides.",
+    "answer": "DAUGHTERS then SNORING covers all 12 letters.",
+    "word_puzzle_hash": "1bb91dce"
+  },
+  "notes": [
+    "Singapore ran on Mothership only; CNA and The Straits Times were unreachable (search user-agent blocked, 403 on fetch). No fallback tier exists for Singapore; the 4-5 item floor was met with Mothership (allowed), but the mix skews to court/incident news.",
+    "UK News ran on fallback sources (Al Jazeera, CNBC, Bloomberg): BBC, Sky News and The Guardian were all unreachable. Items remain UK-domestic.",
+    "India: The Hindu, Hindustan Times and NDTV were unreachable; section built from The Indian Express, The Economic Times and The Times of India (all primary, reachable). No fallback tier needed.",
+    "Global, Tech and Business articles could not be fetch-verified (news domains 403 via the proxy); each URL and fact was corroborated across live search results.",
+    "F1 currency confirmed against the Hungarian Grand Prix weekend (Hungaroring): practice Fri 25? race Sun 26 July; both F1 items are build-up, no race result reported."
+  ]
+}
