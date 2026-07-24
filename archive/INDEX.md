@@ -1473,3 +1473,34 @@ is empty until the first run.
 2026-07-24	Scientists grow early human sperm cells from stem cells inside a mouse 'mini-testis'	6c187759	university of pennsylvania,spermatogonia,ips cells,testis,generated
 2026-07-24	Astronomers find the first atmosphere on a rocky planet in a habitable zone	d06a1eda	lhs 1140 b,helium,red dwarf,atmosphere,detected
 2026-07-24	First Classic Maya astronomer identified by name from a 1,200-year-old wall	065ca2fa	sak tahn waax,xultun,venus,maya,deciphered
+2026-07-25	US imposes 12.5% tariff on a third of Singapore’s exports over forced-labour claim	74e665fc	
+2026-07-25	Domestic worker jailed after placing employer’s toddler on sixth-floor ledge	69bd73e6	
+2026-07-25	Drunk driver who hit a motorcyclist and fled nearly 10km is jailed	53a5b0a0	
+2026-07-25	Teenage girl and four men held over Carousell job scams hijacking Singpass accounts	808a7e1a	
+2026-07-25	Cloudbursts kill dozens in Jammu and Kashmir as Amarnath and Vaishno Devi yatras suspended	be936afc	
+2026-07-25	Kashmiri activist Khurram Parvez and journalist Irfan Mehraj freed on bail	4791c181	
+2026-07-25	India’s private-sector growth slows to a four-year low as costs climb	624a373c	
+2026-07-25	Rupee hovers near a record low as costlier crude lifts rate-hike bets	2638057f	
+2026-07-25	Burnham opens ‘Number 10 North’ in Manchester to signal a devolution shift	9a18de93	
+2026-07-25	Chancellor Healey pledges a fiscal buffer in first big pitch to the City	6c73f9f6	
+2026-07-25	UK budget deficit hits £57.6bn in the first quarter, overshooting the OBR	4d341bc5	
+2026-07-25	UK private sector returns to growth in July, flash survey signals	1c91a3ef	
+2026-07-25	Russia and Ukraine trade deadly strikes; at least 11 reported killed	f95af445	
+2026-07-25	Four Palestinians and two Israeli soldiers killed as settlers raid West Bank village	f5bef5d2	
+2026-07-25	Israel strikes Gaza after issuing fresh displacement orders	d3d81985	
+2026-07-25	South African court pauses impeachment inquiry against President Ramaphosa	d08830b2	
+2026-07-25	OpenAI says pre-release models autonomously breached Hugging Face in unusual incident	759849d0	
+2026-07-25	China’s Psibot reaches a $1.48 billion valuation in a Chery-led robotics round	4004f244	
+2026-07-25	Insurance startup Corgi reportedly raises at a $4 billion valuation, its third round in eight weeks	372d8b8f	
+2026-07-25	Anthropic upgrades Claude voice mode with more capable models and cross-app actions	6a8aa5ad	
+2026-07-25	Wall Street ends mixed on Friday as Apple jumps and chip stocks slump	9e919fe5	
+2026-07-25	Oil tumbles nearly 4% as reports point to revived US-Iran peace talks	98524667	
+2026-07-25	Gold holds near $4,050 as traders lift odds of a September Fed hike	55f8c1db	
+2026-07-25	Ford and China’s Geely to build electric vehicles at Ford’s Spanish plant	2c83dcc6	
+2026-07-25	🏎️ Hamilton leads a Ferrari one-two ahead of Leclerc in Hungarian GP practice	c4307c79	
+2026-07-25	🏎️ Antonelli heads into the Hungarian GP leading the title race	37e23f19	
+2026-07-25	🎾 Defending champion Bublik beats Etcheverry to reach the Kitzbuhel final	9d0d0f7b	
+2026-07-25	🏏 Joe Clarke blitz powers Birmingham Phoenix past Trent Rockets in The Hundred	b2ab5b11	
+2026-07-25	NASA’s Juno finds a hot, pumice-like crust just metres beneath Io’s surface	f4a0a489	
+2026-07-25	Hubble spots the first of Omega Centauri’s long-predicted ‘missing’ black holes	9fd1c960	
+2026-07-25	Study finds rivers and lakes worldwide are steadily losing dissolved oxygen	9179b228	

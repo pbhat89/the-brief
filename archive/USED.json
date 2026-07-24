@@ -244,14 +244,14 @@
       "date": "2026-07-24",
       "topic_key": "deck of cards",
       "text": "A shuffled 52-card deck is almost certainly in an order that has never existed before (52! is about 8e67)."
+    },
+    {
+      "date": "2026-07-25",
+      "topic_key": "sloth",
+      "text": "A sloth can take up to a month to digest a single leaf and can hold its breath underwater for up to 40 minutes."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-06-24",
-      "type": "visual",
-      "title_key": "the-unfolded-cube"
-    },
     {
       "date": "2026-06-25",
       "type": "logic",
@@ -396,14 +396,14 @@
       "date": "2026-07-24",
       "type": "logic",
       "title_key": "three-logicians"
+    },
+    {
+      "date": "2026-07-25",
+      "type": "quantitative",
+      "title_key": "twice-the-length"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-06-24",
-      "type": "anagram",
-      "title_key": "adding-up"
-    },
     {
       "date": "2026-06-25",
       "type": "spellingbee",
@@ -548,6 +548,11 @@
       "date": "2026-07-24",
       "type": "letterboxed",
       "title_key": "sides-of-the-story"
+    },
+    {
+      "date": "2026-07-25",
+      "type": "anagram",
+      "title_key": "hidden-meanings"
     }
   ]
 }
