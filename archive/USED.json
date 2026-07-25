@@ -249,14 +249,14 @@
       "date": "2026-07-25",
       "topic_key": "sloth",
       "text": "A sloth can take up to a month to digest a single leaf and can hold its breath underwater for up to 40 minutes."
+    },
+    {
+      "date": "2026-07-26",
+      "topic_key": "waggle dance",
+      "text": "How honeybees dance directions to their hive"
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-06-25",
-      "type": "logic",
-      "title_key": "island-of-knights-and-knaves"
-    },
     {
       "date": "2026-06-26",
       "type": "quantitative",
@@ -401,14 +401,14 @@
       "date": "2026-07-25",
       "type": "quantitative",
       "title_key": "twice-the-length"
+    },
+    {
+      "date": "2026-07-26",
+      "type": "lateral",
+      "title_key": "perfect-shot"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-06-25",
-      "type": "spellingbee",
-      "title_key": "mind-your-ts"
-    },
     {
       "date": "2026-06-26",
       "type": "letterboxed",
@@ -553,6 +553,11 @@
       "date": "2026-07-25",
       "type": "anagram",
       "title_key": "hidden-meanings"
+    },
+    {
+      "date": "2026-07-26",
+      "type": "spellingbee",
+      "title_key": "table-manners"
     }
   ]
 }

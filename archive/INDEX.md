@@ -1504,3 +1504,33 @@ is empty until the first run.
 2026-07-25	NASA’s Juno finds a hot, pumice-like crust just metres beneath Io’s surface	f4a0a489	
 2026-07-25	Hubble spots the first of Omega Centauri’s long-predicted ‘missing’ black holes	9fd1c960	
 2026-07-25	Study finds rivers and lakes worldwide are steadily losing dissolved oxygen	9179b228	
+2026-07-26	Woman jailed 12 years for fatally stabbing her lover in a dispute over money	659e5683	Li Ye,Singapore,culpable homicide
+2026-07-26	Singapore launches a five-year Youth Plan with new community 'third spaces'	0fa7c474	Youth Plan,Tharman Shanmugaratnam,David Neo
+2026-07-26	Man, 23, jailed four months over CTE midnight joyride that ended in a major crash	49f6293d	Central Expressway,joyride,Singapore
+2026-07-26	Man, 58, jailed after crashing a Porsche into Suntec City's Fountain of Wealth	0bd03cd5	Suntec City,Fountain of Wealth,Porsche
+2026-07-26	Update: India's youth 'Cockroach' party holds government talks but vows to keep protesting	f015122a	Cockroach Janta Party,Narendra Modi,exam paper leaks
+2026-07-26	Modi promises fast-track courts and tougher penalties over exam-paper leaks	a024582a	Narendra Modi,fast-track courts,exam paper leaks
+2026-07-26	Congress stages a mock 'funeral' for Modi and his cabinet amid Parliament disruption	2a1f1697	Congress,Narendra Modi,Parliament
+2026-07-26	US-China trade war reaches India's streets as Modi weighs his Washington bet	602dbf34	India,United States,China,trade
+2026-07-26	UK private sector hits a three-month high as World Cup and heatwave lift activity	98569d47	United Kingdom,PMI,S&P Global
+2026-07-26	Burnham's early 'feel-good' policies lift Labour but a hard six months loom	92fa1e8c	Andy Burnham,Labour,UK economy
+2026-07-26	Burnham's rebel-heavy cabinet sends a tricky message to Westminster	0699d894	Andy Burnham,cabinet,Westminster
+2026-07-26	Bond markets put new Chancellor John Healey's fiscal plans to the test	c8651180	John Healey,gilts,Jamie Dimon
+2026-07-26	Update: US halts Iran strikes as Oman brokers Hormuz talks and Houthis hit Saudi oil	d68f6a73	United States,Iran,Houthis,Strait of Hormuz
+2026-07-26	Pakistan-administered Kashmir readies for a fraught 27 July election after a violent summer	b01e35b1	Pakistan,Kashmir,election
+2026-07-26	France becomes the first EU country to ban social media for under-15s	76312aa5	France,Emmanuel Macron,social media ban
+2026-07-26	Nicaragua's Ortega declares there will be 'no more elections'	ca3ec4c7	Nicaragua,Daniel Ortega,elections
+2026-07-26	OpenAI's spending forecast balloons to $750bn as it unveils a self-built data centre	e3ad0d49	OpenAI,Project Camellia,data centre
+2026-07-26	Meta, Microsoft and Amazon face investor unease over AI spending as earnings loom	2177e856	Meta,Microsoft,Amazon,AI spending
+2026-07-26	Alphabet lifts its 2026 AI capital-spending guidance to as much as $205bn	b549381e	Alphabet,Google,capital expenditure
+2026-07-26	Warner Bros Discovery and Paramount agree to pause their $110bn merger	eaef0fff	Warner Bros Discovery,Paramount Skydance,merger
+2026-07-26	Corporate profits beat a high bar, yet traders still aren't impressed	8712ac81	S&P 500,earnings,Wall Street
+2026-07-26	Oil seen ending 2026 near $100 as Middle East disruptions persist	cef809f8	Brent crude,oil,Rapidan
+2026-07-26	🏎️ Norris snatches a dramatic Hungarian GP pole from Hamilton by 0.012s	b1a398eb	Lando Norris,Lewis Hamilton,Hungarian Grand Prix
+2026-07-26	🏎️ Hamilton demoted to fifth by a grid penalty, promoting Leclerc to the front row	e941f9d9	Lewis Hamilton,Charles Leclerc,grid penalty
+2026-07-26	🏏 India crush Zimbabwe by 90 runs to seal the T20I series with a game to spare	66697489	India,Zimbabwe,Ishan Kishan,T20I
+2026-07-26	🎾 Halys stuns defending champion Bublik to win his maiden ATP title at Kitzbuhel	677bba81	Quentin Halys,Alexander Bublik,Kitzbuhel
+2026-07-26	NASA's Psyche probe returns its first Mars flyby data en route to a metal-rich asteroid	bd0d49f3	NASA,Psyche,Mars
+2026-07-26	NASA's Roman Space Telescope clears a solar-panel checkout ahead of launch	96643375	NASA,Roman Space Telescope,Kennedy Space Center
+2026-07-26	NASA's Webb reveals an exoplanet whose helium-and-carbon atmosphere defies explanation	96a2bbfe	NASA,James Webb Space Telescope,exoplanet
+2026-07-26	NASA's Webb finds a black hole that formed before its host galaxy	afdafd01	NASA,James Webb Space Telescope,black hole
