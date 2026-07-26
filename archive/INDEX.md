@@ -1534,3 +1534,38 @@ is empty until the first run.
 2026-07-26	NASA's Roman Space Telescope clears a solar-panel checkout ahead of launch	96643375	NASA,Roman Space Telescope,Kennedy Space Center
 2026-07-26	NASA's Webb reveals an exoplanet whose helium-and-carbon atmosphere defies explanation	96a2bbfe	NASA,James Webb Space Telescope,exoplanet
 2026-07-26	NASA's Webb finds a black hole that formed before its host galaxy	afdafd01	NASA,James Webb Space Telescope,black hole
+2026-07-27	New Cabinet takes effect as PM Wong's reshuffle is sworn in	6ce6382a	Lawrence Wong, Cabinet reshuffle, Jeffrey Siow, David Neo
+2026-07-27	Ong Ye Kung warns over-servicing could make healthcare unaffordable	d8fd264d	Ong Ye Kung, healthcare, over-servicing
+2026-07-27	Former entertainment lawyer Samuel Seow dies at 53	21d12d16	Samuel Seow, Beam Artistes, death
+2026-07-27	Man, 48, hospitalised after group attack in a Yishun carpark	f4637dd6	Yishun, assault, police
+2026-07-27	Singaporean man, 25, to be charged with murder over girlfriend's Bali death	1cd205bf	Muhammad Zulhelmi, Bali, murder charge
+2026-07-27	Update: Education Minister Dharmendra Pradhan resigns over NEET paper-leak protests	07d7dd38	Dharmendra Pradhan, NEET, resignation, Droupadi Murmu
+2026-07-27	BJP veteran Pralhad Joshi handed additional charge of Education Ministry	17470ca2	Pralhad Joshi, Education Ministry, exam reforms
+2026-07-27	India's markets shrug off student protests as the rupee nears a record low	70be1dec	rupee, RBI, markets, crude
+2026-07-27	India presses China on market access and courts a US trade deal at Manila	96f3f7d3	Jaishankar, China, US trade deal, Manila
+2026-07-27	Burnham rules out an early election and vows to 'call out' Trump	74e190ad	Andy Burnham, election, Trump
+2026-07-27	Burnham's cabinet more exposed to Reform than Starmer's, polling finds	87567d55	Burnham, Reform UK, polling, cabinet
+2026-07-27	Thames Water creditors pitch a 'golden share' to avert nationalisation	fbb3693c	Thames Water, golden share, nationalisation
+2026-07-27	Farage and Reform under scrutiny over crypto-billionaire funding	b390578a	Nigel Farage, Reform UK, Christopher Harborne, funding
+2026-07-27	Berlin Pride car-ramming suspect shot dead by police after manhunt	10c1fa15	Berlin, Pride, car-ramming, terror attack
+2026-07-27	Typhoon Noul makes landfall in southern China as hundreds of thousands flee	2dbaf563	Typhoon Noul, Guangdong, China, evacuation
+2026-07-27	Iran accuses Ukraine of a deadly strike on a Caspian Sea vessel	dc078681	Iran, Ukraine, Caspian Sea, Zelenskyy
+2026-07-27	Drone strikes on a Kazakh oil terminal push Tokayev to urge a truce	264f2610	Kazakhstan, CPC, Tokayev, Putin, oil
+2026-07-27	Anthropic launches Claude Opus 5, its fourth Claude 5 model in two months	0ce3feba	Anthropic, Claude Opus 5, AI model
+2026-07-27	Tech industry urges against broad restrictions on open-weight AI models	888589a6	open-weight AI, Nvidia, Hugging Face, policy
+2026-07-27	Alphabet's Anthropic stake valued at about $124bn in an SEC filing	0225f939	Alphabet, Anthropic, SEC filing, IPO
+2026-07-27	Robotics startup Genesis in talks to raise at a $3bn valuation	a73efe35	Genesis AI, robotics, funding, Premji Invest
+2026-07-27	US stock futures rally ahead of megacap earnings and the Fed meeting	a6d5e328	US futures, earnings, Fed, oil
+2026-07-27	CME launches single-stock futures on more than 50 big US companies	019984ad	CME Group, single-stock futures, derivatives
+2026-07-27	Fed rate-hike odds surge toward 47% ahead of the 29 July meeting	823b4fd5	Federal Reserve, rate hike, FOMC, inflation
+2026-07-27	Bain and LY weigh a higher bid for Japan's Kakaku to rival EQT	12f2b93e	Bain Capital, LY Corp, Kakaku, EQT
+2026-07-27	🏎️ Norris wins a dramatic Hungarian GP as Piastri retires from the lead	72995769	Lando Norris, Hungarian GP, Verstappen, Piastri
+2026-07-27	🏎️ Antonelli keeps his title lead despite Norris's Hungary breakthrough	b545a612	Kimi Antonelli, drivers standings, F1 title
+2026-07-27	🏏 India complete a 3-0 T20I sweep of Zimbabwe in Harare	7c5c55b8	India, Zimbabwe, T20I, Sooryavanshi
+2026-07-27	🎾 Teenager Lilli Tagger wins the Prague Open for her first WTA title	1a077e6c	Lilli Tagger, Prague Open, WTA title
+2026-07-27	🎾 Korpatsch beats Bondar to win the Hamburg Open on home clay	3b15eda4	Tamara Korpatsch, Hamburg Open, WTA
+2026-07-27	Alzheimer's 'tipping point' in brain immune cells may decide who develops dementia	74aeee6d	Alzheimer's, microglia, dementia, centenarians
+2026-07-27	A giant 'exosatellite' around a brown dwarf challenges what counts as a moon	054313d4	exomoon, brown dwarf, CD-35 2722 B
+2026-07-27	Study estimates humans spoke up to ten times as many languages 2,000 years ago	01e59bb0	language diversity, Holocene, Damian Blasi
+2026-07-27	A 1,900-year-old Roman latrine helps explain why Roman concrete lasts millennia	1385d972	Roman concrete, calcite, durability
+2026-07-27	The thymus, a 'forgotten' organ, may help control inflammation as we age	32bac15c	thymus, inflammation, ageing

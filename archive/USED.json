@@ -254,14 +254,14 @@
       "date": "2026-07-26",
       "topic_key": "waggle dance",
       "text": "How honeybees dance directions to their hive"
+    },
+    {
+      "date": "2026-07-27",
+      "topic_key": "diamond rain",
+      "text": "It rains diamonds inside Uranus and Neptune"
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-06-26",
-      "type": "quantitative",
-      "title_key": "hands-of-the-clock"
-    },
     {
       "date": "2026-06-27",
       "type": "lateral",
@@ -406,14 +406,14 @@
       "date": "2026-07-26",
       "type": "lateral",
       "title_key": "perfect-shot"
+    },
+    {
+      "date": "2026-07-27",
+      "type": "visual",
+      "title_key": "turn-the-triangle"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-06-26",
-      "type": "letterboxed",
-      "title_key": "boxed-in"
-    },
     {
       "date": "2026-06-27",
       "type": "grouping",
@@ -558,6 +558,11 @@
       "date": "2026-07-26",
       "type": "spellingbee",
       "title_key": "table-manners"
+    },
+    {
+      "date": "2026-07-27",
+      "type": "grouping",
+      "title_key": "cross-purposes"
     }
   ]
 }
