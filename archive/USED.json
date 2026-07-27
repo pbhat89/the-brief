@@ -259,14 +259,14 @@
       "date": "2026-07-27",
       "topic_key": "diamond rain",
       "text": "It rains diamonds inside Uranus and Neptune"
+    },
+    {
+      "date": "2026-07-28",
+      "topic_key": "alaska",
+      "text": "Alaska is at once the most northern, western and eastern US state; the Aleutians cross the 180th meridian."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-06-27",
-      "type": "lateral",
-      "title_key": "short-ride-up"
-    },
     {
       "date": "2026-06-28",
       "type": "visual",
@@ -411,14 +411,14 @@
       "date": "2026-07-27",
       "type": "visual",
       "title_key": "turn-the-triangle"
+    },
+    {
+      "date": "2026-07-28",
+      "type": "logic",
+      "title_key": "who-broke-the-vase"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-06-27",
-      "type": "grouping",
-      "title_key": "four-of-a-kind"
-    },
     {
       "date": "2026-06-28",
       "type": "ladder",
@@ -563,6 +563,11 @@
       "date": "2026-07-27",
       "type": "grouping",
       "title_key": "cross-purposes"
+    },
+    {
+      "date": "2026-07-28",
+      "type": "ladder",
+      "title_key": "less-is-more"
     }
   ]
 }

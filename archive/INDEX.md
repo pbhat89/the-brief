@@ -1569,3 +1569,36 @@ is empty until the first run.
 2026-07-27	Study estimates humans spoke up to ten times as many languages 2,000 years ago	01e59bb0	language diversity, Holocene, Damian Blasi
 2026-07-27	A 1,900-year-old Roman latrine helps explain why Roman concrete lasts millennia	1385d972	Roman concrete, calcite, durability
 2026-07-27	The thymus, a 'forgotten' organ, may help control inflammation as we age	32bac15c	thymus, inflammation, ageing
+2026-07-28	MAS tightens policy for a second straight quarter as inflation risks climb	0bdefa50	MAS,Singapore dollar,monetary policy,inflation
+2026-07-28	HarbourFront Centre closes for redevelopment into a 33-storey tower by 2031	13f2acf2	HarbourFront Centre,redevelopment,Singapore
+2026-07-28	Car driver, 30, dies in early-morning CTE crash with a lorry	1c957cef	CTE,fatal crash,Singapore
+2026-07-28	Woman, 46, arrested after a fire at a Sembawang HDB flat	d0597c97	Sembawang,HDB fire,Singapore
+2026-07-28	RBI dollar sales lift the rupee to its biggest gain in over a month	8f6c221f	RBI,rupee,India,currency
+2026-07-28	Monsoon floods across India's northeast kill at least 40 and affect 650,000	f3c28ab3	Assam,monsoon floods,India,Manipur
+2026-07-28	Infosys cuts its revenue forecast and names a new chief executive	e1749a4f	Infosys,India,IT services,earnings
+2026-07-28	Update: Youth protesters widen demands to Modi and Shah as opposition stalls Parliament	880dcd67	Cockroach movement,Modi,Amit Shah,Parliament
+2026-07-28	Burnham says the UK must get serious about cutting its welfare bill	be81207f	Andy Burnham,welfare,UK,Labour
+2026-07-28	UK youth unemployment climbs to 16.4% as Burnham readies a skills plan	4868e05e	youth unemployment,Burnham,UK,skills
+2026-07-28	UK inflation pressures ease as the Bank of England prepares to hold rates	47de4f40	Bank of England,inflation,UK,interest rates
+2026-07-28	A fourth summer heatwave brings amber alerts and a London hosepipe ban	a57e3f52	heatwave,Thames Water,hosepipe ban,UK
+2026-07-28	Israel's security cabinet approves an international stabilisation force for Gaza	750180cc	Israel,Gaza,stabilisation force,ceasefire
+2026-07-28	Wildfires force more than 300,000 to flee across France and Spain	440a7eb8	France,Spain,wildfires,heatwave
+2026-07-28	Pakistan's monsoon death toll passes 100 as floods batter Punjab and KP	c751d76a	Pakistan,monsoon floods,Punjab,Khyber Pakhtunkhwa
+2026-07-28	Ukrainian drones strike Russia's Belgorod, wounding a dozen overnight	adc1f0b2	Ukraine,Russia,Belgorod,drones
+2026-07-28	Trump sets 50% tariffs on Canada and Brazil before an August 1 deadline	55d5a037	Trump,tariffs,Canada,Brazil
+2026-07-28	Nvidia in talks to backstop $250 billion of financing for an OpenAI data centre	35bbd43d	Nvidia,OpenAI,data centre,SoftBank
+2026-07-28	China's Moonshot releases Kimi K3 open weights, its largest model yet	6e95b95d	Moonshot AI,Kimi K3,open weights,China
+2026-07-28	Google's AI Overviews now appear in about 43% of searches, new data shows	ba577c90	Google,AI Overviews,search,publishers
+2026-07-28	Robotics startup Enigma raises $71 million to simplify human-robot control	f28eb048	Enigma,robotics,funding,Index Ventures
+2026-07-28	Dow rises as oil retreats while the S&amp;P 500 holds flat and the Nasdaq slips	e9bff5a4	Dow,S&P 500,Nasdaq,markets
+2026-07-28	Argenx agrees to buy Forte Biosciences for about $2.2 billion	1b39475e	Argenx,Forte Biosciences,acquisition,biotech
+2026-07-28	Union Pacific and Norfolk Southern revise their bid for a record US rail merger	edc69571	Union Pacific,Norfolk Southern,rail merger,US
+2026-07-28	EQT raises its takeover offer for Australia's Perpetual to about $1.8 billion	6e1f8151	EQT,Perpetual,takeover,Australia
+2026-07-28	🏎️ Verstappen's charge to second lifts Red Bull as F1 breaks for summer	37ee6c1f	Verstappen,Red Bull,F1,summer break
+2026-07-28	🏏 Trent Rockets chase down London Spirit for a thrilling Hundred win	98134170	Trent Rockets,London Spirit,The Hundred,Ben Duckett
+2026-07-28	🏏 West Indies edge ahead of Pakistan in a tight Tarouba Test	f49373a9	West Indies,Pakistan,Test,Tarouba
+2026-07-28	🎾 De Minaur and Tsitsipas headline as the DC Open gets under way	3c2a2199	DC Open,de Minaur,Tsitsipas,tennis
+2026-07-28	Hubble finds star formation across the Andromeda galaxy is winding down	9d2d1200	Hubble,Andromeda,star formation,NASA
+2026-07-28	Earlier prescribed burns spared thousands of giant sequoias from megafires	646db20b	giant sequoias,prescribed burns,wildfire,study
+2026-07-28	Gut-to-brain vagus nerve signals help the brain form memories, study finds	3b8538c2	vagus nerve,memory,hippocampus,neuroscience
+2026-07-28	Scientists turn telecom fibre into dense sensors to speed earthquake alerts	849dd592	earthquake,fibre optics,DAS,early warning
