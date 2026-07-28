@@ -1602,3 +1602,32 @@ is empty until the first run.
 2026-07-28	Earlier prescribed burns spared thousands of giant sequoias from megafires	646db20b	giant sequoias,prescribed burns,wildfire,study
 2026-07-28	Gut-to-brain vagus nerve signals help the brain form memories, study finds	3b8538c2	vagus nerve,memory,hippocampus,neuroscience
 2026-07-28	Scientists turn telecom fibre into dense sensors to speed earthquake alerts	849dd592	earthquake,fibre optics,DAS,early warning
+2026-07-29	Singapore scraps 15-month wait-out for private owners buying HDB resale flats	b4e37ce0	Chee Hong Tat,HDB,resale flats
+2026-07-29	Government reviewing lower HDB eligibility age for singles, minister says	cbd0b5ea	Chee Hong Tat,HDB,singles housing
+2026-07-29	Woman, 73, dies in Toa Payoh lorry collision; driver, 34, arrested	4a24aa4b	Toa Payoh,Central Narcotics Bureau,road death
+2026-07-29	SJI International denies negligence in suit over student's Maldives death	05c254bf	SJI International,Jenna Chan,Maldives
+2026-07-29	Update: Supreme Court orders release of detained under-18 protesters	8c735136	Supreme Court of India,Cockroach Janta Party,student protesters
+2026-07-29	Labour draws level with Reform in first polls since Burnham became PM	bdd0d073	Andy Burnham,Reform UK,More in Common
+2026-07-29	Burnham rules out stamp duty and council tax overhaul in first budget	3b35149b	Andy Burnham,stamp duty,council tax
+2026-07-29	DCC agrees £5.75bn private-equity takeover by KKR and Energy Capital Partners	d541e71b	DCC,KKR,Energy Capital Partners
+2026-07-29	AstraZeneca posts 18% jump in Q2 core earnings on cancer-drug sales	9205dfdb	AstraZeneca,Pascal Soriot
+2026-07-29	Zelensky hails 'good meeting' with Trump and secures Patriot production talks	46f6be47	Volodymyr Zelensky,Donald Trump,Patriot interceptors
+2026-07-29	Israel launches wide West Bank operation after settler rampage over Tal killings	3555d1cc	Israel,West Bank,Benjamin Netanyahu
+2026-07-29	US diplomats walk out on France at UN Security Council over rights criticism	84d5b81a	United States,France,UN Security Council,Volker Turk
+2026-07-29	Burnham hands Zelensky 'Stone Cloak' drone-jamming tech on Portsmouth visit	c3cc0f7d	Andy Burnham,Volodymyr Zelensky,Portsmouth
+2026-07-29	Microsoft debuts its first in-house cybersecurity AI model and defence platform	a69dbdab	Microsoft,MAI-Cyber-1-Flash,Project Perception
+2026-07-29	Nvidia forms Open Secure AI Alliance after autonomous-agent breach at Hugging Face	a64f12db	Nvidia,Open Secure AI Alliance,Hugging Face
+2026-07-29	Apple readies Siri-powered smart-home hub, new Apple TV and HomePod mini	603afd2e	Apple,Siri,Mark Gurman
+2026-07-29	Asia chip rout sinks KOSPI 10.8% and drags the Nasdaq 100 into correction	4923e9cf	KOSPI,SK Hynix,Samsung Electronics,Nasdaq 100
+2026-07-29	Dow jumps 537 points to a record as investors rotate out of chipmakers	cd1f66b7	Dow Jones,S&P 500,Nasdaq
+2026-07-29	UPS beats and lifts its outlook, but shares slide about 6.5% on soft volumes	720c6837	UPS,earnings
+2026-07-29	Oil falls a third day as Trump touts US-Iran talks	4c8877f7	Brent crude,WTI,Iran,Strait of Hormuz
+2026-07-29	Coca-Cola raises 2026 guidance after 5% jump in global volumes	18ebf17b	Coca-Cola,earnings
+2026-07-29	🏎️ Verstappen's Red Bull future in doubt as F1 pauses for its summer break	abce9ec6	Max Verstappen,Red Bull,Kimi Antonelli,Dutch Grand Prix
+2026-07-29	🏏 Sri Lanka Women clinch ODI series 2-1 over Pakistan in Hambantota	0024623c	Sri Lanka Women,Pakistan Women,Harshitha Samarawickrama
+2026-07-29	🎾 Atmane stuns sixth seed Tiafoe in the DC Open first round	b3f41817	Terence Atmane,Frances Tiafoe,DC Open
+2026-07-29	🎾 Tomic wins his first ATP main-draw match in over a year at Los Cabos	18490c42	Bernard Tomic,Los Cabos,Karen Khachanov
+2026-07-29	NASA's Swift spots a wandering black hole shredding a star far from any galaxy's core	961a57b9	NASA Swift,tidal disruption event,wandering black hole
+2026-07-29	Contagious cancer found in wild catfish — the fourth known in nature	92ed632c	brown bullhead catfish,transmissible cancer,Lake Memphremagog
+2026-07-29	Scientists grow the earliest human sperm cells in a lab-built 'mini-testis'	6e23425a	induced pluripotent stem cells,spermatogonia,mini-testis
+2026-07-29	Webb uncovers a hidden third giant planet in the Beta Pictoris system	84178138	James Webb Space Telescope,Beta Pictoris d,exoplanet

@@ -264,14 +264,14 @@
       "date": "2026-07-28",
       "topic_key": "alaska",
       "text": "Alaska is at once the most northern, western and eastern US state; the Aleutians cross the 180th meridian."
+    },
+    {
+      "date": "2026-07-29",
+      "topic_key": "woolly mammoth",
+      "text": "The last woolly mammoths on Wrangel Island survived until ~1650 BC, after the Great Pyramid was built."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-06-28",
-      "type": "visual",
-      "title_key": "hidden-rectangles"
-    },
     {
       "date": "2026-06-29",
       "type": "logic",
@@ -416,14 +416,14 @@
       "date": "2026-07-28",
       "type": "logic",
       "title_key": "who-broke-the-vase"
+    },
+    {
+      "date": "2026-07-29",
+      "type": "quantitative",
+      "title_key": "there-and-back"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-06-28",
-      "type": "ladder",
-      "title_key": "from-head-to-tail"
-    },
     {
       "date": "2026-06-29",
       "type": "anagram",
@@ -568,6 +568,11 @@
       "date": "2026-07-28",
       "type": "ladder",
       "title_key": "less-is-more"
+    },
+    {
+      "date": "2026-07-29",
+      "type": "letterboxed",
+      "title_key": "boxed-in"
     }
   ]
 }
