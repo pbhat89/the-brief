@@ -1631,3 +1631,34 @@ is empty until the first run.
 2026-07-29	Contagious cancer found in wild catfish — the fourth known in nature	92ed632c	brown bullhead catfish,transmissible cancer,Lake Memphremagog
 2026-07-29	Scientists grow the earliest human sperm cells in a lab-built 'mini-testis'	6e23425a	induced pluripotent stem cells,spermatogonia,mini-testis
 2026-07-29	Webb uncovers a hidden third giant planet in the Beta Pictoris system	84178138	James Webb Space Telescope,Beta Pictoris d,exoplanet
+2026-07-30	Singapore Airlines posts first quarterly loss since 2022 on fuel and Air India	e96ea726	Singapore Airlines,Air India,jet fuel,earnings
+2026-07-30	All Singapore households to get extra S$300 in CDC vouchers in January 2027	84602e09	CDC vouchers,support package,Singapore,cost of living
+2026-07-30	Six men aged 18 to 27 charged with rioting over Yishun carpark assault	302bd08a	Yishun,rioting,Singapore Police Force
+2026-07-30	No MRT delay over 30 minutes since November 2025, longest run since 2011	2f9df700	LTA,MRT,rail reliability,MKBF
+2026-07-30	Singapore father fined S$5,000 for driving with his two sons on the car boot	e628c172	dangerous driving,Singapore,court
+2026-07-30	Update: India's Lok Sabha passes tougher anti-paper-leak law with 10-year jail terms	6fa21a50	Lok Sabha,Public Examinations Bill,NEET,India
+2026-07-30	India's private-sector activity slows to a four-year low as war and monsoon bite	8b931097	India,PMI,inflation,US-Iran conflict
+2026-07-30	Burnham launches social care overhaul but won't rule out an estates 'death tax'	16887df2	Andy Burnham,social care,National Care Service,death tax
+2026-07-30	NHS resident doctors in England stage a five-day strike over pay	f59478b0	BMA,resident doctors,Wes Streeting,NHS England
+2026-07-30	UK Supreme Court strips Bahrain of immunity in dissidents' spyware case	538829a2	UK Supreme Court,Bahrain,FinSpy,state immunity
+2026-07-30	Iran fires ballistic missiles at a US air base in Jordan; US says all intercepted	f622b00f	Iran,United States,Jordan,CENTCOM
+2026-07-30	US and Saudi Arabia strike Iran-backed militias in eastern Iraq	239baf44	United States,Saudi Arabia,Iraq,Iran-backed militias
+2026-07-30	Powerful earthquake strikes Japan's Kumamoto, killing at least 18	f23935b1	Japan,Kumamoto,earthquake,USGS
+2026-07-30	Uganda declares an end to its 2026 Ebola outbreak	4a14f826	Uganda,Ebola,WHO,outbreak
+2026-07-30	Meta and BlackRock form $14 billion venture for a Texas AI data centre	c9bde1cf	Meta,BlackRock,El Paso,data centre
+2026-07-30	AMD locks up to 2.5 gigawatts of Core Scientific capacity in $14 billion deal	5cb0635d	AMD,Core Scientific,data centre,GPUs
+2026-07-30	Sam Altman says OpenAI is willing to slow the pace of AI development	af93281f	Sam Altman,OpenAI,AI governance,Pacing the Frontier
+2026-07-30	Fish Audio raises $52 million for expressive AI voice models	d6e51ead	Fish Audio,Shijia Liao,voice AI,funding
+2026-07-30	US Federal Reserve holds interest rates steady for a fifth straight meeting	3107b4b8	Federal Reserve,FOMC,interest rates,inflation
+2026-07-30	Dow tumbles more than 1,150 points after the Fed's hawkish hold	454f86cd	Dow Jones,S&P 500,Nasdaq,Federal Reserve
+2026-07-30	Microsoft tops estimates as Azure pushes annual cloud revenue past $100 billion	f52d9115	Microsoft,Azure,cloud,earnings
+2026-07-30	Meta shares fall as AI spending pushes quarterly expenses to $42 billion	2aebc53d	Meta,AI spending,earnings,Mark Zuckerberg
+2026-07-30	Boeing posts a wider quarterly loss on an Air Force One charge	5cb4d164	Boeing,Air Force One,earnings,Kelly Ortberg
+2026-07-30	🎾 De Minaur beats Tsitsipas to open his Washington title defence	cb280f0f	Alex de Minaur,Stefanos Tsitsipas,DC Open
+2026-07-30	🎾 Eala rallies past Olympic champion Zheng Qinwen on her Washington debut	f1389cc2	Alexandra Eala,Zheng Qinwen,DC Open
+2026-07-30	🏏 Update: Seales takes five as West Indies beat Pakistan by 90 runs	d61b055f	Jayden Seales,West Indies,Pakistan,Test
+2026-07-30	🏎️ Sainz says it is time to decide his future as F1's summer break opens	6337192a	Carlos Sainz,Williams,F1,summer break
+2026-07-30	LiDAR survey reveals hundreds of lost earthworks from an ancient Amazon society	a3515911	Amazon,LiDAR,earthworks,archaeology
+2026-07-30	NASA's Psyche probe completes a Mars flyby en route to a metal asteroid	d8bd5c90	NASA,Psyche,Mars flyby,16 Psyche
+2026-07-30	Scientists repurpose a DNA-shredding enzyme to kill cancer cells in mice	0fd56ac1	Cas12a2,TP53,CRISPR,cancer
+2026-07-30	A weakening Atlantic current could intensify California's atmospheric-river storms	e7614668	AMOC,atmospheric rivers,California,climate

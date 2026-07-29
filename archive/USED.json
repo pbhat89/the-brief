@@ -269,14 +269,14 @@
       "date": "2026-07-29",
       "topic_key": "woolly mammoth",
       "text": "The last woolly mammoths on Wrangel Island survived until ~1650 BC, after the Great Pyramid was built."
+    },
+    {
+      "date": "2026-07-30",
+      "topic_key": "ketchup",
+      "text": "Ketchup was once sold as medicine in the 1830s."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-06-29",
-      "type": "logic",
-      "title_key": "last-ball"
-    },
     {
       "date": "2026-06-30",
       "type": "quantitative",
@@ -421,14 +421,14 @@
       "date": "2026-07-29",
       "type": "quantitative",
       "title_key": "there-and-back"
+    },
+    {
+      "date": "2026-07-30",
+      "type": "lateral",
+      "title_key": "seventh-floor"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-06-29",
-      "type": "anagram",
-      "title_key": "mixed-messages"
-    },
     {
       "date": "2026-06-30",
       "type": "spellingbee",
@@ -573,6 +573,11 @@
       "date": "2026-07-29",
       "type": "letterboxed",
       "title_key": "boxed-in"
+    },
+    {
+      "date": "2026-07-30",
+      "type": "anagram",
+      "title_key": "self-portrait"
     }
   ]
 }
