@@ -274,14 +274,14 @@
       "date": "2026-07-30",
       "topic_key": "ketchup",
       "text": "Ketchup was once sold as medicine in the 1830s."
+    },
+    {
+      "date": "2026-07-31",
+      "topic_key": "point nemo",
+      "text": "Point Nemo, the ocean's most remote spot, is so far from land that passing ISS astronauts are often the nearest humans."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-06-30",
-      "type": "quantitative",
-      "title_key": "two-ferries"
-    },
     {
       "date": "2026-07-01",
       "type": "lateral",
@@ -426,14 +426,14 @@
       "date": "2026-07-30",
       "type": "lateral",
       "title_key": "seventh-floor"
+    },
+    {
+      "date": "2026-07-31",
+      "type": "visual",
+      "title_key": "bookworm"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-06-30",
-      "type": "spellingbee",
-      "title_key": "pod-of-letters"
-    },
     {
       "date": "2026-07-01",
       "type": "letterboxed",
@@ -578,6 +578,11 @@
       "date": "2026-07-30",
       "type": "anagram",
       "title_key": "self-portrait"
+    },
+    {
+      "date": "2026-07-31",
+      "type": "spellingbee",
+      "title_key": "t-party"
     }
   ]
 }

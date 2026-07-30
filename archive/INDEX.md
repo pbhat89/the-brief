@@ -1662,3 +1662,35 @@ is empty until the first run.
 2026-07-30	NASA's Psyche probe completes a Mars flyby en route to a metal asteroid	d8bd5c90	NASA,Psyche,Mars flyby,16 Psyche
 2026-07-30	Scientists repurpose a DNA-shredding enzyme to kill cancer cells in mice	0fd56ac1	Cas12a2,TP53,CRISPR,cancer
 2026-07-30	A weakening Atlantic current could intensify California's atmospheric-river storms	e7614668	AMOC,atmospheric rivers,California,climate
+2026-07-31	Ong Ye Kung warns 'unnecessary treatments' could push up healthcare costs	be7b2c0b	ong ye kung,healthcare,singapore,unnecessary treatments
+2026-07-31	Josephine Teo says social-media bans are not the goal, but platforms must meet child-safety rules	2eb74c24	josephine teo,social media,child safety,singapore
+2026-07-31	Gym operator behind several Anytime Fitness and BFT outlets charged over late CPF payments	b3c3aaf0	watchtower holdings,anytime fitness,cpf,singapore
+2026-07-31	Car bursts into flames on the TPE, snarling expressway traffic	a7a926bd	tpe,car fire,singapore,expressway
+2026-07-31	Copycat 'E20' movement demands minister Nitin Gadkari quit over the ethanol-petrol mandate	b1052482	e20 janta party,nitin gadkari,ethanol,india,protest
+2026-07-31	Modi pushes his ministers onto Instagram as Gen-Z protests reshape India's politics	363fa6d2	modi,instagram,gen z,india,protests
+2026-07-31	India's economy sends mixed signals as a weak monsoon and trade shocks bite	52134f13	india,economy,monsoon,tariffs,growth
+2026-07-31	India's $32 billion forex drive has yet to lift the rupee	fdaa8f86	india,rupee,forex,rbi,sanjay malhotra
+2026-07-31	Bank of England holds rates at 3.75% as three policymakers push for a hike	2046cdfe	bank of england,interest rates,inflation,uk
+2026-07-31	UK public services face a £24 billion squeeze this parliament, NIESR warns	71b8232e	niesr,public services,uk,burnham,inflation
+2026-07-31	Only six of Burnham's cabinet would survive an election against Reform, poll finds	a23f6593	burnham,reform uk,more in common,poll
+2026-07-31	Shell posts its best quarterly profit in four years as the Iran war lifts energy prices	4560f947	shell,earnings,oil,uk,iran war
+2026-07-31	Russian strikes kill at least eight across Ukraine and reach Lviv, forcing Poland to scramble jets	c733416f	russia,ukraine,lviv,poland,strikes
+2026-07-31	Israeli strikes kill at least four in Gaza, including a child, despite the ceasefire	dd8c149f	israel,gaza,khan younis,ceasefire
+2026-07-31	Saudi Arabia proposes a naval coalition to guard Gulf shipping as oil prices ease	15f3cc7d	saudi arabia,naval coalition,shipping,iran,oil
+2026-07-31	Trump's August 1 tariff deadline looms as the EU nears a deal and USMCA lapses	2005ebe4	trump,tariffs,eu,usmca,canada
+2026-07-31	Judge doubts the US ban on Anthropic's AI, calling the 'supply-chain risk' case unproven	e748a009	anthropic,us government,ai ban,supply chain,court
+2026-07-31	Apple beats on a 22% jump in iPhone sales but slides on weak guidance	3befffa6	apple,iphone,earnings,guidance
+2026-07-31	Amazon's AWS grows 37%, its fastest since 2021, lifting the stock about 10%	58133311	amazon,aws,cloud,earnings,andy jassy
+2026-07-31	Reddit beats on earnings but sinks on fears of falling Google search traffic	4846c136	reddit,earnings,google,search traffic
+2026-07-31	Wall Street rebounds as the Dow jumps 614 points after the Fed-day selloff	f4c53844	dow,s&p 500,nasdaq,markets
+2026-07-31	Coinbase falls after posting a third straight quarterly loss	ee706b79	coinbase,earnings,crypto,loss
+2026-07-31	Oil slips about 2% as Saudi Arabia floats a coalition to protect shipping	2e0e4e01	oil,brent crude,saudi arabia,shipping
+2026-07-31	Rivian rises after trimming its 2026 spending and narrowing losses	74c73601	rivian,ev,earnings,guidance
+2026-07-31	Eala rallies from 5-1 down to dethrone Fernandez and reach the Washington quarters	5c37d1e2	alexandra eala,leylah fernandez,dc open,tennis
+2026-07-31	Cruz Hewitt, 17, lands his first top-100 win to set a Washington clash with de Minaur	b5364002	cruz hewitt,marcos giron,de minaur,dc open
+2026-07-31	Trent Rockets thrash Welsh Fire by nine wickets as Duckett hits 52 not out	373f975b	trent rockets,welsh fire,the hundred,ben duckett
+2026-07-31	Horner's F1 return stays unresolved over the summer break as Cadillac denies links	4a41490d	christian horner,cadillac,red bull,f1
+2026-07-31	Landmark satellite test confirms Einstein's 'frame-dragging' to one part in a thousand	584bda34	frame dragging,general relativity,lares-2,einstein
+2026-07-31	NASA fuels its Roman Space Telescope for a late-August sky-mapping launch	a3a06cd6	nasa,roman space telescope,launch
+2026-07-31	Euclid telescope uncovers 31 of the earliest quasars ever seen	e1ab928c	euclid,quasars,esa,universe
+2026-07-31	Immune cells in the blood drive brain ageing, and blocking them restores memory in mice	ec5202d2	brain ageing,immune cells,memory,nature
