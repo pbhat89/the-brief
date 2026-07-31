@@ -1694,3 +1694,39 @@ is empty until the first run.
 2026-07-31	NASA fuels its Roman Space Telescope for a late-August sky-mapping launch	a3a06cd6	nasa,roman space telescope,launch
 2026-07-31	Euclid telescope uncovers 31 of the earliest quasars ever seen	e1ab928c	euclid,quasars,esa,universe
 2026-07-31	Immune cells in the blood drive brain ageing, and blocking them restores memory in mice	ec5202d2	brain ageing,immune cells,memory,nature
+2026-08-01	Ministers Shanmugam and Tan See Leng each awarded S$145,000 in legal costs from Bloomberg	c9b2d3e8	shanmugam,tan see leng,bloomberg,defamation,legal costs
+2026-08-01	Police and IMDA investigate Massive Attack after 'Free Palestine' chant at Singapore concert	24e0da79	massive attack,imda,singapore police,palestinian flag
+2026-08-01	Singapore scraps the 15-month wait-out barring private owners from buying resale HDB flats	57154cbd	chee hong tat,hdb,resale flats,cooling measure
+2026-08-01	Every Singapore household to get an extra S$300 in CDC vouchers in January 2027	c9036792	jeffrey siow,cdc vouchers,cost of living,singapore
+2026-08-01	MAS tightens policy for a second straight quarter, sees inflation elevated into 2027	163fca2c	mas,singapore dollar,inflation,monetary policy
+2026-08-01	India doubles prison terms for exam-paper leaks after 'Cockroach party' protests	4809ac19	india,exam leaks,cockroach janta party,parliament
+2026-08-01	India's Supreme Court orders the release of minors detained in the Cockroach protests	b4d1881e	india,supreme court,cockroach janta party,minors,police
+2026-08-01	Rising US Treasury yields complicate the RBI's defence of a near-record-low rupee	a4863dcb	india,rbi,rupee,treasury yields
+2026-08-01	India's Nifty 50 heads for a monthly gain as trade deals offset monsoon worries	fcedfc19	india,nifty 50,markets,trade deals,monsoon
+2026-08-01	Chancellor John Healey to deliver his first Budget on October 28	e8b3a0c0	john healey,autumn budget,andy burnham,treasury
+2026-08-01	Burnham to hand English metro mayors a share of income tax and business rates	5453a4da	andy burnham,metro mayors,income tax,devolution
+2026-08-01	UK house prices edge up 0.1% in July, the first gain in three months	6b92389e	nationwide,house prices,uk,mortgages
+2026-08-01	Burnham presses for welfare cuts as Labour MPs warn against 'punitive' reform	a5de7b49	andy burnham,welfare,labour,reform
+2026-08-01	US strikes Iran as Tehran retaliates against Kuwait and Jordan	c5583736	united states,iran,irgc,kuwait,jordan
+2026-08-01	Egypt is drawn into the Iran war as a drone hits a US-owned LNG tanker at Damietta	7961d206	egypt,damietta,lng tanker,iran
+2026-08-01	Update: Saudi Arabia forms a 14-nation Maritime Defence Alliance to guard shipping lanes	3bdad5aa	saudi arabia,maritime alliance,red sea,hormuz,shipping
+2026-08-01	Trump announces a phased Hamas disarmament deal, with Israeli withdrawal to follow	099c800e	trump,hamas,israel,gaza,disarmament
+2026-08-01	At least 57 die as tens of thousands breach the Morocco-Ceuta border into Spain	4c6daed4	spain,ceuta,morocco,pedro sanchez,migrants
+2026-08-01	Samsung and SK Hynix post record quarterly profits on AI memory demand	b875650c	samsung,sk hynix,memory,hbm,ai
+2026-08-01	Microsoft jumps about 15% as Azure cloud growth beats estimates	22187303	microsoft,azure,cloud,earnings
+2026-08-01	Meta's free cash flow collapses to $784 million as AI capex surges	28070684	meta,free cash flow,capex,ai
+2026-08-01	Bloomberg: China's Moonshot runs its Kimi model on a 20,000-chip Nvidia cluster via Alibaba	85461e68	moonshot,kimi,alibaba,nvidia,china
+2026-08-01	Wall Street closes July higher as the Dow logs a fourth straight winning month	bca43e8e	s&p 500,nasdaq,dow,markets
+2026-08-01	Chevron beats on a war-driven oil rally while Exxon misses on refining	7f1cf093	chevron,exxon,oil,earnings,iran war
+2026-08-01	Gold climbs toward $4,100 an ounce, set for its first monthly gain since February	67014717	gold,bullion,commodities,inflation
+2026-08-01	NYSE parent ICE agrees to buy MarketAxess for about $6 billion	418cda47	intercontinental exchange,marketaxess,m&a,bonds
+2026-08-01	Blackstone to buy a $25 billion HSBC Australia loan portfolio	7c3c14d3	blackstone,hsbc,australia,loans,m&a
+2026-08-01	🎾 Nakashima upsets defending champion de Minaur to reach the Washington semifinals	ba71d9db	brandon nakashima,alex de minaur,dc open,washington
+2026-08-01	🎾 Pegula beats Kalinskaya again to return to the Washington semifinals	7e87e3c7	jessica pegula,anna kalinskaya,dc open,washington
+2026-08-01	🏏 Trent Rockets beat Manchester Super Giants by six wickets as Finn Allen hits 72*	a6866d17	trent rockets,manchester super giants,the hundred,finn allen
+2026-08-01	🏏 Trent Rockets women win by 31 runs as Sophia Dunkley makes 57	bb5807d5	trent rockets,manchester super giants,the hundred,sophia dunkley
+2026-08-01	🏎️ Verstappen's Red Bull exit clause is in play as he sits seventh at the summer break	72c98d97	max verstappen,red bull,laurent mekies,f1,summer break
+2026-08-01	Chilean mummies yield the oldest smallpox genomes ever found in the Americas	59c53a12	smallpox,chilean mummies,ancient dna,camarones
+2026-08-01	NASA opens a new Flight Dynamics Research Facility wind tunnel at Langley	f158faf1	nasa,langley,wind tunnel,flight dynamics research facility
+2026-08-01	Nature examines the faint 'biophoton' glow that all living things emit	84114cf8	biophotons,cells,diagnostics,nature
+2026-08-01	Astronomers capture the best image yet of Betelgeuse's hidden companion star	b9e2c958	betelgeuse,companion star,siwarha,very large telescope

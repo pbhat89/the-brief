@@ -279,19 +279,14 @@
       "date": "2026-07-31",
       "topic_key": "point nemo",
       "text": "Point Nemo, the ocean's most remote spot, is so far from land that passing ISS astronauts are often the nearest humans."
+    },
+    {
+      "date": "2026-08-01",
+      "topic_key": "fax machine",
+      "text": "The fax machine is older than the telephone. Alexander Bain patented a facsimile device in 1843, about 33 years before Bell patented the telephone in 1876."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-07-01",
-      "type": "lateral",
-      "title_key": "bartenders-cure"
-    },
-    {
-      "date": "2026-07-02",
-      "type": "visual",
-      "title_key": "hidden-stack"
-    },
     {
       "date": "2026-07-03",
       "type": "logic",
@@ -431,19 +426,14 @@
       "date": "2026-07-31",
       "type": "visual",
       "title_key": "bookworm"
+    },
+    {
+      "date": "2026-08-01",
+      "type": "logic",
+      "title_key": "vowel-rule"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-07-01",
-      "type": "letterboxed",
-      "title_key": "twelve-in-two"
-    },
-    {
-      "date": "2026-07-02",
-      "type": "grouping",
-      "title_key": "compound-interest"
-    },
     {
       "date": "2026-07-03",
       "type": "ladder",
@@ -583,6 +573,11 @@
       "date": "2026-07-31",
       "type": "spellingbee",
       "title_key": "t-party"
+    },
+    {
+      "date": "2026-08-01",
+      "type": "grouping",
+      "title_key": "building-blocks"
     }
   ]
 }

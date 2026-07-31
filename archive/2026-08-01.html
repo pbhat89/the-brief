@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Sat, 1 August 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .wpuzzle-box{background:linear-gradient(135deg,#0e1a1a,#0d1620);border:1px solid #234a44;border-left:3px solid #16a085;padding:24px 28px;border-radius:2px}
+  .wptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#16a085;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .wpuzzle-box .puzzle-title{color:#cdeae3}
+  .wpuzzle-box .puzzle-how{color:#8fb8ac;background:#08140f;border-left-color:#1a6a5a}
+  .wpuzzle-box .puzzle-q{color:#dfeae6;font-family:'Source Sans 3',sans-serif}
+  .wpuzzle-box .answer{color:#bfe0d6}
+  .wpuzzle-box .answer .alabel{color:#16a085}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Saturday, 1 August 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Saturday, 1 August 2026 · 🔍 62 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eleven entries in this exact order:
+     id    : one of "sg" | "india" | "uk" | "geo" | "tech" | "biz" | "sports" | "misc" | "fun" | "puzzle" | "wpuzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 8 news tabs; fun/puzzle/wpuzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+
+   WORD_PUZZLE shape (separate, daily word game — NYT-style, static reveal):
+     type     : one of "Connections" | "Word Ladder" | "Anagram" | "Spelling Bee" | "Letter Boxed" | "Mini Crossword"
+     title    : short evocative name for the word puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle body; supports \n for line breaks (grids render as pre-formatted text)
+     answer   : the answer; supports \n for line breaks; appears inside its own toggle (id "wpans")
+============================================================================= */
+
+const SECTIONS = [
+  { id:"sg", title:"🇸🇬 Singapore", color:"#e74c3c", items:[
+    { headline:"Ministers Shanmugam and Tan See Leng each awarded S$145,000 in legal costs from Bloomberg",
+      summary:"A Singapore court awarded Senior Minister K. Shanmugam and Manpower Minister Tan See Leng about S$145,000 (US$113,000) each in legal costs after they won their defamation suit over a Bloomberg article on Good Class Bungalow deals, on top of S$230,000 each in damages they say they will donate to charity.",
+      source:"SCMP", url:"https://www.scmp.com/news/asia/southeast-asia/article/3362498/singapore-ministers-awarded-us113000-each-legal-costs-bloomberg-libel-suit", date:"Jul 31", spectrum:null, bias:null },
+    { headline:"Police and IMDA investigate Massive Attack after 'Free Palestine' chant at Singapore concert",
+      summary:"Singapore police and the IMDA opened investigations after British band Massive Attack chanted 'Free Palestine' and held up a Palestinian flag during their Jul 29 show at The Star Performing Arts Centre; the unauthorised display of foreign emblems can draw a S$500 fine or up to six months' jail.",
+      source:"SCMP", url:"https://www.scmp.com/news/asia/southeast-asia/article/3362475/singapore-police-investigate-massive-attack-over-palestinian-support-gig", date:"Jul 31", spectrum:null, bias:null },
+    { headline:"Singapore scraps the 15-month wait-out barring private owners from buying resale HDB flats",
+      summary:"National Development Minister Chee Hong Tat said private property owners buying a non-subsidised resale HDB flat without an HDB loan will no longer face the 15-month wait-out imposed as a cooling measure in 2022, signalling that the housing market has stabilised.",
+      source:"Mothership", url:"https://mothership.sg/2026/07/no-more-15-month-wait-private-property-hdb-flat/", date:"Jul 30", spectrum:null, bias:null },
+    { headline:"Every Singapore household to get an extra S$300 in CDC vouchers in January 2027",
+      summary:"Second Minister for Finance Jeffrey Siow announced a roughly S$900 million cost-of-living package that gives every household an additional S$300 in CDC vouchers in January 2027, amid price pressures linked to the Middle East conflict.",
+      source:"Mothership", url:"https://mothership.sg/2026/07/support-measures-cdc-middle-east/", date:"Jul 30", spectrum:null, bias:null },
+    { headline:"MAS tightens policy for a second straight quarter, sees inflation elevated into 2027",
+      summary:"The Monetary Authority of Singapore again allowed a stronger Singapore dollar at its July review, holding 2026 core and headline inflation forecasts at 1.5-2.5% and warning that inflation should ease more discernibly only in the second half of 2027.",
+      source:"Mothership", url:"https://mothership.sg/2026/07/mas-singapore-dollar-appreciate-july-2026/", date:"Jul 30", spectrum:null, bias:null }
+  ]},
+  { id:"india", title:"🇮🇳 India", color:"#e67e22", items:[
+    { headline:"India doubles prison terms for exam-paper leaks after 'Cockroach party' protests",
+      summary:"India's parliament passed a law doubling the maximum prison term for exam-paper leaks to 10 years and raising the maximum fine above 10 million rupees (about US$1m), a concession to the student-led Cockroach Janta Party movement that grew out of a medical-entrance leak scandal.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/7/31/india-to-increase-penalties-for-exam-leaks-after-cockroach-party-protests", date:"Jul 31", spectrum:null, bias:null },
+    { headline:"India's Supreme Court orders the release of minors detained in the Cockroach protests",
+      summary:"The Supreme Court ordered states to free all under-18s arrested during the Cockroach Janta Party protests where they have no prior record, barred coercive action against them, and directed authorities to preserve drone, body-camera and CCTV footage of the police crackdown.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/7/29/how-has-the-indian-government-responded-to-cockroach-protests", date:"Jul 29", spectrum:null, bias:null },
+    { headline:"Rising US Treasury yields complicate the RBI's defence of a near-record-low rupee",
+      summary:"Bloomberg reported that a fresh climb in US Treasury yields is complicating the Reserve Bank of India's strategy on interest rates and the rupee, which is recovering from a record low as US-Iran tensions and higher oil prices weigh on the currency.",
+      source:"Bloomberg", url:"https://www.bloomberg.com/news/newsletters/2026-07-31/rising-us-yields-may-complicate-rbi-s-strategy-on-rates-and-the-rupee", date:"Jul 31", spectrum:null, bias:null },
+    { headline:"India's Nifty 50 heads for a monthly gain as trade deals offset monsoon worries",
+      summary:"The Nifty 50 looked set to close July higher even in muted trade, with investors weighing this year's India-US and India-EU trade deals against a delayed monsoon and quarterly results from Sun Pharma, Maruti and ITC.",
+      source:"Bloomberg", url:"https://www.bloomberg.com/news/newsletters/2026-07-30/india-s-nifty-continues-to-hit-technical-resistance-at-200-day-moving-average", date:"Jul 31", spectrum:null, bias:null }
+  ]},
+  { id:"uk", title:"🇬🇧 UK News", color:"#3949ab", items:[
+    { headline:"Chancellor John Healey to deliver his first Budget on October 28",
+      summary:"Chancellor John Healey confirmed he will present his first Autumn Budget on Oct 28, a defining test for PM Andy Burnham's new government as it juggles a reported £4.7bn defence-funding gap and costly cost-of-living pledges.",
+      source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-07-31/uk-chancellor-john-healey-to-deliver-first-budget-on-october-28", date:"Jul 31", spectrum:null, bias:null },
+    { headline:"Burnham to hand English metro mayors a share of income tax and business rates",
+      summary:"PM Andy Burnham said metro mayors will keep a share of locally generated income tax and business rates in a devolution push, with details due in a roadmap alongside the autumn Budget; ministers stress it changes how tax is allocated, not how much people pay.",
+      source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-07-30/burnham-to-give-mayors-share-of-income-tax-in-uk-devolution-push", date:"Jul 30", spectrum:null, bias:null },
+    { headline:"UK house prices edge up 0.1% in July, the first gain in three months",
+      summary:"Nationwide said UK house prices rose 0.1% in July to an average £277,542, the first monthly gain in three months and in line with forecasts, as buyers weathered higher borrowing costs tied to the Iran war better than expected.",
+      source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-07-31/uk-house-prices-edge-higher-in-july-nationwide-says", date:"Jul 31", spectrum:null, bias:null },
+    { headline:"Burnham presses for welfare cuts as Labour MPs warn against 'punitive' reform",
+      summary:"PM Andy Burnham said Britain must get 'really serious' about cutting a soaring welfare bill by making some support conditional on taking up training and work, drawing warnings from Labour MPs against 'punitive' cuts.",
+      source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-07-27/uk-must-get-serious-about-cutting-welfare-burnham", date:"Jul 27", spectrum:null, bias:null }
+  ]},
+  { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
+    { headline:"US strikes Iran as Tehran retaliates against Kuwait and Jordan",
+      summary:"US forces hit dozens of IRGC targets across Iran, and Iran retaliated with a drone strike on Kuwait's Ahmad al-Jaber airbase area that killed one worker in a Chinese-company building, while Jordan said it intercepted five Iranian missiles.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/7/31/irgc-strikes-us-targets-in-kuwait-a-day-after-us-hits-iran-latest-events", date:"Jul 31", spectrum:null, bias:null },
+    { headline:"Egypt is drawn into the Iran war as a drone hits a US-owned LNG tanker at Damietta",
+      summary:"A drone struck the US-owned, Marshall Islands-flagged floating LNG facility Energos Winter at Egypt's Damietta port, igniting a fire that spread to a second ship with no casualties reported; Iran distanced itself, with Foreign Minister Araghchi calling Egypt 'an important friend'.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/7/29/fire-erupts-on-ships-at-egypts-damietta-port", date:"Jul 30", spectrum:null, bias:null },
+    { headline:"Update: Saudi Arabia forms a 14-nation Maritime Defence Alliance to guard shipping lanes",
+      summary:"Saudi Arabia announced a Multinational Maritime Defense Alliance with 13 other states — including Turkey, Egypt, Pakistan and Qatar — to protect the Red Sea, Bab al-Mandeb and the Strait of Hormuz, formalising the coalition it had floated after Houthi and Iran-linked disruptions to shipping.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/7/30/saudi-arabia-announces-maritime-defence-alliance-to-secure-vital-waterways", date:"Jul 30", spectrum:null, bias:null },
+    { headline:"Trump announces a phased Hamas disarmament deal, with Israeli withdrawal to follow",
+      summary:"Trump said his Board of Peace reached an agreement for Hamas and other factions to disarm in phases in return for a staged Israeli withdrawal, with a roadmap due within 14 days; Hamas said it will disarm only if Israel first halts fire and pulls back, and no final deal has been confirmed.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/7/31/gaza-board-of-peace-announces-hamas-disarmament-agreement-what-we-know", date:"Jul 31", spectrum:null, bias:null },
+    { headline:"At least 57 die as tens of thousands breach the Morocco-Ceuta border into Spain",
+      summary:"At least 57 migrants died, many drowning or crushed near Tarajal beach, as roughly 50,000 people surged toward Spain's enclave of Ceuta; PM Pedro Sanchez visited, Spain deployed the military, and officials said most arrivals had been sent back by Friday.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/7/31/spain-pm-to-visit-ceuta-after-19-migrants-die-breaching-border-from-morocco", date:"Jul 31", spectrum:null, bias:null }
+  ]},
+  { id:"tech", title:"💻 Tech & AI", color:"#27ae60", items:[
+    { headline:"Samsung and SK Hynix post record quarterly profits on AI memory demand",
+      summary:"Samsung and SK Hynix, which together supply about 80% of the memory market, booked roughly 150 trillion won (about US$104 billion) in combined operating profit for the June quarter, with SK Hynix's operating profit up nearly 557% year on year on booming demand for high-bandwidth AI memory.",
+      source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-07-30/samsung-sk-hynix-answer-ai-doubters-with-big-numbers-and-deals", date:"Jul 30", spectrum:null, bias:null },
+    { headline:"Microsoft jumps about 15% as Azure cloud growth beats estimates",
+      summary:"Microsoft shares rose roughly 15% after fiscal fourth-quarter results showed faster-than-expected Azure cloud growth, reinforcing investor confidence that heavy AI-infrastructure spending is paying off even as some peers disappointed.",
+      source:"CNBC", url:"https://www.cnbc.com/2026/07/30/microsoft-msft-meta-stock-today-earnings.html", date:"Jul 30", spectrum:null, bias:null },
+    { headline:"Meta's free cash flow collapses to $784 million as AI capex surges",
+      summary:"Meta's quarterly free cash flow fell to $784 million, its lowest in nearly four years, as capital spending soared; it lifted the low end of 2026 capex guidance to $130-145 billion, and the stock fell about 8%, extending a slide that has left it down 11% for the year.",
+      source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-07-29/meta-s-free-cash-flow-dwindles-to-lowest-in-nearly-four-years", date:"Jul 29", spectrum:null, bias:null },
+    { headline:"Bloomberg: China's Moonshot runs its Kimi model on a 20,000-chip Nvidia cluster via Alibaba",
+      summary:"Bloomberg reported that Chinese AI firm Moonshot built its Kimi model on a roughly 20,000-chip Nvidia cluster obtained through investor Alibaba, testing US export controls; Alibaba denied supplying the chips, calling the claim 'completely groundless'.",
+      source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-07-31/moonshot-s-kimi-built-on-20-000-nvidia-chip-cluster-from-alibaba", date:"Jul 31", spectrum:null, bias:null }
+  ]},
+  { id:"biz", title:"📈 Business & Markets", color:"#8e44ad", items:[
+    { headline:"Wall Street closes July higher as the Dow logs a fourth straight winning month",
+      summary:"On Friday the S&P 500 rose 0.7% to 7,489.72, the Nasdaq gained 1% to 25,373.85 and the Dow added 276.97 points (0.53%) to 52,485.03, with the Dow notching a fourth consecutive monthly gain even as the Nasdaq-100 fell about 7% over July.",
+      source:"CNBC", url:"https://www.cnbc.com/2026/07/30/stock-market-today-live-updates.html", date:"Jul 31", spectrum:null, bias:null },
+    { headline:"Chevron beats on a war-driven oil rally while Exxon misses on refining",
+      summary:"Chevron posted adjusted earnings of $6.06 a share (versus $5.56 expected) and about $70 billion in revenue, its biggest quarterly net income since 2022, while Exxon's $3.52 adjusted EPS slightly missed as refining troubles offset high crude prices tied to the Iran war.",
+      source:"CNBC", url:"https://www.cnbc.com/2026/07/31/exxon-xom-chevron-cvx-q2-earnings.html", date:"Jul 31", spectrum:null, bias:null },
+    { headline:"Gold climbs toward $4,100 an ounce, set for its first monthly gain since February",
+      summary:"Gold rose toward $4,100 an ounce on Friday, with spot bullion trading around $4,040, on track for its first monthly advance since February as geopolitical risk and inflation hedging drove demand.",
+      source:"CNBC", url:"https://www.cnbc.com/select/the-price-of-gold-today-july-31-2026/", date:"Jul 31", spectrum:null, bias:null },
+    { headline:"NYSE parent ICE agrees to buy MarketAxess for about $6 billion",
+      summary:"Intercontinental Exchange agreed to acquire fixed-income trading platform MarketAxess for roughly $6 billion, at $167 a share — a premium of about a third — expanding ICE's bond-trading business.",
+      source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-07-30/nyse-parent-ice-agrees-to-buy-marketaxess-for-about-6-billion", date:"Jul 30", spectrum:null, bias:null },
+    { headline:"Blackstone to buy a $25 billion HSBC Australia loan portfolio",
+      summary:"Blackstone agreed to acquire an A$36 billion (about US$25 billion) Australian home and personal loan book from HSBC, one of the largest such transactions on record.",
+      source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-07-30/blackstone-said-to-buy-25-billion-hsbc-australia-home-loan-book", date:"Jul 30", spectrum:null, bias:null }
+  ]},
+  { id:"sports", title:"🎾🏏🏎️ Sports", color:"#c0392b", items:[
+    { headline:"🎾 Nakashima upsets defending champion de Minaur to reach the Washington semifinals",
+      summary:"Brandon Nakashima beat top seed and defending champion Alex de Minaur 7-6(5), 3-6, 6-4 in the DC Open quarterfinals in Washington to reach the semifinals, avenging his loss to the Australian at the same stage a year ago.",
+      source:"ATP Tour", url:"https://www.atptour.com/en/news/de-minaur-nakashima-washington-2026-qf", date:"Jul 31", spectrum:null, bias:null },
+    { headline:"🎾 Pegula beats Kalinskaya again to return to the Washington semifinals",
+      summary:"Jessica Pegula beat Anna Kalinskaya — for the sixth time in seven meetings — in the DC Open quarterfinals to reach the Washington semifinals for the first time since 2023.",
+      source:"WTA", url:"https://www.wtatennis.com/videos/4551204/pegula-tops-kalinskaya-again-to-return-to-washington-semis", date:"Jul 31", spectrum:null, bias:null },
+    { headline:"🏏 Trent Rockets beat Manchester Super Giants by six wickets as Finn Allen hits 72*",
+      summary:"In The Hundred men's competition at Manchester, Trent Rockets chased down 138 with 13 balls to spare to win by six wickets, with Finn Allen named player of the match for a 72 not out off 35 balls.",
+      source:"ESPNcricinfo", url:"https://www.espncricinfo.com/series/the-hundred-men-s-competition-2026-1521176/manchester-super-giants-men-vs-trent-rockets-men-14th-match-1521244/full-scorecard", date:"Jul 31", spectrum:null, bias:null },
+    { headline:"🏏 Trent Rockets women win by 31 runs as Sophia Dunkley makes 57",
+      summary:"In The Hundred women's competition at Manchester, Trent Rockets posted 153 for 8 and bowled out Manchester Super Giants for 122 to win by 31 runs, with Sophia Dunkley named player of the match for 57 off 33 balls plus three catches.",
+      source:"ESPNcricinfo", url:"https://www.espncricinfo.com/series/the-hundred-women-s-competition-2026-1521193/manchester-super-giants-women-vs-trent-rockets-women-14th-match-1521210/full-scorecard", date:"Jul 31", spectrum:null, bias:null },
+    { headline:"🏎️ Verstappen's Red Bull exit clause is in play as he sits seventh at the summer break",
+      summary:"With F1 on its summer break after the Hungarian Grand Prix, Max Verstappen — seventh in the standings and outside the top two — can trigger a performance clause allowing a move for 2027; boss Laurent Mekies said the team must prove he should stay, amid reported talks with McLaren.",
+      source:"Sky Sports F1", url:"https://www.skysports.com/f1/news/12433/13559456/max-verstappen-red-bull-driver-switching-teams-for-2027-formula-1-season-would-cause-chaos-in-f1-driver-market", date:"Jul 31", spectrum:null, bias:null }
+  ]},
+  { id:"misc", title:"🔬 Other Miscellaneous News", color:"#1abc9c", items:[
+    { headline:"Chilean mummies yield the oldest smallpox genomes ever found in the Americas",
+      summary:"DNA from two naturally mummified people at the Camarones 9 site in northern Chile, who died between 1492 and 1631, produced the first ancient smallpox genomes from the Americas; published Jul 30 in Science, they confirm the virus arrived with European colonisers.",
+      source:"Scientific American", url:"https://www.scientificamerican.com/article/chilean-mummies-reveal-a-lost-lineage-of-smallpox/", date:"Jul 30", spectrum:null, bias:null },
+    { headline:"NASA opens a new Flight Dynamics Research Facility wind tunnel at Langley",
+      summary:"NASA opened its Flight Dynamics Research Facility in Hampton, Virginia on Jul 31, a 25,000-square-foot vertical wind tunnel with a 20-foot test chamber that replaces two historic Langley tunnels to test aircraft, rockets, parachutes and spacecraft.",
+      source:"NASA", url:"https://www.nasa.gov/news-release/nasa-opens-new-flight-dynamics-research-facility-in-virginia/", date:"Jul 31", spectrum:null, bias:null },
+    { headline:"Nature examines the faint 'biophoton' glow that all living things emit",
+      summary:"A Nature feature reviews growing evidence that living cells give off an ultra-weak glow of photons that tracks their health — live and dead mice differ measurably — raising the prospect of non-invasive disease diagnostics.",
+      source:"Nature", url:"https://www.nature.com/articles/d41586-026-02311-z", date:"Jul 30", spectrum:null, bias:null },
+    { headline:"Astronomers capture the best image yet of Betelgeuse's hidden companion star",
+      summary:"Using the Very Large Telescope's SPHERE instrument, astronomers imaged Betelgeuse's faint companion, nicknamed Siwarha, at 6.1-sigma confidence, helping explain the red supergiant's long-puzzling roughly six-year brightness cycle.",
+      source:"Scientific American", url:"https://www.scientificamerican.com/article/scientists-get-best-yet-glimpse-of-betelgeuses-companion-star/", date:"Jul 28", spectrum:null, bias:null }
+  ]},
+  { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
+  { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
+  { id:"wpuzzle", title:"🔤 Word Puzzles", color:"#16a085", custom:"wpuzzle" },
+];
+
+const FUN_FACT = {
+  text: "The fax machine is older than the telephone. Scottish inventor Alexander Bain patented a device that could scan a document and reproduce it at a distance in 1843 &mdash; about 33 years before Alexander Graham Bell patented the telephone in 1876. Bain's machine grew out of the electric telegraph, using synchronised pendulums to scan a metal surface line by line.",
+  tag: "Category · History & Technology"
+};
+
+const PUZZLE = {
+  type: "Logic",
+  title: "The Vowel Rule",
+  how: "Test only what could break the rule. A card that cannot possibly violate it tells you nothing, so flipping it is wasted.",
+  question: "Four cards lie on a table. Each has a letter on one side and a number on the other. You can see:\n\n     A     K     2     7\n\nSomeone claims: 'If a card has a vowel on one side, then it has an even number on the other side.'\n\nWhat is the smallest set of these cards you must turn over to decide whether the claim is true?",
+  answer: "Turn over just two cards: A and 7.\n\n- A (vowel): it must have an even number on the back, or the rule is broken.\n- 7 (odd): it must NOT have a vowel on the back, or the rule is broken.\n- K (consonant): the rule says nothing about consonants, so it cannot break the rule.\n- 2 (even): the rule never claims even numbers must have vowels, so whatever is behind it, the rule still holds.\n\nThe classic mistake is flipping the 2 &mdash; it can never disprove the claim. (This is the Wason selection task.)"
+};
+
+const WORD_PUZZLE = {
+  type: "Connections",
+  title: "Building Blocks",
+  how: "Ask what single word could follow each entry. Four different 'endings' split the sixteen words into four groups of four.",
+  question: "Sort these 16 words into 4 groups of 4. In each group, every word can be followed by the same hidden word to make a compound. One word in each group looks like it could belong elsewhere.\n\nGREEN · MOON · LIME · CORN\nWARE · SPOT · MILE · MAY\nSUN · FARM · BRIM · WILD\nDAY · GEM · PENT · WALL",
+  answer: "+ STONE: LIME, MILE, BRIM, GEM (limestone, milestone, brimstone, gemstone)\n+ LIGHT: MOON, SPOT, SUN, DAY (moonlight, spotlight, sunlight, daylight)\n+ FLOWER: CORN, MAY, WILD, WALL (cornflower, mayflower, wildflower, wallflower)\n+ HOUSE: GREEN, WARE, FARM, PENT (greenhouse, warehouse, farmhouse, penthouse)\n\nThe traps: SUN also makes sunflower, MOON makes moonstone, LIME makes limelight, and GREEN makes greenlight."
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function renderWordPuzzle(){
+  let h='<div class="sec-title">🔤 Word Puzzle of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#16a085,transparent)"></div>';
+  h+='<div class="wpuzzle-box"><span class="wptype">'+WORD_PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+WORD_PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+WORD_PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+WORD_PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this,\'wpans\')">Show Answer</button>';
+  h+='<div class="answer" id="wpans"><span class="alabel">Answer</span>'+WORD_PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn,ansId){var a=document.getElementById(ansId||'ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else if(sec.custom==="wpuzzle"){div.innerHTML=renderWordPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>
