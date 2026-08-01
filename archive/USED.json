@@ -284,6 +284,11 @@
       "date": "2026-08-01",
       "topic_key": "fax machine",
       "text": "The fax machine is older than the telephone. Alexander Bain patented a facsimile device in 1843, about 33 years before Bell patented the telephone in 1876."
+    },
+    {
+      "date": "2026-08-02",
+      "topic_key": "pistol shrimp",
+      "text": "The pistol shrimp snaps a claw so fast the collapsing bubble briefly nears the Sun's surface temperature and emits a flash of light."
     }
   ],
   "puzzle_log": [
@@ -431,6 +436,11 @@
       "date": "2026-08-01",
       "type": "logic",
       "title_key": "vowel-rule"
+    },
+    {
+      "date": "2026-08-02",
+      "type": "quantitative",
+      "title_key": "fair-exchange"
     }
   ],
   "word_puzzle_log": [
@@ -578,6 +588,11 @@
       "date": "2026-08-01",
       "type": "grouping",
       "title_key": "building-blocks"
+    },
+    {
+      "date": "2026-08-02",
+      "type": "ladder",
+      "title_key": "sea-to-sky"
     }
   ]
 }

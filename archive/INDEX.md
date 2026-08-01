@@ -1730,3 +1730,25 @@ is empty until the first run.
 2026-08-01	NASA opens a new Flight Dynamics Research Facility wind tunnel at Langley	f158faf1	nasa,langley,wind tunnel,flight dynamics research facility
 2026-08-01	Nature examines the faint 'biophoton' glow that all living things emit	84114cf8	biophotons,cells,diagnostics,nature
 2026-08-01	Astronomers capture the best image yet of Betelgeuse's hidden companion star	b9e2c958	betelgeuse,companion star,siwarha,very large telescope
+2026-08-02	Government takes possession of Lee Kuan Yew’s 38 Oxley Road home	624fde12	singapore, lee kuan yew, 38 oxley road, sla, nhb, acquired
+2026-08-02	Four new Cross Island Line MRT stations announced for Singapore’s west	f44a4f05	singapore, cross island line, mrt, taman jurong, jeffrey siow, announced
+2026-08-02	Singapore tightens driver demerit-point limits after road deaths hit a 10-year high	8c8c9fc3	singapore, demerit points, road deaths, driving licence, tightened
+2026-08-02	Singaporeans among 65 arrested in Vietnam over an etomidate-laced vape syndicate	9139991d	singapore, vietnam, etomidate, vape syndicate, arrested
+2026-08-02	Beauty chain DNA Brands to refund up to S$1 million over high-pressure sales	3976d1cd	singapore, dna brands, cccs, refund, high-pressure sales
+2026-08-02	India’s GST collections jump 15.4% to a record Rs 2.11 lakh crore in July	d87b6f37	india, gst, collections, record, july
+2026-08-02	Modi launches South India’s first chip plant near Visakhapatnam	f34364bb	india, modi, semiconductor, osat, visakhapatnam, launched
+2026-08-02	NIA court frames charges against ex-officers Waze and Sharma in Antilia bomb-scare case	53482283	india, nia, sachin waze, pradeep sharma, antilia, charges framed
+2026-08-02	Amit Shah approves Rs 2,117 crore advance disaster-fund release for flood-hit states	cc8b0356	india, amit shah, sdrf, flood relief, states
+2026-08-02	India’s first-quarter fiscal deficit widens to Rs 3.1 lakh crore, 18.2% of the annual target	2b0fd6d4	india, fiscal deficit, cga, q1 fy27, widened
+2026-08-02	Update: US and Israel ready strikes on Iran’s power grid as Tehran vows to hit energy sites	b0d4f7f7	iran, us, israel, power grid, strikes, escalation
+2026-08-02	Update: Israel rejects a Gaza pullout as the world reacts to the Hamas disarmament roadmap	baa2c222	israel, gaza, hamas, disarmament, board of peace, rejects
+2026-08-02	Car bomb wounds at least 11 in Colombia’s Cúcuta days before a new president takes office	114bfd29	colombia, cucuta, car bomb, de la espriella, petro
+2026-08-02	Human Rights Watch says Russia’s Africa Corps killed Malian civilians in a June air strike	cff5272d	mali, russia, africa corps, hrw, air strike, civilians
+2026-08-02	Voice-AI startup Smallest.ai raises $13 million for ultra-fast conversational models	71f948bc	smallest.ai, voice ai, series a, funding
+2026-08-02	Repeat founder Ryan Williams raises $10 million for AI agents in private credit	39a67a67	ellis ai, ryan williams, private credit, seed, funding
+2026-08-02	US Treasury yields spike to an 18-month high even as Wall Street closes July with a gain	6af3c135	us, treasury yields, 10-year, wall street, july
+2026-08-02	Equinix seeks at least $3 billion in bonds to fund AI data-centre expansion	7de2d4be	equinix, bonds, data centre, ai, expansion
+2026-08-02	🎾 Eala routs Osaka to reach her first WTA 500 final, meeting Pegula in Washington	e3c93803	eala, osaka, pegula, dc open, washington, final
+2026-08-02	🎾 The Canadian Open gets under way in Montreal and Toronto	0874676b	canadian open, national bank open, montreal, toronto, begins
+2026-08-02	🏏 The Hundred: Welsh Fire beat Birmingham Phoenix; Southern Brave down London Spirit	b8ff7fa5	the hundred, welsh fire, birmingham phoenix, southern brave, london spirit
+2026-08-02	🏎️ F1’s summer break rolls on with the Dutch GP next as silly season swirls	e44968ab	f1, summer break, dutch gp, zandvoort, verstappen, silly season
