@@ -1752,3 +1752,26 @@ is empty until the first run.
 2026-08-02	🎾 The Canadian Open gets under way in Montreal and Toronto	0874676b	canadian open, national bank open, montreal, toronto, begins
 2026-08-02	🏏 The Hundred: Welsh Fire beat Birmingham Phoenix; Southern Brave down London Spirit	b8ff7fa5	the hundred, welsh fire, birmingham phoenix, southern brave, london spirit
 2026-08-02	🏎️ F1’s summer break rolls on with the Dutch GP next as silly season swirls	e44968ab	f1, summer break, dutch gp, zandvoort, verstappen, silly season
+2026-08-03	Fire at a Clementi Avenue 4 HDB flat kills one resident and injures two firefighters	2d9e006b	clementi,hdb,fire,scdf,death
+2026-08-03	Barisan Nasional sweeps the Johor state polls, a result Singapore commuters will watch	157267cd	johor,barisan-nasional,election,rts-link,causeway
+2026-08-03	India draws over $40 billion in overseas capital since June, bolstering the RBI's rupee defence	7a57ed78	rbi,rupee,fcnr,capital-inflows,india
+2026-08-03	Indian IPO hopefuls race to beat an August deadline for audited results	9cc414a5	india,ipo,primary-market,deadline,audit
+2026-08-03	Update: Trump calls off a planned strike on Iran, citing the 'perimeters' of a deal	0565ae4f	trump,iran,strike,strait-of-hormuz,deal
+2026-08-03	A sightseeing plane crashes over Peru's Nazca Lines, killing all 13 on board	a5827ebb	peru,nazca-lines,plane-crash,aerodiana,13-dead
+2026-08-03	FIFA scraps a $20 billion private-investment plan after a UEFA boycott threat	fca7d725	fifa,infantino,uefa,investment,world-cup
+2026-08-03	Israel jails 14 Givati soldiers over a mass walkout at the Sde Teiman base	98a893ee	israel,givati,sde-teiman,walkout,military
+2026-08-03	Israeli strikes kill at least four in Gaza and hit a medical warehouse	9f0d6546	israel,gaza,strikes,hospital,hamas
+2026-08-03	Judge lets Minnesota's first-in-US ban on AI 'nudify' apps take effect, denying xAI	488ad3ac	xai,minnesota,nudify,ban,court
+2026-08-03	Synthetic-user startup Simile raises $200 million at a $2 billion valuation	5e98f9f4	simile,funding,series-b,ai,valuation
+2026-08-03	Commonwealth Fusion Systems raises another $1 billion, lifting its total to $4 billion	af807359	commonwealth-fusion,funding,sparc,fusion,reactor
+2026-08-03	DoorDash builds its own drone-delivery business after winning an FAA certification	cfe43aeb	doordash,drone,faa,delivery,doordash-air
+2026-08-03	OPEC+ agrees a September output hike, completing the rollback of its voluntary cuts	5b304fd7	opec,oil,output,september,voluntary-cuts
+2026-08-03	'AI is no longer a catch-all trade' as investors punish heavy spenders this earnings season	fa30ecf4	ai,stocks,earnings,capex,markets
+2026-08-03	Big Tech adds close to $1.5 trillion in market value in a single week	73f9b7ff	big-tech,market-value,nasdaq,cloud,alphabet
+2026-08-03	Bloomberg agrees to buy Canoe Intelligence in a private-markets data push	2c54a43a	bloomberg,canoe-intelligence,acquisition,private-markets,data
+2026-08-03	🎾 Pegula beats Eala 6-4, 6-3 to win the Washington title	0b222895	pegula,eala,washington,wta,final
+2026-08-03	🎾 Teenager Rafael Jodar reaches his first ATP 500 final in Washington	945aeee2	jodar,tabilo,washington,atp,final
+2026-08-03	🏏 Trent Rockets women edge Sunrisers Leeds by five runs in The Hundred	80d0ec86	the-hundred,trent-rockets,sunrisers-leeds,cricket,women
+2026-08-03	🏎️ F1 resumes at Zandvoort's farewell Dutch GP as McLaren's title fight heats up	1b880ee8	f1,dutch-gp,zandvoort,mclaren,norris-piastri
+2026-08-03	Everyone alive may carry DNA from a 'ghost lineage' of human ancestors	768bbe9a	ghost-lineage,ancient-dna,human-genome,evolution,science
+2026-08-03	Astronomers detect a 'true sugar' molecule in interstellar space for the first time	4d4fe4e2	erythrulose,interstellar,sugar,astrochemistry,origin-of-life

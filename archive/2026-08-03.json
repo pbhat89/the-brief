@@ -1,0 +1,430 @@
+{
+  "date": "2026-08-03",
+  "items": [
+    {
+      "tab": "Singapore",
+      "headline": "Fire at a Clementi Avenue 4 HDB flat kills one resident and injures two firefighters",
+      "summary": "A blaze at a Clementi Avenue 4 HDB flat killed one resident and left two SCDF firefighters injured, with about 40 residents evacuated before most returned home by the early hours.",
+      "url": "https://mothership.sg/2026/08/fire-clementi-ave-fire-firefighters-injured/",
+      "outlet": "Mothership",
+      "publish_date": "Aug 1",
+      "short_hash": "2d9e006b",
+      "key_entities": [
+        "clementi",
+        "hdb",
+        "fire",
+        "scdf",
+        "death"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "Barisan Nasional sweeps the Johor state polls, a result Singapore commuters will watch",
+      "summary": "Malaysia's Barisan Nasional won 48 of 56 seats in the 1 August Johor election. The campaign leaned on cross-border growth, causeway congestion and the coming Johor Bahru–Singapore RTS Link used by tens of thousands of daily commuters.",
+      "url": "https://www.scmp.com/week-asia/politics/article/3360186/malaysias-johor-votes-government-allies-turn-each-other",
+      "outlet": "SCMP",
+      "publish_date": "Aug 2",
+      "short_hash": "157267cd",
+      "key_entities": [
+        "johor",
+        "barisan-nasional",
+        "election",
+        "rts-link",
+        "causeway"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "India draws over $40 billion in overseas capital since June, bolstering the RBI's rupee defence",
+      "summary": "The Reserve Bank of India said a drive to attract foreign money has pulled in more than $40 billion since June, including $36.72 billion via FCNR(B) deposits by 31 July, rebuilding buffers as rising crude prices pressure the rupee.",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-01/india-push-for-overseas-capital-draws-over-40-billion-rbi-says",
+      "outlet": "Bloomberg",
+      "publish_date": "Aug 1",
+      "short_hash": "7a57ed78",
+      "key_entities": [
+        "rbi",
+        "rupee",
+        "fcnr",
+        "capital-inflows",
+        "india"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "Indian IPO hopefuls race to beat an August deadline for audited results",
+      "summary": "A cluster of Indian companies is rushing to file share sales before an August cutoff on the validity of audited accounts, as a busy primary market sees several offerings close and more schedules announced.",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-07-28/india-ipo-hopefuls-race-to-beat-august-deadline-for-audited-results",
+      "outlet": "Bloomberg",
+      "publish_date": "Jul 28",
+      "short_hash": "9cc414a5",
+      "key_entities": [
+        "india",
+        "ipo",
+        "primary-market",
+        "deadline",
+        "audit"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "Update: Trump calls off a planned strike on Iran, citing the 'perimeters' of a deal",
+      "summary": "Trump said late Saturday he cancelled a 'massive attack' on Iran after talks with Saudi Arabia, the UAE, Qatar and Iran, claiming agreement on reopening the Strait of Hormuz. Tehran's foreign minister warned of a 'decisive response' and gave no sign it sought the halt.",
+      "url": "https://www.aljazeera.com/news/2026/8/2/trump-cancels-iran-strike-says-deal-perimeters-reached",
+      "outlet": "Al Jazeera",
+      "publish_date": "Aug 2",
+      "short_hash": "0565ae4f",
+      "key_entities": [
+        "trump",
+        "iran",
+        "strike",
+        "strait-of-hormuz",
+        "deal"
+      ],
+      "is_update": true
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "A sightseeing plane crashes over Peru's Nazca Lines, killing all 13 on board",
+      "summary": "An Aerodiana light aircraft crashed and burned on Saturday during a flight over the Nazca Lines, killing 11 passengers — seven Italians, two Spaniards and two Germans — and both pilots. The cause is under investigation.",
+      "url": "https://www.aljazeera.com/news/2026/8/1/police-say-13-killed-as-small-plane-viewing-nazca-lines-in-peru-crashes",
+      "outlet": "Al Jazeera",
+      "publish_date": "Aug 1",
+      "short_hash": "a5827ebb",
+      "key_entities": [
+        "peru",
+        "nazca-lines",
+        "plane-crash",
+        "aerodiana",
+        "13-dead"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "FIFA scraps a $20 billion private-investment plan after a UEFA boycott threat",
+      "summary": "Gianni Infantino withdrew a plan to sell about a 20% stake in a new commercial unit, FIFA Forward Enterprise, after UEFA, Concacaf and the AFC objected and UEFA threatened to boycott future World Cups. Adviser Carlos Cordeiro resigned in the fallout.",
+      "url": "https://www.aljazeera.com/sports/2026/8/1/why-has-infantino-scrapped-fifas-world-cup-investment-plan-what-to-know",
+      "outlet": "Al Jazeera",
+      "publish_date": "Aug 1",
+      "short_hash": "fca7d725",
+      "key_entities": [
+        "fifa",
+        "infantino",
+        "uefa",
+        "investment",
+        "world-cup"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "Israel jails 14 Givati soldiers over a mass walkout at the Sde Teiman base",
+      "summary": "Fourteen soldiers from the Givati Brigade's Tzabar Battalion who led a roughly 100-strong walkout were sentenced to 30 days in military prison and removed from combat duty, after their commander destroyed unit 'initiation' signs.",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/8/2/israeli-soldiers-jailed-over-sde-teiman-walkout",
+      "outlet": "Al Jazeera",
+      "publish_date": "Aug 2",
+      "short_hash": "98a893ee",
+      "key_entities": [
+        "israel",
+        "givati",
+        "sde-teiman",
+        "walkout",
+        "military"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "Israeli strikes kill at least four in Gaza and hit a medical warehouse",
+      "summary": "Israeli attacks on Saturday killed at least four Palestinians and struck a medicine warehouse next to a hospital, days after Hamas and other factions signed a disarmament agreement.",
+      "url": "https://www.aljazeera.com/news/2026/8/1/israeli-strikes-kill-four-across-gaza-destroy-medical-supply-warehouse",
+      "outlet": "Al Jazeera",
+      "publish_date": "Aug 1",
+      "short_hash": "9f0d6546",
+      "key_entities": [
+        "israel",
+        "gaza",
+        "strikes",
+        "hospital",
+        "hamas"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "Judge lets Minnesota's first-in-US ban on AI 'nudify' apps take effect, denying xAI",
+      "summary": "US District Judge Donovan Frank refused xAI's temporary restraining order, allowing Minnesota's ban on AI image-undressing apps to take effect on 1 August. He faulted xAI for suing months after the law passed, though First Amendment questions remain to be litigated.",
+      "url": "https://techcrunch.com/2026/08/01/judge-denies-xais-request-to-block-minnesota-ban-on-nudify-apps/",
+      "outlet": "TechCrunch",
+      "publish_date": "Aug 1",
+      "short_hash": "488ad3ac",
+      "key_entities": [
+        "xai",
+        "minnesota",
+        "nudify",
+        "ban",
+        "court"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "Synthetic-user startup Simile raises $200 million at a $2 billion valuation",
+      "summary": "Simile closed a $200 million Series B at a $2 billion valuation just five months after a $100 million round, underscoring investor appetite for AI tools that simulate human users to test products.",
+      "url": "https://techcrunch.com/2026/07/30/synthetic-user-startup-simile-raises-200m-at-2b-valuation-5-months-after-100m-series-a/",
+      "outlet": "TechCrunch",
+      "publish_date": "Jul 30",
+      "short_hash": "5e98f9f4",
+      "key_entities": [
+        "simile",
+        "funding",
+        "series-b",
+        "ai",
+        "valuation"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "Commonwealth Fusion Systems raises another $1 billion, lifting its total to $4 billion",
+      "summary": "The fusion developer added $1 billion from pension funds, sovereign wealth funds and industrial partners as it builds its Sparc demonstration reactor, targeting scientific breakeven in 2027, and finalises the design of its Arc commercial plant.",
+      "url": "https://techcrunch.com/2026/07/30/fusion-power-darling-commonwealth-fusion-systems-raises-another-1b/",
+      "outlet": "TechCrunch",
+      "publish_date": "Jul 30",
+      "short_hash": "af807359",
+      "key_entities": [
+        "commonwealth-fusion",
+        "funding",
+        "sparc",
+        "fusion",
+        "reactor"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "DoorDash builds its own drone-delivery business after winning an FAA certification",
+      "summary": "DoorDash is launching an in-house drone operation, 'DoorDash Air', with custom aircraft after securing an FAA Part 135 air-carrier certificate, moving beyond its Wing partnership to compete in autonomous last-mile delivery.",
+      "url": "https://techcrunch.com/2026/07/29/doordash-is-building-its-own-drone-delivery-business/",
+      "outlet": "TechCrunch",
+      "publish_date": "Jul 29",
+      "short_hash": "cfe43aeb",
+      "key_entities": [
+        "doordash",
+        "drone",
+        "faa",
+        "delivery",
+        "doordash-air"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "OPEC+ agrees a September output hike, completing the rollback of its voluntary cuts",
+      "summary": "At its 2 August meeting OPEC+ approved another increase of about 188,000 barrels a day for September, finishing the unwind of its voluntary supply cuts. It gave no guidance for the fourth quarter as the Iran war keeps crude elevated.",
+      "url": "https://www.cnbc.com/2026/08/02/opec-agrees-september-oil-hike-completing-rollback-of-voluntary-cuts.html",
+      "outlet": "CNBC",
+      "publish_date": "Aug 2",
+      "short_hash": "5b304fd7",
+      "key_entities": [
+        "opec",
+        "oil",
+        "output",
+        "september",
+        "voluntary-cuts"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "'AI is no longer a catch-all trade' as investors punish heavy spenders this earnings season",
+      "summary": "Bloomberg reports markets are rewarding profits but penalising aggressive generative-AI capex, with Microsoft cast as the bellwether and Meta's spending drawing return-on-capital concerns, signalling a pivot from capex to adoption.",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-01/ai-isn-t-a-catch-all-trade-for-stocks-in-this-earnings-season",
+      "outlet": "Bloomberg",
+      "publish_date": "Aug 1",
+      "short_hash": "fa30ecf4",
+      "key_entities": [
+        "ai",
+        "stocks",
+        "earnings",
+        "capex",
+        "markets"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Big Tech adds close to $1.5 trillion in market value in a single week",
+      "summary": "Alphabet, Amazon and Microsoft together gained nearly $1.5 trillion in combined value on strong cloud and AI results, powering the Nasdaq higher into the month's end.",
+      "url": "https://www.cnbc.com/2026/07/31/apple-aapl-amazon-amzn-stock-today.html",
+      "outlet": "CNBC",
+      "publish_date": "Jul 31",
+      "short_hash": "73f9b7ff",
+      "key_entities": [
+        "big-tech",
+        "market-value",
+        "nasdaq",
+        "cloud",
+        "alphabet"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Bloomberg agrees to buy Canoe Intelligence in a private-markets data push",
+      "summary": "Bloomberg LP agreed to acquire Canoe Intelligence, which automates private-markets data collection — more than 1.5 million documents a month across 44,000-plus funds for 500-plus institutional clients overseeing over $11 trillion.",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-29/bloomberg-to-acquire-canoe-intelligence-in-private-markets-push",
+      "outlet": "Bloomberg",
+      "publish_date": "Jul 29",
+      "short_hash": "2c54a43a",
+      "key_entities": [
+        "bloomberg",
+        "canoe-intelligence",
+        "acquisition",
+        "private-markets",
+        "data"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🎾 Pegula beats Eala 6-4, 6-3 to win the Washington title",
+      "summary": "Top seed Jessica Pegula denied Alexandra Eala a first WTA 500 crown, winning the Mubadala DC Open final 6-4, 6-3 for her second Washington title and her third trophy of 2026 after Dubai and Charleston.",
+      "url": "https://www.wtatennis.com/tournaments/1045/washington-dc/2026/scores/LS001",
+      "outlet": "WTA",
+      "publish_date": "Aug 2",
+      "short_hash": "0b222895",
+      "key_entities": [
+        "pegula",
+        "eala",
+        "washington",
+        "wta",
+        "final"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🎾 Teenager Rafael Jodar reaches his first ATP 500 final in Washington",
+      "summary": "Spain's 19-year-old Rafael Jodar rallied past Alejandro Tabilo 6-7(5), 6-4, 6-4 to reach the DC Open final, a breakthrough after his maiden tour title in Marrakech in April.",
+      "url": "https://www.atptour.com/en/news/jodar-tabilo-washington-2026-semi-final",
+      "outlet": "ATP",
+      "publish_date": "Aug 1",
+      "short_hash": "945aeee2",
+      "key_entities": [
+        "jodar",
+        "tabilo",
+        "washington",
+        "atp",
+        "final"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🏏 Trent Rockets women edge Sunrisers Leeds by five runs in The Hundred",
+      "summary": "Trent Rockets Women defended 139 for 7 at Nottingham, holding Sunrisers Leeds Women to 134 for 5 to win by five runs in the latest round of The Hundred.",
+      "url": "https://www.espncricinfo.com/series/the-hundred-women-s-competition-2026-1521193/trent-rockets-women-vs-sunrisers-leeds-women-17th-match-1521213/full-scorecard",
+      "outlet": "ESPNcricinfo",
+      "publish_date": "Aug 2",
+      "short_hash": "80d0ec86",
+      "key_entities": [
+        "the-hundred",
+        "trent-rockets",
+        "sunrisers-leeds",
+        "cricket",
+        "women"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🏎️ F1 resumes at Zandvoort's farewell Dutch GP as McLaren's title fight heats up",
+      "summary": "Formula 1 returns from its summer break at the Dutch Grand Prix on 21-23 August, the final race scheduled at Zandvoort, with McLaren well clear in the constructors' standings and teammates Lando Norris and Oscar Piastri leading the drivers' fight.",
+      "url": "https://www.espn.com/f1/story/_/id/46085695/dutch-gp-f1-s-predictions-stats-facts",
+      "outlet": "ESPN",
+      "publish_date": "Aug 1",
+      "short_hash": "1b880ee8",
+      "key_entities": [
+        "f1",
+        "dutch-gp",
+        "zandvoort",
+        "mclaren",
+        "norris-piastri"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "Everyone alive may carry DNA from a 'ghost lineage' of human ancestors",
+      "summary": "A new genome analysis reported in Science finds signs that all living people carry DNA from deeply divergent, never-identified human relatives, including a lineage that split hundreds of thousands of years ago and left a trace in every modern genome.",
+      "url": "https://www.scientificamerican.com/article/everyone-alive-may-carry-dna-from-a-ghost-lineage-of-human-ancestors/",
+      "outlet": "Scientific American",
+      "publish_date": "Jul 30",
+      "short_hash": "768bbe9a",
+      "key_entities": [
+        "ghost-lineage",
+        "ancient-dna",
+        "human-genome",
+        "evolution",
+        "science"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "Astronomers detect a 'true sugar' molecule in interstellar space for the first time",
+      "summary": "Using the Yebes and IRAM radio telescopes, researchers identified erythrulose — a four-carbon sugar — in a cloud near the galactic centre, the most complex sugar yet found beyond the Solar System and a clue to how life's building blocks arise.",
+      "url": "https://www.scientificamerican.com/article/scientists-spot-sugar-in-interstellar-space-for-the-first-time-ever/",
+      "outlet": "Scientific American",
+      "publish_date": "Jul 23",
+      "short_hash": "4d4fe4e2",
+      "key_entities": [
+        "erythrulose",
+        "interstellar",
+        "sugar",
+        "astrochemistry",
+        "origin-of-life"
+      ],
+      "is_update": false
+    }
+  ],
+  "fun_fact": {
+    "headline": "The pitch-drop experiment has run since 1927",
+    "body": "The world's longest-running laboratory experiment began at the University of Queensland in 1927: a funnel of tar-like pitch that looks solid — it shatters if struck with a hammer — yet is actually a fluid so viscous it drips only about once a decade. In nearly a century just nine drops have fallen, and for decades no one managed to witness one live; custodian John Mainstone watched the pitch for over 50 years and died in 2013, a year before a webcam finally caught the ninth drop in 2014.",
+    "source": "Scientific American / University of Queensland",
+    "fun_fact_id": "funfact-6d14292c",
+    "topic": "physics",
+    "topic_key": "pitch drop experiment"
+  },
+  "puzzle": {
+    "type": "lateral",
+    "title": "The Locked Room",
+    "title_key": "locked-room",
+    "body": "A man is found dead, hanging from a hook in the ceiling at the centre of a completely sealed room. His feet dangle well above the floor. The room is empty except for a small puddle of water directly beneath him — no furniture, no ladder, nothing he could have climbed on.\n\nHow did he manage it?",
+    "approach": "Picture what could have been under his feet — and where it went.",
+    "answer": "He stood on a large block of ice.\n\nHe positioned the block beneath the hook, climbed up, fixed the noose and stepped off. Over the next few hours the ice melted, leaving only the puddle of water and no visible means of support.",
+    "puzzle_hash": "dd9e8621"
+  },
+  "word_puzzle": {
+    "type": "letterboxed",
+    "title": "Music to My Ears",
+    "title_key": "music-to-my-ears",
+    "body": "Use all 12 letters. Chain words so each begins with the last letter of the one before, never using two letters from the same side back-to-back.\n\nTop:      O  J  Y\nRight:    K  B  N\nBottom:   E  U  P\nLeft:     X  L  H\n\nCan you clear the whole box in only TWO words?",
+    "approach": "Each new word must begin with the previous word's last letter, and no two letters in a row may come from the same side. It can be done in just two words.",
+    "answer": "JUKEBOX → XYLOPHONE\n\nJUKEBOX runs J-U-K-E-B-O-X; XYLOPHONE then starts on that X and runs X-Y-L-O-P-H-O-N-E. Between them the two words use all 12 letters, and no word ever steps between two letters on the same side. Fittingly, both make music.",
+    "word_puzzle_hash": "4a82a6ee"
+  },
+  "notes": [
+    "India: all primary outlets (The Hindu, Indian Express, Hindustan Times, Times of India, NDTV, Economic Times) were unreachable (crawler/egress blocked). Section ran on fallback source Bloomberg; fewer stories today. 3+ retry attempts made.",
+    "UK News: BBC, Sky News and The Guardian all unreachable; no UK-domestic item verifiable via permitted fallback outlets in the window. Placeholder card shown. 3+ retry attempts made.",
+    "Singapore: CNA, The Straits Times, Reuters and BBC unreachable to the crawler; ran on Mothership and SCMP only, fewer stories today.",
+    "Other Miscellaneous News: most frontier outlets (Guardian, BBC, New Scientist, Ars Technica) unreachable; ran on Scientific American only, fewer stories today.",
+    "Spectrum framing omitted brief-wide: multiple-outlet framings could not be sourced under today's network restrictions.",
+    "Global/geopolitics ran on Al Jazeera (allowed) as the reachable outlet for the section."
+  ]
+}

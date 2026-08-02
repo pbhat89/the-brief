@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Mon, 3 August 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .wpuzzle-box{background:linear-gradient(135deg,#0e1a1a,#0d1620);border:1px solid #234a44;border-left:3px solid #16a085;padding:24px 28px;border-radius:2px}
+  .wptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#16a085;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .wpuzzle-box .puzzle-title{color:#cdeae3}
+  .wpuzzle-box .puzzle-how{color:#8fb8ac;background:#08140f;border-left-color:#1a6a5a}
+  .wpuzzle-box .puzzle-q{color:#dfeae6;font-family:'Source Sans 3',sans-serif}
+  .wpuzzle-box .answer{color:#bfe0d6}
+  .wpuzzle-box .answer .alabel{color:#16a085}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Monday, 3 August 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Monday, 3 August 2026 · 🔍 22 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eleven entries in this exact order:
+     id    : one of "sg" | "india" | "uk" | "geo" | "tech" | "biz" | "sports" | "misc" | "fun" | "puzzle" | "wpuzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 8 news tabs; fun/puzzle/wpuzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+
+   WORD_PUZZLE shape (separate, daily word game — NYT-style, static reveal):
+     type     : one of "Connections" | "Word Ladder" | "Anagram" | "Spelling Bee" | "Letter Boxed" | "Mini Crossword"
+     title    : short evocative name for the word puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle body; supports \n for line breaks (grids render as pre-formatted text)
+     answer   : the answer; supports \n for line breaks; appears inside its own toggle (id "wpans")
+============================================================================= */
+
+const SECTIONS = [
+  {
+    "id": "sg",
+    "title": "🇸🇬 Singapore",
+    "color": "#e74c3c",
+    "items": [
+      {
+        "headline": "Fire at a Clementi Avenue 4 HDB flat kills one resident and injures two firefighters",
+        "summary": "A blaze at a Clementi Avenue 4 HDB flat killed one resident and left two SCDF firefighters injured, with about 40 residents evacuated before most returned home by the early hours.",
+        "source": "Mothership",
+        "url": "https://mothership.sg/2026/08/fire-clementi-ave-fire-firefighters-injured/",
+        "date": "Aug 1",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Barisan Nasional sweeps the Johor state polls, a result Singapore commuters will watch",
+        "summary": "Malaysia's Barisan Nasional won 48 of 56 seats in the 1 August Johor election. The campaign leaned on cross-border growth, causeway congestion and the coming Johor Bahru–Singapore RTS Link used by tens of thousands of daily commuters.",
+        "source": "SCMP",
+        "url": "https://www.scmp.com/week-asia/politics/article/3360186/malaysias-johor-votes-government-allies-turn-each-other",
+        "date": "Aug 2",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "india",
+    "title": "🇮🇳 India",
+    "color": "#e67e22",
+    "items": [
+      {
+        "headline": "India draws over $40 billion in overseas capital since June, bolstering the RBI's rupee defence",
+        "summary": "The Reserve Bank of India said a drive to attract foreign money has pulled in more than $40 billion since June, including $36.72 billion via FCNR(B) deposits by 31 July, rebuilding buffers as rising crude prices pressure the rupee.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-08-01/india-push-for-overseas-capital-draws-over-40-billion-rbi-says",
+        "date": "Aug 1",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Indian IPO hopefuls race to beat an August deadline for audited results",
+        "summary": "A cluster of Indian companies is rushing to file share sales before an August cutoff on the validity of audited accounts, as a busy primary market sees several offerings close and more schedules announced.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/newsletters/2026-07-28/india-ipo-hopefuls-race-to-beat-august-deadline-for-audited-results",
+        "date": "Jul 28",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "uk",
+    "title": "🇬🇧 UK News",
+    "color": "#3949ab",
+    "items": [
+      {
+        "headline": "UK coverage is unavailable in today's edition",
+        "summary": "BBC, Sky News and The Guardian were all unreachable from the routine's network today, and no UK-domestic story could be verified through the permitted fallback outlets within the window.",
+        "source": "The Brief",
+        "url": "",
+        "date": "Aug 3",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "geo",
+    "title": "🌍 Global / Geopolitics",
+    "color": "#2980b9",
+    "items": [
+      {
+        "headline": "Update: Trump calls off a planned strike on Iran, citing the 'perimeters' of a deal",
+        "summary": "Trump said late Saturday he cancelled a 'massive attack' on Iran after talks with Saudi Arabia, the UAE, Qatar and Iran, claiming agreement on reopening the Strait of Hormuz. Tehran's foreign minister warned of a 'decisive response' and gave no sign it sought the halt.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/8/2/trump-cancels-iran-strike-says-deal-perimeters-reached",
+        "date": "Aug 2",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "A sightseeing plane crashes over Peru's Nazca Lines, killing all 13 on board",
+        "summary": "An Aerodiana light aircraft crashed and burned on Saturday during a flight over the Nazca Lines, killing 11 passengers — seven Italians, two Spaniards and two Germans — and both pilots. The cause is under investigation.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/8/1/police-say-13-killed-as-small-plane-viewing-nazca-lines-in-peru-crashes",
+        "date": "Aug 1",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "FIFA scraps a $20 billion private-investment plan after a UEFA boycott threat",
+        "summary": "Gianni Infantino withdrew a plan to sell about a 20% stake in a new commercial unit, FIFA Forward Enterprise, after UEFA, Concacaf and the AFC objected and UEFA threatened to boycott future World Cups. Adviser Carlos Cordeiro resigned in the fallout.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/sports/2026/8/1/why-has-infantino-scrapped-fifas-world-cup-investment-plan-what-to-know",
+        "date": "Aug 1",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Israel jails 14 Givati soldiers over a mass walkout at the Sde Teiman base",
+        "summary": "Fourteen soldiers from the Givati Brigade's Tzabar Battalion who led a roughly 100-strong walkout were sentenced to 30 days in military prison and removed from combat duty, after their commander destroyed unit 'initiation' signs.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/2/israeli-soldiers-jailed-over-sde-teiman-walkout",
+        "date": "Aug 2",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Israeli strikes kill at least four in Gaza and hit a medical warehouse",
+        "summary": "Israeli attacks on Saturday killed at least four Palestinians and struck a medicine warehouse next to a hospital, days after Hamas and other factions signed a disarmament agreement.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/8/1/israeli-strikes-kill-four-across-gaza-destroy-medical-supply-warehouse",
+        "date": "Aug 1",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "tech",
+    "title": "💻 Tech & AI",
+    "color": "#27ae60",
+    "items": [
+      {
+        "headline": "Judge lets Minnesota's first-in-US ban on AI 'nudify' apps take effect, denying xAI",
+        "summary": "US District Judge Donovan Frank refused xAI's temporary restraining order, allowing Minnesota's ban on AI image-undressing apps to take effect on 1 August. He faulted xAI for suing months after the law passed, though First Amendment questions remain to be litigated.",
+        "source": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/01/judge-denies-xais-request-to-block-minnesota-ban-on-nudify-apps/",
+        "date": "Aug 1",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Synthetic-user startup Simile raises $200 million at a $2 billion valuation",
+        "summary": "Simile closed a $200 million Series B at a $2 billion valuation just five months after a $100 million round, underscoring investor appetite for AI tools that simulate human users to test products.",
+        "source": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/30/synthetic-user-startup-simile-raises-200m-at-2b-valuation-5-months-after-100m-series-a/",
+        "date": "Jul 30",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Commonwealth Fusion Systems raises another $1 billion, lifting its total to $4 billion",
+        "summary": "The fusion developer added $1 billion from pension funds, sovereign wealth funds and industrial partners as it builds its Sparc demonstration reactor, targeting scientific breakeven in 2027, and finalises the design of its Arc commercial plant.",
+        "source": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/30/fusion-power-darling-commonwealth-fusion-systems-raises-another-1b/",
+        "date": "Jul 30",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "DoorDash builds its own drone-delivery business after winning an FAA certification",
+        "summary": "DoorDash is launching an in-house drone operation, 'DoorDash Air', with custom aircraft after securing an FAA Part 135 air-carrier certificate, moving beyond its Wing partnership to compete in autonomous last-mile delivery.",
+        "source": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/29/doordash-is-building-its-own-drone-delivery-business/",
+        "date": "Jul 29",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "biz",
+    "title": "📈 Business & Markets",
+    "color": "#8e44ad",
+    "items": [
+      {
+        "headline": "OPEC+ agrees a September output hike, completing the rollback of its voluntary cuts",
+        "summary": "At its 2 August meeting OPEC+ approved another increase of about 188,000 barrels a day for September, finishing the unwind of its voluntary supply cuts. It gave no guidance for the fourth quarter as the Iran war keeps crude elevated.",
+        "source": "CNBC",
+        "url": "https://www.cnbc.com/2026/08/02/opec-agrees-september-oil-hike-completing-rollback-of-voluntary-cuts.html",
+        "date": "Aug 2",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "'AI is no longer a catch-all trade' as investors punish heavy spenders this earnings season",
+        "summary": "Bloomberg reports markets are rewarding profits but penalising aggressive generative-AI capex, with Microsoft cast as the bellwether and Meta's spending drawing return-on-capital concerns, signalling a pivot from capex to adoption.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-08-01/ai-isn-t-a-catch-all-trade-for-stocks-in-this-earnings-season",
+        "date": "Aug 1",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Big Tech adds close to $1.5 trillion in market value in a single week",
+        "summary": "Alphabet, Amazon and Microsoft together gained nearly $1.5 trillion in combined value on strong cloud and AI results, powering the Nasdaq higher into the month's end.",
+        "source": "CNBC",
+        "url": "https://www.cnbc.com/2026/07/31/apple-aapl-amazon-amzn-stock-today.html",
+        "date": "Jul 31",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Bloomberg agrees to buy Canoe Intelligence in a private-markets data push",
+        "summary": "Bloomberg LP agreed to acquire Canoe Intelligence, which automates private-markets data collection — more than 1.5 million documents a month across 44,000-plus funds for 500-plus institutional clients overseeing over $11 trillion.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-07-29/bloomberg-to-acquire-canoe-intelligence-in-private-markets-push",
+        "date": "Jul 29",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "sports",
+    "title": "🎾🏏🏎️ Sports",
+    "color": "#c0392b",
+    "items": [
+      {
+        "headline": "🎾 Pegula beats Eala 6-4, 6-3 to win the Washington title",
+        "summary": "Top seed Jessica Pegula denied Alexandra Eala a first WTA 500 crown, winning the Mubadala DC Open final 6-4, 6-3 for her second Washington title and her third trophy of 2026 after Dubai and Charleston.",
+        "source": "WTA",
+        "url": "https://www.wtatennis.com/tournaments/1045/washington-dc/2026/scores/LS001",
+        "date": "Aug 2",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "🎾 Teenager Rafael Jodar reaches his first ATP 500 final in Washington",
+        "summary": "Spain's 19-year-old Rafael Jodar rallied past Alejandro Tabilo 6-7(5), 6-4, 6-4 to reach the DC Open final, a breakthrough after his maiden tour title in Marrakech in April.",
+        "source": "ATP",
+        "url": "https://www.atptour.com/en/news/jodar-tabilo-washington-2026-semi-final",
+        "date": "Aug 1",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "🏏 Trent Rockets women edge Sunrisers Leeds by five runs in The Hundred",
+        "summary": "Trent Rockets Women defended 139 for 7 at Nottingham, holding Sunrisers Leeds Women to 134 for 5 to win by five runs in the latest round of The Hundred.",
+        "source": "ESPNcricinfo",
+        "url": "https://www.espncricinfo.com/series/the-hundred-women-s-competition-2026-1521193/trent-rockets-women-vs-sunrisers-leeds-women-17th-match-1521213/full-scorecard",
+        "date": "Aug 2",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "🏎️ F1 resumes at Zandvoort's farewell Dutch GP as McLaren's title fight heats up",
+        "summary": "Formula 1 returns from its summer break at the Dutch Grand Prix on 21-23 August, the final race scheduled at Zandvoort, with McLaren well clear in the constructors' standings and teammates Lando Norris and Oscar Piastri leading the drivers' fight.",
+        "source": "ESPN",
+        "url": "https://www.espn.com/f1/story/_/id/46085695/dutch-gp-f1-s-predictions-stats-facts",
+        "date": "Aug 1",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "misc",
+    "title": "🔬 Other Miscellaneous News",
+    "color": "#1abc9c",
+    "items": [
+      {
+        "headline": "Everyone alive may carry DNA from a 'ghost lineage' of human ancestors",
+        "summary": "A new genome analysis reported in Science finds signs that all living people carry DNA from deeply divergent, never-identified human relatives, including a lineage that split hundreds of thousands of years ago and left a trace in every modern genome.",
+        "source": "Scientific American",
+        "url": "https://www.scientificamerican.com/article/everyone-alive-may-carry-dna-from-a-ghost-lineage-of-human-ancestors/",
+        "date": "Jul 30",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Astronomers detect a 'true sugar' molecule in interstellar space for the first time",
+        "summary": "Using the Yebes and IRAM radio telescopes, researchers identified erythrulose — a four-carbon sugar — in a cloud near the galactic centre, the most complex sugar yet found beyond the Solar System and a clue to how life's building blocks arise.",
+        "source": "Scientific American",
+        "url": "https://www.scientificamerican.com/article/scientists-spot-sugar-in-interstellar-space-for-the-first-time-ever/",
+        "date": "Jul 23",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "fun",
+    "title": "✦ Fun Fact",
+    "color": "#27ae60",
+    "custom": "fun"
+  },
+  {
+    "id": "puzzle",
+    "title": "🧩 Puzzle",
+    "color": "#e67e22",
+    "custom": "puzzle"
+  },
+  {
+    "id": "wpuzzle",
+    "title": "🔤 Word Puzzles",
+    "color": "#16a085",
+    "custom": "wpuzzle"
+  }
+];
+
+const FUN_FACT = {
+  "text": "The world's longest-running laboratory experiment began at the University of Queensland in 1927: a funnel of tar-like pitch that looks solid — it shatters if struck with a hammer — yet is actually a fluid so viscous it drips only about once a decade. In nearly a century just nine drops have fallen, and for decades no one managed to witness one live; custodian John Mainstone watched the pitch for over 50 years and died in 2013, a year before a webcam finally caught the ninth drop in 2014.",
+  "tag": "Category · Science & Physics"
+};
+
+const PUZZLE = {
+  "type": "Lateral Thinking",
+  "title": "The Locked Room",
+  "how": "Picture what could have been under his feet — and where it went.",
+  "question": "A man is found dead, hanging from a hook in the ceiling at the centre of a completely sealed room. His feet dangle well above the floor. The room is empty except for a small puddle of water directly beneath him — no furniture, no ladder, nothing he could have climbed on.\n\nHow did he manage it?",
+  "answer": "He stood on a large block of ice.\n\nHe positioned the block beneath the hook, climbed up, fixed the noose and stepped off. Over the next few hours the ice melted, leaving only the puddle of water and no visible means of support."
+};
+
+const WORD_PUZZLE = {
+  "type": "Letter Boxed",
+  "title": "Music to My Ears",
+  "how": "Each new word must begin with the previous word's last letter, and no two letters in a row may come from the same side. It can be done in just two words.",
+  "question": "Use all 12 letters. Chain words so each begins with the last letter of the one before, never using two letters from the same side back-to-back.\n\nTop:      O  J  Y\nRight:    K  B  N\nBottom:   E  U  P\nLeft:     X  L  H\n\nCan you clear the whole box in only TWO words?",
+  "answer": "JUKEBOX → XYLOPHONE\n\nJUKEBOX runs J-U-K-E-B-O-X; XYLOPHONE then starts on that X and runs X-Y-L-O-P-H-O-N-E. Between them the two words use all 12 letters, and no word ever steps between two letters on the same side. Fittingly, both make music."
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function renderWordPuzzle(){
+  let h='<div class="sec-title">🔤 Word Puzzle of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#16a085,transparent)"></div>';
+  h+='<div class="wpuzzle-box"><span class="wptype">'+WORD_PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+WORD_PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+WORD_PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+WORD_PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this,\'wpans\')">Show Answer</button>';
+  h+='<div class="answer" id="wpans"><span class="alabel">Answer</span>'+WORD_PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn,ansId){var a=document.getElementById(ansId||'ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else if(sec.custom==="wpuzzle"){div.innerHTML=renderWordPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>
