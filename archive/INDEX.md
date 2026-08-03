@@ -1775,3 +1775,27 @@ is empty until the first run.
 2026-08-03	🏎️ F1 resumes at Zandvoort's farewell Dutch GP as McLaren's title fight heats up	1b880ee8	f1,dutch-gp,zandvoort,mclaren,norris-piastri
 2026-08-03	Everyone alive may carry DNA from a 'ghost lineage' of human ancestors	768bbe9a	ghost-lineage,ancient-dna,human-genome,evolution,science
 2026-08-03	Astronomers detect a 'true sugar' molecule in interstellar space for the first time	4d4fe4e2	erythrulose,interstellar,sugar,astrochemistry,origin-of-life
+2026-08-04	Ex-policeman Kelvin Chelvam loses appeal in the fatal abuse of maid Piang Ngaih Don	9e9a449f	singapore,kelvin chelvam,piang ngaih don,appeal,maid abuse
+2026-08-04	About 1.5 million Singaporeans to receive up to S$850 in GST Voucher cash this month	f376e035	singapore,gst voucher,gstv-cash,medisave,payout
+2026-08-04	Man jailed 21 years and given 16 strokes for the prolonged abuse of his teenage niece	f8ea3a66	singapore,court,jail,sexual abuse,sentence
+2026-08-04	Woman jailed two weeks over a knife-and-bite fight at a Geylang massage parlour	d76c81f1	singapore,geylang,assault,jail,poha
+2026-08-04	India coverage is unavailable in today's edition	e3cdb7aa	
+2026-08-04	UK coverage is unavailable in today's edition	b61e7b4f	
+2026-08-04	Update: Trump says US-Iran talks will begin Monday after calling off a 'massive' strike	403cd733	trump,iran,talks,strait of hormuz,baghaei
+2026-08-04	Ukrainian drones strike Russia's Engels bomber base and Saratov refinery; at least eight killed	94985a54	ukraine,russia,engels,saratov,drones
+2026-08-04	Update: Israeli strikes kill about 19 in Gaza, the deadliest day in weeks, despite Trump's plan	ad732678	israel,gaza,strikes,hamas,disarmament
+2026-08-04	AI-deployment startup June emerges from stealth with a $20 million pre-seed	6e9845b8	june,ai deployment,time ventures,funding,pre-seed
+2026-08-04	South Korean AI-chip designer DeepX's valuation surges to about $2.2 billion	8c8ed483	deepx,ai chip,south korea,valuation,series d
+2026-08-04	Alibaba releases a new Qwen model it says rivals leading US AI labs	20806a66	alibaba,qwen,ai model,china,benchmarks
+2026-08-04	Citadel Securities sees a $500 billion chip-financing debt binge by 2028	edc8e5f3	citadel securities,chip financing,debt,ai data centres,leverage
+2026-08-04	Wall Street rallies as oil slides on Iran talks and Amazon tops $3 trillion	2b1774b2	wall street,nasdaq,amazon,oil,iran
+2026-08-04	Palantir's revenue jumps 93% and it lifts its full-year guidance again	a36cade6	palantir,earnings,revenue,guidance,us commercial
+2026-08-04	Snap shares jump about 12% on a second-quarter beat and upbeat forecast	aa197b7f	snap,earnings,revenue,guidance,stock
+2026-08-04	Curium to buy radiopharma rival Lantheus in a deal worth up to $8 billion	45f02334	curium,lantheus,acquisition,radiopharma,deal
+2026-08-04	US copper imports hit a record as traders front-run a possible Trump tariff	15cd8e0c	copper,imports,tariff,commodities,inventories
+2026-08-04	Welsh Fire end Southern Brave's unbeaten run in The Hundred	bd3dee35	the hundred,welsh fire,southern brave,women,heather graham
+2026-08-04	Welsh Fire chase down Southern Brave to complete a Cardiff double	35992cad	the hundred,welsh fire,southern brave,men,cardiff
+2026-08-04	Astronomers report the first sign of an atmosphere on a rocky habitable-zone planet	3aeb8b7b	lhs 1140 b,exoplanet,atmosphere,habitable zone,helium
+2026-08-04	NASA fuels the Nancy Grace Roman Space Telescope for a late-August launch	bb596cfa	nasa,roman space telescope,launch,falcon heavy,hydrazine
+2026-08-04	NASA's Psyche probe returns data and a time-lapse from its Mars flyby	263bab1e	nasa,psyche,mars flyby,phobos,deimos
+2026-08-04	A total solar eclipse will cross Iceland and northern Spain on 12 August	0563f0d5	solar eclipse,iceland,spain,totality,esa

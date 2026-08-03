@@ -294,6 +294,11 @@
       "date": "2026-08-03",
       "topic_key": "pitch drop experiment",
       "text": "The pitch-drop experiment at the University of Queensland has run since 1927; pitch looks solid but is a fluid that drips about once a decade."
+    },
+    {
+      "date": "2026-08-04",
+      "topic_key": "netherlands",
+      "text": "The Netherlands is the world's second-largest agricultural exporter by value, behind only the United States."
     }
   ],
   "puzzle_log": [
@@ -446,6 +451,11 @@
       "date": "2026-08-03",
       "type": "lateral",
       "title_key": "locked-room"
+    },
+    {
+      "date": "2026-08-04",
+      "type": "visual",
+      "title_key": "pivot-square"
     }
   ],
   "word_puzzle_log": [
@@ -598,6 +608,11 @@
       "date": "2026-08-03",
       "type": "letterboxed",
       "title_key": "music-to-my-ears"
+    },
+    {
+      "date": "2026-08-04",
+      "type": "anagram",
+      "title_key": "sleight-of-letters"
     }
   ]
 }
