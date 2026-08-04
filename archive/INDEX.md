@@ -1799,3 +1799,34 @@ is empty until the first run.
 2026-08-04	NASA fuels the Nancy Grace Roman Space Telescope for a late-August launch	bb596cfa	nasa,roman space telescope,launch,falcon heavy,hydrazine
 2026-08-04	NASA's Psyche probe returns data and a time-lapse from its Mars flyby	263bab1e	nasa,psyche,mars flyby,phobos,deimos
 2026-08-04	A total solar eclipse will cross Iceland and northern Spain on 12 August	0563f0d5	solar eclipse,iceland,spain,totality,esa
+2026-08-05	Government to develop the Gillman Barracks and Maju Forest sites, though designs are not finalised	c5dfa3c7	gillman barracks, maju forest, alvin tan, housing, parliament, develop
+2026-08-05	GovTech's retrenchment of 93 officers draws scrutiny in Parliament	b5be8b10	govtech, retrenchment, parliament, layoffs, scrutiny
+2026-08-05	Arrest warrant issued for lawyer Lim Tean after he fails to surrender for a jail term	7ea02d9a	lim tean, arrest warrant, state courts, jail, absconds
+2026-08-05	Approved fosterers may keep up to six cats in HDB flats under a new two-year pilot	f647ee3b	cat fosterer, hdb, nparks, pilot, cats
+2026-08-05	BJP loses the Bankipur by-election in Bihar to Prashant Kishor's Jan Suraaj	e97ad7ff	bjp, bankipur, bihar, prashant kishor, jan suraaj, by-election
+2026-08-05	Government to sell up to 6.5% of LIC as the rupee recovers from a record low	21d9f9c9	lic, stake sale, rupee, divestment, government
+2026-08-05	Modi government pushes tax relief for electronics makers and foreign funds	119cb83b	modi, income-tax, electronics, foreign funds, tax cuts
+2026-08-05	RBI widely expected to hold its key rate at 5.25% at Wednesday's review	534a2f57	rbi, repo rate, monetary policy, malhotra, hold
+2026-08-05	Labour overtakes Reform in a poll for the first time in over a year	41c4d3cc	labour, reform, poll, burnham, farage, lead
+2026-08-05	Reform UK says it is enlisting tech firms to monitor the south coast for Channel crossings	a515d79a	reform uk, channel crossings, surveillance, zia yusuf, south coast
+2026-08-05	Half of England is in drought after the driest July in nearly 190 years	9a17e5bf	england, drought, environment agency, rainfall, hosepipe
+2026-08-05	Bank of England holds its key rate at 3.75% in a hawkish 6-3 vote	f06a5b65	bank of england, bank rate, mpc, hold, inflation
+2026-08-05	Italy suspends Schengen free movement with Spain over the Ceuta migrant surge	edb23bb4	italy, spain, schengen, ceuta, migrants, suspends
+2026-08-05	Japan and the US confirm their first joint yen intervention since 2011	253fdb76	japan, us, yen, intervention, katayama, bessent
+2026-08-05	Cuba suffers its sixth nationwide blackout of 2026 as storms disrupt recovery	ed8e1263	cuba, blackout, grid, power, collapse
+2026-08-05	Ferry fire off Indonesia's Madura island kills at least five, with dozens missing	acb6ab9e	indonesia, ferry, madura, fire, mutiara sentosa
+2026-08-05	DR Congo's Ebola epidemic becomes the second-largest outbreak on record	7cffef39	dr congo, ebola, ituri, outbreak, epidemic
+2026-08-05	Anthropic signs a $10 billion, six-year cloud-compute deal with startup Volta	81854155	anthropic, volta, cloud, compute, deal
+2026-08-05	Bending Spoons to buy Airtable for $1.28 billion in an all-cash deal	9854aa8d	bending spoons, airtable, acquisition, deal
+2026-08-05	Apple asks a judge to bar OpenAI from using alleged stolen trade secrets	3131f140	apple, openai, trade secrets, lawsuit, injunction
+2026-08-05	Spotify tops 300 million paying subscribers for the first time	aa298e19	spotify, subscribers, streaming, milestone
+2026-08-05	Texas orders a halt to new data centers pending grid audits	f85035df	texas, data centers, abbott, ercot, audit
+2026-08-05	Wall Street hits records as the Dow closes above 54,000 for the first time	7983c3ad	dow, s&p 500, nasdaq, wall street, record
+2026-08-05	AMD's data-center revenue doubles, but its shares slide on lofty expectations	ed3c57f7	amd, earnings, data center, revenue, shares
+2026-08-05	SpaceX revenue jumps 92% to $7.81 billion in its first earnings report	f05ec1a0	spacex, earnings, revenue, backlog, ipo
+2026-08-05	McDonald's sales growth cools as US same-store sales slow to 0.8%	cb3df44b	mcdonald's, earnings, same-store sales, revenue, us
+2026-08-05	🏎️ Verstappen's future stays unresolved as F1's summer break rolls on	1e6d22a4	f1, verstappen, red bull, dutch gp, contract
+2026-08-05	🏏 Rashid Khan takes a five-wicket haul in the Hundred	c925ef91	rashid khan, the hundred, five-wicket, cricket
+2026-08-05	🏏 London Spirit are beaten by five wickets in the Hundred women's competition	5ac3280c	london spirit, the hundred, women, cricket, defeat
+2026-08-05	An experimental HIV vaccine triggers broadly neutralizing antibodies in primates	16f7d5fb	hiv, vaccine, antibodies, primates, nature
+2026-08-05	Euclid assembles a census of the earliest known quasars from the cosmic dawn	1080d85a	euclid, quasars, esa, cosmic dawn, telescope

@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-06-05",
-      "topic_key": "octopus",
-      "text": "An octopus has three hearts and blue, copper-based blood."
-    },
-    {
       "date": "2026-06-06",
       "topic_key": "venus",
       "text": "A day on Venus is longer than its year."
@@ -299,14 +294,14 @@
       "date": "2026-08-04",
       "topic_key": "netherlands",
       "text": "The Netherlands is the world's second-largest agricultural exporter by value, behind only the United States."
+    },
+    {
+      "date": "2026-08-05",
+      "topic_key": "guillotine",
+      "text": "The last use of the guillotine in France (Hamida Djandoubi, 1977) was the same year Star Wars premiered; France abolished the death penalty in 1981."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-07-05",
-      "type": "quantitative",
-      "title_key": "numbered-book"
-    },
     {
       "date": "2026-07-06",
       "type": "lateral",
@@ -456,14 +451,14 @@
       "date": "2026-08-04",
       "type": "visual",
       "title_key": "pivot-square"
+    },
+    {
+      "date": "2026-08-05",
+      "type": "logic",
+      "title_key": "count-the-knights"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-07-05",
-      "type": "anagram",
-      "title_key": "words-in-motion"
-    },
     {
       "date": "2026-07-06",
       "type": "spellingbee",
@@ -613,6 +608,11 @@
       "date": "2026-08-04",
       "type": "anagram",
       "title_key": "sleight-of-letters"
+    },
+    {
+      "date": "2026-08-05",
+      "type": "spellingbee",
+      "title_key": "space-case"
     }
   ]
 }
