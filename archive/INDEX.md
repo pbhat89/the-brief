@@ -1830,3 +1830,34 @@ is empty until the first run.
 2026-08-05	🏏 London Spirit are beaten by five wickets in the Hundred women's competition	5ac3280c	london spirit, the hundred, women, cricket, defeat
 2026-08-05	An experimental HIV vaccine triggers broadly neutralizing antibodies in primates	16f7d5fb	hiv, vaccine, antibodies, primates, nature
 2026-08-05	Euclid assembles a census of the earliest known quasars from the cosmic dawn	1080d85a	euclid, quasars, esa, cosmic dawn, telescope
+
+2026-08-06	Worker, 23, killed by falling formwork at Jurong Port construction site	26ee6363	jurong port,formwork,mom,hpc builders,dies
+2026-08-06	Nine people charged in Singapore over the sexual exploitation of two minors	bc42042e	cid,minors,exploitation,trafficking,nine charged
+2026-08-06	Two charged over a spate of at least 10 loanshark harassment cases island-wide	43f8d102	loanshark,harassment,moneylenders act,singapore,charged
+2026-08-06	Singaporean motorcyclist, 56, dies after a collision on a Johor expressway	5ae4ebee	singaporean,motorcyclist,johor,expressway,dies
+2026-08-06	India coverage is unavailable in today's edition	e3cdb7aa	
+2026-08-06	Update: Burnham bars rapists and child-sex offenders from early-release scheme	a4ea6d18	andy burnham,early release,sentencing act,rapists,excluded
+2026-08-06	Update: Essex and Suffolk Water declares its first hosepipe ban since 1997 as drought spreads	9567c9f9	essex and suffolk water,hosepipe ban,drought,environment agency,south east
+2026-08-06	FTSE 100 hits a record high near 10,980 on mining strength and Iran-deal optimism	5b4304f9	ftse 100,record high,miners,iran,uk stocks
+2026-08-06	Britain's services firms cut jobs for a 22nd straight month as the growth push stalls	f86f3f90	uk services,pmi,jobs,burnham,downturn
+2026-08-06	Russian missile-and-drone barrage on the Kyiv region kills 17 and wounds 44	a17519c7	russia,kyiv,zelenskyy,patriot,drones
+2026-08-06	Update: US, Iran and Oman edge toward an interim deal to reopen the Strait of Hormuz	fcff143c	iran,oman,us,strait of hormuz,deal
+2026-08-06	Israel-Lebanon talks in Rome stall over Hezbollah disarmament in a seventh round	0b0ee9a9	israel,lebanon,hezbollah,rome talks,disarmament
+2026-08-06	Gaza Board of Peace says there will be no Israeli withdrawal before Hamas disarms	478b12a5	gaza,board of peace,hamas,israel,disarm
+2026-08-06	Jeff Dean and top Google researchers quit to launch AI-for-science startup Discovery Loop	1f385953	jeff dean,discovery loop,google,khosla,oriol vinyals
+2026-08-06	Meta launches Muse Code, an AI coding agent that undercuts Anthropic and OpenAI on price	9a0f6236	meta,muse code,muse spark,alexandr wang,coding agent
+2026-08-06	US drafts a ban on Chinese data-center components to protect AI infrastructure	7fac9894	fcc,optical transceivers,innolight,china,data centers
+2026-08-06	White House summons OpenAI, Anthropic, Google and Nvidia on an AI safety-testing framework	7500bad2	white house,openai,anthropic,nvidia,frontier models
+2026-08-06	Disney beats on fiscal Q3 as streaming profit more than doubles to $712 million	b3e06b31	disney,streaming,toy story 5,earnings,revenue
+2026-08-06	Shopify jumps about 26% as second-quarter revenue climbs 34% to $3.58 billion	698baf14	shopify,revenue,gmv,ai orders,stock
+2026-08-06	Caterpillar tops $20 billion in quarterly revenue for the first time and lifts its outlook	23aede96	caterpillar,revenue,data centers,backlog,guidance
+2026-08-06	Uber falls about 5% on soft guidance despite record free cash flow	a08e9cfd	uber,gross bookings,free cash flow,guidance,earnings
+2026-08-06	Alcaraz withdraws from the Cincinnati Open, casting doubt on his US Open defence	fee3b648	carlos alcaraz,cincinnati open,wrist injury,us open,withdraws
+2026-08-06	Tirante stuns seventh seed Fritz as seeds tumble at the Montreal Masters	bc6d9b9f	thiago tirante,taylor fritz,montreal,national bank open,upset
+2026-08-06	Buttler becomes T20 cricket's all-time leading run-scorer in The Hundred	64e32e18	jos buttler,kieron pollard,the hundred,manchester super giants,record
+2026-08-06	Trent Rockets Women go top of The Hundred with a fourth straight win	b9ad3d71	trent rockets,birmingham phoenix,the hundred women,sophia dunkley,top
+2026-08-06	Ocon's Haas seat under threat as F2 champion Fornaroli emerges as a 2027 favourite	88daf19f	esteban ocon,haas,leonardo fornaroli,f1,2027
+2026-08-06	NASA's Big Bang power swap extends Voyager 2's interstellar science mission	eb0cc24b	voyager 2,nasa jpl,interstellar,power,instruments
+2026-08-06	A spent SpaceX Falcon 9 upper stage slams into the Moon near Einstein crater	5a787711	falcon 9,moon,einstein crater,impact,spacex
+2026-08-06	Curiosity finds its largest-ever field of polygonal honeycomb fractures on Mars	06003d87	curiosity,mars,gale crater,honeycomb fractures,water
+2026-08-06	A negative time quantum result clears peer review as photons appear to leave before entering	e089bd27	negative time,photons,university of toronto,quantum,physical review letters

@@ -1,0 +1,536 @@
+{
+  "date": "2026-08-06",
+  "items": [
+    {
+      "tab": "Singapore",
+      "headline": "Worker, 23, killed by falling formwork at Jurong Port construction site",
+      "summary": "A 23-year-old worker died on Aug 4 after a formwork structure fell from an upper storey onto a lorry at 30 Jurong Port Road; MOM ordered the main contractor to halt all formwork activity.",
+      "url": "https://mothership.sg/2026/08/jurong-scaffolding-man-dies/",
+      "outlet": "Mothership",
+      "publish_date": "2026-08-04",
+      "short_hash": "26ee6363",
+      "key_entities": [
+        "jurong port",
+        "formwork",
+        "mom",
+        "hpc builders",
+        "dies"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "Nine people charged in Singapore over the sexual exploitation of two minors",
+      "summary": "Nine people were charged on Aug 3 after CID probed the exploitation of two victims under 18; a 20-year-old woman faces five charges including trafficking for exploitation.",
+      "url": "https://mothership.sg/2026/08/sexual-exploitation-minors-charges/",
+      "outlet": "Mothership",
+      "publish_date": "2026-08-03",
+      "short_hash": "bc42042e",
+      "key_entities": [
+        "cid",
+        "minors",
+        "exploitation",
+        "trafficking",
+        "nine charged"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "Two charged over a spate of at least 10 loanshark harassment cases island-wide",
+      "summary": "A 19-year-old Malaysian and a 25-year-old Indonesian were charged on Aug 4 under the Moneylenders Act after doors were splashed with paint on Aug 2; police link them to at least 10 cases.",
+      "url": "https://mothership.sg/2026/08/loanshark-harassment-duo/",
+      "outlet": "Mothership",
+      "publish_date": "2026-08-04",
+      "short_hash": "43f8d102",
+      "key_entities": [
+        "loanshark",
+        "harassment",
+        "moneylenders act",
+        "singapore",
+        "charged"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "Singaporean motorcyclist, 56, dies after a collision on a Johor expressway",
+      "summary": "A 56-year-old Singaporean man died after his motorcycle collided with a vehicle on an expressway in Johor, Malaysia.",
+      "url": "https://mothership.sg/2026/08/sg-motorcycist-die-mpv-johor/",
+      "outlet": "Mothership",
+      "publish_date": "2026-08-02",
+      "short_hash": "5ae4ebee",
+      "key_entities": [
+        "singaporean",
+        "motorcyclist",
+        "johor",
+        "expressway",
+        "dies"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "India coverage is unavailable in today's edition",
+      "summary": "All six primary India outlets were unreachable from the routine network, and permitted fallback outlets carried no fresh, non-duplicate India-domestic story in the 48-hour window.",
+      "url": "",
+      "outlet": "The Brief",
+      "publish_date": "2026-08-06",
+      "short_hash": "e3cdb7aa",
+      "key_entities": [],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "Update: Burnham bars rapists and child-sex offenders from early-release scheme",
+      "summary": "PM Andy Burnham confirmed on Aug 3 that rape, serious child-sex and grooming offences are excluded from the Sentencing Act early-release scheme, whose start moves from September to Oct 1, with GPS tagging for rapists.",
+      "url": "https://trib.al/nluehE3",
+      "outlet": "Sky News",
+      "publish_date": "2026-08-03",
+      "short_hash": "a4ea6d18",
+      "key_entities": [
+        "andy burnham",
+        "early release",
+        "sentencing act",
+        "rapists",
+        "excluded"
+      ],
+      "is_update": true
+    },
+    {
+      "tab": "UK News",
+      "headline": "Update: Essex and Suffolk Water declares its first hosepipe ban since 1997 as drought spreads",
+      "summary": "A temporary use ban took effect from Aug 3 for Essex & Suffolk Water customers, its first since 1997, after the Environment Agency declared drought across East Anglia and the South East.",
+      "url": "https://feeds.bbci.co.uk/news/articles/crmv8x74ky9o",
+      "outlet": "BBC News",
+      "publish_date": "2026-08-03",
+      "short_hash": "9567c9f9",
+      "key_entities": [
+        "essex and suffolk water",
+        "hosepipe ban",
+        "drought",
+        "environment agency",
+        "south east"
+      ],
+      "is_update": true
+    },
+    {
+      "tab": "UK News",
+      "headline": "FTSE 100 hits a record high near 10,980 on mining strength and Iran-deal optimism",
+      "summary": "The FTSE 100 rose about 0.4% on Aug 5 to a record close near 10,925, touching an intraday peak close to 10,980, led by miners and buoyed by hopes of US-Iran de-escalation.",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-08-05/uk-s-tough-jobs-market-threatens-burnham-s-aim-to-bring-back-hope",
+      "outlet": "Bloomberg",
+      "publish_date": "2026-08-05",
+      "short_hash": "5b4304f9",
+      "key_entities": [
+        "ftse 100",
+        "record high",
+        "miners",
+        "iran",
+        "uk stocks"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "Britain's services firms cut jobs for a 22nd straight month as the growth push stalls",
+      "summary": "S&P Global's PMI showed UK services companies cutting headcount for a 22nd consecutive month in July, underlining a two-year jobs downturn that complicates Burnham's growth pledge.",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-08-05/uk-s-tough-jobs-market-threatens-burnham-s-aim-to-bring-back-hope",
+      "outlet": "Bloomberg",
+      "publish_date": "2026-08-05",
+      "short_hash": "f86f3f90",
+      "key_entities": [
+        "uk services",
+        "pmi",
+        "jobs",
+        "burnham",
+        "downturn"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "Russian missile-and-drone barrage on the Kyiv region kills 17 and wounds 44",
+      "summary": "Overnight into Aug 5, Russia fired 24 ballistic missiles, several Zircon or Oniks missiles and about 115 drones at Kyiv, killing 17 and wounding 44; warehouses of Epicentr K and Nova Post were hit as Patriot interceptors run short.",
+      "url": "https://www.aljazeera.com/news/2026/8/5/russian-attacks-kill-17-exploiting-ukraines-lack-of-missile-interceptors",
+      "outlet": "Al Jazeera",
+      "publish_date": "2026-08-05",
+      "short_hash": "a17519c7",
+      "key_entities": [
+        "russia",
+        "kyiv",
+        "zelenskyy",
+        "patriot",
+        "drones"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "Update: US, Iran and Oman edge toward an interim deal to reopen the Strait of Hormuz",
+      "summary": "Iran and Oman have agreed coordinates for a safe shipping route and Trump said a deal could come within days, though an official put the odds at about 50-50 by Friday; talks stick on Iranian transit tolls.",
+      "url": "https://www.aljazeera.com/news/2026/8/5/iran-oman-us-close-to-hormuz-deal-what-do-they-all-want",
+      "outlet": "Al Jazeera",
+      "publish_date": "2026-08-05",
+      "short_hash": "fcff143c",
+      "key_entities": [
+        "iran",
+        "oman",
+        "us",
+        "strait of hormuz",
+        "deal"
+      ],
+      "is_update": true
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "Israel-Lebanon talks in Rome stall over Hezbollah disarmament in a seventh round",
+      "summary": "Technical teams met in Rome on Aug 4 and 5 for a seventh round since the April ceasefire but stayed split on disarming Hezbollah and any Israeli withdrawal from southern Lebanon.",
+      "url": "https://www.aljazeera.com/news/2026/8/5/lebanon-and-israel-still-split-over-disarming-hezbollah-at-rome-talks",
+      "outlet": "Al Jazeera",
+      "publish_date": "2026-08-05",
+      "short_hash": "0b0ee9a9",
+      "key_entities": [
+        "israel",
+        "lebanon",
+        "hezbollah",
+        "rome talks",
+        "disarmament"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "Gaza Board of Peace says there will be no Israeli withdrawal before Hamas disarms",
+      "summary": "The US-backed Board of Peace said on Aug 4 that Israel will not withdraw from Gaza until Hamas surrenders weapons in stages; Hamas says it will not act unless Israel meets withdrawal obligations.",
+      "url": "https://www.aljazeera.com/news/2026/8/4/board-of-peace-says-no-israeli-withdrawal-from-gaza-before-hamas-disarms",
+      "outlet": "Al Jazeera",
+      "publish_date": "2026-08-04",
+      "short_hash": "478b12a5",
+      "key_entities": [
+        "gaza",
+        "board of peace",
+        "hamas",
+        "israel",
+        "disarm"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "Jeff Dean and top Google researchers quit to launch AI-for-science startup Discovery Loop",
+      "summary": "Google chief scientist Jeff Dean is leaving after nearly 27 years to co-found Discovery Loop with Sanjay Ghemawat, Oriol Vinyals and Quoc Le; Radical and Khosla co-lead the seed round with Alphabet a founding investor.",
+      "url": "https://techcrunch.com/2026/08/05/jeff-dean-and-other-top-ai-researchers-are-leaving-google-to-launch-their-own-startup/",
+      "outlet": "TechCrunch",
+      "publish_date": "2026-08-05",
+      "short_hash": "1f385953",
+      "key_entities": [
+        "jeff dean",
+        "discovery loop",
+        "google",
+        "khosla",
+        "oriol vinyals"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "Meta launches Muse Code, an AI coding agent that undercuts Anthropic and OpenAI on price",
+      "summary": "Meta debuted Muse Code, a terminal agent for large codebases powered by Muse Spark 1.2, in public beta for macOS and Linux at $1.25 per million input and $4.25 per million output tokens.",
+      "url": "https://techcrunch.com/2026/08/05/meta-launches-muse-code-an-ai-agent-for-large-code-bases/",
+      "outlet": "TechCrunch",
+      "publish_date": "2026-08-05",
+      "short_hash": "9a0f6236",
+      "key_entities": [
+        "meta",
+        "muse code",
+        "muse spark",
+        "alexandr wang",
+        "coding agent"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "US drafts a ban on Chinese data-center components to protect AI infrastructure",
+      "summary": "The Trump administration, via the FCC, is drafting a ban on imports of new Chinese optical transceivers and data-center hardware; China's Innolight holds about 27% of the global transceiver market.",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-04/us-drafting-ban-on-china-data-center-components-reuters-says",
+      "outlet": "Bloomberg",
+      "publish_date": "2026-08-04",
+      "short_hash": "7fac9894",
+      "key_entities": [
+        "fcc",
+        "optical transceivers",
+        "innolight",
+        "china",
+        "data centers"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "White House summons OpenAI, Anthropic, Google and Nvidia on an AI safety-testing framework",
+      "summary": "Frontier labs were called to the White House for an Aug 6 meeting on a voluntary framework giving agencies up to 30 days of secure early access to covered frontier models before release.",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-03/openai-anthropic-google-to-join-white-house-ai-safety-meeting",
+      "outlet": "Bloomberg",
+      "publish_date": "2026-08-03",
+      "short_hash": "7500bad2",
+      "key_entities": [
+        "white house",
+        "openai",
+        "anthropic",
+        "nvidia",
+        "frontier models"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Disney beats on fiscal Q3 as streaming profit more than doubles to $712 million",
+      "summary": "Disney posted adjusted EPS of $2.06 on revenue up 7% to about $25.2 billion; streaming operating income jumped to $712 million from $329 million, helped by parks and Toy Story 5.",
+      "url": "https://www.cnbc.com/2026/08/05/disney-dis-earnings-q3-2026.html",
+      "outlet": "CNBC",
+      "publish_date": "2026-08-05",
+      "short_hash": "b3e06b31",
+      "key_entities": [
+        "disney",
+        "streaming",
+        "toy story 5",
+        "earnings",
+        "revenue"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Shopify jumps about 26% as second-quarter revenue climbs 34% to $3.58 billion",
+      "summary": "Shopify reported Q2 revenue of $3.58 billion, up 34% and above consensus, with EPS of $0.42 and GMV up 32% to $115.6 billion; AI-attributed orders roughly tripled year over year.",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-05/shopify-rises-after-3q-revenue-outlook-beats",
+      "outlet": "Bloomberg",
+      "publish_date": "2026-08-05",
+      "short_hash": "698baf14",
+      "key_entities": [
+        "shopify",
+        "revenue",
+        "gmv",
+        "ai orders",
+        "stock"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Caterpillar tops $20 billion in quarterly revenue for the first time and lifts its outlook",
+      "summary": "Caterpillar reported record Q2 revenue up 24% to $20.54 billion and adjusted EPS of $8.17, driven by construction and data-center power; backlog hit $72.1 billion and shares rose about 6%.",
+      "url": "https://www.cnbc.com/2026/08/04/caterpillar-cat-q2-2026-earnings.html",
+      "outlet": "CNBC",
+      "publish_date": "2026-08-04",
+      "short_hash": "23aede96",
+      "key_entities": [
+        "caterpillar",
+        "revenue",
+        "data centers",
+        "backlog",
+        "guidance"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Uber falls about 5% on soft guidance despite record free cash flow",
+      "summary": "Uber posted Q2 revenue of $14.19 billion and adjusted EPS of $0.81, with gross bookings up more than 22% above $58 billion and trailing free cash flow topping $10 billion; light guidance hit the shares.",
+      "url": "https://www.cnbc.com/2026/08/05/uber-stock-q2-2026-earnings.html",
+      "outlet": "CNBC",
+      "publish_date": "2026-08-05",
+      "short_hash": "a08e9cfd",
+      "key_entities": [
+        "uber",
+        "gross bookings",
+        "free cash flow",
+        "guidance",
+        "earnings"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "Alcaraz withdraws from the Cincinnati Open, casting doubt on his US Open defence",
+      "summary": "Carlos Alcaraz pulled out of the Cincinnati Masters (main draw Aug 13) as he recovers from a wrist injury that has kept him out since April; the US Open starts Aug 30.",
+      "url": "https://www.espn.com/tennis/story/_/id/49532446/carlos-alcaraz-withdraws-cincinnati-open-ongoing-wrist-injury",
+      "outlet": "ESPN",
+      "publish_date": "2026-08-04",
+      "short_hash": "fee3b648",
+      "key_entities": [
+        "carlos alcaraz",
+        "cincinnati open",
+        "wrist injury",
+        "us open",
+        "withdraws"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "Tirante stuns seventh seed Fritz as seeds tumble at the Montreal Masters",
+      "summary": "Argentina's Thiago Tirante upset seventh seed Taylor Fritz 7-5, 6-3 in the second round of the National Bank Open on Aug 5, as Shang Juncheng saved five match points to beat 10th seed Andrey Rublev.",
+      "url": "https://www.atptour.com/en/news/tirante-fritz-montreal-2026-wednesday",
+      "outlet": "ATP Tour",
+      "publish_date": "2026-08-05",
+      "short_hash": "bc6d9b9f",
+      "key_entities": [
+        "thiago tirante",
+        "taylor fritz",
+        "montreal",
+        "national bank open",
+        "upset"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "Buttler becomes T20 cricket's all-time leading run-scorer in The Hundred",
+      "summary": "Jos Buttler passed Kieron Pollard's 14,803 to lead all T20 run-scorers, reaching 14,833 with an unbeaten 51 off 20 balls as Manchester Super Giants beat Welsh Fire at Old Trafford on Aug 5.",
+      "url": "https://www.espncricinfo.com/series/the-hundred-men-s-competition-2026-1521176/manchester-super-giants-men-vs-welsh-fire-men-21st-match-1521251/match-report",
+      "outlet": "ESPNcricinfo",
+      "publish_date": "2026-08-05",
+      "short_hash": "64e32e18",
+      "key_entities": [
+        "jos buttler",
+        "kieron pollard",
+        "the hundred",
+        "manchester super giants",
+        "record"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "Trent Rockets Women go top of The Hundred with a fourth straight win",
+      "summary": "Trent Rockets Women beat Birmingham Phoenix Women by six wickets at Trent Bridge on Aug 5, chasing 123 with Sophia Dunkley player of the match for 65 off 37; the win took them top of the table.",
+      "url": "https://www.skysports.com/cricket/news/12123/13570083/the-hundred-trent-rockets-all-but-qualified-in-womens-competition-with-win-over-birmingham-phoenix",
+      "outlet": "Sky Sports",
+      "publish_date": "2026-08-05",
+      "short_hash": "b9ad3d71",
+      "key_entities": [
+        "trent rockets",
+        "birmingham phoenix",
+        "the hundred women",
+        "sophia dunkley",
+        "top"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "Ocon's Haas seat under threat as F2 champion Fornaroli emerges as a 2027 favourite",
+      "summary": "With F1 in its summer break before the Dutch GP on Aug 21-23, Haas silly-season talk centres on Esteban Ocon, out-scored by rookie Ollie Bearman, with reigning F2 champion Leonardo Fornaroli a leading 2027 candidate.",
+      "url": "https://www.autosport.com/f1/news/why-nationality-should-be-no-factor-as-haas-consider-fornaroli-and-camara-for-f1-2027/10840913/",
+      "outlet": "Autosport",
+      "publish_date": "2026-08-04",
+      "short_hash": "88daf19f",
+      "key_entities": [
+        "esteban ocon",
+        "haas",
+        "leonardo fornaroli",
+        "f1",
+        "2027"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "NASA's Big Bang power swap extends Voyager 2's interstellar science mission",
+      "summary": "On Aug 4 JPL engineers completed a reconfiguration nicknamed the Big Bang that keeps Voyager 2's three remaining instruments running at least an extra year; the team plans the same swap on Voyager 1.",
+      "url": "https://science.nasa.gov/blogs/voyager/2026/08/04/nasa-engineers-help-prolong-voyager-2s-science-mission/",
+      "outlet": "NASA",
+      "publish_date": "2026-08-04",
+      "short_hash": "eb0cc24b",
+      "key_entities": [
+        "voyager 2",
+        "nasa jpl",
+        "interstellar",
+        "power",
+        "instruments"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "A spent SpaceX Falcon 9 upper stage slams into the Moon near Einstein crater",
+      "summary": "A leftover Falcon 9 upper stage struck the Moon at about 5,400 mph early on Aug 5, likely carving a 60-foot crater; telescopes detected sodium and lithium in the impact plume.",
+      "url": "https://www.cnn.com/2026/08/04/science/spacex-rocket-moon-impact",
+      "outlet": "CNN",
+      "publish_date": "2026-08-05",
+      "short_hash": "5a787711",
+      "key_entities": [
+        "falcon 9",
+        "moon",
+        "einstein crater",
+        "impact",
+        "spacex"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "Curiosity finds its largest-ever field of polygonal honeycomb fractures on Mars",
+      "summary": "NASA's Curiosity rover imaged a vast field of honeycomb-like ground fractures in the Valle Grande area of Mount Sharp in Gale crater, the biggest such patch it has seen, possibly preserving clues to ancient water.",
+      "url": "https://www.nasa.gov/missions/mars-science-laboratory/curiosity-rover/nasas-curiosity-mars-rover-discovers-field-of-honeycomb-textures/",
+      "outlet": "NASA",
+      "publish_date": "2026-08-05",
+      "short_hash": "06003d87",
+      "key_entities": [
+        "curiosity",
+        "mars",
+        "gale crater",
+        "honeycomb fractures",
+        "water"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "A negative time quantum result clears peer review as photons appear to leave before entering",
+      "summary": "A University of Toronto experiment led by Daniela Angulo, showing photons can register a negative dwell time in a cloud of atoms, has been published in Physical Review Letters; it is a quirk of quantum mechanics, not time travel.",
+      "url": "https://www.scientificamerican.com/article/evidence-of-negative-time-found-in-quantum-physics-experiment/",
+      "outlet": "Scientific American",
+      "publish_date": "2026-08-04",
+      "short_hash": "e089bd27",
+      "key_entities": [
+        "negative time",
+        "photons",
+        "university of toronto",
+        "quantum",
+        "physical review letters"
+      ],
+      "is_update": false
+    }
+  ],
+  "fun_fact": {
+    "headline": "Australia lost the Great Emu War of 1932 to emus",
+    "body": "In late 1932, Australia deployed soldiers with Lewis machine guns to cull emus destroying wheat crops in Western Australia; the roughly 20,000 birds scattered and fewer than 1,000 were confirmed killed before the operation was withdrawn.",
+    "source": "Britannica; National Geographic",
+    "fun_fact_id": "funfact-6c148699",
+    "topic": "history",
+    "topic_key": "great emu war"
+  },
+  "puzzle": {
+    "type": "quantitative",
+    "title": "Trailing Off",
+    "title_key": "trailing-off",
+    "body": "How many zeros are at the very end of 100! (the product of every whole number from 1 to 100)?",
+    "approach": "Count the factors of 5, since trailing zeros come from pairs of 2 and 5 and fives are scarcer.",
+    "answer": "24 zeros: floor(100/5)=20 plus floor(100/25)=4.",
+    "puzzle_hash": "1e33551e"
+  },
+  "word_puzzle": {
+    "type": "grouping",
+    "title": "Something Fishy",
+    "title_key": "something-fishy",
+    "body": "Sort 16 words (CAT SWORD WATER BASS JELLY RAIN PERCH KEY STAR WIND PIKE CARD FOOT SOLE DASH CLIP) into four groups of four.",
+    "approach": "Three groups take the same suffix (-fish, -fall, -board); one group is just fish.",
+    "answer": "-FISH: CAT SWORD JELLY STAR; -FALL: WATER RAIN WIND FOOT; -BOARD: KEY CARD DASH CLIP; Fish: BASS PERCH PIKE SOLE.",
+    "word_puzzle_hash": "15362db5"
+  },
+  "notes": "India section is a placeholder: all six primary India outlets (The Hindu, Indian Express, Hindustan Times, Times of India, NDTV, Economic Times) were crawler-blocked/unreachable across 3+ attempts, and the fallback tier (SCMP, Al Jazeera, CNN, Bloomberg, CNBC) produced only already-published stories (RBI hold, Modi tax cuts) with no fresh non-duplicate India-domestic item in the window. UK ran partly on fallback source Bloomberg (2 of 4 items) as BBC/Sky deep links were largely unreachable for citation. All other sections met the 4-item floor on primary allowed sources."
+}

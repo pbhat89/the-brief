@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-06-06",
-      "topic_key": "venus",
-      "text": "A day on Venus is longer than its year."
-    },
-    {
       "date": "2026-06-07",
       "topic_key": "university of oxford",
       "text": "The University of Oxford is older than the Aztec Empire."
@@ -299,14 +294,14 @@
       "date": "2026-08-05",
       "topic_key": "guillotine",
       "text": "The last use of the guillotine in France (Hamida Djandoubi, 1977) was the same year Star Wars premiered; France abolished the death penalty in 1981."
+    },
+    {
+      "date": "2026-08-06",
+      "topic_key": "great emu war",
+      "text": "Australia deployed the military with machine guns against emus in 1932 and effectively lost."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-07-06",
-      "type": "lateral",
-      "title_key": "open-field"
-    },
     {
       "date": "2026-07-07",
       "type": "visual",
@@ -456,14 +451,14 @@
       "date": "2026-08-05",
       "type": "logic",
       "title_key": "count-the-knights"
+    },
+    {
+      "date": "2026-08-06",
+      "type": "quantitative",
+      "title_key": "trailing-off"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-07-06",
-      "type": "spellingbee",
-      "title_key": "pour-decisions"
-    },
     {
       "date": "2026-07-07",
       "type": "grouping",
@@ -613,6 +608,11 @@
       "date": "2026-08-05",
       "type": "spellingbee",
       "title_key": "space-case"
+    },
+    {
+      "date": "2026-08-06",
+      "type": "grouping",
+      "title_key": "something-fishy"
     }
   ]
 }
