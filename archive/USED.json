@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-06-07",
-      "topic_key": "university of oxford",
-      "text": "The University of Oxford is older than the Aztec Empire."
-    },
-    {
       "date": "2026-06-08",
       "topic_key": "run",
       "text": "The verb run has more meanings than any other word in the OED."
@@ -299,14 +294,14 @@
       "date": "2026-08-06",
       "topic_key": "great emu war",
       "text": "Australia deployed the military with machine guns against emus in 1932 and effectively lost."
+    },
+    {
+      "date": "2026-08-07",
+      "topic_key": "canary islands",
+      "text": "The Canary Islands are named after dogs, not the canary bird."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-07-07",
-      "type": "visual",
-      "title_key": "tumbling-die"
-    },
     {
       "date": "2026-07-08",
       "type": "logic",
@@ -456,14 +451,14 @@
       "date": "2026-08-06",
       "type": "quantitative",
       "title_key": "trailing-off"
+    },
+    {
+      "date": "2026-08-07",
+      "type": "lateral",
+      "title_key": "photograph"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-07-07",
-      "type": "grouping",
-      "title_key": "crossed-wires"
-    },
     {
       "date": "2026-07-08",
       "type": "ladder",
@@ -613,6 +608,11 @@
       "date": "2026-08-06",
       "type": "grouping",
       "title_key": "something-fishy"
+    },
+    {
+      "date": "2026-08-07",
+      "type": "ladder",
+      "title_key": "head-to-tail"
     }
   ]
 }

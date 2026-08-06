@@ -1860,4 +1860,39 @@ is empty until the first run.
 2026-08-06	NASA's Big Bang power swap extends Voyager 2's interstellar science mission	eb0cc24b	voyager 2,nasa jpl,interstellar,power,instruments
 2026-08-06	A spent SpaceX Falcon 9 upper stage slams into the Moon near Einstein crater	5a787711	falcon 9,moon,einstein crater,impact,spacex
 2026-08-06	Curiosity finds its largest-ever field of polygonal honeycomb fractures on Mars	06003d87	curiosity,mars,gale crater,honeycomb fractures,water
-2026-08-06	A negative time quantum result clears peer review as photons appear to leave before entering	e089bd27	negative time,photons,university of toronto,quantum,physical review letters
+2026-08-06	A negative time quantum result clears peer review as photons appear to leave before entering	e089bd27	negative time,photons,university of toronto,quantum,physical review letters2026-08-07	Air-travel class for officials set by seniority and flight length, says Chan Chun Sing	0455840d	chan chun sing,public service,official travel,singapore
+2026-08-07	MOM to bring migrant-worker clinics within 2km under a revamped primary-care plan	0453c556	mom,migrant workers,primary care plan,singapore
+2026-08-07	NTUC's Ng Chee Meng casts PMEs as the new working class in the AI era	bf5dc303	ng chee meng,ntuc,pmes,ai
+2026-08-07	Man jailed three years seven months for telling his lover his wife had died and stealing S$930,000	fdc1dc49	kong jun yi jonathan,fraud,singapore court
+2026-08-07	Singapore-made AI science-fiction film to premiere on National Day amid AI-slop criticism	30d943cf	ai film,national day,singapore
+2026-08-07	RBI holds the repo rate at 5.25% for a fourth straight meeting and lifts its FY27 growth forecast	df162837	rbi,sanjay malhotra,repo rate,monetary policy
+2026-08-07	Bombay High Court overturns Tarun Tejpal's acquittal and jails him for 10 years	5363ab01	bombay high court,tarun tejpal,rape case
+2026-08-07	Assam flood death toll rises to 95 as Nadda warns recovery will take time	93c1d05c	assam floods,jp nadda,death toll
+2026-08-07	PM Modi's foreign visits since 2021 cost at least Rs 557 crore, MEA tells Parliament	1b69465b	narendra modi,mea,foreign visits,parliament
+2026-08-07	Rahul Gandhi blames Amit Shah for violence against student protesters	14ed975f	rahul gandhi,amit shah,student protests
+2026-08-07	Burnham government fuels bank-tax speculation while scotching stamp-duty reform reports	d20db3c5	andy burnham,bank tax,budget,uk
+2026-08-07	UK construction downturn eases as the activity index climbs to a four-month high	8b09d0ec	construction pmi,uk economy,housebuilding
+2026-08-07	Colombia deploys about 11,000 troops as far-right Espriella is inaugurated in Cali	a4cc3f98	colombia,abelardo de la espriella,gustavo petro,inauguration
+2026-08-07	Iraq's Kataib Hezbollah defies a September 30 disarmament deadline	92ec9b13	iraq,kataib hezbollah,disarmament
+2026-08-07	Ousted ex-PM Sheikh Hasina vows to return to Bangladesh in December despite a death sentence	56f0e736	sheikh hasina,bangladesh,awami league
+2026-08-07	US refunds about $100 billion in tariffs after the Supreme Court struck them down	d3f23881	united states,tariffs,supreme court,trump
+2026-08-07	Germany investigates an explosive device attached to a drone at Leipzig airport	58c8fff0	germany,leipzig airport,drone,explosive
+2026-08-07	Anthropic builds an in-house team to design custom AI chips for Claude	d3e72515	anthropic,ai chips,claude
+2026-08-07	Unitree prices a $904 million Shanghai IPO at about a $9 billion valuation	666a1c84	unitree,ipo,star market,humanoid robots
+2026-08-07	OpenAI removes text-chat limits for free ChatGPT users	fab0cdbd	openai,chatgpt,free tier
+2026-08-07	Demis Hassabis steps down as DeepMind CEO to become chair and Alphabet chief scientist	29f09447	demis hassabis,google deepmind,kavukcuoglu,alphabet
+2026-08-07	Wall Street pulls back from records as the Dow falls 464 points	0baf8983	dow jones,sp 500,wall street
+2026-08-07	Eli Lilly tops estimates and lifts full-year guidance on a GLP-1 surge	2d2fc766	eli lilly,mounjaro,glp-1,earnings
+2026-08-07	Airbnb jumps about 9% after a second-quarter beat and raised outlook	688c34ff	airbnb,earnings,q2
+2026-08-07	AppLovin sinks about 19% on a rare revenue miss and soft guidance	b1adffed	applovin,earnings,revenue miss
+2026-08-07	US jobless claims hold below 200,000 for a third straight week	58ea9d0a	jobless claims,us labor market
+2026-08-07	🎾 Griekspoor stuns top seed Zverev as Medvedev also tumbles out in Montreal	7db3c328	tallon griekspoor,alexander zverev,daniil medvedev,montreal
+2026-08-07	🎾 Sabalenka and Swiatek cruise into the Toronto third round as Andreescu exits	51d351db	aryna sabalenka,iga swiatek,bianca andreescu,toronto
+2026-08-07	🏏 Trent Rockets beat Birmingham Phoenix by seven wickets in The Hundred	3256a85a	trent rockets,birmingham phoenix,the hundred
+2026-08-07	🏎️ Alonso sets a post-break deadline to decide on a 2027 Formula 1 season	ddacbaff	fernando alonso,aston martin,formula 1,2027
+2026-08-07	🏎️ Antonelli carries a surprise championship lead into F1's summer break	5d3525ae	kimi antonelli,lewis hamilton,lando norris,formula 1
+2026-08-07	Hawaii's Inouye telescope captures the Sun's surface in unprecedented detail	9e460d58	inouye solar telescope,sun,kelvin-helmholtz,nature
+2026-08-07	CRISPR gene editing produces the first hypoallergenic dogs	daaa6acd	crispr,hypoallergenic dogs,beagles
+2026-08-07	FDA approves the first mRNA flu vaccine for adults 50 and older	bcc1d81a	fda,moderna,mrna flu vaccine,mflusiva
+2026-08-07	Experts share how to photograph the 12 August total solar eclipse with a phone	324a488f	total solar eclipse,spain,iceland,photography
+2026-08-07	RWE reaches a $1.2 billion settlement to abandon US offshore wind projects	a3c743f8	rwe,offshore wind,trump administration,settlement
