@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-06-08",
-      "topic_key": "run",
-      "text": "The verb run has more meanings than any other word in the OED."
-    },
-    {
       "date": "2026-06-09",
       "topic_key": "octopus",
       "text": "An octopus has three hearts and blue, copper-based blood."
@@ -299,14 +294,14 @@
       "date": "2026-08-07",
       "topic_key": "canary islands",
       "text": "The Canary Islands are named after dogs, not the canary bird."
+    },
+    {
+      "date": "2026-08-08",
+      "topic_key": "venus",
+      "text": "A day on Venus is longer than its year: 243-day rotation vs 225-day orbit; it also spins backwards."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-07-08",
-      "type": "logic",
-      "title_key": "poisoned-cask"
-    },
     {
       "date": "2026-07-09",
       "type": "quantitative",
@@ -456,14 +451,14 @@
       "date": "2026-08-07",
       "type": "lateral",
       "title_key": "photograph"
+    },
+    {
+      "date": "2026-08-08",
+      "type": "visual",
+      "title_key": "boxes-within-boxes"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-07-08",
-      "type": "ladder",
-      "title_key": "alchemist"
-    },
     {
       "date": "2026-07-09",
       "type": "letterboxed",
@@ -613,6 +608,11 @@
       "date": "2026-08-07",
       "type": "ladder",
       "title_key": "head-to-tail"
+    },
+    {
+      "date": "2026-08-08",
+      "type": "letterboxed",
+      "title_key": "count-me-in"
     }
   ]
 }

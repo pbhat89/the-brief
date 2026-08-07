@@ -1896,3 +1896,35 @@ is empty until the first run.
 2026-08-07	FDA approves the first mRNA flu vaccine for adults 50 and older	bcc1d81a	fda,moderna,mrna flu vaccine,mflusiva
 2026-08-07	Experts share how to photograph the 12 August total solar eclipse with a phone	324a488f	total solar eclipse,spain,iceland,photography
 2026-08-07	RWE reaches a $1.2 billion settlement to abandon US offshore wind projects	a3c743f8	rwe,offshore wind,trump administration,settlement
+2026-08-08	Man, 27, charged with insulting Islam after being deported from Malaysia	14261129	religious harmony act,insulting religion,singapore court
+2026-08-08	Boy, 13, needs seven stitches after an alleged assault by a classmate	552d95a9	classmate assault,school,singapore
+2026-08-08	Singapore marks its 61st National Day this weekend under a 'Go Beyond' theme	e97acee3	national day,lawrence wong,singapore
+2026-08-08	Man, 68, jailed 11 years and six months for abusing his step-granddaughter	e5574892	sexual abuse,singapore court,jail
+2026-08-08	Parliament clears a bill raising the Supreme Court's sanctioned strength to 38 judges	2ac5f154	supreme court,judges bill,parliament,india
+2026-08-08	Delhi court extends custody of 13 NEET-UG paper-leak accused as CBI files chargesheet	ded7d99e	neet-ug,paper leak,cbi
+2026-08-08	Centre tells the Supreme Court a 'creamy layer' for SC/STs is Parliament's call	8e65fda7	creamy layer,supreme court,reservation
+2026-08-08	India adds heatwaves and lightning to its notified natural-disaster list	444d179e	heatwave,lightning,ndrf,natural calamity
+2026-08-08	UK house prices flat in July as the market cools for the summer	296eead3	house prices,halifax,uk economy
+2026-08-08	Chancellor John Healey sets the autumn Budget for 28 October	2d6b1078	autumn budget,john healey,uk
+2026-08-08	Burnham declines to rule out tax rises to fund social care	91245329	andy burnham,tax rises,social care,uk
+2026-08-08	UK retail sales keep falling but at a slower pace, CBI survey shows	7fe4688e	retail sales,cbi,uk economy
+2026-08-08	At least seven killed as a 14-year-old opens fire at a school near Bangkok	389370ef	thailand,school shooting,nonthaburi
+2026-08-08	A fresh wave of US tariffs on about 60 economies takes effect	6e637d5e	us tariffs,trump,trade
+2026-08-08	US Senate opens debate on a Russia sanctions bill as Ukraine strikes refineries	43073627	us senate,russia sanctions,ukraine
+2026-08-08	UN warns of atrocity risk in the besieged Sudanese city of el-Obeid	94c79f16	sudan,el-obeid,rsf,united nations
+2026-08-08	Apple struggles to keep MacBook Air in stock amid a memory squeeze	d6c4a593	apple,macbook air,memory shortage
+2026-08-08	EU rules requiring AI systems to identify themselves take effect	c9d02497	eu ai act,chatbots,deepfakes
+2026-08-08	Fireworks AI raises about $1.5 billion to help firms specialise AI models	3e1ca80a	fireworks ai,funding,ai infrastructure
+2026-08-08	The Friend AI pendant relaunches with a new voice and a higher price	29d0dab5	friend,ai wearable,the verge
+2026-08-08	US payrolls unexpectedly fall 23,000 in July as hiring stalls	bbf62fa2	july jobs report,nonfarm payrolls,us labor market
+2026-08-08	Wall Street rallies to records as a weak jobs report lifts rate-cut hopes	f6f900a4	sp 500,wall street,records
+2026-08-08	The Trade Desk sinks about 22% on a rare revenue miss	15feac08	the trade desk,earnings,revenue miss
+2026-08-08	Take-Two rises about 6% after its quarterly results	e525acc6	take-two,earnings
+2026-08-08	🎾 Fernandez ousts Andreeva as Sabalenka and Rybakina reach the Toronto last 16	1f3db1dd	leylah fernandez,aryna sabalenka,toronto,wta
+2026-08-08	🎾 Fils and Lehecka reach the Montreal last 16 as seeds keep tumbling	0edb0edc	arthur fils,jiri lehecka,montreal,atp
+2026-08-08	🏏 Sunrisers Leeds women thrash Birmingham Phoenix by nine wickets	0d5bee71	sunrisers leeds,birmingham phoenix,the hundred,litchfield
+2026-08-08	🏎️ Verstappen picks out Antonelli as the standout of F1's first half	fdbc8dec	max verstappen,kimi antonelli,formula 1
+2026-08-08	Physicists steer heat like a beam of light through a crystal at room temperature	c2912813	ucla,phonon,nature physics,boron arsenide
+2026-08-08	The brain's memory centre swaps out its immune cells around age 50	28e8cc8a	hippocampus,immune cells,alzheimers
+2026-08-08	Flatworm immune cells self-destruct to kill invaders, then vanish	a2c6367e	flatworm,immune cells,stanford
+2026-08-08	NASA readies its Roman telescope, a machine built to find 100,000 planets	298fb340	nasa,roman space telescope,exoplanets
