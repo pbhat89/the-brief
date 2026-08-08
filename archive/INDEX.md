@@ -1928,3 +1928,33 @@ is empty until the first run.
 2026-08-08	The brain's memory centre swaps out its immune cells around age 50	28e8cc8a	hippocampus,immune cells,alzheimers
 2026-08-08	Flatworm immune cells self-destruct to kill invaders, then vanish	a2c6367e	flatworm,immune cells,stanford
 2026-08-08	NASA readies its Roman telescope, a machine built to find 100,000 planets	298fb340	nasa,roman space telescope,exoplanets
+2026-08-09	PM Wong pledges a major review of how Singapore supports families	947b36f5	lawrence wong,national day message,family support,singapore
+2026-08-09	Opposition figure Lim Tean arrested in Johor Bahru after skipping his jail term	674678bd	lim tean,johor bahru,peoples voice,arrest,singapore
+2026-08-09	Two Singaporeans charged with conspiring to help Lim Tean flee to Malaysia	5d388530	lim tean,conspiracy,charged,singapore court
+2026-08-09	Man, 22, charged over the death of a petrol-station attendant hit by a car door	1fcfef0a	petrol station,death,charged,changi,singapore
+2026-08-09	Lok Sabha approves tax breaks for foreign investors in government debt	7d87bad7	lok sabha,foreign investors,government debt,tax,india
+2026-08-09	Lok Sabha passes a bill letting merchants charge fees on digital payments	c49a47d2	lok sabha,merchants,digital payments,upi,india
+2026-08-09	Government raises about $3.3 billion selling a 6.5% stake in LIC	4703af89	lic,stake sale,disinvestment,government,india
+2026-08-09	UK coverage is unavailable in today's edition	b61e7b4f	
+2026-08-09	Saudi Arabia, Turkey and Pakistan sign a mutual-defence pact in Mecca	c3ea743c	saudi arabia,turkey,pakistan,defence pact,mecca
+2026-08-09	A Houthi strike on Saudi Arabia's Najran wounds 11 amid warnings of wider attacks	71a67e2e	houthi,najran,saudi arabia,iran,attack
+2026-08-09	Update: Iran and Oman agree Strait of Hormuz shipping coordinates	df6cb4d4	iran,oman,strait of hormuz,ceasefire,trump
+2026-08-09	Ukrainian drone strikes ignite two major Russian oil refineries	3e53e114	ukraine,russia,syzran refinery,ilsky refinery,drone strikes
+2026-08-09	Cloudflare launches Kitesurf, a cloud browser built for AI agents	e043c086	cloudflare,kitesurf,ai agents,browser
+2026-08-09	Researchers publish the first fully AI-designed viruses in Science	4cb42560	stanford,arc institute,evo,ai-designed viruses,bacteriophage
+2026-08-09	Airbnb says AI now writes about 60% of its code	5d711923	airbnb,ai,code,search
+2026-08-09	Naive raises $28.5 million to automate setting up and running a company	8d0c1beb	naive,series a,nexus venture partners,startup
+2026-08-09	Rippling launches an AI Spend Console to track per-employee AI costs	e8d2bad4	rippling,ai spend console,enterprise ai
+2026-08-09	Oil jumps as Iran's Strait of Hormuz draft plan revives supply fears	53ebafb0	oil,brent,strait of hormuz,iran,markets
+2026-08-09	Atlassian soars about 30% on a cloud reacceleration and strong fiscal Q4	1b48e8b7	atlassian,earnings,cloud,stock
+2026-08-09	Datadog drops about 16% as its forward guidance disappoints	2bb1c134	datadog,guidance,earnings,stock
+2026-08-09	Gold hovers near a record around $4,350 as weak jobs data fuels rate-cut bets	f7e727f4	gold,record,jobs data,rate cuts,markets
+2026-08-09	Update: Bets on a September Fed rate hike collapse after the July jobs miss	f7d44339	federal reserve,rate hike,july payrolls,treasury yields
+2026-08-09	Swiatek fights back past Kostyuk to reach the Toronto quarter-finals	6f0a634c	iga swiatek,marta kostyuk,toronto,national bank open
+2026-08-09	Sabalenka downs Alexandrova to join Swiatek in the Toronto last eight	9cd6c3df	aryna sabalenka,ekaterina alexandrova,toronto,national bank open
+2026-08-09	Santner's fifty fires Trent Rockets to a sixth straight Hundred win	7d474e3a	trent rockets,mi london,the hundred,mitchell santner
+2026-08-09	Manchester Super Giants beat Southern Brave to end Brave's campaign	c3251bfa	manchester super giants,southern brave,the hundred,tim seifert
+2026-08-09	Verstappen's Red Bull exit clause goes live as he enters the break sixth	960a3938	max verstappen,red bull,exit clause,kimi antonelli,formula 1
+2026-08-09	Physicists generate quantum entanglement directly from sunlight	547d519c	quantum entanglement,sunlight,university of ottawa,photons
+2026-08-09	A Cretaceous Brazilian fossil reveals surprising diversity in early snakes	b0472297	tametara mirim,snake fossil,brazil,cretaceous
+2026-08-09	NASA readies a jet and 80-plus balloons to probe the corona during the Aug 12 eclipse	9d30edc0	nasa,total solar eclipse,corona,wb-57
