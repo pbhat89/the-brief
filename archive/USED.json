@@ -1,16 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-06-10",
-      "topic_key": "lightning",
-      "text": "A single lightning bolt is about five times hotter than the surface of the Sun."
-    },
-    {
-      "date": "2026-06-11",
-      "topic_key": "banana",
-      "text": "Bananas are berries, but strawberries are not."
-    },
-    {
       "date": "2026-06-12",
       "topic_key": "chess",
       "text": "There are more possible games of chess than atoms in the observable universe."
@@ -299,19 +289,14 @@
       "date": "2026-08-09",
       "topic_key": "anechoic chamber",
       "text": "The quietest place on Earth is an anechoic chamber at about -20.35 dB, the Guinness world's quietest room."
+    },
+    {
+      "date": "2026-08-11",
+      "topic_key": "cow",
+      "text": "Cows form close, lasting friendships and get stressed when separated from a preferred companion."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-07-10",
-      "type": "lateral",
-      "title_key": "left-on-the-lawn"
-    },
-    {
-      "date": "2026-07-11",
-      "type": "visual",
-      "title_key": "counting-the-board"
-    },
     {
       "date": "2026-07-12",
       "type": "logic",
@@ -456,19 +441,14 @@
       "date": "2026-08-09",
       "type": "logic",
       "title_key": "photo-finish"
+    },
+    {
+      "date": "2026-08-11",
+      "type": "quantitative",
+      "title_key": "two-candles"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-07-10",
-      "type": "anagram",
-      "title_key": "countries-in-disguise"
-    },
-    {
-      "date": "2026-07-11",
-      "type": "spellingbee",
-      "title_key": "tea-for-seven"
-    },
     {
       "date": "2026-07-12",
       "type": "grouping",
@@ -613,6 +593,11 @@
       "date": "2026-08-09",
       "type": "anagram",
       "title_key": "say-it-another-way"
+    },
+    {
+      "date": "2026-08-11",
+      "type": "grouping",
+      "title_key": "childs-play"
     }
   ]
 }

@@ -1958,3 +1958,20 @@ is empty until the first run.
 2026-08-09	Physicists generate quantum entanglement directly from sunlight	547d519c	quantum entanglement,sunlight,university of ottawa,photons
 2026-08-09	A Cretaceous Brazilian fossil reveals surprising diversity in early snakes	b0472297	tametara mirim,snake fossil,brazil,cretaceous
 2026-08-09	NASA readies a jet and 80-plus balloons to probe the corona during the Aug 12 eclipse	9d30edc0	nasa,total solar eclipse,corona,wb-57
+2026-08-11	Hong Kong mother and son jailed in Singapore over violent clash at Changi Airport	55d9f954	Changi Airport,Singapore court,Hong Kong mother and son
+2026-08-11	Netanyahu publicly rejects Trump's 15-point Gaza peace plan	c4482946	Netanyahu,Trump,Gaza,Hamas
+2026-08-11	Update: Ukrainian drone strike on Tatarstan refinery kills 13 in deadliest attack in two years	f980989f	Ukraine,Russia,Nizhnekamsk,Taneco refinery
+2026-08-11	Iran replaces national security chief as Strait of Hormuz talks stall	fcc69f6b	Iran,Mohsen Rezaei,Strait of Hormuz,UAE
+2026-08-11	Update: Houthis strike Saudi Aramco's Jazan refinery as Gulf conflict widens	05af1c15	Houthis,Saudi Aramco,Jazan refinery
+2026-08-11	Microsoft plans a big production boost for its in-house AI chips	3590b4c4	Microsoft,TSMC,Maia 300,AI chips
+2026-08-11	TSMC's July sales jump 45% as AI-chip demand defies market jitters	ac19f7e1	TSMC,AI chips,July sales
+2026-08-11	Wall Street slips from record highs as oil rises on Hormuz uncertainty	042180a8	S&P 500,Dow,Nasdaq,oil,CPI
+2026-08-11	Teledyne agrees to buy Varex Imaging; shares surge 48%	ac73c9a1	Teledyne,Varex Imaging,acquisition
+2026-08-11	Archer Aviation to acquire three Boeing subsidiaries as Boeing takes a stake	a8412160	Archer Aviation,Boeing,acquisition
+2026-08-11	Apple falls after Jefferies downgrades the stock to underperform	a0415409	Apple,Jefferies,downgrade
+2026-08-11	🎾 Toronto quarter-finals set as Gauff, Osaka, Rybakina and Swiatek advance	d151809b	WTA Toronto,Gauff,Osaka,Swiatek,Rybakina
+2026-08-11	🎾 Shelton beats Fonseca and Mensik advances as Montreal nears its final	497a78cc	ATP Montreal,Ben Shelton,Jakub Mensik
+2026-08-11	🏏 Southern Brave end Trent Rockets' winning run in The Hundred	61f23fb5	The Hundred,Southern Brave,Trent Rockets,Tristan Stubbs
+2026-08-11	🏏 Trent Rockets women edge Southern Brave by three wickets	9e9047fe	The Hundred,Trent Rockets women,Southern Brave women,Nat Sciver-Brunt
+2026-08-11	🏎️ Ocon's Haas seat comes under threat in the 2027 driver market	9d960119	Esteban Ocon,Haas,Oliver Bearman,2027 seat
+2026-08-11	Total solar eclipse to sweep Iceland and Spain on August 12 - Europe's first since 1999	4f833ed8	total solar eclipse,Iceland,Spain,NASA
