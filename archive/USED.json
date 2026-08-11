@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-06-12",
-      "topic_key": "chess",
-      "text": "There are more possible games of chess than atoms in the observable universe."
-    },
-    {
       "date": "2026-06-13",
       "topic_key": "honey",
       "text": "Honey never spoils."
@@ -294,14 +289,14 @@
       "date": "2026-08-11",
       "topic_key": "cow",
       "text": "Cows form close, lasting friendships and get stressed when separated from a preferred companion."
+    },
+    {
+      "date": "2026-08-12",
+      "topic_key": "banana",
+      "text": "Bananas are naturally radioactive"
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-07-12",
-      "type": "logic",
-      "title_key": "census-taker"
-    },
     {
       "date": "2026-07-13",
       "type": "quantitative",
@@ -446,14 +441,14 @@
       "date": "2026-08-11",
       "type": "quantitative",
       "title_key": "two-candles"
+    },
+    {
+      "date": "2026-08-12",
+      "type": "lateral",
+      "title_key": "left-on-the-lawn"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-07-12",
-      "type": "grouping",
-      "title_key": "tail-ends"
-    },
     {
       "date": "2026-07-13",
       "type": "ladder",
@@ -598,6 +593,11 @@
       "date": "2026-08-11",
       "type": "grouping",
       "title_key": "childs-play"
+    },
+    {
+      "date": "2026-08-12",
+      "type": "ladder",
+      "title_key": "cooling-off"
     }
   ]
 }

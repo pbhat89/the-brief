@@ -1,0 +1,330 @@
+{
+  "date": "2026-08-12",
+  "items": [
+    {
+      "tab": "Singapore",
+      "headline": "AI-generated zombie film of Singapore's National Day sparks debate over AI in cinema",
+      "summary": "'Bersama Majulah', a four-minute AI-realised short imagining a spore outbreak spreading across a Singapore-like city, drew wide attention after the August 9 National Day. Creator Joel Boh reported viewer retention of 85 to 93 per cent despite 'AI slop' criticism.",
+      "url": "https://www.scmp.com/week-asia/lifestyle-culture/article/3363557/ai-zombie-video-singapores-national-day-sparks-talk-future-film",
+      "outlet": "SCMP",
+      "publish_date": "2026-08-10",
+      "short_hash": "9559c08d",
+      "key_entities": ["singapore", "national day", "ai film", "bersama majulah", "joel boh"],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "Full Singapore desk coverage limited in today's edition",
+      "summary": "CNA, The Straits Times, Mothership and BBC were unreachable from the routine's network today, and SCMP - the one reachable allowed outlet - carried limited fresh Singapore-domestic news. One verified item ran.",
+      "url": "",
+      "outlet": "The Brief",
+      "publish_date": "2026-08-12",
+      "short_hash": "c91de889",
+      "key_entities": [],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "Monsoon floods kill more than 100 across India as Assam and Kashmir reel",
+      "summary": "Floods and landslides since July have killed more than 100 people nationwide, with Assam worst hit at about 87 dead and over a million displaced. Kerala has recorded at least 15 deaths and Indian-administered Jammu and Kashmir at least 31 as heavy rain persists.",
+      "url": "https://www.aljazeera.com/news/2026/8/5/indias-severe-monsoon-season-causes-more-than-100-deaths-since-july",
+      "outlet": "Al Jazeera",
+      "publish_date": "2026-08-07",
+      "short_hash": "b98c623c",
+      "key_entities": ["india", "monsoon floods", "assam", "kerala", "jammu and kashmir"],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "Full India desk coverage limited in today's edition",
+      "summary": "Every primary India outlet (The Hindu, The Indian Express, Hindustan Times, The Times of India, NDTV, The Economic Times) was unreachable from the routine's network. The section ran on the fallback tier (Al Jazeera), which yielded one verified in-window domestic story.",
+      "url": "",
+      "outlet": "The Brief",
+      "publish_date": "2026-08-12",
+      "short_hash": "d9af072a",
+      "key_entities": [],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "PM Burnham fast-tracks prison plan after uproar over police-killer release",
+      "summary": "Prime Minister Andy Burnham promised to speed up creating prison places and said the two men jailed over the 2019 death of PC Andrew Harper would not be freed early, moving to quell a row over an inmate-release plan threatening his first weeks in office.",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-11/burnham-fast-tracks-prison-plan-after-uproar-on-cop-killing-case",
+      "outlet": "Bloomberg",
+      "publish_date": "2026-08-11",
+      "short_hash": "5f19e268",
+      "key_entities": ["andy burnham", "uk prisons", "andrew harper", "early release"],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "Burnham launches cost-of-living tour as prisons row tests his honeymoon",
+      "summary": "Burnham began a nationwide cost-of-living tour to sell new affordability measures, even as the fallout over early prisoner releases threatened the goodwill he has enjoyed since succeeding Keir Starmer in July.",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-09/burnham-begins-uk-cost-of-living-tour-amid-row-over-prisoners",
+      "outlet": "Bloomberg",
+      "publish_date": "2026-08-09",
+      "short_hash": "eca1d93d",
+      "key_entities": ["andy burnham", "cost of living", "uk", "labour"],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "Burnham pledges relentless crackdown on Channel small-boat crossings",
+      "summary": "Burnham said he would be 'relentless' on illegal migration, with National Crime Agency officers assigned to human-smuggling cases roughly doubled to almost 800 from 376 at the start of 2025.",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-02/uk-s-burnham-pledges-relentless-focus-on-illegal-migration",
+      "outlet": "Bloomberg",
+      "publish_date": "2026-08-02",
+      "short_hash": "37fca855",
+      "key_entities": ["andy burnham", "illegal migration", "national crime agency", "small boats"],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "Colombia earthquake toll passes 200 as rescuers race through coffee region",
+      "summary": "A magnitude 7.4 quake near San Jose del Palmar, among the strongest to hit Colombia in decades, has killed more than 200 people and left over 2,700 missing across the Andean coffee belt. Cali and Pereira are among the hardest-hit cities as rescuers dig through collapsed buildings.",
+      "url": "https://www.cnn.com/2026/08/11/world/live-news/colombia-earthquake-latest",
+      "outlet": "CNN",
+      "publish_date": "2026-08-11",
+      "short_hash": "7be7a4b4",
+      "key_entities": ["colombia", "earthquake", "cali", "pereira", "coffee region"],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "Trump demands reparations from Iran as Strait of Hormuz talks stall",
+      "summary": "President Trump said he would seek compensation from Iran 'for the damage they've done over a 50-year period' after Tehran demanded war reparations, as talks to reopen the Strait of Hormuz faltered and oil rose for a fourth day.",
+      "url": "https://www.aljazeera.com/news/2026/8/11/trump-demands-compensation-from-iran-as-talks-on-strait-of-hormuz-continue",
+      "outlet": "Al Jazeera",
+      "publish_date": "2026-08-11",
+      "short_hash": "8f89fadf",
+      "key_entities": ["trump", "iran", "strait of hormuz", "reparations", "oil"],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "Russian strikes kill 12 in Ukraine as Zelensky warns of North Korean missiles",
+      "summary": "Overnight Russian attacks across Ukraine, including Zaporizhzhia and the Kyiv region, killed at least 12 people and wounded dozens. President Zelensky said Moscow is using North Korean ballistic missiles and exploiting Kyiv's shortage of Patriot interceptors as US attention shifts to Iran.",
+      "url": "https://www.aljazeera.com/news/2026/8/11/russian-attacks-kill-six-in-ukraines-zaporizhzhia",
+      "outlet": "Al Jazeera",
+      "publish_date": "2026-08-11",
+      "short_hash": "bba14fe3",
+      "key_entities": ["russia", "ukraine", "zelensky", "north korean missiles", "zaporizhzhia"],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "Netanyahu hedges on Gaza roadmap as Hamas demands guarantees",
+      "summary": "Hamas reaffirmed its commitment to Trump's 15-point Gaza roadmap but demanded guarantees on a ceasefire, aid and reconstruction, while Netanyahu's office reiterated that Israel will not withdraw until Hamas fully disarms. Strikes across Gaza eased sharply this week.",
+      "url": "https://www.aljazeera.com/news/2026/8/11/palestine-weekly-netanyahu-hedges-on-gaza-roadmap",
+      "outlet": "Al Jazeera",
+      "publish_date": "2026-08-11",
+      "short_hash": "79ce54f5",
+      "key_entities": ["netanyahu", "hamas", "gaza", "roadmap", "disarmament"],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "Anthropic to watermark text generated by its AI models",
+      "summary": "Anthropic said models released after August 2 will automatically watermark AI-generated text and files so other systems can detect them, complying with the EU AI Act's transparency code as regulators push for labelling of machine-made content.",
+      "url": "https://techcrunch.com/2026/08/11/anthropic-says-it-will-watermark-text-generated-by-its-ai-models/",
+      "outlet": "TechCrunch",
+      "publish_date": "2026-08-11",
+      "short_hash": "8d59769c",
+      "key_entities": ["anthropic", "watermark", "ai text", "eu ai act"],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "OpenAI completes $7 billion employee share sale at $852 billion valuation",
+      "summary": "OpenAI wrapped a roughly $7 billion secondary sale letting current and former staff cash out at an $852 billion valuation, easing liquidity pressure ahead of a potential IPO after its record $122 billion funding round in March.",
+      "url": "https://www.cnbc.com/2026/08/10/openai-wraps-7-billion-share-sale-ahead-of-potential-ipo-.html",
+      "outlet": "CNBC",
+      "publish_date": "2026-08-10",
+      "short_hash": "d6196c75",
+      "key_entities": ["openai", "share sale", "valuation", "ipo"],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "Jeff Dean exits Google and Hassabis moves to chairman in AI shake-up",
+      "summary": "Google's AI reshuffle sent chief scientist Jeff Dean out after 27 years to launch a startup, Discovery Loop, while Demis Hassabis moved to a DeepMind chairman role and became Alphabet chief scientist. Alphabet shares fell about 4% and slid again on Tuesday.",
+      "url": "https://www.cnbc.com/2026/08/05/google-chief-scientist-jeff-dean-leaving-company-after-27-years.html",
+      "outlet": "CNBC",
+      "publish_date": "2026-08-05",
+      "short_hash": "d7c998d0",
+      "key_entities": ["google", "jeff dean", "demis hassabis", "deepmind", "alphabet"],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "Intel lifts capital spending to $20 billion as AI chip demand surges",
+      "summary": "Intel posted its fastest revenue growth in nearly 15 years and raised capital-expenditure guidance to $20 billion, citing strong AI-infrastructure demand. Its shares have roughly quintupled over the past year, aided by the US government's 10% equity stake.",
+      "url": "https://www.cnbc.com/2026/08/10/intel-intc-stock-offering-ai.html",
+      "outlet": "CNBC",
+      "publish_date": "2026-08-10",
+      "short_hash": "f8755c7c",
+      "key_entities": ["intel", "capital spending", "ai chips", "capex"],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Wall Street falls a second day as oil climbs on Iran uncertainty",
+      "summary": "The S&P 500 fell 0.32% to 7,728.20 and the Nasdaq dropped 0.60% to 26,445.45, while the Dow shed 184 points to 53,791.85, weighed by technology stocks and higher oil, with investors awaiting Wednesday's July inflation print.",
+      "url": "https://www.cnbc.com/2026/08/11/stock-market-today-live-updates.html",
+      "outlet": "CNBC",
+      "publish_date": "2026-08-11",
+      "short_hash": "b3b73b63",
+      "key_entities": ["s&p 500", "nasdaq", "dow", "oil", "markets"],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Oil holds four-day gain as Iran ties Hormuz reopening to conditions",
+      "summary": "Brent crude rose 1.3% to $88.85 and US WTI traded near $83.27 after Iran said the Strait of Hormuz would stay shut unless its conditions are met and Trump made new reparations demands, keeping prices near their highest since July 31.",
+      "url": "https://www.cnbc.com/2026/08/11/oil-steadies-near-one-week-highs-as-us-iran-peace-deal-hopes-dim.html",
+      "outlet": "CNBC",
+      "publish_date": "2026-08-11",
+      "short_hash": "65af3dd6",
+      "key_entities": ["oil", "brent", "wti", "strait of hormuz", "iran"],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "July inflation report to test rate-hike bets and record stocks",
+      "summary": "Economists expect July CPI up 0.1% on the month and 3.4% from a year earlier, with core at 2.5%, in a report due Wednesday that could shape whether the Fed hikes in September; futures put the odds near 52%.",
+      "url": "https://www.cnbc.com/2026/08/10/how-the-market-may-react-to-julys-cpi-report-according-to-jpmorgan.html",
+      "outlet": "CNBC",
+      "publish_date": "2026-08-10",
+      "short_hash": "bc2ba946",
+      "key_entities": ["cpi", "inflation", "federal reserve", "rate hike"],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Plug Power jumps 13% and First Solar climbs on upgrade among Tuesday movers",
+      "summary": "Plug Power rallied 13% on a smaller-than-expected quarterly loss, First Solar rose more than 3% after a Baird upgrade to outperform with a $318 target, and Cardinal Health gained about 2% on better-than-expected fiscal fourth-quarter results.",
+      "url": "https://www.cnbc.com/2026/08/11/stocks-making-the-biggest-moves-premarket-riot-hims-intc.html",
+      "outlet": "CNBC",
+      "publish_date": "2026-08-11",
+      "short_hash": "203b7b87",
+      "key_entities": ["plug power", "first solar", "cardinal health", "movers"],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "Seifert's seven sixes fire Manchester Super Giants past Sunrisers Leeds",
+      "summary": "Tim Seifert smashed an explosive unbeaten knock with seven sixes as Manchester Super Giants chased their target in 67 balls to beat Sunrisers Leeds at Old Trafford, moving second and all but securing an Eliminator spot in The Hundred.",
+      "url": "https://www.espncricinfo.com/series/the-hundred-men-s-competition-2026-1521176/manchester-super-giants-men-vs-sunrisers-leeds-men-30th-match-1521260/full-scorecard",
+      "outlet": "ESPNcricinfo",
+      "publish_date": "2026-08-11",
+      "short_hash": "36890962",
+      "key_entities": ["the hundred", "manchester super giants", "sunrisers leeds", "tim seifert"],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "Sunrisers Leeds women beat Manchester to reach the Eliminator",
+      "summary": "Sunrisers Leeds Women beat Manchester Super Giants Women at Old Trafford, with Jess Jonassen removing Smriti Mandhana and Meg Lanning; the result knocked Manchester out and sent Sunrisers into the Eliminator.",
+      "url": "https://www.espncricinfo.com/series/the-hundred-women-s-competition-2026-1521193/manchester-super-giants-women-vs-sunrisers-leeds-women-30th-match-1521226/full-scorecard",
+      "outlet": "ESPNcricinfo",
+      "publish_date": "2026-08-11",
+      "short_hash": "27f0f8ab",
+      "key_entities": ["the hundred", "sunrisers leeds women", "manchester super giants women", "jess jonassen"],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "Swiatek routs Shnaider as she and Svitolina reach Toronto semi-finals",
+      "summary": "Iga Swiatek beat Diana Shnaider 6-2, 6-1 to reach her 23rd WTA 1000 semi-final, where she meets Elina Svitolina, who rallied to defeat Ekaterina Alexandrova 3-6, 6-0, 6-3 at the National Bank Open in Toronto.",
+      "url": "https://www.wtatennis.com/news/4557390/by-the-numbers-swiatek-overwhelms-shnaider-to-book-toronto-semifinal-spot",
+      "outlet": "WTA Tour",
+      "publish_date": "2026-08-11",
+      "short_hash": "029cd7eb",
+      "key_entities": ["wta toronto", "iga swiatek", "elina svitolina", "diana shnaider"],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "Shelton and Mensik reach Montreal semi-finals",
+      "summary": "Defending champion Ben Shelton won 6-3, 7-6(3) and Jakub Mensik won 6-4, 7-5 to reach the semi-finals of the men's National Bank Open in Montreal, where the final is set for August 13.",
+      "url": "https://www.atptour.com/en/scores/current/montreal/421/results",
+      "outlet": "ATP Tour",
+      "publish_date": "2026-08-11",
+      "short_hash": "9f9758e7",
+      "key_entities": ["atp montreal", "ben shelton", "jakub mensik"],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "Verstappen more open to staying as F1 tweaks 2027 engine rules",
+      "summary": "Max Verstappen said proposed changes to Formula 1's 2027 engine regulations could convince him to stay, easing exit speculation during the summer break before the Dutch Grand Prix (Aug 21-23); Red Bull is expected to retain Isack Hadjar for 2027.",
+      "url": "https://www.skysports.com/f1/news/12433/13546666/max-verstappen-red-bull-driver-suggests-proposed-2027-rule-changes-could-convince-him-to-stay-in-f1",
+      "outlet": "Sky Sports F1",
+      "publish_date": "2026-08-11",
+      "short_hash": "2c8cc940",
+      "key_entities": ["max verstappen", "red bull", "2027 engine rules", "dutch grand prix", "isack hadjar"],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "NASA fuels the Roman Space Telescope for a late-August launch",
+      "summary": "NASA loaded 290 gallons of propellant into the Nancy Grace Roman Space Telescope and began integrated launch operations, keeping it on track for an August 30 SpaceX Falcon Heavy launch. Roman's field of view is over 100 times Hubble's and will probe dark energy and exoplanets.",
+      "url": "https://science.nasa.gov/blogs/roman/2026/08/10/nasas-roman-telescope-team-begins-integrated-operations-for-launch/",
+      "outlet": "NASA",
+      "publish_date": "2026-08-10",
+      "short_hash": "1cd3557a",
+      "key_entities": ["nasa", "roman space telescope", "dark energy", "exoplanets"],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "Update: Total solar eclipse sweeps Greenland, Iceland and Spain today",
+      "summary": "Wednesday's total solar eclipse, mainland Europe's first since 1999, races from the Arctic across Greenland and Iceland to northern Spain, with up to 2 minutes 18 seconds of totality and about 15 million people in the path of totality. Roughly one in eight people worldwide can see a partial eclipse.",
+      "url": "https://science.nasa.gov/eclipses/future-eclipses/total-solar-eclipse-on-august-12-2026/",
+      "outlet": "NASA",
+      "publish_date": "2026-08-12",
+      "short_hash": "db305b36",
+      "key_entities": ["total solar eclipse", "spain", "iceland", "greenland"],
+      "is_update": true
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "Sharpest-ever images of the Sun reveal swirling plasma instabilities",
+      "summary": "Using the US National Science Foundation's Daniel K. Inouye Solar Telescope, researchers captured the highest-resolution images yet of the Sun's surface, revealing ubiquitous Kelvin-Helmholtz swirls in the photosphere with details as small as city-sized structures, as reported in Nature.",
+      "url": "https://www.scientificamerican.com/article/spectacular-images-reveal-never-before-seen-whirlpools-on-the-sun/",
+      "outlet": "Scientific American",
+      "publish_date": "2026-08-06",
+      "short_hash": "9b310edd",
+      "key_entities": ["inouye solar telescope", "sun", "kelvin-helmholtz", "photosphere"],
+      "is_update": false
+    }
+  ],
+  "fun_fact": {
+    "headline": "Bananas are naturally radioactive",
+    "body": "Bananas are naturally radioactive. They are rich in potassium, and a small fraction of all potassium is the radioactive isotope potassium-40, so every banana emits a tiny amount of radiation. The effect is so well established that scientists use an informal unit called the 'banana equivalent dose' to compare everyday radiation exposures.",
+    "source": "Widely documented; Scientific American and US nuclear-science references",
+    "fun_fact_id": "funfact-cd37d1db",
+    "topic": "physics",
+    "topic_key": "banana"
+  },
+  "puzzle": {
+    "type": "lateral",
+    "title": "Left on the Lawn",
+    "title_key": "left-on-the-lawn",
+    "body": "A man wakes to find a carrot, five lumps of coal, and an old woollen scarf lying together on his front lawn. He is sure no one placed them there overnight, and they were not there the evening before. How did they get there?",
+    "approach": "Nobody placed the objects there overnight - so ask what could have been there before, and then quietly disappeared.",
+    "answer": "A snowman. The neighbours' children had built one on the lawn the previous day, using the carrot for its nose, the coal for eyes and buttons, and the scarf around its neck. Overnight the snow melted completely, leaving only those objects behind on the grass.",
+    "puzzle_hash": "4c51aa44"
+  },
+  "word_puzzle": {
+    "type": "ladder",
+    "title": "Cooling Off",
+    "title_key": "cooling-off",
+    "body": "Turn WARM into COOL in five steps, changing one letter at a time. Every rung must be a real word. WARM -> _ _ _ _ -> _ _ _ _ -> _ _ _ _ -> _ _ _ _ -> COOL",
+    "approach": "Change exactly one letter at each step, and every rung must be an ordinary English word.",
+    "answer": "WARM -> WARD -> WORD -> WOOD -> WOOL -> COOL. Each step changes a single letter: M->D, A->O, R->O, D->L, then W->C.",
+    "word_puzzle_hash": "b4c83b53"
+  },
+  "notes": "Constrained network run. All Singapore primary outlets (CNA, The Straits Times, Mothership) and BBC were unreachable to the search agent; only SCMP was reachable and carried limited fresh SG-domestic news, so Singapore ran one verified item plus a placeholder card (below the floor of 4, documented). All India primary outlets (The Hindu, Indian Express, HT, TOI, NDTV, ET) were unreachable; India ran on the fallback tier (Al Jazeera) yielding one verified in-window domestic story (ongoing monsoon floods) plus a placeholder. UK primaries (BBC, Sky News) and the first-choice fallback (The Guardian) were all blocked to the search agent; UK ran on the reachable fallback tier (Bloomberg) with three domestic items. Each thin section was retried 3+ times with varied outlets/queries and a 48h->72h window before escalation. Global (4), Tech (4), Business (4) and Sports (5) met target; Other Miscellaneous ran three verified frontier-science items (allowed Misc sources NASA/Nature/Scientific American yielded limited additional in-window deep links). Total verified real items across the brief: 25, well above the 8-item hard-stop floor. Prior scheduled day 2026-08-11 published normally, so no MISSED RUN. ~52 web searches run.",
+  "search_count": 52
+}
