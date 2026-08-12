@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-06-13",
-      "topic_key": "honey",
-      "text": "Honey never spoils."
-    },
-    {
       "date": "2026-06-14",
       "topic_key": "eiffel tower",
       "text": "The Eiffel Tower grows 12-15 cm taller in summer due to thermal expansion."
@@ -294,14 +289,14 @@
       "date": "2026-08-12",
       "topic_key": "banana",
       "text": "Bananas are naturally radioactive"
+    },
+    {
+      "date": "2026-08-13",
+      "topic_key": "roman concrete",
+      "text": "Roman concrete self-heals: lime clasts react with water to reform calcium carbonate and seal cracks."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-07-13",
-      "type": "quantitative",
-      "title_key": "careless-teller"
-    },
     {
       "date": "2026-07-14",
       "type": "lateral",
@@ -446,14 +441,14 @@
       "date": "2026-08-12",
       "type": "lateral",
       "title_key": "left-on-the-lawn"
+    },
+    {
+      "date": "2026-08-13",
+      "type": "visual",
+      "title_key": "ten-coin-turnaround"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-07-13",
-      "type": "ladder",
-      "title_key": "in-the-pink"
-    },
     {
       "date": "2026-07-14",
       "type": "letterboxed",
@@ -598,6 +593,11 @@
       "date": "2026-08-12",
       "type": "ladder",
       "title_key": "cooling-off"
+    },
+    {
+      "date": "2026-08-13",
+      "type": "letterboxed",
+      "title_key": "fine-china"
     }
   ]
 }

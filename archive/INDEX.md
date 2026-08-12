@@ -2002,3 +2002,38 @@ is empty until the first run.
 2026-08-12	NASA fuels the Roman Space Telescope for a late-August launch	1cd3557a	nasa,roman space telescope,dark energy,exoplanets
 2026-08-12	Update: Total solar eclipse sweeps Greenland, Iceland and Spain today	db305b36	total solar eclipse,spain,iceland,greenland
 2026-08-12	Sharpest-ever images of the Sun reveal swirling plasma instabilities	9b310edd	inouye solar telescope,sun,kelvin-helmholtz,photosphere
+2026-08-13	Court of Three Judges hears Law Society bid to strike Pritam Singh off the rolls	c92d133f	pritam singh,law society,court of three judges,strike off
+2026-08-13	Lim Tean arrested on return to Singapore after failing to start jail term	22641ba4	lim tean,commercial affairs department,jail
+2026-08-13	Doctor and friend each jailed a year for taking drugs at Sentosa villa party	6f8d45f8	sentosa,sofitel,drugs,rayson lee
+2026-08-13	Man, 26, charged over S$140,000 National Day robbery at Paya Lebar Quarter	80834ac2	paya lebar quarter,robbery,national day
+2026-08-13	Lok Sabha passes bill renaming Kerala as 'Keralam' amid Opposition uproar	62ea9fd0	lok sabha,kerala,keralam,name change bill
+2026-08-13	Amit Shah offers Parliament debate on student-protest crackdown; Rahul Gandhi refuses	c4ddc5b2	amit shah,rahul gandhi,student protest,parliament
+2026-08-13	Parliamentary panel indicts ex-judge Yashwant Varma in cash-at-home case	905610e0	yashwant varma,lok sabha,cash at home,judge
+2026-08-13	India's July retail inflation quickens to 4.45%, a 19-month high	f382efcb	india cpi,retail inflation,rbi,july
+2026-08-13	Tharoor's Vande Mataram post draws BJP attack amid national-song row	8d3d4677	shashi tharoor,vande mataram,bjp,national song
+2026-08-13	Internal UK Treasury forecasts warn of growth downgrade if Hormuz disruption persists	47e054ac	uk treasury,gdp,strait of hormuz,burnham
+2026-08-13	UK second-quarter growth data looms with little cheer as autumn tax rises near	c2d61b6b	uk gdp,ons,budget,tax rises
+2026-08-13	UK desk coverage limited in today's edition	b7a9d628	
+2026-08-13	Syrian court sentences Bashar al-Assad to death in absentia for war crimes	fcadd29c	bashar al-assad,syria,death sentence,war crimes
+2026-08-13	Turkey's parliament passes conditional pardon for thousands of PKK fighters	b48a90a9	turkey,pkk,pardon,parliament
+2026-08-13	US Marine veteran Robert Gilman freed by Russia after four years detained	454f8489	robert gilman,russia,marine,trump
+2026-08-13	Overloaded ferry capsizes on Zimbabwe's Lake Kariba, killing at least 44	3f4a7af9	zimbabwe,lake kariba,ferry,capsize
+2026-08-13	Thailand suspends new gun licences after school shooting kills nine	0e4b5d15	thailand,gun licences,school shooting,anutin
+2026-08-13	AI coding startup Cognition in talks to raise at $40 billion valuation	ba958448	cognition,devin,funding,valuation
+2026-08-13	Sony and TSMC sign $6.4 billion image-sensor joint venture in Japan	9119e0fb	sony,tsmc,joint venture,image sensor
+2026-08-13	Intel raises $20 billion in upsized stock offering to fund foundry buildout	5117ce7e	intel,stock offering,foundry
+2026-08-13	Nvidia lines up more than $500 billion from six Wall Street firms for AI buildout	c67e1be7	nvidia,wall street,ai buildout,jensen huang
+2026-08-13	OpenAI expands cyber-defence program and releases gated GPT-5.6-Cyber	785ff5a2	openai,gpt-5.6-cyber,daybreak,cybersecurity
+2026-08-13	Update: US July inflation cools to 3.4%, easing September rate-hike bets	0a61f61c	us cpi,inflation,federal reserve,rate hike
+2026-08-13	Wall Street closes higher after tame inflation data, led by the Nasdaq	20123861	s&p 500,nasdaq,dow,stocks
+2026-08-13	CoreWeave doubles quarterly revenue to $2.58 billion and lifts guidance	c258e823	coreweave,ai cloud,earnings,backlog
+2026-08-13	Super Micro guides first-quarter sales far above Wall Street estimates	f1b39f2c	super micro,ai server,guidance
+2026-08-13	Gold rallies above $4,400 an ounce to a roughly 10-week high	b6b2da83	gold,record,inflation,markets
+2026-08-13	🏏 Afghanistan seal 3-0 ODI series lead over Ireland as Atal hits 143	9ed717d9	afghanistan,ireland,odi,sediqullah atal
+2026-08-13	🏏 London Spirit edge Welsh Fire by six runs in a low-scoring Hundred thriller	ef36849d	london spirit,welsh fire,the hundred,david willey
+2026-08-13	🏏 Ellyse Perry's unbeaten 62 lifts Birmingham Phoenix past MI London	ceab2cf4	birmingham phoenix,mi london,the hundred,ellyse perry
+2026-08-13	🏎️ F1 breaks for summer with Antonelli leading before the Dutch GP	d4b16ae1	formula 1,kimi antonelli,dutch grand prix,summer break
+2026-08-13	🎾 Shelton beats Mensik as three Americans reach the Montreal semi-finals	cf32882f	ben shelton,jakub mensik,atp montreal,learner tien
+2026-08-13	HIV vaccine strategy coaxes rare immune cells into making key antibodies	5e99953a	hiv vaccine,broadly neutralizing antibodies,b cells
+2026-08-13	Study finds free-living cellular life on Earth may have arisen twice	e6581bfd	origin of life,bacteria,archaea,enzymes
+2026-08-13	Adaptive deep brain stimulation improves walking in Parkinson's disease	0005f06a	deep brain stimulation,parkinsons,gait,nature medicine
