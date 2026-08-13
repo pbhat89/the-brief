@@ -2037,3 +2037,35 @@ is empty until the first run.
 2026-08-13	HIV vaccine strategy coaxes rare immune cells into making key antibodies	5e99953a	hiv vaccine,broadly neutralizing antibodies,b cells
 2026-08-13	Study finds free-living cellular life on Earth may have arisen twice	e6581bfd	origin of life,bacteria,archaea,enzymes
 2026-08-13	Adaptive deep brain stimulation improves walking in Parkinson's disease	0005f06a	deep brain stimulation,parkinsons,gait,nature medicine
+2026-08-14	Singapore upgrades 2026 growth forecast to 4.5-5.5% after Q2 GDP jumps 5.9%	897a292e	singapore,mti,gdp,growth forecast
+2026-08-14	2.4 million Singaporeans to receive S$400-S$600 cost-of-living payment from Sept 9	e9765968	singapore,cost of living payment,budget 2026
+2026-08-14	Xinmin Secondary School evacuated after bomb threat; no device found	f4685213	xinmin secondary,bomb threat,hougang
+2026-08-14	Eleven arrested over unlicensed moneylending syndicate tied to 25,500 scam reports	284947cf	singapore police,moneylending syndicate,scam
+2026-08-14	Ex-NEC sales manager jailed four years for cheating firms of S$726,000	9b36e68d	nec asia pacific,seno kunihide,cheating,jail
+2026-08-14	RBI turns upbeat as Iran-war shock fades, citing record vehicle sales and strong credit	f6fe5b15	rbi,india,inflation,credit growth
+2026-08-14	India desk coverage limited in today's edition	54e2e9c8	
+2026-08-14	'Exceptionally serious' drought hits UK farmers as heatwave persists	01e7eaf8	uk drought,england,heatwave,farmers
+2026-08-14	Thames Water warned nationalisation could cost £140bn as rescue deal stalls	6afea4d9	thames water,nationalisation,burnham,ofwat
+2026-08-14	UK economy grew 0.4% in the second quarter, beating forecasts	4ffb0196	uk gdp,ons,q2,growth
+2026-08-14	UK hiring held steady in July after a four-year downturn	cd764a04	uk labour market,payrolls,wages
+2026-08-14	Venezuela and Israel restore consular ties after 17-year rupture	97eb27fe	venezuela,israel,consular ties
+2026-08-14	Pentagon review finds US strikes killed 153 civilians in Yemen in 2025	199245da	pentagon,yemen,houthis,civilian casualties
+2026-08-14	Russia bars Yabloko, its only anti-war party, from September elections	b4d5624f	russia,yabloko,state duma,elections
+2026-08-14	Yemeni forces repel Houthi assault near Taiz as fighting intensifies	58eef1db	yemen,taiz,houthis,escalation
+2026-08-14	Google unveils Pixel 11 lineup with Tensor G6 and deeper Gemini AI	8a96f4ac	google,pixel 11,tensor g6,gemini
+2026-08-14	AI app-builder Lovable doubles valuation to $13.3bn in $400m raise	fb1ce785	lovable,funding,valuation,menlo ventures
+2026-08-14	AI code-testing startup Blacksmith's valuation jumps nearly tenfold to $550m	82ef11a3	blacksmith,peak xv,ai coding,funding
+2026-08-14	Vantage Data Centers explores IPO at about $100bn valuation	d95493dd	vantage data centers,ipo,silver lake,openai
+2026-08-14	Crypto hardware maker Trezor says shipping-partner breach exposed thousands	7e4325dd	trezor,data breach,crypto wallet
+2026-08-14	S&P 500 tops 7,800 for the first time after soft producer-price data	7d8976a9	s&p 500,record,nasdaq,stocks
+2026-08-14	US wholesale prices were flat in July as inflation pressures eased	8fdf7321	ppi,inflation,federal reserve,wholesale prices
+2026-08-14	Cisco slides about 8% despite an earnings beat and strong AI-order guidance	d1be63a4	cisco,earnings,ai orders,guidance
+2026-08-14	Oil falls as OPEC and the IEA cut their 2026 demand forecasts	7ea312a1	oil,opec,iea,brent
+2026-08-14	Shelton and Nakashima set all-American Montreal final; Rybakina meets Swiatek in Toronto	79424867	ben shelton,brandon nakashima,national bank open,rybakina
+2026-08-14	Sinner and Alcaraz both withdraw from the Cincinnati Open before the US Open	d1e19409	jannik sinner,carlos alcaraz,cincinnati open,us open
+2026-08-14	Trent Rockets top both Hundred tables and go straight to the Lord's finals	3b81ff20	trent rockets,the hundred,lords,finals
+2026-08-14	F1 silly season heats up over the break with Cadillac's 2027 seats in play	0260710c	formula 1,cadillac,george russell,driver market
+2026-08-14	How fast the climate warms, not just how much, may decide if the AMOC collapses	fd3bb382	amoc,climate,utrecht,van westen
+2026-08-14	JWST spots a 'black hole star' at cosmic dawn, hinting at a new class of object	54d2acb1	jwst,black hole star,little red dots,naidu
+2026-08-14	Physicists use light to glimpse electrons frozen in a 'Wigner crystal'	8ba9b78d	wigner crystal,polaron,basel,quantum
+2026-08-14	Severe COVID can reawaken dormant viruses, study links it to long COVID	5239274c	covid,latent viruses,long covid,anellovirus

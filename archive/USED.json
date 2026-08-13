@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-06-14",
-      "topic_key": "eiffel tower",
-      "text": "The Eiffel Tower grows 12-15 cm taller in summer due to thermal expansion."
-    },
-    {
       "date": "2026-06-15",
       "topic_key": "sahara",
       "text": "The Sahara was a green savanna with lakes and rivers during the African Humid Period."
@@ -294,14 +289,14 @@
       "date": "2026-08-13",
       "topic_key": "roman concrete",
       "text": "Roman concrete self-heals: lime clasts react with water to reform calcium carbonate and seal cracks."
+    },
+    {
+      "date": "2026-08-14",
+      "topic_key": "googol",
+      "text": "A googol (10^100) is larger than the number of atoms in the observable universe (~10^80)."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-07-14",
-      "type": "lateral",
-      "title_key": "slow-drinker"
-    },
     {
       "date": "2026-07-15",
       "type": "visual",
@@ -446,14 +441,14 @@
       "date": "2026-08-13",
       "type": "visual",
       "title_key": "ten-coin-turnaround"
+    },
+    {
+      "date": "2026-08-14",
+      "type": "logic",
+      "title_key": "who-ate-the-cake"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-07-14",
-      "type": "letterboxed",
-      "title_key": "four-sides-two-words"
-    },
     {
       "date": "2026-07-15",
       "type": "anagram",
@@ -598,6 +593,11 @@
       "date": "2026-08-13",
       "type": "letterboxed",
       "title_key": "fine-china"
+    },
+    {
+      "date": "2026-08-14",
+      "type": "spellingbee",
+      "title_key": "picture-this"
     }
   ]
 }
