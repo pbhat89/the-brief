@@ -2069,3 +2069,35 @@ is empty until the first run.
 2026-08-14	JWST spots a 'black hole star' at cosmic dawn, hinting at a new class of object	54d2acb1	jwst,black hole star,little red dots,naidu
 2026-08-14	Physicists use light to glimpse electrons frozen in a 'Wigner crystal'	8ba9b78d	wigner crystal,polaron,basel,quantum
 2026-08-14	Severe COVID can reawaken dormant viruses, study links it to long COVID	5239274c	covid,latent viruses,long covid,anellovirus
+2026-08-15	Woman, 49, arrested over alleged 'Fun Coffee' Ponzi scheme; one victim lost about S$400,000	e41ccdf3	singapore police,fun coffee,ponzi scheme,scam
+2026-08-15	Singaporean reported missing in Vietnam arrested over alleged etomidate vape syndicate	f458c814	singapore,etomidate vape,syndicate,arrest
+2026-08-15	Singaporean man, 58, who fled Singapore by boat in 2002 jailed over 14 months	e35c1c1e	singapore,absconded,jail,illegal entry
+2026-08-15	Man, 27, jailed 19 weeks for pushing and kicking his 65-year-old mother	6f2ef3ec	singapore,assault,mother,jail
+2026-08-15	Airbus finds hydraulic faults on Air India A320 after jet dropped about 300 feet mid-flight	6d052493	airbus,air india,a320,hydraulic fault
+2026-08-15	Tata Steel sells ISL football club Jamshedpur FC to Churchill Brothers for $1	f71472a5	tata steel,jamshedpur fc,churchill brothers,isl
+2026-08-15	'My own country called me a national security threat,' says India's 'Cockroach' movement founder	72f39438	cockroach movement,abhijeet dipke,modi,protests
+2026-08-15	Goldman and Nomura say AI is more likely to reshape India's jobs than destroy them	5fc665e1	goldman sachs,nomura,ai,india jobs
+2026-08-15	Rupee stability could help India draw more foreign investment, analysts say	7c98e586	rupee,india,foreign investment
+2026-08-15	Nigel Farage wins Clacton by-election, beating novelty candidate Count Binface	db3bdffd	nigel farage,clacton,by-election,count binface,reform uk
+2026-08-15	UK petrol and diesel prices jump more than 20% since the Iran war as living costs bite	71b57987	uk,petrol,diesel,cost of living,iran war
+2026-08-15	Burnham shifts Britain's centre of power north toward Manchester	2adc28e0	andy burnham,manchester,devolution,uk
+2026-08-15	UAE accuses Iran of drone attacks on two ADNOC tankers in the Strait of Hormuz	f386aaef	uae,iran,adnoc,strait of hormuz,tankers
+2026-08-15	Japan protests as Putin visits the disputed Kuril Islands	4110d853	japan,russia,putin,kuril islands
+2026-08-15	US accuses dozens of countries of helping China evade Trump's tariffs	76b55638	united states,china,tariffs,trump
+2026-08-15	Wildfires force thousands to flee as blazes spread across Europe	dd1097d7	europe,wildfires,evacuations
+2026-08-15	IBM partners with OpenAI to bring GPT-5.6 and Codex to enterprise clients	bc26ff8a	ibm,openai,gpt-5.6,enterprise
+2026-08-15	Databricks raises $5 billion at a $190 billion valuation	dd856e02	databricks,funding,valuation,coatue
+2026-08-15	OpenAI-backed Thrive Holdings raises $2 billion to fold AI into traditional businesses	4f598501	thrive holdings,openai,softbank,funding
+2026-08-15	Anthropic in talks to buy AI-efficiency startup Decart for about $6 billion	d109441b	anthropic,decart,acquisition
+2026-08-15	US retail sales fell 0.6% in July, the biggest drop since May 2025	8b66a662	us retail sales,consumer spending
+2026-08-15	US consumer sentiment slid to 51 in August, its first decline in three months	cd55504b	consumer sentiment,university of michigan,inflation
+2026-08-15	Applied Materials' upbeat forecast draws a tepid reaction as shares slip	6c41f7ee	applied materials,earnings,semiconductors
+2026-08-15	Goldman Sachs's newest cash cow: financing the AI infrastructure boom	c041dd77	goldman sachs,ai infrastructure,financing
+2026-08-15	Shelton defends his National Bank Open title in an all-American Montreal final	54fd2547	ben shelton,brandon nakashima,national bank open,montreal
+2026-08-15	Swiatek beats Rybakina in Toronto for her first title of 2026	c602588e	iga swiatek,elena rybakina,national bank open,toronto
+2026-08-15	The Hundred reaches Finals Day with Trent Rockets awaiting their Lord's opponent	d163f65a	the hundred,trent rockets,lords,eliminator
+2026-08-15	Cadillac sack Graeme Lowdon and name Marcin Budkowski team principal	b6456782	cadillac,graeme lowdon,marcin budkowski,formula 1
+2026-08-15	Physicists report the strongest evidence yet for a 'glueball' made purely of gluons	40b9c5c0	glueball,gluons,besiii,x2370
+2026-08-15	Engineered gut probiotics sense high blood sugar and treat diabetes in mice and monkeys	fb2b4258	probiotics,diabetes,glucose,synthetic biology
+2026-08-15	Scientists explain how metformin works: it turns the gut into a 'sugar sink'	1bbde006	metformin,diabetes,gut,glucose
+2026-08-15	Total solar eclipse sweeps across Iceland and Spain, the first over Spain since 1905	3f77cd34	total solar eclipse,spain,iceland

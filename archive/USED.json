@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-06-15",
-      "topic_key": "sahara",
-      "text": "The Sahara was a green savanna with lakes and rivers during the African Humid Period."
-    },
-    {
       "date": "2026-06-16",
       "topic_key": "wombat",
       "text": "Wombats are the only animals that produce cube-shaped droppings."
@@ -294,14 +289,14 @@
       "date": "2026-08-14",
       "topic_key": "googol",
       "text": "A googol (10^100) is larger than the number of atoms in the observable universe (~10^80)."
+    },
+    {
+      "date": "2026-08-15",
+      "topic_key": "oxford university",
+      "text": "The University of Oxford is older than the Aztec Empire."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-07-15",
-      "type": "visual",
-      "title_key": "six-sticks-four-triangles"
-    },
     {
       "date": "2026-07-16",
       "type": "logic",
@@ -446,14 +441,14 @@
       "date": "2026-08-14",
       "type": "logic",
       "title_key": "who-ate-the-cake"
+    },
+    {
+      "date": "2026-08-15",
+      "type": "quantitative",
+      "title_key": "wine-and-water"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-07-15",
-      "type": "anagram",
-      "title_key": "hidden-in-the-mix"
-    },
     {
       "date": "2026-07-16",
       "type": "spellingbee",
@@ -598,6 +593,11 @@
       "date": "2026-08-14",
       "type": "spellingbee",
       "title_key": "picture-this"
+    },
+    {
+      "date": "2026-08-15",
+      "type": "anagram",
+      "title_key": "count-on-it"
     }
   ]
 }
