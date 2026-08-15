@@ -2101,3 +2101,36 @@ is empty until the first run.
 2026-08-15	Engineered gut probiotics sense high blood sugar and treat diabetes in mice and monkeys	fb2b4258	probiotics,diabetes,glucose,synthetic biology
 2026-08-15	Scientists explain how metformin works: it turns the gut into a 'sugar sink'	1bbde006	metformin,diabetes,gut,glucose
 2026-08-15	Total solar eclipse sweeps across Iceland and Spain, the first over Spain since 1905	3f77cd34	total solar eclipse,spain,iceland
+2026-08-16	Workers' Party proposes an NTU-anchored R&amp;D 'growth zone' in economy debate	d69ef8a8	workers-party,ntu,parliament,jamus-lim,economy,proposes
+2026-08-16	Singapore firm and three people charged over faking origin of goods sent to US	49eaff5b	singapore-customs,false-declaration,us-tariffs,goods-origin,charged
+2026-08-16	Chinese national jailed three years eight months for a Singapore housebreaking spree	50436dc3	huang-xiaozong,housebreaking,jail,singapore,sentenced
+2026-08-16	Maid jailed after grabbing 94-year-old employer's cane, causing a fall and head injury	8e903e1b	sulastri-wulandari,maid,elderly,causing-hurt,jailed
+2026-08-16	Football chiefs back anti-scalping drive as Singapore-Thailand tickets resold for S$1,500	1788ab9d	asean-championship,singapore-thailand,ticket-scalping,gavin-lee,irfan-fandi
+2026-08-16	Modi's 80th Independence Day speech pledges AI skilling for 10 million youth	203a9522	modi,independence-day,red-fort,ai-skilling,viksit-bharat
+2026-08-16	Flash floods and a landslide kill four in Arunachal Pradesh; five soldiers missing	132c0ec2	arunachal-pradesh,flash-flood,dibang-valley,army,landslide
+2026-08-16	India name Harmanpreet-led Women's Asia Cup squad; Jemimah Rodrigues ruled out injured	0b5a66a6	womens-asia-cup,harmanpreet-kaur,jemimah-rodrigues,pratika-rawal,bcci
+2026-08-16	NHS England waiting list climbs to 7.4 million, its worst level since March	d86382fb	nhs-england,waiting-list,18-week-target,health,budget
+2026-08-16	UK heatwave hits 34.7C as hosepipe bans reach millions of households	ffc5c954	uk-heatwave,hosepipe-ban,thames-water,temperature-record,weather
+2026-08-16	RMT strike disrupts East Midlands Railway services on Saturday	ffde8271	rmt,east-midlands-railway,strike,st-pancras,rail
+2026-08-16	Magnitude 7.7 earthquake off Indonesia's Flores coast kills at least 47	817a2827	indonesia,earthquake,flores,tsunami,ende
+2026-08-16	Update: Israeli strikes kill 11 in south Lebanon as UAE reports third Hormuz tanker hit	3fed07ab	israel,lebanon,hezbollah,hormuz,iran
+2026-08-16	US carrier fleet stretched by Iran war as USS George Washington heads to the Mideast	ea99948c	us-navy,aircraft-carrier,iran-war,pacific,uss-george-washington
+2026-08-16	Taliban mark five years in power amid what the UN calls a women's-rights crisis	38d8ad25	taliban,afghanistan,womens-rights,kabul,anniversary
+2026-08-16	France's top court strikes down law banning under-15s from social media	22606df8	france,constitutional-council,social-media-ban,macron,under-15
+2026-08-16	Uber and Pony.ai to deploy more than 2,000 robotaxis across Europe	de68f4ef	uber,pony-ai,robotaxi,europe,partnership
+2026-08-16	SanDisk's bullish outlook lifts Asian memory-chip stocks for a fifth day	45082ae3	sandisk,kioxia,sk-hynix,memory-chips,stocks
+2026-08-16	Apple trains its own China-only AI model with Alibaba in a first for a foreign firm	842ffa92	apple,alibaba,china,ai-model,apple-intelligence
+2026-08-16	OpenAI and Anthropic cut model prices as cheaper Chinese rivals gain ground	52e73d57	openai,anthropic,price-cut,deepseek,china
+2026-08-16	Berkshire Hathaway makes Alphabet a top-three holding with a roughly $17 billion bet	cd7bebf3	berkshire-hathaway,alphabet,greg-abel,13f,stake
+2026-08-16	Goldman Sachs to buy ETF provider Neos for up to $2.25 billion	2cf488e6	goldman-sachs,neos,etf,acquisition,asset-management
+2026-08-16	Maersk beats profit forecasts and lifts 2026 guidance as shares jump about 7%	502b7327	maersk,shipping,earnings,guidance,hormuz
+2026-08-16	Oil climbs as US threatens an indefinite blockade of Iran's ports	313072c7	oil,brent,wti,iran,blockade
+2026-08-16	Wall Street eases from record as the small-cap Russell 2000 hits a fresh high	63aad040	sp-500,russell-2000,dow,wall-street,stocks
+2026-08-16	🏏 Manchester Super Giants reach The Hundred men's final, beating Sunrisers Leeds by 20 runs	80efcd14	the-hundred,manchester-super-giants,sunrisers-leeds,eliminator,cricket
+2026-08-16	🏏 Sunrisers Leeds edge Southern Brave to reach The Hundred women's final	73c1a7f3	the-hundred,sunrisers-leeds,southern-brave,womens-eliminator,cricket
+2026-08-16	🎾 Tirante stuns an ailing Djokovic in the Cincinnati second round	cbd8556d	tirante,djokovic,cincinnati,tennis,upset
+2026-08-16	🏎️ F1 draws up 2027 calendar contingency plans amid Middle East conflict	1cad47bd	f1,2027-calendar,domenicali,middle-east,contingency
+2026-08-16	🏎️ Verstappen-to-a-rival talk for 2027 threatens to upend the driver market	8d8db923	verstappen,piastri,red-bull,mclaren,silly-season
+2026-08-16	Rattlesnakes' own anti-venom proteins protect mice and point to human snakebite therapy	bd6d57ec	rattlesnake,antivenom,snakebite,university-of-maryland,mice
+2026-08-16	NASA's Perseverance rover watches Earth vanish behind the Martian moon Phobos	fb6f3abe	nasa,perseverance,phobos,mars,earth
+2026-08-16	Estrogen-only hormone therapy is tied to lower dementia risk in a large study	98601e93	estrogen,hormone-therapy,dementia,alzheimers,stanford

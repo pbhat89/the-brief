@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-06-16",
-      "topic_key": "wombat",
-      "text": "Wombats are the only animals that produce cube-shaped droppings."
-    },
-    {
       "date": "2026-06-17",
       "topic_key": "cleopatra",
       "text": "Cleopatra lived closer in time to the Moon landing than to the Great Pyramid."
@@ -294,14 +289,14 @@
       "date": "2026-08-15",
       "topic_key": "oxford university",
       "text": "The University of Oxford is older than the Aztec Empire."
+    },
+    {
+      "date": "2026-08-16",
+      "topic_key": "great red spot",
+      "text": "Jupiter's Great Red Spot is larger than Earth"
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-07-16",
-      "type": "logic",
-      "title_key": "mislabeled-jars"
-    },
     {
       "date": "2026-07-17",
       "type": "quantitative",
@@ -446,14 +441,14 @@
       "date": "2026-08-15",
       "type": "quantitative",
       "title_key": "wine-and-water"
+    },
+    {
+      "date": "2026-08-16",
+      "type": "lateral",
+      "title_key": "cabin-in-the-field"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-07-16",
-      "type": "spellingbee",
-      "title_key": "a-list"
-    },
     {
       "date": "2026-07-17",
       "type": "grouping",
@@ -598,6 +593,11 @@
       "date": "2026-08-15",
       "type": "anagram",
       "title_key": "count-on-it"
+    },
+    {
+      "date": "2026-08-16",
+      "type": "grouping",
+      "title_key": "four-corners"
     }
   ]
 }

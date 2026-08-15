@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Sun, 16 Aug 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .wpuzzle-box{background:linear-gradient(135deg,#0e1a1a,#0d1620);border:1px solid #234a44;border-left:3px solid #16a085;padding:24px 28px;border-radius:2px}
+  .wptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#16a085;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .wpuzzle-box .puzzle-title{color:#cdeae3}
+  .wpuzzle-box .puzzle-how{color:#8fb8ac;background:#08140f;border-left-color:#1a6a5a}
+  .wpuzzle-box .puzzle-q{color:#dfeae6;font-family:'Source Sans 3',sans-serif}
+  .wpuzzle-box .answer{color:#bfe0d6}
+  .wpuzzle-box .answer .alabel{color:#16a085}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Sunday, 16 August 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Sunday, 16 August 2026 · 🔍 180 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eleven entries in this exact order:
+     id    : one of "sg" | "india" | "uk" | "geo" | "tech" | "biz" | "sports" | "misc" | "fun" | "puzzle" | "wpuzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 8 news tabs; fun/puzzle/wpuzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+
+   WORD_PUZZLE shape (separate, daily word game — NYT-style, static reveal):
+     type     : one of "Connections" | "Word Ladder" | "Anagram" | "Spelling Bee" | "Letter Boxed" | "Mini Crossword"
+     title    : short evocative name for the word puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle body; supports \n for line breaks (grids render as pre-formatted text)
+     answer   : the answer; supports \n for line breaks; appears inside its own toggle (id "wpans")
+============================================================================= */
+
+const SECTIONS = [
+  { id:"sg", title:"🇸🇬 Singapore", color:"#e74c3c", items:[
+      { headline:"Workers' Party proposes an NTU-anchored R&amp;D 'growth zone' in economy debate", summary:"In a parliamentary motion on the future economy seconded by MP Jamus Lim, the Workers' Party proposed a research district zoned around Nanyang Technological University, run by its own authority that could take equity in the firms it grows. The PAP rebutted that local SMEs succeed because of ties with multinationals, not in spite of them.", source:"Mothership", url:"https://mothership.sg/2026/08/workers-party-motion-ntu-special-zone/", date:"Aug 13",
+        spectrum:{ left:"Opposition-sympathetic framing cast the plan as a bolder, worker-first alternative to the incumbent's economic playbook.", center:"Coverage laid the WP's NTU R&amp;D-zone proposal alongside the PAP's rebuttal about local firms thriving through multinational ties.", right:"Government-aligned framing stressed continuity and questioned a zone authority taking equity stakes in the companies it nurtures." },
+        bias:null },
+      { headline:"Singapore firm and three people charged over faking origin of goods sent to US", summary:"Singapore Customs charged a company and three individuals for allegedly declaring China-origin goods as Singapore-made in about S$1.9 million of exports to the United States between August 2024 and September 2025, and for evading roughly S$111,000 in GST by understating import values. False declaration carries up to a S$10,000 fine and two years' jail.", source:"Mothership", url:"https://mothership.sg/2026/08/singapore-firm-falesly-declare-goods/", date:"Aug 14",
+        spectrum:null,
+        bias:null },
+      { headline:"Chinese national jailed three years eight months for a Singapore housebreaking spree", summary:"Huang Xiaozong, 41, was sentenced on Aug 14 to three years and eight months' jail after pleading guilty to two housebreaking charges. He entered Singapore on Dec 5, 2025, targeted homes in wealthier neighbourhoods and stole about S$105,750 in cash and valuables before his arrest three days later.", source:"Mothership", url:"https://mothership.sg/2026/08/chinese-man-breaks-into-houses-jail/", date:"Aug 14",
+        spectrum:null,
+        bias:null },
+      { headline:"Maid jailed after grabbing 94-year-old employer's cane, causing a fall and head injury", summary:"Domestic helper Sulastri Wulandari, 31, pleaded guilty on Aug 14 to causing hurt and was sentenced the same day. Her 94-year-old employer fell and hit his head after she took away his walking cane when he asked her to prepare food.", source:"Mothership", url:"https://mothership.sg/2026/08/maid-in-spore-grabs-94-year-old-employers-cane-after-he-asks-her-to-make-food-he-falls-hits-head/", date:"Aug 14",
+        spectrum:null,
+        bias:null },
+      { headline:"Football chiefs back anti-scalping drive as Singapore-Thailand tickets resold for S$1,500", summary:"Ahead of the ASEAN Championship semi-final against Thailand at Jalan Besar Stadium, more than 4,000 home tickets priced from about S$24 sold out within minutes and reappeared on resale sites for up to S$1,500 a pair. Head coach Gavin Lee and captain Irfan Fandi urged fans to shun scalpers.", source:"Mothership", url:"https://mothership.sg/2026/08/gavin-lee-irfan-fandi-scalpers/", date:"Aug 14",
+        spectrum:null,
+        bias:null },
+  ]},
+  { id:"india", title:"🇮🇳 India", color:"#e67e22", items:[
+      { headline:"Modi's 80th Independence Day speech pledges AI skilling for 10 million youth", summary:"In his 13th consecutive Red Fort address, Prime Minister Narendra Modi announced AI training for one crore (10 million) young people over the next year, urged all parties to back 33% reservation for women in legislatures, and launched a nationwide sports talent hunt for children aged 5 to 15. He framed the measures around a 'Viksit Bharat 2047' roadmap.", source:"Al Jazeera", url:"https://www.aljazeera.com/video/newsfeed/2026/8/15/india-marks-80th-independence-day-with-military-display", date:"Aug 15",
+        spectrum:{ left:"Opposition-leaning commentators called the speech long on vision but short on delivery, doubting the jobs and skilling targets.", center:"Most outlets summarised the headline pledges — AI training for 1 crore youth, a 33% women's-reservation push and a sports talent hunt — as a Viksit Bharat 2047 blueprint.", right:"BJP-aligned voices hailed a confident roadmap for a developed India, foregrounding its nuclear-power and semiconductor ambitions." },
+        bias:null },
+      { headline:"Flash floods and a landslide kill four in Arunachal Pradesh; five soldiers missing", summary:"Heavy rain on Aug 14 sent a flash flood through the 5th Grenadier's Pasu Pani Army camp in Dibang Valley, sweeping away seven personnel; two were rescued and five remain missing. A separate landslide at a road-cutting site in Upper Subansiri killed four construction workers as ITBP, GREF and state teams searched the debris.", source:"Al Jazeera", url:"", date:"Aug 15",
+        spectrum:null,
+        bias:null },
+      { headline:"India name Harmanpreet-led Women's Asia Cup squad; Jemimah Rodrigues ruled out injured", summary:"The BCCI named a 15-member squad captained by Harmanpreet Kaur, with Smriti Mandhana as deputy, for the Women's T20 Asia Cup in Dubai from Aug 28. Jemimah Rodrigues was ruled out with a high-grade hamstring tear suffered in The Hundred, and Pratika Rawal was named as her replacement.", source:"Al Jazeera", url:"", date:"Aug 14",
+        spectrum:null,
+        bias:null },
+  ]},
+  { id:"uk", title:"🇬🇧 UK News", color:"#3949ab", items:[
+      { headline:"NHS England waiting list climbs to 7.4 million, its worst level since March", summary:"The number of treatments waiting to be carried out in England rose by about 34,000 in July to roughly 7.4 million, with just 61.3% completed within the 18-week target. Surgeons pressed ministers for operating-theatre funding in the autumn budget as strike disruption weighed on the figures.", source:"BBC", url:"https://www.bbc.com/news/articles/c3dr52l1j3yo", date:"Aug 14",
+        spectrum:null,
+        bias:null },
+      { headline:"UK heatwave hits 34.7C as hosepipe bans reach millions of households", summary:"Temperatures peaked at 34.7C during the latest heatwave, with 33 days above 30C so far this summer, one short of the 1995 record. Hosepipe bans imposed by Thames Water and South West Water now cover roughly 15 million people.", source:"BBC", url:"https://www.bbc.com/news/articles/crmv8x74ky9o", date:"Aug 13",
+        spectrum:null,
+        bias:null },
+      { headline:"RMT strike disrupts East Midlands Railway services on Saturday", summary:"An RMT walkout cut East Midlands Railway to about one train an hour on its main London St Pancras routes on Aug 15, with a reduced timetable running only between 07:00 and 19:00. The union is in dispute over the operator's refusal to withdraw a fleet of faulty trains.", source:"BBC", url:"", date:"Aug 15",
+        spectrum:null,
+        bias:null },
+  ]},
+  { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
+      { headline:"Magnitude 7.7 earthquake off Indonesia's Flores coast kills at least 47", summary:"A magnitude 7.7 quake struck at 5:58am on Aug 15 about 68km north-northwest of Ende in East Nusa Tenggara, at a depth of 10km. At least 47 people were killed and dozens injured; a tsunami warning was issued then lifted, and authorities recorded more than 235 aftershocks as landslides cut off remote villages.", source:"AP", url:"https://apnews.com/article/indonesia-earthquake-magnitude-77-c31ad3cf07fa83d2d443e8d85e5c9d84", date:"Aug 15",
+        spectrum:null,
+        bias:null },
+      { headline:"Update: Israeli strikes kill 11 in south Lebanon as UAE reports third Hormuz tanker hit", summary:"Israeli airstrikes in southern Lebanon killed 11 people, including a Hezbollah commander and children, while the UAE again accused Iran of attacking an ADNOC-owned tanker in the Strait of Hormuz, the third such strike in a week. Iran-backed Houthis also renewed attacks on a Yemeni Red Sea port.", source:"AP", url:"https://apnews.com/article/iran-israel-lebanon-uae-us-hormuz-august-15-2026-ba738b9fb8803f28313a19df8bbcac19", date:"Aug 15",
+        spectrum:{ left:"Left-leaning outlets led with the civilian and child deaths in southern Lebanon and the widening human cost of the Iran war.", center:"Wire coverage reported the strikes, the killed Hezbollah commander and the third Hormuz tanker attack side by side.", right:"Right-leaning outlets foregrounded the Hezbollah commander's death and Iran's tanker attacks as grounds for continued pressure." },
+        bias:"Which death leads the story — Lebanese civilians or the Hezbollah commander — signals each outlet's framing." },
+      { headline:"US carrier fleet stretched by Iran war as USS George Washington heads to the Mideast", summary:"The five-month US war with Iran is straining the American carrier fleet, with the USS George Washington leaving the western Pacific to relieve the USS Abraham Lincoln in the Middle East. The move leaves the Asia-Pacific temporarily without a US carrier, signalling a pivot of resources away from the region.", source:"AP", url:"https://apnews.com/article/aircraft-carriers-trump-china-pacific-iran-war-87cfb838de8c13464fa3cab1840ad87d", date:"Aug 15",
+        spectrum:{ left:"Left-leaning analysis framed the carrier strain as evidence the Iran war is overstretching the military and neglecting the Pacific.", center:"Reporting noted the redeployment leaves the Asia-Pacific temporarily without a US carrier for the first time in years.", right:"Right-leaning voices cast the surge as necessary resolve against Iran and played down the Pacific gap." },
+        bias:null },
+      { headline:"Taliban mark five years in power amid what the UN calls a women's-rights crisis", summary:"The Taliban marked five years since retaking Kabul, touting security and infrastructure gains while remaining internationally isolated. The UN women's agency described the ban on girls' secondary and higher education as the world's most severe women's-rights crisis, with millions of girls excluded from school.", source:"AP", url:"https://apnews.com/article/afghanistan-taliban-5year-anniversary-6179bb5805731f0c2b6b5b59ea322b6c", date:"Aug 14",
+        spectrum:null,
+        bias:null },
+      { headline:"France's top court strikes down law banning under-15s from social media", summary:"France's Constitutional Council struck down a law barring children under 15 from social media and phones in high schools, ruling it a disproportionate limit on freedom of expression. France was the first EU country to pass such a ban; President Macron vowed a legally robust version to take effect by 2027.", source:"AP", url:"https://apnews.com/article/france-paris-macron-internet-social-media-ban-a4e96488d1eb913c7a039eb5e4fc1e18", date:"Aug 14",
+        spectrum:null,
+        bias:null },
+  ]},
+  { id:"tech", title:"💻 Tech & AI", color:"#27ae60", items:[
+      { headline:"Uber and Pony.ai to deploy more than 2,000 robotaxis across Europe", summary:"Uber and China's Pony.ai expanded their partnership to put over 2,000 autonomous vehicles on European roads, growing from their existing Zagreb service into four more cities with Middle East deployment also planned. Pony.ai supplies the self-driving technology, Uber the ride-hailing platform, and local partners run the fleets.", source:"TechCrunch", url:"https://techcrunch.com/2026/08/14/uber-and-pony-ai-plan-to-bring-2000-robotaxis-to-europe/", date:"Aug 14",
+        spectrum:null,
+        bias:null },
+      { headline:"SanDisk's bullish outlook lifts Asian memory-chip stocks for a fifth day", summary:"A strong AI-driven forecast from SanDisk pushed Asian memory names higher, with Kioxia rising as much as 8.7% in Tokyo and SK Hynix gaining 6.5% in Seoul. A Bloomberg gauge of Asian semiconductor stocks climbed as much as 1.6%, heading for a fifth straight daily advance.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-08-14/asian-memory-chipmakers-rise-as-sandisk-outlook-lifts-confidence", date:"Aug 14",
+        spectrum:null,
+        bias:null },
+      { headline:"Apple trains its own China-only AI model with Alibaba in a first for a foreign firm", summary:"Apple, working with Alibaba, has trained a proprietary large language model tailored for China and become the first foreign company cleared by Beijing to deploy its own AI model to mainland consumers. The system is set to power Apple Intelligence in China through an upcoming iOS update.", source:"Reuters", url:"", date:"Aug 14",
+        spectrum:null,
+        bias:null },
+      { headline:"OpenAI and Anthropic cut model prices as cheaper Chinese rivals gain ground", summary:"Facing customers testing lower-cost Chinese models such as DeepSeek and Moonshot's Kimi, OpenAI and Anthropic both cut prices on flagship systems, with OpenAI reducing GPT-5.6 rates sharply and Anthropic pricing a new tier at roughly half its top model. Enterprises including DoorDash, Siemens and Airbnb are reported to be trialling the Chinese alternatives.", source:"Reuters", url:"", date:"Aug 14",
+        spectrum:null,
+        bias:null },
+  ]},
+  { id:"biz", title:"📈 Business & Markets", color:"#8e44ad", items:[
+      { headline:"Berkshire Hathaway makes Alphabet a top-three holding with a roughly $17 billion bet", summary:"Berkshire Hathaway's latest quarterly filing showed it added about 48 million Alphabet shares, lifting the stake to around $37.8 billion and making Google's parent one of its three largest positions. The conglomerate, now run by Greg Abel, also increased its Delta Air Lines and housing-related holdings.", source:"CNBC", url:"https://www.cnbc.com/2026/08/15/berkshire-adds-17-billion-to-alphabet-stake.html", date:"Aug 15",
+        spectrum:null,
+        bias:null },
+      { headline:"Goldman Sachs to buy ETF provider Neos for up to $2.25 billion", summary:"Goldman Sachs agreed to acquire Neos Investments, which runs nearly two dozen options-based income ETFs with about $32 billion in assets, in a cash-and-equity deal worth up to $2.25 billion. It is Goldman's second niche-ETF purchase in under a year and is expected to close in the first quarter of 2027.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-08-13/goldman-2-25-billion-neos-deal-raises-stakes-in-active-etf-race", date:"Aug 13",
+        spectrum:null,
+        bias:null },
+      { headline:"Maersk beats profit forecasts and lifts 2026 guidance as shares jump about 7%", summary:"Shipping giant Maersk reported preliminary second-quarter underlying earnings of about $3 billion, well above the roughly $2 billion analysts expected, and raised its full-year guidance for the second time. Its shares rose 7% to 8% in Europe even as it warned of port and trucking bottlenecks from Red Sea and Hormuz rerouting.", source:"CNBC", url:"https://www.cnbc.com/2026/08/13/maersk-earnings-shipping-hormuz-red-sea.html", date:"Aug 13",
+        spectrum:null,
+        bias:null },
+      { headline:"Oil climbs as US threatens an indefinite blockade of Iran's ports", summary:"Brent crude rose 1.7% to $88.52 a barrel and US WTI gained 1.4% to $82.40 on Aug 14 after Treasury Secretary Scott Bessent warned of unprecedented measures and Defense Secretary Pete Hegseth said Washington could hold an indefinite blockade of Iranian ports, following a reported Iranian attack on two ADNOC vessels.", source:"CNBC", url:"https://www.cnbc.com/2026/08/14/oil-prices-today-brent-wti-hormuz.html", date:"Aug 14",
+        spectrum:null,
+        bias:null },
+      { headline:"Wall Street eases from record as the small-cap Russell 2000 hits a fresh high", summary:"US stocks slipped from Thursday's record on Aug 14, with the S&amp;P 500 easing about 0.2% to near 7,785 after its first-ever close above 7,800, while the Dow fell around 108 points. The small-cap Russell 2000 set a fresh record and the S&amp;P still logged a third straight weekly gain.", source:"CNBC", url:"https://www.cnbc.com/2026/08/13/stock-market-today-live-updates.html", date:"Aug 14",
+        spectrum:null,
+        bias:null },
+  ]},
+  { id:"sports", title:"🎾🏏🏎️ Sports", color:"#c0392b", items:[
+      { headline:"🏏 Manchester Super Giants reach The Hundred men's final, beating Sunrisers Leeds by 20 runs", summary:"In the men's Eliminator at The Oval on Aug 14, Manchester Super Giants made 186 for 4 off 100 balls, powered by Paul Walter's 80 and Heinrich Klaasen's 63 off 26, then restricted Sunrisers Leeds to 166 for 7 as Josh Tongue took 4 for 26. They meet table-toppers Trent Rockets in the Lord's final.", source:"ESPNcricinfo", url:"https://www.espncricinfo.com/series/the-hundred-men-s-competition-2026-1521176/manchester-super-giants-men-vs-sunrisers-leeds-men-eliminator-1521263/full-scorecard", date:"Aug 14",
+        spectrum:null,
+        bias:null },
+      { headline:"🏏 Sunrisers Leeds edge Southern Brave to reach The Hundred women's final", summary:"In the women's Eliminator in London on Aug 14, Southern Brave posted 114 for 7 and Sunrisers Leeds chased it down at 116 for 5 with 11 balls to spare. They will face Trent Rockets in the women's final at Lord's.", source:"ESPNcricinfo", url:"https://www.espncricinfo.com/series/the-hundred-women-s-competition-2026-1521193/southern-brave-women-vs-sunrisers-leeds-women-eliminator-1521229/full-scorecard", date:"Aug 14",
+        spectrum:null,
+        bias:null },
+      { headline:"🎾 Tirante stuns an ailing Djokovic in the Cincinnati second round", summary:"Argentina's Thiago Agustin Tirante beat world No. 3 Novak Djokovic 2-6, 6-4, 6-4 in the Cincinnati Open second round on Aug 15, the biggest win of his career. Djokovic, in his first match since Wimbledon, took the opening set but wilted in the heat, vomiting on court and taking a medical timeout in the 2hr 45min defeat.", source:"ATP Tour", url:"https://www.atptour.com/en/news/djokovic-tirante-cincinnati-2026-r2-saturday", date:"Aug 15",
+        spectrum:null,
+        bias:null },
+      { headline:"🏎️ F1 draws up 2027 calendar contingency plans amid Middle East conflict", summary:"With the season in its summer break, F1 chief Stefano Domenicali said contingency plans are in place for the 2027 schedule if the US-Israel conflict with Iran, which forced the cancellation of the 2026 Bahrain and Saudi Arabian rounds, drags on. The sport will delay publishing next year's calendar until the autumn while still planning a full schedule.", source:"Sky Sports F1", url:"https://www.skysports.com/f1/news/12433/13569381/f1-2027-calendar-contingency-plans-in-place-for-next-years-formula-1-schedule-amid-us-israel-war-with-iran", date:"Aug 14",
+        spectrum:null,
+        bias:null },
+      { headline:"🏎️ Verstappen-to-a-rival talk for 2027 threatens to upend the driver market", summary:"Summer-break reports of a possible Max Verstappen move for 2027, including chatter of a straight swap with McLaren's Oscar Piastri, have driven silly-season speculation that any switch would trigger a cascade of contract changes across the grid. Verstappen is also said to be weighing the direction of the 2027 engine rules.", source:"Sky Sports F1", url:"https://www.skysports.com/f1/news/12433/13559456/max-verstappen-red-bull-driver-switching-teams-for-2027-formula-1-season-would-cause-chaos-in-f1-driver-market", date:"Aug 13",
+        spectrum:null,
+        bias:null },
+  ]},
+  { id:"misc", title:"🔬 Other Miscellaneous News", color:"#1abc9c", items:[
+      { headline:"Rattlesnakes' own anti-venom proteins protect mice and point to human snakebite therapy", summary:"Researchers led by Sean Carroll at the University of Maryland found that proteins in western diamondback rattlesnake blood, which help the snakes resist their own venom, kept mice alive after an otherwise lethal dose by staunching bleeding and blocking tissue damage. The work targets a snakebite crisis that kills up to 140,000 people a year.", source:"Nature", url:"https://www.nature.com/articles/d41586-026-02461-0", date:"Aug 12",
+        spectrum:null,
+        bias:null },
+      { headline:"NASA's Perseverance rover watches Earth vanish behind the Martian moon Phobos", summary:"A composite of seven Mastcam-Z images taken on July 2 shows Earth as a single point of light about 195 million miles away, then disappearing behind Phobos, the first time the feat has been captured from another planet's surface. Phobos crosses the Martian sky three times a day, making the alignment hard to catch.", source:"NASA", url:"https://www.nasa.gov/solar-system/planets/mars/nasas-perseverance-rover-watches-earth-vanish-behind-martian-moon/", date:"Aug 13",
+        spectrum:null,
+        bias:null },
+      { headline:"Estrogen-only hormone therapy is tied to lower dementia risk in a large study", summary:"A Stanford Medicine analysis of 21,462 women found that estrogen-only menopausal hormone therapy was associated with 39% lower odds of dementia and 35% lower odds of Alzheimer's-related brain changes at autopsy. The researchers stressed the finding is an association, not proof of cause, and was published in the journal Neurology.", source:"New Scientist", url:"", date:"Aug 12",
+        spectrum:null,
+        bias:null },
+  ]},
+  { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
+  { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
+  { id:"wpuzzle", title:"🔤 Word Puzzles", color:"#16a085", custom:"wpuzzle" },
+];
+
+const FUN_FACT = {
+  text: "Jupiter's Great Red Spot is a single storm so large that Earth could fit inside it. Astronomers have tracked it continuously for more than 150 years, winds at its edges exceed 400 kilometres per hour, and though it is the largest storm in the Solar System, it has been slowly shrinking for decades.",
+  tag: "Category · Space & Astronomy"
+};
+
+const PUZZLE = {
+  type: "Lateral Thinking",
+  title: "The Cabin in the Field",
+  how: "Question your assumptions about the everyday meaning of one key word in the setup.",
+  question: "A hiker crests a ridge and finds a single cabin standing in the middle of a vast, empty field. Inside are 47 people, all dead. There is no sign of a struggle, no weapons, and nothing has been taken. The hiker understands what happened at a glance. What happened?",
+  answer: "The 'cabin' is the cabin of an aircraft. The plane crashed in the field, killing all 47 people on board.\nThere was no struggle or weapon because it was a crash, not a crime, and nothing was taken because no one had been there to take it."
+};
+
+const WORD_PUZZLE = {
+  type: "Connections",
+  title: "Four Corners",
+  how: "Sort the 16 words into four groups of four. Watch for words that look like they belong in more than one group.",
+  question: "KING · SALSA · THIMBLE · RANCH\nWALTZ · ROOK · CAESAR · BOOT\nQUEEN · ITALIAN · WHEELBARROW · TANGO\nBISHOP · GREEK · IRON · SWING",
+  answer: "Chess pieces: KING, QUEEN, ROOK, BISHOP\nDances: WALTZ, SALSA, TANGO, SWING\nMonopoly tokens: THIMBLE, BOOT, WHEELBARROW, IRON\nSalad dressings: RANCH, CAESAR, ITALIAN, GREEK"
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function renderWordPuzzle(){
+  let h='<div class="sec-title">🔤 Word Puzzle of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#16a085,transparent)"></div>';
+  h+='<div class="wpuzzle-box"><span class="wptype">'+WORD_PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+WORD_PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+WORD_PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+WORD_PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this,\'wpans\')">Show Answer</button>';
+  h+='<div class="answer" id="wpans"><span class="alabel">Answer</span>'+WORD_PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn,ansId){var a=document.getElementById(ansId||'ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else if(sec.custom==="wpuzzle"){div.innerHTML=renderWordPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>
