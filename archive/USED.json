@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-06-17",
-      "topic_key": "cleopatra",
-      "text": "Cleopatra lived closer in time to the Moon landing than to the Great Pyramid."
-    },
-    {
       "date": "2026-06-18",
       "topic_key": "tree",
       "text": "There are more trees on Earth than stars in the Milky Way"
@@ -294,14 +289,14 @@
       "date": "2026-08-16",
       "topic_key": "great red spot",
       "text": "Jupiter's Great Red Spot is larger than Earth"
+    },
+    {
+      "date": "2026-08-17",
+      "topic_key": "wombat",
+      "text": "Wombats are the only animals that produce cube-shaped poop."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-07-17",
-      "type": "quantitative",
-      "title_key": "bridge-in-the-dark"
-    },
     {
       "date": "2026-07-18",
       "type": "lateral",
@@ -446,14 +441,14 @@
       "date": "2026-08-16",
       "type": "lateral",
       "title_key": "cabin-in-the-field"
+    },
+    {
+      "date": "2026-08-17",
+      "type": "visual",
+      "title_key": "folded-staircase"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-07-17",
-      "type": "grouping",
-      "title_key": "missing-half"
-    },
     {
       "date": "2026-07-18",
       "type": "ladder",
@@ -598,6 +593,11 @@
       "date": "2026-08-16",
       "type": "grouping",
       "title_key": "four-corners"
+    },
+    {
+      "date": "2026-08-17",
+      "type": "ladder",
+      "title_key": "alchemy"
     }
   ]
 }

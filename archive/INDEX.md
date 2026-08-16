@@ -2134,3 +2134,39 @@ is empty until the first run.
 2026-08-16	Rattlesnakes' own anti-venom proteins protect mice and point to human snakebite therapy	bd6d57ec	rattlesnake,antivenom,snakebite,university-of-maryland,mice
 2026-08-16	NASA's Perseverance rover watches Earth vanish behind the Martian moon Phobos	fb6f3abe	nasa,perseverance,phobos,mars,earth
 2026-08-16	Estrogen-only hormone therapy is tied to lower dementia risk in a large study	98601e93	estrogen,hormone-therapy,dementia,alzheimers,stanford
+
+2026-08-17	Climate activists rally at Hong Lim Park over plans to clear Maju Forest	e6925096	sg-climate-rally,hong-lim-park,maju-forest,gillman-barracks,hdb
+2026-08-17	Elderly wanton noodle seller, 73, shoved to the ground for patting a toddler	b7a1d06d	hawker,roxy-square,east-coast-road,assault,police
+2026-08-17	NUS professor says a self-experiment cut his biological age to about 32	7bacb935	dean-ho,nus-medicine,delta-study,longevity,fasting
+2026-08-17	Doctor and acquaintance each jailed a year for taking Ecstasy at a Sentosa villa party	4099964d	rayson-lee,tan-li-ming,mdma,sentosa,jail
+2026-08-17	Singapore lose ASEAN Championship semi-final first leg 3-1 to Thailand at Jalan Besar	61fb549e	singapore,thailand,asean-championship,jalan-besar,ilhan-fandi
+2026-08-17	NTA orders re-exam of three UGC-NET papers after admitting substantive errors	1128d505	nta,ugc-net,re-exam,education,errors
+2026-08-17	Himachal Pradesh monsoon death toll climbs to 183 with losses above Rs 972 crore	cec5d51b	himachal-pradesh,monsoon,death-toll,landslide,damage
+2026-08-17	India's retail inflation rises to 4.45% in July, a 19-month high	a58a824a	india,cpi,retail-inflation,rbi,food-inflation
+2026-08-17	Impeachment inquiry finds unexplained cash at ex-judge Yashwant Varma's residence	4a8b7429	yashwant-varma,impeachment,lok-sabha,judiciary,cash
+2026-08-17	Ofwat provisionally clears £3.4bn of extra spending, letting five water firms raise bills	1aeebb03	ofwat,water-bills,thames-water,southern-water,regulator
+2026-08-17	Record university acceptances on A-level results day as top grades rise again	c0ee5804	a-levels,ucas,results-day,universities,grades
+2026-08-17	NHS consultants in England call a fresh strike on Aug 24-25 over a 6% pay award	9f9ae3d9	nhs,bma,consultants,strike,pay
+2026-08-17	Reform and Conservative councils press asylum-hotel legal challenges after Epping ruling	0bca3c3d	asylum-hotels,reform-uk,councils,yvette-cooper,epping
+2026-08-17	Ukraine launches one of its largest drone assaults of the war on Russia	6734d3dd	ukraine,russia,drones,moscow,rostov
+2026-08-17	Zambia's disputed election: Hichilema leads as observers cite intimidation	071fcfb3	zambia,hichilema,mundubile,election,observers
+2026-08-17	Kushner meets Gaza mediators in Cairo to salvage a 15-point road map	5db620fe	kushner,gaza,hamas,netanyahu,cairo
+2026-08-17	South Korea fires warning shots after North Korean troops cross the border	5186580d	south-korea,north-korea,dmz,warning-shots,ulchi
+2026-08-17	Anthropic's quarterly revenue tops $11.5 billion, up more than 14-fold, ahead of an IPO	206175f0	anthropic,revenue,ipo,claude,ai
+2026-08-17	Josh Kushner's Thrive Capital discloses a $215 million Amazon stake	ed559e1f	thrive-capital,josh-kushner,amazon,stake,filing
+2026-08-17	OpenAI previews 'Ultrafast' mode running GPT-5.6 up to 14 times faster on Cerebras	d18405ff	openai,ultrafast,gpt-5-6,cerebras,inference
+2026-08-17	AI coding startup Cognition reportedly in talks to raise at a $40 billion valuation	cece6f20	cognition,devin,valuation,funding,ai-coding
+2026-08-17	General Catalyst leads a $1.1 billion round into two-month-old River AI	b2df1499	river-ai,babuschkin,general-catalyst,funding,xai
+2026-08-17	Nvidia discloses a $21 billion SpaceX stake, now its second-largest holding	391b9f56	nvidia,spacex,13f,stake,xai
+2026-08-17	Tapestry beats on earnings but shares slide about 15% on a soft 2027 outlook	0a51c797	tapestry,coach,earnings,guidance,stock
+2026-08-17	Gold heads for a weekly loss as an inflation-driven rally unwinds	88ffc400	gold,bullion,inflation,commodities,markets
+2026-08-17	PayPal rallies as Stripe and Advent advance a $53 billion takeover approach	123a8033	paypal,stripe,advent,takeover,m-and-a
+2026-08-17	🏏 Trent Rockets win the men's Hundred final, defending 158 at Lord's	3524a4d0	the-hundred,trent-rockets,manchester-super-giants,final,cricket
+2026-08-17	🏏 Trent Rockets women complete the double with a maiden Hundred title	dde5017e	the-hundred,trent-rockets,sunrisers-leeds,womens-final,cricket
+2026-08-17	🎾 Zverev battles back to reach the Cincinnati third round	7393512b	zverev,de-minaur,cincinnati,tennis,atp
+2026-08-17	🎾 Pegula and Noskova reach the Cincinnati third round	35e3ad86	pegula,noskova,boulter,cincinnati,wta
+2026-08-17	🏎️ F1 returns to a farewell Dutch GP at Zandvoort, Verstappen's last home race	3580f761	f1,dutch-gp,zandvoort,verstappen,sprint
+2026-08-17	Triple therapy clears HIV in newborn monkeys treated within three days	58c7450e	hiv,leronlimab,macaques,ohsu,nature-microbiology
+2026-08-17	Physicists find a proton's identity may be carried by a Y-shaped 'gluon junction'	e2005614	proton,baryon-junction,gluon,rhic,brookhaven
+2026-08-17	JWST suggests Neptune's inner moons are wreckage of a shattered moon system	b53dd58f	neptune,jwst,moons,triton,caltech
+2026-08-17	Original collagen found preserved in a 66-million-year-old dinosaur bone	9e107010	collagen,edmontosaurus,dinosaur,liverpool,fossil
