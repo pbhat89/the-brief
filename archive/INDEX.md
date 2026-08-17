@@ -2170,3 +2170,37 @@ is empty until the first run.
 2026-08-17	Physicists find a proton's identity may be carried by a Y-shaped 'gluon junction'	e2005614	proton,baryon-junction,gluon,rhic,brookhaven
 2026-08-17	JWST suggests Neptune's inner moons are wreckage of a shattered moon system	b53dd58f	neptune,jwst,moons,triton,caltech
 2026-08-17	Original collagen found preserved in a 66-million-year-old dinosaur bone	9e107010	collagen,edmontosaurus,dinosaur,liverpool,fossil
+2026-08-18	Singaporean 'religious influencer' jailed 27 years and 10 months, plus 24 strokes, for abusing two boys	7508ceb1	religious influencer,singapore court,sexual abuse,brothers,sentenced
+2026-08-18	Indonesian woman jailed eight and a half years for a S$1.9 million cheating spree that began with Taylor Swift tickets	68f0c93e	indonesian woman,cheating,taylor swift tickets,singapore court,jailed
+2026-08-18	Ex-policeman loses appeal and gets a longer jail term over the fatal abuse of maid Piang Ngaih Don	5ca7235a	ex-policeman,piang ngaih don,maid abuse,appeal,jail
+2026-08-18	Eleven people aged 18 to 77 arrested in Singapore over an unlicensed moneylending syndicate	6e9ee12b	eleven arrested,moneylending syndicate,singapore police,loan shark
+2026-08-18	NUS makes a generative-AI module compulsory for freshmen and gives all students ChatGPT Edu access	a5c0a703	nus,chatgpt edu,generative ai,compulsory module
+2026-08-18	China accused of blocking Indian patrols near Taksing in Arunachal Pradesh as Congress demands answers	e27ac4c2	china,taksing,arunachal pradesh,congress,kharge
+2026-08-18	Modi's BJP overhauls its national leadership and names Piyush Goyal party treasurer ahead of state polls	d090a873	modi,bjp,piyush goyal,state polls,leadership
+2026-08-18	Indian short-tenor bond yields climb after the RBI moves to close a dollar-deposit window early	407faff1	india,bond yields,rbi,dollar window,rupee
+2026-08-18	India begins its first caste census since independence, a count with high political stakes	0b2d1057	india,caste census,survey,politics
+2026-08-18	UK PM Andy Burnham exchanged messages with an impostor posing as Trump's chief of staff	7e6f1549	andy burnham,susie wiles,impostor,white house,uk
+2026-08-18	Britain deploys about 100 troops to fight Welsh wildfires as Burnham unveils a farming support package	cd97c5e1	burnham,wales wildfires,troops,farming incentive
+2026-08-18	Debate over Cambridge professor Jason Arday's death intensifies days after he was found dead	ccff5980	jason arday,cambridge,death,plagiarism,uk
+2026-08-18	JPMorgan's Jamie Dimon reportedly warns the UK chancellor against raising bank taxes	aecdbdaa	jamie dimon,john healey,bank tax,uk budget,jpmorgan
+2026-08-18	Trump scales back US military exercises with South Korea, citing Seoul's stance on Iran	d1693aec	trump,south korea,military exercises,iran,kim jong un
+2026-08-18	Russia's top court upholds a ban on the anti-war Yabloko party and jails its deputy leader for 11 years	06c3d721	russia,yabloko,election ban,opposition,jailed
+2026-08-18	Update: Kushner presses Netanyahu for over four hours to advance Trump's Gaza plan	e310213c	kushner,netanyahu,gaza,hamas,ceasefire
+2026-08-18	Zimbabwe's Lake Kariba ferry disaster kills at least 92, including 18 children	ecf77f1a	zimbabwe,lake kariba,ferry disaster,capsize,children
+2026-08-18	Nvidia backs up to $105 billion in financing for an OpenAI data center in Ohio	5e32ba55	nvidia,openai,sb energy,ohio,data center
+2026-08-18	Stripe strikes a deal to buy AI model gateway OpenRouter for more than $7 billion	347474b3	stripe,openrouter,ai gateway,acquisition
+2026-08-18	AI video startup Higgsfield raises $400 million at a $5.4 billion valuation, quadrupling in months	578c4ac1	higgsfield,dst global,ai video,series b,valuation
+2026-08-18	Uber invests in Zipline, aiming for one million drone deliveries a day by the end of 2029	1820303f	uber,zipline,drone delivery,uber eats
+2026-08-18	US stocks slip and oil jumps as the US-Iran truce window lapses without a deal	f69dac65	us stocks,dow,brent crude,iran,markets
+2026-08-18	The dollar slides to a three-month low as traders trim bets on a September Fed hike	98daf4fe	us dollar,federal reserve,rate hike,dollar index
+2026-08-18	S&P 500 second-quarter earnings jump 31%, the strongest outside a recession recovery	797e1cdd	s&p 500,earnings,q2,big tech,wall street
+2026-08-18	Nvidia shares reach about $225, a three-month high, lifting its 2026 gain past 20%	7544d514	nvidia,stock,ai,chipmaker,markets
+2026-08-18	🏎️ Antonelli leads Hamilton by 50 points as F1 heads to a farewell Zandvoort sprint weekend	7148f85a	f1,antonelli,hamilton,dutch grand prix,zandvoort
+2026-08-18	🎾 Qualifier Jaime Faria stuns Ben Shelton in the Cincinnati second round	fbf97bf3	jaime faria,ben shelton,cincinnati open,upset,atp
+2026-08-18	🎾 Iga Swiatek opens her Cincinnati title defense with a 6-3, 6-0 rout of Emiliana Arango	c43ecb65	iga swiatek,cincinnati open,arango,wta
+2026-08-18	🏏 Jadeja joins a rare 4,000-run, 350-wicket club as India build a lead over Sri Lanka in Galle	e893f5ff	ravindra jadeja,india,sri lanka,galle test,double
+2026-08-18	🏏 Babar Azam is a doubt for Pakistan's first Test against England at Headingley	91badd7f	babar azam,pakistan,england,headingley,injury
+2026-08-18	A study of one million people links rare FNIP1 gene variants to a 60% lower cardiometabolic risk	cf0005ef	fnip1,gene,cardiometabolic,metabolism,study
+2026-08-18	NASA's TESS spots its first 'microlensing' planet, some 40,000 light-years away	b252cbb3	nasa,tess,microlensing,exoplanet,gaia
+2026-08-18	Scientists identify the single scent a naked mole-rat queen uses to keep rivals from breeding	b8ad1ef5	naked mole-rat,queen,isopropyl myristate,reproduction,biology
+2026-08-18	The world's largest solar telescope captures the sharpest images yet of the Sun's surface	597050dd	inouye solar telescope,sun,plasma,kelvin-helmholtz,images

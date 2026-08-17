@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-06-18",
-      "topic_key": "tree",
-      "text": "There are more trees on Earth than stars in the Milky Way"
-    },
-    {
       "date": "2026-06-19",
       "topic_key": "neutron star",
       "text": "A neutron star is so dense that a single teaspoon of its material would weigh about a billion tonnes on Earth."
@@ -294,14 +289,14 @@
       "date": "2026-08-17",
       "topic_key": "wombat",
       "text": "Wombats are the only animals that produce cube-shaped poop."
+    },
+    {
+      "date": "2026-08-18",
+      "topic_key": "cleopatra",
+      "text": "Cleopatra lived closer to the Moon landing than to the building of the Great Pyramid."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-07-18",
-      "type": "lateral",
-      "title_key": "bankrupt-at-the-hotel"
-    },
     {
       "date": "2026-07-19",
       "type": "visual",
@@ -446,14 +441,14 @@
       "date": "2026-08-17",
       "type": "visual",
       "title_key": "folded-staircase"
+    },
+    {
+      "date": "2026-08-18",
+      "type": "logic",
+      "title_key": "truth-on-the-island"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-07-18",
-      "type": "ladder",
-      "title_key": "daily-bread"
-    },
     {
       "date": "2026-07-19",
       "type": "letterboxed",
@@ -598,6 +593,11 @@
       "date": "2026-08-17",
       "type": "ladder",
       "title_key": "alchemy"
+    },
+    {
+      "date": "2026-08-18",
+      "type": "letterboxed",
+      "title_key": "head-in-the-clouds"
     }
   ]
 }
