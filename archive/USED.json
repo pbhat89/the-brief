@@ -1,16 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-06-19",
-      "topic_key": "neutron star",
-      "text": "A neutron star is so dense that a single teaspoon of its material would weigh about a billion tonnes on Earth."
-    },
-    {
-      "date": "2026-06-20",
-      "topic_key": "birthday paradox",
-      "text": "In a room of 23 people there is a better-than-even chance two share a birthday."
-    },
-    {
       "date": "2026-06-21",
       "topic_key": "anglo-zanzibar war",
       "text": "The Anglo-Zanzibar War of 1896 was the shortest war in history, lasting under 45 minutes."
@@ -294,19 +284,14 @@
       "date": "2026-08-18",
       "topic_key": "cleopatra",
       "text": "Cleopatra lived closer to the Moon landing than to the building of the Great Pyramid."
+    },
+    {
+      "date": "2026-08-20",
+      "topic_key": "eiffel tower",
+      "text": "The Eiffel Tower grows about 15 cm taller in summer"
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-07-19",
-      "type": "visual",
-      "title_key": "painted-cube"
-    },
-    {
-      "date": "2026-07-20",
-      "type": "logic",
-      "title_key": "broken-window"
-    },
     {
       "date": "2026-07-21",
       "type": "quantitative",
@@ -446,19 +431,14 @@
       "date": "2026-08-18",
       "type": "logic",
       "title_key": "truth-on-the-island"
+    },
+    {
+      "date": "2026-08-20",
+      "type": "quantitative",
+      "title_key": "reunion-handshakes"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-07-19",
-      "type": "letterboxed",
-      "title_key": "cornered"
-    },
-    {
-      "date": "2026-07-20",
-      "type": "anagram",
-      "title_key": "perfect-fit"
-    },
     {
       "date": "2026-07-21",
       "type": "spellingbee",
@@ -598,6 +578,11 @@
       "date": "2026-08-18",
       "type": "letterboxed",
       "title_key": "head-in-the-clouds"
+    },
+    {
+      "date": "2026-08-20",
+      "type": "anagram",
+      "title_key": "sound-check"
     }
   ]
 }

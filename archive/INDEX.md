@@ -2204,3 +2204,23 @@ is empty until the first run.
 2026-08-18	NASA's TESS spots its first 'microlensing' planet, some 40,000 light-years away	b252cbb3	nasa,tess,microlensing,exoplanet,gaia
 2026-08-18	Scientists identify the single scent a naked mole-rat queen uses to keep rivals from breeding	b8ad1ef5	naked mole-rat,queen,isopropyl myristate,reproduction,biology
 2026-08-18	The world's largest solar telescope captures the sharpest images yet of the Sun's surface	597050dd	inouye solar telescope,sun,plasma,kelvin-helmholtz,images
+2026-08-20	Rahul Gandhi accuses Centre of police brutality against NEET protesters; Rijiju hits back	62cb1633	rahul gandhi,kiren rijiju,neet protests,delhi police
+2026-08-20	Jharkhand competitive-exam protests called off after Soren government cancels JSSC CGL exam	1a4c045f	hemant soren,jssc cgl,jharkhand,pgt recruitment
+2026-08-20	Bombay High Court cancels bail for Goa Birch nightclub owners in fire that killed 25	e6405bb6	bombay high court,birch nightclub,luthra brothers,goa
+2026-08-20	US envoy Sergio Gor says Washington may re-evaluate its travel advisory for Kashmir	2b0b2772	sergio gor,omar abdullah,kashmir,travel advisory
+2026-08-20	Chennai MRTS to merge with Metro Rail after 15 years, changing fares and services	74c98b40	chennai mrts,chennai metro rail,tamil nadu
+2026-08-20	US sanctions ICC president and a senior prosecutor in escalating campaign against the court	a75f001c	international criminal court,tomoko akane,abdoulaye seye,trump administration
+2026-08-20	Israeli airstrikes hit a Syrian air base hours after a Turkish delegation's visit	a7adba6f	israel,turkey,syria,abu duhur air base,netanyahu
+2026-08-20	Trump pauses threatened 50% tariffs on Canada as a trade deal remains unfinished	6976dd3e	donald trump,mark carney,canada,usmca
+2026-08-20	Congo's Ebola outbreak reaches 5,000 cases as the response falls behind	21f08a30	democratic republic of congo,ebola,ituri province,bundibugyo virus
+2026-08-20	Central African Republic gold mine collapse kills more than 100 people	cf1c7147	central african republic,zamboye,cameroon,artisanal mining
+2026-08-20	IDFC First Bank raises $500 million in its maiden overseas bond issue from GIFT City	fcc31105	idfc first bank,gift city,bond issue
+2026-08-20	India set to see up to $1.5 trillion in family wealth change hands over the next decade	53ee838a	julius baer,ey,family wealth
+2026-08-20	Escorts Kubota to invest Rs 2,000 crore in a new tractor and equipment plant in UP	b6fa9b73	escorts kubota,yeida,uttar pradesh
+2026-08-20	Gold slips on MCX to nearly Rs 1.54 lakh per 10 grams as US Treasury yields ease	33c1f93b	mcx,gold,treasury yields
+2026-08-20	SEBI impounds Rs 3.67 crore and bars two entities over Sensex expiry-day manipulation	a39c0d77	sebi,copthall mauritius investment,sensex
+2026-08-20	Telescope clocks the fastest star yet seen orbiting the Milky Way's black hole	417190a3	european southern observatory,very large telescope,sagittarius a,nature
+2026-08-20	China recovers a rocket's first stage on land for the first time	6ea92a1e	landspace,zhuque-3,xinhua,reusable rocket
+2026-08-20	NASA orbiter captures the sharpest images of a crater left by a crashed rocket on the Moon	56350d69	nasa,lunar reconnaissance orbiter,spacex falcon,moon
+2026-08-20	Archaeologists unearth a sacrificial burial by Lima's ancient Huaca Pucllana pyramid	7f750011	huaca pucllana,gladys paz,lima culture,peru
+2026-08-20	Personalized mRNA cancer vaccine keeps melanoma at bay longer in a trial	9bf7a14c	moderna,merck,intismeran,keytruda

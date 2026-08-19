@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Thu, 20 August 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .wpuzzle-box{background:linear-gradient(135deg,#0e1a1a,#0d1620);border:1px solid #234a44;border-left:3px solid #16a085;padding:24px 28px;border-radius:2px}
+  .wptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#16a085;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .wpuzzle-box .puzzle-title{color:#cdeae3}
+  .wpuzzle-box .puzzle-how{color:#8fb8ac;background:#08140f;border-left-color:#1a6a5a}
+  .wpuzzle-box .puzzle-q{color:#dfeae6;font-family:'Source Sans 3',sans-serif}
+  .wpuzzle-box .answer{color:#bfe0d6}
+  .wpuzzle-box .answer .alabel{color:#16a085}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Thursday, 20 August 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Thursday, 20 August 2026 · 🔍 26 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eleven entries in this exact order:
+     id    : one of "sg" | "india" | "uk" | "geo" | "tech" | "biz" | "sports" | "misc" | "fun" | "puzzle" | "wpuzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 8 news tabs; fun/puzzle/wpuzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+
+   WORD_PUZZLE shape (separate, daily word game — NYT-style, static reveal):
+     type     : one of "Connections" | "Word Ladder" | "Anagram" | "Spelling Bee" | "Letter Boxed" | "Mini Crossword"
+     title    : short evocative name for the word puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle body; supports \n for line breaks (grids render as pre-formatted text)
+     answer   : the answer; supports \n for line breaks; appears inside its own toggle (id "wpans")
+============================================================================= */
+
+const SECTIONS = [
+  { id:"sg", title:"🇸🇬 Singapore", color:"#e74c3c", items:[
+    { headline:"Singapore coverage is unavailable in today’s edition", summary:"Every allowed Singapore source — CNA, The Straits Times, BBC, Reuters, SCMP and Mothership — was unreachable from the routine’s network today; the egress proxy denied each connection, so no Singapore item could be fetched and verified to the brief’s standard.", source:"The Brief", url:"", date:"Aug 20",
+      spectrum:null,
+      bias:null }
+  ]},
+  { id:"india", title:"🇮🇳 India", color:"#e67e22", items:[
+    { headline:"Rahul Gandhi accuses Centre of police brutality against NEET protesters; Rijiju hits back", summary:"Congress leader Rahul Gandhi attacked the government over “police brutality” during NEET protests, while Union Minister Kiren Rijiju defended the Delhi Police for ensuring no lives were lost and pointed to police actions under previous Congress-era governments.", source:"The Indian Express", url:"https://indianexpress.com/article/india/rahul-gandhi-kiren-rijiju-neet-protests-police-action-10840573/", date:"Aug 19",
+      spectrum:null,
+      bias:null },
+    { headline:"Jharkhand competitive-exam protests called off after Soren government cancels JSSC CGL exam", summary:"After 26 days of agitation, Jharkhand’s competitive-exam protests ended when the Hemant Soren government cancelled the JSSC CGL exam, though a separate PGT recruitment protest continues over alleged irregularities.", source:"The Indian Express", url:"https://indianexpress.com/article/india/jharkhand-protests-called-off-hemant-soren-government-jpsc-jssc-10840522/", date:"Aug 19",
+      spectrum:null,
+      bias:null },
+    { headline:"Bombay High Court cancels bail for Goa Birch nightclub owners in fire that killed 25", summary:"The Bombay High Court cancelled bail granted to the Luthra brothers, owners of Goa’s Birch nightclub, faulting the sessions court’s discretion and stressing the gravity of a fire that killed 25 people amid a lack of safety measures.", source:"The Indian Express", url:"https://indianexpress.com/article/india/court-goa-club-fire-reveal-enormity-of-offence-bombay-hc-cancelled-bail-luthra-brothers-10840668/", date:"Aug 19",
+      spectrum:null,
+      bias:null },
+    { headline:"US envoy Sergio Gor says Washington may re-evaluate its travel advisory for Kashmir", summary:"US Ambassador Sergio Gor said Washington is considering re-evaluating its Kashmir travel advisory, citing improved safety, after meeting Jammu and Kashmir Chief Minister Omar Abdullah in Srinagar.", source:"The Indian Express", url:"https://indianexpress.com/article/india/us-travel-advisory-citizens-visiting-kashmir-ambassador-sergio-gor-10840277/", date:"Aug 19",
+      spectrum:null,
+      bias:null },
+    { headline:"Chennai MRTS to merge with Metro Rail after 15 years, changing fares and services", summary:"Chennai’s MRTS network will be integrated with Chennai Metro Rail after 15 years, a merger set to change fares, ticketing, services and station operations for daily passengers.", source:"The Indian Express", url:"https://indianexpress.com/article/india/chennai-mrts-to-merge-with-metro-rail-what-changes-for-passengers-10840740/", date:"Aug 19",
+      spectrum:null,
+      bias:null }
+  ]},
+  { id:"uk", title:"🇬🇧 UK News", color:"#3949ab", items:[
+    { headline:"UK coverage is unavailable in today’s edition", summary:"Both primary UK outlets (BBC and Sky News) and the entire fallback tier (The Guardian, CNN, Al Jazeera, Bloomberg and CNBC) were unreachable from the routine’s network today, so no UK-domestic item could be fetched and verified.", source:"The Brief", url:"", date:"Aug 20",
+      spectrum:null,
+      bias:null }
+  ]},
+  { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
+    { headline:"US sanctions ICC president and a senior prosecutor in escalating campaign against the court", summary:"The Trump administration sanctioned ICC President Tomoko Akane of Japan and senior trial lawyer Abdoulaye Seye of Senegal, freezing US-linked assets and bringing to nine the number of the court’s 18 judges sanctioned as Washington accuses the tribunal of unfairly targeting US and Israeli personnel.", source:"AP", url:"https://apnews.com/article/international-criminal-court-sanctions-trump-israel-e8da938966f5f8dad763ecf68ea025c9", date:"Aug 18",
+      spectrum:null,
+      bias:null },
+    { headline:"Israeli airstrikes hit a Syrian air base hours after a Turkish delegation’s visit", summary:"Israel launched eight strikes on the runway of the Abu Duhur air base in Idlib province, saying it aimed to stop Turkish troops deploying there; Syrian officials reported damage but no casualties. Turkey and US envoy Tom Barrack condemned the strikes.", source:"AP", url:"https://apnews.com/article/syria-turkey-israel-air-base-abu-duhur-strikes-turkish-delegation-60a2747ff4dcdd6ebc498807912cce46", date:"Aug 19",
+      spectrum:null,
+      bias:null },
+    { headline:"Trump pauses threatened 50% tariffs on Canada as a trade deal remains unfinished", summary:"President Trump delayed a threatened 50% tariff on Canadian goods after talks with Prime Minister Mark Carney, who said the pause runs until August 22. A senior Canadian official called the emerging terms good while cautioning that key details were not settled.", source:"AP", url:"https://apnews.com/article/trump-canada-tariffs-usmca-be3fb41e167108aed07059bb58de7b28", date:"Aug 19",
+      spectrum:null,
+      bias:null },
+    { headline:"Congo’s Ebola outbreak reaches 5,000 cases as the response falls behind", summary:"Government data showed Congo’s Ebola outbreak, caused by the Bundibugyo virus and centred in remote Ituri province, has reached 5,000 cases and more than 2,300 deaths. Responders warn it is spreading about three times faster than the 2014-2016 West Africa epidemic.", source:"AP", url:"https://apnews.com/article/congo-ebola-outbreak-cases-e5206f4fbfc5a85257c6039136a470f5", date:"Aug 19",
+      spectrum:null,
+      bias:null },
+    { headline:"Central African Republic gold mine collapse kills more than 100 people", summary:"The death toll from the collapse of an artisanal gold mine in the village of Zamboye, near the Cameroon border, rose above 100, officials said, with others still missing. Authorities blamed the caving-in of underground tunnels and opened an inquiry.", source:"AP", url:"https://apnews.com/article/deadly-gold-mine-collapse-central-african-republic-4a52316da1f00085d60dd4d99ac9fdb2", date:"Aug 19",
+      spectrum:null,
+      bias:null }
+  ]},
+  { id:"tech", title:"💻 Tech & AI", color:"#27ae60", items:[
+    { headline:"Tech &amp; AI coverage is unavailable in today’s edition", summary:"Every allowed Tech &amp; AI source — The Verge, TechCrunch, Ars Technica, Wired, MIT Technology Review, Bloomberg, The Information and Reuters — was unreachable from the routine’s network today; the egress proxy denied each connection, so no Tech &amp; AI item could be fetched and verified to the brief’s standard.", source:"The Brief", url:"", date:"Aug 20",
+      spectrum:null,
+      bias:null }
+  ]},
+  { id:"biz", title:"📈 Business & Markets", color:"#8e44ad", items:[
+    { headline:"IDFC First Bank raises $500 million in its maiden overseas bond issue from GIFT City", summary:"IDFC First Bank sold $500 million of three-year senior notes at a 5.625% coupon through its GIFT City IFSC unit, drawing investors including BlackRock, Capital Group and AllianceBernstein after an S&amp;P BBB- investment-grade rating.", source:"The Economic Times", url:"https://economictimes.indiatimes.com/markets/bonds/idfc-first-bank-raises-500-million-through-maiden-overseas-bond-issue/articleshow/133342583.cms", date:"Aug 19",
+      spectrum:null,
+      bias:null },
+    { headline:"India set to see up to $1.5 trillion in family wealth change hands over the next decade", summary:"A Julius Baer-EY report estimates $1.3 trillion to $1.5 trillion of Indian family wealth will transfer between generations over ten years, expanding family offices and channelling capital into AIFs, private equity, private credit and REITs.", source:"The Economic Times", url:"https://economictimes.indiatimes.com/news/economy/finance/india-may-see-family-wealth-worth-1-5-trillion-change-hands-in-10-years/articleshow/133358392.cms", date:"Aug 20",
+      spectrum:null,
+      bias:null },
+    { headline:"Escorts Kubota to invest Rs 2,000 crore in a new tractor and equipment plant in UP", summary:"Escorts Kubota announced a Rs 2,000 crore plant across 154 acres in the YEIDA industrial area of Gautam Buddha Nagar, Uttar Pradesh, set to be one of the Kubota Group’s largest global facilities for tractors, farm implements, construction equipment and engines.", source:"The Economic Times", url:"https://economictimes.indiatimes.com/markets/digital-real-estate/realty-news/escorts-kubota-announces-rs-2000-cr-investment-on-new-plant-in-up/articleshow/133348729.cms", date:"Aug 19",
+      spectrum:null,
+      bias:null },
+    { headline:"Gold slips on MCX to nearly Rs 1.54 lakh per 10 grams as US Treasury yields ease", summary:"MCX October gold futures fell Rs 133 to Rs 1,54,129 per 10 grams on Tuesday as US Treasury yields cooled ahead of the Fed minutes, even as spot gold edged up 0.2% to $4,342 an ounce internationally.", source:"The Economic Times", url:"https://economictimes.indiatimes.com/markets/commodities/news/gold-extends-losses-falls-to-nearly-rs-1-54-lakh/10-gm-time-to-buy/articleshow/133337692.cms", date:"Aug 19",
+      spectrum:null,
+      bias:null },
+    { headline:"SEBI impounds Rs 3.67 crore and bars two entities over Sensex expiry-day manipulation", summary:"SEBI passed an ex-parte interim order against Copthall Mauritius Investment and Mansi Share and Stock Broking for alleged manipulative trades in the closing auction on a BSE Sensex weekly-expiry day, impounding Rs 3.67 crore of gains and restraining both from the market.", source:"The Economic Times", url:"https://economictimes.indiatimes.com/markets/stocks/news/sebi-flags-manipulative-trades-during-cas-on-sensex-expiry-day-fines-two-entities/articleshow/133352303.cms", date:"Aug 19",
+      spectrum:null,
+      bias:null }
+  ]},
+  { id:"sports", title:"🎾🏏🏎️ Sports", color:"#c0392b", items:[
+    { headline:"Sports coverage is unavailable in today’s edition", summary:"The allowed Sports sources — BBC Sport, ESPN, ESPNcricinfo, Cricbuzz, Sky Sports F1, Autosport and Formula1.com — were unreachable from the routine’s network today, so no result, including the mandatory F1 race-currency check, could be fetched and verified.", source:"The Brief", url:"", date:"Aug 20",
+      spectrum:null,
+      bias:null }
+  ]},
+  { id:"misc", title:"🔬 Other Miscellaneous News", color:"#1abc9c", items:[
+    { headline:"Telescope clocks the fastest star yet seen orbiting the Milky Way’s black hole", summary:"Using the European Southern Observatory’s Very Large Telescope in Chile, astronomers found a star whipping around the Milky Way’s central supermassive black hole at about 25,000 km/s and completing an orbit every 8.7 years; the work was published in Nature on Aug. 19.", source:"AP", url:"https://apnews.com/article/black-hole-star-sagittarius-milky-way-dafcfb293c33bcfc7999b411a015a0eb", date:"Aug 19",
+      spectrum:null,
+      bias:null },
+    { headline:"China recovers a rocket’s first stage on land for the first time", summary:"State agency Xinhua said LandSpace’s reusable Zhuque-3 rocket launched Wednesday and its first stage touched down on deployable landing legs — China’s first land recovery of a booster, which officials called a major breakthrough in reusable-rocket technology.", source:"AP", url:"https://apnews.com/article/china-space-rocket-reuse-land-7280ab07f29771e2034a917ff679e1a6", date:"Aug 19",
+      spectrum:null,
+      bias:null },
+    { headline:"NASA orbiter captures the sharpest images of a crater left by a crashed rocket on the Moon", summary:"NASA’s Lunar Reconnaissance Orbiter released before-and-after photos of the roughly 60-foot-wide, 10-foot-deep crater gouged when a Falcon upper stage struck the Moon at about 5,400 mph on Aug. 5, revealing butterfly-wing streaks of ejected material.", source:"AP", url:"https://apnews.com/article/spacex-rocket-moon-crash-crater-52b76d61289c06b7d32348b082a8e6b8", date:"Aug 18",
+      spectrum:null,
+      bias:null },
+    { headline:"Archaeologists unearth a sacrificial burial by Lima’s ancient Huaca Pucllana pyramid", summary:"In Peru’s capital, a team led by archaeologist Gladys Paz unveiled the skeleton of an adult man believed sacrificed when a ceremonial canal was ritually closed at the adobe Huaca Pucllana pyramid; the Lima culture flourished between the first and seventh centuries.", source:"AP", url:"https://apnews.com/article/peru-lima-huaca-pucllana-pyramid-discovery-archaeology-ac44172ab29425029ca7b3ecf5819691", date:"Aug 18",
+      spectrum:null,
+      bias:null },
+    { headline:"Personalized mRNA cancer vaccine keeps melanoma at bay longer in a trial", summary:"Moderna and Merck said their patient-tailored mRNA vaccine intismeran, paired with the immunotherapy Keytruda, kept melanoma patients free of recurrence or spread longer than Keytruda alone; the companies plan to present full results at an upcoming medical meeting.", source:"AP", url:"https://apnews.com/article/moderna-mrna-merck-cancer-melanoma-intismeran-keytruda-2330dce708b0af215b68570b19d025df", date:"Aug 19",
+      spectrum:null,
+      bias:null }
+  ]},
+  { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
+  { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
+  { id:"wpuzzle", title:"🔤 Word Puzzles", color:"#16a085", custom:"wpuzzle" },
+];
+
+const FUN_FACT = {
+  text: "The Eiffel Tower is taller in summer than in winter. Iron expands as it warms, so on a hot day the sun-heated tower can stand about 15 centimetres taller than on a cold winter day. The effect is deliberate: its engineers designed the wrought-iron structure to flex with the seasons rather than crack.",
+  tag: "Category · Physics & Engineering"
+};
+
+const PUZZLE = {
+  type: "Quantitative",
+  title: "The Reunion Handshakes",
+  how: "Each of n guests shakes n−1 hands, but that counts every handshake from both sides.",
+  question: "Everyone at a reunion shook hands with each other guest exactly once. Altogether there were 78 handshakes.\n\n(a) How many guests were at the reunion?\n(b) If three more guests had arrived — each also shaking hands once with everyone present — how many handshakes would there have been in total?",
+  answer: "(a) 13 guests. With n guests the number of handshakes is n(n−1)/2. Setting n(n−1)/2 = 78 gives n(n−1) = 156 = 13 × 12, so n = 13.\n\n(b) 120 handshakes. With 13 + 3 = 16 guests present, the total is 16 × 15 / 2 = 120."
+};
+
+const WORD_PUZZLE = {
+  type: "Anagram",
+  title: "Sound Check",
+  how: "Unscramble each cluster into one word. Once you have all four, name the category they share.",
+  question: "Unscramble each into a single word, then say what the four have in common:\n\n1.  OILVIN\n2.  MURD\n3.  PET RUMT\n4.  RATGIU",
+  answer: "1. VIOLIN\n2. DRUM\n3. TRUMPET\n4. GUITAR\n\nThe hidden link: all four are musical instruments."
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function renderWordPuzzle(){
+  let h='<div class="sec-title">🔤 Word Puzzle of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#16a085,transparent)"></div>';
+  h+='<div class="wpuzzle-box"><span class="wptype">'+WORD_PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+WORD_PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+WORD_PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+WORD_PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this,\'wpans\')">Show Answer</button>';
+  h+='<div class="answer" id="wpans"><span class="alabel">Answer</span>'+WORD_PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn,ansId){var a=document.getElementById(ansId||'ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else if(sec.custom==="wpuzzle"){div.innerHTML=renderWordPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>
