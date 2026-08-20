@@ -1,0 +1,14 @@
+{
+  "date": "2026-08-21",
+  "status": "skipped",
+  "reason": "All allowed news sources were unreachable in this run. The network egress proxy returned 403 on CONNECT for every allowed outlet across all eight sections, so no item could be fetched, verified against a second source, or confirmed to resolve. The session web-search budget was also exhausted. Per the Stage 3 hard-stop and verifier-checklist section 9, no brief was published rather than send unverified links.",
+  "notes": [
+    "Egress block confirmed three ways: agent-proxy status recentRelayFailures (403 CONNECT for bbc.com, theguardian.com, cnn.com, aljazeera.com, bloomberg.com, cnbc.com), direct WebFetch failures (bbc.com, reuters.com, channelnewsasia.com, straitstimes.com, apnews.com, techcrunch.com, skysports.com), and EGRESS_BLOCKED errors reported independently by all eight research agents.",
+    "Unreachable outlets included: BBC, Sky News, Reuters, AP, CNN, The Guardian, Al Jazeera, NYT, CNA, The Straits Times, SCMP, Mothership, The Hindu, The Indian Express, Hindustan Times, The Times of India, NDTV, The Economic Times, Bloomberg, CNBC, WSJ, FT, The Economist, The Verge, TechCrunch, Ars Technica, Wired, MIT Technology Review, Sky Sports, Autosport, Formula1.com, Nature, and NASA — plus the India and UK News fallback tiers, which were also blocked (full network outage on news domains, not a per-domain block).",
+    "WebFetch could not open a single article, so the mandatory verification step (open each URL and confirm against a second named source) was impossible for every candidate. Search-index snippets existed but were unverifiable and some suggested claims that could not be confirmed against a primary source.",
+    "Retry discipline (FIX 6): multiple attempts were made across different domains and sections with time gaps; the fallback tiers were also unreachable; the block was persistent, not transient.",
+    "This is the same egress condition that caused the 2026-08-19 skip.",
+    "No fun fact, puzzle, or word puzzle was chosen (skipped day); USED.json was pruned but not appended.",
+    "PAGES CHECK BLOCKED 2026-08-21 (news-domain egress also implies the Pages self-check would be unobservable from this environment; no HTML was published today in any case)."
+  ]
+}
