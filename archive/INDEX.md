@@ -2224,3 +2224,37 @@ is empty until the first run.
 2026-08-20	NASA orbiter captures the sharpest images of a crater left by a crashed rocket on the Moon	56350d69	nasa,lunar reconnaissance orbiter,spacex falcon,moon
 2026-08-20	Archaeologists unearth a sacrificial burial by Lima's ancient Huaca Pucllana pyramid	7f750011	huaca pucllana,gladys paz,lima culture,peru
 2026-08-20	Personalized mRNA cancer vaccine keeps melanoma at bay longer in a trial	9bf7a14c	moderna,merck,intismeran,keytruda
+2026-08-22	Man who stabbed a priest during mass at St Joseph's Church jailed and caned	d05b59ff	Basnayake Keith Spencer,Father Christopher Lee,St Joseph's Church,Singapore,sentencing
+2026-08-22	JB-Singapore RTS Link enters final testing ahead of a January 2027 launch	bbb45c17	RTS Link,Anthony Loke,Bukit Chagar,Woodlands North,Singapore
+2026-08-22	PM Wong to deliver the National Day Rally on Aug 23, with family support in focus	494ea134	Lawrence Wong,National Day Rally,ITE Headquarters,Singapore
+2026-08-22	Sajjan Kumar, ex-Congress MP convicted in the 1984 anti-Sikh riots, dies at 80	5ddc61f3	Sajjan Kumar,1984 anti-Sikh riots,Congress,Tihar Jail,Delhi
+2026-08-22	Reliance proposes a Rs 2.73 lakh crore underground coal gasification complex in Andhra	de0f072c	Reliance Industries,underground coal gasification,Eluru,Andhra Pradesh
+2026-08-22	Amit Shah chairs the Southern Zonal Council as water disputes and delimitation dominate	a8f53e12	Amit Shah,Southern Zonal Council,Mahabalipuram,Cauvery dispute,delimitation
+2026-08-22	Supreme Court upholds hanging as a constitutional method of execution	a5e76ebb	Supreme Court,Vikram Nath,Sandeep Mehta,death penalty,hanging
+2026-08-22	Supreme Court halts a disproportionate-assets case against Rahul Gandhi	70b76d32	Rahul Gandhi,Supreme Court,Allahabad High Court,CBI,ED
+2026-08-22	UK July public borrowing hits £1.8bn, defying forecasts of a small surplus	cc8a69cd	ONS,John Healey,OBR,public borrowing,UK Budget
+2026-08-22	UK retail sales fell 0.5% in July as clothing demand slumped	cae53eac	ONS,retail sales,GfK,clothing,UK economy
+2026-08-22	Retail and hospitality bosses warn guaranteed-hours rules threaten jobs	0134c548	British Retail Consortium,UKHospitality,Employment Rights Act,guaranteed hours
+2026-08-22	Home Office records 230 migrants crossing the Channel on a single small boat	cd7c61a7	Home Office,English Channel,small boats,migration,smuggling gangs
+2026-08-22	UAE suspends all trade and finance with Iran after an alleged missile attack	fa9083aa	UAE,Iran,Dubai,ballistic missiles,embargo
+2026-08-22	US redesignates Hezbollah as an Iranian proxy and sanctions a cash-courier network	1f6bb6c2	US Treasury,Hezbollah,Iran,IRGC-Quds Force,Lebanon
+2026-08-22	Israeli strike kills at least six in Gaza City as the ceasefire stays stalled	73dda511	Israel,Gaza City,Hamas,al-Shifa Hospital,ceasefire
+2026-08-22	Evergrande founder Hui Ka Yan sentenced to life for fraud and bribery	96c82dbc	Hui Ka Yan,Evergrande,Shenzhen court,China property
+2026-08-22	Nevada approves up to 8,000 robotaxis for Tesla, Uber and Waymo	5e25dce0	Nevada Transportation Authority,Tesla,Uber,Waymo,robotaxis
+2026-08-22	Nvidia to pay Poolside about $6bn to license its AI model-building software	ff3f3cf7	Nvidia,Poolside,Model Factory,AI licensing
+2026-08-22	Broadcom seeks more than $60bn in debt for an AI chip financing deal	e90e105f	Broadcom,Anthropic,AI chips,debt financing
+2026-08-22	Starcloud raises $250m to build AI data centres that run in orbit	47420401	Starcloud,orbital data centres,AI inference,Series A
+2026-08-22	Alibaba-backed robotics firm Dexmal seeks a $3bn valuation	fd9ee391	Dexmal,Alibaba,robotics,physical AI
+2026-08-22	Wall Street rallies on Friday but posts a weekly loss as bonds weigh	9ee9fcdb	Dow Jones,S&P 500,Nasdaq,Treasury yields,Wall Street
+2026-08-22	30-year Treasury yield hits 5.33%, its highest since 2007, as a bond rout deepens	f964a96b	US Treasury,Kevin Warsh,30-year yield,bond rout
+2026-08-22	Bitcoin climbs past $77,000 amid crypto-policy optimism	fec911fc	Bitcoin,Ether,CLARITY Act,crypto
+2026-08-22	Walmart suffers its worst day in four years as US comparable sales slow	d7edd76a	Walmart,comparable sales,JPMorgan,retail earnings
+2026-08-22	Target beats estimates on 5.3% sales growth, aided by a $994m tariff refund	c06a807d	Target,Michael Fiddelke,tariff refunds,comparable sales
+2026-08-22	🏎️ Russell snatches Dutch GP sprint pole as Verstappen labours to sixth at home	14f6c54a	George Russell,Lando Norris,Max Verstappen,Zandvoort,sprint qualifying
+2026-08-22	🏎️ Antonelli's title lead wobbles as leader and Hamilton falter in Zandvoort sprint qualifying	2a19aaa0	Kimi Antonelli,Lewis Hamilton,drivers championship,Zandvoort
+2026-08-22	🎾 Sinner withdraws from the US Open with a knee injury as Zverev inherits the top seed	776619f1	Jannik Sinner,Alexander Zverev,US Open,knee injury
+2026-08-22	🎾 Sabalenka headlines the US Open entry list, chasing a third straight New York title	92efa288	Aryna Sabalenka,US Open,Coco Gauff,Iga Swiatek
+2026-08-22	🏏 India crush Sri Lanka by 165 runs in Galle as Suthar takes a 10-wicket haul	aa66376f	India,Sri Lanka,Manav Suthar,Devdutt Padikkal,Galle
+2026-08-22	🏏 England thrash Pakistan by an innings and 103 runs inside three days at Headingley	1c31a055	England,Pakistan,Harry Brook,Headingley
+2026-08-22	Astronomers identify a 'black hole star', a new class of cosmic object	12956fbd	MoM-BH*-1,black hole star,JWST,little red dots
+2026-08-22	Physicists build the first cyclic superconducting quantum heat engine near absolute zero	217a8c4b	Aalto University,quantum heat engine,transmon qubit,Otto cycle

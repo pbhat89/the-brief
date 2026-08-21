@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-06-22",
-      "topic_key": "flamingo",
-      "text": "Flamingos are not born pink."
-    },
-    {
       "date": "2026-06-23",
       "topic_key": "shark",
       "text": "Sharks are older than trees."
@@ -284,14 +279,14 @@
       "date": "2026-08-20",
       "topic_key": "eiffel tower",
       "text": "The Eiffel Tower grows about 15 cm taller in summer"
+    },
+    {
+      "date": "2026-08-22",
+      "topic_key": "anglo-zanzibar war",
+      "text": "The shortest war in history, the Anglo-Zanzibar War of 1896, lasted about 38 minutes."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-07-22",
-      "type": "lateral",
-      "title_key": "romeo-and-juliet"
-    },
     {
       "date": "2026-07-23",
       "type": "visual",
@@ -426,14 +421,14 @@
       "date": "2026-08-20",
       "type": "quantitative",
       "title_key": "reunion-handshakes"
+    },
+    {
+      "date": "2026-08-22",
+      "type": "lateral",
+      "title_key": "long-push"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-07-22",
-      "type": "grouping",
-      "title_key": "hook-line-and-sinker"
-    },
     {
       "date": "2026-07-23",
       "type": "ladder",
@@ -568,6 +563,11 @@
       "date": "2026-08-20",
       "type": "anagram",
       "title_key": "sound-check"
+    },
+    {
+      "date": "2026-08-22",
+      "type": "spellingbee",
+      "title_key": "table-talk"
     }
   ]
 }
