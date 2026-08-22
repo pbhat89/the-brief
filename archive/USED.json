@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-06-23",
-      "topic_key": "shark",
-      "text": "Sharks are older than trees."
-    },
-    {
       "date": "2026-06-24",
       "topic_key": "mauna kea",
       "text": "Measured from base to summit rather than from sea level, the tallest mountain on Earth is Hawaii’s Mauna Kea, which rises about 10,210 metres from its base on the Pacific seafloor."
@@ -284,14 +279,14 @@
       "date": "2026-08-22",
       "topic_key": "anglo-zanzibar war",
       "text": "The shortest war in history, the Anglo-Zanzibar War of 1896, lasted about 38 minutes."
+    },
+    {
+      "date": "2026-08-23",
+      "topic_key": "neutron star",
+      "text": "A teaspoon of neutron-star material would weigh about a billion tonnes."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-07-23",
-      "type": "visual",
-      "title_key": "punch-and-unfold"
-    },
     {
       "date": "2026-07-24",
       "type": "logic",
@@ -426,14 +421,14 @@
       "date": "2026-08-22",
       "type": "lateral",
       "title_key": "long-push"
+    },
+    {
+      "date": "2026-08-23",
+      "type": "visual",
+      "title_key": "painted-cube"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-07-23",
-      "type": "ladder",
-      "title_key": "cats-and-dogs"
-    },
     {
       "date": "2026-07-24",
       "type": "letterboxed",
@@ -568,6 +563,11 @@
       "date": "2026-08-22",
       "type": "spellingbee",
       "title_key": "table-talk"
+    },
+    {
+      "date": "2026-08-23",
+      "type": "grouping",
+      "title_key": "four-of-a-kind"
     }
   ]
 }

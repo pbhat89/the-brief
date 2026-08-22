@@ -2258,3 +2258,38 @@ is empty until the first run.
 2026-08-22	🏏 England thrash Pakistan by an innings and 103 runs inside three days at Headingley	1c31a055	England,Pakistan,Harry Brook,Headingley
 2026-08-22	Astronomers identify a 'black hole star', a new class of cosmic object	12956fbd	MoM-BH*-1,black hole star,JWST,little red dots
 2026-08-22	Physicists build the first cyclic superconducting quantum heat engine near absolute zero	217a8c4b	Aalto University,quantum heat engine,transmon qubit,Otto cycle
+
+2026-08-23	SimplyGo fixes glitch that denied a 50-cent pre-peak discount on 210,000 trips a day	8af2c18a	simplygo,pre-peak discount,210000 trips,glitch,fixed
+2026-08-23	Town council managing-agent employee, 63, charged with taking S$220,000 in bribes	2d1fcf1d	town council,managing agent,s$220000 bribes,charged,cpib
+2026-08-23	Police patrol car catches fire on the BKE; two traffic officers taken to hospital	74122c52	police car,bke,fire,traffic officers,hospitalised
+2026-08-23	Yishun jewellery store manager who swapped S$216,000 of gold for Taobao copies jailed	9f41c007	yishun,jeweller,gold,taobao,jailed
+2026-08-23	Update: Elderly hawker, 73, with a fractured back after Roxy Square shove says he forgives his attacker	f25f84bf	roxy square,hawker,fractured back,forgives,assault
+2026-08-23	Assam monsoon floods kill at least 87 and affect more than a million people	2544fada	assam,monsoon floods,sivasagar,deaths,disaster
+2026-08-23	India allows duty-free raw sugar imports in a rare move to cool record domestic prices	0c5105d8	india,sugar,import duty,prices,commerce ministry
+2026-08-23	India's growth may beat the RBI's 6.7% forecast and near 7%, deputy governor says	38ed6e4d	india,rbi,poonam gupta,growth forecast,economy
+2026-08-23	India's NSE seeks up to $55 billion valuation in what would be the country's biggest IPO	96d99aeb	nse,ipo,valuation,india,launch
+2026-08-23	Palestinian-British girl, 6, dies days after her family drowned off the Sussex coast	a748be36	shoreham,drowning,palestinian-british girl,sussex police,dies
+2026-08-23	UK private sector grows at its fastest pace in four months as spending picks up	d2d65cd4	uk,pmi,private sector,s&p global,growth
+2026-08-23	UK labour market weakens further as price pressures mount	7da47738	uk,labour market,inflation,bank of england,weakens
+2026-08-23	El Nino set to be the most intense in more than a century, UK forecasters warn	9df82655	el nino,uk forecasters,weather,warning,heatwave
+2026-08-23	Russian 'double-tap' drone strike on a Kryvyi Rih shopping mall kills at least 14	ed767c9d	russia,kryvyi rih,drone strike,mall,zelenskyy
+2026-08-23	Update: Iran's president says it is time to end the war with the US 'from a position of strength'	63d1a42e	iran,pezeshkian,united states,war,sanctions
+2026-08-23	First US deportees arrive in Liberia; five who refused are flown on to Equatorial Guinea	7c17ab67	united states,liberia,deportees,equatorial guinea,deal
+2026-08-23	UK, Canada and Australia condemn Israel for closing its World Central Kitchen strike probe	f0e28ed3	israel,world central kitchen,uk,canada,australia
+2026-08-23	Yemen slides toward full-scale war as Houthis claim drone strikes on Najran and an Aramco site	c19fc420	yemen,houthis,najran,aramco,war
+2026-08-23	TikTok and ByteDance to pay $400 million to settle a US children's-privacy lawsuit	772c6e90	tiktok,bytedance,doj,coppa,settlement
+2026-08-23	Apple cuts more than 200 jobs across its Siri, Vision Pro and AI teams	6c6377f9	apple,siri,vision pro,ai,job cuts
+2026-08-23	Anthropic hires a Google chip veteran as it lays the groundwork for its own AI silicon	2e9774f3	anthropic,amir salek,google,tpu,chips
+2026-08-23	Nvidia is in talks with Korean AI-chip startup Rebellions over a possible deal	9afa5cd4	nvidia,rebellions,korea,ai chip,talks
+2026-08-23	Junk-bond investors pile into investment-grade AI data-center debt	58c984c0	qts realty,ai data center,bonds,microsoft,financing
+2026-08-23	Gold hits a three-month high as a US Treasury buyback plan revives debasement fears	21e6768f	gold,us treasury,buyback,three-month high,prices
+2026-08-23	Japan's core inflation accelerates to 1.8% in July, strengthening the case for a BOJ hike	9485a952	japan,core cpi,bank of japan,rate hike,inflation
+2026-08-23	Holcim to buy Fermacell from James Hardie for 840 million euros	7132c3bb	holcim,fermacell,james hardie,acquisition,europe
+2026-08-23	Ross Stores tops estimates on tariff refunds as shares jump about 8%	a0a94839	ross stores,tariff refunds,earnings,comparable sales,shares
+2026-08-23	Russell wins the Zandvoort sprint ahead of Leclerc and Norris; Verstappen sixth	10afbfbe	f1,george russell,zandvoort,sprint,win
+2026-08-23	Norris denies Russell pole for the Dutch Grand Prix as rain closes in	06b0b4e2	f1,lando norris,dutch grand prix,pole,qualifying
+2026-08-23	Starc takes 6-12 and Bangladesh are bowled out for 64 on a chaotic day one at Mackay	b1ade06f	cricket,mitchell starc,bangladesh,mackay,test
+2026-08-23	Arthur Fils beats Cobolli to reach his first Masters 1000 final in Cincinnati	211eb5df	tennis,arthur fils,cincinnati,masters 1000,final
+2026-08-23	JWST finds hidden faint stars make the first galaxies three to four times more massive	5b1740cd	jwst,galaxies,initial mass function,early universe,study
+2026-08-23	Experiment pins a mysterious low-energy gamma-ray glow in atomic nuclei to a magnetic effect	a0669b61	zinc-70,gamma-ray,nuclei,magnetic,experiment
+2026-08-23	Antarctica's recent ice-sheet gain was a temporary anomaly, not a new normal, study finds	a2f12330	antarctica,ice sheet,snowfall,anomaly,study
