@@ -2293,3 +2293,36 @@ is empty until the first run.
 2026-08-23	JWST finds hidden faint stars make the first galaxies three to four times more massive	5b1740cd	jwst,galaxies,initial mass function,early universe,study
 2026-08-23	Experiment pins a mysterious low-energy gamma-ray glow in atomic nuclei to a magnetic effect	a0669b61	zinc-70,gamma-ray,nuclei,magnetic,experiment
 2026-08-23	Antarctica's recent ice-sheet gain was a temporary anomaly, not a new normal, study finds	a2f12330	antarctica,ice sheet,snowfall,anomaly,study
+2026-08-24	NDR 2026: New SG Child Support Package gives each citizen child up to S$62,000	89562c3d	lawrence wong,sg child support package,baby bonus,national day rally,s$62000
+2026-08-24	NDR 2026: Childcare leave revamped to scale with number of children, up to 12 days	220c8d3d	childcare leave,working parents,lawrence wong,family support,national day rally
+2026-08-24	NDR 2026: BTO and EC income ceilings raised from Aug 24 to keep housing accessible	6aac760d	bto,income ceiling,executive condominium,hdb,national day rally
+2026-08-24	NDR 2026: Preschool and infant-care fees to be cut to S$150 and S$300 by 2030	c93f4726	preschool fees,infant care,childcare subsidies,national day rally,lawrence wong
+2026-08-24	NDR 2026: Seniors to get more MediSave flexibility and easier ways to monetise homes	6e3c0022	seniors,medisave,home monetisation,retirement,national day rally
+2026-08-24	Panama-flagged bulk carrier sinks off Odisha with iron ore for Singapore; 22 of 24 crew missing	6b976261	mv ocean winner,odisha,bay of bengal,indian coast guard,paradip
+2026-08-24	Supreme Court orders independent probe into police crackdown on NEET student protests	512beb4e	supreme court,neet-ug,student protests,delhi,bihar
+2026-08-24	India bond traders left reeling after surprisingly hawkish RBI minutes	4db02d6b	reserve bank of india,sanjay malhotra,bonds,rbi minutes,yields
+2026-08-24	Burnham warned to avoid a messy autumn budget as Labour's poll fortunes turn	94e6b7a1	andy burnham,labour,autumn budget,uk economy,polls
+2026-08-24	UK energy price cap forecast to climb to a three-year high in October	f6dfd765	ofgem,energy price cap,andy burnham,vat,gas prices
+2026-08-24	Burnham pauses early-release scheme as England's men's prisons hit 97% capacity	43bfb99c	prisons,early release,andy burnham,ministry of justice,overcrowding
+2026-08-24	UK immigration raids on warehouse and delivery firms jump 147% in first half of 2026	4558f708	immigration raids,home office,warehouse,delivery,illegal working
+2026-08-24	Israel escalates Gaza strikes and threatens fresh evacuations as Netanyahu rejects withdrawal	ccb2eb54	gaza,israel,netanyahu,hamas,evacuation
+2026-08-24	Iran calls new US sanctions package a 'declaration of war' on all nations	7c62807a	iran,araghchi,united states,sanctions,bessent
+2026-08-24	Russia endures a bleak 'Black August' of Ukrainian strikes, fuel shortages and a weak ruble	911770df	russia,putin,ukraine,ruble,drone strikes
+2026-08-24	Israeli forces and settlers injure several Palestinians across the occupied West Bank	778e9dd3	west bank,israel,settlers,palestinians,raids
+2026-08-24	Nvidia warns its biggest customers of AI-server price hikes above 15%	dd30059f	nvidia,vera rubin,grace blackwell,hbm,dram
+2026-08-24	Anthropic expects an IPO that could match or top SpaceX's record listing	ebb910a7	anthropic,spacex,ipo,claude,revenue
+2026-08-24	OpenAI is regaining ground on Anthropic among US business users, data shows	9e2f1367	openai,anthropic,ramp,enterprise,market share
+2026-08-24	AI chip startup Etched raises $700m at a $21bn valuation, doubling in a month	0389ee2a	etched,jane street,inference,valuation,funding
+2026-08-24	Warsh prepares his first Jackson Hole speech as Fed chair amid a turf war with Bessent	ab063f12	kevin warsh,jackson hole,federal reserve,scott bessent,rate hike
+2026-08-24	Oil heads for a second straight weekly gain as the US-Iran war crimps supply	65a5576b	brent crude,wti,iran,strait of hormuz,oil
+2026-08-24	US dollar sinks to a three-month low as Treasury's buyback pledge stokes debasement fears	e53caac8	us dollar,yen,scott bessent,treasury,bond buyback
+2026-08-24	Marvell gives Google the right to buy up to $12.2bn in shares in a custom AI-chip pact	d8a81570	marvell,google,alphabet,broadcom,ai chips
+2026-08-24	🏎️ Norris wins a dramatic Dutch Grand Prix as Verstappen crashes out at home	09089673	lando norris,kimi antonelli,george russell,max verstappen,zandvoort
+2026-08-24	🎾 Fils beats Tiafoe for his first Masters 1000 title in Cincinnati	9a52dba3	arthur fils,frances tiafoe,cincinnati,masters 1000,atp
+2026-08-24	🏏 Starc's 10-51 routs Bangladesh as Australia win the 2nd Test inside two days	141ab314	mitchell starc,australia,bangladesh,mackay,test
+2026-08-24	🏏 Padikkal century puts India on top on day one of the 2nd Test in Colombo	da292c54	devdutt padikkal,shubman gill,india,sri lanka,colombo
+2026-08-24	🎾 Pegula ends Swiatek's title defence to reach an all-American Cincinnati final	9b2813ef	jessica pegula,iga swiatek,coco gauff,cincinnati,wta
+2026-08-24	Personalised mRNA cancer vaccine succeeds in a phase 3 melanoma trial	208c470b	intismeran,moderna,merck,melanoma,mrna vaccine
+2026-08-24	Magnetar observations offer the first evidence of a 90-year-old quantum prediction	ee849b62	magnetar,ixpe,vacuum birefringence,quantum electrodynamics,nasa
+2026-08-24	The Milky Way's fastest known star could reveal the spin of Sagittarius A*	3e5ee5aa	s301,sagittarius a*,gravity,eso,black hole spin
+2026-08-24	NASA's Roman telescope, launching this month, will hunt black holes that shred stars	fd2b3581	roman space telescope,nasa,tidal disruption,black holes,launch
