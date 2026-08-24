@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-06-25",
-      "topic_key": "saturn",
-      "text": "Saturn is the only planet less dense than water, so it would float."
-    },
-    {
       "date": "2026-06-26",
       "topic_key": "human microbiome",
       "text": "You are roughly half microbe by cell count"
@@ -284,14 +279,14 @@
       "date": "2026-08-24",
       "topic_key": "birthday problem",
       "text": "In a room of just 23 people, there is a better-than-even chance two share a birthday."
+    },
+    {
+      "date": "2026-08-25",
+      "topic_key": "human bones",
+      "text": "Babies are born with about 300 bones but adults have 206"
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-07-25",
-      "type": "quantitative",
-      "title_key": "twice-the-length"
-    },
     {
       "date": "2026-07-26",
       "type": "lateral",
@@ -426,14 +421,14 @@
       "date": "2026-08-24",
       "type": "logic",
       "title_key": "three-hats"
+    },
+    {
+      "date": "2026-08-25",
+      "type": "quantitative",
+      "title_key": "every-digit-counts"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-07-25",
-      "type": "anagram",
-      "title_key": "hidden-meanings"
-    },
     {
       "date": "2026-07-26",
       "type": "spellingbee",
@@ -568,6 +563,11 @@
       "date": "2026-08-24",
       "type": "ladder",
       "title_key": "on-the-mend"
+    },
+    {
+      "date": "2026-08-25",
+      "type": "anagram",
+      "title_key": "letter-perfect"
     }
   ]
 }

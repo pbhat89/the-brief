@@ -2326,3 +2326,32 @@ is empty until the first run.
 2026-08-24	Magnetar observations offer the first evidence of a 90-year-old quantum prediction	ee849b62	magnetar,ixpe,vacuum birefringence,quantum electrodynamics,nasa
 2026-08-24	The Milky Way's fastest known star could reveal the spin of Sagittarius A*	3e5ee5aa	s301,sagittarius a*,gravity,eso,black hole spin
 2026-08-24	NASA's Roman telescope, launching this month, will hunt black holes that shred stars	fd2b3581	roman space telescope,nasa,tidal disruption,black holes,launch
+2026-08-25	Singapore may raise the minimum social-media age beyond 13, PM Wong says	fe343a2d	singapore,lawrence wong,social media,minimum age,national day rally
+2026-08-25	Singapore plans to merge Semakau, Sudong and Bukom into one larger island	6e2da9e8	singapore,semakau,sudong,bukom,island merger
+2026-08-25	HSA recalls Medicube PDRN cream over suspected banned Sudan Red dye	5dc339fe	hsa,medicube,pdrn cream,sudan red,recall
+2026-08-25	Jewellery store manager who swapped gold for Taobao fakes jailed 2 years 4 months	849d5d66	darren wai mun jun,northpoint city,gold theft,taobao,singapore
+2026-08-25	India lifts its four-year ban on wheat exports with immediate effect	19914506	india,dgft,wheat export ban,trade,exports
+2026-08-25	India heads for a record August with about $10 billion of equity deals	97f594e6	india,equity market,life insurance corp,manipal health,ipo
+2026-08-25	India's 'Cockroach' student movement calls a fresh Delhi march for Sept 5	8c5bbe3e	india,cockroach janta party,delhi march,exam reform,protests
+2026-08-25	RBI chief says rupee-support measures should draw about $80 billion in inflows	9d83fd4f	reserve bank of india,sanjay malhotra,rupee,dollar inflows,india
+2026-08-25	US strikes another alleged drug boat in the eastern Pacific, killing two	6edbb29e	united states,southern command,drug boat,eastern pacific,strike
+2026-08-25	European leaders gather in Kyiv for Ukraine's Independence Day as Zelensky seeks air defence	628917b8	kyiv,ukraine,zelensky,andy burnham,independence day
+2026-08-25	UK to share Storm Shadow missile know-how so Ukraine can build its own	c9aae19c	uk,storm shadow,mbda,ukraine,missiles
+2026-08-25	Ceasefire-verification team deploys to eastern DR Congo to monitor the M23 truce	ba9b68d1	dr congo,m23,minembwe,south kivu,ceasefire
+2026-08-25	Hugging Face reportedly explores a sale at a valuation above $13 billion	1e737680	hugging face,acquisition,valuation,ai,sale
+2026-08-25	Nvidia in talks to back Perplexity at a valuation above $30 billion	bb5add2f	nvidia,perplexity,valuation,funding,ai search
+2026-08-25	XPeng's humanoid-robot unit raises over $900 million at a $6.3 billion valuation	8c5b72b3	xpeng,robotics,iron robot,idg capital,funding
+2026-08-25	General Intuition reportedly raising at a $6 billion valuation to push into robotics	350f168a	general intuition,valor equity,point72,robotics,funding
+2026-08-25	Bitcoin climbs toward $80,000 after a sharp three-day rally	c30fc809	bitcoin,rally,etf inflows,crypto,price
+2026-08-25	Nvidia heads into Wednesday earnings on a seven-session losing streak	c180c8ea	nvidia,earnings,stock,blackwell,losing streak
+2026-08-25	Treasury yields slip on a report Bessent could tap a $1 trillion cash pile for buybacks	a03c5f7b	treasury yields,scott bessent,buybacks,general account,warsh
+2026-08-25	Oil slips about 2% as markets await a US plan to isolate Iran	851c198d	oil,wti,brent,iran,prices
+2026-08-25	🏏 Jurel and Pant push India on before Sri Lanka slip to 8-2 in Colombo	a24d981e	dhruv jurel,rishabh pant,india,sri lanka,colombo
+2026-08-25	🏎️ Norris cuts into Antonelli's title lead as F1 heads to Monza	d7cfbddc	lando norris,kimi antonelli,f1,monza,title race
+2026-08-25	🏎️ Verstappen says his home-race crash could have been far worse	e605fdc4	max verstappen,zandvoort,crash,red bull,dutch grand prix
+2026-08-25	🎾 Star-studded US Open mixed doubles begins with Sabalenka and Djokovic top-seeded	afe325c3	us open,mixed doubles,aryna sabalenka,novak djokovic,tennis
+2026-08-25	🎾 Serena Williams returns to the US Open, partnering Alcaraz in mixed doubles	0994a639	serena williams,carlos alcaraz,us open,mixed doubles,tennis
+2026-08-25	Astronomers spot the first globular-cluster stellar stream beyond the Milky Way	aacef9a9	stellar stream,globular cluster,ugc 9050-dw1,dark matter,milky way
+2026-08-25	An accreting white-dwarf binary is tied to a mysterious long-period radio pulse	ca1e8a57	white dwarf,radio transient,askap,binary,long-period
+2026-08-25	NASA's Webb telescope images a hidden third planet around Beta Pictoris	02109b38	jwst,beta pictoris,exoplanet,nasa,webb
+2026-08-25	NASA's TESS finds a planet in a new way, through ripples in space-time	de6f5d97	tess,astrometry,exoplanet,super-jupiter,nasa
