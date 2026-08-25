@@ -2355,3 +2355,31 @@ is empty until the first run.
 2026-08-25	An accreting white-dwarf binary is tied to a mysterious long-period radio pulse	ca1e8a57	white dwarf,radio transient,askap,binary,long-period
 2026-08-25	NASA's Webb telescope images a hidden third planet around Beta Pictoris	02109b38	jwst,beta pictoris,exoplanet,nasa,webb
 2026-08-25	NASA's TESS finds a planet in a new way, through ripples in space-time	de6f5d97	tess,astrometry,exoplanet,super-jupiter,nasa
+2026-08-26	Haze risk rises as PSI nears unhealthy levels; NEA warns of a dry spell	ca84bfa0	Singapore,NEA,haze,PSI
+2026-08-26	Messaging apps must get a user's consent before adding them to group chats	c8edbc22	Singapore,WhatsApp,Telegram,online safety
+2026-08-26	Eleven arrested over a suspected unlicensed moneylending syndicate; over S$410,000 seized	734c1efa	Singapore,police,moneylending syndicate
+2026-08-26	Man, 59, taken back to Lengkok Bahru block where he allegedly murdered his neighbour	e876862a	Singapore,Lengkok Bahru,murder
+2026-08-26	Protesters clash with police in Patna a month after India's Gen Z demonstrations	67e8de5c	India,Patna,Bihar,protests
+2026-08-26	Porsche signs a $1.5 billion AI deal with Tata Consultancy Services	56ebed54	India,TCS,Porsche,AI deal
+2026-08-26	UN watchdog urges India to curb caste violence and hate crimes	97d158c3	India,UN,discrimination,caste
+2026-08-26	Update: India draws about $73 billion in 11 weeks to shore up the rupee	013664ab	India,RBI,rupee,NRI deposits
+2026-08-26	Israeli forces raid a UNRWA training centre in occupied East Jerusalem	d94c19e3	Israel,UNRWA,East Jerusalem,Ben-Gvir
+2026-08-26	US threatens secondary sanctions on countries keeping economic ties to Iran	1fa3747f	United States,Iran,sanctions,China
+2026-08-26	Zelensky says holding wartime elections could 'destroy' Ukraine	b6dfafc5	Ukraine,Zelensky,elections
+2026-08-26	Iran's parliament advances a plan to charge transit fees in the Strait of Hormuz	85f17a6e	Iran,Strait of Hormuz,transit fees
+2026-08-26	Apple launches a new Mac mini with the M6 chip, priced from $899	c59e1c45	Apple,Mac mini,M6 chip
+2026-08-26	Taiwan charges nine, including Nvidia and Supermicro staff, over AI-server exports to China	93ee1801	Taiwan,Nvidia,Supermicro,China,export controls
+2026-08-26	Broadcom seeks more than $60 billion in debt for an AI-chip deal tied to Anthropic	934f2545	Broadcom,Anthropic,AI chips,debt
+2026-08-26	AI-chip startup Fractile in talks for a $6.5 billion valuation after an Anthropic deal	119e851d	Fractile,Anthropic,AI chips,funding
+2026-08-26	Wall Street rises as the Dow logs a third straight gain while oil and yields fall	5f159069	S&P 500,Dow,markets,Treasury yields
+2026-08-26	Dick's Sporting Goods plunges about 30% in its worst day ever after cutting guidance	bcd01611	Dick's Sporting Goods,Foot Locker,stocks
+2026-08-26	Canada unveils retaliatory tariffs on about $20 billion of US goods as a trade war escalates	83a9b747	Canada,United States,Carney,tariffs
+2026-08-26	Oil drops sharply as the US pivots to economic pressure on Iran	180e7c53	oil,Brent,Iran,markets
+2026-08-26	🏏 India in command in Colombo as Sri Lanka trail by 238 on day three	81096462	India,Sri Lanka,Colombo Test,Prasidh Krishna
+2026-08-26	🎾 Siniakova and Patten stun top seeds Sabalenka and Djokovic at the US Open	56bb27e5	US Open,Sabalenka,Djokovic,mixed doubles
+2026-08-26	🎾 Serena Williams and Carlos Alcaraz reach the US Open mixed-doubles quarter-finals	eb5bdd14	US Open,Serena Williams,Alcaraz,mixed doubles
+2026-08-26	🏎️ Antonelli leads the title race as Formula 1 pauses before Monza	0845d5da	Formula 1,Antonelli,Norris,Monza
+2026-08-26	Physicists generate quantum entanglement using sunlight for the first time	1d292c2f	quantum entanglement,sunlight,Optica
+2026-08-26	New JWST images sharpen the debate over 'black hole stars' at cosmic dawn	3d0f8959	JWST,black hole stars,early universe
+2026-08-26	A method to reverse cellular ageing is heading into human trials	a4cecc13	cellular ageing,reprogramming,human trial
+2026-08-26	Physicists pinpoint the ideal crystal site for an ultra-accurate nuclear clock	20b0e9a3	nuclear clock,thorium-229,precision
