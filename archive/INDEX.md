@@ -2383,3 +2383,34 @@ is empty until the first run.
 2026-08-26	New JWST images sharpen the debate over 'black hole stars' at cosmic dawn	3d0f8959	JWST,black hole stars,early universe
 2026-08-26	A method to reverse cellular ageing is heading into human trials	a4cecc13	cellular ageing,reprogramming,human trial
 2026-08-26	Physicists pinpoint the ideal crystal site for an ultra-accurate nuclear clock	20b0e9a3	nuclear clock,thorium-229,precision
+2026-08-27	Amos Yee, 27, handed four new charges over 'alarming and racially divisive' online posts	0719004e	Singapore,Amos Yee,online content,charges
+2026-08-27	Singapore to ease dialect-film screening rules from September, with Mandarin subtitles required	f3e611ea	Singapore,MDDI,dialect films,Mandarin
+2026-08-27	Government studying an undersea tunnel to Pulau Tekong, with possible civilian use	5de05ac3	Singapore,Pulau Tekong,undersea tunnel
+2026-08-27	British man, 26, arrested after allegedly taking a S$350 jacket from a Changi Airport store	be2acade	Singapore,Changi Airport,theft,arrest
+2026-08-27	India opens missile production to private firms, sharing DRDO technology	32bcae75	India,DRDO,Rajnath Singh,missiles,defence
+2026-08-27	India pitches its growth story abroad as foreign investors pull money out	e181b8eb	India,foreign investors,equity market,outflows
+2026-08-27	India's central bank says the economy remains resilient as growth momentum holds	bdda8e3a	India,RBI,economy,rupee
+2026-08-27	India's monsoon toll passes 100 as Assam floods leave at least 87 dead	9c9f947a	India,Assam,monsoon,floods
+2026-08-27	Update: UK energy price cap to rise 4% to GBP1,723 from October as gas prices climb	9a6d8c88	UK,Ofgem,energy price cap,Andy Burnham
+2026-08-27	UK households' inflation expectations jump to 3.9%, the highest since May	e7a669af	UK,inflation expectations,cost of living,CPI
+2026-08-27	Himalayan flash floods kill at least 160 across Nepal and Tibet, hundreds missing	0b7cb09a	Nepal,Tibet,flash floods,Bhote Koshi
+2026-08-27	Ukraine says it hit 16 Russian targets, striking a Lukoil refinery and torching a warehouse	edf4c2e5	Ukraine,Russia,Lukoil,Zelensky,drone strikes
+2026-08-27	Update: Iran says the Strait of Hormuz stays closed despite a route deal with Oman	8b8b52f9	Iran,Oman,Strait of Hormuz,shipping
+2026-08-27	Yemen's Houthis claim an attack on a Saudi oil tanker in the Red Sea	ffb7bbb3	Yemen,Houthis,Saudi Arabia,Red Sea,oil tanker
+2026-08-27	Anthropic signs a $45 billion cloud-compute deal with Nscale	83bbb85e	Anthropic,Nscale,compute,AI infrastructure
+2026-08-27	Stability AI, maker of Stable Diffusion, raises $76 million in fresh funding	5fcc2374	Stability AI,Stable Diffusion,funding
+2026-08-27	Robotics startup Generalist reaches a $3 billion valuation	567c0eeb	Generalist,robotics,8VC,valuation
+2026-08-27	AI-safety startup Alice raises $140 million near a $1 billion valuation	c715f5d3	Alice,AI safety,Apax Digital,funding
+2026-08-27	Keenable emerges from stealth with $26 million to index the web for AI agents	df85f912	Keenable,Accel,AI agents,seed funding
+2026-08-27	Nvidia beats again as data-centre revenue jumps 117% to $89 billion	ee475098	Nvidia,earnings,data center,AI chips
+2026-08-27	Salesforce jumps 14% after hours on a beat lifted by an Anthropic-stake gain	8056dfab	Salesforce,earnings,Anthropic,stock
+2026-08-27	CrowdStrike pops 11% after posting its best quarter and raising guidance	80124998	CrowdStrike,George Kurtz,earnings,cybersecurity
+2026-08-27	S&P 500 ends little changed as core inflation holds at 3.3% before Nvidia	cfc882d0	S&P 500,core PCE,inflation,oil,markets
+2026-08-27	Jannik Sinner withdraws from the US Open with a knee injury	e40780fa	Jannik Sinner,US Open,knee injury,tennis
+2026-08-27	Svitolina and Monfils reach the US Open mixed-doubles semis	947d65dd	US Open,Svitolina,Monfils,mixed doubles
+2026-08-27	Antonelli to take a Monza grid penalty for an engine change	6cbdf3e6	Kimi Antonelli,Monza,grid penalty,Mercedes,F1
+2026-08-27	Verstappen's new Red Bull deal to 2030 ends silly-season speculation	899e63c7	Max Verstappen,Red Bull,contract,F1
+2026-08-27	Inouye telescope captures the sharpest-ever image of the Sun, revealing swirling instabilities	10106812	Inouye Solar Telescope,Sun,Kelvin-Helmholtz,NASA
+2026-08-27	Study finds Earth microbes could survive at the Moon's south pole	f732fe13	Moon,microbes,Artemis,contamination
+2026-08-27	Scientists map the neurons that build grammar in the human brain	755823f2	neuroscience,language,grammar,brain
+2026-08-27	Webb spots an exoplanet whose chemical make-up defies explanation	2c7a90d4	JWST,exoplanet,atmosphere,NASA

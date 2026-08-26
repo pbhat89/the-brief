@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-06-27",
-      "topic_key": "unicorn",
-      "text": "Scotland's national animal is the unicorn"
-    },
-    {
       "date": "2026-06-28",
       "topic_key": "westray to papa westray flight",
       "text": "The world's shortest scheduled commercial flight, Westray to Papa Westray, lasts under two minutes."
@@ -284,14 +279,14 @@
       "date": "2026-08-26",
       "topic_key": "sahara",
       "text": "The Sahara was a green savannah with lakes as recently as about 5,000 to 11,000 years ago"
+    },
+    {
+      "date": "2026-08-27",
+      "topic_key": "shark",
+      "text": "Sharks are older than trees"
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-07-27",
-      "type": "visual",
-      "title_key": "turn-the-triangle"
-    },
     {
       "date": "2026-07-28",
       "type": "logic",
@@ -426,14 +421,14 @@
       "date": "2026-08-26",
       "type": "lateral",
       "title_key": "brothers-and-sisters"
+    },
+    {
+      "date": "2026-08-27",
+      "type": "visual",
+      "title_key": "four-from-six"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-07-27",
-      "type": "grouping",
-      "title_key": "cross-purposes"
-    },
     {
       "date": "2026-07-28",
       "type": "ladder",
@@ -568,6 +563,11 @@
       "date": "2026-08-26",
       "type": "letterboxed",
       "title_key": "corner-to-corner"
+    },
+    {
+      "date": "2026-08-27",
+      "type": "spellingbee",
+      "title_key": "a-game"
     }
   ]
 }
