@@ -1,16 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-06-28",
-      "topic_key": "westray to papa westray flight",
-      "text": "The world's shortest scheduled commercial flight, Westray to Papa Westray, lasts under two minutes."
-    },
-    {
-      "date": "2026-06-29",
-      "topic_key": "bubble wrap",
-      "text": "Bubble wrap was originally invented as textured wallpaper, not packaging."
-    },
-    {
       "date": "2026-06-30",
       "topic_key": "antarctica",
       "text": "Antarctica is the largest desert on Earth"
@@ -284,19 +274,14 @@
       "date": "2026-08-27",
       "topic_key": "shark",
       "text": "Sharks are older than trees"
+    },
+    {
+      "date": "2026-08-29",
+      "topic_key": "unicorn",
+      "text": "Scotland's national animal is the unicorn."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-07-28",
-      "type": "logic",
-      "title_key": "who-broke-the-vase"
-    },
-    {
-      "date": "2026-07-29",
-      "type": "quantitative",
-      "title_key": "there-and-back"
-    },
     {
       "date": "2026-07-30",
       "type": "lateral",
@@ -426,19 +411,14 @@
       "date": "2026-08-27",
       "type": "visual",
       "title_key": "four-from-six"
+    },
+    {
+      "date": "2026-08-29",
+      "type": "logic",
+      "title_key": "all-labels-are-wrong"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-07-28",
-      "type": "ladder",
-      "title_key": "less-is-more"
-    },
-    {
-      "date": "2026-07-29",
-      "type": "letterboxed",
-      "title_key": "boxed-in"
-    },
     {
       "date": "2026-07-30",
       "type": "anagram",
@@ -568,6 +548,11 @@
       "date": "2026-08-27",
       "type": "spellingbee",
       "title_key": "a-game"
+    },
+    {
+      "date": "2026-08-29",
+      "type": "grouping",
+      "title_key": "for-the-birds"
     }
   ]
 }

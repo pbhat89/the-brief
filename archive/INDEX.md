@@ -2414,3 +2414,32 @@ is empty until the first run.
 2026-08-27	Study finds Earth microbes could survive at the Moon's south pole	f732fe13	Moon,microbes,Artemis,contamination
 2026-08-27	Scientists map the neurons that build grammar in the human brain	755823f2	neuroscience,language,grammar,brain
 2026-08-27	Webb spots an exoplanet whose chemical make-up defies explanation	2c7a90d4	JWST,exoplanet,atmosphere,NASA
+2026-08-29	Islandwide framework to defuse neighbour disputes and noise from Sept 1	0ba942fa	Singapore, mediation, neighbour disputes, Community Relations Unit
+2026-08-29	About 1.5 million Singaporeans to receive up to S$850 in GST Voucher cash this month	f376e035	Singapore, GST Voucher, cash payout, MediSave
+2026-08-29	BTO income ceiling raised to S$16,000, with more ballot chances for families	d26f0faa	Singapore, BTO, income ceiling, HDB
+2026-08-29	Government studying a lower age for singles to buy HDB flats	bd38c560	Singapore, HDB, singles, Chee Hong Tat
+2026-08-29	India's foreign-exchange reserves hit a record $729 billion	177474b3	India, RBI, forex reserves, rupee
+2026-08-29	India's top-rated firms borrow long as bets on RBI rate hikes grow	b14d6503	India, bonds, RBI, rate hikes
+2026-08-29	RBI shifts to steady intervention to defend the rupee	b5188712	India, RBI, rupee, intervention
+2026-08-29	UK economy hands Burnham an early boost before his first budget	75c88425	UK, economy, Andy Burnham, budget
+2026-08-29	Ukraine reinforces the Donetsk front to choke Russia's weapons supply	fc8e19f6	Ukraine, Russia, Donetsk, war
+2026-08-29	Qatar's PM visits Tehran to revive US-Iran talks amid a sanctions push	f6d52c04	Qatar, Iran, US, sanctions, diplomacy
+2026-08-29	US envoy warns a collapse of the Gaza truce would be a point of no return	b3593852	Gaza, Israel, Hamas, ceasefire
+2026-08-29	Six months on, the US-Israel war on Iran settles into a stalemate	71824721	Iran, US, Israel, Hormuz
+2026-08-29	Update: Nvidia agrees to buy Hugging Face for about $12.9 billion	ce2eaa39	Nvidia, Hugging Face, acquisition, AI
+2026-08-29	OpenAI, Anthropic, Google and 100-plus firms urge a surge in cyber defence	b0bd7b2f	OpenAI, Anthropic, cybersecurity, open letter
+2026-08-29	OpenAI starts showing ads on ChatGPT in India	3357b062	OpenAI, ChatGPT, ads, India
+2026-08-29	Consumer-AI startup Instinct raises $350 million at a $2.5 billion valuation	205115c1	Instinct, AI, funding, valuation
+2026-08-29	Apple sets a Sept 9 event for its first foldable iPhone	5e2efeda	Apple, foldable iPhone, iPhone Ultra, John Ternus
+2026-08-29	Fed's Warsh warns inflation is too high, lifting bets on a September rate hike	ca3b1d2d	Federal Reserve, Kevin Warsh, inflation, rate hike
+2026-08-29	Advent and Stripe abandon a $50 billion-plus pursuit of PayPal	1f3d0489	PayPal, Advent, Stripe, buyout
+2026-08-29	Marvell posts record revenue but shares slide on a cautious outlook	fc52349e	Marvell, earnings, chips, Google
+2026-08-29	Judge blocks the Pentagon's blacklisting of Anthropic as unlawful	8e9d119a	Anthropic, Pentagon, court, Rita Lin
+2026-08-29	India draw the Colombo Test as Dinusha defies them, but clinch the series 1-0	961672cd	cricket, India, Sri Lanka, Dinusha, Test
+2026-08-29	US Open begins Sunday with Alcaraz and Sabalenka defending, Sinner out injured	f9005230	tennis, US Open, Alcaraz, Sabalenka, Sinner
+2026-08-29	Ferrari bring an upgraded engine to Monza as Antonelli takes a home grid penalty	f7312432	F1, Monza, Ferrari, Antonelli
+2026-08-29	Hamilton set to extend at Ferrari as F1's driver market settles	24e0a2b9	F1, Hamilton, Ferrari, driver market
+2026-08-29	NASA's Roman Space Telescope is cleared for a Falcon Heavy launch	612dad9d	NASA, Roman Space Telescope, Falcon Heavy, exoplanets
+2026-08-29	Scientists map a brain circuit that acts as a brake on chronic pain	4fb13c67	neuroscience, chronic pain, brain circuit, Nature
+2026-08-29	JWST finds hidden faint stars making early galaxies far more massive	e7477afb	JWST, galaxies, initial mass function, astronomy
+2026-08-29	Europe's newest weather satellite reaches orbit on Ariane 6	48c5596b	ESA, MTG-I2, Ariane 6, weather satellite
