@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-06-30",
-      "topic_key": "antarctica",
-      "text": "Antarctica is the largest desert on Earth"
-    },
-    {
       "date": "2026-07-01",
       "topic_key": "pando",
       "text": "Pando, a single aspen, is one of Earth's heaviest living organisms"
@@ -279,14 +274,14 @@
       "date": "2026-08-29",
       "topic_key": "unicorn",
       "text": "Scotland's national animal is the unicorn."
+    },
+    {
+      "date": "2026-08-30",
+      "topic_key": "saturn",
+      "text": "Saturn would float in water"
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-07-30",
-      "type": "lateral",
-      "title_key": "seventh-floor"
-    },
     {
       "date": "2026-07-31",
       "type": "visual",
@@ -416,14 +411,14 @@
       "date": "2026-08-29",
       "type": "logic",
       "title_key": "all-labels-are-wrong"
+    },
+    {
+      "date": "2026-08-30",
+      "type": "quantitative",
+      "title_key": "long-way-round"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-07-30",
-      "type": "anagram",
-      "title_key": "self-portrait"
-    },
     {
       "date": "2026-07-31",
       "type": "spellingbee",
@@ -553,6 +548,11 @@
       "date": "2026-08-29",
       "type": "grouping",
       "title_key": "for-the-birds"
+    },
+    {
+      "date": "2026-08-30",
+      "type": "ladder",
+      "title_key": "ascent-of-man"
     }
   ]
 }

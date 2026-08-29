@@ -2443,3 +2443,30 @@ is empty until the first run.
 2026-08-29	Scientists map a brain circuit that acts as a brake on chronic pain	4fb13c67	neuroscience, chronic pain, brain circuit, Nature
 2026-08-29	JWST finds hidden faint stars making early galaxies far more massive	e7477afb	JWST, galaxies, initial mass function, astronomy
 2026-08-29	Europe's newest weather satellite reaches orbit on Ariane 6	48c5596b	ESA, MTG-I2, Ariane 6, weather satellite
+2026-08-30	About 2.4 million Singaporeans to get up to S$600 cost-of-living payout from Sep 9	54eb1cb6	Singapore,cost-of-living special payment,Budget 2026
+2026-08-30	Singaporean couple among the missing as MFA sends a crisis team to Nepal floods	a951f057	Singapore,MFA,Nepal floods
+2026-08-30	Government studying merger of southern islands into one bigger 'Western Island'	001e5634	Singapore,Western Island,National Day Rally
+2026-08-30	Ng Eng Hen says he stepped away to reclaim his life before politics	c8107c26	Ng Eng Hen,Singapore,retirement
+2026-08-30	India's new closing-auction system triggers a 4,000% options swing	b4dbb2d6	India,closing auction,options market
+2026-08-30	Indian bank stocks post their widest cross-exchange price gap in over 20 years	d9758bd1	India,IndusInd Bank,NSE,BSE
+2026-08-30	Modi stays India's top choice for prime minister as his popularity dips	eb0b9db4	Modi,India,opinion poll
+2026-08-30	Chancellor Healey calls fiscal discipline the 'bedrock' of the Labour government	1b07259e	John Healey,Andy Burnham,UK budget
+2026-08-30	King Harald V of Norway dies at 89 and his son becomes King Haakon VIII	06055b98	Harald V,Haakon VIII,Norway
+2026-08-30	Zelensky vows 1,000 drones a day as Russia intensifies strikes on Ukraine	c3d4a036	Zelensky,Ukraine,Russia,drones
+2026-08-30	Update: Nepal-Tibet flood toll passes 670 with about 2,500 still missing	38762ccc	Nepal,Tibet,floods
+2026-08-30	Indonesians storm parliament in anti-corruption protests that turn to riots	dab7c221	Indonesia,Jakarta,protests
+2026-08-30	Andreessen Horowitz raises $1.1 billion 'Machine Age Fund' for AI hardware	25372fd1	Andreessen Horowitz,Machine Age Fund,AI hardware
+2026-08-30	AI startup General Intuition raises at a $6 billion valuation to push into robotics	d95b53c4	General Intuition,robotics,funding
+2026-08-30	Waymo's next-generation robotaxi is heading to Munich	0b672f41	Waymo,robotaxi,Munich
+2026-08-30	Gap jumps about 13% on an earnings beat and a new Old Navy chief	319eceab	Gap,Old Navy,earnings
+2026-08-30	Affirm climbs after revenue and transaction volumes beat expectations	aac859f2	Affirm,earnings,GMV
+2026-08-30	Venezuela weighs quitting OPEC as its ties with the US deepen	db9667c5	Venezuela,OPEC,oil
+2026-08-30	Amazon to shut down Mechanical Turk after 21 years	f64887b3	Amazon,Mechanical Turk,AI
+2026-08-30	🎾 US Open main draw opens with Sabalenka chasing a third straight title	bdd1eb7e	US Open,Sabalenka,tennis
+2026-08-30	🎾 Sinner's absence leaves Alcaraz and Djokovic sharing a half of an open men's draw	546f727f	US Open,Alcaraz,Djokovic
+2026-08-30	🏎️ Norris emerges as Antonelli's biggest title threat after back-to-back wins	7a6ce17f	Norris,Antonelli,F1
+2026-08-30	🏎️ Wolff confirms Antonelli will take a Monza grid penalty for a new engine	a2acf88d	Antonelli,Monza,grid penalty
+2026-08-30	Update: NASA's Roman Space Telescope launches today on a Falcon Heavy	80860c01	NASA,Roman Space Telescope,Falcon Heavy
+2026-08-30	Artemis II astronauts receive the Congressional Space Medal of Honor	b64599b8	Artemis II,NASA,Space Medal of Honor
+2026-08-30	A 324-million-year-old fossil shows insects crawled onto land gradually	a8f9b063	insect fossil,Chosha praecursor,Nature
+2026-08-30	Satellites capture a Manhattan-sized iceberg breaking off Greenland's Petermann Glacier	de2ef5d7	ESA,Petermann Glacier,iceberg
