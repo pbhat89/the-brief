@@ -2470,3 +2470,34 @@ is empty until the first run.
 2026-08-30	Artemis II astronauts receive the Congressional Space Medal of Honor	b64599b8	Artemis II,NASA,Space Medal of Honor
 2026-08-30	A 324-million-year-old fossil shows insects crawled onto land gradually	a8f9b063	insect fossil,Chosha praecursor,Nature
 2026-08-30	Satellites capture a Manhattan-sized iceberg breaking off Greenland's Petermann Glacier	de2ef5d7	ESA,Petermann Glacier,iceberg
+2026-08-31	Man, 25, charged with murder of 29-year-old found dead on a Tuas South road	a66bda08	Singapore,Tuas South,murder charge
+2026-08-31	Tan See Leng says Singapore's next growth phase must create more value, not use more land	1a3fcf63	Singapore,Tan See Leng,economic growth
+2026-08-31	Arrest warrant issued for Lim Tean after he fails to surrender to begin jail term	ce1a1096	Singapore,Lim Tean,arrest warrant
+2026-08-31	Singaporean once reported missing in Vietnam arrested over alleged vape syndicate link	67854e75	Singapore,etomidate,vape syndicate
+2026-08-31	India rushes rescue teams to Nepal as flood toll climbs and citizens stay unreachable	4fbcccfd	India,Nepal floods,rescue teams
+2026-08-31	NSE targets a record $55 billion valuation in its September IPO	fb685ec9	India,NSE,IPO
+2026-08-31	RBI projects about $80 billion in inflows from measures to steady the rupee	99ac9ef0	India,RBI,rupee
+2026-08-31	Nepal set to turn to India for power after floods knock out hydro output	135db39c	India,Nepal,hydropower
+2026-08-31	Chancellor Healey vows a 'drama-free' Oct 28 budget within the fiscal rules	b47d43b6	UK,John Healey,budget
+2026-08-31	Burnham's government leaves the door open to a higher bank tax	7f062042	UK,Andy Burnham,bank tax
+2026-08-31	Burnham vows a 'huge transfer of power' from the Treasury to the north	b341316c	UK,Andy Burnham,devolution
+2026-08-31	Update: Nepal-Tibet flood toll climbs past 760 with more than 900 workers missing	01d9956b	Nepal,Tibet,floods
+2026-08-31	Russian strike on a munitions depot near Kyiv kills 38, the year's deadliest attack	9c27b1eb	Ukraine,Russia,Kyiv
+2026-08-31	Gaza ceasefire teeters as Israel escalates strikes after Kushner talks stall	debf1260	Gaza,Israel,Kushner
+2026-08-31	Ukraine sets a Russian refinery ablaze in Krasnodar in its deep-strike campaign	5c3650d2	Ukraine,Russia,refinery
+2026-08-31	OpenAI says its new 'Jalapeno' chips beat Nvidia's in internal tests	fb199a76	OpenAI,Nvidia,AI chips
+2026-08-31	Apple unveils new Mac mini and Mac Studio with major chip upgrades	8cf932ec	Apple,Mac Studio,chips
+2026-08-31	XPeng's robotics unit to raise $900 million from Alibaba and Tencent	e40c6eb1	XPeng,humanoid robot,Alibaba
+2026-08-31	Broadcom seeks more than $60 billion in debt to finance AI chips	960f2be1	Broadcom,AI chips,Anthropic
+2026-08-31	Meta agrees to a $16.7 billion settlement with US states over child safety	27a7e61c	Meta,settlement,child safety
+2026-08-31	Corn and wheat futures jump to their highest in more than three years	0035915c	corn,wheat,commodities
+2026-08-31	Quantum-computing firm Pasqal surges in its New York debut via a SPAC merger	ac6147da	Pasqal,quantum computing,SPAC
+2026-08-31	China's industrial profits climb 17.6% as Asia-Pacific markets end mixed	0ba98492	China,industrial profits,markets
+2026-08-31	🏎️ Norris wins a chaotic Dutch Grand Prix as Verstappen crashes out on lap 1	4a377ecc	Lando Norris,Dutch Grand Prix,Verstappen
+2026-08-31	🏎️ Antonelli takes a 59-point title lead into Monza	8b743150	Kimi Antonelli,championship,Monza
+2026-08-31	🏏 India rout Thailand by 94 runs to open their Women's Asia Cup campaign	f8cd370f	India,Thailand,Women's Asia Cup
+2026-08-31	🎾 Alcaraz opens his US Open title defence, his first match since an April wrist injury	9c990363	Carlos Alcaraz,US Open,tennis
+2026-08-31	Astronomers find a star, S301, whipping around the Milky Way's black hole	16fecf37	S301,Sagittarius A*,black hole
+2026-08-31	A four-carbon sugar is detected in an interstellar cloud	f6a88259	interstellar sugar,erythrulose,astrochemistry
+2026-08-31	Deep imaging reveals a swarm of bow-shock waves in the outer Helix Nebula	34562804	Helix Nebula,bow shocks,planetary nebula
+2026-08-31	A Cretaceous 'Age of Dinosaurs' seafloor is identified deep beneath the Pacific	76dbd745	Pacific Ocean,seafloor,geology

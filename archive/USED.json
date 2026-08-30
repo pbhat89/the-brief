@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-07-01",
-      "topic_key": "pando",
-      "text": "Pando, a single aspen, is one of Earth's heaviest living organisms"
-    },
-    {
       "date": "2026-07-02",
       "topic_key": "moon",
       "text": "The Moon is drifting away from Earth at about 3.8 cm a year."
@@ -279,14 +274,14 @@
       "date": "2026-08-30",
       "topic_key": "saturn",
       "text": "Saturn would float in water"
+    },
+    {
+      "date": "2026-08-31",
+      "topic_key": "flamingo",
+      "text": "Flamingos are born grey and turn pink from their diet"
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-07-31",
-      "type": "visual",
-      "title_key": "bookworm"
-    },
     {
       "date": "2026-08-01",
       "type": "logic",
@@ -416,14 +411,14 @@
       "date": "2026-08-30",
       "type": "quantitative",
       "title_key": "long-way-round"
+    },
+    {
+      "date": "2026-08-31",
+      "type": "lateral",
+      "title_key": "night-watchman"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-07-31",
-      "type": "spellingbee",
-      "title_key": "t-party"
-    },
     {
       "date": "2026-08-01",
       "type": "grouping",
@@ -553,6 +548,11 @@
       "date": "2026-08-30",
       "type": "ladder",
       "title_key": "ascent-of-man"
+    },
+    {
+      "date": "2026-08-31",
+      "type": "anagram",
+      "title_key": "back-to-school"
     }
   ]
 }
