@@ -2501,3 +2501,36 @@ is empty until the first run.
 2026-08-31	A four-carbon sugar is detected in an interstellar cloud	f6a88259	interstellar sugar,erythrulose,astrochemistry
 2026-08-31	Deep imaging reveals a swarm of bow-shock waves in the outer Helix Nebula	34562804	Helix Nebula,bow shocks,planetary nebula
 2026-08-31	A Cretaceous 'Age of Dinosaurs' seafloor is identified deep beneath the Pacific	76dbd745	Pacific Ocean,seafloor,geology
+2026-09-02	GetGo launches 'Drive to Malaysia', letting Singapore car-share users cross the Causeway	4d9f75f9	Singapore,GetGo,car-sharing
+2026-09-02	Man jailed 22 years and given 24 strokes for raping his teenage stepdaughter	f6b93070	Singapore,rape sentence,court
+2026-09-02	ECDA to hire 1,800 more infant-care educators by 2030 with expanded grants	0c2f0642	Singapore,ECDA,infant care
+2026-09-02	MTI to be renamed the Ministry of Energy, Trade and Industry from Oct 1	879bd2bb	Singapore,MTI,energy
+2026-09-02	India's economy grows a faster-than-expected 7.8% in the June quarter	0e6b06cc	India,GDP,growth
+2026-09-02	The rupee climbs to a two-month high as the RBI sells dollars to defend it	9f68a01f	India,rupee,RBI
+2026-09-02	Modi urges 'dialogue and diplomacy' and presses Putin to end the Ukraine war at the SCO	91b5d4ad	Modi,SCO,Putin
+2026-09-02	Update: India's new closing auction absorbs a record $4.2 billion in MSCI rebalancing	1b9608a5	India,closing auction,MSCI
+2026-09-02	UK borrowing costs hit their highest since 1998, halving Burnham's fiscal headroom	b24988ef	UK,gilt yields,John Healey
+2026-09-02	Tensions over migrants and welfare set to test Burnham's Labour government	6331b852	UK,Andy Burnham,migration
+2026-09-02	Foreigners rush to secure UK residency before Burnham's settlement clampdown	58111c40	UK,residency,settlement
+2026-09-02	UK energy price cap to rise 4% to £1,723 in October as gas prices climb	b0ca284a	UK,Ofgem,energy price cap
+2026-09-02	US forces strike IRGC targets in Iran after attacks on Hormuz shipping	7148ed1f	United States,Iran,Strait of Hormuz
+2026-09-02	SCO's Bishkek Declaration condemns strikes and sanctions on Iran as Xi and Putin reaffirm ties	760cddfc	SCO,Xi Jinping,Putin
+2026-09-02	Update: Nepal-Tibet flood toll passes 1,000 with more than 4,000 still missing	f0b2bc16	Nepal,Tibet,floods
+2026-09-02	Israeli strikes kill at least five in Gaza as the post-ceasefire toll passes 1,300	14b13158	Israel,Gaza,ceasefire
+2026-09-02	John Ternus takes over as Apple CEO and teases a 'huge launch next week'	b361c74f	Apple,John Ternus,CEO
+2026-09-02	Anthropic strikes a $35 billion cloud deal with Nvidia-backed Lambda	bfecfbd2	Anthropic,Lambda,cloud
+2026-09-02	Andreessen Horowitz's growth fund swells to $8.5 billion after a fresh $1.1bn raise	e6127548	Andreessen Horowitz,growth fund,AI
+2026-09-02	CrowdStrike tops estimates and adds security deals as AI lifts cyber demand	bc03d071	CrowdStrike,cybersecurity,earnings
+2026-09-02	US stocks slide as Treasury yields hit multiyear highs and Fed hike bets grow	2e2893cb	S&P 500,Treasury yields,Fed
+2026-09-02	Oil jumps above $94 after US strikes on Iran rattle the Strait of Hormuz	07e443be	oil,Brent,Strait of Hormuz
+2026-09-02	Gold tumbles about 2% to a two-week low as yields and the dollar climb	13716ad1	gold,Treasury yields,dollar
+2026-09-02	Bond traders rush to hedge as Treasury yields approach multiyear highs	1b6b8b4d	bonds,Treasury yields,hedging
+2026-09-02	Djokovic suffers his first Grand Slam opening-round exit since 2006, beaten by Navone	7ae53a81	Novak Djokovic,Mariano Navone,US Open
+2026-09-02	Alcaraz returns from a wrist injury with a straight-sets US Open win over Safiullin	5f56dc1b	Carlos Alcaraz,US Open,tennis
+2026-09-02	Sabalenka opens her US Open title defence with a straight-sets win over Osorio	0e910a37	Aryna Sabalenka,US Open,tennis
+2026-09-02	India and Pakistan head for a Women's Asia Cup group showdown on Sept 5	6f0bd01f	India,Pakistan,Women's Asia Cup
+2026-09-02	Formula 1's title fight arrives at Monza for the Italian Grand Prix	a9744aa1	Formula 1,Monza,Antonelli
+2026-09-02	A gene therapy that ferries interferon into tumours shows early promise against glioblastoma	a6058ddd	glioblastoma,Temferon,gene therapy
+2026-09-02	A Chinese fusion reactor pushes its plasma past a key density threshold	1fac32f7	fusion,plasma,China
+2026-09-02	Study finds most ocean species are shifting range and behaviour as seas warm	41f402f0	ocean species,climate change,marine biology
+2026-09-02	Scientists recover human DNA locked in ancient cave paintings	c0397f9c	ancient DNA,cave paintings,archaeology
