@@ -2534,3 +2534,35 @@ is empty until the first run.
 2026-09-02	A Chinese fusion reactor pushes its plasma past a key density threshold	1fac32f7	fusion,plasma,China
 2026-09-02	Study finds most ocean species are shifting range and behaviour as seas warm	41f402f0	ocean species,climate change,marine biology
 2026-09-02	Scientists recover human DNA locked in ancient cave paintings	c0397f9c	ancient DNA,cave paintings,archaeology
+2026-09-04	Only about 10% of the S$300m SG Culture Pass was used in its first year	968f2b86	singapore,sg culture pass,mccy
+2026-09-04	Man, 68, dies in a Lorong Lew Lian flat fire as about 30 residents are evacuated	a4ba6d7e	singapore,lorong lew lian,fire
+2026-09-04	A nationwide mediation framework for neighbour disputes takes effect from Sep 1	d33e6032	singapore,mediation,neighbour disputes
+2026-09-04	Hazy conditions may return to Singapore for up to two weeks amid a regional dry spell	4b462d4c	singapore,haze,weather
+2026-09-04	India's booming economy and its slumping stock market are increasingly at odds	1b779317	india,gdp,nifty,stock market
+2026-09-04	Update: The rupee strengthens as RBI measures draw a record US$136 billion in inflows	64722ff6	india,rupee,rbi,inflows
+2026-09-04	India and China agree on eight steps to ease border tensions before Xi's Delhi visit	e94d5275	india,china,border,xi jinping
+2026-09-04	India's return to active SCO diplomacy signals a careful recalibration under Modi	5a45f8b4	india,sco,modi,china
+2026-09-04	UK coverage is unavailable in today's edition	b61e7b4f	uk,placeholder,unavailable
+2026-09-04	Iran strikes US bases across the Gulf after American attacks on Iran kill 11	1dffda8e	iran,united states,gulf,kuwait
+2026-09-04	Xi Jinping makes his first visit to Egypt in a decade, courting the Middle East	a3bc9bdc	xi jinping,egypt,el-sisi
+2026-09-04	Zelensky warns airlines Russian airspace is closing as Putin alleges state terrorism	dc45874a	zelensky,putin,ukraine,russia
+2026-09-04	Maduro asks a US judge to dismiss drug charges, citing head-of-state immunity	7fea8ab8	maduro,venezuela,us court
+2026-09-04	Tens of thousands rally across Spain over the Ceuta migrant crisis	291ac9e5	spain,ceuta,sanchez,protest
+2026-09-04	Nvidia agrees to buy the AI platform Hugging Face for about US$12.93 billion	d11ea781	nvidia,hugging face,acquisition
+2026-09-04	AI coding startup Cognition seeks about US$1 billion at a US$47 billion valuation	f80bfdd1	cognition,devin,funding
+2026-09-04	OpenAI says its coming 'Astra' model crosses a 'Critical' cyber-risk threshold	5a5f485d	openai,astra,cybersecurity
+2026-09-04	Waymo goes on the offensive against Tesla's camera-only approach before Cybercab	2729db65	waymo,tesla,robotaxi
+2026-09-04	AI-security firm HiddenLayer raises a US$100 million Series B	8db86ebd	hiddenlayer,ai security,funding
+2026-09-04	US private payrolls rose just 38,000 in August, the weakest hiring since January	e66e27f6	adp,payrolls,jobs
+2026-09-04	The S&P 500 climbs 1.06% to 7,747.71 as Treasury yields ease	352a08a2	s&p 500,stocks,treasury yields
+2026-09-04	Brent crude tops US$96 a barrel after Iran fires missiles at Kuwait	887abc7a	brent,oil,strait of hormuz
+2026-09-04	Broadcom posts record US$29.6 billion in revenue on AI chips, but the shares slip	3490bd3b	broadcom,ai chips,earnings
+2026-09-04	F1 Ferrari unveils a Schumacher tribute livery as Monza race week begins	1a51496e	formula 1,ferrari,monza,schumacher
+2026-09-04	Tennis Sabalenka races past Iatcenko in 53 minutes as Pegula and Navarro advance	9bd84d4b	us open,sabalenka,tennis
+2026-09-04	Tennis Alcaraz recovers to beat Faria as Tiafoe and Medvedev also advance	465a7d54	us open,alcaraz,tennis
+2026-09-04	Cricket Sri Lanka thrash Indonesia by 75 runs at the Women's Asia Cup	1337702c	sri lanka,indonesia,womens asia cup
+2026-09-04	Cricket Pakistan beat Thailand by 35 runs, setting up a Sep 5 clash with India	393e149a	pakistan,thailand,womens asia cup
+2026-09-04	A personalized mRNA vaccine slows melanoma's return in a phase 3 trial	70638d8c	mrna vaccine,melanoma,moderna,merck
+2026-09-04	Mars's southern mantle is found to run 200-400C hotter than the north	3f10e593	mars,mantle,caltech
+2026-09-04	Hubble pins down the earliest known merger in the Milky Way's history	84ad8d70	hubble,milky way,merger
+2026-09-04	Global sea-surface temperature hits a record 21.10C, oddly timed in August	3b467575	ocean,sea surface temperature,copernicus
