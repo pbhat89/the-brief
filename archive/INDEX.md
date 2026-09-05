@@ -2566,3 +2566,37 @@ is empty until the first run.
 2026-09-04	Mars's southern mantle is found to run 200-400C hotter than the north	3f10e593	mars,mantle,caltech
 2026-09-04	Hubble pins down the earliest known merger in the Milky Way's history	84ad8d70	hubble,milky way,merger
 2026-09-04	Global sea-surface temperature hits a record 21.10C, oddly timed in August	3b467575	ocean,sea surface temperature,copernicus
+2026-09-06	52 Singaporeans are detained in China over a suspected pyramid scheme	cec64850	singapore,china,pyramid scheme,mfa
+2026-09-06	Four arrested over 'phantom worker' CPF fraud used to inflate foreign-worker quotas	0ac34b64	singapore,mom,cpf,phantom workers
+2026-09-06	Singaporean man, 40, arrested in Bangkok over dark-web drug and poison orders	c10f5e6a	singapore,bangkok,dark web,drugs
+2026-09-06	British man, 25, jailed after a drunken Changi Airport ruckus triggers an anti-hijack alert	6dfdcfb2	singapore,changi airport,court
+2026-09-06	A former finance secretary alleges India's 7.8% GDP print was flattered by revisions	fcebd467	india,gdp,garg,goyal
+2026-09-06	The RBI drains cash for longer as a liquidity surge tests its policy grip	aff3334f	india,rbi,liquidity,reverse repo
+2026-09-06	India's 'Cockroach' group calls off its Sept 5 Delhi march after the top court drops cases	15cca09b	india,cockroach janta party,supreme court,surya kant
+2026-09-06	Update: Xi Jinping is expected in New Delhi for his first India visit in seven years	18faf867	india,china,xi jinping,border
+2026-09-06	PM Andy Burnham faces his first Commons grilling, vowing to 'bring back hope'	ff2e506c	uk,andy burnham,parliament
+2026-09-06	Chancellor Healey is urged to rebuild the UK's fiscal buffer before the October budget	872c2920	uk,john healey,budget,fiscal
+2026-09-06	Burnham commits to the fiscal rules but declines to rule out more borrowing	b8d99f8f	uk,andy burnham,fiscal rules,borrowing
+2026-09-06	'Stop the boats' protesters in masks block England's Port of Dover	f679ccb3	uk,dover,immigration,protest
+2026-09-06	The US says it struck Iranian oil tankers it accuses of financing regional proxies	43968e7e	united states,iran,oil tankers,gulf
+2026-09-06	A Philippine court orders the arrest of Vice-President Sara Duterte over threats to Marcos	b6267a8b	philippines,sara duterte,marcos
+2026-09-06	Trump says Witkoff and Kushner will travel to 'end' Russia's war in Ukraine	c1075141	trump,witkoff,kushner,ukraine
+2026-09-06	The UN backs a new world map that shows Africa's true size	0eb9d29a	united nations,world map,africa
+2026-09-06	Two pilots are killed as a Greek fighter jet crashes at an air show	2d036a87	greece,fighter jet,air show,crash
+2026-09-06	Apple sets a Sept 9 event to launch its first foldable iPhone under CEO John Ternus	16e6f67d	apple,iphone,john ternus,foldable
+2026-09-06	US regulators open a probe into Tesla's Cybercab hours after its Austin launch	397918c2	tesla,cybercab,nhtsa,robotaxi
+2026-09-06	Meta releases its Muse Spark model with a steep discount for users who share prompts	08b51ed2	meta,muse spark,ai model
+2026-09-06	Palo Alto Networks buys IT-automation startup Console for about US$500 million	29a13fac	palo alto networks,console,acquisition
+2026-09-06	US payrolls jump 162,000 in August as the jobless rate holds at 4.1%	2ce1afdf	payrolls,jobs,unemployment
+2026-09-06	The 2-year Treasury yield hits its highest since January 2025 after the hot jobs report	2566de09	treasury yields,fed,rates
+2026-09-06	Tesla shares slide more than 6% after the Cybercab's rocky debut	197e0f15	tesla,stocks,cybercab
+2026-09-06	Lululemon shares plunge about 20% on a weak outlook	65178b89	lululemon,earnings,stocks
+2026-09-06	Gasly stuns Monza with a maiden pole for the Italian Grand Prix	321d241c	formula 1,gasly,monza,pole
+2026-09-06	Championship leader Antonelli will start at the back at Monza after an engine penalty	f05dac53	formula 1,antonelli,monza,penalty
+2026-09-06	India bowl Pakistan out for 55 and win by seven wickets at the Women's Asia Cup	38990961	india,pakistan,womens asia cup
+2026-09-06	Sabalenka and Pegula reach the US Open fourth round	32c220ea	us open,sabalenka,pegula
+2026-09-06	Alcaraz beats Wu Yibing to set up a US Open last-16 tie with Tommy Paul	5cc03382	us open,alcaraz,tommy paul
+2026-09-06	NASA's Nancy Grace Roman Space Telescope launches to map dark energy and hunt planets	1d9c1e0c	nasa,roman space telescope,dark energy
+2026-09-06	Webb finds a giant black hole that seems to have formed before its galaxy	b58348cd	webb,black hole,qso1
+2026-09-06	A new chicken-sized dinosaur from Spain puzzles palaeontologists	8f3d225a	dinosaur,foskeia pelendonum,spain
+2026-09-06	A new report warns the world will blow past the 1.5C limit within a few years	1d56b531	climate change,paris agreement,1.5c

@@ -1,16 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-07-06",
-      "topic_key": "tittle",
-      "text": "The dot above a lowercase i or j is called a tittle."
-    },
-    {
-      "date": "2026-07-07",
-      "topic_key": "pringles",
-      "text": "The inventor of the Pringles can was buried in one."
-    },
-    {
       "date": "2026-07-08",
       "topic_key": "cashew",
       "text": "Cashews are in the same family as poison ivy; raw cashew shells contain urushiol."
@@ -274,19 +264,14 @@
       "date": "2026-09-04",
       "topic_key": "computer bug",
       "text": "The first 'computer bug' was a literal moth found in Harvard's Mark II in 1947 and taped into the logbook."
+    },
+    {
+      "date": "2026-09-06",
+      "topic_key": "sun",
+      "text": "The Sun holds about 99.8% of the solar system's mass."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-08-05",
-      "type": "logic",
-      "title_key": "count-the-knights"
-    },
-    {
-      "date": "2026-08-06",
-      "type": "quantitative",
-      "title_key": "trailing-off"
-    },
     {
       "date": "2026-08-07",
       "type": "lateral",
@@ -401,19 +386,14 @@
       "date": "2026-09-04",
       "type": "logic",
       "title_key": "kings-cellar"
+    },
+    {
+      "date": "2026-09-06",
+      "type": "quantitative",
+      "title_key": "crossing-in-the-dark"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-08-05",
-      "type": "spellingbee",
-      "title_key": "space-case"
-    },
-    {
-      "date": "2026-08-06",
-      "type": "grouping",
-      "title_key": "something-fishy"
-    },
     {
       "date": "2026-08-07",
       "type": "ladder",
@@ -528,6 +508,11 @@
       "date": "2026-09-04",
       "type": "letterboxed",
       "title_key": "clear-a-path"
+    },
+    {
+      "date": "2026-09-06",
+      "type": "grouping",
+      "title_key": "mixed-company"
     }
   ]
 }
