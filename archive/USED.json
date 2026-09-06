@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-07-08",
-      "topic_key": "cashew",
-      "text": "Cashews are in the same family as poison ivy; raw cashew shells contain urushiol."
-    },
-    {
       "date": "2026-07-09",
       "topic_key": "vantablack",
       "text": "Vantablack absorbs up to 99.965% of visible light using carbon nanotubes."
@@ -269,14 +264,14 @@
       "date": "2026-09-06",
       "topic_key": "sun",
       "text": "The Sun holds about 99.8% of the solar system's mass."
+    },
+    {
+      "date": "2026-09-07",
+      "topic_key": "bubble wrap",
+      "text": "Bubble wrap was not invented to protect packages. In 1957, engineers Alfred Fielding and Marc Chavannes sealed two shower curtains together and first tried to sell the bubbly sheet as textured wallpaper, and then as greenhouse insulation. Only later did their company, Sealed Air, market it as protective packaging — the use that made it famous."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-08-07",
-      "type": "lateral",
-      "title_key": "photograph"
-    },
     {
       "date": "2026-08-08",
       "type": "visual",
@@ -391,14 +386,14 @@
       "date": "2026-09-06",
       "type": "quantitative",
       "title_key": "crossing-in-the-dark"
+    },
+    {
+      "date": "2026-09-07",
+      "type": "lateral",
+      "title_key": "glass-of-water"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-08-07",
-      "type": "ladder",
-      "title_key": "head-to-tail"
-    },
     {
       "date": "2026-08-08",
       "type": "letterboxed",
@@ -513,6 +508,11 @@
       "date": "2026-09-06",
       "type": "grouping",
       "title_key": "mixed-company"
+    },
+    {
+      "date": "2026-09-07",
+      "type": "ladder",
+      "title_key": "cats-and-dogs"
     }
   ]
 }

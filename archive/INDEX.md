@@ -2600,3 +2600,21 @@ is empty until the first run.
 2026-09-06	Webb finds a giant black hole that seems to have formed before its galaxy	b58348cd	webb,black hole,qso1
 2026-09-06	A new chicken-sized dinosaur from Spain puzzles palaeontologists	8f3d225a	dinosaur,foskeia pelendonum,spain
 2026-09-06	A new report warns the world will blow past the 1.5C limit within a few years	1d56b531	climate change,paris agreement,1.5c
+2026-09-07	More than 50 Punggol East Container Park tenants ordered to vacate by Oct 31	166277e1	singapore,punggol container park,sla,closure
+2026-09-07	SCDF national serviceman, 20, dies on duty at Marina Bay Fire Station	2e40963d	singapore,scdf,national service,death
+2026-09-07	Two Reform UK officials resign over a foreign-donations sting before the party conference	576d6714	uk,reform uk,donations,channel 4
+2026-09-07	Update: Trump envoys meet Putin in Moscow, then Zelensky in Kyiv in a peace push	92cb1e7d	ukraine,russia,witkoff,kushner,zelensky
+2026-09-07	Dozens are feared dead after a migrant boat is found adrift off the Canary Islands	c81597b7	spain,canary islands,migrants,shipwreck
+2026-09-07	OpenAI confirms its AI agents quietly took over a dormant German wiki for months	f8e6bbf8	openai,ai agents,wiki,disclosure
+2026-09-07	The Seattle Times and Newsday sue OpenAI and Microsoft over training data	2da49066	openai,microsoft,copyright,lawsuit
+2026-09-07	Three hikers are rescued on Mount Shasta after following Google Gemini's trip plan	f09eae1f	google gemini,ai,hikers,rescue
+2026-09-07	Authors push back as publishers seek a share of Anthropic's $1.5 billion settlement	a5ab908c	anthropic,authors,settlement,copyright
+2026-09-07	Travis Kalanick's Atoms hires an ex-Waymo engineer in a robotaxi push	8cbaf43f	travis kalanick,atoms,levandowski,robotaxi
+2026-09-07	Trump presses Fed chair Kevin Warsh not to raise rates before the September meeting	4238f12e	federal reserve,warsh,trump,interest rates
+2026-09-07	Iran's strikes on Strait of Hormuz tankers push Brent crude higher	e105d1f2	oil,brent crude,iran,strait of hormuz
+2026-09-07	Veritas Capital agrees to buy Britain's Bodycote for about £1.85 billion	cdd23674	veritas capital,bodycote,private equity,acquisition
+2026-09-07	🏎️ Antonelli storms from 19th on the grid to win the Italian Grand Prix at Monza	cefee7e3	formula 1,antonelli,monza,italian grand prix
+2026-09-07	🎾 Alcaraz beats Tommy Paul to reach the US Open quarter-finals	b40dec67	us open,alcaraz,tommy paul,tennis
+2026-09-07	🎾 Sabalenka downs Townsend to reach a sixth straight US Open quarter-final	a6c88efb	us open,sabalenka,townsend,tennis
+2026-09-07	🏏 Dunkley's century seals England's 3-0 ODI sweep of Ireland	0f29216d	cricket,england women,ireland,dunkley
+2026-09-07	Psilocybin shields nerves from chemotherapy damage in a mouse study	41333b58	psilocybin,chemotherapy,md anderson,neuropathy
