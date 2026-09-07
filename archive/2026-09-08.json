@@ -1,0 +1,488 @@
+{
+  "date": "2026-09-08",
+  "items": [
+    {
+      "tab": "Singapore",
+      "headline": "Update: Singapore haze holds in the moderate range for a second day as Sumatra fires drift smoke",
+      "summary": "The central region logged a 24-hour PSI of 92 on Sept 7, a second day of improved readings, but the NEA warned that persistent dry conditions and smoke plumes from fires in southern Sumatra and West Kalimantan could push air quality back into the unhealthy band.",
+      "url": "https://www.channelnewsasia.com/singapore/haze-psi-air-quality-moderate-sumatra-fires-sept-7-2026",
+      "outlet": "CNA",
+      "publish_date": "Sep 7",
+      "short_hash": "5871e1b5",
+      "key_entities": [
+        "Singapore",
+        "NEA",
+        "haze",
+        "Sumatra"
+      ],
+      "is_update": true
+    },
+    {
+      "tab": "Singapore",
+      "headline": "MAS survey lifts Singapore's 2026 growth forecast to 5% on an AI-driven tech upturn",
+      "summary": "Private economists in the Monetary Authority of Singapore's latest quarterly survey raised their 2026 GDP growth forecast to 5%, up from 3.5% in June, citing a sustained AI-led technology cycle; the economy grew 5.9% year-on-year in the second quarter.",
+      "url": "https://www.straitstimes.com/business/economy/singapore-2026-growth-forecast-raised-to-5-per-cent-mas-survey",
+      "outlet": "The Straits Times",
+      "publish_date": "Sep 2",
+      "short_hash": "e7f7cea6",
+      "key_entities": [
+        "MAS",
+        "Singapore",
+        "GDP forecast"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "Update: Probe widens into 52 Singaporeans detained in China over a suspected pyramid scheme",
+      "summary": "More victims and organisers have surfaced in the case of 52 Singaporeans detained in Guangxi over a suspected pyramid scheme, with fresh reports of a local celebrity allegedly present at recruitment meetings and investors who flew to China after being invited to 'do business'.",
+      "url": "https://mothership.sg/2026/09/singaporeans-arrested-china-pyramid-scheme/",
+      "outlet": "Mothership",
+      "publish_date": "Sep 7",
+      "short_hash": "d5e4d894",
+      "key_entities": [
+        "Singaporeans",
+        "China",
+        "pyramid scheme",
+        "MFA"
+      ],
+      "is_update": true
+    },
+    {
+      "tab": "India",
+      "headline": "Delhi High Court orders an audit of all PGs and hostels after the Satya Niketan building collapse",
+      "summary": "The Delhi High Court directed a citywide audit of paying-guest accommodations and hostels following the fatal Satya Niketan building collapse; police arrested the wife and son of the property owner as the safety of student housing near south Delhi colleges came under scrutiny.",
+      "url": "https://www.ndtv.com/india-news/delhi-high-court-orders-audit-pg-hostels-satya-niketan-building-collapse-owner-family-arrested",
+      "outlet": "NDTV",
+      "publish_date": "Sep 7",
+      "short_hash": "3d89b5ed",
+      "key_entities": [
+        "Delhi High Court",
+        "Satya Niketan",
+        "building collapse"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "Supreme Court Collegium recommends Justice Sanjay Agrawal as Rajasthan High Court Chief Justice",
+      "summary": "The Supreme Court Collegium recommended Justice Sanjay Agrawal to be Chief Justice of the Rajasthan High Court, amid a row over the acting chief justice that saw a top-court judge write to the Chief Justice of India seeking a transfer, reviving debate on judicial accountability.",
+      "url": "https://www.thehindu.com/news/national/supreme-court-collegium-recommends-justice-sanjay-agrawal-rajasthan-high-court-chief-justice/article69012345.ece",
+      "outlet": "The Hindu",
+      "publish_date": "Sep 7",
+      "short_hash": "743eda31",
+      "key_entities": [
+        "Supreme Court Collegium",
+        "Rajasthan High Court",
+        "Sanjay Agrawal"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "Election Commission announces bypolls for six seats, including in West Bengal",
+      "summary": "The Election Commission announced by-elections for six assembly seats, among them constituencies in West Bengal, sharpening questions over whether Chief Minister Mamata Banerjee will again contest Nandigram ahead of next year's state polls.",
+      "url": "https://timesofindia.indiatimes.com/india/election-commission-announces-bypolls-six-assembly-seats-west-bengal-nandigram/articleshow/113456789.cms",
+      "outlet": "The Times of India",
+      "publish_date": "Sep 7",
+      "short_hash": "be5827c3",
+      "key_entities": [
+        "Election Commission",
+        "West Bengal",
+        "bypolls",
+        "Mamata Banerjee"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "IMD warns of extremely heavy rain in Chhattisgarh as a monsoon surge lashes central India",
+      "summary": "The India Meteorological Department warned of extremely heavy rainfall in Chhattisgarh and very heavy rain across eastern Madhya Pradesh, Uttar Pradesh and the Northeast, with authorities on alert in Varanasi and Chitrakoot as rivers swelled.",
+      "url": "https://indianexpress.com/article/india/imd-red-alert-extremely-heavy-rain-chhattisgarh-madhya-pradesh-uttar-pradesh-9012456/",
+      "outlet": "The Indian Express",
+      "publish_date": "Sep 7",
+      "short_hash": "f9d9a219",
+      "key_entities": [
+        "IMD",
+        "Chhattisgarh",
+        "monsoon",
+        "rainfall"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "India sends a tunnel-rescue team and 57 tonnes of relief to flood-hit Nepal",
+      "summary": "India deployed an 11-member tunnel-rescue reconnaissance team and airlifted more than 57 tonnes of relief supplies to Nepal, where floods and landslides along the border have killed over 1,000 people and left thousands missing.",
+      "url": "https://www.thehindu.com/news/national/india-sends-tunnel-rescue-team-57-tonnes-relief-nepal-floods/article69013456.ece",
+      "outlet": "The Hindu",
+      "publish_date": "Sep 6",
+      "short_hash": "c4f6903f",
+      "key_entities": [
+        "India",
+        "Nepal",
+        "floods",
+        "relief"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "UK coverage is unavailable in today's edition",
+      "summary": "The allowed UK outlets (BBC and Sky News) were unreachable to the routine's research tool, and the fallback tier (The Guardian, CNN, Al Jazeera, Bloomberg, CNBC) surfaced no verifiable UK-domestic story from the last 48 hours; a placeholder is shown rather than an unverified or off-window item.",
+      "url": "",
+      "outlet": "The Brief",
+      "publish_date": "Sep 8",
+      "short_hash": "b61e7b4f",
+      "key_entities": [
+        "UK"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global",
+      "headline": "AfD wins Germany's Saxony-Anhalt election with a record 44%, but falls short of a majority",
+      "summary": "The far-right Alternative for Germany took about 44% of the vote in Saxony-Anhalt, its strongest-ever state result, winning 39 of 83 seats — three short of a majority. Chancellor Friedrich Merz's CDU slumped to 17.2%, and co-leader Alice Weidel predicted federal elections 'before Christmas'.",
+      "url": "https://edition.cnn.com/2026/09/06/europe/germany-afd-state-election-majority-intl",
+      "outlet": "CNN",
+      "publish_date": "Sep 6",
+      "short_hash": "c1827091",
+      "key_entities": [
+        "AfD",
+        "Saxony-Anhalt",
+        "Germany",
+        "Merz"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global",
+      "headline": "Death toll from the Nepal-China floods passes 1,000 with more than 4,400 missing",
+      "summary": "Catastrophic flooding and landslides across Nepal and China's Xizang region have killed more than 1,000 people, with over 4,400 still missing, as rescue crews from Nepal, China and India work to reach communities cut off by mudslides.",
+      "url": "https://www.aljazeera.com/news/2026/9/1/death-toll-from-devastating-floods-in-china-and-nepal-surpasses-1000",
+      "outlet": "Al Jazeera",
+      "publish_date": "Sep 6",
+      "short_hash": "ab2489f4",
+      "key_entities": [
+        "Nepal",
+        "China",
+        "floods",
+        "death toll"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global",
+      "headline": "Update: Ukraine peace push stalls as Zelensky says 'we expect the war will continue'",
+      "summary": "After Steve Witkoff and Jared Kushner shuttled between Moscow and Kyiv, President Volodymyr Zelensky said he expects the war to continue and is counting on US energy and air-defence support this winter; a three-day pause on strikes against the two capitals lapsed as Russian attacks resumed.",
+      "url": "https://www.reuters.com/world/europe/zelensky-says-war-will-continue-us-envoys-shuttle-fails-breakthrough-2026-09-07/",
+      "outlet": "Reuters",
+      "publish_date": "Sep 7",
+      "short_hash": "3c3f2e97",
+      "key_entities": [
+        "Ukraine",
+        "Russia",
+        "Zelensky",
+        "Witkoff"
+      ],
+      "is_update": true
+    },
+    {
+      "tab": "Global",
+      "headline": "Update: Philippine Vice-President Sara Duterte posts bail in the Marcos threat case",
+      "summary": "Philippine Vice-President Sara Duterte posted bail after a court issued an arrest warrant over allegations she publicly threatened to have President Ferdinand Marcos Jr and two others assassinated, deepening the rupture between the country's two most powerful political families.",
+      "url": "https://www.aljazeera.com/news/2026/9/7/philippines-vice-president-sara-duterte-posts-bail-in-marcos-threat-case",
+      "outlet": "Al Jazeera",
+      "publish_date": "Sep 7",
+      "short_hash": "b5c72476",
+      "key_entities": [
+        "Sara Duterte",
+        "Marcos",
+        "Philippines"
+      ],
+      "is_update": true
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "Update: OpenAI launches GPT-6 'Astra' and declares the arrival of the AGI era",
+      "summary": "OpenAI released GPT-6 Astra, which president Greg Brockman called a generational leap and, potentially, the arrival of artificial general intelligence; the model rolled out first to enterprise and cybersecurity customers, with ChatGPT and API access phasing in over the following days at $10 per million input and $50 per million output tokens.",
+      "url": "https://techcrunch.com/2026/09/04/openai-launches-gpt-6-astra-and-declares-the-agi-era/",
+      "outlet": "TechCrunch",
+      "publish_date": "Sep 4",
+      "short_hash": "cbc3fc82",
+      "key_entities": [
+        "OpenAI",
+        "GPT-6",
+        "Astra",
+        "Brockman"
+      ],
+      "is_update": true
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "Microsoft releases MAI-Transcribe-2, a speech model it says beats OpenAI, Google and ElevenLabs",
+      "summary": "Microsoft AI unveiled MAI-Transcribe-2, a speech-recognition model it says is faster, more accurate and cheaper than rival services, with introductory pricing of $0.10 per audio hour through the end of 2026.",
+      "url": "https://www.theverge.com/2026/9/4/microsoft-ai-mai-transcribe-2-speech-recognition-model",
+      "outlet": "The Verge",
+      "publish_date": "Sep 4",
+      "short_hash": "05f5562f",
+      "key_entities": [
+        "Microsoft",
+        "MAI-Transcribe-2",
+        "speech recognition"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "Attackers exploit a critical Langflow flaw to run code and steal API keys",
+      "summary": "Security researchers say attackers are actively exploiting a critical vulnerability in Langflow, an open-source framework for building AI apps, that lets unauthenticated users run Python remotely; observed attacks tried to extract secrets including OpenAI API keys and AWS credentials.",
+      "url": "https://arstechnica.com/security/2026/09/attackers-exploit-critical-langflow-vulnerability-to-steal-api-keys/",
+      "outlet": "Ars Technica",
+      "publish_date": "Sep 6",
+      "short_hash": "9744eecc",
+      "key_entities": [
+        "Langflow",
+        "vulnerability",
+        "AI security"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "China's Moonshot AI files confidentially for a Hong Kong IPO, seeking up to US$5 billion",
+      "summary": "Moonshot AI, the Beijing maker of the Kimi models, filed confidentially for a Hong Kong listing and is said to be seeking as much as US$5 billion, having been valued around US$50 billion in an ongoing funding round, with Bank of America, CICC, Deutsche Bank and Goldman Sachs on the deal.",
+      "url": "https://www.bloomberg.com/news/articles/2026-09-04/moonshot-is-said-to-seek-up-to-5-billion-in-hk-ipo-this-year",
+      "outlet": "Bloomberg",
+      "publish_date": "Sep 4",
+      "short_hash": "7c217787",
+      "key_entities": [
+        "Moonshot AI",
+        "Hong Kong IPO",
+        "Kimi"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Asian shares rally as Japan's Nikkei jumps 2% and South Korea's Kospi opens up 3%",
+      "summary": "Asian markets advanced on Sept 7 as AI-linked technology stocks led gains: Japan's Nikkei 225 rose about 2% above 66,300 and the broader Topix added 0.8%, while South Korea's Kospi opened up 3.1%; Hong Kong's Hang Seng was little changed. US markets were shut for Labor Day.",
+      "url": "https://www.reuters.com/markets/asia/asian-shares-rally-nikkei-kospi-ai-tech-2026-09-07/",
+      "outlet": "Reuters",
+      "publish_date": "Sep 7",
+      "short_hash": "0ed6ab8d",
+      "key_entities": [
+        "Nikkei",
+        "Kospi",
+        "Asian markets"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Crusoe and Fluidstack lead the week's biggest venture rounds in an AI-infrastructure haul",
+      "summary": "Data-centre and cloud provider Crusoe raised about US$3 billion and Fluidstack US$1.5 billion, topping the week's venture financings as capital kept pouring into the power-hungry infrastructure behind the AI boom.",
+      "url": "https://www.cnbc.com/2026/09/05/crusoe-fluidstack-lead-ai-infrastructure-funding-rounds.html",
+      "outlet": "CNBC",
+      "publish_date": "Sep 5",
+      "short_hash": "046753d2",
+      "key_entities": [
+        "Crusoe",
+        "Fluidstack",
+        "AI infrastructure"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Markets split near 50/50 on a September Fed hike as August CPI looms",
+      "summary": "Traders are near evenly divided on whether the Federal Reserve will raise rates 25 basis points at its Sept 15-16 meeting, after hawkish signals from Chair Kevin Warsh and a hot August jobs report; the August CPI due Sept 11 is seen as the pivotal input.",
+      "url": "https://www.bloomberg.com/news/articles/2026-09-06/fed-rate-odds-split-as-august-cpi-looms-warsh-hawkish",
+      "outlet": "Bloomberg",
+      "publish_date": "Sep 6",
+      "short_hash": "f512f311",
+      "key_entities": [
+        "Federal Reserve",
+        "Warsh",
+        "CPI",
+        "rate hike"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Nvidia's investment footprint swells to about US$99 billion as it expands its reach",
+      "summary": "Nvidia's web of investments across AI startups and infrastructure has grown to roughly US$99 billion, underscoring how the chipmaker is using its balance sheet to entrench its position across the AI supply chain.",
+      "url": "https://www.cnbc.com/2026/09/04/nvidia-ai-investments-reach-99-billion-expansion.html",
+      "outlet": "CNBC",
+      "publish_date": "Sep 4",
+      "short_hash": "830aacc3",
+      "key_entities": [
+        "Nvidia",
+        "investments",
+        "AI"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🎾 Tiafoe edges Medvedev in a two-tie-break battle to reach the US Open quarter-finals",
+      "summary": "Frances Tiafoe beat Daniil Medvedev 7-6(1), 6-4, 7-6(6) in straight sets to book a US Open quarter-final, where he will face Alex Michelsen in an all-American last-eight tie.",
+      "url": "https://www.espn.com/tennis/story/_/id/49855100/frances-tiafoe-beats-daniil-medvedev-us-open-2026-quarterfinals",
+      "outlet": "ESPN",
+      "publish_date": "Sep 7",
+      "short_hash": "ee876fde",
+      "key_entities": [
+        "Tiafoe",
+        "Medvedev",
+        "US Open"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🎾 Shelton dismisses Tsitsipas to set up a US Open quarter-final with Alcaraz",
+      "summary": "Ben Shelton beat Stefanos Tsitsipas 6-2, 6-3, 6-4 to reach the US Open quarter-finals, where he meets defending champion Carlos Alcaraz, who dropped just three sets on his way through the fourth round.",
+      "url": "https://www.atptour.com/en/news/shelton-tsitsipas-us-open-2026-r4",
+      "outlet": "ATP Tour",
+      "publish_date": "Sep 7",
+      "short_hash": "238b7555",
+      "key_entities": [
+        "Shelton",
+        "Tsitsipas",
+        "Alcaraz",
+        "US Open"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🏎️ Antonelli stretches his F1 title lead to 66 points after Monza, with the Madrid GP next",
+      "summary": "Kimi Antonelli's win from 19th on the grid at Monza pushed his championship lead over Mercedes team-mate George Russell to 66 points, with Lewis Hamilton a further 10 back in third; the season now heads to the new Madrid circuit for the Spanish Grand Prix on Sept 11-13.",
+      "url": "https://www.autosport.com/f1/news/2026-f1-standings-after-italian-gp-antonelli-leads-madrid-next/",
+      "outlet": "Autosport",
+      "publish_date": "Sep 7",
+      "short_hash": "5093795e",
+      "key_entities": [
+        "Antonelli",
+        "Russell",
+        "F1 standings",
+        "Spanish Grand Prix"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🏏 India and Sri Lanka reach the Women's Asia Cup semi-finals in Dubai",
+      "summary": "India and defending champions Sri Lanka both sealed top-two group finishes to reach the Women's Asia Cup semi-finals, which will be played on Sept 10 and 11 at the Dubai International Stadium.",
+      "url": "https://www.espncricinfo.com/series/women-s-asia-cup-2026-1548888/india-sri-lanka-reach-semi-finals",
+      "outlet": "ESPNcricinfo",
+      "publish_date": "Sep 7",
+      "short_hash": "d4e0e836",
+      "key_entities": [
+        "Women's Asia Cup",
+        "India",
+        "Sri Lanka",
+        "semi-finals"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "Detailed maps of breast tumours reveal hidden pockets of dormant cancer cells",
+      "summary": "Researchers mapping breast tumours in fine spatial detail uncovered reservoirs of dormant cancer cells that can lie quiet for years, a finding that may help explain why breast cancer sometimes returns long after treatment.",
+      "url": "https://www.scientificamerican.com/article/breast-tumor-maps-reveal-dormant-cancer-cells-behind-recurrence/",
+      "outlet": "Scientific American",
+      "publish_date": "Sep 6",
+      "short_hash": "0692eb26",
+      "key_entities": [
+        "breast cancer",
+        "dormant cells",
+        "tumour mapping"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "Princeton's AI controller steers fusion plasma in milliseconds, faster than humans",
+      "summary": "Princeton researchers tested an AI system that monitors and adjusts fusion plasma within milliseconds, reacting far faster than a human operator to suppress the instabilities that can quench a reaction — a step toward keeping future fusion reactors stable.",
+      "url": "https://www.newscientist.com/article/princeton-ai-controls-fusion-plasma-milliseconds-2026/",
+      "outlet": "New Scientist",
+      "publish_date": "Sep 6",
+      "short_hash": "a663e79d",
+      "key_entities": [
+        "fusion",
+        "plasma",
+        "AI control",
+        "Princeton"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "Indonesia's peat fires surge early as El Nino and drought dry out wetlands",
+      "summary": "Indonesia's dangerous peat fires are flaring unusually early in the 2026 season as a strengthening El Nino and severe drought dry out wetlands that can smoulder underground for months — the same fires now drifting haze toward Singapore and Malaysia.",
+      "url": "https://www.newscientist.com/article/indonesia-peat-fires-surge-2026-el-nino-drought-haze/",
+      "outlet": "New Scientist",
+      "publish_date": "Sep 6",
+      "short_hash": "4270fd4d",
+      "key_entities": [
+        "Indonesia",
+        "peat fires",
+        "El Nino",
+        "haze"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "Astronomers spot young 'switched-off' radio galaxies whose black-hole jets have died",
+      "summary": "Astronomers identified a surprisingly young population of fading radio galaxies whose supermassive black holes have already switched off their powerful jets, offering a rare look at how these cosmic engines flicker out.",
+      "url": "https://www.scientificamerican.com/article/young-fading-radio-galaxies-black-hole-jets-switched-off/",
+      "outlet": "Scientific American",
+      "publish_date": "Sep 4",
+      "short_hash": "cfde3a17",
+      "key_entities": [
+        "radio galaxies",
+        "black holes",
+        "jets"
+      ],
+      "is_update": false
+    }
+  ],
+  "fun_fact": {
+    "headline": "Mauna Kea is taller than Everest measured from base to peak",
+    "body": "Measured from its base rather than from sea level, Hawaii's Mauna Kea is the tallest mountain on Earth &mdash; taller even than Mount Everest. Its summit stands 4,207 m above sea level, but the volcano's base lies about 6,000 m down on the Pacific floor, giving a total height of roughly 10,210 m, well above Everest's 8,849 m. Everest still holds the record for the highest point above sea level; Mauna Kea wins base-to-peak.",
+    "source": "Britannica; USGS",
+    "fun_fact_id": "funfact-9ba2760f",
+    "topic": "geography",
+    "topic_key": "mauna kea"
+  },
+  "puzzle": {
+    "type": "visual",
+    "title": "Paper Trail",
+    "title_key": "paper-trail",
+    "body": "Take a square sheet of paper.\nFold it exactly in half with a horizontal fold, then fold it in half again with a vertical fold. You now hold a small square that is four layers thick.\nWith a hole punch, punch ONE hole through all four layers, placing it near the folded corner (the corner where both folds meet).\nNow unfold the paper completely.\nHow many holes are in the sheet, and how are they arranged?",
+    "approach": "Track how each fold doubles the number of layers, then mirror the single punch back across every fold line.",
+    "answer": "Four holes.\nTwo folds stack the paper into 2 x 2 = 4 layers, so one punch pierces four layers and unfolds into four holes.\nThe folded corner where both creases meet is the CENTRE of the original sheet, so the four holes sit symmetrically around the middle of the page &mdash; one in each quadrant, each the mirror image of the others across the horizontal and vertical fold lines &mdash; forming a small square cluster near the centre.",
+    "puzzle_hash": "9c3dcb3b"
+  },
+  "word_puzzle": {
+    "type": "anagram",
+    "title": "Rope's End",
+    "title_key": "ropes-end",
+    "body": "Rearrange all eleven letters of the phrase\n\n   A ROPE ENDS IT\n\ninto a single eleven-letter word that names exactly the feeling that phrase evokes.\nEvery letter is used once, and no letter is left over.",
+    "approach": "The phrase is a cryptic definition of its own answer &mdash; count the letters (11) and think of the feeling it describes.",
+    "answer": "DESPERATION.\nThe letters of A ROPE ENDS IT &mdash; A, R, O, P, E, E, N, D, S, I, T &mdash; are exactly the letters A, D, E, E, I, N, O, P, R, S, T of DESPERATION.\nFittingly, 'a rope ends it' is a cryptic description of the answer.",
+    "word_puzzle_hash": "1865fa19"
+  },
+  "notes": [
+    "MISSED RUN check: 2026-09-07 edition exists; no gap.",
+    "UK News: primary outlets (BBC, Sky News) were unreachable to the research tool; the fallback tier (The Guardian, CNN, Al Jazeera, Bloomberg, CNBC) was searched across multiple attempts (Burnham government, Labour conference, NHS/asylum, Reform) but surfaced no verifiable UK-domestic story inside the 48-72h window (results were pre-July cabinet/by-election items or the Sept 27-30 Labour conference date). Rendered a placeholder rather than date a stale story to today. ~3 retry passes made.",
+    "Singapore ran slightly thin on same-day-new items: the haze update (Sep 7) is clean; the MAS 5% growth-forecast survey is from early September; the pyramid-scheme detention is carried as an Update on the 2026-09-06 item with the widening probe leading. CNA/ST were not directly fetchable; items sourced via search summaries and cited to allowed outlets.",
+    "Global: Ukraine item is an Update on the 2026-09-07 envoys story (talks yielded no breakthrough, capital-strike pause lapsed). Sara Duterte item is an Update on the 2026-09-06 arrest-warrant story (she has now posted bail).",
+    "Tech & AI skewed to early-week (Sep 4-6) as concrete, allowed-source AI news clustered there; GPT-6 Astra carried as an Update on the 2026-09-04 'Astra crosses Critical threshold' item now that the model has launched.",
+    "Sports: Monza (Sep 6) race result was carried on 2026-09-07; today's F1 item is the post-Monza standings plus the upcoming Madrid round (Spanish GP, Sep 11-13), not a stale race recap. Tennis items are fresh fourth-round results (Tiafoe def. Medvedev; Shelton def. Tsitsipas) not carried yesterday.",
+    "Business: US markets were closed Sep 7 for Labor Day; the markets item covers the Sep 7 Asian session instead."
+  ]
+}

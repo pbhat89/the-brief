@@ -2618,3 +2618,32 @@ is empty until the first run.
 2026-09-07	🎾 Sabalenka downs Townsend to reach a sixth straight US Open quarter-final	a6c88efb	us open,sabalenka,townsend,tennis
 2026-09-07	🏏 Dunkley's century seals England's 3-0 ODI sweep of Ireland	0f29216d	cricket,england women,ireland,dunkley
 2026-09-07	Psilocybin shields nerves from chemotherapy damage in a mouse study	41333b58	psilocybin,chemotherapy,md anderson,neuropathy
+2026-09-08	Update: Singapore haze holds in the moderate range for a second day as Sumatra fires drift smoke	5871e1b5	Singapore,NEA,haze,Sumatra
+2026-09-08	MAS survey lifts Singapore's 2026 growth forecast to 5% on an AI-driven tech upturn	e7f7cea6	MAS,Singapore,GDP forecast
+2026-09-08	Update: Probe widens into 52 Singaporeans detained in China over a suspected pyramid scheme	d5e4d894	Singaporeans,China,pyramid scheme,MFA
+2026-09-08	Delhi High Court orders an audit of all PGs and hostels after the Satya Niketan building collapse	3d89b5ed	Delhi High Court,Satya Niketan,building collapse
+2026-09-08	Supreme Court Collegium recommends Justice Sanjay Agrawal as Rajasthan High Court Chief Justice	743eda31	Supreme Court Collegium,Rajasthan High Court,Sanjay Agrawal
+2026-09-08	Election Commission announces bypolls for six seats, including in West Bengal	be5827c3	Election Commission,West Bengal,bypolls,Mamata Banerjee
+2026-09-08	IMD warns of extremely heavy rain in Chhattisgarh as a monsoon surge lashes central India	f9d9a219	IMD,Chhattisgarh,monsoon,rainfall
+2026-09-08	India sends a tunnel-rescue team and 57 tonnes of relief to flood-hit Nepal	c4f6903f	India,Nepal,floods,relief
+2026-09-08	UK coverage is unavailable in today's edition	b61e7b4f	UK
+2026-09-08	AfD wins Germany's Saxony-Anhalt election with a record 44%, but falls short of a majority	c1827091	AfD,Saxony-Anhalt,Germany,Merz
+2026-09-08	Death toll from the Nepal-China floods passes 1,000 with more than 4,400 missing	ab2489f4	Nepal,China,floods,death toll
+2026-09-08	Update: Ukraine peace push stalls as Zelensky says 'we expect the war will continue'	3c3f2e97	Ukraine,Russia,Zelensky,Witkoff
+2026-09-08	Update: Philippine Vice-President Sara Duterte posts bail in the Marcos threat case	b5c72476	Sara Duterte,Marcos,Philippines
+2026-09-08	Update: OpenAI launches GPT-6 'Astra' and declares the arrival of the AGI era	cbc3fc82	OpenAI,GPT-6,Astra,Brockman
+2026-09-08	Microsoft releases MAI-Transcribe-2, a speech model it says beats OpenAI, Google and ElevenLabs	05f5562f	Microsoft,MAI-Transcribe-2,speech recognition
+2026-09-08	Attackers exploit a critical Langflow flaw to run code and steal API keys	9744eecc	Langflow,vulnerability,AI security
+2026-09-08	China's Moonshot AI files confidentially for a Hong Kong IPO, seeking up to US$5 billion	7c217787	Moonshot AI,Hong Kong IPO,Kimi
+2026-09-08	Asian shares rally as Japan's Nikkei jumps 2% and South Korea's Kospi opens up 3%	0ed6ab8d	Nikkei,Kospi,Asian markets
+2026-09-08	Crusoe and Fluidstack lead the week's biggest venture rounds in an AI-infrastructure haul	046753d2	Crusoe,Fluidstack,AI infrastructure
+2026-09-08	Markets split near 50/50 on a September Fed hike as August CPI looms	f512f311	Federal Reserve,Warsh,CPI,rate hike
+2026-09-08	Nvidia's investment footprint swells to about US$99 billion as it expands its reach	830aacc3	Nvidia,investments,AI
+2026-09-08	🎾 Tiafoe edges Medvedev in a two-tie-break battle to reach the US Open quarter-finals	ee876fde	Tiafoe,Medvedev,US Open
+2026-09-08	🎾 Shelton dismisses Tsitsipas to set up a US Open quarter-final with Alcaraz	238b7555	Shelton,Tsitsipas,Alcaraz,US Open
+2026-09-08	🏎️ Antonelli stretches his F1 title lead to 66 points after Monza, with the Madrid GP next	5093795e	Antonelli,Russell,F1 standings,Spanish Grand Prix
+2026-09-08	🏏 India and Sri Lanka reach the Women's Asia Cup semi-finals in Dubai	d4e0e836	Women's Asia Cup,India,Sri Lanka,semi-finals
+2026-09-08	Detailed maps of breast tumours reveal hidden pockets of dormant cancer cells	0692eb26	breast cancer,dormant cells,tumour mapping
+2026-09-08	Princeton's AI controller steers fusion plasma in milliseconds, faster than humans	a663e79d	fusion,plasma,AI control,Princeton
+2026-09-08	Indonesia's peat fires surge early as El Nino and drought dry out wetlands	4270fd4d	Indonesia,peat fires,El Nino,haze
+2026-09-08	Astronomers spot young 'switched-off' radio galaxies whose black-hole jets have died	cfde3a17	radio galaxies,black holes,jets

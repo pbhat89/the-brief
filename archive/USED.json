@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-07-09",
-      "topic_key": "vantablack",
-      "text": "Vantablack absorbs up to 99.965% of visible light using carbon nanotubes."
-    },
-    {
       "date": "2026-07-10",
       "topic_key": "cloud",
       "text": "A typical fair-weather cumulus cloud weighs on the order of a million pounds (about 1.1 million lb)."
@@ -269,14 +264,14 @@
       "date": "2026-09-07",
       "topic_key": "bubble wrap",
       "text": "Bubble wrap was not invented to protect packages. In 1957, engineers Alfred Fielding and Marc Chavannes sealed two shower curtains together and first tried to sell the bubbly sheet as textured wallpaper, and then as greenhouse insulation. Only later did their company, Sealed Air, market it as protective packaging — the use that made it famous."
+    },
+    {
+      "date": "2026-09-08",
+      "topic_key": "mauna kea",
+      "text": "Mauna Kea is taller than Everest measured from base to peak"
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-08-08",
-      "type": "visual",
-      "title_key": "boxes-within-boxes"
-    },
     {
       "date": "2026-08-09",
       "type": "logic",
@@ -391,14 +386,14 @@
       "date": "2026-09-07",
       "type": "lateral",
       "title_key": "glass-of-water"
+    },
+    {
+      "date": "2026-09-08",
+      "type": "visual",
+      "title_key": "paper-trail"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-08-08",
-      "type": "letterboxed",
-      "title_key": "count-me-in"
-    },
     {
       "date": "2026-08-09",
       "type": "anagram",
@@ -513,6 +508,11 @@
       "date": "2026-09-07",
       "type": "ladder",
       "title_key": "cats-and-dogs"
+    },
+    {
+      "date": "2026-09-08",
+      "type": "anagram",
+      "title_key": "ropes-end"
     }
   ]
 }
