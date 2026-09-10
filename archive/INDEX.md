@@ -2647,3 +2647,39 @@ is empty until the first run.
 2026-09-08	Princeton's AI controller steers fusion plasma in milliseconds, faster than humans	a663e79d	fusion,plasma,AI control,Princeton
 2026-09-08	Indonesia's peat fires surge early as El Nino and drought dry out wetlands	4270fd4d	Indonesia,peat fires,El Nino,haze
 2026-09-08	Astronomers spot young 'switched-off' radio galaxies whose black-hole jets have died	cfde3a17	radio galaxies,black holes,jets
+2026-09-11	Parliament backs raising MP allowances to S$18,500 as office-holder pay rises up to 9%	6158e2d2	singapore,parliament,lawrence-wong,mp-salaries,raise
+2026-09-11	Singaporean Malone Lam pleads guilty in US over a hundreds-of-millions crypto theft	a8da00ac	singapore,malone-lam,crypto-theft,us-court,guilty-plea
+2026-09-11	Six charged in Singapore over unauthorised public assemblies	d224d92b	singapore,public-order-act,unauthorised-assembly,charged
+2026-09-11	Singapore to ease decades-old curbs on dialect films in cinemas	734d9e31	singapore,mddi,dialect-films,cinema,policy
+2026-09-11	Supreme Court asks CBSE to consider sparing current Class 6 from the three-language rule	2a19f749	india,supreme-court,cbse,three-language-policy,class-6
+2026-09-11	All workers pulled out alive after a Gandhinagar mall slab collapse	b1e91d1e	india,gandhinagar,kudasan,building-collapse,rescue
+2026-09-11	Rupee slides past 95 to the dollar as crude tops US$100	47a07732	india,rupee,sensex,crude-oil,markets
+2026-09-11	ISRO staff bodies seek clarity on plan to shift activities to private hands	18221355	india,isro,privatisation,employees,narayanan
+2026-09-11	Update: Xi Jinping to visit India for BRICS as a Modi meeting is set for Saturday	a50fe0a8	india,china,xi-jinping,modi,brics-summit
+2026-09-11	UK bans trade with Israeli settlements as Miliband alleges ‘ethnic cleansing’	a76f268c	uk,israel,west-bank-settlements,trade-ban,miliband
+2026-09-11	Israel retaliates against the UK, barring 12 MPs and shutting its Jerusalem consulate	64e9f607	uk,israel,retaliation,mps-barred,jerusalem-consulate
+2026-09-11	Electricity VAT scrapped from Oct 1 in a cost-of-living push	c357775d	uk,vat,electricity-bills,cost-of-living,burnham
+2026-09-11	Burnham axes the ‘BritCard’ digital ID scheme to fund household relief	6a265dac	uk,digital-id,britcard,scrapped,cost-of-living
+2026-09-11	IAEA reports Iran to the UN Security Council for the first time in 20 years	091fcb1a	iran,iaea,un-security-council,nuclear,referral
+2026-09-11	Update: Iran hits a US base in Jordan as the tanker war widens	5532cf78	iran,united-states,jordan-air-base,strait-of-hormuz,escalation
+2026-09-11	Yemen’s Houthis seize the Red Sea port of Mocha, nearing Bab el-Mandeb	225602de	yemen,houthis,mocha,bab-el-mandeb,red-sea
+2026-09-11	Update: Ukraine and Russia hold a three-day limited truce as US envoys shuttle	a0644793	ukraine,russia,ceasefire,witkoff,kushner
+2026-09-11	Apple unveils its first foldable iPhone with a 2-nanometer chip	d8290b87	apple,foldable-iphone,2nm-chip,launch
+2026-09-11	OpenAI taps Apple assembler Luxshare to build a consumer AI device	14a903cc	openai,luxshare,ai-hardware,consumer-device
+2026-09-11	DeepSeek taps CITIC Securities for a Shanghai STAR Market IPO	dac7ea5d	deepseek,ipo,shanghai-star-market,citic-securities
+2026-09-11	US Justice Department probes Nvidia’s US$20 billion Groq deal over antitrust	7c391204	nvidia,groq,doj,antitrust,licensing-deal
+2026-09-11	Paul Christiano joins OpenAI’s safety and security committee	57a9e2c5	openai,paul-christiano,ai-safety,governance
+2026-09-11	Wall Street falls a fourth day as oil vaults past US$100	f921996d	markets,wall-street,oil-price,dow-jones,selloff
+2026-09-11	Fed-hike odds climb to about 71% before the Sep 16 meeting as CPI looms	b8ed9b06	federal-reserve,interest-rates,cpi,inflation,rate-hike
+2026-09-11	Enbridge to buy Tallgrass’s crude-transport business for US$2.55 billion	3b816270	enbridge,tallgrass,acquisition,pipelines,energy
+2026-09-11	Cooper Companies slumps about 17% on a weak outlook	f3511568	cooper-companies,guidance,stock-decline,medical-devices
+2026-09-11	Macy’s raises its full-year outlook after a Q2 revenue beat	4061ff2d	macys,earnings,guidance-raised,retail
+2026-09-11	🎾 Shelton ends Alcaraz’s title defence in the latest-ever US Open finish	daa16eef	tennis,us-open,ben-shelton,carlos-alcaraz,quarterfinal
+2026-09-11	🎾 Tiafoe rallies from two sets down to set up an all-American semi with Shelton	455b4b91	tennis,us-open,frances-tiafoe,alex-michelsen,semifinal
+2026-09-11	🎾 Rybakina reaches the US Open semis to seize the world No. 1 ranking	b98698c5	tennis,us-open,elena-rybakina,world-number-1,wta
+2026-09-11	🏎️ Madrid hosts its first Spanish Grand Prix as Antonelli leads by 66 points	8cdd03d4	f1,spanish-grand-prix,madrid,madring,antonelli
+2026-09-11	🏏 India beat Bangladesh by 40 runs to reach the Women’s Asia Cup final	5cf489cb	cricket,womens-asia-cup,india,bangladesh,semifinal
+2026-09-11	A blood test that spots 50-plus cancers is accurate enough to screen, scientists say	8e39cf89	science,cancer,blood-test,screening,nhs
+2026-09-11	Scientists find why snake embryos coil into tight right-handed spirals	ea5ca43f	science,snake-embryos,developmental-biology,spiral
+2026-09-11	Physicists demonstrate an in-plane Hall effect, overturning a 147-year assumption	60564c4d	science,physics,hall-effect,carnegie-mellon,materials
+2026-09-11	BepiColombo separates from its cruise stage on the approach to Mercury	38bcb2ab	space,bepicolombo,mercury,esa,jaxa

@@ -1,21 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-07-10",
-      "topic_key": "cloud",
-      "text": "A typical fair-weather cumulus cloud weighs on the order of a million pounds (about 1.1 million lb)."
-    },
-    {
-      "date": "2026-07-11",
-      "topic_key": "canada",
-      "text": "Canada holds about 60% of the world's lakes, more than any other country."
-    },
-    {
-      "date": "2026-07-12",
-      "topic_key": "hummingbird",
-      "text": "A hummingbird is the only bird that can fly backwards; its heart can exceed 1,200 beats per minute."
-    },
-    {
       "date": "2026-07-13",
       "topic_key": "sea otter",
       "text": "Sea otters hold hands while sleeping and keep a favourite rock in a skin pouch under one arm."
@@ -269,19 +254,14 @@
       "date": "2026-09-08",
       "topic_key": "mauna kea",
       "text": "Mauna Kea is taller than Everest measured from base to peak"
+    },
+    {
+      "date": "2026-09-11",
+      "topic_key": "tittle",
+      "text": "The dot over i and j is called a tittle"
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-08-09",
-      "type": "logic",
-      "title_key": "photo-finish"
-    },
-    {
-      "date": "2026-08-11",
-      "type": "quantitative",
-      "title_key": "two-candles"
-    },
     {
       "date": "2026-08-12",
       "type": "lateral",
@@ -391,19 +371,14 @@
       "date": "2026-09-08",
       "type": "visual",
       "title_key": "paper-trail"
+    },
+    {
+      "date": "2026-09-11",
+      "type": "logic",
+      "title_key": "card-on-the-table"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-08-09",
-      "type": "anagram",
-      "title_key": "say-it-another-way"
-    },
-    {
-      "date": "2026-08-11",
-      "type": "grouping",
-      "title_key": "childs-play"
-    },
     {
       "date": "2026-08-12",
       "type": "ladder",
@@ -513,6 +488,11 @@
       "date": "2026-09-08",
       "type": "anagram",
       "title_key": "ropes-end"
+    },
+    {
+      "date": "2026-09-11",
+      "type": "spellingbee",
+      "title_key": "grand-entrance"
     }
   ]
 }
