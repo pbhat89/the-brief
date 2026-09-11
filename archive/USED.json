@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-07-13",
-      "topic_key": "sea otter",
-      "text": "Sea otters hold hands while sleeping and keep a favourite rock in a skin pouch under one arm."
-    },
-    {
       "date": "2026-07-14",
       "topic_key": "tardigrade",
       "text": "Tardigrades can survive the open vacuum of space (ESA FOTON-M3, 2007) and near absolute zero."
@@ -259,14 +254,14 @@
       "date": "2026-09-11",
       "topic_key": "tittle",
       "text": "The dot over i and j is called a tittle"
+    },
+    {
+      "date": "2026-09-12",
+      "topic_key": "hundred years war",
+      "text": "The Hundred Years' War lasted 116 years (1337-1453), not a single continuous war nor exactly a century."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-08-12",
-      "type": "lateral",
-      "title_key": "left-on-the-lawn"
-    },
     {
       "date": "2026-08-13",
       "type": "visual",
@@ -376,14 +371,14 @@
       "date": "2026-09-11",
       "type": "logic",
       "title_key": "card-on-the-table"
+    },
+    {
+      "date": "2026-09-12",
+      "type": "quantitative",
+      "title_key": "broken-clock"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-08-12",
-      "type": "ladder",
-      "title_key": "cooling-off"
-    },
     {
       "date": "2026-08-13",
       "type": "letterboxed",
@@ -493,6 +488,11 @@
       "date": "2026-09-11",
       "type": "spellingbee",
       "title_key": "grand-entrance"
+    },
+    {
+      "date": "2026-09-12",
+      "type": "letterboxed",
+      "title_key": "boxed-in"
     }
   ]
 }

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Sat, 12 September 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .wpuzzle-box{background:linear-gradient(135deg,#0e1a1a,#0d1620);border:1px solid #234a44;border-left:3px solid #16a085;padding:24px 28px;border-radius:2px}
+  .wptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#16a085;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .wpuzzle-box .puzzle-title{color:#cdeae3}
+  .wpuzzle-box .puzzle-how{color:#8fb8ac;background:#08140f;border-left-color:#1a6a5a}
+  .wpuzzle-box .puzzle-q{color:#dfeae6;font-family:'Source Sans 3',sans-serif}
+  .wpuzzle-box .answer{color:#bfe0d6}
+  .wpuzzle-box .answer .alabel{color:#16a085}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Saturday, 12 September 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Saturday, 12 September 2026 · 🔍 60 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eleven entries in this exact order:
+     id    : one of "sg" | "india" | "uk" | "geo" | "tech" | "biz" | "sports" | "misc" | "fun" | "puzzle" | "wpuzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 8 news tabs; fun/puzzle/wpuzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+
+   WORD_PUZZLE shape (separate, daily word game — NYT-style, static reveal):
+     type     : one of "Connections" | "Word Ladder" | "Anagram" | "Spelling Bee" | "Letter Boxed" | "Mini Crossword"
+     title    : short evocative name for the word puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle body; supports \n for line breaks (grids render as pre-formatted text)
+     answer   : the answer; supports \n for line breaks; appears inside its own toggle (id "wpans")
+============================================================================= */
+
+const SECTIONS = [
+  { id:"sg", title:"🇸🇬 Singapore", color:"#e74c3c", items:[
+    { headline:"NEA issues daily haze alerts as transboundary smoke pushes central PSI past 100", summary:"The National Environment Agency has been publishing daily haze advisories since Sep 4, after the 24-hour PSI in central Singapore crossed 100 into the unhealthy band for the first time since 2023, driven by smoke from fires in southern Sumatra and Kalimantan. Passing thundery showers this week brought intermittent relief, with readings dipping back into the moderate range.", source:"Mothership", url:"https://mothership.sg/2026/09/nea-daily-haze-advisories-sep-2026/", date:"Sep 11", spectrum:null, bias:null },
+    { headline:"Prosecutors seek up to 13.5 years' jail in fatal 2024 Tampines chain collision", summary:"The prosecution asked for a jail term of up to 13-and-a-half years for a 45-year-old Singaporean man who pleaded guilty over a 2024 chain collision in Tampines that killed two people, including a 17-year-old student. Sentencing was adjourned.", source:"Mothership", url:"https://mothership.sg/2026/09/tampines-collision-prosecution-seeking-13-and-a-half-years-jail/", date:"Sep 9", spectrum:null, bias:null },
+    { headline:"52 Singaporeans detained in China over alleged pyramid-scheme links", summary:"The Ministry of Foreign Affairs said 52 Singaporeans were arrested and detained in Guangxi, China, over suspected pyramid-scheme activities and related offences, and that its officers are in touch with the detainees' families. Second Minister Sim Ann said the Government is doing all it can to help.", source:"Mothership", url:"https://mothership.sg/2026/09/singaporeans-arrested-china-pyramid-scheme/", date:"Sep 4", spectrum:null, bias:null },
+  ]},
+  { id:"india", title:"🇮🇳 India", color:"#e67e22", items:[
+    { headline:"Update: Xi arrives for BRICS in first India trip since 2019, extending an olive branch to Modi", summary:"Chinese President Xi Jinping travelled to New Delhi for the 18th BRICS summit — his first visit to India since before the 2020 Galwan clash — with a Modi-Xi bilateral expected to focus on the disputed Himalayan border, trade and the resumption of flights and people-to-people links. It marks a cautious thaw after years of frozen ties.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-09-10/xi-s-first-india-trip-since-2019-extends-an-olive-branch-to-modi", date:"Sep 10", spectrum:null, bias:null },
+    { headline:"Modi backs central-bank digital currencies to settle BRICS trade", summary:"With India chairing BRICS this year, PM Narendra Modi is promoting central-bank digital currencies and stronger cross-border payment links to settle more intra-bloc trade in local currencies. India frames the push as making payments more resilient, stopping well short of endorsing any move to replace the US dollar.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-09-10/india-favors-central-bank-digital-currencies-for-brics-payments", date:"Sep 10", spectrum:null, bias:null },
+    { headline:"BRICS finance chiefs, hosted by India, demand urgent IMF and World Bank reform", summary:"BRICS finance ministers and central-bank governors meeting in New Delhi reiterated calls for urgent reform of the IMF and World Bank, arguing the Bretton Woods institutions should better reflect the weight of emerging economies. The expanded bloc now spans 11 members and about a quarter of world GDP.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-09-11/brics-finance-chiefs-call-for-urgent-imf-world-bank-reform", date:"Sep 11", spectrum:null, bias:null },
+    { headline:"Modi says India's 7.8% growth 'gives confidence to the world' as BRICS opens", summary:"Ahead of the summit Modi said India's economy is growing at 7.8% and that its 'reforms express' will continue, positioning the host as the bloc's fastest-growing major economy. The upbeat message came even as an oil-driven market sell-off pressured Indian stocks and the rupee.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-09-08/india-s-strong-growth-gives-confidence-to-world-modi-says", date:"Sep 8", spectrum:null, bias:null },
+  ]},
+  { id:"uk", title:"🇬🇧 UK News", color:"#3949ab", items:[
+    { headline:"UK economy unexpectedly grows 0.4% in July as AI lifts services", summary:"Official figures released Sep 11 showed UK GDP rose 0.4% in July, beating forecasts of no growth, with the services sector — led by computer programming and AI-related work — driving the pickup. The surprise gives PM Andy Burnham a rare economic boost against a tough fiscal backdrop.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-09-11/ai-shows-tentative-signs-of-lifting-britain-out-of-its-slump", date:"Sep 11", spectrum:null, bias:null },
+    { headline:"Burnham's signature devolution drive faces doubts over funding", summary:"PM Andy Burnham's plan to shift power from Whitehall — handing England's mayors a share of locally raised income tax and creating a 'Number 10 North' — is his defining policy, but analysts warn it lacks clear answers on financing and could falter in practice. Some argue the gamble may prove his undoing.", source:"Bloomberg", url:"https://www.bloomberg.com/opinion/articles/2026-09-09/uk-politics-andy-burnham-s-signature-devolution-policy-may-be-his-undoing", date:"Sep 9", spectrum:null, bias:null },
+  ]},
+  { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
+    { headline:"Update: Houthis complete their takeover of the Bab el-Mandeb strait, seizing Perim island", summary:"Iran-aligned Houthi fighters reached Perim (Mayyun) island at the heart of the Bab el-Mandeb after government forces withdrew, completing their control of the strategic strait a day after seizing the Red Sea port of Mokha. The advance threatens one of the world's key oil-shipping chokepoints and hands Iran fresh leverage.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/9/11/houthis-take-control-of-yemens-red-sea-coast-key-shipping-route", date:"Sep 11", spectrum:null, bias:null },
+    { headline:"Israeli air strikes kill at least 12 in southern Lebanon as raids intensify", summary:"Israeli air attacks killed at least 12 people, including children, in Kfar Reman in southern Lebanon, part of an intensifying campaign that has left dozens dead in recent days despite a framework truce signed in June. Israel said it was responding to Hezbollah drone launches; it still occupies villages in the south.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/9/7/israeli-air-attack-kills-at-least-10-people-in-southern-lebanon", date:"Sep 8", spectrum:null, bias:null },
+    { headline:"Putin lands in New Delhi for a BRICS summit shadowed by the Iran and Ukraine wars", summary:"Russian President Vladimir Putin arrived in India for the 18th BRICS summit, joining Xi Jinping and Iran's Masoud Pezeshkian as wars in the Middle East and Ukraine tested the bloc's push for greater clout. Leaders are expected to press for trade in local currencies and reform of global institutions.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/9/11/putin-lands-in-india-for-brics-summit-shadowed-by-iran-and-ukraine-wars", date:"Sep 11", spectrum:null, bias:null },
+    { headline:"Expanded 11-member BRICS meets in Delhi, testing its challenge to a Western-led order", summary:"The summit brings together the newly expanded bloc — now including Iran, Saudi Arabia, Egypt, Ethiopia, Indonesia and the UAE alongside the original five — amid debate over how far it can reshape global governance, trade and finance. India has steered the group toward pragmatic cooperation rather than open confrontation with the West.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/9/11/bric-by-bric-has-brics-challenged-the-western-dominated-world", date:"Sep 11", spectrum:null, bias:null },
+  ]},
+  { id:"tech", title:"💻 Tech & AI", color:"#27ae60", items:[
+    { headline:"OpenAI signals it may slow cutting-edge AI, Altman tells staff", summary:"CEO Sam Altman told OpenAI employees the company is open to pacing its most advanced AI development and hopes rival labs will do the same, while acknowledging some may not agree. The remarks came as executives at OpenAI and Nvidia touted the arrival of an 'AGI era.'", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-09-11/openai-is-open-to-slowing-cutting-edge-ai-ceo-sam-altman-tells-staff", date:"Sep 11", spectrum:null, bias:null },
+    { headline:"Microsoft plans to add 26 gigawatts of data-center capacity as compute runs short", summary:"Microsoft mapped a buildout to more than 38 gigawatts of data-center capacity by 2032, roughly tripling today's roughly 12GW, after shortages forced it to turn away some AI and cloud business. The plan underscores the scale of the industry's infrastructure race.", source:"Bloomberg", url:"https://www.bloomberg.com/news/features/2026-09-10/microsoft-ai-focused-data-center-plan-to-add-26-gigawatts-of-compute", date:"Sep 10", spectrum:null, bias:null },
+    { headline:"OpenAI ends its $1-a-year US government deal, shifts to usage pricing at half off", summary:"OpenAI is winding down the pilot that let federal agencies use its models for $1 a year, moving to usage-based pricing that gives government workers a 50% discount to standard rates. The change formalises how Washington pays for the technology.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-09-10/openai-gives-us-agencies-50-off-models-ending-1-per-year-deal", date:"Sep 10", spectrum:null, bias:null },
+    { headline:"Silicon Valley leaders escalate warnings over AI's existential risks", summary:"Public warnings about catastrophic AI risk grew louder after a rank-and-file researcher quit and accused former employers OpenAI and Anthropic of 'racing toward super-intelligent AI.' Anthropic separately said it had blocked several attempts to misuse its models for biological-weapons research.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-09-10/silicon-valley-escalates-warnings-about-existential-risks-of-ai", date:"Sep 10", spectrum:null, bias:null },
+    { headline:"Nvidia's Huang says AI will transform the cybersecurity market", summary:"Nvidia co-founder and CEO Jensen Huang said cybersecurity is the next big market for artificial intelligence, predicting the technology will reshape how companies defend their systems. He framed it as a major new source of demand for AI computing.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-09-10/nvidia-s-huang-touts-cybersecurity-as-next-big-market-for-ai", date:"Sep 10", spectrum:null, bias:null },
+  ]},
+  { id:"biz", title:"📈 Business & Markets", color:"#8e44ad", items:[
+    { headline:"US inflation holds at 3.4% in August, cementing Fed rate-hike bets", summary:"August CPI rose 0.4% on the month and 3.4% from a year earlier, in line with forecasts, while core CPI ran a slightly hot 0.3% (2.4% annual). Gasoline accounted for more than a third of the monthly gain, hardening expectations that the Fed will raise rates on Sep 16.", source:"CNBC", url:"https://www.cnbc.com/2026/09/11/cpi-inflation-report-august-2026.html", date:"Sep 11", spectrum:null, bias:null },
+    { headline:"Update: Wall Street snaps a four-day slide as oil retreats", summary:"US stocks rebounded Friday — the Dow, S&P 500 and Nasdaq each up about 1% — as oil prices fell, breaking a four-session losing streak, though all three still ended the week lower. After the CPI report, markets priced the odds of a 25-basis-point Fed hike next week at roughly 85% to 90%.", source:"CNBC", url:"https://www.cnbc.com/2026/09/10/stock-market-today-live-updates.html", date:"Sep 11", spectrum:null, bias:null },
+    { headline:"Oracle's contracted cloud backlog balloons to a record $664 billion", summary:"Oracle said its remaining performance obligations jumped $209 billion from a year earlier to a record $664 billion, with quarterly revenue up 30% to $19.3 billion and cloud-infrastructure sales up 121%. The shares hit an all-time high on AI-demand optimism.", source:"CNBC", url:"https://www.cnbc.com/2026/09/10/stocks-making-the-biggest-moves-after-hours-orcl-adbe-rh.html", date:"Sep 10", spectrum:null, bias:null },
+    { headline:"RH jumps on an earnings beat while Adobe slides despite raising its outlook", summary:"Furniture retailer RH rallied after second-quarter revenue of $922 million beat estimates, while Adobe fell around 3% as soft fourth-quarter revenue guidance overshadowed a strong quarter and record recurring revenue. Kroger dropped about 3% on mixed results.", source:"CNBC", url:"https://www.cnbc.com/2026/09/11/stocks-making-the-biggest-moves-premarket-gme-orcl-adbe-rh.html", date:"Sep 11", spectrum:null, bias:null },
+    { headline:"Tencent-backed chipmaker Enflame nearly triples on its Shanghai debut", summary:"Shares of Enflame, a Chinese AI-chip maker and Nvidia rival, soared roughly 200% on their Shanghai debut after a 6.12 billion yuan ($913 million) IPO, valuing the firm at about $25 billion. It is the last of China's 'four little dragons' of AI chips to go public.", source:"CNBC", url:"https://www.cnbc.com/2026/09/11/chinese-nvidia-rival-enflame-stock-market-debut-ai.html", date:"Sep 11", spectrum:null, bias:null },
+  ]},
+  { id:"sports", title:"🎾🏏🏎️ Sports", color:"#c0392b", items:[
+    { headline:"🎾 Zverev reaches the US Open final, his third straight Grand Slam final", summary:"Top seed Alexander Zverev beat Karen Khachanov 6-3, 7-6, 7-6 to reach the US Open final and a third consecutive Grand Slam final, after winning the French Open and finishing runner-up at Wimbledon this year. He awaits the winner of the all-American semifinal between Ben Shelton and Frances Tiafoe.", source:"ESPN", url:"https://www.espn.com/tennis/story/_/id/49887449/alexander-zverev-beats-botic-van-de-zandschulp-reach-2026-us-open-semifinals", date:"Sep 11", spectrum:null, bias:null },
+    { headline:"🎾 Sabalenka to meet Rybakina in the US Open women's final", summary:"Two-time defending champion Aryna Sabalenka beat Jessica Pegula in straight sets and Elena Rybakina ended Coco Gauff's run 3-6, 6-4, 6-4 to set up Saturday's final. Sabalenka can become the first woman to win three straight US Open titles since Serena Williams in 2012-14.", source:"ESPN", url:"https://www.espn.com/tennis/story/_/id/49898331/sabalenka-rolls-pegula-vie-three-peat-us-open-final", date:"Sep 11", spectrum:null, bias:null },
+    { headline:"🏎️ Russell tops opening practice for the first Madrid Spanish Grand Prix", summary:"George Russell set the pace in first practice for the inaugural Spanish Grand Prix at Madrid's new Madring circuit, with championship leader Kimi Antonelli fastest in second practice. Qualifying is on Saturday and the race on Sunday, with Antonelli well clear at the top of the standings.", source:"Sky Sports F1", url:"https://www.skysports.com/f1/news/12433/13584257/spanish-gp-george-russell-tops-first-practice-at-new-madring-as-lewis-hamilton-frustrates-other-drivers", date:"Sep 11", spectrum:null, bias:null },
+    { headline:"🏏 Sri Lanka beat Pakistan to set up a Women's Asia Cup final against India", summary:"Defending champions Sri Lanka chased down 131 with two balls to spare, beating Pakistan by four wickets to reach the Women's T20 Asia Cup final against India in Dubai on Sep 12. It is a repeat of the 2024 final, which Sri Lanka won.", source:"ESPNcricinfo", url:"https://www.espncricinfo.com/series/women-s-asia-cup-2026-1548888/pakistan-women-vs-sri-lanka-women-2nd-semi-final-1548904/match-report", date:"Sep 11", spectrum:null, bias:null },
+  ]},
+  { id:"misc", title:"🔬 Other Miscellaneous News", color:"#1abc9c", items:[
+    { headline:"Hubble spots a giant 10-sided storm ringing Saturn's south pole", summary:"Astronomers using the Hubble Space Telescope identified a decagon — a ten-sided jet-stream wave about 104,000 miles across — encircling Saturn's south pole, a geometric twin to the planet's famous northern hexagon. It is the first large, regular-sided pattern ever seen at the southern pole.", source:"NASA", url:"https://science.nasa.gov/missions/hubble/nasas-hubble-tracks-new-decagon-encircling-saturns-south-pole/", date:"Sep 2", spectrum:null, bias:null },
+    { headline:"NASA and SpaceX delay Crew-13 after an oxidizer leak on Dragon", summary:"NASA and SpaceX pushed back the Crew-13 launch to the International Space Station after finding an oxidizer leak in the Dragon spacecraft's propulsion system during standard prelaunch processing. The four-person crew includes NASA astronauts Jessica Watkins and Luke Delaney.", source:"NASA", url:"https://www.nasa.gov/blogs/spacestation/2026/08/29/nasa-spacex-adjust-crew-13-launch-date/", date:"Sep 11", spectrum:null, bias:null },
+    { headline:"NASA's Roman Space Telescope begins its million-mile hunt for dark energy", summary:"The Nancy Grace Roman Space Telescope is on a three-month cruise to the L2 point, where it will survey vast swaths of sky with Hubble-like sharpness over a field of view about 100 times wider, to probe dark matter, dark energy and exoplanets. NASA expects it to find tens of thousands of planets.", source:"NASA", url:"https://www.nasa.gov/news-release/nasas-dark-universe-seeking-nancy-grace-roman-space-telescope-launches/", date:"Aug 30", spectrum:null, bias:null },
+  ]},
+  { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
+  { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
+  { id:"wpuzzle", title:"🔤 Word Puzzles", color:"#16a085", custom:"wpuzzle" },
+];
+
+const FUN_FACT = {
+  text: "The Hundred Years&rsquo; War between England and France was neither a single continuous war nor exactly a hundred years long. It ran for 116 years, from 1337 to 1453, in a series of on-and-off conflicts broken up by long truces. The tidy name was coined by historians centuries later, not by the people who actually lived through it.",
+  tag: "Category · History"
+};
+
+const PUZZLE = {
+  type: "Quantitative",
+  title: "The Broken Clock",
+  how: "Set up the ratio between the clock's speed and real time, then work backwards from what the clock shows.",
+  question: "A clock runs fast, gaining 20 minutes every hour — so in one real hour it advances 80 minutes. It was set correctly at 12:00 noon.\n\nWhen the fast clock displays 6:00 PM, what is the actual, correct time?",
+  answer: "4:30 PM.\n\nThe clock advances 80 minutes for every 60 real minutes, so it runs at 4/3 of real speed.\nWhen it shows 6:00 PM it has 'ticked off' 6 hours = 360 clock-minutes since noon.\nReal time elapsed = 360 × (60 ÷ 80) = 270 minutes = 4 hours 30 minutes.\nSo the true time is 12:00 noon + 4:30 = 4:30 PM."
+};
+
+const WORD_PUZZLE = {
+  type: "Letter Boxed",
+  title: "Boxed In",
+  how: "Chain two words: each new word must begin with the letter the previous word ended on, no two letters from the same side may be used in a row, and together the words must use all 12 letters.",
+  question: "Letter Boxed: a square with three letters on each side. Build words by hopping from side to side — you may never use two letters from the same side in a row, and each new word must begin with the previous word's last letter. Use all 12 letters.\n\nTop:     P · L · G\nRight:   R · E · H\nBottom:  O · M · T\nLeft:    B · I · Y\n\nTarget: cover all 12 letters in just 2 words.",
+  answer: "Two words: PROBLEM → MIGHTY.\n\n• PROBLEM spells P-R-O-B-L-E-M, hopping Top→Right→Bottom→Left→Top→Right→Bottom — never twice on the same side in a row.\n• MIGHTY begins on the M that PROBLEM ended on, then runs I-G-H-T-Y.\n• Between them the two words use every one of the 12 letters exactly once.\n\n(Other chains may exist, but this pair solves the box in the target two words.)"
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function renderWordPuzzle(){
+  let h='<div class="sec-title">🔤 Word Puzzle of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#16a085,transparent)"></div>';
+  h+='<div class="wpuzzle-box"><span class="wptype">'+WORD_PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+WORD_PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+WORD_PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+WORD_PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this,\'wpans\')">Show Answer</button>';
+  h+='<div class="answer" id="wpans"><span class="alabel">Answer</span>'+WORD_PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn,ansId){var a=document.getElementById(ansId||'ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else if(sec.custom==="wpuzzle"){div.innerHTML=renderWordPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>

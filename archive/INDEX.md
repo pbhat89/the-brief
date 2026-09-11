@@ -2683,3 +2683,33 @@ is empty until the first run.
 2026-09-11	Scientists find why snake embryos coil into tight right-handed spirals	ea5ca43f	science,snake-embryos,developmental-biology,spiral
 2026-09-11	Physicists demonstrate an in-plane Hall effect, overturning a 147-year assumption	60564c4d	science,physics,hall-effect,carnegie-mellon,materials
 2026-09-11	BepiColombo separates from its cruise stage on the approach to Mercury	38bcb2ab	space,bepicolombo,mercury,esa,jaxa
+2026-09-12	NEA issues daily haze alerts as transboundary smoke pushes central PSI past 100	fe97f007	singapore,haze,nea,psi,transboundary-smoke
+2026-09-12	Prosecutors seek up to 13.5 years' jail in fatal 2024 Tampines chain collision	af70dd6e	singapore,tampines,chain-collision,court,sentencing
+2026-09-12	52 Singaporeans detained in China over alleged pyramid-scheme links	a0e3a506	singapore,china,pyramid-scheme,mfa,detained
+2026-09-12	Update: Xi arrives for BRICS in first India trip since 2019, extending an olive branch to Modi	ad225a03	india,china,xi-jinping,modi,brics-summit
+2026-09-12	Modi backs central-bank digital currencies to settle BRICS trade	491832c1	india,modi,brics,cbdc,local-currency-trade
+2026-09-12	BRICS finance chiefs, hosted by India, demand urgent IMF and World Bank reform	de8c3d37	india,brics,imf,world-bank,reform
+2026-09-12	Modi says India's 7.8% growth 'gives confidence to the world' as BRICS opens	c10f1a38	india,modi,gdp-growth,economy,brics
+2026-09-12	UK economy unexpectedly grows 0.4% in July as AI lifts services	f829a427	uk,gdp,july,services,ai
+2026-09-12	Burnham's signature devolution drive faces doubts over funding	d27b1832	uk,burnham,devolution,whitehall,mayors
+2026-09-12	Update: Houthis complete their takeover of the Bab el-Mandeb strait, seizing Perim island	4cfa715f	yemen,houthis,bab-el-mandeb,perim,red-sea
+2026-09-12	Israeli air strikes kill at least 12 in southern Lebanon as raids intensify	91783474	israel,lebanon,hezbollah,air-strikes,nabatieh
+2026-09-12	Putin lands in New Delhi for a BRICS summit shadowed by the Iran and Ukraine wars	16e6f732	russia,putin,brics-summit,india,geopolitics
+2026-09-12	Expanded 11-member BRICS meets in Delhi, testing its challenge to a Western-led order	eaefdcc6	brics,bloc,de-dollarisation,global-south,governance
+2026-09-12	OpenAI signals it may slow cutting-edge AI, Altman tells staff	c4cc32ac	openai,sam-altman,ai-safety,agi,pace
+2026-09-12	Microsoft plans to add 26 gigawatts of data-center capacity as compute runs short	6b0fe689	microsoft,data-centers,gigawatts,ai-infrastructure,compute
+2026-09-12	OpenAI ends its $1-a-year US government deal, shifts to usage pricing at half off	a8b832e8	openai,us-government,pricing,federal-agencies,discount
+2026-09-12	Silicon Valley leaders escalate warnings over AI's existential risks	1ac07a7c	ai-risk,openai,anthropic,bioweapons,safety
+2026-09-12	Nvidia's Huang says AI will transform the cybersecurity market	5167e4c5	nvidia,jensen-huang,cybersecurity,ai,market
+2026-09-12	US inflation holds at 3.4% in August, cementing Fed rate-hike bets	c2d4aa26	cpi,inflation,federal-reserve,rate-hike,august
+2026-09-12	Update: Wall Street snaps a four-day slide as oil retreats	753d53b2	wall-street,stocks,oil,fed,rebound
+2026-09-12	Oracle's contracted cloud backlog balloons to a record $664 billion	c0b2e625	oracle,cloud,rpo-backlog,earnings,ai
+2026-09-12	RH jumps on an earnings beat while Adobe slides despite raising its outlook	6a049e6e	rh,adobe,kroger,earnings,stocks
+2026-09-12	Tencent-backed chipmaker Enflame nearly triples on its Shanghai debut	f82ef46d	enflame,tencent,ipo,shanghai,ai-chips
+2026-09-12	🎾 Zverev reaches the US Open final, his third straight Grand Slam final	24799622	tennis,us-open,alexander-zverev,final,khachanov
+2026-09-12	🎾 Sabalenka to meet Rybakina in the US Open women's final	6e5068ff	tennis,us-open,aryna-sabalenka,elena-rybakina,womens-final
+2026-09-12	🏎️ Russell tops opening practice for the first Madrid Spanish Grand Prix	2dad852c	f1,spanish-grand-prix,madrid,russell,antonelli
+2026-09-12	🏏 Sri Lanka beat Pakistan to set up a Women's Asia Cup final against India	e7890e41	cricket,womens-asia-cup,sri-lanka,pakistan,final
+2026-09-12	Hubble spots a giant 10-sided storm ringing Saturn's south pole	2e07fcc7	space,saturn,hubble,decagon,atmosphere
+2026-09-12	NASA and SpaceX delay Crew-13 after an oxidizer leak on Dragon	21cb79f3	space,nasa,spacex,crew-13,dragon
+2026-09-12	NASA's Roman Space Telescope begins its million-mile hunt for dark energy	e2230010	space,nasa,roman-telescope,dark-energy,l2
