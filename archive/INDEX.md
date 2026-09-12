@@ -2713,3 +2713,27 @@ is empty until the first run.
 2026-09-12	Hubble spots a giant 10-sided storm ringing Saturn's south pole	2e07fcc7	space,saturn,hubble,decagon,atmosphere
 2026-09-12	NASA and SpaceX delay Crew-13 after an oxidizer leak on Dragon	21cb79f3	space,nasa,spacex,crew-13,dragon
 2026-09-12	NASA's Roman Space Telescope begins its million-mile hunt for dark energy	e2230010	space,nasa,roman-telescope,dark-energy,l2
+2026-09-13	Ex-Singapore Idol judge Ken Lim appeals his molestation conviction and jail term	b57d0ef2	singapore,ken-lim,molestation,high-court,appeal
+2026-09-13	Lorry driver jailed 23 months over a red-light crash that disabled a cabby	95c4278a	singapore,lorry-driver,road-accident,jail,court
+2026-09-13	Late lawyer’s son, acting pro bono, helps cut a first-time offender’s jail term	ad0a417d	singapore,pro-bono,lawyer,court,appeal
+2026-09-13	India coverage is unavailable in today’s edition	e3cdb7aa	india,coverage-unavailable
+2026-09-13	PM Burnham pressed to define an economic plan as the Budget nears	54bd2ae9	uk,andy-burnham,budget,economy,labour
+2026-09-13	RNLI lifeboat volunteers accused of ‘treason’ over Channel migrant rescues	af3ab93d	uk,rnli,migrants,portsmouth,immigration
+2026-09-13	Britain enters winter with gas prices at multi-year highs and thin reserves	f225f710	uk,gas-prices,energy,winter,cost-of-living
+2026-09-13	UK house prices stay under pressure as mortgage costs climb, surveyors say	4a06896c	uk,house-prices,rics,mortgages,housing
+2026-09-13	CIA releases its largest tranche of pre-9/11 bin Laden briefings	7b8aa830	cia,bin-laden,al-qaeda,declassified,9-11
+2026-09-13	Canada matches US tariffs ‘dollar for dollar’ as the trade war deepens	81ac9aad	canada,united-states,tariffs,trade-war,carney
+2026-09-13	Serbia’s Vucic dissolves parliament and calls a snap election for Oct 25	40be9d8d	serbia,vucic,snap-election,parliament,protests
+2026-09-13	Rubio tours Latin America after a rightward shift across the region	beb16ea3	rubio,latin-america,ecuador,peru,noboa
+2026-09-13	Tech & AI coverage is unavailable in today’s edition	450a7d7e	tech,coverage-unavailable
+2026-09-13	Dell hits a record high after RBC starts coverage at Outperform	8849ecef	dell,rbc,stock,ai-servers,record-high
+2026-09-13	AstraZeneca’s breast-cancer pill misses its goal in a late-stage trial	725b0914	astrazeneca,camizestrant,serena-4,breast-cancer,trial
+2026-09-13	Novartis investor Artisan urges a board overhaul after two drug failures	371f7c7b	novartis,artisan-partners,board,avidity,pelacarsen
+2026-09-13	Copper climbs to record highs on tariff fears and tight supply	22ebdf65	copper,lme,tariffs,commodities,supply
+2026-09-13	🎾 Shelton beats Tiafoe to reach his first US Open final	8690bc43	tennis,us-open,ben-shelton,frances-tiafoe,final
+2026-09-13	🎾 Siniakova and Townsend complete a career Grand Slam in US Open doubles	36c643c0	tennis,us-open,siniakova,townsend,doubles
+2026-09-13	🎾 Harrison and Skupski win the US Open men’s doubles title	3ca47e87	tennis,us-open,harrison,skupski,doubles
+2026-09-13	🏎️ Norris denies Antonelli pole for the Madrid Spanish Grand Prix	76bd51a0	f1,spanish-grand-prix,madrid,norris,antonelli
+2026-09-13	🏎️ Sainz handed a three-place grid penalty for the Madrid race	641c0b9d	f1,spanish-grand-prix,carlos-sainz,grid-penalty,stewards
+2026-09-13	A newly found fast-moving star could reveal the Milky Way black hole’s spin	5000cc36	space,sagittarius-a,black-hole,star-s301,milky-way
+2026-09-13	Menopause reshapes the brain in ways unlike pregnancy or puberty	e87e533a	neuroscience,menopause,brain,study,health

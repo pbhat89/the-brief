@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-07-14",
-      "topic_key": "tardigrade",
-      "text": "Tardigrades can survive the open vacuum of space (ESA FOTON-M3, 2007) and near absolute zero."
-    },
-    {
       "date": "2026-07-15",
       "topic_key": "glass",
       "text": "Glass is not a slow-moving liquid; the thick-bottomed cathedral-window story is a myth. It is an amorphous solid."
@@ -259,14 +254,14 @@
       "date": "2026-09-12",
       "topic_key": "hundred years war",
       "text": "The Hundred Years' War lasted 116 years (1337-1453), not a single continuous war nor exactly a century."
+    },
+    {
+      "date": "2026-09-13",
+      "topic_key": "octopus",
+      "text": "An octopus has three hearts and blue (copper-based) blood; its main systemic heart stops beating whenever it swims."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-08-13",
-      "type": "visual",
-      "title_key": "ten-coin-turnaround"
-    },
     {
       "date": "2026-08-14",
       "type": "logic",
@@ -376,14 +371,14 @@
       "date": "2026-09-12",
       "type": "quantitative",
       "title_key": "broken-clock"
+    },
+    {
+      "date": "2026-09-13",
+      "type": "lateral",
+      "title_key": "seventh-floor"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-08-13",
-      "type": "letterboxed",
-      "title_key": "fine-china"
-    },
     {
       "date": "2026-08-14",
       "type": "spellingbee",
@@ -493,6 +488,11 @@
       "date": "2026-09-12",
       "type": "letterboxed",
       "title_key": "boxed-in"
+    },
+    {
+      "date": "2026-09-13",
+      "type": "grouping",
+      "title_key": "tails-you-win"
     }
   ]
 }
