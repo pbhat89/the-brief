@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-07-15",
-      "topic_key": "glass",
-      "text": "Glass is not a slow-moving liquid; the thick-bottomed cathedral-window story is a myth. It is an amorphous solid."
-    },
-    {
       "date": "2026-07-16",
       "topic_key": "koala",
       "text": "Koala fingerprints are nearly indistinguishable from human ones, an independent evolution for gripping eucalyptus."
@@ -259,14 +254,14 @@
       "date": "2026-09-13",
       "topic_key": "octopus",
       "text": "An octopus has three hearts and blue (copper-based) blood; its main systemic heart stops beating whenever it swims."
+    },
+    {
+      "date": "2026-09-14",
+      "topic_key": "pringles",
+      "text": "The inventor of the Pringles can was buried in one"
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-08-14",
-      "type": "logic",
-      "title_key": "who-ate-the-cake"
-    },
     {
       "date": "2026-08-15",
       "type": "quantitative",
@@ -376,14 +371,14 @@
       "date": "2026-09-13",
       "type": "lateral",
       "title_key": "seventh-floor"
+    },
+    {
+      "date": "2026-09-14",
+      "type": "visual",
+      "title_key": "count-the-squares"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-08-14",
-      "type": "spellingbee",
-      "title_key": "picture-this"
-    },
     {
       "date": "2026-08-15",
       "type": "anagram",
@@ -493,6 +488,11 @@
       "date": "2026-09-13",
       "type": "grouping",
       "title_key": "tails-you-win"
+    },
+    {
+      "date": "2026-09-14",
+      "type": "ladder",
+      "title_key": "cooling-off"
     }
   ]
 }

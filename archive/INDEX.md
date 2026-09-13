@@ -2737,3 +2737,34 @@ is empty until the first run.
 2026-09-13	🏎️ Sainz handed a three-place grid penalty for the Madrid race	641c0b9d	f1,spanish-grand-prix,carlos-sainz,grid-penalty,stewards
 2026-09-13	A newly found fast-moving star could reveal the Milky Way black hole’s spin	5000cc36	space,sagittarius-a,black-hole,star-s301,milky-way
 2026-09-13	Menopause reshapes the brain in ways unlike pregnancy or puberty	e87e533a	neuroscience,menopause,brain,study,health
+2026-09-14	Six hurt as car driven by drug-driving suspect rear-ends a bus in Rochor	fcfbff9b	singapore,rochor,road-accident,drug-driving,bus
+2026-09-14	Three Traffic Police officers investigated over unsafe riding caught on dashcam	34d94158	singapore,traffic-police,spf,investigation,ubi
+2026-09-14	MP warns Singapore is cutting itself too thin on food, producing under 10%	69349bae	singapore,parliament,food-security,poh-li-san,food-waste
+2026-09-14	Singapore to raise political salaries; PM Wong to donate his own increase	fd4e555b	singapore,ministerial-salaries,parliament,lawrence-wong,pay
+2026-09-14	India eases investment rules for bordering nations, reopening the door to China	364b9f72	india,china,investment,cabinet,fdi
+2026-09-14	BRICS adopts the New Delhi Declaration as Modi hosts Putin and Xi	1f0a234f	india,brics,new-delhi-declaration,modi,summit
+2026-09-14	Modi urges Middle East dialogue as the US-Iran war lifts India's oil bill	1e82b13f	india,iran,pezeshkian,modi,oil
+2026-09-14	India's rupee slides to record lows as the oil surge strains the economy	25bdd4ca	india,rupee,currency,oil,economy
+2026-09-14	UK economy unexpectedly grew 0.4% in July, offering Burnham some relief	4bd167f3	uk,economy,gdp,burnham,july
+2026-09-14	Trump says a united Ireland would be fantastic, drawing UK pushback	1b79ed03	uk,northern-ireland,trump,border-poll,dup
+2026-09-14	Second crypto billionaire hands Reform UK a record £49m donation	4517267c	uk,reform-uk,party-funding,donation,burnham
+2026-09-14	About 130 missing after a ferry capsizes in Indonesia's Java Sea	3d1abfde	indonesia,ferry,java-sea,rescue,disaster
+2026-09-14	Oil holds near six-week highs as the US-Iran tanker war chokes Hormuz	0befc12c	united-states,iran,strait-of-hormuz,oil,war
+2026-09-14	Trump tells Zelenskyy to stop striking Russian energy supplies	1933eee2	trump,zelenskyy,russia,ukraine,energy
+2026-09-14	Sweden's centre-left opposition leads as the country votes	ef6a6482	sweden,election,centre-left,vote,europe
+2026-09-14	Apple unveils its first foldable iPhone, the $1,999 iPhone Duo	cf474523	apple,iphone-duo,foldable,ternus,launch
+2026-09-14	Microsoft maps a 26-gigawatt AI data-center buildout	476ac405	microsoft,data-centers,ai,compute,cloud
+2026-09-14	Oracle's AI-cloud surge eases doubts over its data-center spending	62c04e0d	oracle,cloud,ai,openai,backlog
+2026-09-14	Fed seen all but certain to raise rates at its Sep 16 meeting	6f6c1080	federal-reserve,interest-rates,inflation,warsh,fomc
+2026-09-14	Wall Street rebounds Friday as the Dow adds about 509 points	49b991b3	wall-street,dow,sp-500,nasdaq,stocks
+2026-09-14	Skyworks jumps 8% on plan to close its Qorvo takeover this year	d052d172	skyworks,qorvo,acquisition,chips,stocks
+2026-09-14	Oracle beats estimates as cloud revenue more than doubles	beaf6b7d	oracle,earnings,cloud,revenue,ai
+2026-09-14	🎾 Zverev beats Shelton to win his first US Open title	cb6e71d1	tennis,us-open,zverev,shelton,final
+2026-09-14	🎾 Rybakina beats Sabalenka to win her first US Open and reclaim No. 1	9d1ecaea	tennis,us-open,rybakina,sabalenka,final
+2026-09-14	🏎️ Antonelli wins the inaugural Madrid Spanish Grand Prix	341bd1db	f1,spanish-grand-prix,madrid,antonelli,verstappen
+2026-09-14	🏏 India beat Afghanistan by 7 wickets to go 1-0 up in the T20I series	5295038c	cricket,t20i,india,afghanistan,abhishek-sharma
+2026-09-14	🏏 England complete a 3-0 sweep of Pakistan with an eight-wicket win	3a2abcc5	cricket,test,england,pakistan,edgbaston
+2026-09-14	Weight-loss drug semaglutide extended lifespan in aged mice	ee8ed6ee	semaglutide,ageing,mice,glp-1,study
+2026-09-14	A breakthrough pancreatic-cancer drug now shows promise against lung cancer	f5a20801	daraxonrasib,cancer,ras-inhibitor,lung-cancer,fda
+2026-09-14	UN concedes the world will overshoot the 1.5°C warming limit	d3466ac8	climate,paris-agreement,unep,warming,emissions
+2026-09-14	Physicists show a quantum trick could build vast virtual telescopes	5955e4d8	quantum,astronomy,telescopes,entanglement,physics
