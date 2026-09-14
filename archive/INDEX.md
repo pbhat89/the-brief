@@ -2768,3 +2768,38 @@ is empty until the first run.
 2026-09-14	A breakthrough pancreatic-cancer drug now shows promise against lung cancer	f5a20801	daraxonrasib,cancer,ras-inhibitor,lung-cancer,fda
 2026-09-14	UN concedes the world will overshoot the 1.5°C warming limit	d3466ac8	climate,paris-agreement,unep,warming,emissions
 2026-09-14	Physicists show a quantum trick could build vast virtual telescopes	5955e4d8	quantum,astronomy,telescopes,entanglement,physics
+2026-09-15	Man, 20, jailed nine years with caning for sexual offences against three girls	7af3b59b	
+2026-09-15	Worker dies after being struck by a hose at a Jurong Port Road worksite	c5aea211	
+2026-09-15	Two taken to hospital, 20 evacuated after fire in a Pasir Ris HDB flat	6883dc94	
+2026-09-15	Police probe interior design firm Axion Design over stalled home renovations	5bd506a5	
+2026-09-15	Crystal Jade shuts its Great World outlet in a third Singapore closure this year	88068d2b	
+2026-09-15	Fitch raises India’s FY26 growth forecast to 7.4% on GST-driven demand	6d86440f	
+2026-09-15	India set to slip to the world’s sixth-largest economy as the rupee weakens	6c5cdb20	
+2026-09-15	China overtakes India as Bangladesh’s second-largest trading partner	d53a377c	
+2026-09-15	GST 2.0 cuts trim household costs by up to 13%, government says	98e8b8c9	
+2026-09-15	Labour gathers in Liverpool as PM Burnham warns his party is ‘in peril’	90e75676	
+2026-09-15	Reform UK vows to cut £80bn a year in spending as it targets Labour	420db808	
+2026-09-15	UK borrowing costs hit a near-30-year high ahead of Burnham’s Budget	6e8a54d0	
+2026-09-15	MPs debate a referendum on public ownership of England’s water sector	e7705b0e	
+2026-09-15	Russian drones strike near Poland’s border as Tusk warns of escalation	9d4475e5	
+2026-09-15	Trump and Xi set to meet at the White House on Sept 24	479fe2ea	
+2026-09-15	Oil holds above $100 as Iran ties reopening the Strait of Hormuz to sanctions relief	0dfa1262	
+2026-09-15	Israel moves to strip citizenship of filmmakers over a prize-winning Gaza documentary	869db3c6	
+2026-09-15	Update: Sweden’s centre-left edges ahead as the count narrows to a single seat	b4f00d6a	
+2026-09-15	OpenAI launches GPT-6 Astra with a focus on cybersecurity and computer use	06675c75	
+2026-09-15	Anthropic lines up a record Nasdaq IPO as Nvidia weighs a $10bn stake	1bfb093d	
+2026-09-15	Meta reassigns thousands of staff into its consolidated AI unit	4faeec19	
+2026-09-15	AI leaders quietly work on an industry-led safety standards body	e698354d	
+2026-09-15	Wall Street slips as the 10-year Treasury yield hits its highest since 2023	910bb178	
+2026-09-15	Fed poised to raise rates on Wednesday as inflation stays sticky	6b8666fa	
+2026-09-15	Baldwin Group agrees to a $7.7bn take-private deal	fd89ff06	
+2026-09-15	Carlyle closes a $2.3bn infrastructure credit fund as private capital piles in	80eb50e2	
+2026-09-15	🏎️ Hamilton concedes the title fight, says ‘there’s no stopping’ Antonelli	56e4dd88	
+2026-09-15	🏎️ F1 heads to Baku with Antonelli’s title all but decided	69c611b4	
+2026-09-15	🏏 India win an eighth Women’s Asia Cup, beating Sri Lanka by 72 runs	dc3c4607	
+2026-09-15	🎾 Davis Cup Final 8 opens this week with Sinner and Alcaraz set to star	0ca103ee	
+2026-09-15	Aging ‘zombie’ cells hijack faulty mitochondria to fuel chronic inflammation	268062b6	
+2026-09-15	Alzheimer’s disrupts the 3D folding of DNA inside brain cells, study finds	789a729c	
+2026-09-15	Scientists watch two DNA strands pair up despite their mutual repulsion	01f2681d	
+2026-09-15	A new twist on the Hall effect overturns a century-old assumption	57e699f1	
+2026-09-15	AI scan of 400,000 posts surfaces under-reported side effects of GLP-1 drugs	98e74625	
