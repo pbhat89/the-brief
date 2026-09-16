@@ -1,16 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-07-17",
-      "topic_key": "carrot",
-      "text": "Carrots were originally purple, white, and yellow; the orange carrot was bred to prominence by Dutch growers in the 16th-17th centuries."
-    },
-    {
-      "date": "2026-07-18",
-      "topic_key": "nintendo",
-      "text": "Nintendo was founded in 1889 as a hanafuda playing-card company and only became a games company decades later."
-    },
-    {
       "date": "2026-07-19",
       "topic_key": "astronaut",
       "text": "Astronauts grow taller in space"
@@ -259,19 +249,14 @@
       "date": "2026-09-15",
       "topic_key": "gallium",
       "text": "Gallium is a metal that melts in your hand (m.p. ~29.8 C) yet has one of the longest liquid ranges of any element."
+    },
+    {
+      "date": "2026-09-17",
+      "topic_key": "trees",
+      "text": "There are more trees on Earth (~3 trillion) than stars in the Milky Way (~100-400 billion)."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-08-16",
-      "type": "lateral",
-      "title_key": "cabin-in-the-field"
-    },
-    {
-      "date": "2026-08-17",
-      "type": "visual",
-      "title_key": "folded-staircase"
-    },
     {
       "date": "2026-08-18",
       "type": "logic",
@@ -376,19 +361,14 @@
       "date": "2026-09-15",
       "type": "logic",
       "title_key": "lone-truth"
+    },
+    {
+      "date": "2026-09-17",
+      "type": "quantitative",
+      "title_key": "there-and-back"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-08-16",
-      "type": "grouping",
-      "title_key": "four-corners"
-    },
-    {
-      "date": "2026-08-17",
-      "type": "ladder",
-      "title_key": "alchemy"
-    },
     {
       "date": "2026-08-18",
       "type": "letterboxed",
@@ -493,6 +473,11 @@
       "date": "2026-09-15",
       "type": "anagram",
       "title_key": "say-it-another-way"
+    },
+    {
+      "date": "2026-09-17",
+      "type": "spellingbee",
+      "title_key": "prime-position"
     }
   ]
 }

@@ -2803,3 +2803,38 @@ is empty until the first run.
 2026-09-15	Scientists watch two DNA strands pair up despite their mutual repulsion	01f2681d	
 2026-09-15	A new twist on the Hall effect overturns a century-old assumption	57e699f1	
 2026-09-15	AI scan of 400,000 posts surfaces under-reported side effects of GLP-1 drugs	98e74625	
+
+2026-09-17	Six Malaysian men jailed and caned over a S$4.9m armed robbery at a King Albert Park bungalow	05fbbda5	singapore,king-albert-park,robbery,gcb,court
+2026-09-17	Driver who showed police a screenshot of another man's licence while banned is jailed	c1a5cfaf	singapore,driving,suspended-licence,court,deception
+2026-09-17	One person dies in a fire at a Lorong Lew Lian flat	c2337fcf	singapore,fire,lorong-lew-lian,scdf,death
+2026-09-17	Photographer urges Tampines town council to spare an iconic HDB block's brick facade	9b86b50b	singapore,tampines,hdb,darren-soh,heritage
+2026-09-17	India's retail inflation climbs to 4.82% in August, its 10th straight monthly rise	83f29f98	india,inflation,cpi,rbi,food-prices
+2026-09-17	India's IPO market heats up, with a dozen share sales lined up before the NSE's own listing	66de281d	india,ipo,nse,markets,equity
+2026-09-17	India's top court drops cases against Gen-Z 'Cockroach' protesters, easing a standoff with Modi	2b9bc593	india,supreme-court,cockroach-janta-party,protests,surya-kant
+2026-09-17	Modi says India's 7.8% growth 'gives confidence to the world'	551c9e93	india,modi,gdp,growth,economy
+2026-09-17	A Reform-linked think tank urges Britain to slash taxes on the rich and let the City take bigger risks	2c06f5b1	uk,reform-uk,farage,tax,economy
+2026-09-17	Labour extends its poll lead as Reform grapples with a campaign-finance probe	003a21dc	uk,labour,reform-uk,burnham,polls
+2026-09-17	Canada's Carney to meet Burnham as Ottawa deepens its ties with Europe	8d912572	uk,carney,burnham,canada,diplomacy
+2026-09-17	Burnham's Parliament debut leaves MPs pressing for concrete plans	6105dfbb	uk,burnham,parliament,cost-of-living,labour
+2026-09-17	A war-damaged building collapses in Gaza City, killing at least 21	b4b4a539	gaza,building-collapse,israel,al-saada,casualties
+2026-09-17	The US moves to approve about 60,000 heavy bombs for Israel	e43174f9	united-states,israel,arms-sale,bombs,gaza
+2026-09-17	The US confirms it has deployed weapons in orbit, drawing a warning from China	a93093b5	united-states,space-force,weapons,orbit,china
+2026-09-17	Russian spy satellites may be helping Iran target US forces in the Gulf	c7911fac	russia,iran,satellites,united-states,gulf
+2026-09-17	China opens the Pinglu Canal, a new gateway to Southeast Asia	0c1b4128	china,pinglu-canal,southeast-asia,trade,shipping
+2026-09-17	OpenAI weighs a funding round valuing it above $1.2 trillion	51d3144e	openai,funding,valuation,chatgpt,ai
+2026-09-17	Altman rules out an OpenAI IPO this year, citing AI-safety concerns	f2ecf7f2	openai,altman,ipo,safety,ai
+2026-09-17	Anthropic's Amodei proposes a plan to slow the pace of advancing AI	c50cda75	anthropic,amodei,ai-safety,regulation,frontier-ai
+2026-09-17	Amazon gives OpenAI's advertising push a boost with a ChatGPT partnership	26dc230e	amazon,openai,advertising,chatgpt,revenue
+2026-09-17	The Federal Reserve raises rates to 3.75%-4%, its first hike since 2023	5ecac4fd	federal-reserve,interest-rates,warsh,inflation,fomc
+2026-09-17	Wall Street sells off as the Dow sinks about 631 points after the Fed	a3a6ae99	wall-street,dow,sp-500,stocks,fed
+2026-09-17	The 10-year Treasury yield tops 5% as the Fed signals more tightening may follow	8f50634e	treasury,bond-yields,10-year,fed,tightening
+2026-09-17	Analysts say Warsh's rate hike reinforces Fed independence after Trump's pressure	d60670f9	federal-reserve,warsh,trump,independence,rates
+2026-09-17	India beat Afghanistan by seven wickets to take an unbeatable 2-0 T20I lead	81ff8fe9	cricket,t20i,india,afghanistan,series-lead
+2026-09-17	Team Europe finalises its Laver Cup squad for London's O2	a399df3c	tennis,laver-cup,team-europe,alcaraz,ruud
+2026-09-17	Verstappen re-signs with Red Bull through 2030, settling F1's 2027 driver market	a2203dc4	f1,verstappen,red-bull,contract,driver-market
+2026-09-17	Mercedes keeps Antonelli and Russell for 2027 as the pair lead the title race	16fd0fc1	f1,mercedes,antonelli,russell,standings
+2026-09-17	F1's Azerbaijan Grand Prix shifts to a Saturday for a national day of remembrance	726b4af6	f1,azerbaijan-grand-prix,baku,schedule,saturday-race
+2026-09-17	Fuel savings could double the working life of NASA's Roman Space Telescope	08bc2d2e	nasa,roman-space-telescope,fuel,dark-energy,space
+2026-09-17	Physicists report an unexplained particle event in the LZ dark-matter hunt	d8958d40	dark-matter,lz-experiment,physics,particle,detector
+2026-09-17	An AI system claims a breakthrough on the Navier-Stokes 'Millennium' problem	7127cc50	navier-stokes,millennium-problem,openai,mathematics,fluid-dynamics
+2026-09-17	NASA's Roman Space Telescope launches to map dark energy and hunt exoplanets	a1aeeb23	nasa,roman-space-telescope,launch,dark-energy,exoplanets
