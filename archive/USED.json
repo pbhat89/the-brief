@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-07-19",
-      "topic_key": "astronaut",
-      "text": "Astronauts grow taller in space"
-    },
-    {
       "date": "2026-07-20",
       "topic_key": "africa",
       "text": "Africa is so vast that the US, China, India and much of Europe could all fit inside it at once."
@@ -254,14 +249,14 @@
       "date": "2026-09-17",
       "topic_key": "trees",
       "text": "There are more trees on Earth (~3 trillion) than stars in the Milky Way (~100-400 billion)."
+    },
+    {
+      "date": "2026-09-18",
+      "topic_key": "canada",
+      "text": "Canada has more lakes than the rest of the world combined"
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-08-18",
-      "type": "logic",
-      "title_key": "truth-on-the-island"
-    },
     {
       "date": "2026-08-20",
       "type": "quantitative",
@@ -366,14 +361,14 @@
       "date": "2026-09-17",
       "type": "quantitative",
       "title_key": "there-and-back"
+    },
+    {
+      "date": "2026-09-18",
+      "type": "lateral",
+      "title_key": "the-unopened-package"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-08-18",
-      "type": "letterboxed",
-      "title_key": "head-in-the-clouds"
-    },
     {
       "date": "2026-08-20",
       "type": "anagram",
@@ -478,6 +473,11 @@
       "date": "2026-09-17",
       "type": "spellingbee",
       "title_key": "prime-position"
+    },
+    {
+      "date": "2026-09-18",
+      "type": "letterboxed",
+      "title_key": "trace-the-square"
     }
   ]
 }

@@ -2838,3 +2838,35 @@ is empty until the first run.
 2026-09-17	Physicists report an unexplained particle event in the LZ dark-matter hunt	d8958d40	dark-matter,lz-experiment,physics,particle,detector
 2026-09-17	An AI system claims a breakthrough on the Navier-Stokes 'Millennium' problem	7127cc50	navier-stokes,millennium-problem,openai,mathematics,fluid-dynamics
 2026-09-17	NASA's Roman Space Telescope launches to map dark energy and hunt exoplanets	a1aeeb23	nasa,roman-space-telescope,launch,dark-energy,exoplanets
+2026-09-18	Ex-HDB group director charged with accessing the flat database 161 times	987936fe	singapore,hdb,tan-chew-ling,data-breach,court
+2026-09-18	Singapore rolls out 200-plus AI courses with six months of free premium tools	31a40684	singapore,swda,ai-courses,skillsfuture,reskilling
+2026-09-18	Woman accused of taking S$1.7 million from a late businessman says they were lovers	a9933435	singapore,embezzlement,businessman,court,misappropriation
+2026-09-18	Haze may return to Singapore over the next two weeks as dry weather persists	d0a7a34a	singapore,haze,dry-weather,air-quality,nea
+2026-09-18	Tata Sons extends Chandrasekaran and moves to list; Tata Trusts calls it ‘illegal’	a5aa0407	india,tata-sons,chandrasekaran,tata-trusts,ipo
+2026-09-18	India to levy a 0.4% fee on large UPI payments to businesses from October 15	914233c1	india,upi,npci,fee,google-pay-phonepe
+2026-09-18	India warns new US tariffs on Russian-oil buyers could strain ties	cb8c050b	india,united-states,russian-oil,tariffs,energy-security
+2026-09-18	What the new US Russian-oil law means for India: heavy secondary-tariff exposure	39cc19de	india,united-states,russian-oil,secondary-tariffs,exports
+2026-09-18	Burnham warns his first Budget will be ‘challenging’ in a shift of tone	9725a64e	uk,burnham,budget,healey,cost-of-living
+2026-09-18	UK unemployment holds at 4.9% as payrolls fall at the fastest pace in nine months	928fe6db	uk,unemployment,payrolls,ons,labour-market
+2026-09-18	Burnham weighs putting Thames Water into special administration	fa239630	uk,burnham,thames-water,special-administration,water-sector
+2026-09-18	UK household energy bills forecast to jump about 25% in January	a97003dc	uk,energy-bills,price-cap,inflation,burnham
+2026-09-18	Russia and China veto a UN mandate to monitor Iran sanctions	c9ee28bd	russia,china,iran,un-security-council,sanctions
+2026-09-18	Russian barrage injures at least 19 across Ukraine as Kyiv strikes back	eff1be7f	russia,ukraine,kyiv,zelenskyy,drone-strikes
+2026-09-18	US bars Iran’s nuclear chief from the IAEA conference in Vienna	51a53712	united-states,iran,iaea,eslami,travel-ban
+2026-09-18	India to supply Nepal electricity after floods wreck its hydropower	4fcbb726	india,nepal,floods,electricity,hydropower
+2026-09-18	SpaceX targets Starship’s first orbital flight on September 22	9583759a	spacex,starship,orbital-flight,starlink,launch
+2026-09-18	Lucid lines up Bolt as a European robotaxi partner	662784ee	lucid,bolt,robotaxi,europe,nvidia-hyperion
+2026-09-18	Anthropic and OpenAI move to embed independent safety evaluators	36818727	anthropic,openai,ai-safety,evaluators,metr
+2026-09-18	TechCrunch’s ‘AI graveyard’ tallies the boom’s casualties	e45770dd	ai,startups,shutdowns,techcrunch,ai-graveyard
+2026-09-18	Wall Street rebounds the day after the Fed’s rate hike	0c14963d	wall-street,sp-500,federal-reserve,rebound,treasury-yields
+2026-09-18	Citigroup lands a record $12 billion US dollar-bond sale	2ff89467	citigroup,bond-sale,credit-markets,fed,dollar-bonds
+2026-09-18	Middle East crude prices surge as traders scramble for barrels	e45d1f26	oil,middle-east,crude,brent,supply
+2026-09-18	Gold holds its decline after the Fed’s hawkish hike	a1123fe5	gold,federal-reserve,rates,safe-haven,yields
+2026-09-18	🏏 India complete a 3-0 T20I sweep of Afghanistan as Abhishek Sharma blazes a 30-ball century	fc48fcf6	cricket,t20i,india,afghanistan,abhishek-sharma
+2026-09-18	🏎️ Verstappen writes off his 2026 title hopes as Antonelli closes in	441e0dcc	f1,verstappen,antonelli,title-race,mercedes
+2026-09-18	🏎️ Wolff urges caution on reliability despite Antonelli’s big lead	9466ddb3	f1,wolff,antonelli,reliability,azerbaijan-grand-prix
+2026-09-18	🎾 Laver Cup returns to London’s O2 with Alcaraz leading Europe and Sinner absent	bcdc3390	tennis,laver-cup,alcaraz,team-europe,o2
+2026-09-18	Seismic sensors reveal how an underwater volcano’s collapse triggered the 2022 Tonga tsunami	7aa8799b	tonga,hunga-volcano,tsunami,caldera-collapse,seismic
+2026-09-18	Drug firms’ proprietary data supercharge AI protein-structure models	0dc712f5	ai,protein-structure,alphafold,drug-discovery,pharma-data
+2026-09-18	When to trust eyewitness memory: the new science of testimony	83453018	eyewitness-memory,testimony,psychology,forensics,courts
+2026-09-18	OpenAI’s reasoning models crack a 48-year-old sphere-packing barrier	ad334d70	openai,sphere-packing,mathematics,ai,reasoning-models
