@@ -2870,3 +2870,35 @@ is empty until the first run.
 2026-09-18	Drug firms’ proprietary data supercharge AI protein-structure models	0dc712f5	ai,protein-structure,alphafold,drug-discovery,pharma-data
 2026-09-18	When to trust eyewitness memory: the new science of testimony	83453018	eyewitness-memory,testimony,psychology,forensics,courts
 2026-09-18	OpenAI’s reasoning models crack a 48-year-old sphere-packing barrier	ad334d70	openai,sphere-packing,mathematics,ai,reasoning-models
+2026-09-19	Waymo to launch driverless robotaxis in western Singapore by 2028	745cd573	waymo,singapore,robotaxi,launch
+2026-09-19	iPhone 18 Pro goes on sale in Singapore as overnight queues form at Orchard	f6023b3d	iphone-18,apple,orchard,queue
+2026-09-19	Update: Crystal Jade closes its Clementi Mall and Jurong Point outlets	1dc40515	crystal-jade,clementi,jurong-point,closes
+2026-09-19	Singapore police send disaster-victim-identification team to flood-hit Nepal	d2a5040d	spf,nepal,floods,deployed
+2026-09-19	Speaker Seah Kian Peng apologises for dozing off during a parliamentary sitting	d9028479	seah-kian-peng,parliament,speaker,apologises
+2026-09-19	Indian and Pakistani warships collide in the Arabian Sea, stoking escalation fears	50bf9027	india,pakistan,arabian-sea,warships,collide
+2026-09-19	Sugar prices soar in India, souring the festive season	07f436d1	india,sugar,prices,festivals,imports
+2026-09-19	Update: India warns new US Russia-sanctions law could strain ties	388e671e	india,united-states,russian-oil,sanctions,warns
+2026-09-19	Bank of England holds rates at 3.75% but warns a hike may be needed	ede8c69a	bank-of-england,bank-rate,inflation,holds
+2026-09-19	UK retail sales unexpectedly rise 0.5% in August	84671926	uk,retail-sales,ons,august,rise
+2026-09-19	Palantir hires former Labour deputy leader Tom Watson as a UK NHS deal hangs in the balance	fbf935c0	palantir,tom-watson,nhs,contract,hires
+2026-09-19	Iran expels a Swedish diplomat in a tit-for-tat move	2af5cf0a	iran,sweden,diplomat,expels
+2026-09-19	Update: Poland says Russia is planning strikes on Ukraine's allies	db4350f5	poland,tusk,russia,ukraine,allies
+2026-09-19	Russian drones hit a train near the Polish border as Western officials pass through	f0f4c8cb	russia,ukraine,train,polish-border,drones
+2026-09-19	Israeli air strike kills a 15-year-old boy in Gaza City despite the ceasefire	5072fd22	israel,gaza,air-strike,ceasefire,killed
+2026-09-19	NATO jet shoots down a suspected Russian drone over Lithuania	1dba5592	nato,lithuania,russia,drone,shot-down
+2026-09-19	Researchers used Anthropic's Claude to breach OpenAI's systems in a white-hat test	58b4c32d	hacktron,claude,openai,exploit
+2026-09-19	Google's 'CC' becomes an AI agent that helps families run a household	513b8f0e	google,cc,ai-agent,household
+2026-09-19	AI funding surges as Manus rebounds with a $4 billion valuation	72bb1bcb	manus,ai-funding,valuation,meta
+2026-09-19	Newsom orders California to weigh an AI 'kill switch' in a new executive order	af8c4be4	newsom,california,ai-kill-switch,executive-order
+2026-09-19	Nvidia's Huang says the company will sell twice as many chips next year	723f2596	nvidia,jensen-huang,chips,guidance
+2026-09-19	Bank of Japan raises its policy rate to a multi-decade high of 1.25%	6d7e32db	bank-of-japan,policy-rate,yen,hikes
+2026-09-19	Saudi Aramco halts crude supply to European refiners after a pipeline attack	c2397f36	saudi-aramco,crude,europe,pipeline,halts
+2026-09-19	US stocks end mixed as Treasury yields and oil prices climb	ce3352b2	sp-500,dow,nasdaq,treasury-yields,stocks
+2026-09-19	🏏 England seal a 2-0 T20I series win over Sri Lanka	20c12da7	england,sri-lanka,t20i,banton,series
+2026-09-19	🏏 India reach the Asian Games women's cricket semi-finals	8760910f	india,japan,asian-games,charani,shafali
+2026-09-19	🏎️ Antonelli leads by 81 points as F1 heads to Baku's first Saturday race	a7f2ece0	antonelli,f1,azerbaijan-gp,baku,standings
+2026-09-19	🏏 Harry Brook's unbeaten 114 powers England to a 119-run rout of Sri Lanka	88fbaf14	harry-brook,england,sri-lanka,t20i,century
+2026-09-19	Astronomers find the youngest known planet, a world under a million years old	24733fcc	elias-2-24-b,exoplanet,youngest,nasa
+2026-09-19	JWST's 'little red dots' may be fast-growing baby black holes	4b048c78	jwst,little-red-dots,black-holes,nature
+2026-09-19	NASA's lunar orbiter spots a fresh crater bigger than the Colosseum	c54ac2f7	nasa,moon,mcgetchin-crater,lro
+2026-09-19	Europe launches FLEX to map the faint glow of photosynthesis	511450d7	esa,flex,sentinel-3c,vega-c,launch
