@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-07-21",
-      "topic_key": "nutmeg",
-      "text": "Nutmeg is mildly hallucinogenic in quantity due to myristicin, and toxic in large doses."
-    },
-    {
       "date": "2026-07-22",
       "topic_key": "napoleon",
       "text": "Napoleon was about average height for his era; the 'short' image is a myth."
@@ -254,14 +249,14 @@
       "date": "2026-09-19",
       "topic_key": "robot",
       "text": "The word 'robot' comes from Karel Capek's 1920 play R.U.R., from Czech 'robota' (forced labour); his brother Josef coined it."
+    },
+    {
+      "date": "2026-09-20",
+      "topic_key": "honey",
+      "text": "Honey is one of the very few foods that essentially never spoils. Its low moisture content, high acidity, and the trace hydrogen peroxide produced by bee enzyme"
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-08-20",
-      "type": "quantitative",
-      "title_key": "reunion-handshakes"
-    },
     {
       "date": "2026-08-22",
       "type": "lateral",
@@ -371,14 +366,14 @@
       "date": "2026-09-19",
       "type": "visual",
       "title_key": "punch-lines"
+    },
+    {
+      "date": "2026-09-20",
+      "type": "logic",
+      "title_key": "reading-room"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-08-20",
-      "type": "anagram",
-      "title_key": "sound-check"
-    },
     {
       "date": "2026-08-22",
       "type": "spellingbee",
@@ -488,6 +483,11 @@
       "date": "2026-09-19",
       "type": "grouping",
       "title_key": "board-meeting"
+    },
+    {
+      "date": "2026-09-20",
+      "type": "ladder",
+      "title_key": "from-hate-to-love"
     }
   ]
 }

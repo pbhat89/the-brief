@@ -2902,3 +2902,37 @@ is empty until the first run.
 2026-09-19	JWST's 'little red dots' may be fast-growing baby black holes	4b048c78	jwst,little-red-dots,black-holes,nature
 2026-09-19	NASA's lunar orbiter spots a fresh crater bigger than the Colosseum	c54ac2f7	nasa,moon,mcgetchin-crater,lro
 2026-09-19	Europe launches FLEX to map the faint glow of photosynthesis	511450d7	esa,flex,sentinel-3c,vega-c,launch
+2026-09-20	Leong Sze Hian forfeits S$45,000 bail after Lim Tean absconds to Malaysia	5d98e092	leong sze hian,lim tean,bailor,state courts,johor bahru
+2026-09-20	Man jailed 21 years for abusing 11 girls over more than three decades	6d89a30d	singapore,sexual abuse,enrichment centre,sentencing,court
+2026-09-20	Two Malaysians arrested at Tuas Checkpoint over a 10kg cannabis haul	b1ef63d5	ica,tuas checkpoint,cannabis,malaysian,drug smuggling
+2026-09-20	Chan Chun Sing says the public service must work with people, not just for them	5a815848	chan chun sing,public service,marina bay sands,leadership ceremony
+2026-09-20	Yoga Inc shuts its last two Singapore outlets and is struck off without warning	d7eccb34	yoga inc,safra punggol,our tampines hub,bizfile,closure
+2026-09-20	Mamata Banerjee moves the Supreme Court against an EC freeze of the Trinamool name and symbol	36dd69a8	mamata banerjee,election commission,trinamool congress,supreme court,west bengal
+2026-09-20	ED tells a court that no animal fat but six adulterants were found in Tirupati laddoos	01bb4958	enforcement directorate,tirupati laddoo,ttd,adulteration,andhra pradesh
+2026-09-20	Delhi High Court grants bail to UK national Jagtar Singh Johal in seven NIA cases	a7951794	delhi high court,jagtar singh johal,nia,uapa,bail
+2026-09-20	BEML wins a Rs 5,400 crore order to supply bullet-train rolling stock	1e19706c	beml,nhsrcl,bullet train,mumbai-ahmedabad,rolling stock
+2026-09-20	IIT-Bombay students protest overnight after a second-year student dies by suicide	f0bfdbff	iit bombay,student suicide,protest,mumbai,exam
+2026-09-20	Burnham finds himself 'in hock' to bond markets as UK borrowing costs surge	269ded71	andy burnham,john healey,gilts,autumn budget,borrowing costs
+2026-09-20	Burnham to meet Trump as his aides blame the president for Britain's economic woes	7cab3c5e	andy burnham,donald trump,unga,uk economy,budget
+2026-09-20	Earl Spencer's memoir reignites a dispute with King Charles over Diana	ee58d4b5	charles spencer,king charles,princess diana,memoir,buckingham palace
+2026-09-20	Trump says a Denmark deal gives the US lasting control of Greenland's security	d4b0ea02	trump,denmark,greenland,nato,unga
+2026-09-20	Russia holds its first parliamentary elections since the full-scale invasion of Ukraine	d203fad3	russia,state duma,united russia,putin,yabloko
+2026-09-20	Houthis seize the Bab al-Mandeb chokepoint as the US stays on the sidelines	048a19e3	houthis,bab al-mandeb,yemen,saudi arabia,red sea
+2026-09-20	Netanyahu moves to stop overseas Israelis flying home to vote before the October election	69ab43dd	netanyahu,israel election,gadi eisenkot,knesset,expatriates
+2026-09-20	Russian strikes across Ukraine injure at least 19 as Kyiv hits a Russian refinery	8a1842a4	russia,ukraine,kyiv,drone strikes,oil refinery
+2026-09-20	Flock Safety offers buyouts to its 1,500 staff amid a surveillance backlash	43a33326	flock safety,buyouts,surveillance,licence-plate recognition,layoffs
+2026-09-20	EQT backs a $2 billion small-battery push to power US AI data centres	8ed49094	eqt,madison energy,batteries,data centres,pjm
+2026-09-20	Anthropic's annualised revenue nears $100 billion ahead of a reported November IPO	69d975eb	anthropic,ipo,revenue,valuation,morgan stanley
+2026-09-20	Google says its Gemini model broke out of a security test and probed three real firms	76e94ade	google,gemini,irregular,cybersecurity,breakout
+2026-09-20	Leaked contract shows the US will share Pfizer's higher overseas drug revenue	3aa1c04f	pfizer,hhs,eli lilly,public citizen,drug pricing
+2026-09-20	Robinhood pitches lifelong wealth management as it moves beyond trading	157b5390	robinhood,vlad tenev,wealth management,tokenisation,revenue
+2026-09-20	Update: Oil slides toward $102 as Saudi races to restore its East-West pipeline	3dbebd08	brent crude,saudi aramco,east-west pipeline,oil prices,supply
+2026-09-20	Update: US stocks close mixed as the Nasdaq edges up to end a Fed-hike week	06f1bc65	s&p 500,nasdaq,dow jones,triple witching,federal reserve
+2026-09-20	🏏 Update: England complete a 3-0 T20I sweep of Sri Lanka to reclaim the No.1 ranking	509b5345	england,sri lanka,jos buttler,t20i,rankings
+2026-09-20	🎾 South Korea become the first Asian nation to reach the Davis Cup Final 8, beating India	8c0635bc	south korea,india,davis cup,kwon soon-woo,sumit nagal
+2026-09-20	🏎️ Leclerc set for a Baku grid penalty as Ferrari writes off his Monza engine	15e17bcd	charles leclerc,ferrari,fred vasseur,azerbaijan grand prix,engine penalty
+2026-09-20	🏎️ Wolff cautions that Antonelli's title is 'too early to call' despite an 81-point lead	d02849cf	kimi antonelli,toto wolff,mercedes,george russell,azerbaijan grand prix
+2026-09-20	A new study explains the early-2000s pause in atmospheric methane growth	2a1e3e61	methane,hydroxyl radical,nitrogen oxides,atmospheric science,climate
+2026-09-20	An AI weather model forecasts tropical cyclones with an extra day of warning	906f525c	artificial intelligence,tropical cyclones,forecasting,weathernext,national hurricane center
+2026-09-20	Silicon spin qubits reach 99% two-qubit fidelity and teleport a quantum state	34997e12	quantum computing,silicon,spin qubits,teleportation,scalability
+2026-09-20	Study maps the climate gains and ecological costs of fertilising the ocean with iron	721da59f	ocean iron fertilisation,carbon removal,phytoplankton,geoengineering,ecology
