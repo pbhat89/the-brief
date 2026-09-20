@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-07-22",
-      "topic_key": "napoleon",
-      "text": "Napoleon was about average height for his era; the 'short' image is a myth."
-    },
-    {
       "date": "2026-07-23",
       "topic_key": "great wall of china",
       "text": "The Great Wall of China cannot be seen from space with the naked eye; it is a myth."
@@ -254,6 +249,11 @@
       "date": "2026-09-20",
       "topic_key": "honey",
       "text": "Honey is one of the very few foods that essentially never spoils. Its low moisture content, high acidity, and the trace hydrogen peroxide produced by bee enzyme"
+    },
+    {
+      "date": "2026-09-21",
+      "topic_key": "lightning",
+      "text": "A single bolt of lightning is about five times hotter than the Sun's surface (~30,000 C vs ~5,500 C)."
     }
   ],
   "puzzle_log": [
@@ -371,6 +371,11 @@
       "date": "2026-09-20",
       "type": "logic",
       "title_key": "reading-room"
+    },
+    {
+      "date": "2026-09-21",
+      "type": "quantitative",
+      "title_key": "count-the-pages"
     }
   ],
   "word_puzzle_log": [
@@ -488,6 +493,11 @@
       "date": "2026-09-20",
       "type": "ladder",
       "title_key": "from-hate-to-love"
+    },
+    {
+      "date": "2026-09-21",
+      "type": "anagram",
+      "title_key": "head-of-the-class"
     }
   ]
 }

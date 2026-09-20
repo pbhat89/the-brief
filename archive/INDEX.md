@@ -2936,3 +2936,24 @@ is empty until the first run.
 2026-09-20	An AI weather model forecasts tropical cyclones with an extra day of warning	906f525c	artificial intelligence,tropical cyclones,forecasting,weathernext,national hurricane center
 2026-09-20	Silicon spin qubits reach 99% two-qubit fidelity and teleport a quantum state	34997e12	quantum computing,silicon,spin qubits,teleportation,scalability
 2026-09-20	Study maps the climate gains and ecological costs of fertilising the ocean with iron	721da59f	ocean iron fertilisation,carbon removal,phytoplankton,geoengineering,ecology
+2026-09-21	Haze pushes Singapore's air quality back into the unhealthy range	ebe24389	singapore,haze,psi,nea,indonesia-fires
+2026-09-21	iPhone 18 launch draws overnight queues at Apple's Orchard Road store	63b59b0b	singapore,iphone-18,apple,orchard-road,queue
+2026-09-21	Six Malaysians jailed over a S$4.9 million machete robbery at a King Albert Park bungalow	2d6b7c87	singapore,king-albert-park,robbery,malaysians,jailed
+2026-09-21	Firm fined S$24,000 after its private investigators tailed a police officer	d90406d5	singapore,private-investigators,police-officer,fined,surveillance
+2026-09-21	Trump extends the $100,000 H-1B fee, squeezing India's IT giants	32e8a671	india,h-1b,trump,tcs,wipro,it-services
+2026-09-21	India's economy is rebounding even as US tariffs bite	31c7b2ba	india,gdp,tariffs,bloomberg-economics,growth
+2026-09-21	Burnham warns of a 'challenging' autumn budget as borrowing costs bite	5aa86a35	uk,andy-burnham,budget,fiscal-rules,borrowing-costs
+2026-09-21	Ukraine hits Moscow with what officials call its largest drone assault yet	3e48dd8e	ukraine,russia,moscow,drones,election
+2026-09-21	United Russia set to keep its grip in a wartime parliamentary vote	dfe2c421	russia,state-duma,united-russia,putin,election
+2026-09-21	Israeli fire kills Palestinians in Gaza, including a health official's son	850925fe	israel,gaza,strikes,nuseirat,ceasefire
+2026-09-21	Meta launches Muse, a personal AI agent that runs errands for you	493af11b	meta,muse,ai-agent,assistant
+2026-09-21	Nvidia-backed AI cloud firm Nscale files for a US IPO	01df544e	nscale,nvidia,ipo,ai-cloud,data-centre
+2026-09-21	US 10-year Treasury yield hovers near 5%, its highest since 2023	628752b7	treasury-yields,bonds,inflation,fed,markets
+2026-09-21	Gold climbs back toward $4,400 as post-Fed inflation fears ease	b7a32782	gold,commodities,fed,inflation,yields
+2026-09-21	🏏 Shafali's 49-ball ton fires India into the Asian Games cricket final	6e5b50fb	india,bangladesh,asian-games,shafali-verma,final
+2026-09-21	🏏 Australia edge Zimbabwe by one wicket to sweep the ODI series	af44e2e1	australia,zimbabwe,odi,inglis,series-sweep
+2026-09-21	🎾 Germany, Canada and Czechia reach the Davis Cup Final 8 as the US falls	aaa7d558	davis-cup,germany,canada,czechia,usa
+2026-09-21	🏎️ Hamilton says 'there's no stopping' Antonelli as the title race tilts	71e94ad2	hamilton,antonelli,f1,azerbaijan-gp,standings
+2026-09-21	Scientists find a hidden 'immune organ' in the skull that helps fight brain cancer	edc3de9c	immune-organ,skull,brain-cancer,neuroimmunology,nature
+2026-09-21	Hubble spots a new 10-sided 'decagon' over Saturn's south pole	7e83e8c8	saturn,hubble,decagon,atmosphere,nasa
+2026-09-21	Interstellar comet 3I/ATLAS flares up as it heads out of the solar system	7309d3d7	3i-atlas,interstellar-comet,nasa,solar-system
