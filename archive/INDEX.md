@@ -2957,3 +2957,22 @@ is empty until the first run.
 2026-09-21	Scientists find a hidden 'immune organ' in the skull that helps fight brain cancer	edc3de9c	immune-organ,skull,brain-cancer,neuroimmunology,nature
 2026-09-21	Hubble spots a new 10-sided 'decagon' over Saturn's south pole	7e83e8c8	saturn,hubble,decagon,atmosphere,nasa
 2026-09-21	Interstellar comet 3I/ATLAS flares up as it heads out of the solar system	7309d3d7	3i-atlas,interstellar-comet,nasa,solar-system
+2026-09-22	Rare Louis Vuitton bag fetches S$87,000 as Singapore's money-laundering auction tops S$1 million	8e156cc3	singapore,money-laundering,auction,louis-vuitton
+2026-09-22	Singapore bus commuters face fines of up to S$500 for loud audio and feet on seats from Sep 23	b0394030	singapore,lta,public-bus,fines
+2026-09-22	Update: Putin's United Russia sweeps a wartime Duma vote, on course for a record 355 seats	6d4aa1b8	russia,united-russia,state-duma,putin,election
+2026-09-22	Germany's far-right AfD wins a state election as Merz's CDU is nearly wiped out	24e0479c	germany,afd,cdu,merz,mecklenburg-vorpommern
+2026-09-22	World leaders converge on New York as the 81st UN General Assembly opens	1d6c6ec1	united-nations,unga,trump,lula,xi-jinping
+2026-09-22	Israeli fire kills Palestinians in Gaza as the post-ceasefire toll climbs	693c0db2	israel,gaza,al-mawasi,ceasefire,strikes
+2026-09-22	Huawei races to field a next-generation AI chip to challenge Nvidia	83a2145f	huawei,nvidia,ai-chip,china
+2026-09-22	Meta pushes its first in-house AI training chip toward production	81f0618b	meta,mtia,ai-chip,nvidia,amd
+2026-09-22	AMD becomes the latest chipmaker to top a US$1 trillion valuation	ed10e54b	amd,semiconductors,market-cap,ai
+2026-09-22	Wall Street closes at record highs as chip stocks surge	1f995b91	s&p-500,nasdaq,intel,stocks,chips
+2026-09-22	Oil slips below $100 as hopes for Iran diplomacy ease inflation fears	7e2f7a69	oil,brent-crude,treasury-yields,iran,fed
+2026-09-22	🏎️ Red Bull weighs Hadjar's return for Baku after his boxing-injury absence	be31f625	isack-hadjar,red-bull,liam-lawson,azerbaijan-grand-prix,f1
+2026-09-22	🏏 Antigua & Barbuda Falcons win a maiden CPL title	dbc67988	cpl,antigua-barbuda-falcons,jamaica-kingsmen,final,cricket
+2026-09-22	🏏 India Under-19 clinch the series against Australia with a 103-run win	8c30a6ec	india-under-19,australia-under-19,youth-odi,rajkot,cricket
+2026-09-22	🏏 India and Sri Lanka meet for Asian Games women's cricket gold	7f04ada2	india,sri-lanka,asian-games,womens-cricket,final
+2026-09-22	Fossil teeth reveal Tyrannosaurus rex was warm-blooded, at about 36°C	97a2f0df	tyrannosaurus-rex,paleontology,warm-blooded,clumped-isotopes
+2026-09-22	Physicists build a cold beam of 'muonium' to test gravity on exotic matter	00e9f2f4	muonium,gravity,eth-zurich,paul-scherrer-institute,nature-physics
+2026-09-22	NASA says its Roman Space Telescope now has fuel for at least 22 years	7e732c8a	roman-space-telescope,nasa,dark-energy,l2,fuel
+2026-09-22	Albania becomes the 73rd nation to sign the Artemis Accords	b11fce20	albania,artemis-accords,nasa,space-exploration

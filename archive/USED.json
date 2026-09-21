@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-07-23",
-      "topic_key": "great wall of china",
-      "text": "The Great Wall of China cannot be seen from space with the naked eye; it is a myth."
-    },
-    {
       "date": "2026-07-24",
       "topic_key": "deck of cards",
       "text": "A shuffled 52-card deck is almost certainly in an order that has never existed before (52! is about 8e67)."
@@ -254,14 +249,14 @@
       "date": "2026-09-21",
       "topic_key": "lightning",
       "text": "A single bolt of lightning is about five times hotter than the Sun's surface (~30,000 C vs ~5,500 C)."
+    },
+    {
+      "date": "2026-09-22",
+      "topic_key": "nintendo",
+      "text": "Nintendo was founded in 1889 as a hanafuda playing-card maker in Kyoto, decades before it made video games."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-08-22",
-      "type": "lateral",
-      "title_key": "long-push"
-    },
     {
       "date": "2026-08-23",
       "type": "visual",
@@ -376,14 +371,14 @@
       "date": "2026-09-21",
       "type": "quantitative",
       "title_key": "count-the-pages"
+    },
+    {
+      "date": "2026-09-22",
+      "type": "lateral",
+      "title_key": "dinner-after-all"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-08-22",
-      "type": "spellingbee",
-      "title_key": "table-talk"
-    },
     {
       "date": "2026-08-23",
       "type": "grouping",
@@ -498,6 +493,11 @@
       "date": "2026-09-21",
       "type": "anagram",
       "title_key": "head-of-the-class"
+    },
+    {
+      "date": "2026-09-22",
+      "type": "spellingbee",
+      "title_key": "round-robin"
     }
   ]
 }
