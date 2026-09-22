@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-07-24",
-      "topic_key": "deck of cards",
-      "text": "A shuffled 52-card deck is almost certainly in an order that has never existed before (52! is about 8e67)."
-    },
-    {
       "date": "2026-07-25",
       "topic_key": "sloth",
       "text": "A sloth can take up to a month to digest a single leaf and can hold its breath underwater for up to 40 minutes."
@@ -254,14 +249,14 @@
       "date": "2026-09-22",
       "topic_key": "nintendo",
       "text": "Nintendo was founded in 1889 as a hanafuda playing-card maker in Kyoto, decades before it made video games."
+    },
+    {
+      "date": "2026-09-23",
+      "topic_key": "spine",
+      "text": "You are taller in the morning than at night; spinal discs compress under gravity through the day and rebound overnight."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-08-23",
-      "type": "visual",
-      "title_key": "painted-cube"
-    },
     {
       "date": "2026-08-24",
       "type": "logic",
@@ -376,14 +371,14 @@
       "date": "2026-09-22",
       "type": "lateral",
       "title_key": "dinner-after-all"
+    },
+    {
+      "date": "2026-09-23",
+      "type": "visual",
+      "title_key": "tumbling-die"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-08-23",
-      "type": "grouping",
-      "title_key": "four-of-a-kind"
-    },
     {
       "date": "2026-08-24",
       "type": "ladder",
@@ -498,6 +493,11 @@
       "date": "2026-09-22",
       "type": "spellingbee",
       "title_key": "round-robin"
+    },
+    {
+      "date": "2026-09-23",
+      "type": "letterboxed",
+      "title_key": "around-the-box"
     }
   ]
 }

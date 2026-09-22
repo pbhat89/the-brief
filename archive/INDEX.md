@@ -2976,3 +2976,28 @@ is empty until the first run.
 2026-09-22	Physicists build a cold beam of 'muonium' to test gravity on exotic matter	00e9f2f4	muonium,gravity,eth-zurich,paul-scherrer-institute,nature-physics
 2026-09-22	NASA says its Roman Space Telescope now has fuel for at least 22 years	7e732c8a	roman-space-telescope,nasa,dark-energy,l2,fuel
 2026-09-22	Albania becomes the 73rd nation to sign the Artemis Accords	b11fce20	albania,artemis-accords,nasa,space-exploration
+2026-09-23	Tiffany Teo wins Singapore's first gold of the 2026 Asian Games in MMA	3c4b714a	singapore,tiffany-teo,asian-games,mma,gold
+2026-09-23	Man, 22, arrested for voyeurism at an NTU campus gym	0ec9c569	singapore,ntu,voyeurism,arrest
+2026-09-23	Singaporean student, 19, pleads not guilty over Johor crash that killed five	865544f1	singapore,johor,crash,dangerous-driving,goh-yin-zun
+2026-09-23	Update: UK borrowing hits GBP18.3bn in August, GBP3.5bn above the OBR forecast	a2fb1f04	uk,borrowing,ons,obr,john-healey
+2026-09-23	Ed Davey pitches the Lib Dems as election kingmakers with a GBP17bn tax cut	5bdb1d1e	uk,ed-davey,liberal-democrats,income-tax,brighton
+2026-09-23	Trump tells the UN he will strike a deal or 'annihilate' Iran after the midterms	692ea2d0	trump,iran,unga,midterms,nuclear
+2026-09-23	Lula uses his UN address to warn against foreign meddling in Brazil's election	0075e2af	lula,brazil,unga,election,trump
+2026-09-23	Erdogan calls Gaza 'the most shameful concentration camp of our time' at the UN	0c3cbd02	erdogan,turkiye,israel,gaza,unga
+2026-09-23	Update: Trump meets Zelensky at the UN as Zelensky says he is ready for a trilateral with Putin	25ccd79b	trump,zelensky,putin,ukraine,unga
+2026-09-23	Qatar's emir tells the UN that Gaza 'is genocide' and the Gulf faces its most dangerous phase	f88dfff5	qatar,tamim,israel,gaza,iran
+2026-09-23	OpenAI launches GPT-6 Sol and Luna, halving token prices	1223651e	openai,gpt-6,sol,luna,pricing
+2026-09-23	Alibaba unveils the Zhenwu V900 AI chip and a 20GW data-centre goal	011e8cf9	alibaba,zhenwu-v900,ai-chip,apsara,data-centre
+2026-09-23	FAA begins an $875M AI air-traffic rollout at Washington-area airports	02b4f226	faa,smart,air-traffic,natca,ai
+2026-09-23	SoftBank seeks over $11 billion in junk bonds to fund its OpenAI bet	5f71c1e4	softbank,openai,junk-bonds,masayoshi-son
+2026-09-23	Update: Oil falls a fifth straight day as US-Iran talks ease supply fears	49a429ba	oil,brent-crude,wti,iran,saudi-arabia
+2026-09-23	Wall Street holds just shy of records as the AI rally pauses	f8db6621	s&p-500,dow,stocks,ai
+2026-09-23	Bitcoin leads crypto back above $3 trillion as leveraged bets build	83a543fd	bitcoin,crypto,digital-assets,futures
+2026-09-23	US Treasury yields hold near 4.95% as investors await fresh Fed signals	eb9cfeab	treasury-yields,bonds,fed,10-year
+2026-09-23	🏎️ Antonelli leads by 81 as F1 heads to a Saturday showdown in Baku	62c9c3a9	antonelli,russell,f1,azerbaijan-grand-prix,baku
+2026-09-23	🏏 Update: India crush Sri Lanka by 147 runs to retain Asian Games women's cricket gold	a2a68ffa	india,sri-lanka,asian-games,mandhana,womens-cricket
+2026-09-23	🏏 Will Jacks stars with bat and ball as England beat Sri Lanka by 89 runs	3046916a	england,sri-lanka,odi,will-jacks,chester-le-street
+2026-09-23	🎾 Alcaraz and Zverev headline Team Europe at the London Laver Cup	38d36cd4	laver-cup,alcaraz,zverev,team-europe,london
+2026-09-23	Hubble and Webb team up to find 27 tiny, far-flung solar-system objects	db638adf	hubble,webb,trans-neptunian-objects,kuiper-belt,nasa
+2026-09-23	ESA's Juice probe swings past Earth for a Jupiter-bound gravity assist	680b6ef5	esa,juice,jupiter,earth-flyby,gravity-assist
+2026-09-23	Accelerated biological ageing may help explain rising early-onset cancers	4d57fc88	biological-ageing,early-onset-cancer,phenoage,uk-biobank,nature-medicine
