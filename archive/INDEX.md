@@ -3001,3 +3001,29 @@ is empty until the first run.
 2026-09-23	Hubble and Webb team up to find 27 tiny, far-flung solar-system objects	db638adf	hubble,webb,trans-neptunian-objects,kuiper-belt,nasa
 2026-09-23	ESA's Juice probe swings past Earth for a Jupiter-bound gravity assist	680b6ef5	esa,juice,jupiter,earth-flyby,gravity-assist
 2026-09-23	Accelerated biological ageing may help explain rising early-onset cancers	4d57fc88	biological-ageing,early-onset-cancer,phenoage,uk-biobank,nature-medicine
+2026-09-24	Malaysian man jailed over 'SMS blaster' phishing scam in Singapore	e4f6e116	singapore,sms blaster,phishing,malaysian man
+2026-09-24	Alleged scam-syndicate mastermind handed to Singapore police	cec08294	singapore,scam syndicate,money laundering,malaysia
+2026-09-24	52 Singaporeans detained in China over suspected pyramid scheme	c8dc02ba	singapore,china,pyramid scheme,detained
+2026-09-24	Leong Sze Hian forfeits S$45,000 after Lim Tean absconds	52a909b7	leong sze hian,lim tean,bailor,singapore
+2026-09-24	Ex-HDB director charged with accessing housing database 161 times	6eb9d303	hdb,tan chew ling,computer misuse act,singapore
+2026-09-24	India coverage is unavailable in today's edition	e3cdb7aa	india,coverage unavailable
+2026-09-24	Burnham stands by warning that the UK is 'in hock' to bond markets	7e7fb279	andy burnham,uk,bond markets
+2026-09-24	Chancellor Healey must find £10bn to steady UK finances before Oct 28 budget	87d1ce20	john healey,uk budget,burnham
+2026-09-24	UK inflation climbs to 3.1% in August, a five-month high	34684132	uk inflation,ons,bank of england
+2026-09-24	Burnham to meet Trump as UK aides blame Washington for economic strain	9ab94876	andy burnham,donald trump,uk economy
+2026-09-24	Trump welcomes Xi to Washington for first US state visit in a decade	4262c1b4	trump,xi jinping,state visit,china
+2026-09-24	Macron calls Gaza 'peace' a spectacle that shames the world at the UN	fb7751db	macron,gaza,unga,palestinian statehood
+2026-09-24	Iran's Pezeshkian defies Trump in a wartime address to the UN	212b9b65	pezeshkian,iran,unga,trump
+2026-09-24	Update: Zelensky says Ukraine is ready for an energy ceasefire with Russia	75f4be4e	zelensky,ukraine,energy ceasefire,russia
+2026-09-24	Qualcomm unveils two 2nm smartphone chips built for on-device AI	6a15cfd3	qualcomm,snapdragon,2nm chip,on-device ai
+2026-09-24	OpenAI to let outside groups vet its models earlier for safety	b08f384f	openai,ai safety,third-party testing
+2026-09-24	Wall Street sells off as Treasury yields jump	6193bd61	sp 500,nasdaq,dow,wall street
+2026-09-24	US 10-year Treasury yield hits 5.13%, its highest since 2007	0774a813	treasury yield,10-year,federal reserve
+2026-09-24	Brent crude tops $101 as Middle East tensions lift oil	d30740ec	brent crude,oil,middle east
+2026-09-24	Bets on an October Fed rate hike climb toward 70%	379014e2	federal reserve,rate hike,michael barr
+2026-09-24	🏎️ Red Bull confirms Hadjar alongside Verstappen for 2027	bbda2263	f1,red bull,isack hadjar,verstappen
+2026-09-24	🏎️ Verstappen eyes a record third Baku win as F1 runs a rare Saturday race	221fd75a	f1,verstappen,azerbaijan grand prix,baku
+2026-09-24	🏎️ Ocon declares himself a free agent as Camara leads race for his Haas seat	2ba1c695	f1,esteban ocon,rafael camara,haas
+2026-09-24	🏏 Asian Games men's cricket opens in Japan	48ad94b6	asian games,cricket,japan,afghanistan
+2026-09-24	New Horizons finds signs of recent liquid nitrogen flow on Pluto	0f1e04db	new horizons,pluto,liquid nitrogen,sputnik planitia
+2026-09-24	Telescope spotted a small asteroid just hours before it hit Earth	12bc3bba	asteroid 2026 rw1,catalina sky survey,planetary defence
