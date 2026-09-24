@@ -3027,3 +3027,34 @@ is empty until the first run.
 2026-09-24	🏏 Asian Games men's cricket opens in Japan	48ad94b6	asian games,cricket,japan,afghanistan
 2026-09-24	New Horizons finds signs of recent liquid nitrogen flow on Pluto	0f1e04db	new horizons,pluto,liquid nitrogen,sputnik planitia
 2026-09-24	Telescope spotted a small asteroid just hours before it hit Earth	12bc3bba	asteroid 2026 rw1,catalina sky survey,planetary defence
+2026-09-25	SUTD deputy manager charged over 180 fraudulent bookings costing S$130,000	511a18a5	sutd,deputy-manager,fraudulent-bookings,cheating,charged
+2026-09-25	Two workers die after a work platform falls into the sea at Tuas Port	21ee339d	tuas-port,psa,workers,platform,died
+2026-09-25	Singapore finance firms pledge to train 80,000 local staff in AI skills	2b6862bc	ibf,mas,gan-kim-yong,finance-firms,ai-training
+2026-09-25	India's 'Cockroach' party gives election chief 48 hours to resign	6ab17b09	cjp,gyanesh-kumar,election-commission,sir,resign
+2026-09-25	National Stock Exchange's $2.4 billion IPO subscribed 5.7 times	dee78de0	nse,ipo,subscription,india,listing
+2026-09-25	Apple set to top 10% of India's smartphone market on iPhone 18 demand	0bb6f2f4	apple,iphone-18,india,smartphone-market,counterpoint
+2026-09-25	Foreign investors exit Indian large-caps as Bernstein flags a 'bygone era'	ad8196f3	bernstein,foreign-investors,nifty-50,outflows,india
+2026-09-25	YouGov mega-poll projects a hung parliament with Reform slumping to third	8c33718e	yougov,mrp-poll,labour,reform-uk,burnham
+2026-09-25	Remote Orkney island of North Ronaldsay records its first baby in 34 years	c6816d86	north-ronaldsay,orkney,baby,birth,nhs
+2026-09-25	Labour gathers in Liverpool for Burnham's first conference as prime minister	d978aaec	labour,conference,liverpool,burnham,keynote
+2026-09-25	Delegates walk out en masse as Netanyahu defies the UN over Gaza and Iran	89fcc4cd	netanyahu,un-general-assembly,walkout,gaza,iran
+2026-09-25	Barred from the US, Abbas tells the UN Israel threatens Palestinians' 'very existence'	8a926dc3	abbas,un-general-assembly,palestinians,elections,nakba
+2026-09-25	US and Iran hold mediated UN talks on ending the war and reopening Hormuz	a8716866	us,iran,hormuz,unga,talks
+2026-09-25	Australia says an OpenAI agent breached its Medicare portal in first known AI hack of a government	0fc0ca46	openai,albanese,medicare,ai-agent,breach
+2026-09-25	DeepSeek's annualised revenue run rate hits about $1 billion after price hikes	9a8e2241	deepseek,revenue,fundraising,liang-wenfeng,shanghai
+2026-09-25	Microsoft's Gulf AI and cloud spending passes $10 billion through 2030	45c31b0e	microsoft,gulf,ai,cloud,brad-smith
+2026-09-25	Altman and Amodei urge the UN Security Council to set global AI rules	e6e3ff45	altman,amodei,un-security-council,ai-rules,safety
+2026-09-25	Nvidia-backed Firmus seeks about $10 billion for an Indonesian data centre	0636f03e	firmus,nvidia,indonesia,data-centre,ipo
+2026-09-25	US business activity expands at its fastest pace since 2021	4a7c6789	us,pmi,business-activity,inflation,sp-global
+2026-09-25	30-year Treasury yield hits its highest since 2004 as bond selloff deepens	0e21d895	treasury,30-year-yield,bond-selloff,10-year,rates
+2026-09-25	BlackRock and IFM near a $25 billion Stack data-centre deal	530e5624	blackrock,ifm,stack,data-centre,deal
+2026-09-25	Oil whipsaws on a Houthi strike, then eases on Hormuz-deal talks	8ddd9921	oil,brent,houthi,hormuz,iran
+2026-09-25	🏏 South Africa beat Australia by 67 runs in the first Durban ODI	744c2791	south-africa,australia,odi,durban,breetzke
+2026-09-25	🎾 Prozorova stuns Eala at the Singapore Open for a first top-20 win	06e895dd	prozorova,eala,singapore-open,wta,upset
+2026-09-25	🎾 Top seed Andreeva reaches the Singapore Open quarterfinals	2f5e1fdf	andreeva,singapore-open,quarterfinals,wta,sasnovich
+2026-09-25	🏎️ Alonso says there is 'no urgency' on his Aston Martin or retirement call	54cba033	alonso,aston-martin,f1,retirement,2027
+2026-09-25	🏏 Afghanistan beat hosts Japan by 48 runs in the Asian Games cricket opener	7ce537b3	afghanistan,japan,asian-games,cricket,arab-gul
+2026-09-25	NASA picks PRIMA far-infrared telescope as its first Probe Explorer mission	bdcb5fce	nasa,prima,far-infrared-telescope,probe-explorer,phase-b
+2026-09-25	This year's El Niño breaks a Pacific temperature record	0d50d065	el-nino,pacific,sea-surface-temperature,record,swain
+2026-09-25	African elephants appear to forage and mix their own medicines	9ea023f7	elephants,mount-elgon,kenya,medicinal-plants,self-medication
+2026-09-25	Landmark brain-cell atlas maps genetic risk for Alzheimer's and more	e9d2face	brain-cell-atlas,nature,alzheimers,prefrontal-cortex,gene-activity

@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-07-26",
-      "topic_key": "waggle dance",
-      "text": "How honeybees dance directions to their hive"
-    },
-    {
       "date": "2026-07-27",
       "topic_key": "diamond rain",
       "text": "It rains diamonds inside Uranus and Neptune"
@@ -254,14 +249,14 @@
       "date": "2026-09-24",
       "topic_key": "card shuffle",
       "text": "There are about 8x10^67 (52!) ways to arrange a 52-card deck, so any well shuffle is almost certainly unique in history."
+    },
+    {
+      "date": "2026-09-25",
+      "topic_key": "antarctica",
+      "text": "Antarctica is the largest desert on Earth; its interior is drier than the Sahara."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-08-25",
-      "type": "quantitative",
-      "title_key": "every-digit-counts"
-    },
     {
       "date": "2026-08-26",
       "type": "lateral",
@@ -376,14 +371,14 @@
       "date": "2026-09-24",
       "type": "logic",
       "title_key": "who-ate-the-cake"
+    },
+    {
+      "date": "2026-09-25",
+      "type": "quantitative",
+      "title_key": "late-arrivals"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-08-25",
-      "type": "anagram",
-      "title_key": "letter-perfect"
-    },
     {
       "date": "2026-08-26",
       "type": "letterboxed",
@@ -498,6 +493,11 @@
       "date": "2026-09-24",
       "type": "grouping",
       "title_key": "four-by-four"
+    },
+    {
+      "date": "2026-09-25",
+      "type": "ladder",
+      "title_key": "alchemist"
     }
   ]
 }

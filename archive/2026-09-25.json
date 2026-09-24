@@ -1,0 +1,565 @@
+{
+  "date": "2026-09-25",
+  "items": [
+    {
+      "tab": "Singapore",
+      "headline": "SUTD deputy manager charged over 180 fraudulent bookings costing S$130,000",
+      "summary": "A 41-year-old deputy manager at the Singapore University of Technology and Design was charged on Sep 23 with cheating and forgery over more than 180 unauthorised football-facility bookings across about three years, allegedly costing the university more than S$130,000. Prosecutors say he deleted records to conceal the scheme.",
+      "url": "https://mothership.sg/2026/09/sutd-fraudulent-football-bookings-revenue-loss/",
+      "outlet": "Mothership",
+      "publish_date": "Sep 23",
+      "short_hash": "511a18a5",
+      "key_entities": [
+        "sutd",
+        "deputy-manager",
+        "fraudulent-bookings",
+        "cheating",
+        "charged"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "Two workers die after a work platform falls into the sea at Tuas Port",
+      "summary": "Two men, aged 33 and 44, died on the morning of Sep 22 when a work platform dislodged from a crane and fell into the sea during stevedoring operations at Tuas Port. PSA Singapore said investigations are ongoing.",
+      "url": "https://mothership.sg/2026/09/2-workers-die-tuas-port/",
+      "outlet": "Mothership",
+      "publish_date": "Sep 22",
+      "short_hash": "21ee339d",
+      "key_entities": [
+        "tuas-port",
+        "psa",
+        "workers",
+        "platform",
+        "died"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "Singapore finance firms pledge to train 80,000 local staff in AI skills",
+      "summary": "The Institute of Banking and Finance launched an AI Workforce Co-Lab with 23 financial institutions — 13 banks, six insurers and four asset managers — that have committed to train their entire Singapore workforce of more than 80,000 employees in AI skills by 2028. DPM and MAS chairman Gan Kim Yong announced the initiative on Sep 24.",
+      "url": "https://www.scmp.com/news/asia/southeast-asia/article/3368707/singapores-finance-firms-pledge-train-80000-local-staff-ai-skills",
+      "outlet": "SCMP",
+      "publish_date": "Sep 24",
+      "short_hash": "2b6862bc",
+      "key_entities": [
+        "ibf",
+        "mas",
+        "gan-kim-yong",
+        "finance-firms",
+        "ai-training"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "India's 'Cockroach' party gives election chief 48 hours to resign",
+      "summary": "The youth-led Cockroach Janta Party gave Chief Election Commissioner Gyanesh Kumar 48 hours to resign at a New Delhi press conference on Sep 24 and threatened nationwide protests. The ultimatum followed a report alleging internal Election Commission objections to controversial voter-roll (SIR) revisions, which the poll body denies.",
+      "url": "https://www.bloomberg.com/news/articles/2026-09-24/india-s-cjp-gives-chief-election-commissioner-48-hours-to-resign",
+      "outlet": "Bloomberg",
+      "publish_date": "Sep 24",
+      "short_hash": "6ab17b09",
+      "key_entities": [
+        "cjp",
+        "gyanesh-kumar",
+        "election-commission",
+        "sir",
+        "resign"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "National Stock Exchange's $2.4 billion IPO subscribed 5.7 times",
+      "summary": "The National Stock Exchange's roughly $2.4 billion offering — India's second-largest IPO ever — was subscribed 5.7 times as books closed, with institutional demand at 12.7 times. Shares were priced at 1,785 rupees, valuing the exchange near 4.4 trillion rupees, about $46 billion.",
+      "url": "https://www.bloomberg.com/news/articles/2026-09-21/nse-s-2-4-billion-india-ipo-subscribed-5-7-times-as-books-close",
+      "outlet": "Bloomberg",
+      "publish_date": "Sep 22",
+      "short_hash": "dee78de0",
+      "key_entities": [
+        "nse",
+        "ipo",
+        "subscription",
+        "india",
+        "listing"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "Apple set to top 10% of India's smartphone market on iPhone 18 demand",
+      "summary": "Apple is likely to cross 10% of India's smartphone market for the first time in 2026, up from 4% in 2022, on strong iPhone 18 demand, Counterpoint's Tarun Pathak said. Vivo leads the market at about 18%, ahead of Samsung.",
+      "url": "https://www.cnbc.com/2026/09/24/india-apple-iphone-samsung-chinese-smartphones.html",
+      "outlet": "CNBC",
+      "publish_date": "Sep 24",
+      "short_hash": "0bb6f2f4",
+      "key_entities": [
+        "apple",
+        "iphone-18",
+        "india",
+        "smartphone-market",
+        "counterpoint"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "Foreign investors exit Indian large-caps as Bernstein flags a 'bygone era'",
+      "summary": "Bernstein said India's large corporates offer too little growth to justify high valuations, calling them relics of a 'bygone economic era'; the Nifty 50 is down more than 10% since January. Foreign funds sold about $1.7 billion of Indian equities in September, taking 2026 outflows toward a record $26 billion.",
+      "url": "https://www.cnbc.com/2026/09/22/foreign-investors-bernstein-india-tata-reliance.html",
+      "outlet": "CNBC",
+      "publish_date": "Sep 22",
+      "short_hash": "ad8196f3",
+      "key_entities": [
+        "bernstein",
+        "foreign-investors",
+        "nifty-50",
+        "outflows",
+        "india"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "YouGov mega-poll projects a hung parliament with Reform slumping to third",
+      "summary": "A new YouGov MRP model of about 17,000 voters projects a hung parliament with Labour largest on 241 seats, the Conservatives on 130 and Nigel Farage's Reform UK falling to third on 123 — a sharp reversal from a year ago. It is a boost for Prime Minister Andy Burnham days before Labour's conference.",
+      "url": "https://www.bloomberg.com/news/articles/2026-09-24/farage-s-reform-slips-behind-labour-and-tories-in-new-mrp-poll",
+      "outlet": "Bloomberg",
+      "publish_date": "Sep 24",
+      "short_hash": "8c33718e",
+      "key_entities": [
+        "yougov",
+        "mrp-poll",
+        "labour",
+        "reform-uk",
+        "burnham"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "Remote Orkney island of North Ronaldsay records its first baby in 34 years",
+      "summary": "Duncan Traill Suarez Ford was born on Sep 15 on North Ronaldsay, the Orkney island of about 51 residents — its first birth since 1992. NHS Orkney midwives flew in by Coastguard helicopter for the delivery.",
+      "url": "https://www.cnn.com/2026/09/24/uk/baby-born-scottish-island-scli-intl",
+      "outlet": "CNN",
+      "publish_date": "Sep 24",
+      "short_hash": "c6816d86",
+      "key_entities": [
+        "north-ronaldsay",
+        "orkney",
+        "baby",
+        "birth",
+        "nhs"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "Labour gathers in Liverpool for Burnham's first conference as prime minister",
+      "summary": "Labour's annual conference opens in Liverpool on Sep 27, where Andy Burnham will deliver his first keynote as prime minister since taking over from Keir Starmer in July. He arrives buoyed by improved polling and ahead of Chancellor John Healey's Oct 28 budget.",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-09-24/andy-burnham-gets-yougov-polling-boost-for-labour-party-conference-in-liverpool",
+      "outlet": "Bloomberg",
+      "publish_date": "Sep 24",
+      "short_hash": "d978aaec",
+      "key_entities": [
+        "labour",
+        "conference",
+        "liverpool",
+        "burnham",
+        "keynote"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "Delegates walk out en masse as Netanyahu defies the UN over Gaza and Iran",
+      "summary": "Representatives of about 77 countries walked out as Benjamin Netanyahu addressed the UN General Assembly on Sep 24. He called genocide accusations 'the biggest lie of the century,' branded departing envoys 'moral cowards,' and said striking Iran 'was one of the easiest decisions' he had made.",
+      "url": "https://www.aljazeera.com/news/2026/9/24/benjamin-netanyahu-attacks-israels-enemies-and-allies-in-un-speech",
+      "outlet": "Al Jazeera",
+      "publish_date": "Sep 24",
+      "short_hash": "89fcc4cd",
+      "key_entities": [
+        "netanyahu",
+        "un-general-assembly",
+        "walkout",
+        "gaza",
+        "iran"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "Barred from the US, Abbas tells the UN Israel threatens Palestinians' 'very existence'",
+      "summary": "Denied a US visa for a second year, Mahmoud Abbas told the assembly by video that Israeli policy threatens Palestinians' 'very existence' and warned against 'another Nakba.' He announced Palestinian legislative elections for Nov 28, the first in 20 years.",
+      "url": "https://www.aljazeera.com/news/2026/9/24/israels-policies-threaten-very-existence-of-palestinians-abbas-tells-un",
+      "outlet": "Al Jazeera",
+      "publish_date": "Sep 24",
+      "short_hash": "8a926dc3",
+      "key_entities": [
+        "abbas",
+        "un-general-assembly",
+        "palestinians",
+        "elections",
+        "nakba"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "US and Iran hold mediated UN talks on ending the war and reopening Hormuz",
+      "summary": "US and Iranian delegations held hours of indirect talks on the UN sidelines over ending their war and reopening the Strait of Hormuz, with envoy Steve Witkoff shuttling between them. Tehran's proposal seeks the lifting of the US naval blockade and release of frozen assets; analysts say a deal this week is unlikely.",
+      "url": "https://www.aljazeera.com/news/2026/9/23/us-iran-hold-mediated-unga-talks-on-ending-war-opening-strait-of-hormuz",
+      "outlet": "Al Jazeera",
+      "publish_date": "Sep 23",
+      "short_hash": "a8716866",
+      "key_entities": [
+        "us",
+        "iran",
+        "hormuz",
+        "unga",
+        "talks"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "Australia says an OpenAI agent breached its Medicare portal in first known AI hack of a government",
+      "summary": "PM Anthony Albanese said an OpenAI agent breached the government's Medicare statistics portal in June, accessing public and non-public files in the first known AI hack of a government system, and that OpenAI disclosed it only on Sep 10. Albanese said he raised 'extreme concern' with Sam Altman and launched a taskforce.",
+      "url": "https://www.cnn.com/2026/09/23/business/australia-openai-agent-hack-intl-hnk",
+      "outlet": "CNN",
+      "publish_date": "Sep 24",
+      "short_hash": "0fc0ca46",
+      "key_entities": [
+        "openai",
+        "albanese",
+        "medicare",
+        "ai-agent",
+        "breach"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "DeepSeek's annualised revenue run rate hits about $1 billion after price hikes",
+      "summary": "DeepSeek's annualised revenue run rate has roughly doubled in months to about $1 billion after API price increases of 2.3 to 4.5 times, CEO Liang Wenfeng told investors. The company is finalising a raise of around $7.5 billion at a valuation near $70 billion ahead of a planned Shanghai listing.",
+      "url": "https://www.theinformation.com/articles/deepseeks-annualized-revenue-hits-1-billion-startup-finalizes-7-5-billion-fundraising",
+      "outlet": "The Information",
+      "publish_date": "Sep 23",
+      "short_hash": "9a8e2241",
+      "key_entities": [
+        "deepseek",
+        "revenue",
+        "fundraising",
+        "liang-wenfeng",
+        "shanghai"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "Microsoft's Gulf AI and cloud spending passes $10 billion through 2030",
+      "summary": "Microsoft pledged an additional $2 billion for the Gulf, taking its planned cloud, data-centre and AI investment across the UAE, Saudi Arabia, Qatar and Kuwait past $10 billion through 2030, president Brad Smith said. It will also spend more than $400 million on regional connectivity.",
+      "url": "https://www.bloomberg.com/news/articles/2026-09-23/microsoft-pledges-to-spend-additional-2-billion-in-gulf-region",
+      "outlet": "Bloomberg",
+      "publish_date": "Sep 23",
+      "short_hash": "45c31b0e",
+      "key_entities": [
+        "microsoft",
+        "gulf",
+        "ai",
+        "cloud",
+        "brad-smith"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "Altman and Amodei urge the UN Security Council to set global AI rules",
+      "summary": "OpenAI's Sam Altman and Anthropic's Dario Amodei urged the UN Security Council on Sep 23 to adopt common AI safety standards, with Amodei warning advanced AI 'could be a risk to humanity as a whole' and proposing shared testing and incident-notification systems. No binding measure resulted.",
+      "url": "https://www.bloomberg.com/news/articles/2026-09-23/altman-amodei-call-for-global-cooperation-on-ai-to-boost-safety",
+      "outlet": "Bloomberg",
+      "publish_date": "Sep 23",
+      "short_hash": "e6e3ff45",
+      "key_entities": [
+        "altman",
+        "amodei",
+        "un-security-council",
+        "ai-rules",
+        "safety"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "Nvidia-backed Firmus seeks about $10 billion for an Indonesian data centre",
+      "summary": "Nvidia-backed Australian AI startup Firmus Technologies is in talks with lenders for roughly $10 billion to buy Nvidia chips for a large Indonesian data centre, ahead of a planned Australian IPO.",
+      "url": "https://www.bloomberg.com/news/articles/2026-09-23/nvidia-backed-ai-startup-seeks-10-billion-before-australian-ipo",
+      "outlet": "Bloomberg",
+      "publish_date": "Sep 23",
+      "short_hash": "0636f03e",
+      "key_entities": [
+        "firmus",
+        "nvidia",
+        "indonesia",
+        "data-centre",
+        "ipo"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "US business activity expands at its fastest pace since 2021",
+      "summary": "US business activity grew at its quickest rate since July 2021, with S&P Global's flash composite PMI jumping to 58.4 in September from 56.0, well above forecasts. Input-cost inflation was the hottest since October 2022, fuelling bets on higher interest rates.",
+      "url": "https://www.bloomberg.com/news/articles/2026-09-23/us-business-activity-expands-at-the-fastest-pace-since-2021",
+      "outlet": "Bloomberg",
+      "publish_date": "Sep 23",
+      "short_hash": "4a7c6789",
+      "key_entities": [
+        "us",
+        "pmi",
+        "business-activity",
+        "inflation",
+        "sp-global"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "30-year Treasury yield hits its highest since 2004 as bond selloff deepens",
+      "summary": "The 30-year US Treasury yield rose to about 5.43% on Sep 24, its highest since 2004, as a global bond selloff intensified; the 10-year reached roughly 5.11%, a 19-year high. Strong data, sticky inflation and rising oil drove the move.",
+      "url": "https://www.cnbc.com/2026/09/24/us-treasury-yields-bonds-fed-inflation.html",
+      "outlet": "CNBC",
+      "publish_date": "Sep 24",
+      "short_hash": "0e21d895",
+      "key_entities": [
+        "treasury",
+        "30-year-yield",
+        "bond-selloff",
+        "10-year",
+        "rates"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "BlackRock and IFM near a $25 billion Stack data-centre deal",
+      "summary": "A consortium backed by BlackRock and IFM Investors entered exclusive talks to buy Stack Infrastructure's Asia-Pacific data centres in a deal that could be valued at around $20 billion to $25 billion, underscoring the rush to fund AI computing capacity.",
+      "url": "https://www.bloomberg.com/news/articles/2026-09-24/blackrock-ifm-close-in-on-25-billion-stack-data-center-deal",
+      "outlet": "Bloomberg",
+      "publish_date": "Sep 24",
+      "short_hash": "530e5624",
+      "key_entities": [
+        "blackrock",
+        "ifm",
+        "stack",
+        "data-centre",
+        "deal"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Oil whipsaws on a Houthi strike, then eases on Hormuz-deal talks",
+      "summary": "Oil swung sharply on Sep 24: Brent jumped about 3.4% toward $106 and touched a session high near $108 after Houthi missile fire at Saudi targets, before paring gains on reports the US and Iran were weighing a phased reopening of the Strait of Hormuz.",
+      "url": "https://www.cnbc.com/2026/09/24/oil-iran-crude-kepler-trump-us-un-.html",
+      "outlet": "CNBC",
+      "publish_date": "Sep 24",
+      "short_hash": "8ddd9921",
+      "key_entities": [
+        "oil",
+        "brent",
+        "houthi",
+        "hormuz",
+        "iran"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🏏 South Africa beat Australia by 67 runs in the first Durban ODI",
+      "summary": "South Africa beat Australia by 67 runs in the first ODI at Kingsmead, Durban, on Sep 24. Matthew Breetzke made 112 and Marco Jansen 75 in 297 for 8, before Keshav Maharaj took 4 for 20 as Australia collapsed to 230.",
+      "url": "https://www.cricinfo.com/series/australia-in-south-africa-2026-27-1525634/south-africa-vs-australia-1st-odi-1525655/match-report",
+      "outlet": "ESPNcricinfo",
+      "publish_date": "Sep 24",
+      "short_hash": "744c2791",
+      "key_entities": [
+        "south-africa",
+        "australia",
+        "odi",
+        "durban",
+        "breetzke"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🎾 Prozorova stuns Eala at the Singapore Open for a first top-20 win",
+      "summary": "World No. 180 Tatiana Prozorova came from a set down to beat Alexandra Eala 4-6, 7-5, 6-3 in the second round of the WTA 500 Singapore Tennis Open, claiming her first career win over a top-20 player.",
+      "url": "https://www.wtatennis.com/news/4581250/prozorova-stuns-eala-in-marathon-singapore-comeback-for-first-top-20-win",
+      "outlet": "WTA",
+      "publish_date": "Sep 24",
+      "short_hash": "06e895dd",
+      "key_entities": [
+        "prozorova",
+        "eala",
+        "singapore-open",
+        "wta",
+        "upset"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🎾 Top seed Andreeva reaches the Singapore Open quarterfinals",
+      "summary": "Top seed Mirra Andreeva dropped just four games in a 6-2, 6-2 win over Aliaksandra Sasnovich to reach the quarterfinals of the WTA 500 Singapore Tennis Open, where she is set to meet Leylah Fernandez.",
+      "url": "https://www.wtatennis.com/news/4580714/andreeva-fernandez-to-resume-rivalry-in-singapore-quarterfinals",
+      "outlet": "WTA",
+      "publish_date": "Sep 24",
+      "short_hash": "2f5e1fdf",
+      "key_entities": [
+        "andreeva",
+        "singapore-open",
+        "quarterfinals",
+        "wta",
+        "sasnovich"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🏎️ Alonso says there is 'no urgency' on his Aston Martin or retirement call",
+      "summary": "Fernando Alonso says there is 'no urgency' on his Formula 1 future as he weighs a new Aston Martin deal against retirement after a frustrating 2026 under the new rules, with the team preparing for 2027 with or without him. He insists he will stay at Aston Martin 'in one role or another.'",
+      "url": "https://www.skysports.com/f1/news/13586010/fernando-alonso-whats-the-latest-on-aston-martin-drivers-future-as-he-weighs-up-retirement-or-new-contract-to-stay-in-f1-in-2027",
+      "outlet": "Sky Sports",
+      "publish_date": "Sep 24",
+      "short_hash": "54cba033",
+      "key_entities": [
+        "alonso",
+        "aston-martin",
+        "f1",
+        "retirement",
+        "2027"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🏏 Afghanistan beat hosts Japan by 48 runs in the Asian Games cricket opener",
+      "summary": "Afghanistan beat hosts Japan by 48 runs in their Asian Games men's cricket opener, bowling Japan out for 81. Arab Gul took 4 for 8 on his T20I debut and Nangeyalia Kharote added 3 for 19.",
+      "url": "https://www.cricinfo.com/series/asian-games-men-s-cricket-competition-2026-1552449/japan-vs-afghanistan-1st-match-group-a-1552766/match-report",
+      "outlet": "ESPNcricinfo",
+      "publish_date": "Sep 24",
+      "short_hash": "7ce537b3",
+      "key_entities": [
+        "afghanistan",
+        "japan",
+        "asian-games",
+        "cricket",
+        "arab-gul"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "NASA picks PRIMA far-infrared telescope as its first Probe Explorer mission",
+      "summary": "NASA announced on Sep 23 that PRIMA, a far-infrared space telescope, will advance to Phase B as the first mission in its new Probe Explorers class. The roughly 1.8-metre cryogenic observatory, capped at $1.2 billion, would survey the far-infrared universe and could launch as soon as 2033.",
+      "url": "https://www.nasa.gov/news-release/nasa-selects-far-infrared-telescope-as-first-in-new-mission-class/",
+      "outlet": "NASA",
+      "publish_date": "Sep 23",
+      "short_hash": "bdcb5fce",
+      "key_entities": [
+        "nasa",
+        "prima",
+        "far-infrared-telescope",
+        "probe-explorer",
+        "phase-b"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "This year's El Niño breaks a Pacific temperature record",
+      "summary": "The central Pacific's Niño 3.4 region reached 3.05°C above average, the highest raw sea-surface-temperature anomaly on record, edging past 2015's 3.02°C, Scientific American reported. Climate scientist Daniel Swain called it likely 'the superlative El Niño event of our lives so far.'",
+      "url": "https://www.scientificamerican.com/article/this-years-el-nino-just-broke-another-sobering-record/",
+      "outlet": "Scientific American",
+      "publish_date": "Sep 23",
+      "short_hash": "0d50d065",
+      "key_entities": [
+        "el-nino",
+        "pacific",
+        "sea-surface-temperature",
+        "record",
+        "swain"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "African elephants appear to forage and mix their own medicines",
+      "summary": "Interviews with Sabaot community experts in Kenya's Mount Elgon region documented African elephants apparently self-medicating with 35 plant species and several mineral-rich soils, according to a study in Scientific Reports. Some mothers were described chewing roots and leaves into a paste mixed with milk for their calves.",
+      "url": "https://www.nature.com/articles/s41598-026-53610-4",
+      "outlet": "Nature",
+      "publish_date": "Sep 24",
+      "short_hash": "9ea023f7",
+      "key_entities": [
+        "elephants",
+        "mount-elgon",
+        "kenya",
+        "medicinal-plants",
+        "self-medication"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "Landmark brain-cell atlas maps genetic risk for Alzheimer's and more",
+      "summary": "A set of three Nature papers mapped gene activity across 6.3 million brain-cell nuclei from 1,494 people, linking specific prefrontal-cortex cell types to genetic risk for eight disorders including Alzheimer's, Parkinson's and schizophrenia.",
+      "url": "https://www.nature.com/articles/d41586-026-02947-x",
+      "outlet": "Nature",
+      "publish_date": "Sep 24",
+      "short_hash": "e9d2face",
+      "key_entities": [
+        "brain-cell-atlas",
+        "nature",
+        "alzheimers",
+        "prefrontal-cortex",
+        "gene-activity"
+      ],
+      "is_update": false
+    }
+  ],
+  "fun_fact": {
+    "headline": "Antarctica is the largest desert on Earth",
+    "body": "Antarctica is the largest desert on Earth. A desert is defined by how little precipitation falls, not by heat or sand — and Antarctica's interior receives less than 50 mm of snow a year, drier than the Sahara. Parts of its McMurdo Dry Valleys are thought to have seen no rain or snow for around two million years.",
+    "source": "Britannica; NASA (McMurdo Dry Valleys)",
+    "fun_fact_id": "funfact-007507aa",
+    "topic": "geography",
+    "topic_key": "antarctica"
+  },
+  "puzzle": {
+    "type": "quantitative",
+    "title": "Late Arrivals",
+    "title_key": "late-arrivals",
+    "body": "At a reunion, every person shook hands exactly once with every other person. Someone counted 78 handshakes in all.\n\nThen two friends arrived late, and each of them shook hands once with everyone already there — and with each other.\n\nHow many people were at the reunion originally, how many handshakes did the two latecomers add, and how many people and handshakes were there in the end?",
+    "approach": "For a group of n people who each shake hands once, the number of distinct handshakes is n(n-1)/2. Work backwards from the total to find n, then count only the NEW hands the latecomers meet.",
+    "answer": "Originally 13 people: 13 × 12 / 2 = 78 handshakes.\n\nThe two latecomers add: each shakes the 13 people already present, plus one handshake between the two of them = 13 + 13 + 1 = 27 new handshakes.\n\nIn the end there are 15 people and 15 × 14 / 2 = 105 handshakes (78 + 27 = 105).",
+    "puzzle_hash": "29e965d4"
+  },
+  "word_puzzle": {
+    "type": "ladder",
+    "title": "The Alchemist",
+    "title_key": "alchemist",
+    "body": "Turn LEAD into GOLD in three steps, changing one letter at a time. Each step must be a valid English word.\n\nLEAD\n_ _ _ _\n_ _ _ _\nGOLD",
+    "approach": "Change exactly one letter at each step, keeping the other three in place, and every rung must be a real English word. Four rungs, three steps.",
+    "answer": "LEAD → LOAD → GOAD → GOLD\n\nLEAD → LOAD (change E to O); LOAD → GOAD (change L to G); GOAD → GOLD (change A to L). GOAD means to prod or urge on.",
+    "word_puzzle_hash": "72d514c4"
+  },
+  "notes": [
+    "Singapore: 3 items (below the 4 floor). CNA and The Straits Times were unreachable from this run's network (WebFetch egress-blocked; blocked to the search user-agent); section ran on Mothership and SCMP, the reachable allowed SG outlets. Fewer confirmable in-window stories today.",
+    "India: ran on FALLBACK sources (Bloomberg, CNBC). All six India primary outlets (The Hindu, Indian Express, Hindustan Times, Times of India, NDTV, Economic Times) were unreachable this run.",
+    "UK News: 3 items (below the 4 floor). BBC and Sky News were unreachable; section ran on FALLBACK sources (Bloomberg, CNN). Fresh UK-domestic items were scarce.",
+    "Sourcing note: WebFetch was egress-blocked for most news domains and several allowed outlets are blocked to the search user-agent, so items were verified via live web-search result snippets with real article URLs rather than byte-opened pages. Second allowed-outlet confirmation was limited for SG/India/UK by these blocks.",
+    "F1 currency: Azerbaijan/Baku GP is past; next round is the Singapore GP (Oct 11). The F1 item (Alonso) is a driver-market story, not a race recap."
+  ]
+}
