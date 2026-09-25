@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Sat, 26 September 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .wpuzzle-box{background:linear-gradient(135deg,#0e1a1a,#0d1620);border:1px solid #234a44;border-left:3px solid #16a085;padding:24px 28px;border-radius:2px}
+  .wptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#16a085;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .wpuzzle-box .puzzle-title{color:#cdeae3}
+  .wpuzzle-box .puzzle-how{color:#8fb8ac;background:#08140f;border-left-color:#1a6a5a}
+  .wpuzzle-box .puzzle-q{color:#dfeae6;font-family:'Source Sans 3',sans-serif}
+  .wpuzzle-box .answer{color:#bfe0d6}
+  .wpuzzle-box .answer .alabel{color:#16a085}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Saturday, 26 September 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Saturday, 26 September 2026 · 🔍 80 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eleven entries in this exact order:
+     id    : one of "sg" | "india" | "uk" | "geo" | "tech" | "biz" | "sports" | "misc" | "fun" | "puzzle" | "wpuzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 8 news tabs; fun/puzzle/wpuzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+
+   WORD_PUZZLE shape (separate, daily word game — NYT-style, static reveal):
+     type     : one of "Connections" | "Word Ladder" | "Anagram" | "Spelling Bee" | "Letter Boxed" | "Mini Crossword"
+     title    : short evocative name for the word puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle body; supports \n for line breaks (grids render as pre-formatted text)
+     answer   : the answer; supports \n for line breaks; appears inside its own toggle (id "wpans")
+============================================================================= */
+
+const SECTIONS = [
+  { id:"sg", title:"🇸🇬 Singapore", color:"#e74c3c", items:[
+    { headline:"Man jailed 16 weeks for abandoning 71 cats in a Bukit Panjang flat", summary:"Muhammad Khairul Naim Zainol, 37, was sentenced on 23 September after leaving 71 cats without power or water for nearly two years, causing nine deaths. He pleaded guilty to 24 charges under the Animals and Birds Act and was barred from owning pets for 12 months.", source:"Mothership", url:"https://mothership.sg/2026/09/man-abandons-71-cats-9-dead/", date:"Sep 24", spectrum:null, bias:null },
+    { headline:"DPM Gan urges Singapore and China to deepen AI and green-economy ties", summary:"At the FutureChina Global Forum on 25 September, Deputy Prime Minister and Trade Minister Gan Kim Yong said the Singapore-China relationship has “never been static” and called for a next phase of cooperation in AI and the green economy, building on the Suzhou Industrial Park.", source:"SCMP", url:"https://www.scmp.com/week-asia/economics/article/3368773/suzhou-ai-singapore-china-eye-new-playbook-economic-ties", date:"Sep 25", spectrum:null, bias:null },
+    { headline:"Activist charged over candlelight vigils for two executed drug traffickers", summary:"S Suraendher Kumarr, 32, was charged on 25 September with three Public Order Act offences over unpermitted candlelight assemblies near Changi Prison and a gathering at the State Courts calling for abolition of the death penalty. He was granted S$5,000 bail.", source:"Mothership", url:"https://mothership.sg/2026/09/man-unlawful-candlelight-vigils-executed/", date:"Sep 25", spectrum:null, bias:null },
+    { headline:"Driver, 62, jailed 13 months for running a red light and dragging a pregnant woman", summary:"Chen Zhiguang was sentenced on 24 September to 13 months’ jail and a 10-year driving ban after running a red light on Upper Changi Road East in July 2025, hitting a woman who was 15 weeks pregnant. She was hospitalised for 59 days with multiple fractures.", source:"Mothership", url:"https://mothership.sg/2026/09/man-red-light-hit-pregnant-woman/", date:"Sep 24", spectrum:null, bias:null },
+    { headline:"Coroner’s inquiry opens into cabby killed by his own moving taxi", summary:"An inquiry opened on 24 September into the death of taxi driver Tee Chin Teong, 66, who died in February 2025 along Jalan Besar after his taxi rolled forward as he helped passengers with luggage, trapping him against a parked lorry.", source:"Mothership", url:"https://mothership.sg/2026/09/taxi-driver-die-help-luggage/", date:"Sep 24", spectrum:null, bias:null },
+  ]},
+  { id:"india", title:"🇮🇳 India", color:"#e67e22", items:[
+    { headline:"Tata Sons defies majority owner Tata Trusts as control feud heads to court", summary:"Tata Sons’ board reappointed chairman N. Chandrasekaran in a 4-1 vote and moved toward a possible IPO, but Tata Trusts, which owns a majority stake, declared the move void, setting up a court battle over control of the $18-billion-plus group.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-09-24/tata-sons-holds-firm-sets-up-court-battle-with-majority-owner", date:"Sep 24", spectrum:null, bias:null },
+    { headline:"India fast-tracks Canada and Mexico trade talks amid US tariff pressure", summary:"India is accelerating free-trade negotiations with Canada and Mexico, with Canadian Prime Minister Mark Carney citing “good progress” and Prime Minister Narendra Modi expected to visit Canada around the December G20 summit.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-09-23/modi-plans-canada-trip-for-trade-deal-speeds-up-mexico-talks", date:"Sep 23", spectrum:null, bias:null },
+  ]},
+  { id:"uk", title:"🇬🇧 UK News", color:"#3949ab", items:[
+    { headline:"UK coverage is unavailable in today’s edition", summary:"BBC and Sky News, and the fallback outlets The Guardian, CNN, Bloomberg and Al Jazeera, returned no verifiable UK-domestic story within the 48-hour window that could be sourced from this edition’s network environment. No item was fabricated to fill the gap.", source:"The Brief", url:"", date:"Sep 26", spectrum:null, bias:null },
+  ]},
+  { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
+    { headline:"Saudi-led coalition intercepts six Houthi ballistic missiles aimed at Yanbu and Taif", summary:"Coalition spokesman Maj. Gen. Turki al-Malki said on 24 September that air defences shot down six ballistic missiles targeting the Red Sea port of Yanbu and the city of Taif, blaming Iran-aligned Houthis, who claimed a wider barrage on Jazan and Aramco facilities.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/9/24/saudi-led-coalition-says-shot-down-6-ballistic-missiles-launched-by-houthis", date:"Sep 24", spectrum:null, bias:null },
+    { headline:"Pakistan PM Sharif tells UN a Houthi attack on Mecca or Medina is a ‘red line’", summary:"In his UN General Assembly address on 25 September, Prime Minister Shehbaz Sharif condemned Houthi attacks on Saudi Arabia, warning that any threat to Mecca and Medina must never be crossed, and renewed calls for a UN-backed Kashmir plebiscite.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/9/25/houthi-attack-on-mecca-medina-would-cross-red-line-pakistan-pm-tells-un", date:"Sep 25", spectrum:null, bias:null },
+    { headline:"Russia’s ruling party secures 349 of 450 Duma seats as final results confirmed", summary:"Final results from Russia’s State Duma election gave United Russia about 57.8% of the list vote and 349 of 450 seats, up from 2021. Notably, 46 war veterans, 41 of them from United Russia, won seats in the new parliament.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/9/21/russia-election-results-show-putins-party-winning-what-we-know", date:"Sep 25", spectrum:null, bias:null },
+    { headline:"Iraq’s prime minister calls for a sovereign Palestinian state at the UN", summary:"Addressing the UN General Assembly on 25 September, Iraqi Prime Minister Ali Falih al-Zaidi called for the establishment of a sovereign state of Palestine, joining a wave of leaders pressing the statehood question during the high-level week.", source:"Al Jazeera", url:"https://www.aljazeera.com/video/newsfeed/2026/9/25/iraq-calls-for-a-sovereign-palestinian-state-at-unga", date:"Sep 25", spectrum:null, bias:null },
+  ]},
+  { id:"tech", title:"💻 Tech & AI", color:"#27ae60", items:[
+    { headline:"Anthropic says its Claude AI autonomously discovered a novel enzyme system", summary:"Anthropic’s new life-sciences lab said Claude uncovered a previously uncharacterised enzyme system in bacteriophage DNA during a roughly 21.5-hour autonomous run spanning 949 sessions and 215.6 million tokens, scanning about 200,000 enzymes. Its function is not yet understood.", source:"TechCrunch", url:"https://techcrunch.com/2026/09/23/anthropic-says-its-biology-lab-has-already-found-something-big/", date:"Sep 23", spectrum:null, bias:null },
+    { headline:"Meta puts its Muse AI agent into Ray-Ban glasses at Connect 2026", summary:"At Meta Connect on 23 September, Meta brought its Muse personal AI agent to its smart glasses and showed a real-time video avatar, alongside new Ray-Ban Meta hardware and a $1,299 VR headset due in spring 2027.", source:"TechCrunch", url:"https://techcrunch.com/2026/09/23/everything-new-coming-to-metas-ai-agent-muse/", date:"Sep 23", spectrum:null, bias:null },
+    { headline:"AI-infrastructure startups Modal and Baseten in fresh funding talks", summary:"Bloomberg reported on 23 September that Modal and Baseten, which help businesses run AI models on Nvidia GPUs and standard chips, are in talks to raise new funding, underscoring investor demand for the tools that serve AI inference workloads.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-09-23/startups-modal-baseten-in-funding-talks-to-help-businesses-run-ai", date:"Sep 23", spectrum:null, bias:null },
+    { headline:"Anthropic signs a $11.6bn, seven-year computing deal with Akamai", summary:"Anthropic agreed a seven-year, $11.6 billion contract, expandable to $20 billion, for Akamai CPU capacity, plus a warrant to buy about 5% of Akamai at $111.33 a share. Akamai shares jumped as much as 16.4% to $128.46 on 25 September.", source:"CNBC", url:"https://www.cnbc.com/2026/09/25/shares-of-akamai-surge-after-deal-with-anthropic-what-wall-street-is-saying.html", date:"Sep 25", spectrum:null, bias:null },
+  ]},
+  { id:"biz", title:"📈 Business & Markets", color:"#8e44ad", items:[
+    { headline:"Wall Street rebounds Friday as the Dow jumps 478 points to cap a winning week", summary:"The Dow rose 478.64 points, or 0.93%, to 51,828.62 on 25 September, while the S&P 500 added 0.51% to 7,743.41 and the Nasdaq gained 0.5% to 27,068.72, as easing oil prices and calmer Treasury markets drove a rebound. For the week the Nasdaq rose 2%.", source:"CNBC", url:"https://www.cnbc.com/2026/09/24/stock-market-today-live-updates.html", date:"Sep 25", spectrum:null, bias:null },
+    { headline:"Costco caps fiscal 2026 with a Q4 beat as net sales rise 11.2% to $93.9bn", summary:"For the 16 weeks to 30 August, Costco reported net sales up 11.2% to $93.9 billion and adjusted earnings of $6.60 a share, beating the $6.53 consensus. Comparable sales rose 9.4% and the retailer plans 28 net new warehouses in fiscal 2027.", source:"CNBC", url:"https://www.cnbc.com/2026/09/25/costco-just-reported-strong-earnings-goldman-sachs-sees-big-gains.html", date:"Sep 25", spectrum:null, bias:null },
+    { headline:"MGM Resorts shares sink 11% as Barry Diller’s People drops an $18bn buyout", summary:"People Inc., which owns a 26.1% stake, withdrew its June offer of $48.30 a share, valuing MGM Resorts at about $18 billion, citing difficulty raising equity. MGM shares fell 11% and the casino operator will remain a standalone company.", source:"CNBC", url:"https://www.cnbc.com/2026/09/24/barry-diller-people-mgm-resorts.html", date:"Sep 24", spectrum:null, bias:null },
+    { headline:"US jobless claims slip to 197,000, near a 57-year low", summary:"Initial claims fell 1,000 to a seasonally adjusted 197,000 for the week ended 19 September, below the 201,000 poll estimate and the lowest since mid-July, while the four-week average dropped to 202,250, signalling continued labour-market resilience.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-09-24/us-jobless-claims-slip-to-197-000-hold-close-to-historic-lows", date:"Sep 24", spectrum:null, bias:null },
+  ]},
+  { id:"sports", title:"🎾🏏🏎️ Sports", color:"#c0392b", items:[
+    { headline:"🏎️ Russell takes Baku pole as points leader Antonelli crashes out in Q1", summary:"George Russell claimed pole for the Azerbaijan Grand Prix ahead of Charles Leclerc and Oscar Piastri, while championship leader Kimi Antonelli will start 16th after hitting a wall in Q1. Isack Hadjar out-qualified Max Verstappen on his return from injury; the race runs Saturday.", source:"Formula1.com", url:"https://www.formula1.com/en/latest/article/russell-charges-to-pole-position-as-antonelli-suffers-shock-exit-in-qualifying-for-azerbaijan-gp.6vFe7216mR8JZuWE4QIB4w", date:"Sep 25", spectrum:null, bias:null },
+    { headline:"🎾 Shapovalov earns his 250th tour win as Mannarino downs former champ Shang in Chengdu", summary:"Denis Shapovalov recorded the 250th tour-level win of his career at the Chengdu Open, while Adrian Mannarino knocked out former champion Shang Juncheng, as the ATP 250 reached its later rounds on 24 September.", source:"ATP Tour", url:"https://www.atptour.com/en/news/mannarino-shang-chengdu-2026-thursday", date:"Sep 24", spectrum:null, bias:null },
+    { headline:"🏏 Nepal upset Afghanistan by five wickets in the Asian Games men’s cricket", summary:"Spinners Kushal Bhurtel and Lalit Rajbanshi shared seven wickets as Nepal bowled Afghanistan out for 102 for 7 and chased 103 for 5 with 16 balls to spare on 25 September, opening their Asian Games campaign with a win in Nisshin.", source:"ESPNcricinfo", url:"https://www.cricinfo.com/series/asian-games-men-s-cricket-competition-2026-1552449/afghanistan-vs-nepal-4th-match-group-a-1552769/match-report", date:"Sep 25", spectrum:null, bias:null },
+    { headline:"🏏 Hong Kong beat Oman by 41 runs as Ayush Shukla takes 3 for 13", summary:"Hong Kong posted 121 for 8 and restricted Oman to 80 for 6 to win by 41 runs in Nisshin on 25 September, with Ayush Shukla claiming 3 for 13, lifting Hong Kong to second in Group A of the Asian Games men’s cricket.", source:"ESPNcricinfo", url:"https://www.cricinfo.com/series/asian-games-men-s-cricket-competition-2026-1552449/hong-kong-vs-oman-3rd-match-group-b-1552768/match-report", date:"Sep 25", spectrum:null, bias:null },
+  ]},
+  { id:"misc", title:"🔬 Other Miscellaneous News", color:"#1abc9c", items:[
+    { headline:"Croatia becomes the 74th nation to sign NASA’s Artemis Accords", summary:"Croatia signed the Artemis Accords on 23 September at a ceremony in Zagreb, becoming the 74th signatory to the US-led framework for peaceful space exploration. Science minister Radovan Fuchs signed on the country’s behalf, days after Albania became the 73rd.", source:"NASA", url:"https://www.nasa.gov/organizations/oiir/artemis-accords/nasa-welcomes-croatia-as-newest-artemis-accords-signatory/", date:"Sep 23", spectrum:null, bias:null },
+    { headline:"Exotic ‘non-Abelian anyons’ achieve the full toolkit for universal quantum computing", summary:"Researchers from UChicago, Harvard, Stony Brook and Quantinuum used 54 qubits on the H2 processor to combine braiding and fusion of non-Abelian anyons, unlocking the full set of operations for universal quantum computing. The work was published in Nature.", source:"Nature", url:"https://www.nature.com/articles/s41586-026-10709-y", date:"Sep 24", spectrum:null, bias:null },
+    { headline:"Astronomers confirm Elias 2-24 b as the youngest known planet", summary:"A Jupiter-sized world orbiting a star about 450 light-years away, Elias 2-24 b is less than one million years old, smashing the previous record of roughly five million years. Its rapid formation challenges leading theories of how giant planets assemble.", source:"NASA Science", url:"https://science.nasa.gov/universe/newfound-baby-planet-smashes-record-for-youngest-known-world/", date:"Sep 22", spectrum:null, bias:null },
+    { headline:"JWST’s mysterious ‘little red dots’ explained as young supermassive black holes", summary:"A Nature study argues the enigmatic ‘little red dots’ seen by the James Webb Space Telescope are young supermassive black holes wrapped in dense cocoons of ionised gas, implying black-hole masses far lower than earlier estimates.", source:"Nature", url:"https://www.nature.com/articles/s41586-025-09900-4", date:"Sep 24", spectrum:null, bias:null },
+  ]},
+  { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
+  { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
+  { id:"wpuzzle", title:"🔤 Word Puzzles", color:"#16a085", custom:"wpuzzle" },
+];
+
+const FUN_FACT = {
+  text: "The country with the most pyramids is not Egypt — it is Sudan. The ancient Kingdom of Kush built well over 200 pyramids along the Nile at sites such as Meroë, more than twice the number in Egypt. Sudan’s pyramids are far smaller and steeper than their Egyptian cousins, and most remain little visited today.",
+  tag: "Category · History & Archaeology"
+};
+
+const PUZZLE = {
+  type: "Lateral Thinking",
+  title: "Ahead of His Time",
+  how: "Don’t hunt for a flaw in the picture itself — ask what it claims to be, and whether that was even possible.",
+  question: "A wealthy collector proudly displays a framed photograph said to show the composer Ludwig van Beethoven seated at his piano. A visiting historian glances at it for barely a second and declares it a fake — with no chemical test, and knowing nothing unusual about Beethoven’s appearance. How can she be so certain?",
+  answer: "Beethoven died in 1827. The earliest photographs of people were not made until about 1838–1839, when Louis Daguerre’s process first captured human subjects. So no genuine photograph of Beethoven can exist — he died more than a decade before photography could record a living person. Any ‘photo’ of him must be a fake or, at best, a photograph of a painting."
+};
+
+const WORD_PUZZLE = {
+  type: "Anagram",
+  title: "Letters Don’t Lie",
+  how: "Each clue is an anagram whose scrambled words slyly describe the answer. Rearrange all the letters into a single word or phrase.",
+  question: "Each phrase below uses exactly the same letters as its answer — and hints at it. Unscramble all five:\n\n1. DIRTY ROOM   (9)\n2. THEY SEE   (3, 4)\n3. CASH LOST IN ME   (4, 8)\n4. HERE COME DOTS   (3, 5, 4)\n5. ELEVEN PLUS TWO   (6, 4, 3)",
+  answer: "1. DIRTY ROOM → DORMITORY\n2. THEY SEE → THE EYES\n3. CASH LOST IN ME → SLOT MACHINES\n4. HERE COME DOTS → THE MORSE CODE\n5. ELEVEN PLUS TWO → TWELVE PLUS ONE\n\nEach one is self-describing: the letters of the clue rearrange into the very thing it names."
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function renderWordPuzzle(){
+  let h='<div class="sec-title">🔤 Word Puzzle of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#16a085,transparent)"></div>';
+  h+='<div class="wpuzzle-box"><span class="wptype">'+WORD_PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+WORD_PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+WORD_PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+WORD_PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this,\'wpans\')">Show Answer</button>';
+  h+='<div class="answer" id="wpans"><span class="alabel">Answer</span>'+WORD_PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn,ansId){var a=document.getElementById(ansId||'ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else if(sec.custom==="wpuzzle"){div.innerHTML=renderWordPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>

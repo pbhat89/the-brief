@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-07-27",
-      "topic_key": "diamond rain",
-      "text": "It rains diamonds inside Uranus and Neptune"
-    },
-    {
       "date": "2026-07-28",
       "topic_key": "alaska",
       "text": "Alaska is at once the most northern, western and eastern US state; the Aleutians cross the 180th meridian."
@@ -254,14 +249,14 @@
       "date": "2026-09-25",
       "topic_key": "antarctica",
       "text": "Antarctica is the largest desert on Earth; its interior is drier than the Sahara."
+    },
+    {
+      "date": "2026-09-26",
+      "topic_key": "sudan",
+      "text": "Sudan has more pyramids than Egypt"
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-08-26",
-      "type": "lateral",
-      "title_key": "brothers-and-sisters"
-    },
     {
       "date": "2026-08-27",
       "type": "visual",
@@ -376,14 +371,14 @@
       "date": "2026-09-25",
       "type": "quantitative",
       "title_key": "late-arrivals"
+    },
+    {
+      "date": "2026-09-26",
+      "type": "lateral",
+      "title_key": "ahead-of-his-time"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-08-26",
-      "type": "letterboxed",
-      "title_key": "corner-to-corner"
-    },
     {
       "date": "2026-08-27",
       "type": "spellingbee",
@@ -498,6 +493,11 @@
       "date": "2026-09-25",
       "type": "ladder",
       "title_key": "alchemist"
+    },
+    {
+      "date": "2026-09-26",
+      "type": "anagram",
+      "title_key": "letters-don-t-lie"
     }
   ]
 }

@@ -3058,3 +3058,30 @@ is empty until the first run.
 2026-09-25	This year's El Niño breaks a Pacific temperature record	0d50d065	el-nino,pacific,sea-surface-temperature,record,swain
 2026-09-25	African elephants appear to forage and mix their own medicines	9ea023f7	elephants,mount-elgon,kenya,medicinal-plants,self-medication
 2026-09-25	Landmark brain-cell atlas maps genetic risk for Alzheimer's and more	e9d2face	brain-cell-atlas,nature,alzheimers,prefrontal-cortex,gene-activity
+2026-09-26	Man jailed 16 weeks for abandoning 71 cats in a Bukit Panjang flat	35748144	singapore,cats,animal-cruelty,bukit-panjang,sentencing
+2026-09-26	DPM Gan urges Singapore and China to deepen AI and green-economy ties	6d0bed8d	singapore,china,gan-kim-yong,futurechina-forum,ai
+2026-09-26	Activist charged over candlelight vigils for two executed drug traffickers	eaef13e6	singapore,suraendher-kumarr,public-order-act,death-penalty,charged
+2026-09-26	Driver, 62, jailed 13 months for running a red light and dragging a pregnant woman	a7c08e51	singapore,chen-zhiguang,dangerous-driving,red-light,sentencing
+2026-09-26	Coroner’s inquiry opens into cabby killed by his own moving taxi	ead01c06	singapore,tee-chin-teong,coroner,taxi,jalan-besar
+2026-09-26	Tata Sons defies majority owner Tata Trusts as control feud heads to court	a1864b73	india,tata-sons,tata-trusts,chandrasekaran,boardroom
+2026-09-26	India fast-tracks Canada and Mexico trade talks amid US tariff pressure	d43153a7	india,canada,mexico,trade-talks,modi
+2026-09-26	Saudi-led coalition intercepts six Houthi ballistic missiles aimed at Yanbu and Taif	ac4c42fb	saudi-arabia,houthis,missiles,yanbu,taif
+2026-09-26	Pakistan PM Sharif tells UN a Houthi attack on Mecca or Medina is a ‘red line’	94f6e739	pakistan,shehbaz-sharif,unga,mecca,kashmir
+2026-09-26	Russia’s ruling party secures 349 of 450 Duma seats as final results confirmed	0fb20630	russia,united-russia,state-duma,election,putin
+2026-09-26	Iraq’s prime minister calls for a sovereign Palestinian state at the UN	6cacbf0d	iraq,al-zaidi,unga,palestine,statehood
+2026-09-26	Anthropic says its Claude AI autonomously discovered a novel enzyme system	875e4179	anthropic,claude,enzyme,biology-lab,discovery
+2026-09-26	Meta puts its Muse AI agent into Ray-Ban glasses at Connect 2026	d17ee456	meta,muse,connect,ray-ban,ai-glasses
+2026-09-26	AI-infrastructure startups Modal and Baseten in fresh funding talks	84dd63c1	modal,baseten,ai-infrastructure,funding,inference
+2026-09-26	Anthropic signs a $11.6bn, seven-year computing deal with Akamai	0fd8dc03	anthropic,akamai,cloud-compute,deal,stock
+2026-09-26	Wall Street rebounds Friday as the Dow jumps 478 points to cap a winning week	b925bca6	s&p-500,dow,nasdaq,stocks,rally
+2026-09-26	Costco caps fiscal 2026 with a Q4 beat as net sales rise 11.2% to $93.9bn	c14b624a	costco,earnings,net-sales,retail,warehouses
+2026-09-26	MGM Resorts shares sink 11% as Barry Diller’s People drops an $18bn buyout	73e08fe3	mgm-resorts,barry-diller,people-inc,buyout,stock
+2026-09-26	US jobless claims slip to 197,000, near a 57-year low	f79cef04	us,jobless-claims,labour-market,economy,data
+2026-09-26	🏎️ Russell takes Baku pole as points leader Antonelli crashes out in Q1	a79d0cfe	f1,azerbaijan-grand-prix,russell,antonelli,qualifying
+2026-09-26	🎾 Shapovalov earns his 250th tour win as Mannarino downs former champ Shang in Chengdu	8f098382	tennis,chengdu-open,shapovalov,mannarino,atp
+2026-09-26	🏏 Nepal upset Afghanistan by five wickets in the Asian Games men’s cricket	4f60fd72	cricket,asian-games,nepal,afghanistan,upset
+2026-09-26	🏏 Hong Kong beat Oman by 41 runs as Ayush Shukla takes 3 for 13	6b31b368	cricket,asian-games,hong-kong,oman,shukla
+2026-09-26	Croatia becomes the 74th nation to sign NASA’s Artemis Accords	f0a07a63	nasa,artemis-accords,croatia,space,signatory
+2026-09-26	Exotic ‘non-Abelian anyons’ achieve the full toolkit for universal quantum computing	d983c786	quantum-computing,anyons,quantinuum,nature,qubits
+2026-09-26	Astronomers confirm Elias 2-24 b as the youngest known planet	399ac822	astronomy,exoplanet,elias-2-24b,youngest-planet,nasa
+2026-09-26	JWST’s mysterious ‘little red dots’ explained as young supermassive black holes	929c9c91	jwst,little-red-dots,black-holes,nature,astronomy
