@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-07-28",
-      "topic_key": "alaska",
-      "text": "Alaska is at once the most northern, western and eastern US state; the Aleutians cross the 180th meridian."
-    },
-    {
       "date": "2026-07-29",
       "topic_key": "woolly mammoth",
       "text": "The last woolly mammoths on Wrangel Island survived until ~1650 BC, after the Great Pyramid was built."
@@ -254,14 +249,14 @@
       "date": "2026-09-26",
       "topic_key": "sudan",
       "text": "Sudan has more pyramids than Egypt"
+    },
+    {
+      "date": "2026-09-27",
+      "topic_key": "tardigrade",
+      "text": "Tardigrades are the only animals known to have survived the open vacuum of space (2007 ESA FOTON-M3 experiment)."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-08-27",
-      "type": "visual",
-      "title_key": "four-from-six"
-    },
     {
       "date": "2026-08-29",
       "type": "logic",
@@ -376,14 +371,14 @@
       "date": "2026-09-26",
       "type": "lateral",
       "title_key": "ahead-of-his-time"
+    },
+    {
+      "date": "2026-09-27",
+      "type": "visual",
+      "title_key": "off-by-one"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-08-27",
-      "type": "spellingbee",
-      "title_key": "a-game"
-    },
     {
       "date": "2026-08-29",
       "type": "grouping",
@@ -498,6 +493,11 @@
       "date": "2026-09-26",
       "type": "anagram",
       "title_key": "letters-don-t-lie"
+    },
+    {
+      "date": "2026-09-27",
+      "type": "spellingbee",
+      "title_key": "take-root"
     }
   ]
 }

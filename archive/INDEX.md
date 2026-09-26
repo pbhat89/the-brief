@@ -3085,3 +3085,27 @@ is empty until the first run.
 2026-09-26	Exotic ‘non-Abelian anyons’ achieve the full toolkit for universal quantum computing	d983c786	quantum-computing,anyons,quantinuum,nature,qubits
 2026-09-26	Astronomers confirm Elias 2-24 b as the youngest known planet	399ac822	astronomy,exoplanet,elias-2-24b,youngest-planet,nasa
 2026-09-26	JWST’s mysterious ‘little red dots’ explained as young supermassive black holes	929c9c91	jwst,little-red-dots,black-holes,nature,astronomy
+2026-09-27	Singapore becomes a 'super-aged' society as population hits a record 6.21 million	d1470f22	singapore,population-in-brief,super-aged,6.21-million,record
+2026-09-27	Five charged over a S$155,600 'bump-and-steal' theft near Orchard's Tang Plaza	98fa067b	singapore,tang-plaza,tanglin-police,filipino-nationals,theft,charged
+2026-09-27	Man, 50, charged after a fire is set at the entrance of a Raffles Place mosque	2be3ee17	singapore,masjid-moulana-mohamed-ali,raffles-place,fire,charged
+2026-09-27	Haze returns as central Singapore's 24-hour PSI enters the unhealthy range	b994b88c	singapore,nea,psi,haze,kalimantan,sumatra
+2026-09-27	India's forex reserves post their biggest weekly drop in two years as the RBI defends the rupee	1c0ac51c	india,rbi,forex-reserves,rupee,dollars
+2026-09-27	India's SEBI clears portfolio managers to invest overseas and short equity options	dcc1b0a3	india,sebi,portfolio-managers,overseas-investing,equity-options
+2026-09-27	Palestine Action supporters plan a mass vigil at Burnham's first Labour conference	248ee5eb	uk,palestine-action,labour-conference,burnham,liverpool,vigil
+2026-09-27	Trump hosts Xi with fanfare, but the China-US summit yields little of substance	e6be7e4d	united-states,china,trump,xi,summit,trade-truce
+2026-09-27	Russia and Germany's foreign ministers hold their first talks since the 2022 invasion	c64d5ab6	russia,germany,lavrov,wadephul,ukraine,un-general-assembly
+2026-09-27	Swiss voters decide whether to lock 'perpetual, armed' neutrality into the constitution	c04a6384	switzerland,neutrality-initiative,svp,referendum,russia-sanctions
+2026-09-27	France to send troops and air defences to protect the Saudi oil port of Yanbu	6a387ac4	france,macron,saudi-arabia,yanbu,houthis,red-sea
+2026-09-27	'Model drop week': Anthropic ships Opus 5.5, OpenAI counters with GPT-6 within the hour	79c60703	anthropic,opus-5-5,openai,gpt-6,model-drop-week
+2026-09-27	British AI 'neocloud' Nscale secures $3.36 billion ahead of its US IPO	8ee0128d	nscale,ai-neocloud,third-point,nvidia,ipo
+2026-09-27	Meta debuts camera-free Ray-Ban Meta Audio AI glasses at $349	c2558e1a	meta,ray-ban-meta-audio,smart-glasses,connect,wearables
+2026-09-27	AI drone maker Tekever raises $580 million at a $6.4 billion valuation	26c369b4	tekever,drones,uc-investments,baillie-gifford,series-d
+2026-09-27	US consumer sentiment slides to a four-month low as inflation fears deepen	3523b67c	university-of-michigan,consumer-sentiment,inflation-expectations,us-economy
+2026-09-27	RNAi biotech ADARx raises $446 million in an upsized Nasdaq IPO backed by AbbVie	791ff2c0	adarx,abbvie,ipo,nasdaq,rnai,biotech
+2026-09-27	Darden profit slips as Olive Garden growth cools despite a 5.1% sales rise	14dbd937	darden,olive-garden,longhorn-steakhouse,earnings,same-restaurant-sales
+2026-09-27	Saudi crude exports hit their highest since the Iran war began, despite a pipeline outage	6819fd08	saudi-arabia,crude-exports,strait-of-hormuz,kpler,pipeline
+2026-09-27	Russell holds off Verstappen by a tenth to win a chaotic Azerbaijan Grand Prix	11e0aaa2	f1,azerbaijan-grand-prix,russell,verstappen,baku,win
+2026-09-27	Isack Hadjar's P3 seals Red Bull's first double podium since 2024	062c6308	f1,isack-hadjar,red-bull,double-podium,antonelli
+2026-09-27	Fernandez fights back past Chwalinska to reach the Singapore Open final	d7eaec5e	tennis,singapore-open,fernandez,chwalinska,final
+2026-09-27	Asian Games men's cricket quarter-finals set, with India drawn against Afghanistan	49c83a64	cricket,asian-games,india,afghanistan,quarter-finals
+2026-09-27	Physicists drive antimatter down a road for the first time in a CERN world first	8760c6d1	cern,base-collaboration,antiprotons,antimatter,penning-trap
