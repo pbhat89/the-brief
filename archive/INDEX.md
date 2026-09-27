@@ -3109,3 +3109,33 @@ is empty until the first run.
 2026-09-27	Fernandez fights back past Chwalinska to reach the Singapore Open final	d7eaec5e	tennis,singapore-open,fernandez,chwalinska,final
 2026-09-27	Asian Games men's cricket quarter-finals set, with India drawn against Afghanistan	49c83a64	cricket,asian-games,india,afghanistan,quarter-finals
 2026-09-27	Physicists drive antimatter down a road for the first time in a CERN world first	8760c6d1	cern,base-collaboration,antiprotons,antimatter,penning-trap
+2026-09-28	HDB to review 1993 Conversion Scheme after S$2.18m combined-flat listing	9fb2c443	HDB,Conversion Scheme,Telok Blangah
+2026-09-28	Police and ICA warn of impersonation and fake-PR scams, at least S$8.8m lost this year	4e8a09cb	SPF,ICA,scams
+2026-09-28	Singapore turns cold and wet a day after hitting 35.8°C, PUB issues flood alerts	09e87f3d	Singapore,PUB,weather
+2026-09-28	Man, 51, charged after a poodle died at a Tanjong Katong grooming facility	d4198910	Pawsome,Tanjong Katong,animal cruelty
+2026-09-28	Floods and landslides kill at least 56 in northern India, 12 more in Nepal	f731d99d	Uttar Pradesh,floods,Nepal
+2026-09-28	India's Election Commission overhauls its voter-roll revision after mounting uproar	127b7ab1	Election Commission,SIR,India
+2026-09-28	Burnham hints at new taxes to fund an NHS-style National Care Service	2c616a1e	Andy Burnham,National Care Service,tax
+2026-09-28	A 'difficult Budget' looms over Chancellor John Healey at the Labour conference	f867cd67	John Healey,Budget,Labour
+2026-09-28	Burnham to set out a plan to reset the UK water industry	b66b0248	Burnham,water industry,Labour
+2026-09-28	Burnham to outline his economic vision for Britain in his keynote	f819db82	Burnham,Labour conference,economy
+2026-09-28	Israel revokes Dutch diplomats' credentials in Ramallah over settlement trade ban	21964732	Israel,Netherlands,Ramallah
+2026-09-28	Russia and Ukraine trade deadly strikes, at least 10 killed	e153e993	Russia,Ukraine,drones
+2026-09-28	Djibouti appeals to the UN for help as the Yemen war drives a refugee influx	c6cebb75	Djibouti,Yemen,UN
+2026-09-28	Pakistan seals off Islamabad ahead of a march to free Imran Khan	281d17fb	Pakistan,Imran Khan,Islamabad
+2026-09-28	Poland scrambles jets after a Russian helicopter breaches its airspace	a217aebd	Poland,Russia,NATO
+2026-09-28	Insurers say hospitals' AI claims tools added about $942m in healthcare costs	0f7d9538	Blue Cross Blue Shield,AI,healthcare
+2026-09-28	Google tests agentic checkout, letting Indian shoppers buy from Flipkart via Gemini	23995004	Google,Gemini,Flipkart
+2026-09-28	OpenAI says rogue agents touched US government sites, and notifies agencies	3208c9a5	OpenAI,SEC,Census Bureau
+2026-09-28	Autonomous-vehicle startups line up IPOs, from EcoCeres to May Mobility	3456ffa6	EcoCeres,May Mobility,IPO
+2026-09-28	Akamai shares jump 21% on its $11.6bn Anthropic cloud deal and stock warrant	1e0eb8f5	Akamai,Anthropic,warrant
+2026-09-28	Paramount to start paying Warner Bros Discovery holders a quarterly fee from Sep 30	81040b9e	Paramount,Warner Bros Discovery,merger
+2026-09-28	🎾 Fernandez wins the Singapore Open for her sixth career title	902aba38	Leylah Fernandez,Singapore Open,tennis
+2026-09-28	🎾 Hurkacz beats Harris to reach the Chengdu semifinals, will face Shapovalov	899ce219	Hubert Hurkacz,Chengdu Open,Shapovalov
+2026-09-28	🏏 South Africa beat Australia to take the ODI series, Miller makes a career-best 142	2b123abc	South Africa,Australia,David Miller
+2026-09-28	🏎️ Colapinto handed a five-place grid penalty for causing the Baku pile-up	5985f994	Franco Colapinto,F1,Azerbaijan
+2026-09-28	🏎️ Norris calls for race bans after the crash that wrecked his McLaren	d49961ef	Lando Norris,F1,Colapinto
+2026-09-28	The dreaming brain hits an 'energy paradox' — blood surges as neuronal fuel drops	1dc741f2	REM sleep,brain,Tohoku University
+2026-09-28	When the immune system attacks the brain: encephalitis mistaken for psychosis	1550f992	autoimmune encephalitis,NMDA,psychosis
+2026-09-28	NASA confirms the Roman telescope's ground stations are ready for its data firehose	734cd145	NASA,Roman Space Telescope,ground stations
+2026-09-28	What is the point of the private 'Fermi Explorer' mission to Alpha Centauri?	c8a454b0	Fermi Explorer,Alpha Centauri,interstellar

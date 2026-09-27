@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-07-29",
-      "topic_key": "woolly mammoth",
-      "text": "The last woolly mammoths on Wrangel Island survived until ~1650 BC, after the Great Pyramid was built."
-    },
-    {
       "date": "2026-07-30",
       "topic_key": "ketchup",
       "text": "Ketchup was once sold as medicine in the 1830s."
@@ -254,6 +249,11 @@
       "date": "2026-09-27",
       "topic_key": "tardigrade",
       "text": "Tardigrades are the only animals known to have survived the open vacuum of space (2007 ESA FOTON-M3 experiment)."
+    },
+    {
+      "date": "2026-09-28",
+      "topic_key": "run island",
+      "text": "Under the 1667 Treaty of Breda the Dutch kept the tiny nutmeg island of Run and handed Manhattan to England."
     }
   ],
   "puzzle_log": [
@@ -376,6 +376,11 @@
       "date": "2026-09-27",
       "type": "visual",
       "title_key": "off-by-one"
+    },
+    {
+      "date": "2026-09-28",
+      "type": "logic",
+      "title_key": "last-to-know"
     }
   ],
   "word_puzzle_log": [
@@ -498,6 +503,11 @@
       "date": "2026-09-27",
       "type": "spellingbee",
       "title_key": "take-root"
+    },
+    {
+      "date": "2026-09-28",
+      "type": "letterboxed",
+      "title_key": "corner-to-corner"
     }
   ]
 }
