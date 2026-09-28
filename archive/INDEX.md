@@ -3139,3 +3139,35 @@ is empty until the first run.
 2026-09-28	When the immune system attacks the brain: encephalitis mistaken for psychosis	1550f992	autoimmune encephalitis,NMDA,psychosis
 2026-09-28	NASA confirms the Roman telescope's ground stations are ready for its data firehose	734cd145	NASA,Roman Space Telescope,ground stations
 2026-09-28	What is the point of the private 'Fermi Explorer' mission to Alpha Centauri?	c8a454b0	Fermi Explorer,Alpha Centauri,interstellar
+2026-09-29	Update: Six charged over unpermitted assemblies, including Kirsten Han and actors Lim Kay Siu and Neo Swee Lin	8c4d4431	singapore,kirsten-han,public-assembly,changi-prison,charged
+2026-09-29	Man, 69, convicted of breaching a protection order by singing and banging cans outside a neighbour's flat	413f09f8	singapore,protection-order,conviction,neighbour-dispute
+2026-09-29	Man, 30, to be charged after allegedly faking an AI crocodile photo that shut Pandan Reservoir	1f7a6475	singapore,pandan-reservoir,ai-image,crocodile,charged
+2026-09-29	Woman, 54, jailed for paying S$52,900 in bribes to a former SJI facilities manager	8257bc1d	singapore,bribery,sji,corruption,sentencing
+2026-09-29	Update: North India and Nepal flood toll passes 100 as Uttar Pradesh deaths reach 81	5e8880e1	india,uttar-pradesh,floods,nepal,rivers
+2026-09-29	Indian equities extend their slide to a seventh session as NSE shares fall below IPO price	5ab7705c	india,nse,stock-market,selloff,ipo
+2026-09-29	Adani group firms settle a SEBI probe over public-shareholding rules	83c8d7d1	india,adani,sebi,settlement,regulator
+2026-09-29	India's trade minister Piyush Goyal heads to the US to push an interim trade pact	338a8b19	india,piyush-goyal,us-trade-deal,g20,tariffs
+2026-09-29	Update: Healey pledges a 'new age of industrialisation' and puts fiscal discipline at the heart of the Budget	31f75cb9	uk,john-healey,budget,fiscal-discipline,labour-conference
+2026-09-29	Update: Burnham sets out a social care plan and refuses to rule out tax rises	fd022987	uk,andy-burnham,social-care,nhs,tax
+2026-09-29	UK housebuilders jump as the government moves to revive a Help to Buy scheme	ea6bddca	uk,housebuilders,help-to-buy,ftse-100,housing
+2026-09-29	City executives voice tax fears as Burnham courts small business at the conference	c724e413	uk,city-of-london,tax,burnham,business
+2026-09-29	Oil surges after Trump rejects Iran's plan to reopen the Strait of Hormuz	d3fd9c97	united-states,iran,strait-of-hormuz,oil,trump
+2026-09-29	Serbia calls a snap election for Oct 25 as Vucic faces a sustained student revolt	70be92f0	serbia,vucic,snap-election,student-protests,balkans
+2026-09-29	Ben-Gvir leads hundreds of Israelis into the Al-Aqsa Mosque compound	38e80284	israel,ben-gvir,al-aqsa,jerusalem,palestine
+2026-09-29	Update: Russian strikes kill eight across Ukraine and injure dozens in Kharkiv	b34b6557	ukraine,russia,kharkiv,zelenskyy,strikes
+2026-09-29	Viral AI agent startup Instinct raises $1bn Series C at a $10bn valuation	5d1ce5e2	instinct,ai-agent,series-c,funding,valuation
+2026-09-29	Update: AI inference provider Modal Labs nears a $750m round at a $15.75bn valuation	f6d4c46d	modal-labs,ai-inference,accel,funding,valuation
+2026-09-29	Modulate raises $25m for voice-AI models that flag deepfakes and abuse	b4530705	modulate,voice-ai,deepfake,funding,future-ventures
+2026-09-29	The AI boom takes over New York Climate Week	2d952d15	ai,climate-week,data-centres,energy,new-york
+2026-09-29	US stocks fall as the Iran oil shock lifts Treasury yields to fresh highs	8054977b	sp-500,dow,nasdaq,treasury-yields,stocks
+2026-09-29	Gold tumbles more than 3% as costlier crude keeps rate-hike bets alive	ce055b0b	gold,treasury-yields,commodities,federal-reserve,oil
+2026-09-29	Update: Paramount lines up a record $44bn bond sale to fund the Warner Bros Discovery takeover	c7b0a1c0	paramount,warner-bros-discovery,bond-sale,junk-bonds,merger
+2026-09-29	Nvidia lifts its buyback plan to about $235bn with a fresh $150bn authorisation	0030c042	nvidia,buyback,chips,stock,markets
+2026-09-29	🏎️ Update: Norris apologises to Colapinto after calling for a race ban	2a62458c	f1,lando-norris,colapinto,azerbaijan,apology
+2026-09-29	🏎️ Antonelli leads the title race by 81 points as Mercedes eye both crowns	122e59fd	f1,kimi-antonelli,mercedes,championship,russell
+2026-09-29	🎾 Update: Hurkacz beats Shapovalov to reach the Chengdu Open final	a795fc19	tennis,chengdu-open,hurkacz,shapovalov,final
+2026-09-29	🏏 Update: Rain sends India and Pakistan into the Asian Games cricket semi-finals	fc4b0d32	cricket,asian-games,india,pakistan,semi-finals
+2026-09-29	Landmark brain-cell atlas maps the genetics of Alzheimer's and seven other disorders	6726c1dd	psychad,brain-atlas,alzheimers,single-cell,genetics
+2026-09-29	The brain's fats are organised into 'lipizones' that reorganise during pregnancy	4823dad1	brain-lipids,lipizones,neuroscience,mouse,pregnancy
+2026-09-29	An AI model is enlisted to attack a 79-year-old geometry problem about 6D spheres	72e39339	mathematics,hopf-problem,six-dimensional-sphere,ai,proof
+2026-09-29	Mongolian fossils reclassify zhelestids, reshuffling an early branch of the mammal tree	8bce66d5	palaeontology,zhelestids,mammals,mongolia,fossils

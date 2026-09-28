@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Tue, 29 September 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .wpuzzle-box{background:linear-gradient(135deg,#0e1a1a,#0d1620);border:1px solid #234a44;border-left:3px solid #16a085;padding:24px 28px;border-radius:2px}
+  .wptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#16a085;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .wpuzzle-box .puzzle-title{color:#cdeae3}
+  .wpuzzle-box .puzzle-how{color:#8fb8ac;background:#08140f;border-left-color:#1a6a5a}
+  .wpuzzle-box .puzzle-q{color:#dfeae6;font-family:'Source Sans 3',sans-serif}
+  .wpuzzle-box .answer{color:#bfe0d6}
+  .wpuzzle-box .answer .alabel{color:#16a085}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Tuesday, 29 September 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Tuesday, 29 September 2026 · 🔍 48 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eleven entries in this exact order:
+     id    : one of "sg" | "india" | "uk" | "geo" | "tech" | "biz" | "sports" | "misc" | "fun" | "puzzle" | "wpuzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 8 news tabs; fun/puzzle/wpuzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+
+   WORD_PUZZLE shape (separate, daily word game — NYT-style, static reveal):
+     type     : one of "Connections" | "Word Ladder" | "Anagram" | "Spelling Bee" | "Letter Boxed" | "Mini Crossword"
+     title    : short evocative name for the word puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle body; supports \n for line breaks (grids render as pre-formatted text)
+     answer   : the answer; supports \n for line breaks; appears inside its own toggle (id "wpans")
+============================================================================= */
+
+const SECTIONS = [
+  {
+    "id": "sg",
+    "title": "🇸🇬 Singapore",
+    "color": "#e74c3c",
+    "items": [
+      {
+        "headline": "Update: Six charged over unpermitted assemblies, including Kirsten Han and actors Lim Kay Siu and Neo Swee Lin",
+        "summary": "Six people aged 31 to 70 were charged on Sep 28 over public assemblies held without a permit outside the State Courts and near Changi Prison. They include freelance journalist and activist Kirsten Han, 37, and actor couple Lim Kay Siu, 70, and Neo Swee Lin, 63; the charges follow earlier prosecutions tied to the same anti-death-penalty gatherings.",
+        "source": "Mothership",
+        "url": "https://mothership.sg/2026/09/6-charged-public-assembly-singapore/",
+        "date": "Sep 28",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Man, 69, convicted of breaching a protection order by singing and banging cans outside a neighbour's flat",
+        "summary": "Heng Choo Hwi, 69, was convicted on Sep 28 after a trial over breaching a protection order. The court heard he sang and struck metal objects outside his neighbours' Housing Board flat, with a neighbour calling police at about 5:35pm on Feb 5.",
+        "source": "Mothership",
+        "url": "https://mothership.sg/2026/09/man-sing-bang-can-convicted/",
+        "date": "Sep 28",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Man, 30, to be charged after allegedly faking an AI crocodile photo that shut Pandan Reservoir",
+        "summary": "Police said a 30-year-old man will be charged on Sep 29 with transmitting a false message and obstructing the course of justice, after allegedly creating an AI-generated image of a crocodile at Pandan Reservoir and sending it to a colleague, prompting a suspension of activities before he deleted it.",
+        "source": "Mothership",
+        "url": "https://mothership.sg/2026/09/fake-crocodile-photo/",
+        "date": "Sep 29",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Woman, 54, jailed for paying S$52,900 in bribes to a former SJI facilities manager",
+        "summary": "A 54-year-old Singaporean woman was sentenced on Sep 23 to three months and two weeks' jail after pleading guilty to paying more than S$52,000 in bribes to Ng Cher Him, a former St Joseph's Institution facilities manager, to secure maintenance work; Ng was jailed last year for taking bribes from several vendors.",
+        "source": "Mothership",
+        "url": "https://mothership.sg/2026/09/woman-gave-bribes-sji-facilities-manager-jail/",
+        "date": "Sep 23",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "india",
+    "title": "🇮🇳 India",
+    "color": "#e67e22",
+    "items": [
+      {
+        "headline": "Update: North India and Nepal flood toll passes 100 as Uttar Pradesh deaths reach 81",
+        "summary": "Days of intense rain have now killed more than 100 people across India and Nepal, with at least 81 dead in Uttar Pradesh. India's Central Water Commission said 30 river-monitoring stations across seven states were in a 'severe situation', with the Ganga, Gandak, Kosi, Bagmati and Narmada above danger levels.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-09-28/dozens-dead-after-flooding-and-landslides-strike-india-nepal",
+        "date": "Sep 28",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Indian equities extend their slide to a seventh session as NSE shares fall below IPO price",
+        "summary": "Indian stocks fell again on Sep 28 amid a broad equity selloff driven by costlier crude, a weaker rupee and foreign outflows. Shares of the National Stock Exchange of India slipped below their initial public offering price on their third day of trading, extending a lacklustre debut.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-09-28/nse-shares-slip-below-ipo-price-after-lackluster-india-debut",
+        "date": "Sep 28",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Adani group firms settle a SEBI probe over public-shareholding rules",
+        "summary": "Four Gautam Adani group firms - Adani Transmission, Adani Power, Adani Enterprises and Adani Ports - along with 14 directors, paid about 14.8 million rupees to settle a Securities and Exchange Board of India case over alleged breaches of minimum public-shareholding rules, resolving another regulatory matter for the conglomerate.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-09-28/adani-firms-clear-another-regulatory-hurdle-with-sebi-settlement",
+        "date": "Sep 28",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "India's trade minister Piyush Goyal heads to the US to push an interim trade pact",
+        "summary": "Commerce and Industry Minister Piyush Goyal began a seven-day US trip on Sep 28, with finalising an interim trade agreement reached earlier this year topping his agenda alongside meetings with G20 counterparts; India has said a deal hinges on a preferential tariff rate for its exporters.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-09-28/india-s-goyal-heads-to-us-for-trade-talks-g20-ministers-meeting",
+        "date": "Sep 28",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "uk",
+    "title": "🇬🇧 UK News",
+    "color": "#3949ab",
+    "items": [
+      {
+        "headline": "Update: Healey pledges a 'new age of industrialisation' and puts fiscal discipline at the heart of the Budget",
+        "summary": "In his Labour conference speech on Sep 28, Chancellor John Healey promised Britain a 'new age of industrialisation' and said fiscal discipline would be central to his first Budget on Oct 28, telling delegates he and Prime Minister Andy Burnham are 'united in meeting the fiscal rules'.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-09-28/healey-says-hope-for-britons-is-earned-through-fiscal-discipline",
+        "date": "Sep 28",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Update: Burnham sets out a social care plan and refuses to rule out tax rises",
+        "summary": "Prime Minister Andy Burnham used the Labour conference to detail plans for social care run 'on NHS principles' and free at the point of use, alongside water-sector reform and a focus on youth unemployment. Asked how he would fund it, he said 'nothing is off the table at this moment in time'.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-09-28/burnham-vows-clear-vision-to-tackle-uk-s-thorniest-challenges",
+        "date": "Sep 28",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "UK housebuilders jump as the government moves to revive a Help to Buy scheme",
+        "summary": "London-listed housebuilders rallied on Sep 28 amid reports the Burnham government will reboot a Help to Buy-style scheme to support home ownership, with the FTSE 100 in focus as Chancellor John Healey addressed the Labour conference and markets weighed the looming Budget.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/live-blog/2026-09-28/ftse-100-live-john-healey-speech-budget-burnham-pound-gilts-bonds-oil-prices-what-s-moving-uk-markets-right-now-markets-today",
+        "date": "Sep 28",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "City executives voice tax fears as Burnham courts small business at the conference",
+        "summary": "Executives from big UK banks and professional-services firms privately voiced unease about the Burnham government's plans after 'business day' events at the Labour conference, as the prime minister stressed support for small business ahead of an Oct 28 Budget widely expected to raise taxes.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-09-28/city-chiefs-fret-over-tax-as-burnham-focuses-on-small-business",
+        "date": "Sep 28",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "geo",
+    "title": "🌍 Global / Geopolitics",
+    "color": "#2980b9",
+    "items": [
+      {
+        "headline": "Oil surges after Trump rejects Iran's plan to reopen the Strait of Hormuz",
+        "summary": "Brent crude rose more than 3% toward $108 a barrel on Sep 28 after US President Donald Trump rejected Iran's proposal to reopen the Strait of Hormuz within seven days. Tehran's plan, floated at the UN, sought the release of frozen funds, an end to oil sanctions and a lifting of the US naval blockade.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/economy/2026/9/28/oil-prices-surge-after-trump-rejects-irans-plan-to-reopen-strait-of-hormuz",
+        "date": "Sep 28",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Serbia calls a snap election for Oct 25 as Vucic faces a sustained student revolt",
+        "summary": "Serbia will hold early parliamentary elections on Oct 25 after months of student-led protests over alleged corruption and negligence. Aleksandar Vucic, who is seeking the prime minister's post, is betting the vote keeps him in power, though analysts say it may not defuse the crisis.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/features/2026/9/28/serbias-snap-election-can-vucic-outmanoeuvre-the-student-revolt",
+        "date": "Sep 28",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Ben-Gvir leads hundreds of Israelis into the Al-Aqsa Mosque compound",
+        "summary": "Israel's far-right National Security Minister Itamar Ben-Gvir joined hundreds of Israelis who entered the Al-Aqsa Mosque compound in occupied East Jerusalem under police protection on Sep 28; Al Jazeera reported about 900 people entered during the morning.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/9/28/ben-gvir-joins-hundreds-of-israelis-to-storm-al-aqsa-mosque-compound",
+        "date": "Sep 28",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Update: Russian strikes kill eight across Ukraine and injure dozens in Kharkiv",
+        "summary": "Russian attacks killed at least eight people across Ukraine and injured dozens on Sep 28, including at least 22 hurt when a guided aerial bomb hit a Kharkiv apartment block and three killed, among them a 16-year-old, in Sumy. Zelenskyy said Russia had launched more than 2,200 drones, 1,630 aerial bombs and 38 missiles in the past week.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/9/28/russian-strikes-kill-eight-injure-dozens-across-ukraine",
+        "date": "Sep 28",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "tech",
+    "title": "💻 Tech & AI",
+    "color": "#27ae60",
+    "items": [
+      {
+        "headline": "Viral AI agent startup Instinct raises $1bn Series C at a $10bn valuation",
+        "summary": "Instinct, the invite-only personal AI agent that launched in August, raised a $1 billion Series C at a $10 billion valuation - up from $350 million at $2.5 billion just weeks earlier - underscoring investor frenzy for agents that carry out real-world tasks.",
+        "source": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/28/viral-ai-agent-instinct-raises-1b-series-c-at-a-10b-valuation/",
+        "date": "Sep 28",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Update: AI inference provider Modal Labs nears a $750m round at a $15.75bn valuation",
+        "summary": "Modal Labs, which helps businesses run AI models on GPUs, is closing a roughly $750 million round led by Accel at a $15.75 billion valuation - more than triple the $4.65 billion it reached four months ago - as demand for inference infrastructure surges.",
+        "source": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/28/source-inference-provider-modal-labs-closing-in-on-750m-round-at-15-75b-valuation/",
+        "date": "Sep 28",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Modulate raises $25m for voice-AI models that flag deepfakes and abuse",
+        "summary": "Boston-based Modulate raised $25 million, led by Future Ventures, for its suite of small voice models offering transcription, emotion analysis, deepfake and AI-music detection, and policy enforcement for voice agents in regulated industries.",
+        "source": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/28/modulate-raises-25m-for-its-voice-models-and-analysis-suite/",
+        "date": "Sep 28",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "The AI boom takes over New York Climate Week",
+        "summary": "TechCrunch reported that AI dominated New York Climate Week on Sep 28, with much of the strongest climate-tech deal value flowing to sectors tied to data-centre build-out - grid infrastructure, the built environment and dispatchable energy - even as some attendees bristled at AI's growing footprint.",
+        "source": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/28/the-ai-boom-took-over-climate-week-and-not-everyone-is-happy-about-it/",
+        "date": "Sep 28",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "biz",
+    "title": "📈 Business & Markets",
+    "color": "#8e44ad",
+    "items": [
+      {
+        "headline": "US stocks fall as the Iran oil shock lifts Treasury yields to fresh highs",
+        "summary": "Wall Street slipped on Sep 28 as surging crude and US-Iran tensions pushed Treasury yields higher: the S&P 500 fell 0.77% to about 7,684, the Dow lost 0.67% and the Nasdaq shed 0.92%. Nvidia bucked the trend, rising nearly 1% after unveiling a fresh buyback authorisation.",
+        "source": "CNBC",
+        "url": "https://www.cnbc.com/2026/09/27/stock-market-today-live-updates.html",
+        "date": "Sep 28",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Gold tumbles more than 3% as costlier crude keeps rate-hike bets alive",
+        "summary": "Spot gold fell more than 3% to below $4,160 an ounce on Sep 28, with silver, platinum and palladium also sliding, as the US-Iran standoff over the Strait of Hormuz kept energy costs high and pressure on the Federal Reserve; the 10-year Treasury yield jumped to about 5.27%, a 19-year high.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-09-27/gold-declines-as-hormuz-impasse-keeps-rate-hike-bets-elevated",
+        "date": "Sep 28",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Update: Paramount lines up a record $44bn bond sale to fund the Warner Bros Discovery takeover",
+        "summary": "Paramount Skydance drew enough demand to cover a roughly $44 billion bond sale to finance its acquisition of Warner Bros Discovery, offering yields as high as about 9%. The $12.4 billion-equivalent of junk bonds, the biggest high-yield offering on record, had drawn more than $23 billion in orders by Monday morning.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-09-28/paramount-to-hold-calls-for-warner-deal-s-44-billion-bond-sale",
+        "date": "Sep 28",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Nvidia lifts its buyback plan to about $235bn with a fresh $150bn authorisation",
+        "summary": "Nvidia said it authorised an additional $150 billion for share repurchases, taking its total buyback plan to about $235 billion; the chipmaker's stock rose nearly 1% on Sep 28, outperforming a broadly weaker market weighed down by the oil-driven selloff.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-09-28/stock-market-today-dow-s-p-live-updates",
+        "date": "Sep 28",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "sports",
+    "title": "🎾🏏🏎️ Sports",
+    "color": "#c0392b",
+    "items": [
+      {
+        "headline": "🏎️ Update: Norris apologises to Colapinto after calling for a race ban",
+        "summary": "Lando Norris said he messaged Franco Colapinto to apologise for saying after the Azerbaijan Grand Prix that 'some drivers shouldn't be in Formula 1' and calling for a one-race ban. Colapinto had triggered a restart pile-up in Baku that also eliminated Pierre Gasly and Norris; the Alpine driver keeps a five-place grid penalty for the next round at Sepang.",
+        "source": "Sky Sports",
+        "url": "https://www.skysports.com/f1/news/13592672/lando-norris-apologises-to-franco-colapinto-for-critical-comments-made-about-alpine-driver-following-azerbaijan-gp-crash",
+        "date": "Sep 28",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "🏎️ Antonelli leads the title race by 81 points as Mercedes eye both crowns",
+        "summary": "Kimi Antonelli, 20, holds an 81-point championship lead over Mercedes team-mate George Russell after the Azerbaijan Grand Prix, with Mercedes also topping the constructors' standings. On current form the Italian could be crowned as early as next month's Singapore Grand Prix (Oct 9-11).",
+        "source": "Formula1.com",
+        "url": "https://www.formula1.com/en/latest/article/points-permutations-when-is-the-earliest-antonelli-could-win-the-world-championship.24UKT2fsQl4GmC5DMrmYUy",
+        "date": "Sep 28",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "🎾 Update: Hurkacz beats Shapovalov to reach the Chengdu Open final",
+        "summary": "Hubert Hurkacz edged Denis Shapovalov 6-7(8), 6-3, 6-3 to reach the Chengdu Open final, the 13th tour-level final of his career. He will meet second seed Alejandro Davidovich Fokina in the title match.",
+        "source": "ATP Tour",
+        "url": "https://www.atptour.com/en/video/highlights-hurkacz-battles-past-shapovalov-to-reach-chengdu-2026-final",
+        "date": "Sep 28",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "🏏 Update: Rain sends India and Pakistan into the Asian Games cricket semi-finals",
+        "summary": "Both men's cricket quarter-finals in Nisshin were abandoned without a ball bowled on Sep 28 as persistent rain and a damp outfield intervened, sending India (over Afghanistan) and Pakistan (over Hong Kong) through as the higher-ranked teams. India will face the winner of Sri Lanka v Nepal.",
+        "source": "ESPNcricinfo",
+        "url": "https://www.cricinfo.com/series/asian-games-men-s-cricket-competition-2026-1552449/afghanistan-vs-india-2nd-quarter-final-1552773/match-report",
+        "date": "Sep 28",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "misc",
+    "title": "🔬 Other Miscellaneous News",
+    "color": "#1abc9c",
+    "items": [
+      {
+        "headline": "Landmark brain-cell atlas maps the genetics of Alzheimer's and seven other disorders",
+        "summary": "The PsychAD consortium published a single-cell atlas of the human prefrontal cortex built from more than 6.3 million nuclei across 1,494 brains, linking gene-activity patterns to Alzheimer's and seven other brain disorders - a resource for tracing how genetic risk hits specific cell types.",
+        "source": "Nature",
+        "url": "https://www.nature.com/articles/d41586-026-02947-x",
+        "date": "Sep 24",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "The brain's fats are organised into 'lipizones' that reorganise during pregnancy",
+        "summary": "A new Nature lipidomic atlas mapped the membrane-lipid architecture of the adult mouse brain at micrometre scale, revealing distinct territories dubbed 'lipizones' that partly mirror cell-type zones but also trace distant axon terminals - and shift during pregnancy.",
+        "source": "Nature",
+        "url": "https://www.nature.com/articles/d41586-026-02772-2",
+        "date": "Sep 25",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "An AI model is enlisted to attack a 79-year-old geometry problem about 6D spheres",
+        "summary": "Scientific American reported that mathematician Levent Alpoge used an internal version of Anthropic's AI, Claude, to tackle the 1947 Hopf problem - whether a six-dimensional sphere can carry a complex structure - posting a 100-plus-page purported proof that the answer is yes. The result has not yet been verified.",
+        "source": "Scientific American",
+        "url": "https://www.scientificamerican.com/article/ai-solves-79-year-old-math-mystery-of-six-dimensional-spheres/",
+        "date": "Sep 27",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Mongolian fossils reclassify zhelestids, reshuffling an early branch of the mammal tree",
+        "summary": "Newly described Cretaceous fossils from Mongolia show that zhelestids were not early relatives of hoofed placental mammals but a dental variant within Zalambdalestoidea, according to a study in Nature that combines distinctive molars with zalambdalestid skull and limb traits.",
+        "source": "Nature",
+        "url": "https://www.nature.com/articles/s41586-026-10861-5",
+        "date": "Sep 24",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "fun",
+    "title": "✦ Fun Fact",
+    "color": "#27ae60",
+    "custom": "fun"
+  },
+  {
+    "id": "puzzle",
+    "title": "🧩 Puzzle",
+    "color": "#e67e22",
+    "custom": "puzzle"
+  },
+  {
+    "id": "wpuzzle",
+    "title": "🔤 Word Puzzles",
+    "color": "#16a085",
+    "custom": "wpuzzle"
+  }
+];
+
+const FUN_FACT = {
+  "text": "Under the right conditions, hot water can freeze faster than cold water — a counter-intuitive phenomenon known as the Mpemba effect. It is named after Erasto Mpemba, a Tanzanian schoolboy who in 1963 noticed that his hot ice-cream mix froze quicker than a cold one and, though initially mocked, went on to co-publish the finding in 1969. Scientists still debate exactly why it happens.",
+  "tag": "Category · Physics"
+};
+
+const PUZZLE = {
+  "type": "Quantitative",
+  "title": "Trailing Zeros",
+  "how": "The zeros come from factors of 10, and every 10 is a 2 paired with a 5 — so just count the 5s.",
+  "question": "How many zeros does the number 100! (100 factorial, i.e. 1 × 2 × 3 × … × 100) end in when written out in full?",
+  "answer": "24.\nA trailing zero comes from a factor of 10 = 2 × 5, and among 1–100 there are always more 2s than 5s, so the count of 5s is the limiting factor.\nMultiples of 5 contribute one 5 each: 100 ÷ 5 = 20.\nMultiples of 25 (25, 50, 75, 100) contribute one extra 5 each: 100 ÷ 25 = 4.\n125 > 100, so there are no further factors.\nTotal = 20 + 4 = 24 trailing zeros."
+};
+
+const WORD_PUZZLE = {
+  "type": "Connections",
+  "title": "Compound Interest",
+  "how": "Each group's four words all pair with the SAME hidden word to make everyday compounds (like BRIEF → briefcase). Find the four partner words.",
+  "question": "Sort these 16 words into four groups of four. In each group, all four words attach to the same hidden word to form common compounds.\n\nTAROT · FOOT · BRIEF · WORK\nPOST · BASE · PILLOW · WOOD\nSCORE · ODD · STAIR · MAN\nREPORT · EYE · BOOK · SIDE",
+  "answer": "Four hidden partner words:\n\nCASE — BRIEFcase, STAIRcase, BOOKcase, PILLOWcase\nCARD — TAROT card, POST card, SCOREcard, REPORT card\nFIRE — FIREwork, FIREman, FIREside, FIREwood\nBALL — BASEball, FOOTball, EYEball, ODDball\n\nWatch-out: BASE tempts 'base case', but baseball is the only fit that leaves every group with exactly four."
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function renderWordPuzzle(){
+  let h='<div class="sec-title">🔤 Word Puzzle of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#16a085,transparent)"></div>';
+  h+='<div class="wpuzzle-box"><span class="wptype">'+WORD_PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+WORD_PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+WORD_PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+WORD_PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this,\'wpans\')">Show Answer</button>';
+  h+='<div class="answer" id="wpans"><span class="alabel">Answer</span>'+WORD_PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn,ansId){var a=document.getElementById(ansId||'ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else if(sec.custom==="wpuzzle"){div.innerHTML=renderWordPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>

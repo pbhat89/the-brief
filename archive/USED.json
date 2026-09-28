@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-07-30",
-      "topic_key": "ketchup",
-      "text": "Ketchup was once sold as medicine in the 1830s."
-    },
-    {
       "date": "2026-07-31",
       "topic_key": "point nemo",
       "text": "Point Nemo, the ocean's most remote spot, is so far from land that passing ISS astronauts are often the nearest humans."
@@ -254,14 +249,14 @@
       "date": "2026-09-28",
       "topic_key": "run island",
       "text": "Under the 1667 Treaty of Breda the Dutch kept the tiny nutmeg island of Run and handed Manhattan to England."
+    },
+    {
+      "date": "2026-09-29",
+      "topic_key": "mpemba effect",
+      "text": "Hot water can sometimes freeze faster than cold (the Mpemba effect)"
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-08-29",
-      "type": "logic",
-      "title_key": "all-labels-are-wrong"
-    },
     {
       "date": "2026-08-30",
       "type": "quantitative",
@@ -381,14 +376,14 @@
       "date": "2026-09-28",
       "type": "logic",
       "title_key": "last-to-know"
+    },
+    {
+      "date": "2026-09-29",
+      "type": "quantitative",
+      "title_key": "trailing-zeros"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-08-29",
-      "type": "grouping",
-      "title_key": "for-the-birds"
-    },
     {
       "date": "2026-08-30",
       "type": "ladder",
@@ -508,6 +503,11 @@
       "date": "2026-09-28",
       "type": "letterboxed",
       "title_key": "corner-to-corner"
+    },
+    {
+      "date": "2026-09-29",
+      "type": "grouping",
+      "title_key": "compound-interest"
     }
   ]
 }
