@@ -3171,3 +3171,36 @@ is empty until the first run.
 2026-09-29	The brain's fats are organised into 'lipizones' that reorganise during pregnancy	4823dad1	brain-lipids,lipizones,neuroscience,mouse,pregnancy
 2026-09-29	An AI model is enlisted to attack a 79-year-old geometry problem about 6D spheres	72e39339	mathematics,hopf-problem,six-dimensional-sphere,ai,proof
 2026-09-29	Mongolian fossils reclassify zhelestids, reshuffling an early branch of the mammal tree	8bce66d5	palaeontology,zhelestids,mammals,mongolia,fossils
+2026-09-30	Update: Singapore's air quality holds in the unhealthy range as Sumatra and Kalimantan fires drift smoke	6ea9dffa	singapore,nea,haze,psi,sumatra,kalimantan
+2026-09-30	Worker, 22, dies after falling from about the 12th storey at a Tanjong Rhu BTO worksite	47d0c51e	singapore,tanjong-rhu,bto,ministry-of-manpower,workplace-death
+2026-09-30	Adult bus and train card fares to rise 12 to 13 cents, the largest increase on record	1a37f6bd	singapore,public-transport-council,fares,mrt,bus
+2026-09-30	Loh Kean Yew wins Asian Games silver, Singapore's first Asiad badminton medal in 20 years	5e90db2f	singapore,loh-kean-yew,asian-games,badminton,kunlavut-vitidsarn
+2026-09-30	Update: Indian stocks break long-held support levels as a seven-week selloff erases about $250bn	211ee38e	india,nifty-50,stock-market,selloff
+2026-09-30	Reliance and Nayara ration fuel sales as crude near $107 squeezes retail margins	125a5a7f	india,reliance,nayara-energy,fuel,oil
+2026-09-30	Noel Tata warns a Tata Sons listing could weaken the group's role as a backstop	06caa977	india,noel-tata,tata-sons,ipo,boardroom
+2026-09-30	Essar-linked Mesabi Metallics to build a $15bn Iowa steel plant, billed as the largest in US history	ed9f067b	india,essar,mesabi-metallics,steel,iowa
+2026-09-30	Update: PM Burnham vows to bring water, energy and housing under greater public control	f47a9cc9	uk,andy-burnham,labour,public-ownership,utilities
+2026-09-30	Burnham says he plans to scrap the state pension triple lock	e2769c5e	uk,burnham,pension,triple-lock,labour
+2026-09-30	Burnham launches a commission to review Britain's electoral system	2954fabb	uk,burnham,electoral-reform,voting-system,labour
+2026-09-30	UK gilts rally as 10-year yields fall about seven basis points on retreating energy prices	8e652191	uk,gilts,yields,john-healey,budget
+2026-09-30	Israeli air strike kills senior Hamas commander Izz al-Din al-Beik in northern Gaza	7377416d	global,israel,hamas,izz-al-din-al-beik,gaza
+2026-09-30	Last US troops leave Iraq, ending a presence that began with the 2003 invasion	530d22a6	global,united-states,iraq,isis,withdrawal
+2026-09-30	Russia hits Kyiv with jet-powered drones, striking the National Academy of Sciences	f2272c9c	global,russia,ukraine,kyiv,drones
+2026-09-30	Iranians stockpile food and medicine as fears grow of renewed US strikes	fd6599c1	global,iran,united-states,rial,blockade
+2026-09-30	AMD agrees to buy Fei-Fei Li's World Labs for $8.2bn in its second-biggest deal	490003b8	tech,amd,world-labs,fei-fei-li,acquisition
+2026-09-30	Update: Anthropic's IPO prospectus targets a $2tn valuation and warns of catastrophic AI risks	33ccacea	tech,anthropic,ipo,valuation,ai-risk
+2026-09-30	OpenAI unveils Dots, an always-on AI agent, and a shared ChatGPT workspace at Dev Day	424e9796	tech,openai,dots,chatgpt,dev-day
+2026-09-30	Meta expands its AI agent Muse to small businesses with Shopify, Slack and Dropbox links	d93b0e33	tech,meta,muse,ai-agent,small-business
+2026-09-30	EliseAI raises $350m at a $4bn valuation, doubling its worth in a year	cdfe0d48	tech,eliseai,funding,andreessen-horowitz,bessemer
+2026-09-30	Gold rebounds nearly 1% to about $4,150 after a 4% tumble as Treasuries steady	eceb40f2	business,gold,treasuries,yields,commodities
+2026-09-30	Piper Sandler in talks to acquire boutique advisory Perella Weinberg	5462a418	business,piper-sandler,perella-weinberg,m-and-a,investment-banking
+2026-09-30	Update: Paramount Skydance's bond sale draws $109bn in orders for the Warner Bros deal	98ef63ca	business,paramount-skydance,warner-bros-discovery,bonds,merger
+2026-09-30	Update: Oil falls toward $104 as Saudi Arabia resumes flows through a pipeline bypassing Hormuz	62836428	business,oil,brent,saudi-arabia,hormuz
+2026-09-30	🎾 Novak Djokovic returns to Beijing for the first time in 11 years as the China Open begins	600239f6	sports,novak-djokovic,china-open,beijing,tennis
+2026-09-30	🎾 Defending champion Jannik Sinner withdraws from the China Open with a knee injury	90d9d6be	sports,jannik-sinner,china-open,injury,tennis
+2026-09-30	🏏 India to meet Sri Lanka in the Asian Games men's cricket semi-finals	26dc89b6	sports,india,sri-lanka,asian-games,cricket
+2026-09-30	🏎️ Antonelli leads by 66 points as F1's title race heads to the Singapore night race next	28e0668b	sports,formula-1,kimi-antonelli,george-russell,singapore-grand-prix
+2026-09-30	James Webb telescope finds water surviving near the Milky Way's central black hole	9f4a9bef	misc,james-webb,black-hole,water,milky-way
+2026-09-30	A rich trove of fossils and tools in China reframes the mysterious Denisovans	826c1a22	misc,denisovans,bianfu-cave,china,human-evolution
+2026-09-30	Mars's 'coral reef' rock layers reveal a climate that cycled over millions of years	4fa82353	misc,mars,arabia-terra,climate,geology
+2026-09-30	Drug firms' secret protein data help an AI model outperform AlphaFold-style rivals	c8325a13	misc,alphafold,protein-structure,ai,drug-discovery

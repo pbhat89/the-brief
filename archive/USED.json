@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-07-31",
-      "topic_key": "point nemo",
-      "text": "Point Nemo, the ocean's most remote spot, is so far from land that passing ISS astronauts are often the nearest humans."
-    },
-    {
       "date": "2026-08-01",
       "topic_key": "fax machine",
       "text": "The fax machine is older than the telephone. Alexander Bain patented a facsimile device in 1843, about 33 years before Bell patented the telephone in 1876."
@@ -254,14 +249,14 @@
       "date": "2026-09-29",
       "topic_key": "mpemba effect",
       "text": "Hot water can sometimes freeze faster than cold (the Mpemba effect)"
+    },
+    {
+      "date": "2026-09-30",
+      "topic_key": "helium",
+      "text": "Helium was discovered on the Sun before it was ever found on Earth. In 1868 astronomers Pierre Janssen and Norman Lockye"
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-08-30",
-      "type": "quantitative",
-      "title_key": "long-way-round"
-    },
     {
       "date": "2026-08-31",
       "type": "lateral",
@@ -381,14 +376,14 @@
       "date": "2026-09-29",
       "type": "quantitative",
       "title_key": "trailing-zeros"
+    },
+    {
+      "date": "2026-09-30",
+      "type": "lateral",
+      "title_key": "family-portrait"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-08-30",
-      "type": "ladder",
-      "title_key": "ascent-of-man"
-    },
     {
       "date": "2026-08-31",
       "type": "anagram",
@@ -508,6 +503,11 @@
       "date": "2026-09-29",
       "type": "grouping",
       "title_key": "compound-interest"
+    },
+    {
+      "date": "2026-09-30",
+      "type": "ladder",
+      "title_key": "heads-or-tails"
     }
   ]
 }
