@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-08-01",
-      "topic_key": "fax machine",
-      "text": "The fax machine is older than the telephone. Alexander Bain patented a facsimile device in 1843, about 33 years before Bell patented the telephone in 1876."
-    },
-    {
       "date": "2026-08-02",
       "topic_key": "pistol shrimp",
       "text": "The pistol shrimp snaps a claw so fast the collapsing bubble briefly nears the Sun's surface temperature and emits a flash of light."
@@ -254,14 +249,14 @@
       "date": "2026-09-30",
       "topic_key": "helium",
       "text": "Helium was discovered on the Sun before it was ever found on Earth. In 1868 astronomers Pierre Janssen and Norman Lockye"
+    },
+    {
+      "date": "2026-10-01",
+      "topic_key": "quarantine",
+      "text": "The word 'quarantine' comes from the Venetian quaranta giorni (forty days), the ship isolation period used in Black Death Venice."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-08-31",
-      "type": "lateral",
-      "title_key": "night-watchman"
-    },
     {
       "date": "2026-09-02",
       "type": "visual",
@@ -381,14 +376,14 @@
       "date": "2026-09-30",
       "type": "lateral",
       "title_key": "family-portrait"
+    },
+    {
+      "date": "2026-10-01",
+      "type": "visual",
+      "title_key": "painted-cube"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-08-31",
-      "type": "anagram",
-      "title_key": "back-to-school"
-    },
     {
       "date": "2026-09-02",
       "type": "spellingbee",
@@ -508,6 +503,11 @@
       "date": "2026-09-30",
       "type": "ladder",
       "title_key": "heads-or-tails"
+    },
+    {
+      "date": "2026-10-01",
+      "type": "anagram",
+      "title_key": "scrambled-basket"
     }
   ]
 }

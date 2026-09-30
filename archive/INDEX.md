@@ -3204,3 +3204,36 @@ is empty until the first run.
 2026-09-30	A rich trove of fossils and tools in China reframes the mysterious Denisovans	826c1a22	misc,denisovans,bianfu-cave,china,human-evolution
 2026-09-30	Mars's 'coral reef' rock layers reveal a climate that cycled over millions of years	4fa82353	misc,mars,arabia-terra,climate,geology
 2026-09-30	Drug firms' secret protein data help an AI model outperform AlphaFold-style rivals	c8325a13	misc,alphafold,protein-structure,ai,drug-discovery
+2026-10-01	Man jailed 14 weeks for slapping a four-year-old boy at a Woodlands bus stop	64325d9b	singapore, court, assault, bus-stop, sentenced
+2026-10-01	Motorist who ran a red light and dragged a pregnant woman jailed 13 months	a11da980	singapore, court, traffic, red-light, jailed
+2026-10-01	Lorry driver jailed 23 months over a crash that disabled a cabby who later died	9710643d	singapore, court, crash, lorry, jailed
+2026-10-01	Supreme Court rules out a blanket firecracker ban for Delhi-NCR before Diwali	60eebebb	supreme-court, firecrackers, delhi-ncr, diwali, ruling
+2026-10-01	Centre clears rabi crop MSPs with a 17-year-low wheat hike of Rs 25 a quintal	29100989	cabinet, msp, wheat, rabi, chouhan
+2026-10-01	India&rsquo;s 2026 monsoon ends 13% below normal, officially a drought year	5ec89f91	monsoon, drought, rainfall-deficit, el-nino, imd
+2026-10-01	Ranchi court frames money-laundering charges against Jharkhand CM Hemant Soren	957936ca	hemant-soren, pmla, jharkhand, land-case, charges-framed
+2026-10-01	Delhi High Court rejects bail for Umar Khalid and Sharjeel Imam in 2020 riots case	905046a3	delhi-high-court, umar-khalid, sharjeel-imam, uapa, bail-rejected
+2026-10-01	Independent commission finds Manchester City guilty of 114 of 115 financial charges	a76bc724	manchester-city, premier-league, financial-charges, commission, guilty
+2026-10-01	Thousands of prisoners in England and Wales begin early release to ease overcrowding	71a44d01	prisons, early-release, england-wales, overcrowding, burnham
+2026-10-01	UK economy grew 0.5% in the second quarter, revised up from 0.4%	42d473ef	uk, ons, gdp, second-quarter, revised-up
+2026-10-01	Bank of England warns of spillover risk from hedge-fund leverage in gilts	3bca9c86	bank-of-england, gilts, hedge-funds, financial-stability, warning
+2026-10-01	UK&rsquo;s &lsquo;one in, one out&rsquo; migrant returns deal with France lapses without renewal	0eb3aea8	uk, france, migrant-returns, channel, deal-lapses
+2026-10-01	Morocco&rsquo;s king appoints Fatima Ezzahra El Mansouri as first woman prime minister	dc32cb7b	morocco, el-mansouri, prime-minister, pam, appointed
+2026-10-01	Pilot stabs colleague and tries to down an Israel-bound Flydubai jet before passengers intervene	7c436d14	flydubai, pilot, stabbing, tabuk, arrested
+2026-10-01	MI5 issues first public espionage alert, naming a Chinese institute funding UK research	fc316157	mi5, china, cgtri, espionage, universities
+2026-10-01	UN Command rules North Korean mines breached the armistice; Kim Yo-jong calls it a farce	6aa817e6	un-command, north-korea, dmz, mines, kim-yo-jong
+2026-10-01	OpenAI in talks to raise over $30bn at a $1.4tn valuation	cf92c5c9	openai, funding, valuation, altman, private-round
+2026-10-01	AI hardware-design startup Flow Engineering raises $50m at a $750m valuation	d6bf59b4	flow-engineering, series-b, valor, atreides, funding
+2026-10-01	DoorDash launches a text-to-order AI agent inside Apple Messages	018d5899	doordash, ai-agent, imessage, ordering, pilot
+2026-10-01	Data-center supplier Accelevation raises $540m in a Nasdaq IPO priced below range	88174ca6	accelevation, ipo, nasdaq, data-center, accv
+2026-10-01	Micron guides to record $61.5bn revenue as AI memory demand outstrips supply	ab95448c	micron, guidance, revenue, ai-memory, data-center
+2026-10-01	China&rsquo;s factory activity returns to growth as the official PMI rises to 50.1	1005fe99	china, pmi, manufacturing, expansion, stimulus
+2026-10-01	Smart-ring maker Oura postpones its Nasdaq IPO, citing market uncertainty	cc8fc50e	oura, ipo, postponed, nasdaq, uncertainty
+2026-10-01	Dollar posts its best month since June as the euro sinks to a 16-month low	dfb0354d	dollar, euro, fed, treasury-yields, currencies
+2026-10-01	🎾 Khachanov stuns second seed Auger-Aliassime in the China Open first round	5b8364e6	khachanov, auger-aliassime, china-open, beijing, upset
+2026-10-01	🎾 Yastremska beats McNally to reach the China Open second round	f5916997	yastremska, mcnally, china-open, beijing, second-round
+2026-10-01	🏏 Gill&rsquo;s 223 and Rohit&rsquo;s 101 power India to a record 406 chase against West Indies	d6ba132e	india, west-indies, odi, gill, record-chase
+2026-10-01	🏎️ F1 heads to Singapore for a first Marina Bay sprint with Antonelli leading	657b442d	formula-1, singapore-gp, sprint, antonelli, standings
+2026-10-01	Gravitational tug-of-war in Earth&rsquo;s core is changing the length of our day	5f4a0a91	earth, inner-core, day-length, geophysics, nature
+2026-10-01	Webb spots a metal-poor galaxy cluster that may hold fingerprints of the first stars	0f031f9e	jwst, galaxy, population-iii, reionization, first-stars
+2026-10-01	Atom-smasher data hint at a phase transition from the early universe	4aedc9a6	rhic, star, quark-gluon-plasma, phase-transition, brookhaven
+2026-10-01	Retatrutide triple-agonist drug drives about 30% weight loss in a phase 3 trial	fbab6e0c	retatrutide, triple-agonist, weight-loss, phase-3, trial

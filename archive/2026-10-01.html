@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Thu, 1 October 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .wpuzzle-box{background:linear-gradient(135deg,#0e1a1a,#0d1620);border:1px solid #234a44;border-left:3px solid #16a085;padding:24px 28px;border-radius:2px}
+  .wptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#16a085;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .wpuzzle-box .puzzle-title{color:#cdeae3}
+  .wpuzzle-box .puzzle-how{color:#8fb8ac;background:#08140f;border-left-color:#1a6a5a}
+  .wpuzzle-box .puzzle-q{color:#dfeae6;font-family:'Source Sans 3',sans-serif}
+  .wpuzzle-box .answer{color:#bfe0d6}
+  .wpuzzle-box .answer .alabel{color:#16a085}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Thursday, 1 October 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Thursday, 1 October 2026 · 🔍 60 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eleven entries in this exact order:
+     id    : one of "sg" | "india" | "uk" | "geo" | "tech" | "biz" | "sports" | "misc" | "fun" | "puzzle" | "wpuzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 8 news tabs; fun/puzzle/wpuzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+
+   WORD_PUZZLE shape (separate, daily word game — NYT-style, static reveal):
+     type     : one of "Connections" | "Word Ladder" | "Anagram" | "Spelling Bee" | "Letter Boxed" | "Mini Crossword"
+     title    : short evocative name for the word puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle body; supports \n for line breaks (grids render as pre-formatted text)
+     answer   : the answer; supports \n for line breaks; appears inside its own toggle (id "wpans")
+============================================================================= */
+
+const SECTIONS = [
+  {
+    "id": "sg",
+    "title": "🇸🇬 Singapore",
+    "color": "#e74c3c",
+    "items": [
+      {
+        "headline": "Man jailed 14 weeks for slapping a four-year-old boy at a Woodlands bus stop",
+        "summary": "Muhammad Firdhaus Mokhtar was sentenced on 30 September to 14 weeks&rsquo; jail after slapping a four-year-old who had made a rude gesture at him, knocking the boy down. He pleaded guilty to voluntarily causing hurt and was ordered to pay S$170 in compensation.",
+        "source": "SCMP",
+        "url": "https://www.scmp.com/news/asia/southeast-asia/article/3369311/singapore-jails-man-slapping-preschooler-bus-stop-over-rude-gesture",
+        "date": "Sep 30",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Motorist who ran a red light and dragged a pregnant woman jailed 13 months",
+        "summary": "A 62-year-old driver was jailed for 13 months after running a red light at a pedestrian crossing, striking a pregnant woman and dragging her along the road before he stopped.",
+        "source": "Mothership",
+        "url": "https://mothership.sg/2026/09/man-red-light-hit-pregnant-woman/",
+        "date": "Sep 2026",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Lorry driver jailed 23 months over a crash that disabled a cabby who later died",
+        "summary": "A 51-year-old lorry driver was sentenced to 23 months&rsquo; jail over a collision that left a 56-year-old taxi driver permanently disabled; the cabby died about two years later.",
+        "source": "Mothership",
+        "url": "https://mothership.sg/2026/09/cabbie-disabled-after-crash-dies-lorry-driver-jailed/",
+        "date": "Sep 2026",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "india",
+    "title": "🇮🇳 India",
+    "color": "#e67e22",
+    "items": [
+      {
+        "headline": "Supreme Court rules out a blanket firecracker ban for Delhi-NCR before Diwali",
+        "summary": "A bench of Justices M.M. Sundresh and P.B. Varale said it would neither impose a total ban nor allow round-the-clock bursting, and will weigh permitting CSIR-NEERI &lsquo;green&rsquo; crackers during set hours. The matter was posted for further hearing on 15 October.",
+        "source": "The Times of India",
+        "url": "https://timesofindia.indiatimes.com/india/no-ban-but-also-not-24x7-sc-on-firecrackers-in-delhi-ncr-ahead-of-diwali/articleshow/134596895.cms",
+        "date": "Sep 30",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Centre clears rabi crop MSPs with a 17-year-low wheat hike of Rs 25 a quintal",
+        "summary": "The Cabinet set minimum support prices for six rabi crops for 2027-28, raising wheat by just Rs 25 (0.97%) to Rs 2,610 a quintal, the smallest hike since 2010-11, as part of a Rs 2.79 lakh crore package. Agriculture Minister Shivraj Singh Chouhan cited ample wheat stocks.",
+        "source": "The Indian Express",
+        "url": "https://indianexpress.com/article/india/rabi-msp-2027-28-wheat-safflower-crop-rates-10900699/",
+        "date": "Sep 30",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "India&rsquo;s 2026 monsoon ends 13% below normal, officially a drought year",
+        "summary": "The June-September southwest monsoon closed about 13% below normal, the fourth-lowest shortfall since 2001 and a level classified as drought, amid El Nino conditions. It is distinct from the recent flooding in north India and Nepal.",
+        "source": "The Times of India",
+        "url": "https://timesofindia.indiatimes.com/india/monsoon-deficit-at-13-officially-a-drought-year/articleshow/134602606.cms",
+        "date": "Oct 1",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Ranchi court frames money-laundering charges against Jharkhand CM Hemant Soren",
+        "summary": "A PMLA court framed charges against sitting Chief Minister Hemant Soren in the 8.86-acre Bargai land case; he appeared by video, pleaded not guilty and called the case baseless. The next hearing is on 30 November.",
+        "source": "The Indian Express",
+        "url": "https://indianexpress.com/article/india/hemant-soren-land-case-charges-framed-10901253/",
+        "date": "Sep 30",
+        "spectrum": {
+          "left": "A sitting tribal opposition chief minister is dragged to trial on a contested land case critics see as central-agency overreach against the INDIA bloc.",
+          "center": "A PMLA court has found a prima facie case to frame charges; Soren denies wrongdoing and the trial will test the ED&rsquo;s evidence.",
+          "right": "Due process is catching up with an alleged land-fraud accused, and holding office is no shield from prosecution."
+        },
+        "bias": null
+      },
+      {
+        "headline": "Delhi High Court rejects bail for Umar Khalid and Sharjeel Imam in 2020 riots case",
+        "summary": "The court refused bail to Umar Khalid and Sharjeel Imam in the UAPA &lsquo;larger conspiracy&rsquo; case tied to the February 2020 Delhi riots, keeping them in custody after more than five years.",
+        "source": "The Times of India",
+        "url": "https://timesofindia.indiatimes.com/india/delhi-riots-case-high-court-rejects-bail-pleas-of-umar-khalid-sharjeel-imam/articleshow/134584125.cms",
+        "date": "Sep 30",
+        "spectrum": {
+          "left": "Activists remain jailed without trial for more than five years under a stringent law critics say is used to punish dissent.",
+          "center": "The court held the UAPA conspiracy allegations serious enough to deny bail; the underlying trial is yet to conclude.",
+          "right": "The judiciary declined relief to accused the state links to a premeditated conspiracy behind the deadly riots."
+        },
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "uk",
+    "title": "🇬🇧 UK News",
+    "color": "#3949ab",
+    "items": [
+      {
+        "headline": "Independent commission finds Manchester City guilty of 114 of 115 financial charges",
+        "summary": "A Premier League independent commission found Manchester City in breach of 114 of 115 financial-rule charges covering 2009-10 to 2017-18, including sponsorship arrangements said to have inflated revenue by about &pound;900m. City said they were disappointed and are expected to appeal; sanctions are yet to be decided.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/sports/2026/9/29/man-city-guilty-of-all-serious-financial-breach-charges-premier-league",
+        "date": "Sep 29",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Thousands of prisoners in England and Wales begin early release to ease overcrowding",
+        "summary": "Under the Sentencing Act 2026, inmates on standard determinate sentences started being freed as early as a third of the way through their terms, with up to 5,000 affected. PM Andy Burnham excluded manslaughter, death-by-dangerous-driving and some sex offenders after a public backlash.",
+        "source": "CNN",
+        "url": "https://www.cnn.com/2026/09/30/uk/uk-british-prisons-overcrowding-intl",
+        "date": "Sep 30",
+        "spectrum": {
+          "left": "A necessary emergency fix to a jail crisis inherited after years of under-investment in prisons and probation.",
+          "center": "Overcrowding left little option, but releasing thousands without probation capacity risks reoffending and public safety.",
+          "right": "Freeing up to 5,000 prisoners early is soft on crime and betrays victims; the state should build capacity, not cut sentences."
+        },
+        "bias": null
+      },
+      {
+        "headline": "UK economy grew 0.5% in the second quarter, revised up from 0.4%",
+        "summary": "The Office for National Statistics revised April-June GDP growth up to 0.5% from an initial 0.4%, after 0.6% in the first quarter, and lifted the annual rate to 1.4%.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-09-30/uk-economy-grew-more-than-expected-in-second-quarter",
+        "date": "Sep 30",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Bank of England warns of spillover risk from hedge-fund leverage in gilts",
+        "summary": "In its Financial Stability Report the Bank of England said high hedge-fund leverage in the gilt market, alongside AI-asset and corporate-debt exposures, raised the risk of stresses crystallising across markets at once.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-09-30/bank-of-england-warns-gilt-market-faces-growing-spillover-risks",
+        "date": "Sep 30",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "UK&rsquo;s &lsquo;one in, one out&rsquo; migrant returns deal with France lapses without renewal",
+        "summary": "The pilot scheme, under which some Channel arrivals were returned to France in exchange for vetted asylum applicants, expired on 30 September with no extension agreed.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-09-30/uk-ends-migrant-returns-deal-with-france-tackling-small-boats",
+        "date": "Sep 30",
+        "spectrum": {
+          "left": "A small-scale scheme collapsing shows enforcement-first deterrence does not work; invest in safe routes and faster asylum processing.",
+          "center": "The pilot&rsquo;s limited scale capped its impact; ending it without a replacement leaves a gap in Channel-crossing policy.",
+          "right": "Another failed returns deal proves softness on illegal crossings; the government needs a genuine deterrent."
+        },
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "geo",
+    "title": "🌍 Global / Geopolitics",
+    "color": "#2980b9",
+    "items": [
+      {
+        "headline": "Morocco&rsquo;s king appoints Fatima Ezzahra El Mansouri as first woman prime minister",
+        "summary": "King Mohammed VI named Marrakesh mayor and housing minister Fatima Ezzahra El Mansouri, 50, as Morocco&rsquo;s first female prime minister after her PAM party won 97 of 395 seats in the 23 September election. She becomes the third woman to lead an Arab government and must now build a coalition.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/9/29/truly-historic-moroccos-king-appoints-first-woman-prime-minister",
+        "date": "Sep 29",
+        "spectrum": {
+          "left": "A milestone for representation, though critics note PAM is a palace-aligned party, so real power stays with the king.",
+          "center": "A historic first for Morocco and the Arab world; Mansouri now faces the practical test of building a coalition from a plurality.",
+          "right": "Evidence of steady, monarchy-led modernisation delivering reform without the instability seen elsewhere in the region."
+        },
+        "bias": null
+      },
+      {
+        "headline": "Pilot stabs colleague and tries to down an Israel-bound Flydubai jet before passengers intervene",
+        "summary": "On Flydubai flight FZ1073 from Dubai to Tel Aviv, one pilot stabbed the other and appeared to try to crash the aircraft carrying about 174 people before passengers and crew stormed the cockpit. A relief crew landed the jet at Tabuk, Saudi Arabia, which arrested the suspect.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/9/30/flydubai-flight-to-israel-diverted-to-saudi-arabia-after-emergency-alert",
+        "date": "Sep 30",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "MI5 issues first public espionage alert, naming a Chinese institute funding UK research",
+        "summary": "In its first public espionage alert MI5 said the China General Technology Research Institute is a front funding research to boost Chinese intelligence capabilities, and that more than 100 UK-linked academics had contributed to its projects. Security Minister Dan Jarvis wrote to all vice-chancellors.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/9/30/mi5-warns-uk-academics-to-cut-ties-with-chinese-group-over-alleged-spying",
+        "date": "Sep 30",
+        "spectrum": {
+          "left": "A sweeping alert risks racial profiling of Chinese-heritage researchers and could chill legitimate international collaboration.",
+          "center": "An unprecedented, targeted MI5 intervention naming a specific entity, balancing security risk against universities&rsquo; openness.",
+          "right": "Overdue proof that Beijing exploits UK universities; it vindicates demands to cut Chinese research funding and toughen enforcement."
+        },
+        "bias": null
+      },
+      {
+        "headline": "UN Command rules North Korean mines breached the armistice; Kim Yo-jong calls it a farce",
+        "summary": "The UN Command and Seoul concluded that North Korea planted mines that wounded three South Korean soldiers on 21 September, an armistice violation, and demanded an apology. Kim Yo-jong denied any crossing, called the finding a self-staged farce and threatened retaliation.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/9/30/south-korea-demands-apology-over-dmz-blasts-as-north-denies-planting-mines",
+        "date": "Sep 30",
+        "spectrum": {
+          "left": "Urges de-escalation and dialogue, warning Seoul&rsquo;s countermeasures risk a spiral neither side controls.",
+          "center": "An independently investigated armistice violation now met with a formal apology demand, raising inter-Korean tension.",
+          "right": "Fresh evidence of North Korean aggression and bad faith that justifies firmer deterrence along the border."
+        },
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "tech",
+    "title": "💻 Tech & AI",
+    "color": "#27ae60",
+    "items": [
+      {
+        "headline": "OpenAI in talks to raise over $30bn at a $1.4tn valuation",
+        "summary": "OpenAI is in early talks to raise more than $30bn in a private round valuing it near $1.4tn, a bridge after Sam Altman signalled no 2026 IPO. That would be up from $852bn in March on a revenue run-rate of about $70bn.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-09-29/openai-targets-30-billion-in-new-funding-at-1-4-trillion-value",
+        "date": "Sep 29",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "AI hardware-design startup Flow Engineering raises $50m at a $750m valuation",
+        "summary": "Flow Engineering raised a $50m Series B at a $750m valuation, co-led by Valor Equity Partners and Atreides Management with Sequoia participating. Its customers include Anduril, Rivian, Joby and GM.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-09-30/valor-atreides-bet-on-ai-hardware-venture-flow-engineering",
+        "date": "Sep 30",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "DoorDash launches a text-to-order AI agent inside Apple Messages",
+        "summary": "DoorDash unveiled an AI ordering agent that works in Apple&rsquo;s Messages app, matching phone numbers to profiles to reorder favourites and check out with stored payment. It is live in an iOS pilot with 20,000 US users.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-09-30/doordash-unveils-text-to-order-ai-agent-that-works-with-apple-s-imessage",
+        "date": "Sep 30",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Data-center supplier Accelevation raises $540m in a Nasdaq IPO priced below range",
+        "summary": "Accelevation and selling holders raised $540m, selling 30 million shares at $18 each, below the $20-24 range; the stock opened at $17.55, valuing the data-center infrastructure firm (ticker ACCV) at about $3.9bn.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-09-30/ai-infrastructure-firm-accelevation-edges-down-2-5-after-ipo",
+        "date": "Sep 30",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "biz",
+    "title": "📈 Business & Markets",
+    "color": "#8e44ad",
+    "items": [
+      {
+        "headline": "Micron guides to record $61.5bn revenue as AI memory demand outstrips supply",
+        "summary": "Micron forecast fiscal first-quarter revenue of about $61.5bn and adjusted earnings near $38.15 a share, well above consensus of $57.0bn, citing data-center demand that outstripped supply.",
+        "source": "CNBC",
+        "url": "https://www.cnbc.com/2026/09/30/micron-mu-q4-earnings-report-2026.html",
+        "date": "Sep 30",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "China&rsquo;s factory activity returns to growth as the official PMI rises to 50.1",
+        "summary": "China&rsquo;s official manufacturing PMI rose to 50.1 in September from 49.8 in August, the first expansion since June, while the non-manufacturing gauge climbed to 50.2 as Beijing rolled out fresh stimulus.",
+        "source": "CNBC",
+        "url": "https://www.cnbc.com/2026/09/30/china-manufacturing-exports-capacity-economy-.html",
+        "date": "Sep 30",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Smart-ring maker Oura postpones its Nasdaq IPO, citing market uncertainty",
+        "summary": "Oura shelved an IPO launched on 21 September that sought to raise up to $2.2bn, blaming market uncertainty after some investors balked at the target valuation amid a bond selloff.",
+        "source": "CNBC",
+        "url": "https://www.cnbc.com/2026/09/29/smart-ring-maker-oura-postpones-ipo-due-to-market-uncertainty.html",
+        "date": "Sep 29",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Dollar posts its best month since June as the euro sinks to a 16-month low",
+        "summary": "The Bloomberg Dollar Spot Index rose about 1.9% in September on rising Fed-hike bets and higher Treasury yields, while the euro fell as much as 0.5% to $1.1312, its weakest since May 2025.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-09-30/dollar-powers-to-best-month-since-june-on-fed-s-inflation-fight",
+        "date": "Sep 30",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "sports",
+    "title": "🎾🏏🏎️ Sports",
+    "color": "#c0392b",
+    "items": [
+      {
+        "headline": "🎾 Khachanov stuns second seed Auger-Aliassime in the China Open first round",
+        "summary": "Unseeded Karen Khachanov beat second seed Felix Auger-Aliassime 6-3, 6-3 in the Beijing first round, his second win over the Canadian in under a month and his 18th career top-10 victory.",
+        "source": "ATP Tour",
+        "url": "https://www.atptour.com/en/news/khachanov-auger-aliassime-beijing-2026-wednesday",
+        "date": "Sep 30",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "🎾 Yastremska beats McNally to reach the China Open second round",
+        "summary": "Dayana Yastremska defeated Caty McNally 6-3, 6-4 in the Beijing WTA 1000 first round to improve to 3-0 in their head-to-head, in a draw led by world No. 1 Elena Rybakina.",
+        "source": "WTA",
+        "url": "https://www.wtatennis.com/videos/4584061/yastremska-improves-to-3-0-against-mcnally-with-china-open-win",
+        "date": "Sep 30",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "🏏 Gill&rsquo;s 223 and Rohit&rsquo;s 101 power India to a record 406 chase against West Indies",
+        "summary": "India chased down 406 in 43.3 overs to win the Guwahati second ODI by eight wickets and take an unassailable 2-0 series lead. Shubman Gill made an unbeaten 223, the fastest ODI double century, and Rohit Sharma 101 as the pair put on 255; it was the second-highest successful chase in ODI history.",
+        "source": "ESPNcricinfo",
+        "url": "https://www.espncricinfo.com/series/west-indies-in-india-2026-27-1529215/india-vs-west-indies-2nd-odi-1529228/full-scorecard",
+        "date": "Sep 30",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "🏎️ F1 heads to Singapore for a first Marina Bay sprint with Antonelli leading",
+        "summary": "Formula 1 returns at the Singapore Grand Prix on 9-11 October, run for the first time as a sprint weekend at the Marina Bay street circuit. Mercedes&rsquo; Kimi Antonelli leads teammate George Russell by 66 points, 302 to 236, in the title race.",
+        "source": "Formula1.com",
+        "url": "https://www.formula1.com/en/racing/2026/singapore",
+        "date": "Oct 1",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "misc",
+    "title": "🔬 Other Miscellaneous News",
+    "color": "#1abc9c",
+    "items": [
+      {
+        "headline": "Gravitational tug-of-war in Earth&rsquo;s core is changing the length of our day",
+        "summary": "A Nature study attributes the decades-long, few-millisecond swings in the length of Earth&rsquo;s day to a gravitational tug-of-war between the solid inner core and the mantle, which makes the inner core slowly deform and wobble on roughly ten-year timescales.",
+        "source": "Nature",
+        "url": "https://www.nature.com/articles/s41586-026-10999-2",
+        "date": "Oct 1",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Webb spots a metal-poor galaxy cluster that may hold fingerprints of the first stars",
+        "summary": "Using the James Webb Space Telescope, astronomers found an overdensity of 17 galaxies with a metallicity about 3% of the Sun&rsquo;s near a gas cloud at redshift 5.945, whose excess carbon and silicon matches the expected signature of the universe&rsquo;s first, Population III, stars.",
+        "source": "Nature",
+        "url": "https://www.nature.com/articles/s41550-026-02993-5",
+        "date": "Sep 29",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Atom-smasher data hint at a phase transition from the early universe",
+        "summary": "Physicists at Brookhaven&rsquo;s STAR experiment reported an unexpected dip in fluctuations while colliding gold ions to re-create the big bang&rsquo;s quark-gluon plasma, a possible sign of a long-sought phase transition at some of the densest nuclear matter ever studied.",
+        "source": "Scientific American",
+        "url": "https://www.scientificamerican.com/article/surprising-result-seen-in-primordial-matter-inside-atom-smasher/",
+        "date": "Sep 2026",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Retatrutide triple-agonist drug drives about 30% weight loss in a phase 3 trial",
+        "summary": "A phase 3 trial of the triple-hormone agonist retatrutide reported average weight loss of roughly 30% of body weight, around 70 pounds, over 80 weeks, with about a third of participants reporting nausea. It is the first such triple agonist to reach phase 3.",
+        "source": "Scientific American",
+        "url": "https://www.scientificamerican.com/article/blockbuster-retatrutide-trial-signals-a-new-high-water-mark-for-weight-loss-drugs/",
+        "date": "Sep 2026",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "fun",
+    "title": "✦ Fun Fact",
+    "color": "#27ae60",
+    "custom": "fun"
+  },
+  {
+    "id": "puzzle",
+    "title": "🧩 Puzzle",
+    "color": "#e67e22",
+    "custom": "puzzle"
+  },
+  {
+    "id": "wpuzzle",
+    "title": "🔤 Word Puzzles",
+    "color": "#16a085",
+    "custom": "wpuzzle"
+  }
+];
+
+const FUN_FACT = {
+  "text": "The word &ldquo;quarantine&rdquo; comes from the Venetian <b>quaranta giorni</b> &mdash; forty days. During the Black Death in the 14th and 15th centuries, Venice forced arriving ships to sit isolated for 40 days before anyone could step ashore. An earlier 30-day rule, the <i>trentino</i>, was stretched to 40 once officials judged that longer was needed to be sure the plague had passed.",
+  "tag": "Category · Language &amp; History"
+};
+
+const PUZZLE = {
+  "type": "Visual",
+  "title": "Painted Cube",
+  "how": "Sort the 27 small cubes by where they sit &mdash; corner, edge, face-centre, or hidden core &mdash; and count each group.",
+  "question": "A large cube is built from 27 identical small cubes, stacked 3 &times; 3 &times; 3.\nThe entire outside surface of the large cube is painted red.\nThe large cube is then taken apart into its 27 small cubes.\nHow many of the small cubes have paint on exactly TWO of their faces?",
+  "answer": "12.\n\nSort the small cubes by position:\n&bull; 8 corner cubes &mdash; 3 painted faces each\n&bull; 12 edge cubes (the middle cube along each of the 12 edges) &mdash; exactly 2 painted faces\n&bull; 6 face-centre cubes &mdash; 1 painted face each\n&bull; 1 hidden core cube &mdash; 0 painted faces\n\nCheck: 8 + 12 + 6 + 1 = 27. The answer is the 12 edge cubes."
+};
+
+const WORD_PUZZLE = {
+  "type": "Anagram",
+  "title": "Scrambled Basket",
+  "how": "Each scramble uses every letter exactly once; the six answers share one theme.",
+  "question": "Unscramble each word. All six answers belong to the same category &mdash; name it too.\n\n1. GROANE\n2. LAPPE\n3. NABAAN\n4. PAGER\n5. CHEAP\n6. LUMP",
+  "answer": "They are all FRUIT.\n\n1. GROANE &rarr; ORANGE\n2. LAPPE &rarr; APPLE\n3. NABAAN &rarr; BANANA\n4. PAGER &rarr; GRAPE\n5. CHEAP &rarr; PEACH\n6. LUMP &rarr; PLUM"
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function renderWordPuzzle(){
+  let h='<div class="sec-title">🔤 Word Puzzle of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#16a085,transparent)"></div>';
+  h+='<div class="wpuzzle-box"><span class="wptype">'+WORD_PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+WORD_PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+WORD_PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+WORD_PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this,\'wpans\')">Show Answer</button>';
+  h+='<div class="answer" id="wpans"><span class="alabel">Answer</span>'+WORD_PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn,ansId){var a=document.getElementById(ansId||'ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else if(sec.custom==="wpuzzle"){div.innerHTML=renderWordPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>
