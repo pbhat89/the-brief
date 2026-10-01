@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-08-02",
-      "topic_key": "pistol shrimp",
-      "text": "The pistol shrimp snaps a claw so fast the collapsing bubble briefly nears the Sun's surface temperature and emits a flash of light."
-    },
-    {
       "date": "2026-08-03",
       "topic_key": "pitch drop experiment",
       "text": "The pitch-drop experiment at the University of Queensland has run since 1927; pitch looks solid but is a fluid that drips about once a decade."
@@ -254,6 +249,11 @@
       "date": "2026-10-01",
       "topic_key": "quarantine",
       "text": "The word 'quarantine' comes from the Venetian quaranta giorni (forty days), the ship isolation period used in Black Death Venice."
+    },
+    {
+      "date": "2026-10-02",
+      "topic_key": "sea otter",
+      "text": "Sea otters raft together and wrap in kelp (or hold paws) while sleeping to avoid drifting apart on the current."
     }
   ],
   "puzzle_log": [
@@ -381,6 +381,11 @@
       "date": "2026-10-01",
       "type": "visual",
       "title_key": "painted-cube"
+    },
+    {
+      "date": "2026-10-02",
+      "type": "logic",
+      "title_key": "all-labels-lie"
     }
   ],
   "word_puzzle_log": [
@@ -508,6 +513,11 @@
       "date": "2026-10-01",
       "type": "anagram",
       "title_key": "scrambled-basket"
+    },
+    {
+      "date": "2026-10-02",
+      "type": "spellingbee",
+      "title_key": "tall-order"
     }
   ]
 }

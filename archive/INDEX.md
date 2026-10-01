@@ -3237,3 +3237,38 @@ is empty until the first run.
 2026-10-01	Webb spots a metal-poor galaxy cluster that may hold fingerprints of the first stars	0f031f9e	jwst, galaxy, population-iii, reionization, first-stars
 2026-10-01	Atom-smasher data hint at a phase transition from the early universe	4aedc9a6	rhic, star, quark-gluon-plasma, phase-transition, brookhaven
 2026-10-01	Retatrutide triple-agonist drug drives about 30% weight loss in a phase 3 trial	fbab6e0c	retatrutide, triple-agonist, weight-loss, phase-3, trial
+2026-10-02	Woman jailed eight months over a dating-app ruse luring victims into rigged mahjong games	c6a93496	singapore,court,mahjong-scam,dating-app,jailed
+2026-10-02	Disruptive passenger escorted off a Singapore-bound Scoot flight, delaying it about two hours	808eadf8	singapore,scoot,flight,disruptive-passenger,tr905
+2026-10-02	Makeshift stalls openly sell illegal aphrodisiacs along a Geylang pedestrian walkway	e83c2bad	singapore,geylang,illegal-drugs,aphrodisiacs,stalls
+2026-10-02	IMDA and TikTok launch a programme to build Singapore's short-form 'microdrama' industry	297b33cb	singapore,imda,tiktok,microdrama,media
+2026-10-02	Boardroom revolt reaches Tata Trusts as members challenge chairman Noel Tata	b13cea20	india,tata-trusts,noel-tata,governance,tata-sons
+2026-10-02	India's finance ministry warns global risks could threaten strong growth and investment	7f52b34a	india,finance-ministry,growth,economy,warning
+2026-10-02	Indian firms face higher borrowing costs as short-term yields jump before the RBI meeting	2c799efc	india,rbi,bond-yields,borrowing-costs,nifty
+2026-10-02	Congress and a Gen-Z 'Cockroach' movement call nationwide protests demanding the election chief quit	e1e30bff	india,cockroach-movement,congress,election-commission,gyanesh-kumar
+2026-10-02	UK 30-year borrowing cost hits 6%, its highest since 1998, as debt fears mount	117cf01b	uk,gilts,30-year-yield,john-healey,budget
+2026-10-02	Soaring fuel prices hand the chancellor a 4bn pound windfall ahead of the Budget	852ba24b	uk,fuel-tax,windfall,john-healey,budget
+2026-10-02	Labour enjoys a 'Burnham bounce' as polls narrow the gap with Reform UK	6fc05563	uk,andy-burnham,labour,reform-uk,poll
+2026-10-02	Burnham unveils a Water Bill to repeal the Thatcher-era ban on public ownership	ed2fe827	uk,water-bill,andy-burnham,public-ownership,labour-conference
+2026-10-02	Putin rules out a Ukraine ceasefire and warns of 'all weapons' over Kaliningrad	38c68fb2	russia,putin,ukraine,kaliningrad,nato
+2026-10-02	French school and university protests spread, with about 625 detained and 83 officers injured	3e8e128e	france,protests,lecornu,schools,austerity
+2026-10-02	Pentagon says the US troop withdrawal from Iraq is complete after a 12-year campaign	280443cd	united-states,iraq,pentagon,troop-withdrawal,isil
+2026-10-02	Gunmen kill seven on a bus in Syria as a pipeline blast knocks three power plants offline	b91ad684	syria,homs,bus-attack,pipeline,power-plants
+2026-10-02	CNN investigation finds Kushner firm holds a large stake in an Israeli military-linked company	f45626e6	united-states,jared-kushner,israel,investment,conflict-of-interest
+2026-10-02	AI voice startup ElevenLabs doubles its valuation to $22 billion in an employee share sale	bb0c6b39	elevenlabs,valuation,tender-offer,ai-voice,funding
+2026-10-02	Google releases Gemini 4 Argon, pitched as its most powerful model for cyber defence	3492d736	google,gemini-4-argon,ai-model,cybersecurity,alphabet
+2026-10-02	Mandiant founder Kevin Mandia's 'agent swarm' security startup Armadin raises $255m	851a1ea3	armadin,kevin-mandia,funding,cybersecurity,ai-agents
+2026-10-02	Fervo Energy brings the first enhanced geothermal power to the grid, built in 23 months	3507f038	fervo-energy,geothermal,cape-station,clean-energy,google
+2026-10-02	Satlyt raises $8 million to run AI computing workloads directly aboard satellites	5b52f982	satlyt,seed-round,satellites,ai-compute,space
+2026-10-02	S&P 500 edges higher to start October as Treasury yields retreat from multi-year highs	51509ede	sp-500,nasdaq,treasury-yields,markets,wall-street
+2026-10-02	Accenture posts its best day ever after an earnings beat and record AI bookings	e3df3b9a	accenture,earnings,ai-bookings,stock,dividend
+2026-10-02	Nike sales fall 4% as China revenue drops 26% and a restructuring looms	45b20a60	nike,earnings,china,restructuring,layoffs
+2026-10-02	Oil rises for a third day as Middle East tensions threaten to escalate	37fb334f	oil,wti,brent,middle-east,markets
+2026-10-02	Global dealmakers chase a $5 trillion M&A record despite a slower third quarter	954b286f	mergers-acquisitions,dealmaking,record,markets,finance
+2026-10-02	F1 returns to Sepang for the Bahrain Grand Prix in Malaysia, its first race there since 2017	c351f76d	formula-1,bahrain-gp,sepang,malaysia,race-weekend
+2026-10-02	Russell says the F1 title pressure is all on Antonelli as Mercedes eye a Sepang upgrade	52fdc506	formula-1,george-russell,kimi-antonelli,mercedes,title-race
+2026-10-02	Djokovic beats Borges for his first win since Wimbledon, improving to 30-0 in Beijing	d52c9dde	tennis,novak-djokovic,nuno-borges,china-open,beijing
+2026-10-02	India thrash Sri Lanka by 124 runs to set up an Asian Games gold-medal final with Pakistan	13a2eab3	cricket,india,sri-lanka,asian-games,pakistan-final
+2026-10-02	NASA's SpaceX Crew-13 makes the fastest crewed US trip to the space station	8493ee8c	nasa,spacex,crew-13,iss,fastest-docking
+2026-10-02	Quantum simulator confirms a 40-year-old physics prediction using trapped atoms	6a3109aa	physics,quantum-simulator,caltech,conformal-field-theory,atoms
+2026-10-02	Scientists develop a way to watermark AI-designed proteins so labs can trace their origin	833ab5c4	biology,ai-proteins,watermarking,biosecurity,provenance
+2026-10-02	Fossil study finds a dinosaur group evolved flight independently from the birds' line	924d3696	palaeontology,dinosaurs,norellraptor,flight-evolution,fossil
