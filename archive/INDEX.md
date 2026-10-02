@@ -3272,3 +3272,34 @@ is empty until the first run.
 2026-10-02	Quantum simulator confirms a 40-year-old physics prediction using trapped atoms	6a3109aa	physics,quantum-simulator,caltech,conformal-field-theory,atoms
 2026-10-02	Scientists develop a way to watermark AI-designed proteins so labs can trace their origin	833ab5c4	biology,ai-proteins,watermarking,biosecurity,provenance
 2026-10-02	Fossil study finds a dinosaur group evolved flight independently from the birds' line	924d3696	palaeontology,dinosaurs,norellraptor,flight-evolution,fossil
+2026-10-03	Muay Thai fighter, 24, who died after a charity bout donates organs to save four lives	348e522c	singapore,muay-thai,damian-ong,organ-donation,death
+2026-10-03	SGX to cut board lot sizes, making blue-chip stocks far cheaper to buy from 5 October	dc1f0757	singapore,sgx,board-lot,retail-investors,stocks
+2026-10-03	Hair studio caught buying fake reviews says staff acted on their own to earn incentives	9196ad01	singapore,fake-reviews,cccs,hair-studio,consumer
+2026-10-03	Police appeal for information on a 15-year-old girl missing since late September in Pasir Ris	2c368a41	singapore,police,missing-girl,pasir-ris,appeal
+2026-10-03	Update: Police detain protesters as the 'Cockroach' movement takes its voter-roll fight to Delhi and Mumbai	a5f33646	india,cockroach-movement,election-commission,gyanesh-kumar,protests
+2026-10-03	US says a trade deal with India is not imminent after a Modi-Trump call	72a094fa	india,united-states,trade-deal,greer,tariffs
+2026-10-03	Jaishankar delivers a blunt critique of the US over terrorism, Pakistan, and trade	b1b28f06	india,jaishankar,united-states,pakistan,trade
+2026-10-03	Indian stocks slide to their lowest since March as a global bond rout and high oil weigh	3e7a7fd5	india,nifty,stocks,bond-rout,rbi
+2026-10-03	Two Iranian men charged over an alleged Yom Kippur attack plot on Manchester's Jewish community	fb35704b	uk,manchester,iran,terror-plot,charges
+2026-10-03	Burnham says a referendum on rejoining the EU is 'possible' in a future manifesto	56111d2c	uk,burnham,brexit,eu-referendum,manifesto
+2026-10-03	UK gilts rebound and the pound firms as the global bond sell-off eases	6ada35b8	uk,gilts,pound,bond-selloff,yields
+2026-10-03	Pakistani air strikes in Afghanistan kill civilians as border tensions flare	97efc7bf	pakistan,afghanistan,air-strikes,ttp,border
+2026-10-03	Eritrea severs diplomatic ties with Ethiopia as fears of a regional war grow	e0765ad5	eritrea,ethiopia,diplomatic-ties,horn-of-africa,embassy
+2026-10-03	Avalanche kills at least 15 expedition workers at a Himalayan base camp in Nepal	544bc711	nepal,avalanche,himlung-himal,expedition-workers,manang
+2026-10-03	US to send a third aircraft carrier toward Iran in its biggest regional buildup since 2003	11600811	united-states,iran,aircraft-carrier,theodore-roosevelt,military-buildup
+2026-10-03	Amazon unveils the Kindle Click, a $35 page-turning remote, with a redesigned e-reader line	a3214358	amazon,kindle-click,e-reader,remote,launch
+2026-10-03	Amazon seeks to move about $8 billion of Nvidia chips off its balance sheet	0dcdd592	amazon,nvidia,chips,special-purpose-vehicle,data-centres
+2026-10-03	SoftBank completes its final $10 billion payment in a $30 billion OpenAI investment	273acc9f	softbank,openai,nvidia,investment,stake
+2026-10-03	OpenAI and Synopsys team up on an AI model built to design computer chips	be8384fb	openai,synopsys,chip-design,gpt-synopsys,ai-model
+2026-10-03	US hiring stalls as the economy adds just 29,000 jobs and unemployment rises to 4.2%	170bd301	united-states,jobs-report,unemployment,federal-reserve,payrolls
+2026-10-03	Stocks rise and the Nasdaq hits a record as Nvidia leads a tech rally	ad167aa4	sp-500,nasdaq,nvidia,stocks,record
+2026-10-03	Tesla delivers 486,532 vehicles in the third quarter, beating expectations	60ffed96	tesla,deliveries,third-quarter,vehicles,earnings
+2026-10-03	Oil slips as the G7 prepares to release up to 100 million barrels of diesel and crude	1c6b50aa	oil,g7,diesel,brent,reserves
+2026-10-03	Verstappen edges Russell to top opening practice as F1 returns to Sepang	1e34bfdc	formula-1,verstappen,russell,sepang,practice
+2026-10-03	Leclerc tops second practice at Sepang ahead of Hadjar and Norris	e48608ef	formula-1,leclerc,hadjar,norris,practice
+2026-10-03	Djokovic rallies past Bu to reach the China Open quarterfinals and stay 31-0 in Beijing	28c8993a	tennis,djokovic,bu-yunchaokete,china-open,beijing
+2026-10-03	Snigur stuns 14th seed Paolini in a Beijing upset as qualifiers advance	7f21ad61	tennis,snigur,paolini,china-open,upset
+2026-10-03	Landmark genome study rewrites the bat family tree and traces their origin to Europe	01a5df86	bats,genome,nature,europe,evolution
+2026-10-03	Google launches four AI chips into orbit to test data centres in space	b7a3015e	google,project-suncatcher,tpu,space,data-centre
+2026-10-03	Study finds Earth's whole crust has rolled over at least four times since the dinosaurs	c83f46c6	earth,true-polar-wander,crust,science,domeier
+2026-10-03	NASA launches three small satellites to test new propulsion and inspect dead spacecraft	beb0c506	nasa,cubesats,propulsion,sprite,satellites
