@@ -3303,3 +3303,36 @@ is empty until the first run.
 2026-10-03	Google launches four AI chips into orbit to test data centres in space	b7a3015e	google,project-suncatcher,tpu,space,data-centre
 2026-10-03	Study finds Earth's whole crust has rolled over at least four times since the dinosaurs	c83f46c6	earth,true-polar-wander,crust,science,domeier
 2026-10-03	NASA launches three small satellites to test new propulsion and inspect dead spacecraft	beb0c506	nasa,cubesats,propulsion,sprite,satellites
+2026-10-04	JB&ndash;Singapore RTS Link passenger service pushed back to February 2027	b683d47a	rts link,johor bahru,woodlands north,jeffrey siow,delayed
+2026-10-04	Sengkang&ndash;Punggol LRT inner loop resumes full service on 4 October, two weeks early	abd8a770	lta,sengkang-punggol lrt,sun xueling,resume,early
+2026-10-04	Man, 24, jailed and caned for sexually assaulting and filming an intoxicated friend	1b7cf4d0	singapore,court,sexual-assault,caning,jailed
+2026-10-04	President Murmu assents to Gujarat Uniform Civil Code, India&rsquo;s second UCC state	b2b461e0	gujarat,uniform civil code,droupadi murmu,uttarakhand,assent
+2026-10-04	Boiler explosion at an Andhra Pradesh pharma factory near Sri City kills at least four	62b73d48	sri city,tirupati,andhra pradesh,til healthcare,boiler blast
+2026-10-04	Drug kingpin Navpreet Singh deported from T&uuml;rkiye and brought back to India	6078de39	navpreet singh,amit shah,turkiye,cbi,deported
+2026-10-04	India&rsquo;s manufacturing PMI hits a seven-month high in September on strong demand	9428c349	hsbc india pmi,manufacturing,september,exports,hiring
+2026-10-04	Man accused of killing Ann Widdecombe charged with a terror plot against Farage	94a9910e	joshua kerry,nigel farage,ann widdecombe,reform uk,terror charge
+2026-10-04	Burnham orders officials to close a multi-billion-pound hole in his care plan	56b4f60b	andy burnham,national care service,treasury,triple lock,social care
+2026-10-04	City of London fears a windfall tax on domestic banks in the autumn budget	34567c07	john healey,city of london,windfall tax,uk finance,autumn budget
+2026-10-04	UK house prices fall at their sharpest pace since May, Nationwide says	48cb7188	nationwide,house prices,mortgage rates,housing,september
+2026-10-04	Brazil votes with Lula narrowly ahead of Flavio Bolsonaro in a tense first round	1915b33d	brazil,lula,flavio bolsonaro,election,trump
+2026-10-04	Ethiopian federal forces retake Mekelle airport as Tigray rebels pull back	0a9c2844	ethiopia,tigray,tplf,mekelle,abiy ahmed
+2026-10-04	Two more oil tankers struck near the Strait of Hormuz, five hit in a week	d6082b81	strait of hormuz,iran,ukmto,oil tankers,oman
+2026-10-04	North Korea fires a ballistic missile about 680 km into the Sea of Japan	b117fb3d	north korea,south korea,japan,ballistic missile,dmz
+2026-10-04	Latvia&rsquo;s governing United List wins election but falls short of a majority	6f324ee8	latvia,andris kulbergs,united list,latvia first,election
+2026-10-04	Barclays scales Anthropic&rsquo;s Claude across the bank in an efficiency push	f8cd0d8e	barclays,anthropic,claude code,banking,automation
+2026-10-04	OpenAI and Meta race to make AI agents mainstream, testing public trust	01fb8680	openai,meta,ai agents,chatgpt,trust
+2026-10-04	Anthropic targets a record mega-IPO on Nasdaq before Thanksgiving	3874c7ca	anthropic,ipo,nasdaq,valuation,ai
+2026-10-04	Cerebras sinks to a post-IPO low as it loses an OpenAI workload to Nvidia	00234a01	cerebras,nvidia,openai,ai chips,lockup
+2026-10-04	Surging Treasury yields hammer stocks outside the AI trade	7fb3fb9f	treasury yields,bonds,equities,ai stocks,rates
+2026-10-04	Gold steadies near $4,200 an ounce, well below January&rsquo;s record	d8c474b1	gold,silver,commodities,dollar,markets
+2026-10-04	onsemi sweetens its Synaptics takeover to an all-cash $5.7 billion deal	b881c5fb	onsemi,synaptics,semiconductors,m&a,deal
+2026-10-04	🏎️ Verstappen takes his first 2026 pole on F1&rsquo;s Sepang return, beating Hamilton	e5444bbc	verstappen,hamilton,sepang,red bull,pole
+2026-10-04	🏎️ Hadjar loses a front-running grid slot to a penalty as title rivals qualify deep	9b3c4740	hadjar,antonelli,grid penalty,sepang,qualifying
+2026-10-04	🎾 World No. 118 Charaeva stuns top-ranked Rybakina in Beijing	06b3b7e6	charaeva,rybakina,china open,beijing,upset
+2026-10-04	🎾 Zverev routs Shang to set up a China Open quarter-final with Djokovic	4f5b88ee	zverev,shang juncheng,djokovic,china open,quarterfinal
+2026-10-04	🎾 Medvedev eases past Struff into the China Open quarter-finals	abd28a03	medvedev,struff,cerundolo,china open,quarterfinal
+2026-10-04	🏏 India beat Pakistan by 19 runs to take Asian Games cricket gold	76df5c62	india,pakistan,abhishek sharma,asian games,gold
+2026-10-04	Chang&rsquo;e-6 farside soil yields a magnetic iron form never seen in Moon samples	357d86e4	change-6,moon,iron,magnetic field,lunar soil
+2026-10-04	NASA&rsquo;s Roman telescope takes its first coronagraph image and holds ultra-steady	99620732	roman telescope,coronagraph,nasa,exoplanets,pointing
+2026-10-04	ESA&rsquo;s SMILE mission captures the first full ultraviolet ring of the northern lights	af119944	smile,esa,aurora,ultraviolet,magnetosphere
+2026-10-04	Nanoparticle-iron therapy triggers tumour cell death in a first human trial	b62d9b86	ferroptosis,nanoparticle,iron,clinical trial,cancer

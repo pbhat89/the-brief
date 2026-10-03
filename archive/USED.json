@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-08-04",
-      "topic_key": "netherlands",
-      "text": "The Netherlands is the world's second-largest agricultural exporter by value, behind only the United States."
-    },
-    {
       "date": "2026-08-05",
       "topic_key": "guillotine",
       "text": "The last use of the guillotine in France (Hamida Djandoubi, 1977) was the same year Star Wars premiered; France abolished the death penalty in 1981."
@@ -254,6 +249,11 @@
       "date": "2026-10-03",
       "topic_key": "armillaria",
       "text": "The largest living organism on Earth is a honey fungus (Armillaria ostoyae) in Oregon's Blue Mountains, spanning about 9.6 sq km and estimated to be up to roughly 8,650 years old."
+    },
+    {
+      "date": "2026-10-04",
+      "topic_key": "point nemo",
+      "text": "Point Nemo is so remote the nearest humans are often astronauts in orbit"
     }
   ],
   "puzzle_log": [
@@ -386,6 +386,11 @@
       "date": "2026-10-03",
       "type": "quantitative",
       "title_key": "short-changed"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "lateral",
+      "title_key": "night-shift"
     }
   ],
   "word_puzzle_log": [
@@ -518,6 +523,11 @@
       "date": "2026-10-03",
       "type": "letterboxed",
       "title_key": "parchment-trail"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "grouping",
+      "title_key": "blue-bloods"
     }
   ]
 }
