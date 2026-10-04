@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-08-05",
-      "topic_key": "guillotine",
-      "text": "The last use of the guillotine in France (Hamida Djandoubi, 1977) was the same year Star Wars premiered; France abolished the death penalty in 1981."
-    },
-    {
       "date": "2026-08-06",
       "topic_key": "great emu war",
       "text": "Australia deployed the military with machine guns against emus in 1932 and effectively lost."
@@ -254,14 +249,14 @@
       "date": "2026-10-04",
       "topic_key": "point nemo",
       "text": "Point Nemo is so remote the nearest humans are often astronauts in orbit"
+    },
+    {
+      "date": "2026-10-05",
+      "topic_key": "pluto",
+      "text": "Pluto has not completed a single orbit around the Sun since its 1930 discovery; its orbital period is about 248 years."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-09-04",
-      "type": "logic",
-      "title_key": "kings-cellar"
-    },
     {
       "date": "2026-09-06",
       "type": "quantitative",
@@ -391,14 +386,14 @@
       "date": "2026-10-04",
       "type": "lateral",
       "title_key": "night-shift"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "visual",
+      "title_key": "folded-square"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-09-04",
-      "type": "letterboxed",
-      "title_key": "clear-a-path"
-    },
     {
       "date": "2026-09-06",
       "type": "grouping",
@@ -528,6 +523,11 @@
       "date": "2026-10-04",
       "type": "grouping",
       "title_key": "blue-bloods"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "ladder",
+      "title_key": "on-the-mend"
     }
   ]
 }

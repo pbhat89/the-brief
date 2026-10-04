@@ -3336,3 +3336,38 @@ is empty until the first run.
 2026-10-04	NASA&rsquo;s Roman telescope takes its first coronagraph image and holds ultra-steady	99620732	roman telescope,coronagraph,nasa,exoplanets,pointing
 2026-10-04	ESA&rsquo;s SMILE mission captures the first full ultraviolet ring of the northern lights	af119944	smile,esa,aurora,ultraviolet,magnetosphere
 2026-10-04	Nanoparticle-iron therapy triggers tumour cell death in a first human trial	b62d9b86	ferroptosis,nanoparticle,iron,clinical trial,cancer
+2026-10-05	Singapore team builds the world's most accurate atomic clock	f08b9ee8	nus,atomic clock,lutetium ion,nature,record
+2026-10-05	Singapore watchdog acts against 45 firms over fake and AI-generated reviews	1538cdb3	cccs,fake reviews,reputifly,singapore,businesses
+2026-10-05	Few bidders for luxury condos seized in Singapore's S$3b money-laundering case	dfa61068	singapore,money laundering,luxury condos,auction,gramercy park
+2026-10-05	Cyclist, 62, dies after being dragged 70m by a trailer in Defu; driver arrested	a026edf1	singapore,defu,cyclist,trailer,driver arrested
+2026-10-05	More Singaporeans go 'car-lite' as COE premiums and running costs bite	4499cbd2	singapore,coe,car-lite,driving,transport
+2026-10-05	Punjab farmers march on Delhi to oppose a 'secret' US trade deal	d16c1f00	india,punjab farmers,delhi,us trade deal,protest
+2026-10-05	Update: Protests against India's election chief enter a third day	3bceff9a	india,gyanesh kumar,election commission,atishi,protest
+2026-10-05	India's IPO market sets a September record even as stocks slide	3df63a35	india,ipo,september,nifty,markets
+2026-10-05	Foreign investors flee Indian equities as the Nifty extends its losing run	d209bf58	india,nifty,foreign outflows,rupee,rbi
+2026-10-05	UK Green Party votes to define Zionism as racism at its conference	666447b2	uk,green party,zionism,brighton,caroline lucas
+2026-10-05	Update: Manchester bomb-plot suspects remanded to the Old Bailey	43d82259	uk,manchester,terror plot,jewish community,old bailey
+2026-10-05	British-Iranian man arrested over an alleged RAF Fairford airbase plot	e9e50550	uk,raf fairford,arrest,terrorism,iran
+2026-10-05	UK energy price cap rises 4% as Burnham scraps VAT on electricity bills	aa823806	uk,energy price cap,ofgem,burnham,vat
+2026-10-05	Update: Brazil's Lula and Flavio Bolsonaro head to an October 25 runoff	2e1f0129	brazil,lula,flavio bolsonaro,election,runoff
+2026-10-05	Russia opens a winter assault on Ukraine's power grid, forcing Kyiv blackouts	d26f746f	russia,ukraine,power grid,kyiv,ukrenergo
+2026-10-05	Crew foils an apparent hijacking attempt on a Flydubai flight	795e922d	flydubai,hijacking,aviation security,hamam al-hammami,oman
+2026-10-05	Yemen's Houthis claim a missile and drone strike on Saudi Aramco	13c7204c	houthis,yemen,saudi aramco,riyadh,yahya saree
+2026-10-05	Supporters of jailed ex-PM Imran Khan launch a mass march in Pakistan	f092fe23	pakistan,imran khan,pti,march,protest
+2026-10-05	Google freezes its open-source bug-bounty programme amid a flood of AI reports	49119031	google,bug bounty,open source,ai,vulnerability
+2026-10-05	Apple to tighten macOS 'Full Disk Access' over risks from AI agents	e4f8e661	apple,macos,full disk access,ai agents,privacy
+2026-10-05	Meta opens its Muse AI hardware with an open-source 'Gadgets' project	c2fcea8b	meta,muse,gadgets,open source,hardware
+2026-10-05	Rivian posts a record quarter as its R2 SUV drives a 46% jump in deliveries	9bf6244e	rivian,r2,deliveries,ev,record quarter
+2026-10-05	Anthropic commits $100m to train 10,000 enterprise AI engineers	330b249a	anthropic,claude frontier academy,ai engineers,training,enterprise
+2026-10-05	OPEC+ holds November oil output steady, extending its October pause	0ed37581	opec,oil output,november,oil,supply
+2026-10-05	US stock futures steady near record highs as traders await Fed minutes	25351b22	us stocks,s&p 500,nasdaq,treasury yields,federal reserve
+2026-10-05	Bitcoin forms a 'golden cross' heading into the fourth quarter	c2d20466	bitcoin,golden cross,crypto,markets,technical
+2026-10-05	Japan's PM says growth, not intervention, will restore confidence in the yen	1aead14d	japan,takaichi,yen,intervention,markets
+2026-10-05	Verstappen wins a rain-hit Bahrain Grand Prix staged at Sepang	c11ae2c2	verstappen,antonelli,hamilton,sepang,f1
+2026-10-05	Djokovic beats Zverev to reach the Beijing semi-finals at 32-0	69afc148	djokovic,zverev,china open,beijing,medvedev
+2026-10-05	Bartunkova stuns second seed Sabalenka in Beijing	767e58c0	bartunkova,sabalenka,china open,beijing,upset
+2026-10-05	West Indies pull off a record chase to beat India in the third ODI	b39ed8fc	west indies,india,shai hope,kl rahul,odi
+2026-10-05	A record neutrino may be a signal from an exploding primordial black hole	c9cb7686	km3net,neutrino,primordial black hole,physics,solar system
+2026-10-05	A gut bacterial compound is linked to worse Alzheimer's pathology	0523607e	gut microbiome,imidazole propionate,alzheimers,neurodegeneration,research
+2026-10-05	AI and acoustics bring a 2,500-year-old Etruscan tomb back to life	3000f6ad	etruscan,tomb,ai,acoustics,archaeology
+2026-10-05	Scientists report a breakthrough in targeting the 'undruggable' p53 gene	bdbe761b	p53,cancer,tumour suppressor,therapy,research
