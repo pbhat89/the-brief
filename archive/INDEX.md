@@ -3371,3 +3371,35 @@ is empty until the first run.
 2026-10-05	A gut bacterial compound is linked to worse Alzheimer's pathology	0523607e	gut microbiome,imidazole propionate,alzheimers,neurodegeneration,research
 2026-10-05	AI and acoustics bring a 2,500-year-old Etruscan tomb back to life	3000f6ad	etruscan,tomb,ai,acoustics,archaeology
 2026-10-05	Scientists report a breakthrough in targeting the 'undruggable' p53 gene	bdbe761b	p53,cancer,tumour suppressor,therapy,research
+2026-10-06	Haze pushes Singapore&rsquo;s air into the unhealthy range as Sumatra fires spread	b61bd661	singapore,haze,psi,sumatra,air quality
+2026-10-06	Singapore&rsquo;s retrenchments hit their highest since 2020 as Parliament prepares to debate the data	6d01b15b	singapore,retrenchments,parliament,jobs,economy
+2026-10-06	Singapore impounds 91 deregistered vehicles in an islandwide enforcement blitz	a16885e9	singapore,lta,deregistered vehicles,police,enforcement
+2026-10-06	Singapore PR jailed for assaulting his 74-year-old mother in a row over home renovations	f3ae7b1a	singapore,court,assault,family,sentenced
+2026-10-06	Update: India&rsquo;s Supreme Court presses the Election Commission over voter-roll changes	76a3990f	india,supreme court,election commission,gyanesh kumar,voter rolls
+2026-10-06	Update: India-US trade talks have hit a &lsquo;plateau&rsquo;, Sitharaman says	64e1b35f	india,us,trade deal,sitharaman,tariffs
+2026-10-06	RBI set to weigh a rate rise as a weak rupee and costly oil squeeze India	47d824d7	india,rbi,interest rate,nifty,rupee
+2026-10-06	India&rsquo;s forex reserves post their biggest weekly drop on record	bd59c179	india,forex reserves,rbi,rupee,record
+2026-10-06	Badenoch tells Conservative conference that net zero by 2050 is &lsquo;impossible&rsquo;	eedd86db	uk,kemi badenoch,conservatives,net zero,echr
+2026-10-06	Badenoch pledges to abolish stamp duty on main homes in a tax-cutting pitch	63e60ab5	uk,badenoch,stamp duty,tax,immigration
+2026-10-06	US pulls all 12 B-1 bombers from RAF Fairford amid fears of an Iran-linked plot	bcf3ac2b	uk,raf fairford,b-1 bombers,iran,pentagon
+2026-10-06	Former Prince Andrew goes to court to quash police search warrants	9793b8a2	uk,prince andrew,thames valley police,search warrants,epstein
+2026-10-06	Yemen&rsquo;s government launches a major offensive to retake Houthi-held territory	4c11348c	yemen,houthis,saudi coalition,bab al-mandeb,offensive
+2026-10-06	Spain&rsquo;s Sanchez calls a snap election for 29 November amid a housing crisis	553c536e	spain,pedro sanchez,snap election,housing,peoples party
+2026-10-06	Update: Ethiopian federal forces seize Tigray&rsquo;s capital Mekelle	6e5c7ee4	ethiopia,tigray,tplf,mekelle,civil war
+2026-10-06	Air strike in Sudan kills a UN aid driver as regional conflicts deepen	ac05589f	sudan,wfp,air strike,civil war,aid
+2026-10-06	AI chiefs testify under oath at a landmark New York City Council hearing	f4bfcef4	nyc council,ai hearing,anthropic,openai,regulation
+2026-10-06	OpenAI will start watermarking ChatGPT text in the EU	0bcce410	openai,chatgpt,watermark,eu ai act,codex
+2026-10-06	OpenAI adds visual ads alongside ChatGPT image generation	4d9f1b74	openai,chatgpt,ads,advertising,image generation
+2026-10-06	TikTok rolls out an AI shopping assistant and one-click checkout	684cd6a1	tiktok,shopping assistant,buy direct,ecommerce,ai
+2026-10-06	Nasdaq closes at a record as AI stocks shrug off rising yields	71fb5c8c	nasdaq,sp 500,treasury yields,federal reserve,markets
+2026-10-06	SpaceX soars after its record IPO, returning Musk to trillionaire status	aa2beb54	spacex,elon musk,ipo,stock,trillionaire
+2026-10-06	Global dealmaking slips below US$1 trillion as borrowing costs bite	33fc14e9	mergers,acquisitions,lseg,dealmaking,markets
+2026-10-06	US earnings season opens with PepsiCo, Delta and Levi Strauss on deck	2ba50375	earnings,pepsico,delta,levi strauss,markets
+2026-10-06	&#127954; F1 heads to Singapore for its first sprint with Antonelli leading the title race	6e149ae8	f1,singapore grand prix,antonelli,verstappen,sprint
+2026-10-06	&#127934; Update: Djokovic reaches the China Open final after Medvedev is defaulted	cffd7658	djokovic,medvedev,china open,beijing,default
+2026-10-06	&#127934; Sinner withdraws from the Shanghai Masters as Zverev takes top seeding	084863bb	sinner,shanghai masters,zverev,alcaraz,withdrawal
+2026-10-06	&#127951; South Africa clinch the ODI series against Australia despite a dead-rubber loss	ce125298	south africa,australia,odi series,cricket,potchefstroom
+2026-10-06	Optogenetics pioneers win the 2026 Nobel Prize in Medicine	dc374b89	nobel prize,medicine,optogenetics,deisseroth,neuroscience
+2026-10-06	Scientists unveil the first microbe engineered for Mars	d947c891	pioneer labs,mars,microbe,synthetic biology,terraforming
+2026-10-06	Researchers report fresh evidence of altermagnetism, a new kind of magnetism	5c592eef	altermagnetism,magnetism,spintronics,physics,materials
+2026-10-06	Hubble data reveals a suspected second-generation planet around a dead star	1c978d89	hubble,white dwarf,exoplanet,esa,astronomy

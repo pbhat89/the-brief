@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-08-06",
-      "topic_key": "great emu war",
-      "text": "Australia deployed the military with machine guns against emus in 1932 and effectively lost."
-    },
-    {
       "date": "2026-08-07",
       "topic_key": "canary islands",
       "text": "The Canary Islands are named after dogs, not the canary bird."
@@ -254,6 +249,11 @@
       "date": "2026-10-05",
       "topic_key": "pluto",
       "text": "Pluto has not completed a single orbit around the Sun since its 1930 discovery; its orbital period is about 248 years."
+    },
+    {
+      "date": "2026-10-06",
+      "topic_key": "butterfly",
+      "text": "Butterflies taste with their feet via chemoreceptors on their tarsi."
     }
   ],
   "puzzle_log": [
@@ -391,6 +391,11 @@
       "date": "2026-10-05",
       "type": "visual",
       "title_key": "folded-square"
+    },
+    {
+      "date": "2026-10-06",
+      "type": "logic",
+      "title_key": "four-hats-and-a-wall"
     }
   ],
   "word_puzzle_log": [
@@ -528,6 +533,11 @@
       "date": "2026-10-05",
       "type": "ladder",
       "title_key": "on-the-mend"
+    },
+    {
+      "date": "2026-10-06",
+      "type": "anagram",
+      "title_key": "sounds-familiar"
     }
   ]
 }
