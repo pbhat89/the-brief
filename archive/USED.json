@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-08-07",
-      "topic_key": "canary islands",
-      "text": "The Canary Islands are named after dogs, not the canary bird."
-    },
-    {
       "date": "2026-08-08",
       "topic_key": "venus",
       "text": "A day on Venus is longer than its year: 243-day rotation vs 225-day orbit; it also spins backwards."
@@ -254,14 +249,14 @@
       "date": "2026-10-06",
       "topic_key": "butterfly",
       "text": "Butterflies taste with their feet via chemoreceptors on their tarsi."
+    },
+    {
+      "date": "2026-10-07",
+      "topic_key": "carrot",
+      "text": "Carrots were originally purple, white or yellow; the orange carrot was bred by Dutch growers, first recorded in 1721, and gets its colour from beta-carotene."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-09-06",
-      "type": "quantitative",
-      "title_key": "crossing-in-the-dark"
-    },
     {
       "date": "2026-09-07",
       "type": "lateral",
@@ -396,14 +391,14 @@
       "date": "2026-10-06",
       "type": "logic",
       "title_key": "four-hats-and-a-wall"
+    },
+    {
+      "date": "2026-10-07",
+      "type": "quantitative",
+      "title_key": "ages-across-the-street"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-09-06",
-      "type": "grouping",
-      "title_key": "mixed-company"
-    },
     {
       "date": "2026-09-07",
       "type": "ladder",
@@ -538,6 +533,11 @@
       "date": "2026-10-06",
       "type": "anagram",
       "title_key": "sounds-familiar"
+    },
+    {
+      "date": "2026-10-07",
+      "type": "spellingbee",
+      "title_key": "center-holds"
     }
   ]
 }

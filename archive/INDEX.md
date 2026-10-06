@@ -3403,3 +3403,36 @@ is empty until the first run.
 2026-10-06	Scientists unveil the first microbe engineered for Mars	d947c891	pioneer labs,mars,microbe,synthetic biology,terraforming
 2026-10-06	Researchers report fresh evidence of altermagnetism, a new kind of magnetism	5c592eef	altermagnetism,magnetism,spintronics,physics,materials
 2026-10-06	Hubble data reveals a suspected second-generation planet around a dead star	1c978d89	hubble,white dwarf,exoplanet,esa,astronomy
+2026-10-07	Eight public officers referred to police over home buys near unannounced MRT stations	fd3bf5ab	singapore, public officers, mrt, property, chan chun sing
+2026-10-07	LTA to prioritise North-South Corridor surface works to cut noise and dust by end-2027	40e235da	singapore, lta, north-south corridor, jeffrey siow, parliament
+2026-10-07	Driver jailed 12 years and nine months over 2024 Tampines collision that killed two	33ac80c3	singapore, court, tampines, traffic, sentenced
+2026-10-07	High Court dismisses S$1.7 million claim over a late businessman’s gifts to a woman	8b4879ad	singapore, high court, lawsuit, estate, gift
+2026-10-07	Update: Rahul Gandhi detained as voter-roll protests escalate across India	fcbdb4f1	india, rahul gandhi, election commission, voter rolls, protest
+2026-10-07	Update: RBI poised for its first interest-rate rise in nearly four years	5369d82c	india, rbi, interest rate, rupee, malhotra
+2026-10-07	Update: India-US trade talks stall as a 100% tariff on Russian-oil buyers looms	4bce86ee	india, us, trade deal, tariffs, russian oil
+2026-10-07	India’s Gen-Z ‘cockroach’ movement puts Modi on the defensive	7d2e9e97	india, cockroach movement, modi, protest, gen z
+2026-10-07	Badenoch pledges to abolish inheritance tax and expand childcare in a middle-class pitch	b148cbea	uk, badenoch, inheritance tax, childcare, conservatives
+2026-10-07	Badenoch names Andrew Griffith shadow chancellor to sharpen the Tory economic attack	73e46375	uk, badenoch, andrew griffith, shadow chancellor, economy
+2026-10-07	Burnham’s ‘Manchesterism’ economic vision faces an uphill battle	5a9309b3	uk, burnham, manchesterism, economy, labour
+2026-10-07	Former Prince Andrew’s bid to quash Windsor search warrants heads to the High Court	c7c6f8cd	uk, prince andrew, high court, search warrants, epstein
+2026-10-07	Israel and Hamas agree the first phase of Trump’s Gaza ceasefire plan	504e9b1d	gaza, israel, hamas, ceasefire, trump
+2026-10-07	First hostages freed as Trump heads to the Knesset and an Egypt peace summit	c65f5fed	gaza, hostages, trump, knesset, egypt summit
+2026-10-07	France hit by its biggest student protests in decades as the PM suspends classes	3153b093	france, student protests, lecornu, education, strike
+2026-10-07	Update: Saudi-led coalition confirms its first Yemen air strikes since the 2022 truce	cf706248	yemen, houthis, saudi coalition, air strikes, offensive
+2026-10-07	Reflection AI debuts Beam, an open-weight model to rival China’s at lower cost	13869ded	reflection ai, beam, open-weight, ai model, china
+2026-10-07	DeepSeek weighs doubling its funding round to as much as $15 billion	e56929fa	deepseek, funding, ai, china, investment
+2026-10-07	A 19-year-old raises $11 million for Ghost, a $3,499 computer for personal AI	f6575f01	ghost, personal ai, andreessen horowitz, hardware, startup
+2026-10-07	Nokia chief says AI data centres would be built twice as fast without chip shortages	74214bcb	nokia, ai data centers, chip shortage, infrastructure, supply
+2026-10-07	Saia unveils a chip that runs AI out of flash storage to cut power and cost	17d814fa	saia, chip, flash storage, ai, pearx
+2026-10-07	S&P 500 and Nasdaq close at fresh records as oil and yields ease	445842bb	sp 500, nasdaq, record, stocks, markets
+2026-10-07	Gold climbs toward records as bets on an October Fed rate rise fade	8eef284c	gold, federal reserve, rate hike, markets, safe haven
+2026-10-07	Oil steadies with Brent near $101 and WTI near $89	f9fd025f	oil, brent, wti, opec, prices
+2026-10-07	Traders await Fed minutes after weak September jobs trim October hike odds	86c5a450	federal reserve, fed minutes, jobs, rate hike, markets
+2026-10-07	Russell to start the Singapore GP from the back after a Bahrain engine failure	25427931	f1, george russell, singapore grand prix, mercedes, grid penalty
+2026-10-07	Update: Djokovic wins a record seventh China Open as de Minaur retires	fae69c30	djokovic, de minaur, china open, beijing, title
+2026-10-07	Shanghai Masters draw sends Zverev and Djokovic into the same half	a2a9c961	shanghai masters, zverev, djokovic, alcaraz, draw
+2026-10-07	South Africa and Australia open a three-Test series in Durban	31210fe1	south africa, australia, test series, durban, cricket
+2026-10-07	Francis Halzen wins the 2026 Nobel Prize in Physics for neutrino astronomy	41a03430	nobel prize, physics, francis halzen, icecube, neutrinos
+2026-10-07	Brain organoids grafted into mice open a new window on the human cortex	175a2f16	brain organoids, mice, cortex, neuroscience, research
+2026-10-07	A tumour-derived organoid biobank maps cancer’s genetic weak points	088811a9	cancer, organoid biobank, genes, oncology, research
+2026-10-07	Webb spots an exoplanet whose atmosphere defies current theories	f0d374eb	jwst, exoplanet, nasa, atmosphere, astronomy
