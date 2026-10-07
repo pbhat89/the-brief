@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-08-08",
-      "topic_key": "venus",
-      "text": "A day on Venus is longer than its year: 243-day rotation vs 225-day orbit; it also spins backwards."
-    },
-    {
       "date": "2026-08-09",
       "topic_key": "anechoic chamber",
       "text": "The quietest place on Earth is an anechoic chamber at about -20.35 dB, the Guinness world's quietest room."
@@ -254,14 +249,14 @@
       "date": "2026-10-07",
       "topic_key": "carrot",
       "text": "Carrots were originally purple, white or yellow; the orange carrot was bred by Dutch growers, first recorded in 1721, and gets its colour from beta-carotene."
+    },
+    {
+      "date": "2026-10-08",
+      "topic_key": "webcam",
+      "text": "The world’s first webcam was created in 1991 to watch the Trojan Room coffee pot at the University of Cambridge."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-09-07",
-      "type": "lateral",
-      "title_key": "glass-of-water"
-    },
     {
       "date": "2026-09-08",
       "type": "visual",
@@ -396,14 +391,14 @@
       "date": "2026-10-07",
       "type": "quantitative",
       "title_key": "ages-across-the-street"
+    },
+    {
+      "date": "2026-10-08",
+      "type": "lateral",
+      "title_key": "a-call-in-the-night"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-09-07",
-      "type": "ladder",
-      "title_key": "cats-and-dogs"
-    },
     {
       "date": "2026-09-08",
       "type": "anagram",
@@ -538,6 +533,11 @@
       "date": "2026-10-07",
       "type": "spellingbee",
       "title_key": "center-holds"
+    },
+    {
+      "date": "2026-10-08",
+      "type": "letterboxed",
+      "title_key": "four-sides-to-every-story"
     }
   ]
 }

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Thu, 8 October 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .wpuzzle-box{background:linear-gradient(135deg,#0e1a1a,#0d1620);border:1px solid #234a44;border-left:3px solid #16a085;padding:24px 28px;border-radius:2px}
+  .wptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#16a085;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .wpuzzle-box .puzzle-title{color:#cdeae3}
+  .wpuzzle-box .puzzle-how{color:#8fb8ac;background:#08140f;border-left-color:#1a6a5a}
+  .wpuzzle-box .puzzle-q{color:#dfeae6;font-family:'Source Sans 3',sans-serif}
+  .wpuzzle-box .answer{color:#bfe0d6}
+  .wpuzzle-box .answer .alabel{color:#16a085}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Thursday, 8 October 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Thursday, 8 October 2026 · 🔍 48 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eleven entries in this exact order:
+     id    : one of "sg" | "india" | "uk" | "geo" | "tech" | "biz" | "sports" | "misc" | "fun" | "puzzle" | "wpuzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 8 news tabs; fun/puzzle/wpuzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+
+   WORD_PUZZLE shape (separate, daily word game — NYT-style, static reveal):
+     type     : one of "Connections" | "Word Ladder" | "Anagram" | "Spelling Bee" | "Letter Boxed" | "Mini Crossword"
+     title    : short evocative name for the word puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle body; supports \n for line breaks (grids render as pre-formatted text)
+     answer   : the answer; supports \n for line breaks; appears inside its own toggle (id "wpans")
+============================================================================= */
+
+const SECTIONS = [
+  { id:"sg", title:"🇸🇬 Singapore", color:"#e74c3c", items:[
+    { headline:"Italian man jailed eight years and caning for trafficking a Singaporean woman to Dubai", summary:"Achraf Arjaouy, an Italian national, was sentenced on Oct 7 to eight years’ jail and caning under the Prevention of Human Trafficking Act for deceiving a Singaporean woman he met on Tinder into sex work in Dubai and collecting her daily earnings.", source:"Mothership", url:"https://mothership.sg/2026/10/italian-man-jailed-traffick-singaporean-woman-dubai/", date:"Oct 7",
+      spectrum:null, bias:null },
+    { headline:"Man, 32, charged with murder after a 73-year-old is fatally stabbed in Telok Blangah", summary:"Gabriel Foong Shi Cheng, 32, was charged on Oct 7 with murdering a 73-year-old man stabbed near Block 61 Telok Blangah Heights on Oct 5. A 53-year-old was also injured, and Foong was remanded for a psychiatric assessment ahead of an Oct 28 hearing.", source:"Mothership", url:"https://mothership.sg/2026/10/telok-blangah-murder-charged/", date:"Oct 7",
+      spectrum:null, bias:null },
+    { headline:"PAP MPs press for an inheritance tax and levies on owners of multiple homes", summary:"During the Oct 6 debate on the Finance (Income Taxes) Bill, PAP MPs Elysa Chen and Shawn Loh urged new taxes on owners of multiple residential properties, with Loh calling for an inheritance tax on inherited rather than earned wealth. Singapore abolished estate duty in 2008.", source:"Mothership", url:"https://mothership.sg/2026/10/no-to-hoarding-homes/", date:"Oct 6",
+      spectrum:null, bias:null },
+    { headline:"Shanmugam says no POFMA order was issued over a foreign report on death-penalty claims", summary:"Senior Minister K. Shanmugam told Parliament on Oct 7 that no POFMA correction direction was issued over an Israeli media report alleging death-penalty-related talks in Singapore, saying the public-interest threshold was not met — though a direction could still follow if circumstances change.", source:"Mothership", url:"https://mothership.sg/2026/10/pofma-israel-report-death-penalty/", date:"Oct 7",
+      spectrum:null, bias:null },
+    { headline:"Update: Singapore’s air ranks worst in the world as Indonesian haze shuts Johor schools", summary:"Singapore’s air quality hit ‘very unhealthy’ levels and ranked worst worldwide on Oct 7, according to IQAir, as cross-border haze from Indonesian fires thickened. About 200 schools and preschools in Johor’s Batu Pahat were ordered shut, days before the F1 night race.", source:"SCMP", url:"https://www.scmp.com/news/asia/southeast-asia/article/3370091/singapores-air-pollution-worst-world-haze-shuts-malaysia-schools", date:"Oct 7",
+      spectrum:null, bias:null }
+  ]},
+  { id:"india", title:"🇮🇳 India", color:"#e67e22", items:[
+    { headline:"Three killed as a multi-storey building collapses in Delhi’s Seemapuri", summary:"A residential building collapsed in northeast Delhi’s Seemapuri on Oct 7, killing three people — including a child and a pregnant woman — and injuring eight, with 11 pulled from the rubble. Authorities are examining whether recent earthquake tremors weakened the structure.", source:"The Economic Times", url:"https://economictimes.indiatimes.com/news/india/multi-storey-building-collapses-in-delhis-seemapuri-rescue-teams-deployed/articleshow/134764383.cms", date:"Oct 7",
+      spectrum:null, bias:null },
+    { headline:"Update: RBI raises its repo rate and lifts the FY27 growth forecast to 7.1%", summary:"In its Oct 7 policy, the Reserve Bank of India under Governor Sanjay Malhotra raised the repo rate, citing a weak rupee and costly oil, while simultaneously lifting its FY27 GDP growth forecast to 7.1%. It was the central bank’s first rate rise in nearly four years.", source:"The Indian Express", url:"https://indianexpress.com/article/india/rbi-monetary-policy-meeting-october-2026-live-governor-sanjay-malhotra-repo-rate-policy-stance-10908895/", date:"Oct 7",
+      spectrum:null, bias:"Coverage split sharply on tone: business desks led with the surprise growth upgrade to 7.1%, while Congress seized on the rate rise as proof the squeeze on households continues." },
+    { headline:"Andhra Pradesh declares drought across all 21 districts after a monsoon deficit", summary:"The Andhra Pradesh government declared drought in 388 mandals spanning all 21 districts for the kharif season — 283 severely affected and 105 moderately — blaming an El Nino-driven rainfall shortfall. The opposition YSRCP accused the Chandrababu Naidu government of acting too late.", source:"The Indian Express", url:"https://indianexpress.com/article/india/andhra-government-declares-drought-in-21-districts-10909939/", date:"Oct 7",
+      spectrum:null, bias:null },
+    { headline:"West Bengal set to be renamed ‘Paschim Banga’, state BJP chief says", summary:"West Bengal BJP president Samik Bhattacharya said on Oct 7 that the state will be renamed ‘Paschim Banga’ and that a Bill to effect the change is coming, reviving a long-pending push months before the 2026 assembly election.", source:"The Economic Times", url:"https://economictimes.indiatimes.com/news/politics-and-nation/west-bengal-to-be-renamed-as-paschim-banga-state-bjp-chief-samik-bhattacharya/articleshow/134774176.cms", date:"Oct 7",
+      spectrum:null, bias:null },
+    { headline:"Modi marks 25 years in elected office as world leaders send greetings", summary:"Narendra Modi completed 25 unbroken years in elected public office on Oct 7 — Gujarat chief minister from 2001, prime minister since 2014 — drawing tributes from leaders including Japan’s Sanae Takaichi, as he tied the milestone to his ‘Viksit Bharat 2047’ goal.", source:"The Economic Times", url:"https://economictimes.indiatimes.com/news/india/pm-modi-completes-25-years-in-public-office-world-leaders-extend-greetings/articleshow/134772356.cms", date:"Oct 7",
+      spectrum:{ left:"Opposition-leaning commentators cast the anniversary as a marker of increasingly centralised, personality-driven power.", center:"Mainstream papers noted the span — Gujarat CM from 2001, PM since 2014 — and the flurry of congratulations from world leaders.", right:"Supportive outlets framed it as a quarter-century of decisive leadership tied to the ‘Viksit Bharat 2047’ development goal." }, bias:null }
+  ]},
+  { id:"uk", title:"🇬🇧 UK News", color:"#3949ab", items:[
+    { headline:"Voters in Starmer’s old Holborn & St Pancras seat go to the polls", summary:"Polling opened on Oct 8 in the by-election triggered by former prime minister Keir Starmer’s resignation as an MP, with 15 candidates including Green Party leader Zack Polanski challenging Labour’s Sagal Abdi-Wali. Labour, which has held the seat since 1983, is the heavy favourite.", source:"CNN", url:"https://www.cnn.com/2026/10/07/uk/zack-polanski-green-party-parliament-intl-gbr", date:"Oct 7",
+      spectrum:null, bias:null },
+    { headline:"UK borrowing costs jump and the pound falls in a global bond sell-off", summary:"The UK 10-year gilt yield rose to about 5.45% on Oct 7 and the 30-year yield pushed back above 6% amid a worldwide bond rout driven by inflation and oil-price fears, while sterling fell about 0.6% against the dollar.", source:"Bloomberg", url:"https://www.bloomberg.com/news/live-blog/2026-10-07/ftse-100-live-pound-bonds-gilts-ai-stocks-hormuz-oil-prices-badenoch-tories-what-s-moving-uk-markets-right-now-markets-today", date:"Oct 7",
+      spectrum:null, bias:null },
+    { headline:"Reform UK clears its own aides of breaking electoral law in a donations row", summary:"Reform UK published a report on Oct 7 concluding that aides Dan Jukes and James Orr did not breach electoral law over a purported US donor, who the party says arranged more than £30,000 to fund three opinion polls without the source being disclosed.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-10-07/farage-s-reform-clears-aides-of-breaking-law-in-donations-row", date:"Oct 7",
+      spectrum:null, bias:null },
+    { headline:"Average five-year fixed mortgage rate climbs to 6% as gilt turmoil bites", summary:"Moneyfacts data cited on Oct 5 showed the average five-year fixed mortgage deal has reached 6% as elevated gilt yields push up UK borrowing costs, tightening the squeeze on households due to refinance in the months ahead.", source:"Bloomberg", url:"https://www.bloomberg.com/news/live-blog/2026-10-05/ftse-100-live-pound-bonds-gilts-pmi-data-euro-hormuz-oil-prices-what-s-moving-uk-markets-right-now-markets-today", date:"Oct 5",
+      spectrum:null, bias:null }
+  ]},
+  { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
+    { headline:"Germany arrests former spy chief August Hanning on treason and espionage charges", summary:"Federal prosecutors arrested August Hanning, who led Germany’s foreign intelligence service (BND) from 1998 to 2005, on Oct 6 on suspicion of treasonous espionage and obtaining state secrets for a foreign intelligence service. A former BND chief of staff was also detained; lawmakers called it the agency’s worst breach since the Cold War.", source:"CNN", url:"https://www.cnn.com/2026/10/06/europe/germany-former-intelligence-chief-arrested-intl", date:"Oct 6",
+      spectrum:null, bias:null },
+    { headline:"Update: Russia strikes Kyiv’s bridges and barrages Ukraine, killing at least 19", summary:"Russian forces opened a new tactic of hitting bridges over the Dnipro River to split Kyiv, then launched an overnight missile-and-drone barrage into Oct 7 that killed at least 19 civilians, including four children, across about a dozen regions. Ukraine struck Russian oil facilities in Perm, Samara, and Astrakhan in response.", source:"CNN", url:"https://www.cnn.com/2026/10/04/europe/russian-drone-kyiv-merz-ukraine", date:"Oct 7",
+      spectrum:null, bias:null },
+    { headline:"Researcher at a Russian plague lab dies of an unknown infection as the WHO watches", summary:"Darya Shipilova, a 28-year-old technician at the Irkutsk Anti-Plague Institute, fell ill at work on Sept 30 and died two days later of pneumonia of unknown origin. About 200 contacts have been monitored and the WHO calls the risk ‘undetermined’, while Russia’s health watchdog denies any lab accident or epidemic risk.", source:"CNN", url:"https://www.cnn.com/2026/10/07/world/russia-suspected-plague-case-who-intl", date:"Oct 7",
+      spectrum:null, bias:null },
+    { headline:"UN Command rules North Korea planted the DMZ mines that wounded three soldiers", summary:"A joint South Korea–UN Command investigation concluded that two landmines that maimed three South Korean soldiers on Sept 21 were planted by North Korean forces south of the Military Demarcation Line, an armistice violation. Seoul demanded an apology; Pyongyang’s Kim Yo Jong dismissed the finding as a ‘conspiratorial farce’.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/10/6/south-korea-considers-steps-to-force-north-korea-apology-for-dmz-mine-blast", date:"Oct 6",
+      spectrum:null, bias:null }
+  ]},
+  { id:"tech", title:"💻 Tech & AI", color:"#27ae60", items:[
+    { headline:"SpaceX in talks to borrow about $40 billion to buy Nvidia AI chips", summary:"SpaceX is in early talks to raise roughly $40 billion — about $10 billion in bank loans and $30 billion in investment-grade debt, with Apollo expected to lead — to fund a large Nvidia chip order for its data centres, with a close targeted for 2027.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-10-06/spacex-seeking-to-raise-40-billion-to-buy-nvidia-chips-ft-says", date:"Oct 6",
+      spectrum:null, bias:null },
+    { headline:"Schneider Electric to buy software maker PTC for $22.6 billion", summary:"Schneider Electric agreed to acquire US industrial-software firm PTC for about $22.6 billion ($205 a share, a 42% premium), its largest-ever deal, to build an industrial-AI ‘digital thread’. Schneider shares fell on the price; the deal is expected to close by the third quarter of 2027.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-10-05/schneider-electric-to-acquire-ptc-for-more-than-20-billion", date:"Oct 5",
+      spectrum:null, bias:null },
+    { headline:"Mistral launches a one-trillion-parameter ‘Large 4’ model to rival the US labs", summary:"French lab Mistral released a preview of Mistral Large 4, a multimodal mixture-of-experts model with about 1 trillion total and 49 billion active parameters, trained on 4,000 Nvidia GPUs in Europe. It is API-only for now, with open weights planned for late October.", source:"TechCrunch", url:"https://techcrunch.com/2026/10/06/mistrals-new-1t-model-aims-to-leapfrog-closed-and-open-rivals/", date:"Oct 6",
+      spectrum:null, bias:null },
+    { headline:"AI cloud provider Lambda seeks up to $4 billion as its backlog balloons", summary:"Lambda is raising up to $4 billion at a $14.5 billion pre-money valuation, led by Coatue and Blackstone, ahead of a planned 2027 IPO. An investor letter shows its backlog jumped from $15 billion in June to $50 billion in September, driven by a roughly $35 billion cloud deal with Anthropic.", source:"TechCrunch", url:"https://techcrunch.com/2026/10/06/ai-computing-startup-lambda-to-raise-4b-ahead-of-planned-ipo/", date:"Oct 6",
+      spectrum:null, bias:null },
+    { headline:"Apple and LG team up on a smart-home doorbell, lock, and thermostat", summary:"Apple is working with LG on LG-built, LG-branded smart-home devices — a wired video doorbell, a UWB auto-unlock deadbolt, a thermostat, and cameras — tied to new Apple hardware expected on Oct 13, according to Bloomberg’s Mark Gurman. The LG accessories would ship months later.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-10-06/apple-s-smart-home-push-includes-doorbell-lock-thermostat-codeveloped-with-lg", date:"Oct 6",
+      spectrum:null, bias:null }
+  ]},
+  { id:"biz", title:"📈 Business & Markets", color:"#8e44ad", items:[
+    { headline:"Paramount Skydance closes its $110 billion Warner Bros. Discovery takeover", summary:"Paramount Skydance completed its roughly $110 billion acquisition of Warner Bros. Discovery on Oct 6, one of the largest media mergers ever, after a contest with Netflix. The successor, Skydance Corp., trades on Nasdaq as SKYD under co-CEOs David Ellison and Ynon Kreiz.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-10-06/paramount-closes-warner-bros-merger-in-historic-hollywood-deal", date:"Oct 6",
+      spectrum:null, bias:null },
+    { headline:"Emera to buy Canadian Utilities in a C$14.3 billion all-stock deal", summary:"Emera agreed on Oct 6 to acquire ATCO’s Canadian Utilities in an all-stock transaction worth about C$14.3 billion, forming a utility with roughly C$72 billion in enterprise value and about six million customers — billed as the largest-ever merger of two Canadian corporations.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-10-06/emera-to-buy-canadian-utilities-in-c-14-3b-deal", date:"Oct 6",
+      spectrum:null, bias:null },
+    { headline:"Fed minutes reveal the New York Fed tapped Treasury funds to prop up the yen", summary:"Minutes of the Federal Reserve’s September meeting, released Oct 7, showed the New York Fed used US Treasury (ESF) funds rather than its own holdings in a joint intervention to support the yen in late July. The same meeting delivered the Fed’s first rate rise in more than three years.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-10-07/fed-used-treasury-funds-to-support-yen-in-joint-intervention", date:"Oct 7",
+      spectrum:null, bias:null },
+    { headline:"US stocks slip from records as Treasury yields hold near multi-decade highs", summary:"Wall Street edged back from record highs on Oct 7 after the Fed released its September minutes, with longer-dated US Treasury yields holding near their highest levels since 2002. Rate-sensitive shares led the modest pullback.", source:"CNBC", url:"https://www.cnbc.com/2026/10/06/stock-market-today-live-updates.html", date:"Oct 7",
+      spectrum:null, bias:null }
+  ]},
+  { id:"sports", title:"🎾🏏🏎️ Sports", color:"#c0392b", items:[
+    { headline:"🏎️ Audi unveils a Peranakan-pattern livery for its debut Singapore Grand Prix", summary:"Audi, racing in its first F1 season after taking over Sauber, revealed a one-off livery for the Oct 9-11 Singapore GP weekend: its titanium-grey base stays, but the rear section carries a blue traditional Peranakan pattern, to be run by Nico Hulkenberg and Gabriel Bortoleto.", source:"Formula1.com", url:"https://www.formula1.com/en/latest/article/gallery-audi-unveil-special-livery-for-singapore-grand-prix.5Z07QWFA7vVqCPC1jb6AIq", date:"Oct 7",
+      spectrum:null, bias:null },
+    { headline:"🏎️ Singapore holds its first F1 Sprint, with Pirelli bringing its softest tyres", summary:"The Singapore GP is a Sprint weekend for the first time, giving teams a single practice session before competitive running on the Marina Bay street circuit. Pirelli has nominated its three softest compounds — C3, C4, and C5 — expecting the Soft to play a bigger role.", source:"Formula1.com", url:"https://www.formula1.com/en/latest/article/its-race-week-5-storylines-were-excited-about-ahead-of-the-2026-singapore-grand-prix.1yu3dSkVOAvPULoMR9vn5Z", date:"Oct 7",
+      spectrum:null, bias:null },
+    { headline:"🎾 Elise Mertens stuns Coco Gauff to reach the China Open quarter-finals", summary:"World No. 19 Elise Mertens beat third seed Coco Gauff 6-3, 6-3 in the China Open fourth round on Oct 7, ending an 0-5 head-to-head deficit. Gauff, the 2024 Beijing champion, made 34 unforced errors; Mertens next meets Iga Swiatek.", source:"WTA Tour", url:"https://www.wtatennis.com/news/4587818/mertens-beats-gauff-for-first-time-in-six-meetings-to-make-beijing-quarters", date:"Oct 7",
+      spectrum:null, bias:null },
+    { headline:"🎾 Holger Rune loses on his comeback as Altmaier wins their Shanghai opener", summary:"World No. 67 Daniel Altmaier beat Holger Rune 1-6, 7-6(5), 6-4 in the Shanghai Masters first round on Oct 7. Rune, in only his third event since rupturing his Achilles last October, led early before fading; Altmaier next faces Ben Shelton.", source:"ATP Tour", url:"https://www.atptour.com/en/news/rune-altmaier-shanghai-2026-wednesday", date:"Oct 7",
+      spectrum:null, bias:null },
+    { headline:"🏏 Shreyas Iyer’s maiden T20I century sinks West Indies as India go 1-0 up", summary:"Shreyas Iyer hit an unbeaten 102 off 43 balls — his first T20I hundred — as India chased 172 in 14.4 overs to beat West Indies by eight wickets in the series opener at Lucknow on Oct 6. It was India’s 10th successive T20I win.", source:"ESPNcricinfo", url:"https://www.espncricinfo.com/series/west-indies-in-india-2026-27-1529215/india-vs-west-indies-1st-t20i-1529230/match-report", date:"Oct 6",
+      spectrum:null, bias:null }
+  ]},
+  { id:"misc", title:"🔬 Other Miscellaneous News", color:"#1abc9c", items:[
+    { headline:"Henri Kagan and Kenso Soai win the 2026 Nobel Prize in Chemistry", summary:"The Royal Swedish Academy of Sciences awarded the 2026 chemistry Nobel to France’s Henri B. Kagan and Japan’s Kenso Soai for discovering non-linear effects and autocatalysis in asymmetric synthesis — work on molecular ‘handedness’ that helps explain life’s preference for one mirror-image form and underpins modern drug-making. They share the 12 million kronor prize.", source:"Scientific American", url:"https://www.scientificamerican.com/article/2026-nobel-prize-in-chemistry-is-award-to-henri-kagan-and-kenso-soai-for-their-work-in-mirror-chemistry/", date:"Oct 7",
+      spectrum:null, bias:null },
+    { headline:"Webb captures signs of planet-shattering collisions around young stars", summary:"Astronomers using the James Webb Space Telescope studied 21 ‘extreme debris disks’ and found silica-rich dust pointing to high-energy collisions between Mars-sized bodies — the kind of impact thought to have formed Earth’s Moon. The work offers a rare look at the violent late stages of planet formation.", source:"NASA", url:"https://science.nasa.gov/missions/webb/nasas-webb-provides-crash-course-on-planet-shattering-collisions/", date:"Oct 1",
+      spectrum:null, bias:null },
+    { headline:"A failing cellular ‘clean-up’ system is linked to the build-up of aged cells", summary:"A Nature Aging study published Oct 5 reports that declining chaperone-mediated autophagy in aging weakens the ability of immune cells called macrophages to clear senescent ‘zombie’ cells, and that restoring the process in mice improves that clearance — a possible target for age-related disease.", source:"Nature", url:"https://www.nature.com/articles/s43587-026-01240-w", date:"Oct 5",
+      spectrum:null, bias:null },
+    { headline:"Scientists find how a drug candidate starves aggressive brain-tumour cells", summary:"Researchers reported Oct 6 in Nature Chemical Biology that QC6352, first developed as a KDM4 inhibitor, actually fights glioblastoma stem cells mainly by blocking DHODH, an enzyme in pyrimidine synthesis — clarifying a possible route to treat one of the deadliest brain cancers.", source:"Nature", url:"https://www.nature.com/articles/s41589-026-02306-x", date:"Oct 6",
+      spectrum:null, bias:null }
+  ]},
+  { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
+  { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
+  { id:"wpuzzle", title:"🔤 Word Puzzles", color:"#16a085", custom:"wpuzzle" },
+];
+
+const FUN_FACT = {
+  text: "The world’s first webcam was created to watch a coffee pot. In 1991, computer scientists at the University of Cambridge pointed a camera at the ‘Trojan Room’ coffee machine so they could check from their desks whether a fresh pot had brewed, instead of walking down the corridor to find it empty. When web browsers learned to display images, the grainy live feed went online in 1993 as the world’s first webcam, drew viewers around the globe, and was finally switched off in August 2001.",
+  tag: "Category · Technology & History"
+};
+
+const PUZZLE = {
+  type: "Lateral Thinking",
+  title: "A Call in the Night",
+  how: "Don’t assume the call was meant for whoever answered — ask what the ringing itself accomplishes.",
+  question: "Late at night in a hotel, a woman cannot sleep because of a loud, steady noise. She picks up the phone, dials a number, lets it ring a few times, and hangs up without saying a single word. Moments later she is able to drift off peacefully. She did not call the front desk or security, nothing was repaired or removed, and no staff came to her room. What did she do — and why did it work?",
+  answer: "The noise was a stranger snoring loudly in the next room, carrying through the thin wall. The woman simply phoned that room. The ringing roused the sleeper just enough to make him stir and stop snoring. Once he settled back into silence, she hung up — and, with the noise gone, finally fell asleep herself. No complaint, no repair: just a well-aimed phone call."
+};
+
+const WORD_PUZZLE = {
+  type: "Letter Boxed",
+  title: "Four Sides to Every Story",
+  how: "Find one long word that mops up the awkward letters (K, B, C, W), then a short word starting with its last letter to use the rest.",
+  question: "Letter Boxed: twelve letters sit three to a side of a square. Build words by hopping from letter to letter — but you may never use two letters from the SAME side in a row. Each new word must begin with the last letter of the previous one. Goal: use ALL 12 letters in just TWO words.\n\nTOP:     W · K · N\nRIGHT:   O · B · C\nBOTTOM:  R · E · A\nLEFT:    H · Z · D",
+  answer: "WORKBENCH → HAZED.\nWORKBENCH walks W-O-R-K-B-E-N-C-H, never using two letters from the same side back to back. HAZED then starts on that final H and picks up A, Z, and D. Between them the two words use all twelve letters. (Other two-word solutions may exist; this is one clean path.)"
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function renderWordPuzzle(){
+  let h='<div class="sec-title">🔤 Word Puzzle of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#16a085,transparent)"></div>';
+  h+='<div class="wpuzzle-box"><span class="wptype">'+WORD_PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+WORD_PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+WORD_PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+WORD_PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this,\'wpans\')">Show Answer</button>';
+  h+='<div class="answer" id="wpans"><span class="alabel">Answer</span>'+WORD_PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn,ansId){var a=document.getElementById(ansId||'ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else if(sec.custom==="wpuzzle"){div.innerHTML=renderWordPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>

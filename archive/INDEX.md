@@ -3436,3 +3436,39 @@ is empty until the first run.
 2026-10-07	Brain organoids grafted into mice open a new window on the human cortex	175a2f16	brain organoids, mice, cortex, neuroscience, research
 2026-10-07	A tumour-derived organoid biobank maps cancer’s genetic weak points	088811a9	cancer, organoid biobank, genes, oncology, research
 2026-10-07	Webb spots an exoplanet whose atmosphere defies current theories	f0d374eb	jwst, exoplanet, nasa, atmosphere, astronomy
+2026-10-08	Italian man jailed eight years and caning for trafficking a Singaporean woman to Dubai	b4efdd0c	achraf arjaouy,singaporean woman,dubai,human trafficking act,sentenced
+2026-10-08	Man, 32, charged with murder after a 73-year-old is fatally stabbed in Telok Blangah	250edeef	gabriel foong shi cheng,telok blangah heights,murder charge,singapore police
+2026-10-08	PAP MPs press for an inheritance tax and levies on owners of multiple homes	284b8a0f	elysa chen,shawn loh,pap,finance bill,inheritance tax
+2026-10-08	Shanmugam says no POFMA order was issued over a foreign report on death-penalty claims	793d306e	k shanmugam,pofma,israeli report,death penalty,parliament
+2026-10-08	Update: Singapore’s air ranks worst in the world as Indonesian haze shuts Johor schools	1a87fb4c	iqair,indonesian haze,batu pahat johor,schools closed,singapore air
+2026-10-08	Three killed as a multi-storey building collapses in Delhi’s Seemapuri	836ef0f2	seemapuri,delhi,building collapse,three dead
+2026-10-08	Update: RBI raises its repo rate and lifts the FY27 growth forecast to 7.1%	7f445625	reserve bank of india,sanjay malhotra,repo rate,gdp forecast,congress
+2026-10-08	Andhra Pradesh declares drought across all 21 districts after a monsoon deficit	a2e2d840	andhra pradesh,drought,388 mandals,ysrcp,chandrababu naidu
+2026-10-08	West Bengal set to be renamed ‘Paschim Banga’, state BJP chief says	d73ccdeb	west bengal,paschim banga,samik bhattacharya,bjp
+2026-10-08	Modi marks 25 years in elected office as world leaders send greetings	f6634ac1	narendra modi,25 years,viksit bharat 2047,bjp
+2026-10-08	Voters in Starmer’s old Holborn & St Pancras seat go to the polls	ee5dd5fc	holborn and st pancras,zack polanski,keir starmer,labour,by-election
+2026-10-08	UK borrowing costs jump and the pound falls in a global bond sell-off	bebdaf36	gilt yields,pound sterling,bond sell-off,bank of england
+2026-10-08	Reform UK clears its own aides of breaking electoral law in a donations row	5259bffb	reform uk,nigel farage,dan jukes,james orr,donations
+2026-10-08	Average five-year fixed mortgage rate climbs to 6% as gilt turmoil bites	b2cee8e1	mortgage rates,moneyfacts,gilts,pound sterling
+2026-10-08	Germany arrests former spy chief August Hanning on treason and espionage charges	21b0ca48	august hanning,bnd,german prosecutors,espionage
+2026-10-08	Update: Russia strikes Kyiv’s bridges and barrages Ukraine, killing at least 19	e7bf5107	russia,kyiv,dnipro bridges,missile barrage,ukraine
+2026-10-08	Researcher at a Russian plague lab dies of an unknown infection as the WHO watches	9d74b9b8	darya shipilova,irkutsk anti-plague institute,pneumonia,who,quarantine
+2026-10-08	UN Command rules North Korea planted the DMZ mines that wounded three soldiers	9b4d8a71	north korea,dmz,landmines,un command,south korea
+2026-10-08	SpaceX in talks to borrow about $40 billion to buy Nvidia AI chips	7079be90	spacex,nvidia,apollo,40 billion
+2026-10-08	Schneider Electric to buy software maker PTC for $22.6 billion	eda17975	schneider electric,ptc,22.6 billion,acquisition
+2026-10-08	Mistral launches a one-trillion-parameter ‘Large 4’ model to rival the US labs	8abe9fae	mistral,large 4,trillion parameters,nvidia
+2026-10-08	AI cloud provider Lambda seeks up to $4 billion as its backlog balloons	972df04c	lambda,anthropic,4 billion,coatue,blackstone
+2026-10-08	Apple and LG team up on a smart-home doorbell, lock, and thermostat	4ef31450	apple,lg,smart home,mark gurman,homepod
+2026-10-08	Paramount Skydance closes its $110 billion Warner Bros. Discovery takeover	35febf0e	paramount skydance,warner bros discovery,david ellison,skyd
+2026-10-08	Emera to buy Canadian Utilities in a C$14.3 billion all-stock deal	33ce5d62	emera,canadian utilities,atco,14.3 billion
+2026-10-08	Fed minutes reveal the New York Fed tapped Treasury funds to prop up the yen	9e36a364	federal reserve,new york fed,treasury esf,japanese yen,fomc minutes
+2026-10-08	US stocks slip from records as Treasury yields hold near multi-decade highs	9ce0d9ad	s&p 500,nasdaq,treasury yields,fed minutes
+2026-10-08	🏎️ Audi unveils a Peranakan-pattern livery for its debut Singapore Grand Prix	7e5f779a	audi f1,nico hulkenberg,gabriel bortoleto,singapore grand prix
+2026-10-08	🏎️ Singapore holds its first F1 Sprint, with Pirelli bringing its softest tyres	7e47d826	singapore grand prix,f1 sprint,pirelli,marina bay
+2026-10-08	🎾 Elise Mertens stuns Coco Gauff to reach the China Open quarter-finals	b1aa52b7	elise mertens,coco gauff,iga swiatek,china open
+2026-10-08	🎾 Holger Rune loses on his comeback as Altmaier wins their Shanghai opener	eca9738c	daniel altmaier,holger rune,ben shelton,shanghai masters
+2026-10-08	🏏 Shreyas Iyer’s maiden T20I century sinks West Indies as India go 1-0 up	f814b262	shreyas iyer,india,west indies,first t20i lucknow
+2026-10-08	Henri Kagan and Kenso Soai win the 2026 Nobel Prize in Chemistry	0487cbfe	henri kagan,kenso soai,nobel prize chemistry,asymmetric autocatalysis,chirality
+2026-10-08	Webb captures signs of planet-shattering collisions around young stars	73958555	james webb telescope,extreme debris disks,mars-sized collisions,planet formation
+2026-10-08	A failing cellular ‘clean-up’ system is linked to the build-up of aged cells	2d8fea9e	chaperone-mediated autophagy,macrophages,senescent cells,aging
+2026-10-08	Scientists find how a drug candidate starves aggressive brain-tumour cells	6d553b9a	qc6352,dhodh,glioblastoma,kdm4 inhibitor

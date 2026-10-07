@@ -1,0 +1,623 @@
+{
+  "date": "2026-10-08",
+  "notes": "UK News ran on fallback sources (CNN, Al Jazeera, Bloomberg) because BBC, Sky News and The Guardian were unreachable from the routine environment (search crawler blocks bbc.com, news.sky.com, theguardian.com, reuters.com, apnews.com, nytimes.com). Singapore used the reachable allowed outlets Mothership and SCMP (CNA and The Straits Times were unreachable); India stayed on primary outlets (The Economic Times, The Indian Express, Times of India). Global and Other Miscellaneous sourced from the reachable allowed outlets CNN, Al Jazeera, NASA, Nature and Scientific American. Multiple retry/backfill passes were made; several candidate stories (Gaza, Spain, Venezuela, Afghanistan-Pakistan, Istanbul, Interpol) were dropped in verification as stale, year-old or out-of-window. The prior edition for 2026-10-07 exists, so no run was missed.",
+  "items": [
+    {
+      "tab": "Singapore",
+      "headline": "Italian man jailed eight years and caning for trafficking a Singaporean woman to Dubai",
+      "summary": "Achraf Arjaouy, an Italian national, was sentenced on Oct 7 to eight years’ jail and caning under the Prevention of Human Trafficking Act for deceiving a Singaporean woman he met on Tinder into sex work in Dubai and collecting her daily earnings.",
+      "url": "https://mothership.sg/2026/10/italian-man-jailed-traffick-singaporean-woman-dubai/",
+      "outlet": "Mothership",
+      "publish_date": "Oct 7",
+      "short_hash": "b4efdd0c",
+      "key_entities": [
+        "achraf arjaouy",
+        "singaporean woman",
+        "dubai",
+        "human trafficking act",
+        "sentenced"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "Man, 32, charged with murder after a 73-year-old is fatally stabbed in Telok Blangah",
+      "summary": "Gabriel Foong Shi Cheng, 32, was charged on Oct 7 with murdering a 73-year-old man stabbed near Block 61 Telok Blangah Heights on Oct 5. A 53-year-old was also injured, and Foong was remanded for a psychiatric assessment ahead of an Oct 28 hearing.",
+      "url": "https://mothership.sg/2026/10/telok-blangah-murder-charged/",
+      "outlet": "Mothership",
+      "publish_date": "Oct 7",
+      "short_hash": "250edeef",
+      "key_entities": [
+        "gabriel foong shi cheng",
+        "telok blangah heights",
+        "murder charge",
+        "singapore police"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "PAP MPs press for an inheritance tax and levies on owners of multiple homes",
+      "summary": "During the Oct 6 debate on the Finance (Income Taxes) Bill, PAP MPs Elysa Chen and Shawn Loh urged new taxes on owners of multiple residential properties, with Loh calling for an inheritance tax on inherited rather than earned wealth. Singapore abolished estate duty in 2008.",
+      "url": "https://mothership.sg/2026/10/no-to-hoarding-homes/",
+      "outlet": "Mothership",
+      "publish_date": "Oct 6",
+      "short_hash": "284b8a0f",
+      "key_entities": [
+        "elysa chen",
+        "shawn loh",
+        "pap",
+        "finance bill",
+        "inheritance tax"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "Shanmugam says no POFMA order was issued over a foreign report on death-penalty claims",
+      "summary": "Senior Minister K. Shanmugam told Parliament on Oct 7 that no POFMA correction direction was issued over an Israeli media report alleging death-penalty-related talks in Singapore, saying the public-interest threshold was not met — though a direction could still follow if circumstances change.",
+      "url": "https://mothership.sg/2026/10/pofma-israel-report-death-penalty/",
+      "outlet": "Mothership",
+      "publish_date": "Oct 7",
+      "short_hash": "793d306e",
+      "key_entities": [
+        "k shanmugam",
+        "pofma",
+        "israeli report",
+        "death penalty",
+        "parliament"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "Update: Singapore’s air ranks worst in the world as Indonesian haze shuts Johor schools",
+      "summary": "Singapore’s air quality hit ‘very unhealthy’ levels and ranked worst worldwide on Oct 7, according to IQAir, as cross-border haze from Indonesian fires thickened. About 200 schools and preschools in Johor’s Batu Pahat were ordered shut, days before the F1 night race.",
+      "url": "https://www.scmp.com/news/asia/southeast-asia/article/3370091/singapores-air-pollution-worst-world-haze-shuts-malaysia-schools",
+      "outlet": "SCMP",
+      "publish_date": "Oct 7",
+      "short_hash": "1a87fb4c",
+      "key_entities": [
+        "iqair",
+        "indonesian haze",
+        "batu pahat johor",
+        "schools closed",
+        "singapore air"
+      ],
+      "is_update": true
+    },
+    {
+      "tab": "India",
+      "headline": "Three killed as a multi-storey building collapses in Delhi’s Seemapuri",
+      "summary": "A residential building collapsed in northeast Delhi’s Seemapuri on Oct 7, killing three people — including a child and a pregnant woman — and injuring eight, with 11 pulled from the rubble. Authorities are examining whether recent earthquake tremors weakened the structure.",
+      "url": "https://economictimes.indiatimes.com/news/india/multi-storey-building-collapses-in-delhis-seemapuri-rescue-teams-deployed/articleshow/134764383.cms",
+      "outlet": "The Economic Times",
+      "publish_date": "Oct 7",
+      "short_hash": "836ef0f2",
+      "key_entities": [
+        "seemapuri",
+        "delhi",
+        "building collapse",
+        "three dead"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "Update: RBI raises its repo rate and lifts the FY27 growth forecast to 7.1%",
+      "summary": "In its Oct 7 policy, the Reserve Bank of India under Governor Sanjay Malhotra raised the repo rate, citing a weak rupee and costly oil, while simultaneously lifting its FY27 GDP growth forecast to 7.1%. It was the central bank’s first rate rise in nearly four years.",
+      "url": "https://indianexpress.com/article/india/rbi-monetary-policy-meeting-october-2026-live-governor-sanjay-malhotra-repo-rate-policy-stance-10908895/",
+      "outlet": "The Indian Express",
+      "publish_date": "Oct 7",
+      "short_hash": "7f445625",
+      "key_entities": [
+        "reserve bank of india",
+        "sanjay malhotra",
+        "repo rate",
+        "gdp forecast",
+        "congress"
+      ],
+      "is_update": true
+    },
+    {
+      "tab": "India",
+      "headline": "Andhra Pradesh declares drought across all 21 districts after a monsoon deficit",
+      "summary": "The Andhra Pradesh government declared drought in 388 mandals spanning all 21 districts for the kharif season — 283 severely affected and 105 moderately — blaming an El Nino-driven rainfall shortfall. The opposition YSRCP accused the Chandrababu Naidu government of acting too late.",
+      "url": "https://indianexpress.com/article/india/andhra-government-declares-drought-in-21-districts-10909939/",
+      "outlet": "The Indian Express",
+      "publish_date": "Oct 7",
+      "short_hash": "a2e2d840",
+      "key_entities": [
+        "andhra pradesh",
+        "drought",
+        "388 mandals",
+        "ysrcp",
+        "chandrababu naidu"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "West Bengal set to be renamed ‘Paschim Banga’, state BJP chief says",
+      "summary": "West Bengal BJP president Samik Bhattacharya said on Oct 7 that the state will be renamed ‘Paschim Banga’ and that a Bill to effect the change is coming, reviving a long-pending push months before the 2026 assembly election.",
+      "url": "https://economictimes.indiatimes.com/news/politics-and-nation/west-bengal-to-be-renamed-as-paschim-banga-state-bjp-chief-samik-bhattacharya/articleshow/134774176.cms",
+      "outlet": "The Economic Times",
+      "publish_date": "Oct 7",
+      "short_hash": "d73ccdeb",
+      "key_entities": [
+        "west bengal",
+        "paschim banga",
+        "samik bhattacharya",
+        "bjp"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "Modi marks 25 years in elected office as world leaders send greetings",
+      "summary": "Narendra Modi completed 25 unbroken years in elected public office on Oct 7 — Gujarat chief minister from 2001, prime minister since 2014 — drawing tributes from leaders including Japan’s Sanae Takaichi, as he tied the milestone to his ‘Viksit Bharat 2047’ goal.",
+      "url": "https://economictimes.indiatimes.com/news/india/pm-modi-completes-25-years-in-public-office-world-leaders-extend-greetings/articleshow/134772356.cms",
+      "outlet": "The Economic Times",
+      "publish_date": "Oct 7",
+      "short_hash": "f6634ac1",
+      "key_entities": [
+        "narendra modi",
+        "25 years",
+        "viksit bharat 2047",
+        "bjp"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "Voters in Starmer’s old Holborn & St Pancras seat go to the polls",
+      "summary": "Polling opened on Oct 8 in the by-election triggered by former prime minister Keir Starmer’s resignation as an MP, with 15 candidates including Green Party leader Zack Polanski challenging Labour’s Sagal Abdi-Wali. Labour, which has held the seat since 1983, is the heavy favourite.",
+      "url": "https://www.cnn.com/2026/10/07/uk/zack-polanski-green-party-parliament-intl-gbr",
+      "outlet": "CNN",
+      "publish_date": "Oct 7",
+      "short_hash": "ee5dd5fc",
+      "key_entities": [
+        "holborn and st pancras",
+        "zack polanski",
+        "keir starmer",
+        "labour",
+        "by-election"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "UK borrowing costs jump and the pound falls in a global bond sell-off",
+      "summary": "The UK 10-year gilt yield rose to about 5.45% on Oct 7 and the 30-year yield pushed back above 6% amid a worldwide bond rout driven by inflation and oil-price fears, while sterling fell about 0.6% against the dollar.",
+      "url": "https://www.bloomberg.com/news/live-blog/2026-10-07/ftse-100-live-pound-bonds-gilts-ai-stocks-hormuz-oil-prices-badenoch-tories-what-s-moving-uk-markets-right-now-markets-today",
+      "outlet": "Bloomberg",
+      "publish_date": "Oct 7",
+      "short_hash": "bebdaf36",
+      "key_entities": [
+        "gilt yields",
+        "pound sterling",
+        "bond sell-off",
+        "bank of england"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "Reform UK clears its own aides of breaking electoral law in a donations row",
+      "summary": "Reform UK published a report on Oct 7 concluding that aides Dan Jukes and James Orr did not breach electoral law over a purported US donor, who the party says arranged more than £30,000 to fund three opinion polls without the source being disclosed.",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-07/farage-s-reform-clears-aides-of-breaking-law-in-donations-row",
+      "outlet": "Bloomberg",
+      "publish_date": "Oct 7",
+      "short_hash": "5259bffb",
+      "key_entities": [
+        "reform uk",
+        "nigel farage",
+        "dan jukes",
+        "james orr",
+        "donations"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "Average five-year fixed mortgage rate climbs to 6% as gilt turmoil bites",
+      "summary": "Moneyfacts data cited on Oct 5 showed the average five-year fixed mortgage deal has reached 6% as elevated gilt yields push up UK borrowing costs, tightening the squeeze on households due to refinance in the months ahead.",
+      "url": "https://www.bloomberg.com/news/live-blog/2026-10-05/ftse-100-live-pound-bonds-gilts-pmi-data-euro-hormuz-oil-prices-what-s-moving-uk-markets-right-now-markets-today",
+      "outlet": "Bloomberg",
+      "publish_date": "Oct 5",
+      "short_hash": "b2cee8e1",
+      "key_entities": [
+        "mortgage rates",
+        "moneyfacts",
+        "gilts",
+        "pound sterling"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "Germany arrests former spy chief August Hanning on treason and espionage charges",
+      "summary": "Federal prosecutors arrested August Hanning, who led Germany’s foreign intelligence service (BND) from 1998 to 2005, on Oct 6 on suspicion of treasonous espionage and obtaining state secrets for a foreign intelligence service. A former BND chief of staff was also detained; lawmakers called it the agency’s worst breach since the Cold War.",
+      "url": "https://www.cnn.com/2026/10/06/europe/germany-former-intelligence-chief-arrested-intl",
+      "outlet": "CNN",
+      "publish_date": "Oct 6",
+      "short_hash": "21b0ca48",
+      "key_entities": [
+        "august hanning",
+        "bnd",
+        "german prosecutors",
+        "espionage"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "Update: Russia strikes Kyiv’s bridges and barrages Ukraine, killing at least 19",
+      "summary": "Russian forces opened a new tactic of hitting bridges over the Dnipro River to split Kyiv, then launched an overnight missile-and-drone barrage into Oct 7 that killed at least 19 civilians, including four children, across about a dozen regions. Ukraine struck Russian oil facilities in Perm, Samara, and Astrakhan in response.",
+      "url": "https://www.cnn.com/2026/10/04/europe/russian-drone-kyiv-merz-ukraine",
+      "outlet": "CNN",
+      "publish_date": "Oct 7",
+      "short_hash": "e7bf5107",
+      "key_entities": [
+        "russia",
+        "kyiv",
+        "dnipro bridges",
+        "missile barrage",
+        "ukraine"
+      ],
+      "is_update": true
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "Researcher at a Russian plague lab dies of an unknown infection as the WHO watches",
+      "summary": "Darya Shipilova, a 28-year-old technician at the Irkutsk Anti-Plague Institute, fell ill at work on Sept 30 and died two days later of pneumonia of unknown origin. About 200 contacts have been monitored and the WHO calls the risk ‘undetermined’, while Russia’s health watchdog denies any lab accident or epidemic risk.",
+      "url": "https://www.cnn.com/2026/10/07/world/russia-suspected-plague-case-who-intl",
+      "outlet": "CNN",
+      "publish_date": "Oct 7",
+      "short_hash": "9d74b9b8",
+      "key_entities": [
+        "darya shipilova",
+        "irkutsk anti-plague institute",
+        "pneumonia",
+        "who",
+        "quarantine"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "UN Command rules North Korea planted the DMZ mines that wounded three soldiers",
+      "summary": "A joint South Korea–UN Command investigation concluded that two landmines that maimed three South Korean soldiers on Sept 21 were planted by North Korean forces south of the Military Demarcation Line, an armistice violation. Seoul demanded an apology; Pyongyang’s Kim Yo Jong dismissed the finding as a ‘conspiratorial farce’.",
+      "url": "https://www.aljazeera.com/news/2026/10/6/south-korea-considers-steps-to-force-north-korea-apology-for-dmz-mine-blast",
+      "outlet": "Al Jazeera",
+      "publish_date": "Oct 6",
+      "short_hash": "9b4d8a71",
+      "key_entities": [
+        "north korea",
+        "dmz",
+        "landmines",
+        "un command",
+        "south korea"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "SpaceX in talks to borrow about $40 billion to buy Nvidia AI chips",
+      "summary": "SpaceX is in early talks to raise roughly $40 billion — about $10 billion in bank loans and $30 billion in investment-grade debt, with Apollo expected to lead — to fund a large Nvidia chip order for its data centres, with a close targeted for 2027.",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-06/spacex-seeking-to-raise-40-billion-to-buy-nvidia-chips-ft-says",
+      "outlet": "Bloomberg",
+      "publish_date": "Oct 6",
+      "short_hash": "7079be90",
+      "key_entities": [
+        "spacex",
+        "nvidia",
+        "apollo",
+        "40 billion"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "Schneider Electric to buy software maker PTC for $22.6 billion",
+      "summary": "Schneider Electric agreed to acquire US industrial-software firm PTC for about $22.6 billion ($205 a share, a 42% premium), its largest-ever deal, to build an industrial-AI ‘digital thread’. Schneider shares fell on the price; the deal is expected to close by the third quarter of 2027.",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-05/schneider-electric-to-acquire-ptc-for-more-than-20-billion",
+      "outlet": "Bloomberg",
+      "publish_date": "Oct 5",
+      "short_hash": "eda17975",
+      "key_entities": [
+        "schneider electric",
+        "ptc",
+        "22.6 billion",
+        "acquisition"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "Mistral launches a one-trillion-parameter ‘Large 4’ model to rival the US labs",
+      "summary": "French lab Mistral released a preview of Mistral Large 4, a multimodal mixture-of-experts model with about 1 trillion total and 49 billion active parameters, trained on 4,000 Nvidia GPUs in Europe. It is API-only for now, with open weights planned for late October.",
+      "url": "https://techcrunch.com/2026/10/06/mistrals-new-1t-model-aims-to-leapfrog-closed-and-open-rivals/",
+      "outlet": "TechCrunch",
+      "publish_date": "Oct 6",
+      "short_hash": "8abe9fae",
+      "key_entities": [
+        "mistral",
+        "large 4",
+        "trillion parameters",
+        "nvidia"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "AI cloud provider Lambda seeks up to $4 billion as its backlog balloons",
+      "summary": "Lambda is raising up to $4 billion at a $14.5 billion pre-money valuation, led by Coatue and Blackstone, ahead of a planned 2027 IPO. An investor letter shows its backlog jumped from $15 billion in June to $50 billion in September, driven by a roughly $35 billion cloud deal with Anthropic.",
+      "url": "https://techcrunch.com/2026/10/06/ai-computing-startup-lambda-to-raise-4b-ahead-of-planned-ipo/",
+      "outlet": "TechCrunch",
+      "publish_date": "Oct 6",
+      "short_hash": "972df04c",
+      "key_entities": [
+        "lambda",
+        "anthropic",
+        "4 billion",
+        "coatue",
+        "blackstone"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "Apple and LG team up on a smart-home doorbell, lock, and thermostat",
+      "summary": "Apple is working with LG on LG-built, LG-branded smart-home devices — a wired video doorbell, a UWB auto-unlock deadbolt, a thermostat, and cameras — tied to new Apple hardware expected on Oct 13, according to Bloomberg’s Mark Gurman. The LG accessories would ship months later.",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-06/apple-s-smart-home-push-includes-doorbell-lock-thermostat-codeveloped-with-lg",
+      "outlet": "Bloomberg",
+      "publish_date": "Oct 6",
+      "short_hash": "4ef31450",
+      "key_entities": [
+        "apple",
+        "lg",
+        "smart home",
+        "mark gurman",
+        "homepod"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Paramount Skydance closes its $110 billion Warner Bros. Discovery takeover",
+      "summary": "Paramount Skydance completed its roughly $110 billion acquisition of Warner Bros. Discovery on Oct 6, one of the largest media mergers ever, after a contest with Netflix. The successor, Skydance Corp., trades on Nasdaq as SKYD under co-CEOs David Ellison and Ynon Kreiz.",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-06/paramount-closes-warner-bros-merger-in-historic-hollywood-deal",
+      "outlet": "Bloomberg",
+      "publish_date": "Oct 6",
+      "short_hash": "35febf0e",
+      "key_entities": [
+        "paramount skydance",
+        "warner bros discovery",
+        "david ellison",
+        "skyd"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Emera to buy Canadian Utilities in a C$14.3 billion all-stock deal",
+      "summary": "Emera agreed on Oct 6 to acquire ATCO’s Canadian Utilities in an all-stock transaction worth about C$14.3 billion, forming a utility with roughly C$72 billion in enterprise value and about six million customers — billed as the largest-ever merger of two Canadian corporations.",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-06/emera-to-buy-canadian-utilities-in-c-14-3b-deal",
+      "outlet": "Bloomberg",
+      "publish_date": "Oct 6",
+      "short_hash": "33ce5d62",
+      "key_entities": [
+        "emera",
+        "canadian utilities",
+        "atco",
+        "14.3 billion"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Fed minutes reveal the New York Fed tapped Treasury funds to prop up the yen",
+      "summary": "Minutes of the Federal Reserve’s September meeting, released Oct 7, showed the New York Fed used US Treasury (ESF) funds rather than its own holdings in a joint intervention to support the yen in late July. The same meeting delivered the Fed’s first rate rise in more than three years.",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-07/fed-used-treasury-funds-to-support-yen-in-joint-intervention",
+      "outlet": "Bloomberg",
+      "publish_date": "Oct 7",
+      "short_hash": "9e36a364",
+      "key_entities": [
+        "federal reserve",
+        "new york fed",
+        "treasury esf",
+        "japanese yen",
+        "fomc minutes"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "US stocks slip from records as Treasury yields hold near multi-decade highs",
+      "summary": "Wall Street edged back from record highs on Oct 7 after the Fed released its September minutes, with longer-dated US Treasury yields holding near their highest levels since 2002. Rate-sensitive shares led the modest pullback.",
+      "url": "https://www.cnbc.com/2026/10/06/stock-market-today-live-updates.html",
+      "outlet": "CNBC",
+      "publish_date": "Oct 7",
+      "short_hash": "9ce0d9ad",
+      "key_entities": [
+        "s&p 500",
+        "nasdaq",
+        "treasury yields",
+        "fed minutes"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🏎️ Audi unveils a Peranakan-pattern livery for its debut Singapore Grand Prix",
+      "summary": "Audi, racing in its first F1 season after taking over Sauber, revealed a one-off livery for the Oct 9-11 Singapore GP weekend: its titanium-grey base stays, but the rear section carries a blue traditional Peranakan pattern, to be run by Nico Hulkenberg and Gabriel Bortoleto.",
+      "url": "https://www.formula1.com/en/latest/article/gallery-audi-unveil-special-livery-for-singapore-grand-prix.5Z07QWFA7vVqCPC1jb6AIq",
+      "outlet": "Formula1.com",
+      "publish_date": "Oct 7",
+      "short_hash": "7e5f779a",
+      "key_entities": [
+        "audi f1",
+        "nico hulkenberg",
+        "gabriel bortoleto",
+        "singapore grand prix"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🏎️ Singapore holds its first F1 Sprint, with Pirelli bringing its softest tyres",
+      "summary": "The Singapore GP is a Sprint weekend for the first time, giving teams a single practice session before competitive running on the Marina Bay street circuit. Pirelli has nominated its three softest compounds — C3, C4, and C5 — expecting the Soft to play a bigger role.",
+      "url": "https://www.formula1.com/en/latest/article/its-race-week-5-storylines-were-excited-about-ahead-of-the-2026-singapore-grand-prix.1yu3dSkVOAvPULoMR9vn5Z",
+      "outlet": "Formula1.com",
+      "publish_date": "Oct 7",
+      "short_hash": "7e47d826",
+      "key_entities": [
+        "singapore grand prix",
+        "f1 sprint",
+        "pirelli",
+        "marina bay"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🎾 Elise Mertens stuns Coco Gauff to reach the China Open quarter-finals",
+      "summary": "World No. 19 Elise Mertens beat third seed Coco Gauff 6-3, 6-3 in the China Open fourth round on Oct 7, ending an 0-5 head-to-head deficit. Gauff, the 2024 Beijing champion, made 34 unforced errors; Mertens next meets Iga Swiatek.",
+      "url": "https://www.wtatennis.com/news/4587818/mertens-beats-gauff-for-first-time-in-six-meetings-to-make-beijing-quarters",
+      "outlet": "WTA Tour",
+      "publish_date": "Oct 7",
+      "short_hash": "b1aa52b7",
+      "key_entities": [
+        "elise mertens",
+        "coco gauff",
+        "iga swiatek",
+        "china open"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🎾 Holger Rune loses on his comeback as Altmaier wins their Shanghai opener",
+      "summary": "World No. 67 Daniel Altmaier beat Holger Rune 1-6, 7-6(5), 6-4 in the Shanghai Masters first round on Oct 7. Rune, in only his third event since rupturing his Achilles last October, led early before fading; Altmaier next faces Ben Shelton.",
+      "url": "https://www.atptour.com/en/news/rune-altmaier-shanghai-2026-wednesday",
+      "outlet": "ATP Tour",
+      "publish_date": "Oct 7",
+      "short_hash": "eca9738c",
+      "key_entities": [
+        "daniel altmaier",
+        "holger rune",
+        "ben shelton",
+        "shanghai masters"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🏏 Shreyas Iyer’s maiden T20I century sinks West Indies as India go 1-0 up",
+      "summary": "Shreyas Iyer hit an unbeaten 102 off 43 balls — his first T20I hundred — as India chased 172 in 14.4 overs to beat West Indies by eight wickets in the series opener at Lucknow on Oct 6. It was India’s 10th successive T20I win.",
+      "url": "https://www.espncricinfo.com/series/west-indies-in-india-2026-27-1529215/india-vs-west-indies-1st-t20i-1529230/match-report",
+      "outlet": "ESPNcricinfo",
+      "publish_date": "Oct 6",
+      "short_hash": "f814b262",
+      "key_entities": [
+        "shreyas iyer",
+        "india",
+        "west indies",
+        "first t20i lucknow"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "Henri Kagan and Kenso Soai win the 2026 Nobel Prize in Chemistry",
+      "summary": "The Royal Swedish Academy of Sciences awarded the 2026 chemistry Nobel to France’s Henri B. Kagan and Japan’s Kenso Soai for discovering non-linear effects and autocatalysis in asymmetric synthesis — work on molecular ‘handedness’ that helps explain life’s preference for one mirror-image form and underpins modern drug-making. They share the 12 million kronor prize.",
+      "url": "https://www.scientificamerican.com/article/2026-nobel-prize-in-chemistry-is-award-to-henri-kagan-and-kenso-soai-for-their-work-in-mirror-chemistry/",
+      "outlet": "Scientific American",
+      "publish_date": "Oct 7",
+      "short_hash": "0487cbfe",
+      "key_entities": [
+        "henri kagan",
+        "kenso soai",
+        "nobel prize chemistry",
+        "asymmetric autocatalysis",
+        "chirality"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "Webb captures signs of planet-shattering collisions around young stars",
+      "summary": "Astronomers using the James Webb Space Telescope studied 21 ‘extreme debris disks’ and found silica-rich dust pointing to high-energy collisions between Mars-sized bodies — the kind of impact thought to have formed Earth’s Moon. The work offers a rare look at the violent late stages of planet formation.",
+      "url": "https://science.nasa.gov/missions/webb/nasas-webb-provides-crash-course-on-planet-shattering-collisions/",
+      "outlet": "NASA",
+      "publish_date": "Oct 1",
+      "short_hash": "73958555",
+      "key_entities": [
+        "james webb telescope",
+        "extreme debris disks",
+        "mars-sized collisions",
+        "planet formation"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "A failing cellular ‘clean-up’ system is linked to the build-up of aged cells",
+      "summary": "A Nature Aging study published Oct 5 reports that declining chaperone-mediated autophagy in aging weakens the ability of immune cells called macrophages to clear senescent ‘zombie’ cells, and that restoring the process in mice improves that clearance — a possible target for age-related disease.",
+      "url": "https://www.nature.com/articles/s43587-026-01240-w",
+      "outlet": "Nature",
+      "publish_date": "Oct 5",
+      "short_hash": "2d8fea9e",
+      "key_entities": [
+        "chaperone-mediated autophagy",
+        "macrophages",
+        "senescent cells",
+        "aging"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "Scientists find how a drug candidate starves aggressive brain-tumour cells",
+      "summary": "Researchers reported Oct 6 in Nature Chemical Biology that QC6352, first developed as a KDM4 inhibitor, actually fights glioblastoma stem cells mainly by blocking DHODH, an enzyme in pyrimidine synthesis — clarifying a possible route to treat one of the deadliest brain cancers.",
+      "url": "https://www.nature.com/articles/s41589-026-02306-x",
+      "outlet": "Nature",
+      "publish_date": "Oct 6",
+      "short_hash": "6d553b9a",
+      "key_entities": [
+        "qc6352",
+        "dhodh",
+        "glioblastoma",
+        "kdm4 inhibitor"
+      ],
+      "is_update": false
+    }
+  ],
+  "fun_fact": {
+    "headline": "The world’s first webcam watched a coffee pot",
+    "body": "The world’s first webcam was created to watch a coffee pot. In 1991, computer scientists at the University of Cambridge pointed a camera at the ‘Trojan Room’ coffee machine so they could check from their desks whether a fresh pot had brewed, instead of walking down the corridor to find it empty. When web browsers learned to display images, the grainy live feed went online in 1993 as the world’s first webcam, drew viewers around the globe, and was finally switched off in August 2001.",
+    "source": "University of Cambridge; Guinness World Records",
+    "fun_fact_id": "funfact-239f62b9",
+    "topic": "tech",
+    "topic_key": "webcam"
+  },
+  "puzzle": {
+    "type": "lateral",
+    "title": "A Call in the Night",
+    "title_key": "a-call-in-the-night",
+    "body": "Late at night in a hotel, a woman cannot sleep because of a loud, steady noise. She picks up the phone, dials a number, lets it ring a few times, and hangs up without saying a single word. Moments later she is able to drift off peacefully. She did not call the front desk or security, nothing was repaired or removed, and no staff came to her room. What did she do — and why did it work?",
+    "approach": "Don’t assume the call was meant for whoever answered — ask what the ringing itself accomplishes.",
+    "answer": "The noise was a stranger snoring loudly in the next room, carrying through the thin wall. The woman simply phoned that room. The ringing roused the sleeper just enough to make him stir and stop snoring. Once he settled back into silence, she hung up — and, with the noise gone, finally fell asleep herself. No complaint, no repair: just a well-aimed phone call.",
+    "puzzle_hash": "49967c8d"
+  },
+  "word_puzzle": {
+    "type": "letterboxed",
+    "title": "Four Sides to Every Story",
+    "title_key": "four-sides-to-every-story",
+    "body": "Letter Boxed: twelve letters sit three to a side of a square. Build words by hopping from letter to letter — but you may never use two letters from the SAME side in a row. Each new word must begin with the last letter of the previous one. Goal: use ALL 12 letters in just TWO words.\n\nTOP:     W · K · N\nRIGHT:   O · B · C\nBOTTOM:  R · E · A\nLEFT:    H · Z · D",
+    "approach": "Find one long word that mops up the awkward letters (K, B, C, W), then a short word starting with its last letter to use the rest.",
+    "answer": "WORKBENCH → HAZED.\nWORKBENCH walks W-O-R-K-B-E-N-C-H, never using two letters from the same side back to back. HAZED then starts on that final H and picks up A, Z, and D. Between them the two words use all twelve letters. (Other two-word solutions may exist; this is one clean path.)",
+    "word_puzzle_hash": "1408d914"
+  }
+}
