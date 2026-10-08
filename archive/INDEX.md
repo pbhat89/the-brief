@@ -3472,3 +3472,30 @@ is empty until the first run.
 2026-10-08	Webb captures signs of planet-shattering collisions around young stars	73958555	james webb telescope,extreme debris disks,mars-sized collisions,planet formation
 2026-10-08	A failing cellular ‘clean-up’ system is linked to the build-up of aged cells	2d8fea9e	chaperone-mediated autophagy,macrophages,senescent cells,aging
 2026-10-08	Scientists find how a drug candidate starves aggressive brain-tumour cells	6d553b9a	qc6352,dhodh,glioblastoma,kdm4 inhibitor
+2026-10-09	Woman, 30, dies in a collision at Queen Street Bus Terminal; bus driver, 32, arrested	6d5f2170	Queen Street Bus Terminal,Singapore,bus accident
+2026-10-09	Man, 33, jailed two years and three months for secretly filming his wife and mother bathing	ddb0d279	Singapore,voyeurism,district court
+2026-10-09	Two men jailed and caned over a Geylang nightclub assault sparked by a staring dispute	958fa8e2	Geylang,Singapore,assault,sentencing
+2026-10-09	Hong Kong's monetary authority questions HSBC over siting its AI centre in Singapore	3626f881	HSBC,HKMA,Singapore,AI centre
+2026-10-09	Update: Rupee sinks toward a record low even after the RBI's rate hike	62de6c82	RBI,India,rupee,record low
+2026-10-09	RBI signals more tightening as economists forecast back-to-back rate hikes	8ffd2a46	RBI,India,interest rates,inflation
+2026-10-09	India's Nifty 50 posts its longest weekly losing streak in 25 years	c8a3da17	Nifty 50,India,equities,losing streak
+2026-10-09	Two Latvian nationals charged after breaking into an RAF base used by US forces	324f7e57	RAF base,United Kingdom,counterterrorism,arrests
+2026-10-09	Greens' Zack Polanski takes on Labour in the Holborn & St Pancras by-election	fca03868	Holborn & St Pancras,Zack Polanski,Labour,by-election
+2026-10-09	Reform UK stumbles as PM Burnham's Labour regains momentum in the polls	803d389b	Reform UK,Andy Burnham,Labour,Nigel Farage
+2026-10-09	Russian strike kills at least 33 in eastern Ukraine in one of the year's deadliest attacks	b3e13775	Russia,Ukraine,missile strike,Kyiv
+2026-10-09	India, Turkiye, Egypt and the US float new proposals for a Russia-Ukraine truce	74ef85b6	Russia,Ukraine,ceasefire proposals,diplomacy
+2026-10-09	Israel sets a deadline to shut the UK consulate in East Jerusalem over settler sanctions	3ef35446	Israel,United Kingdom,East Jerusalem consulate,settler sanctions
+2026-10-09	Israeli attacks across Gaza kill at least four Palestinians, including a rescue worker	9ee28008	Israel,Gaza,Palestinians,air strikes
+2026-10-09	Healthleap raises $38 million for AI that flags hospital patients needing a closer look	e67604a7	Healthleap,AI,Sequoia,funding
+2026-10-09	Nous Research raises a reported $90 million and launches an enterprise AI-agent platform	eaeef22f	Nous Research,AI agents,Robot Ventures,funding
+2026-10-09	Anthropic offers startups a free year of its Claude Team plan and $1,000 in credits	f96fdfbf	Anthropic,Claude,startups,credits
+2026-10-09	Vesta raises $30 million to bring AI 'agent swarms' to mortgage lenders	3ce7bc71	Vesta,AI agents,mortgage,funding
+2026-10-09	Chip stocks slide as OpenAI's revenue reportedly trails the figure cited last month	48b0b0a1	OpenAI,Nvidia,Oracle,CoreWeave
+2026-10-09	Wall Street falls as a gauge of chipmakers drops 3.4%	0c9eea1d	Nasdaq 100,chip stocks,Wall Street,markets
+2026-10-09	Treasuries gain on a strong 30-year auction even with yields near multi-decade highs	1a969990	Treasuries,30-year auction,yields,bonds
+2026-10-09	Oil whipsaws as Trump rules out an Iran strike before the US midterms	8ab38239	oil,Trump,Iran,crude prices
+2026-10-09	F1's 2026 cars hit Marina Bay as Singapore's first sprint weekend gets under way	c2baed6f	Formula 1,Singapore Grand Prix,sprint,Marina Bay
+2026-10-09	Shanghai Masters opens without Sinner as Fery stuns Cilic and Berrettini advances	dc08c1f0	Shanghai Masters,Arthur Fery,Marin Cilic,tennis
+2026-10-09	South Africa and Australia begin their first Test at Kingsmead in Durban	576418fe	South Africa,Australia,Durban Test,cricket
+2026-10-09	Webb pinpoints the most distant fast radio burst ever detected	a321fde4	James Webb Space Telescope,fast radio burst,FRB 20240304B,NASA
+2026-10-09	NASA unveils a more precise way to track Earth's wandering centre of mass	6a5f2eb0	NASA,Earth,centre of mass,geodesy
