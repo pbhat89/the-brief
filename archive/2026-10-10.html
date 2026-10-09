@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Sat, 10 October 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .wpuzzle-box{background:linear-gradient(135deg,#0e1a1a,#0d1620);border:1px solid #234a44;border-left:3px solid #16a085;padding:24px 28px;border-radius:2px}
+  .wptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#16a085;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .wpuzzle-box .puzzle-title{color:#cdeae3}
+  .wpuzzle-box .puzzle-how{color:#8fb8ac;background:#08140f;border-left-color:#1a6a5a}
+  .wpuzzle-box .puzzle-q{color:#dfeae6;font-family:'Source Sans 3',sans-serif}
+  .wpuzzle-box .answer{color:#bfe0d6}
+  .wpuzzle-box .answer .alabel{color:#16a085}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Saturday, 10 October 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Saturday, 10 October 2026 · 🔍 34 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eleven entries in this exact order:
+     id    : one of "sg" | "india" | "uk" | "geo" | "tech" | "biz" | "sports" | "misc" | "fun" | "puzzle" | "wpuzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 8 news tabs; fun/puzzle/wpuzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+
+   WORD_PUZZLE shape (separate, daily word game — NYT-style, static reveal):
+     type     : one of "Connections" | "Word Ladder" | "Anagram" | "Spelling Bee" | "Letter Boxed" | "Mini Crossword"
+     title    : short evocative name for the word puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle body; supports \n for line breaks (grids render as pre-formatted text)
+     answer   : the answer; supports \n for line breaks; appears inside its own toggle (id "wpans")
+============================================================================= */
+
+const SECTIONS = [
+  { id:"sg", title:"🇸🇬 Singapore", color:"#e74c3c", items:[
+    { headline:"Balakrishnan says Singapore must be able to say 'no' to both the US and China",
+      summary:"Foreign Minister Vivian Balakrishnan told the Milken Institute Asia Summit that Singapore has reached a 'peculiarly sensitive existential point' and must keep the ability to refuse both Washington and Beijing to preserve their trust. He noted the United States was Singapore's top source of foreign direct investment last year, at S$35.2 billion.",
+      source:"SCMP", url:"https://www.scmp.com/week-asia/politics/article/3369999/singapore-says-it-must-be-able-say-no-us-china-preserve-trust", date:"Oct 8",
+      spectrum:null, bias:null },
+    { headline:"Ministerial pay benchmarks rise 60% as the PM's climbs to S$3.6 million from October 15",
+      summary:"Singapore's ministerial salary benchmarks rise about 60% on 15 October, lifting the prime minister's benchmark to S$3.6 million from S$2.2 million and the entry-level minister benchmark to S$1.8 million. PM Lawrence Wong has pledged to donate his roughly S$1.4 million increase to charity over five years.",
+      source:"SCMP", url:"https://www.scmp.com/week-asia/politics/article/3366723/singapore-ministers-set-pay-rise-us14-million-entry-benchmark", date:"Oct 7",
+      spectrum:null, bias:null },
+    { headline:"Update: Indonesian haze keeps Singapore's air in the unhealthy band as Malaysia shuts schools",
+      summary:"Transboundary haze from fires in Sumatra and Kalimantan pushed Singapore's air pollution to among the worst in the world this week, with the National Environment Agency rating all regions unhealthy. Across the Causeway, Malaysian authorities ordered schools in affected districts to close.",
+      source:"SCMP", url:"https://www.scmp.com/news/asia/southeast-asia/article/3370091/singapores-air-pollution-worst-world-haze-shuts-malaysia-schools", date:"Oct 8",
+      spectrum:null, bias:null },
+    { headline:"Singaporean massage-parlour boss becomes third on a US 'worst criminal aliens' list",
+      summary:"Jing Emtage, a 54-year-old Singaporean, was added to the US Department of Homeland Security's 'worst of the worst' criminal aliens list following a conviction over a prostitution ring run through massage parlours in Washington state. Investigators said 23 trafficked women were rescued and nine parlours shut; she is held in ICE custody pending deportation.",
+      source:"SCMP", url:"https://www.scmp.com/week-asia/people/article/3369934/singaporean-massage-parlour-boss-added-us-worst-worst-criminal-aliens-list", date:"Oct 5",
+      spectrum:null, bias:null }
+  ]},
+  { id:"india", title:"🇮🇳 India", color:"#e67e22", items:[
+    { headline:"India calls US Vice-President Vance's 'indentured servants' remark deeply offensive",
+      summary:"India's foreign ministry called remarks by US Vice-President JD Vance 'deeply offensive' after he said companies were laying off Americans and replacing them with 'foreign indentured servants'. The ministry said the words carried painful colonial connotations and ignored the contribution of skilled Indian professionals.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/10/9/indentured-servants-us-green-card-move-will-hit-thousands-of-it-workers", date:"Oct 9",
+      spectrum:null, bias:null },
+    { headline:"US suspends Microsoft, Adobe and top Indian IT firms from a green-card labour programme",
+      summary:"The US Labor Department suspended Microsoft, Adobe and major Indian IT companies, including Infosys and Tata Consultancy Services, from the PERM green-card programme over alleged visa abuse. India's government said the move does not affect the validity of existing H-1B visas or their holders.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/economy/2026/10/8/us-suspends-microsoft-and-adobe-from-visa-programme-amid-fraud-claims", date:"Oct 8",
+      spectrum:null, bias:null },
+    { headline:"Update: India's 'cockroach' movement says 10,000 detained as election-chief protests spread",
+      summary:"The youth-led Cockroach Janta Party and opposition parties said about 10,000 people have been detained nationwide in near-daily protests demanding the resignation of Chief Election Commissioner Gyanesh Kumar over voter-roll revisions. Al Jazeera could not independently verify the detention figure; the Election Commission denies bias and says it removed only duplicate or ineligible names.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/10/8/indias-cockroach-movement-says-members-detained-as-protests-continue", date:"Oct 8",
+      spectrum:null, bias:null },
+    { headline:"India's Supreme Court agrees to hear challenges to the Election Commission's voter-roll revision",
+      summary:"India's Supreme Court agreed to take up petitions challenging the Election Commission's nationwide voter-roll revision and the conduct of its chief, after the commission reported removing more than 130 million names. Petitioners argue the drive risks disenfranchising eligible voters; opposition lawmakers have been detained at related protests.",
+      source:"SCMP", url:"https://www.scmp.com/news/asia/south-asia/article/3369942/india-opposition-lawmakers-detained-over-protest-against-election-chief", date:"Oct 8",
+      spectrum:null, bias:null }
+  ]},
+  { id:"uk", title:"🇬🇧 UK News", color:"#3949ab", items:[
+    { headline:"Update: Labour holds Starmer's old Holborn and St Pancras seat, beating the Greens",
+      summary:"Labour's Sagal Abdi-Wali, the leader of Camden Council, won the Holborn and St Pancras by-election with 12,292 votes to Green leader Zack Polanski's 8,928, a majority of about 3,360. The seat fell vacant when former prime minister Keir Starmer stepped down; Labour has held it since the constituency was created in 1983.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/10/9/labour-fends-off-the-green-party-in-closely-watched-uk-by-election", date:"Oct 9",
+      spectrum:null, bias:"Outlets split on the framing: some cast the shrunken Labour majority and a double-digit swing to the Greens as a warning sign, while others read it as a clear hold and a boost for Prime Minister Andy Burnham." },
+    { headline:"Greens' Zack Polanski vows to stay on as leader after the by-election defeat",
+      summary:"Green leader Zack Polanski, beaten into second place with almost a third of the vote, said he would stay on as leader. The result intensified questions about his leadership following a run of slipping personal poll ratings since he took the party to a populist shift.",
+      source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-10-09/labour-sagal-abdi-wali-defeats-greens-starmer--london-holborn-st-pancras-zack-polanski", date:"Oct 9",
+      spectrum:null, bias:null },
+    { headline:"Burnham pledges to ban non-compete clauses for startups ahead of the October Budget",
+      summary:"Prime Minister Andy Burnham said his government will legislate to stop non-compete clauses from blocking hiring at startups and scaling firms, calling the move 'needed and long overdue' at a Manchester summit. Detail is expected in the 28 October Budget, which will open a consultation on related practices such as gardening leave.",
+      source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-10-09/burnham-says-uk-will-curb-non-compete-clauses-after-tech-ai-startup-outcry", date:"Oct 9",
+      spectrum:null, bias:null },
+    { headline:"Britain's Green Party classes Zionism as a form of racism, drawing cross-party criticism",
+      summary:"A motion passed at the Green Party conference classifying Zionism as a form of racism continued to shadow the by-election campaign, drawing criticism from Jewish groups, rival parties and many of the party's own lawmakers. Leader Zack Polanski did not vote on the motion.",
+      source:"CNN", url:"https://www.cnn.com/2026/10/04/uk/green-party-zionism-vote-intl-hnk", date:"Oct 4",
+      spectrum:null, bias:null }
+  ]},
+  { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
+    { headline:"Navi Pillay, former UN rights chief, wins the 2026 Nobel Peace Prize",
+      summary:"The Norwegian Nobel Committee awarded the 2026 Nobel Peace Prize to Navi Pillay, the South African jurist and former UN human-rights chief, citing her efforts for peace and international law. Pillay recently led the UN commission that concluded Israel committed genocide in Gaza; the prize will be presented in Oslo on 10 December.",
+      source:"CNN", url:"https://www.cnn.com/2026/10/09/world/live-news/nobel-peace-prize-2026-winner-intl", date:"Oct 9",
+      spectrum:null, bias:"Coverage diverges on emphasis: some outlets foreground Pillay's role leading the UN inquiry into Gaza, while others lead on the snub to US President Donald Trump, who had publicly campaigned for the award." },
+    { headline:"Ukraine pushes Russia back in Donetsk as military and civilian casualties climb",
+      summary:"Ukrainian forces reported pushing Russian troops back in parts of the Donetsk region even as military and civilian casualties mounted along the front. The developments came days after a Russian strike on buses in Kramatorsk killed dozens, one of the deadliest single attacks of the year.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/10/9/ukraine-pushes-russia-back-in-donetsk-as-military-civilian-casualties-soar", date:"Oct 9",
+      spectrum:null, bias:null },
+    { headline:"Gaza ceasefire 'exists in name only', more than 100 aid groups say one year on",
+      summary:"More than 100 humanitarian and rights organisations said the Gaza ceasefire exists only on paper a year after it began, citing Gaza Health Ministry figures of more than 1,470 Palestinians killed since the truce. The groups warned that about 1.4 million people in Gaza face crisis-level hunger or worse through the end of the year.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/10/9/gaza-ceasefire-exists-in-name-only-more-than-100-ngos-say", date:"Oct 9",
+      spectrum:null, bias:null },
+    { headline:"Iran's Revolutionary Guard strikes a gas tanker near Hormuz as attacks hit Riyadh's airport",
+      summary:"Iran's Revolutionary Guard said it struck a large LPG tanker near the Strait of Hormuz as the US-Iran conflict intensified, while two separate attacks on King Khalid International Airport north of Riyadh killed three people. A Saudi-led coalition also said it had launched a large-scale operation against the Houthis in Yemen.",
+      source:"Al Jazeera", url:"https://www.aljazeera.com/news/liveblog/2026/10/9/iran-war-live-iranian-media-reports-massive-explosions-in-hormuz-strait", date:"Oct 9",
+      spectrum:null, bias:null }
+  ]},
+  { id:"tech", title:"💻 Tech & AI", color:"#27ae60", items:[
+    { headline:"China's Manus raises over $500 million in its first round since the Meta split",
+      summary:"Butterfly Effect, the company behind the AI agent Manus, said it raised more than $500 million in its first funding round since Meta called off a reported $2 billion acquisition, led by Boyu Capital and IDG Capital. The round follows the launch of Manus 2.0, which the company says rebuilds the agent on a new architecture.",
+      source:"TechCrunch", url:"https://techcrunch.com/2026/10/08/chinas-manus-raises-over-500m-in-first-funding-round-since-split-with-meta/", date:"Oct 8", spectrum:null, bias:null },
+    { headline:"Waymo locks in a $5 billion loan from Blackstone and PIMCO to expand its robotaxis",
+      summary:"Waymo closed a $5 billion loan from lenders including PIMCO, Blackstone and Sixth Street to fund its robotaxi expansion. The Alphabet unit now runs paid services in 15 markets and is testing in London and Tokyo ahead of planned launches there.",
+      source:"TechCrunch", url:"https://techcrunch.com/2026/10/08/waymo-locks-in-5b-loan-from-blackstone-pimco-to-fuel-robotaxi-expansion/", date:"Oct 8", spectrum:null, bias:null },
+    { headline:"Uber and China's Pony.ai plan to launch robotaxis in London",
+      summary:"Uber and Chinese autonomous-driving firm Pony.ai said they plan a robotaxi service in London, with testing of Pony.ai's Gen-7 vehicles to begin in the coming weeks. Uber has now struck deals with more than 30 autonomous-vehicle companies.",
+      source:"TechCrunch", url:"https://techcrunch.com/2026/10/08/uber-and-chinas-pony-ai-plan-to-launch-robotaxis-in-london/", date:"Oct 8", spectrum:null, bias:null },
+    { headline:"Cal AI's 19-year-old founder raises $10 million for a personal-AI startup, Persona",
+      summary:"Zach Yadegari, the 19-year-old co-founder of Cal AI, raised $10 million in a round led by Vine Ventures for a new personal-AI startup called Persona. The company plans a wearable band priced at around $179.",
+      source:"TechCrunch", url:"https://techcrunch.com/2026/10/08/cal-ais-19-year-old-founder-just-raised-10m-for-his-new-ai-startup/", date:"Oct 8", spectrum:null, bias:null }
+  ]},
+  { id:"biz", title:"📈 Business & Markets", color:"#8e44ad", items:[
+    { headline:"Wall Street climbs into earnings season as the S&P 500 ends the week at 7,811",
+      summary:"US stocks rose on Friday to cap a volatile week, with the S&P 500 up 0.59% to 7,811.54, the Dow up 0.83% to 51,654.95 and the Nasdaq up 0.64% to 27,366.17. All three indexes posted weekly gains as traders looked ahead to third-quarter earnings and next week's inflation data.",
+      source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-10-08/stock-market-today-dow-s-p-live-updates", date:"Oct 9", spectrum:null, bias:null },
+    { headline:"Treasury yields hold near 24-year highs as traders close a volatile week",
+      summary:"Longer-dated US Treasury yields held near multi-decade highs as traders wrapped up a choppy week, with the 10-year yield around 5.24%. The move reflected sticky-inflation worries after the Federal Reserve's recent rate rise, even as equities rallied.",
+      source:"CNBC", url:"https://www.cnbc.com/2026/10/09/us-treasurys-bond-yields-midterms.html", date:"Oct 9", spectrum:null, bias:null },
+    { headline:"Oil climbs as reports say the White House is weighing Iran strike options before the midterms",
+      summary:"Oil prices rose, with Brent crude pushing above $105 a barrel intraday, after reports that the White House had asked the Pentagon to prepare options for strikes on Iran that could come before the US midterm elections. Brent settled near $104.72 on Friday, up about 0.4%.",
+      source:"Bloomberg", url:"https://www.bloomberg.com/news/newsletters/2026-10-08/oil-gains-on-report-white-house-is-mulling-iran-strikes", date:"Oct 8", spectrum:null, bias:null },
+    { headline:"Starbucks has explored a takeover of Chipotle, the Financial Times reports",
+      summary:"Starbucks has looked into acquiring Chipotle, which has a market value of about $39 billion, in what would rank among the largest restaurant deals on record, the Financial Times reported. Analysts cautioned that the price and Starbucks' own turnaround effort are hurdles to any bid.",
+      source:"CNBC", url:"https://www.cnbc.com/2026/10/09/5-things-to-know-before-the-stock-market-opens.html", date:"Oct 9", spectrum:null, bias:null }
+  ]},
+  { id:"sports", title:"🎾🏏🏎️ Sports", color:"#c0392b", items:[
+    { headline:"🏎️ Verstappen beats Russell to pole for Singapore's first F1 sprint; Antonelli only seventh",
+      summary:"Max Verstappen took pole for Formula 1's first Singapore Sprint, edging George Russell by just over a tenth of a second, with Charles Leclerc third. Championship leader Kimi Antonelli will start the sprint seventh, holding an 84-point lead over Russell with seven rounds remaining.",
+      source:"Autosport", url:"https://www.autosport.com/f1/news/f1-singapore-gp-verstappen-takes-sprint-pole/10863448/", date:"Oct 9", spectrum:null, bias:null },
+    { headline:"🏎️ Stewards clear Verstappen over a yellow-flag incident, letting him keep sprint pole",
+      summary:"Formula 1 stewards investigated Verstappen for passing Lewis Hamilton under yellow flags in the first part of sprint qualifying but let his pole stand, accepting the overtake as an unavoidable consequence of the conditions. The verdict kept the Dutchman on top for Singapore's inaugural sprint.",
+      source:"Sky Sports", url:"https://www.skysports.com/f1/news/13596695/singapore-gp-sprint-qualifying-max-verstappen-claims-pole-position-from-george-russell-but-faces-yellow-flags-investigation", date:"Oct 9", spectrum:null, bias:null },
+    { headline:"🎾 Hurkacz stuns China Open champion Djokovic in the Shanghai Masters second round",
+      summary:"Hubert Hurkacz beat Novak Djokovic 6-4, 6-3 in 87 minutes in the Shanghai Masters second round, days after Djokovic won the China Open for his 102nd tour-level title. It was Hurkacz's first win in nine meetings with the Serb.",
+      source:"ESPN", url:"https://www.espn.com/tennis/story/_/id/50140603/novak-djokovic-beaten-hubert-hurkacz-shanghai-masters", date:"Oct 9", spectrum:null, bias:null },
+    { headline:"🏏 Shai Hope's unbeaten 102 lifts West Indies to level the India T20I series 1-1",
+      summary:"Shai Hope made an unbeaten 102 off 45 balls and Sherfane Rutherford 84 as West Indies chased down a target of 250 in Ranchi to beat India by six wickets and level the five-match T20I series 1-1. Sanju Samson had earlier top-scored for India with 82.",
+      source:"ESPNcricinfo", url:"https://www.cricinfo.com/series/west-indies-in-india-2026-27-1529215/india-vs-west-indies-2nd-t20i-1529231/match-report", date:"Oct 9", spectrum:null, bias:null }
+  ]},
+  { id:"misc", title:"🔬 Other Miscellaneous News", color:"#1abc9c", items:[
+    { headline:"NASA's SpaceX Crew-12 splashes down off California after nearly eight months in orbit",
+      summary:"NASA's SpaceX Crew-12 returned to Earth, splashing down off the California coast on 8 October after nearly eight months aboard the International Space Station. The crew comprised NASA astronauts Jessica Meir and Jack Hathaway, ESA's Sophie Adenot and Roscosmos cosmonaut Andrey Fedyaev.",
+      source:"NASA", url:"https://www.nasa.gov/image-article/crew-12-returns-to-earth/", date:"Oct 8", spectrum:null, bias:null },
+    { headline:"Big dogs age faster than small ones, and 'jumping genes' may be to blame",
+      summary:"A study of nearly 900 dogs across about 120 breeds found that larger dogs accumulate age-related chemical changes to their DNA faster than smaller ones, a clue to why big breeds tend to live shorter lives. Researchers point to mobile 'jumping genes' as a possible driver, though that link remains a hypothesis.",
+      source:"Nature", url:"https://www.nature.com/articles/d41586-026-03199-5", date:"Oct 8", spectrum:null, bias:null },
+    { headline:"NASA releases the first science data and images from its Artemis II lunar flyby",
+      summary:"NASA published the first tranche of science data and imagery gathered during Artemis II, its crewed mission around the Moon, adding the material to a public archive. The agency said the data will help prepare for future Artemis missions to the lunar surface.",
+      source:"NASA", url:"https://www.nasa.gov/blogs/missions/2026/10/07/nasa-releases-artemis-ii-lunar-science-data-images", date:"Oct 7", spectrum:null, bias:null },
+    { headline:"NASA says Arctic sea ice hit its 2026 minimum, the 10th-lowest in the satellite record",
+      summary:"NASA and the National Snow and Ice Data Center reported that Arctic sea ice reached its 2026 summer minimum of about 4.6 million square kilometres on 12 September, tying for the 10th-lowest in the satellite record. Scientists noted the remaining ice is younger and thinner, leaving it more vulnerable in future years.",
+      source:"NASA", url:"https://science.nasa.gov/earth/earth-observatory/arctic-sea-ice-shrinks-to-its-2026-minimum/", date:"Oct 8", spectrum:null, bias:null }
+  ]},
+  { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
+  { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
+  { id:"wpuzzle", title:"🔤 Word Puzzles", color:"#16a085", custom:"wpuzzle" },
+];
+
+const FUN_FACT = {
+  text: "A day on Venus is longer than its year. The planet takes about 243 Earth days to spin once on its axis but only about 225 Earth days to orbit the Sun. Venus also rotates backwards compared with most planets, so from its surface the Sun would rise in the west and set in the east.",
+  tag: "Category · Space & Astronomy"
+};
+
+const PUZZLE = {
+  type: "Logic",
+  title: "Photo Finish",
+  how: "Pin down the one runner whose place is boxed in by two clues, then let the rest fall into line.",
+  question: "Four friends — Ava, Ben, Cora, and Dan — finished a race in positions 1st to 4th, with no ties.\n\n• Ava finished somewhere ahead of Ben.\n• Cora finished neither first nor last.\n• Dan finished immediately behind Cora.\n• Ben did not finish last.\n\nIn what order did the four cross the line?",
+  answer: "1st Ava, 2nd Ben, 3rd Cora, 4th Dan.\n\nCora must be 2nd or 3rd. If Cora were 2nd, Dan would be 3rd, leaving 1st and 4th for Ava and Ben — but Ben cannot be last, so Ben would be 1st and Ava 4th, which puts Ava behind Ben and breaks the first clue. So Cora is 3rd and Dan is 4th, leaving 1st and 2nd for Ava and Ben. Since Ava finished ahead of Ben, Ava is 1st and Ben is 2nd."
+};
+
+const WORD_PUZZLE = {
+  type: "Word Ladder",
+  title: "More or Less",
+  how: "Change one letter at each step, keeping a real word every time, until the word becomes its own opposite.",
+  question: "Turn MORE into LESS in exactly four steps. Each step changes exactly one letter, and every rung must be a common English word.\n\nMORE → ____ → ____ → ____ → LESS",
+  answer: "MORE → LORE → LOSE → LOSS → LESS\n\nEach rung changes a single letter: MORE→LORE (M→L), LORE→LOSE (R→S), LOSE→LOSS (E→S), LOSS→LESS (O→E)."
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function renderWordPuzzle(){
+  let h='<div class="sec-title">🔤 Word Puzzle of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#16a085,transparent)"></div>';
+  h+='<div class="wpuzzle-box"><span class="wptype">'+WORD_PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+WORD_PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+WORD_PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+WORD_PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this,\'wpans\')">Show Answer</button>';
+  h+='<div class="answer" id="wpans"><span class="alabel">Answer</span>'+WORD_PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn,ansId){var a=document.getElementById(ansId||'ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else if(sec.custom==="wpuzzle"){div.innerHTML=renderWordPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>

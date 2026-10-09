@@ -3499,3 +3499,35 @@ is empty until the first run.
 2026-10-09	South Africa and Australia begin their first Test at Kingsmead in Durban	576418fe	South Africa,Australia,Durban Test,cricket
 2026-10-09	Webb pinpoints the most distant fast radio burst ever detected	a321fde4	James Webb Space Telescope,fast radio burst,FRB 20240304B,NASA
 2026-10-09	NASA unveils a more precise way to track Earth's wandering centre of mass	6a5f2eb0	NASA,Earth,centre of mass,geodesy
+2026-10-10	Balakrishnan says Singapore must be able to say 'no' to both the US and China	dc4e53d1	vivian balakrishnan,singapore,us-china,milken asia summit
+2026-10-10	Ministerial pay benchmarks rise 60% as the PM's climbs to S$3.6 million from October 15	90679839	lawrence wong,singapore,ministerial pay,benchmark
+2026-10-10	Update: Indonesian haze keeps Singapore's air in the unhealthy band as Malaysia shuts schools	c0403338	singapore,haze,nea,indonesia,malaysia schools
+2026-10-10	Singaporean massage-parlour boss becomes third on a US 'worst criminal aliens' list	4fc6c431	jing emtage,singapore,dhs,criminal aliens list
+2026-10-10	India calls US Vice-President Vance's 'indentured servants' remark deeply offensive	bec82735	jd vance,india,mea,h-1b
+2026-10-10	US suspends Microsoft, Adobe and top Indian IT firms from a green-card labour programme	f994feba	perm,microsoft,infosys,tcs,india
+2026-10-10	Update: India's 'cockroach' movement says 10,000 detained as election-chief protests spread	7063d423	cockroach janta party,india,gyanesh kumar,election commission,protests
+2026-10-10	India's Supreme Court agrees to hear challenges to the Election Commission's voter-roll revision	28871088	supreme court,india,election commission,voter rolls
+2026-10-10	Update: Labour holds Starmer's old Holborn and St Pancras seat, beating the Greens	c6d64ea1	sagal abdi-wali,zack polanski,holborn and st pancras,labour,by-election
+2026-10-10	Greens' Zack Polanski vows to stay on as leader after the by-election defeat	0f5db337	zack polanski,green party,by-election,uk
+2026-10-10	Burnham pledges to ban non-compete clauses for startups ahead of the October Budget	6fff131f	andy burnham,uk,non-compete,budget,startups
+2026-10-10	Britain's Green Party classes Zionism as a form of racism, drawing cross-party criticism	445a0a6c	green party,zionism,uk,zack polanski
+2026-10-10	Navi Pillay, former UN rights chief, wins the 2026 Nobel Peace Prize	68d5cb00	navi pillay,nobel peace prize,united nations,gaza
+2026-10-10	Ukraine pushes Russia back in Donetsk as military and civilian casualties climb	c18fefe2	ukraine,russia,donetsk,war
+2026-10-10	Gaza ceasefire 'exists in name only', more than 100 aid groups say one year on	7e71ac82	gaza,ceasefire,aid groups,israel
+2026-10-10	Iran's Revolutionary Guard strikes a gas tanker near Hormuz as attacks hit Riyadh's airport	311eb18e	iran,revolutionary guard,strait of hormuz,riyadh,saudi arabia
+2026-10-10	China's Manus raises over $500 million in its first round since the Meta split	28012e21	manus,butterfly effect,meta,funding
+2026-10-10	Waymo locks in a $5 billion loan from Blackstone and PIMCO to expand its robotaxis	38c251f2	waymo,blackstone,pimco,robotaxi
+2026-10-10	Uber and China's Pony.ai plan to launch robotaxis in London	46c56993	uber,pony.ai,london,robotaxi
+2026-10-10	Cal AI's 19-year-old founder raises $10 million for a personal-AI startup, Persona	4c5d65b8	zach yadegari,cal ai,persona,vine ventures
+2026-10-10	Wall Street climbs into earnings season as the S&P 500 ends the week at 7,811	3233c208	s&p 500,dow,nasdaq,wall street
+2026-10-10	Treasury yields hold near 24-year highs as traders close a volatile week	ef22ccaa	treasury yields,bonds,federal reserve,10-year
+2026-10-10	Oil climbs as reports say the White House is weighing Iran strike options before the midterms	f9c9c5cf	oil,brent,iran,white house
+2026-10-10	Starbucks has explored a takeover of Chipotle, the Financial Times reports	737af8d2	starbucks,chipotle,acquisition,financial times
+2026-10-10	Verstappen beats Russell to pole for Singapore's first F1 sprint; Antonelli only seventh	65c4ffb6	max verstappen,george russell,kimi antonelli,singapore grand prix,f1 sprint
+2026-10-10	Stewards clear Verstappen over a yellow-flag incident, letting him keep sprint pole	325d729e	max verstappen,stewards,yellow flag,singapore grand prix
+2026-10-10	Hurkacz stuns China Open champion Djokovic in the Shanghai Masters second round	675e78f9	hubert hurkacz,novak djokovic,shanghai masters,tennis
+2026-10-10	Shai Hope's unbeaten 102 lifts West Indies to level the India T20I series 1-1	badca7fe	shai hope,west indies,india,t20i,ranchi
+2026-10-10	NASA's SpaceX Crew-12 splashes down off California after nearly eight months in orbit	8e24393a	nasa,crew-12,spacex,iss
+2026-10-10	Big dogs age faster than small ones, and 'jumping genes' may be to blame	aaeefb97	dog aging,epigenome,jumping genes,dog aging project
+2026-10-10	NASA releases the first science data and images from its Artemis II lunar flyby	9d7a34b0	nasa,artemis ii,moon,lunar science
+2026-10-10	NASA says Arctic sea ice hit its 2026 minimum, the 10th-lowest in the satellite record	90b733c9	nasa,arctic sea ice,nsidc,climate

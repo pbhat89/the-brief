@@ -254,6 +254,11 @@
       "date": "2026-10-09",
       "topic_key": "scorpion",
       "text": "Scorpions glow blue-green under ultraviolet light because compounds in their exoskeleton, including beta-carboline, fluoresce; field researchers hunt them at ni"
+    },
+    {
+      "date": "2026-10-10",
+      "topic_key": "venus",
+      "text": "A day on Venus is longer than its year: it rotates once in about 243 Earth days but orbits the Sun in about 225."
     }
   ],
   "puzzle_log": [
@@ -396,6 +401,11 @@
       "date": "2026-10-09",
       "type": "visual",
       "title_key": "through-the-looking-glass"
+    },
+    {
+      "date": "2026-10-10",
+      "type": "logic",
+      "title_key": "photo-finish"
     }
   ],
   "word_puzzle_log": [
@@ -538,6 +548,11 @@
       "date": "2026-10-09",
       "type": "grouping",
       "title_key": "common-threads"
+    },
+    {
+      "date": "2026-10-10",
+      "type": "ladder",
+      "title_key": "more-or-less"
     }
   ]
 }
