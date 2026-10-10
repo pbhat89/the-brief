@@ -3531,3 +3531,34 @@ is empty until the first run.
 2026-10-10	Big dogs age faster than small ones, and 'jumping genes' may be to blame	aaeefb97	dog aging,epigenome,jumping genes,dog aging project
 2026-10-10	NASA releases the first science data and images from its Artemis II lunar flyby	9d7a34b0	nasa,artemis ii,moon,lunar science
 2026-10-10	NASA says Arctic sea ice hit its 2026 minimum, the 10th-lowest in the satellite record	90b733c9	nasa,arctic sea ice,nsidc,climate
+2026-10-11	PM Wong says Singapore is not a cheap place to live but rules out price caps	d3fdc66b	lawrence wong,singapore,cost of living,price caps
+2026-10-11	Singaporean woman, 49, jailed 21 weeks for forcibly kissing two brothers	ac775337	singapore,court,assault,sentence
+2026-10-11	Singapore Airlines and Air India to run 126 weekly flights to eight Indian cities	1c82322e	singapore airlines,air india,flights,codeshare
+2026-10-11	Singapore film festival rejects a South Korean party's call to drop its opening film	b6d0934e	singapore international film festival,the assassins,south korea
+2026-10-11	Update: Delhi locked down and over 1,000 detained as anti-poll-chief protest peaks	13ae0571	new delhi,cockroach janta party,gyanesh kumar,detentions
+2026-10-11	Musk accuses 'oligarchs' of blocking Starlink in India; government rejects the claim	41f29139	elon musk,starlink,mukesh ambani,india
+2026-10-11	Indian artists face takedowns as election-chief satire is pulled under three-hour rules	d9cbbc76	india,censorship,instagram,satire
+2026-10-11	Maharashtra orders 10% household water cuts after its driest monsoon in over a decade	48049b8b	maharashtra,mumbai,water rationing,monsoon
+2026-10-11	Tensions surface in Burnham's cabinet over the UK's economic pain	54131d9d	andy burnham,uk cabinet,economy,budget
+2026-10-11	UK credit-card defaults rise for the longest stretch in 17 years	d7b613ed	bank of england,credit card defaults,uk,lenders
+2026-10-11	UK to publish US-style monthly inflation figures from early 2027	b72412a0	uk,inflation,ons,monthly figures
+2026-10-11	Bank of England's Bailey urges the government to restore fiscal credibility before the budget	b9081428	andrew bailey,bank of england,fiscal credibility,budget
+2026-10-11	US sanctions the International Criminal Court in a major escalation	81d1d04a	united states,icc,marco rubio,guterres
+2026-10-11	Canadian poet Anne Carson wins the 2026 Nobel Prize in Literature	b546ebbe	anne carson,nobel prize literature,swedish academy
+2026-10-11	Hurricane Simon strengthens to Category 4 off Mexico's Pacific coast	2c103175	hurricane simon,mexico,jalisco,pacific coast
+2026-10-11	Panama declares a state of emergency after powerful earthquakes	ee557a8f	panama,earthquake,penonome,state of emergency
+2026-10-11	SpaceX to buy 800 MHz spectrum to turn Starlink into a US mobile carrier	fe2f8db1	spacex,starlink,grain management,spectrum
+2026-10-11	Nvidia-backed Firmus pulls its $5.5 billion IPO as AI-funding appetite cools	26e56164	firmus,nvidia,ipo,ai funding
+2026-10-11	Microsoft's Nadella calls for an 'emergency brake' on AI systems	59d459f7	satya nadella,microsoft,ai safety
+2026-10-11	Recycling startup Danu Robotics raises $5 million to build better waste-sorting robots	392f0f62	danu robotics,recycling,robots,funding
+2026-10-11	Verizon suffers its worst day since 2002 as a SpaceX spectrum deal hits US carriers	c737cde5	verizon,t-mobile,at&t,spacex
+2026-10-11	Delta misses on earnings and cuts its outlook as its fuel bill jumps	69678b2b	delta air lines,earnings,fuel costs,guidance
+2026-10-11	Goldman Sachs set to lead a near-$19 billion Wall Street stock-trading quarter	328c16ec	goldman sachs,wall street banks,equities trading,earnings
+2026-10-11	SoftBank seeks up to $100 billion from Gulf investors for an AI buyout fund	24bcd35c	softbank,masayoshi son,gulf investors,ai fund
+2026-10-11	Verstappen wins the rain-hit inaugural Singapore Sprint as Russell crashes from the lead	ee9e1388	max verstappen,singapore sprint,george russell,f1
+2026-10-11	Verstappen takes pole for the Singapore Grand Prix, edging Leclerc by 0.054s	16add766	max verstappen,charles leclerc,singapore grand prix,pole
+2026-10-11	Zverev survives a Wu Yibing scare to reach the Shanghai Masters third round	6a22c5b3	alexander zverev,wu yibing,shanghai masters,tennis
+2026-10-11	Afghanistan and Bangladesh open their one-off Test in Abu Dhabi	2450fed0	afghanistan,bangladesh,abu dhabi test,rahmat shah
+2026-10-11	Hubble data hint at a planet that formed from a dying star	1f81e56b	hubble,white dwarf,second-generation planet,niobium
+2026-10-11	A molecular 'DNA Typewriter' reconstructs a mouse's development cell by cell	700fc9ab	dna typewriter,mouse embryo,lineage tracing,single cell
+2026-10-11	Webb captures a glowing stellar nursery alive with newborn stars	ad8d8a2c	james webb space telescope,ngc 7129,star formation,nasa
