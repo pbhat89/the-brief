@@ -3562,3 +3562,31 @@ is empty until the first run.
 2026-10-11	Hubble data hint at a planet that formed from a dying star	1f81e56b	hubble,white dwarf,second-generation planet,niobium
 2026-10-11	A molecular 'DNA Typewriter' reconstructs a mouse's development cell by cell	700fc9ab	dna typewriter,mouse embryo,lineage tracing,single cell
 2026-10-11	Webb captures a glowing stellar nursery alive with newborn stars	ad8d8a2c	james webb space telescope,ngc 7129,star formation,nasa
+2026-10-12	Singapore rolls out haze subsidies and N95 masks as air stays unhealthy	7abcfcb8	singapore,haze,haze subsidy scheme,nea
+2026-10-12	Two men arrested over trespassing at the Singapore Grand Prix	bc8823d9	singapore grand prix,trespass,arrest,f1
+2026-10-12	Singapore police flag scams as a woman, 63, loses S$4,000 to an impersonator	a3de533f	singapore,scam,impersonation,police
+2026-10-12	Italian man jailed eight years and caning for trafficking a Singaporean woman to Dubai	b4efdd0c	singapore,court,human trafficking,dubai
+2026-10-12	India frees detained protesters after the Supreme Court calls the crackdown illegal	edaa9ea6	india,cockroach janta party,supreme court,gyanesh kumar,protests
+2026-10-12	RBI opens a special oil-dollar window to defend the rupee near record lows	c777f1bc	reserve bank of india,rupee,oil dollar window,forex
+2026-10-12	Rupee hits record lows after the RBI's surprise rate hike and a weak monsoon	cd4c3a23	rupee,reserve bank of india,rate hike,monsoon
+2026-10-12	Burnham vows to release details of his Manchester City meetings	aa1248c4	andy burnham,manchester city,premier league,uk
+2026-10-12	UK Greens leader seeks a rule change after the party declared Zionism racism	19dd21a1	green party,zack polanski,zionism,uk
+2026-10-12	Trump announces a Russia-Ukraine energy ceasefire as Zelensky says Moscow keeps striking	7c79d47c	trump,russia,ukraine,energy ceasefire,zelensky
+2026-10-12	Hurricane Simon skirts Mexico's Pacific coast after flooding Manzanillo	52e2dc86	hurricane simon,mexico,manzanillo,pacific coast
+2026-10-12	Hurricane Isaias makes landfall on the US Gulf Coast before weakening	ef01d94f	hurricane isaias,united states,gulf coast,atlantic
+2026-10-12	UAE says a Flydubai co-pilot plotted a 9/11-style attack on Israel	9e88f05a	flydubai,uae,israel,ben gurion airport
+2026-10-12	OpenAI's revenue is reportedly $20 billion below projections as its IPO slips to 2027	b8193038	openai,revenue,ipo,ai
+2026-10-12	AI leaderboard LMArena raises $200 million at a $3.1 billion valuation	02b87710	lmarena,ai leaderboard,funding,valuation
+2026-10-12	Aurora and Kodiak win a US exemption to run driverless trucks	3b4d1a3d	aurora,kodiak,self-driving trucks,waymo
+2026-10-12	Vesta raises $30 million to bring AI agents to mortgage lenders	d8fc6432	vesta,ai agents,mortgage lenders,funding
+2026-10-12	Big US banks open a bumper third-quarter earnings season	59f203c4	us banks,earnings,jpmorgan,goldman sachs
+2026-10-12	Oil climbs on Houthi attacks on Saudi Arabia and a US-Russia diesel deal	8241758e	oil,brent crude,houthi,saudi arabia
+2026-10-12	Nvidia is in talks to back AI startup Reflection, the FT reports	45cabb25	nvidia,reflection ai,funding,financial times
+2026-10-12	Verstappen wins the Singapore Grand Prix for his first Marina Bay victory	a817201e	max verstappen,singapore grand prix,charles leclerc,f1
+2026-10-12	Hamilton apologises over a Ferrari strategy call at the Singapore Grand Prix	2968e440	lewis hamilton,ferrari,singapore grand prix,f1
+2026-10-12	Zverev reaches the Shanghai Masters last 16 for his 60th win of 2026	a9249ae3	alexander zverev,shanghai masters,tennis,quentin halys
+2026-10-12	India beat West Indies by 14 runs to lead the T20I series 2-1	551fdd54	india,west indies,t20i,abhishek sharma
+2026-10-12	Astronomers detect the oldest and most distant fast radio burst yet	fc21c1a9	fast radio burst,meerkat,astronomy,science
+2026-10-12	NASA's SPHEREx telescope captures a menagerie of brown dwarfs	ec5301b1	nasa,spherex,brown dwarfs,infrared
+2026-10-12	A Jurassic fossil reveals a platypus-like swimming mammal relative	3e81391f	megacauda sungei,jurassic,mammal,fossil
+2026-10-12	Startup unveils the first microbe designed for Mars, but experts are skeptical	626928c5	pioneer labs,mars,microbe,synthetic biology

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Mon, 12 October 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .wpuzzle-box{background:linear-gradient(135deg,#0e1a1a,#0d1620);border:1px solid #234a44;border-left:3px solid #16a085;padding:24px 28px;border-radius:2px}
+  .wptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#16a085;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .wpuzzle-box .puzzle-title{color:#cdeae3}
+  .wpuzzle-box .puzzle-how{color:#8fb8ac;background:#08140f;border-left-color:#1a6a5a}
+  .wpuzzle-box .puzzle-q{color:#dfeae6;font-family:'Source Sans 3',sans-serif}
+  .wpuzzle-box .answer{color:#bfe0d6}
+  .wpuzzle-box .answer .alabel{color:#16a085}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Monday, 12 October 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Monday, 12 October 2026 · 🔍 46 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eleven entries in this exact order:
+     id    : one of "sg" | "india" | "uk" | "geo" | "tech" | "biz" | "sports" | "misc" | "fun" | "puzzle" | "wpuzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 8 news tabs; fun/puzzle/wpuzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+
+   WORD_PUZZLE shape (separate, daily word game — NYT-style, static reveal):
+     type     : one of "Connections" | "Word Ladder" | "Anagram" | "Spelling Bee" | "Letter Boxed" | "Mini Crossword"
+     title    : short evocative name for the word puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle body; supports \n for line breaks (grids render as pre-formatted text)
+     answer   : the answer; supports \n for line breaks; appears inside its own toggle (id "wpans")
+============================================================================= */
+
+const SECTIONS = [
+  { id:"sg", title:"🇸🇬 Singapore", color:"#e74c3c", items:[
+    { headline:"Update: Singapore rolls out haze subsidies and N95 masks as air stays unhealthy", summary:"From 12 October, eligible Singaporeans can get subsidised treatment for haze-related conditions at all polyclinics and participating GP clinics under a new Haze Subsidy Scheme, as the reconvened Haze Task Force prepared to hand out N95 masks to vulnerable residents and warned the 24-hour PSI could enter the very unhealthy range above 200.", source:"Mothership", url:"https://mothership.sg/2026/10/haze-subsidies-clinics-2026/", date:"Oct 11", spectrum:null, bias:null },
+    { headline:"Two men arrested over trespassing at the Singapore Grand Prix", summary:"Police arrested two men over trespassing at the Formula 1 Singapore Grand Prix, after one, aged 39, allegedly used an invalid ticket to enter the event area and later reached a restricted zone meant for staff and artistes.", source:"Mothership", url:"https://mothership.sg/2026/10/2-men-arrested-f1/", date:"Oct 10", spectrum:null, bias:null },
+    { headline:"Singapore police flag scams as a woman, 63, loses S$4,000 to an impersonator", summary:"A 63-year-old Singaporean woman lost about S$4,000 in a scam, prompting the Bishan Neighbourhood Police Centre to post an advisory on 9 October warning of fraudsters impersonating staff from active-ageing centres.", source:"Mothership", url:"https://mothership.sg/2026/10/singapore-woman-lose-facebook-ad-scam-active-ageing-centre/", date:"Oct 9", spectrum:null, bias:null },
+    { headline:"Italian man jailed eight years and caning for trafficking a Singaporean woman to Dubai", summary:"A 32-year-old Italian man was sentenced in Singapore on 7 October to eight years in jail and caning for trafficking a Singaporean woman to Dubai and forcing her into sex work.", source:"Mothership", url:"https://mothership.sg/2026/10/italian-man-jailed-traffick-singaporean-woman-dubai/", date:"Oct 7", spectrum:null, bias:null },
+  ]},
+  { id:"india", title:"🇮🇳 India", color:"#e67e22", items:[
+    { headline:"Update: India frees detained protesters after the Supreme Court calls the crackdown illegal", summary:"India released thousands of detained anti-government protesters, including three Cockroach Janta Party leaders freed on Sunday, after the Supreme Court called the detentions illegal; opposition leader Rahul Gandhi was briefly held during a standoff at the Election Commission, and the youth-led movement vowed to keep demanding Chief Election Commissioner Gyanesh Kumar&rsquo;s resignation.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/10/11/indias-crackdown-on-youth-protesters-what-next", date:"Oct 11", spectrum:null, bias:null },
+    { headline:"RBI opens a special oil-dollar window to defend the rupee near record lows", summary:"The Reserve Bank of India let state-run oil companies buy dollars through a special window from Monday and tightened hedging rules, moving to ease pressure on the rupee, which is hovering near record lows.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-10-10/rbi-announces-special-oil-window-regulatory-steps-for-rupee", date:"Oct 10", spectrum:null, bias:null },
+    { headline:"Rupee hits record lows after the RBI&rsquo;s surprise rate hike and a weak monsoon", summary:"The rupee slid to around record lows and Indian equities fell after the Reserve Bank of India raised interest rates and signalled more tightening, while the weakest monsoon in more than a decade added to food-price and import-cost pressures.", source:"Bloomberg", url:"https://www.bloomberg.com/news/newsletters/2026-10-08/rupee-nears-record-low-even-as-rbi-signals-further-tightening", date:"Oct 8", spectrum:null, bias:null },
+  ]},
+  { id:"uk", title:"🇬🇧 UK News", color:"#3949ab", items:[
+    { headline:"Burnham vows to release details of his Manchester City meetings", summary:"Prime Minister Andy Burnham said he would publish details of his meetings with senior Manchester City figures, after criticism of his remarks on the club&rsquo;s guilty verdict for breaching the Premier League&rsquo;s financial rules.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-10-11/uk-s-burnham-vows-to-release-details-of-manchester-city-meetings", date:"Oct 11", spectrum:null, bias:null },
+    { headline:"Update: UK Greens leader seeks a rule change after the party declared Zionism racism", summary:"Green Party leader Zack Polanski said he would seek to change party rules after a conference motion classified Zionism as a form of racism, a decision that has drawn cross-party criticism and continued to shadow the party after the Holborn and St Pancras by-election.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/10/11/uk-greens-leader-seeks-rule-change-after-party-declares-zionism-is-racism", date:"Oct 11", spectrum:null, bias:null },
+  ]},
+  { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
+    { headline:"Trump announces a Russia-Ukraine energy ceasefire as Zelensky says Moscow keeps striking", summary:"US President Donald Trump said on Sunday that Russia and Ukraine had agreed to an energy ceasefire halting strikes on each other&rsquo;s power infrastructure; President Volodymyr Zelensky said Ukraine backed the truce but that Russia had continued to hit facilities in Kyiv and the Kharkiv region, and offered to stop attacks on Russian refineries if Moscow complied.", source:"CNN", url:"https://www.cnn.com/2026/10/11/politics/trump-ukraine-russia-energy-ceasefire", date:"Oct 11", spectrum:null, bias:null },
+    { headline:"Update: Hurricane Simon skirts Mexico&rsquo;s Pacific coast after flooding Manzanillo", summary:"Hurricane Simon tracked just off Mexico&rsquo;s Pacific coast on Sunday and was expected to remain offshore into Monday after flooding homes in Manzanillo; Mexico&rsquo;s Navy deployed more than 4,600 personnel and authorities urged residents of several Pacific states to shelter.", source:"CNN", url:"https://www.cnn.com/2026/10/11/americas/mexico-hurricane-simon-intl-latam", date:"Oct 11", spectrum:null, bias:null },
+    { headline:"Hurricane Isaias makes landfall on the US Gulf Coast before weakening", summary:"Hurricane Isaias, the first hurricane of the Atlantic season to strike the United States, made landfall on the Gulf Coast before weakening, after forming in the Gulf earlier in the week amid warnings it could disrupt US oil refining.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/10/10/isaias-weakens-after-making-landfall-in-us-gulf-coast-as-hurricane", date:"Oct 10", spectrum:null, bias:null },
+    { headline:"UAE says a Flydubai co-pilot plotted a 9/11-style attack on Israel", summary:"UAE prosecutors said a Flydubai co-pilot had planned a premeditated terrorist attack, drawing inspiration from the 9/11 attacks, aiming to crash a Tel Aviv-bound jet into the passenger terminal at Ben Gurion Airport; the 30 September flight, carrying 174 people, was saved by the crew and landed in Saudi Arabia.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/10/9/flydubai-co-pilot-plotted-suicide-attack-on-israel-uae-says", date:"Oct 9", spectrum:null, bias:null },
+  ]},
+  { id:"tech", title:"💻 Tech & AI", color:"#27ae60", items:[
+    { headline:"OpenAI&rsquo;s revenue is reportedly $20 billion below projections as its IPO slips to 2027", summary:"OpenAI&rsquo;s annualised revenue is running about $20 billion below an earlier $70 billion projection, according to a report, with the company said to have pushed any public listing to early 2027.", source:"TechCrunch", url:"https://techcrunch.com/2026/10/08/openais-revenue-is-reportedly-20-billion-less-than-previously-projected", date:"Oct 8", spectrum:null, bias:null },
+    { headline:"AI leaderboard LMArena raises $200 million at a $3.1 billion valuation", summary:"LMArena, which runs the popular crowd-sourced AI model leaderboard, raised a $200 million Series B led by Lightspeed and Khosla Ventures, nearly doubling its valuation to about $3.1 billion in 10 months.", source:"TechCrunch", url:"https://techcrunch.com/2026/10/08/popular-ai-leaderboard-arena-nearly-doubles-valuation-to-3-1b-valuation-in-10-months/", date:"Oct 8", spectrum:null, bias:null },
+    { headline:"Aurora and Kodiak win a US exemption to run driverless trucks", summary:"US regulators granted Aurora and Kodiak a federal exemption clearing a regulatory roadblock for self-driving trucks, in the same week Waymo took its first debt financing, a $5 billion raise, to fund expansion.", source:"TechCrunch", url:"https://techcrunch.com/2026/10/11/techcrunch-mobility-a-roadblock-clears-for-self-driving-trucks", date:"Oct 11", spectrum:null, bias:null },
+    { headline:"Vesta raises $30 million to bring AI agents to mortgage lenders", summary:"Vesta raised $30 million, led by Conversion Capital, to deploy teams of AI agents at mortgage lenders, part of a wave of startups selling automation to financial-services firms.", source:"TechCrunch", url:"https://techcrunch.com/2026/10/08/vesta-raises-30m-as-lenders-adopt-ai-agents/", date:"Oct 8", spectrum:null, bias:null },
+  ]},
+  { id:"biz", title:"📈 Business & Markets", color:"#8e44ad", items:[
+    { headline:"Big US banks open a bumper third-quarter earnings season", summary:"JPMorgan, Goldman Sachs, Citigroup, Morgan Stanley, Bank of America and Wells Fargo are all due to report this week, kicking off a third-quarter US earnings season that analysts expect to show strong year-on-year profit growth.", source:"CNBC", url:"https://www.cnbc.com/2026/10/11/stock-market-today-live-updates.html", date:"Oct 11", spectrum:null, bias:null },
+    { headline:"Oil climbs on Houthi attacks on Saudi Arabia and a US-Russia diesel deal", summary:"Oil prices rose, with Brent crude trading around $105 a barrel, as markets weighed Houthi attacks on Saudi Arabia and a controversial US-brokered arrangement to keep Russian diesel flowing to global markets.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-10-11/oil-rises-on-mideast-attacks-dollar-edges-higher-markets-wrap", date:"Oct 11", spectrum:null, bias:null },
+    { headline:"Nvidia is in talks to back AI startup Reflection, the FT reports", summary:"Nvidia is in early talks to invest in or provide computing power to Reflection AI, the Financial Times reported, in the latest sign of the chipmaker funnelling capital into the AI startups that buy its chips.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-10-10/nvidia-is-in-talks-to-acquire-reflection-ai-the-ft-reports", date:"Oct 10", spectrum:null, bias:null },
+  ]},
+  { id:"sports", title:"🎾🏏🏎️ Sports", color:"#c0392b", items:[
+    { headline:"🏎️ Verstappen wins the Singapore Grand Prix for his first Marina Bay victory", summary:"Max Verstappen won the Singapore Grand Prix for the first time, on his 250th race start, finishing 7.3 seconds clear of Ferrari&rsquo;s Charles Leclerc, with Mercedes&rsquo; Kimi Antonelli third &mdash; a podium that extended Antonelli&rsquo;s championship lead; Lando Norris and Oscar Piastri were fourth and fifth.", source:"Formula1.com", url:"https://www.formula1.com/en/latest/article/verstappen-seals-commanding-singapore-grand-prix-victory-from-leclerc-and-antonelli.49wDzysiVqi5cloGjle40A", date:"Oct 11", spectrum:null, bias:null },
+    { headline:"🏎️ Hamilton apologises over a Ferrari strategy call at the Singapore Grand Prix", summary:"Lewis Hamilton apologised over a Ferrari strategy call at the Singapore Grand Prix, where the team finished second through Charles Leclerc but could not challenge winner Max Verstappen.", source:"Sky Sports F1", url:"https://www.skysports.com/f1/news/13597650/singapore-gp-max-verstappen-wins-event-for-first-time-in-f1-career-ahead-of-charles-leclerc-as-lewis-hamilton-apologises-for-strategy", date:"Oct 11", spectrum:null, bias:null },
+    { headline:"🎾 Zverev reaches the Shanghai Masters last 16 for his 60th win of 2026", summary:"Top seed Alexander Zverev beat Quentin Halys 6-4, 6-7 (8), 6-3 to reach the Shanghai Masters round of 16 and, by the ATP&rsquo;s count, record his 60th match win of 2026; he next faces Alexander Bublik.", source:"ATP Tour", url:"https://www.atptour.com/en/news/zverev-halys-shanghai-2026-sunday", date:"Oct 11", spectrum:null, bias:null },
+    { headline:"🏏 India beat West Indies by 14 runs to lead the T20I series 2-1", summary:"India beat West Indies by 14 runs in the third T20I at Indore, posting 223 and restricting the tourists to 209 for 7; Abhishek Sharma made 69 and Arshdeep Singh took 3 for 44 as India moved 2-1 up in the five-match series.", source:"ESPNcricinfo", url:"https://www.cricinfo.com/series/west-indies-in-india-2026-27-1529215/india-vs-west-indies-3rd-t20i-1529232/match-report", date:"Oct 11", spectrum:null, bias:null },
+  ]},
+  { id:"misc", title:"🔬 Other Miscellaneous News", color:"#1abc9c", items:[
+    { headline:"Astronomers detect the oldest and most distant fast radio burst yet", summary:"Astronomers using South Africa&rsquo;s MeerKAT array reported the most distant fast radio burst found to date, a millisecond flash from a galaxy at redshift 2.1 &mdash; about 3 billion years after the Big Bang &mdash; that could help map the diffuse matter between galaxies. The findings were published in Science.", source:"Scientific American", url:"https://www.scientificamerican.com/article/astronomers-discover-record-breaking-ancient-cosmic-outburst/", date:"Oct 8", spectrum:null, bias:null },
+    { headline:"NASA&rsquo;s SPHEREx telescope captures a menagerie of brown dwarfs", summary:"NASA said its SPHEREx space telescope, which is mapping the whole sky in infrared, had imaged a varied population of brown dwarfs &mdash; objects too big to be planets but too small to sustain the hydrogen fusion that powers stars.", source:"NASA", url:"https://www.nasa.gov/missions/spherex/nasas-spherex-telescope-sees-menagerie-of-brown-dwarfs/", date:"Oct 8", spectrum:null, bias:null },
+    { headline:"A Jurassic fossil reveals a platypus-like swimming mammal relative", summary:"Researchers described Megacauda sungei, a roughly 165-million-year-old mammal relative from Inner Mongolia with a broad, flattened tail and a platypus-like, water-foraging lifestyle; its preserved throat anatomy suggests the ability to suckle and swallow evolved in early mammal ancestors. The work appeared in Nature.", source:"Nature", url:"https://www.nature.com/articles/s41586-026-11107-0", date:"Oct 7", spectrum:null, bias:null },
+    { headline:"Startup unveils the first microbe designed for Mars, but experts are skeptical", summary:"The nonprofit Pioneer Labs said it had engineered the first microbe for Mars, sPL.001, designed to turn Martian dirt, water and carbon dioxide into bioplastic inside a bioreactor; outside scientists cautioned that it is a manufacturing tool rather than a step toward terraforming and cannot survive outside the reactor.", source:"Scientific American", url:"https://www.scientificamerican.com/article/can-bioengineered-bacteria-help-terraform-mars/", date:"Oct 2", spectrum:null, bias:null },
+  ]},
+  { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
+  { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
+  { id:"wpuzzle", title:"🔤 Word Puzzles", color:"#16a085", custom:"wpuzzle" },
+];
+
+const FUN_FACT = {
+  text: "The word &ldquo;OK&rdquo; &mdash; probably the most spoken word on Earth &mdash; began as a joke. It first appeared in print in The Boston Morning Post on 23 March 1839 as a deliberately misspelled abbreviation of &ldquo;oll korrect&rdquo; (all correct). Its survival was cemented a year later by Martin Van Buren&rsquo;s 1840 re-election campaign, which nicknamed him &ldquo;Old Kinderhook&rdquo; and set up &ldquo;OK Clubs&rdquo;.",
+  tag: "Category · Language & Etymology"
+};
+
+const PUZZLE = {
+  type: "Lateral Thinking",
+  title: "Four Anglers, Three Fish",
+  how: "Count the people, not the roles &mdash; one person can fill more than one.",
+  question: "Two fathers and two sons spend the afternoon fishing. Each of them catches exactly one fish and takes it home, yet the family brings home only three fish. None was lost, thrown back, or eaten.\n\nHow can that be?",
+  answer: "There were only three people fishing: a grandfather, his son, and his grandson.\n\nThe grandfather and his son are the &lsquo;two fathers&rsquo;; the son and the grandson are the &lsquo;two sons&rsquo;. The man in the middle counts as both a father and a son, so three people fill all four roles &mdash; and three fish come home."
+};
+
+const WORD_PUZZLE = {
+  type: "Spelling Bee",
+  title: "Deep End",
+  how: "Every word must use the centre letter O and only the seven letters shown; letters may repeat. One word uses all seven.",
+  question: "Centre letter:  O  (must appear in every word)\nOuter letters:  D · L · P · H · I · N\n\nMake as many words of four or more letters as you can. Every word must contain O and use only these seven letters (letters may repeat). One word — the pangram — uses all seven.\n\nTarget: the pangram plus at least 10 more.",
+  answer: "Pangram: DOLPHIN\n\nOther valid words (10+): HOLD · IDOL · LION · LOIN · POLO · POND · POOL · LOON · NOON · HOOD · HOOP · PLOD · HIPPO\n\nAny dictionary word of four or more letters that contains O and uses only the letters D, O, L, P, H, I, N also counts."
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function renderWordPuzzle(){
+  let h='<div class="sec-title">🔤 Word Puzzle of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#16a085,transparent)"></div>';
+  h+='<div class="wpuzzle-box"><span class="wptype">'+WORD_PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+WORD_PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+WORD_PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+WORD_PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this,\'wpans\')">Show Answer</button>';
+  h+='<div class="answer" id="wpans"><span class="alabel">Answer</span>'+WORD_PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn,ansId){var a=document.getElementById(ansId||'ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else if(sec.custom==="wpuzzle"){div.innerHTML=renderWordPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>

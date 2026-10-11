@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-08-12",
-      "topic_key": "banana",
-      "text": "Bananas are naturally radioactive"
-    },
-    {
       "date": "2026-08-13",
       "topic_key": "roman concrete",
       "text": "Roman concrete self-heals: lime clasts react with water to reform calcium carbonate and seal cracks."
@@ -259,14 +254,14 @@
       "date": "2026-10-11",
       "topic_key": "hawaiian pizza",
       "text": "Hawaiian pizza was invented in Canada by Sam Panopoulos (1962), not in Hawaii or the US."
+    },
+    {
+      "date": "2026-10-12",
+      "topic_key": "ok",
+      "text": "The word OK began as an 1839 joke spelling of 'oll korrect' (all correct)."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-09-11",
-      "type": "logic",
-      "title_key": "card-on-the-table"
-    },
     {
       "date": "2026-09-12",
       "type": "quantitative",
@@ -411,14 +406,14 @@
       "date": "2026-10-11",
       "type": "quantitative",
       "title_key": "two-candles"
+    },
+    {
+      "date": "2026-10-12",
+      "type": "lateral",
+      "title_key": "four-anglers-three-fish"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-09-11",
-      "type": "spellingbee",
-      "title_key": "grand-entrance"
-    },
     {
       "date": "2026-09-12",
       "type": "letterboxed",
@@ -563,6 +558,11 @@
       "date": "2026-10-11",
       "type": "anagram",
       "title_key": "hidden-meanings"
+    },
+    {
+      "date": "2026-10-12",
+      "type": "spellingbee",
+      "title_key": "deep-end"
     }
   ]
 }
