@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-08-13",
-      "topic_key": "roman concrete",
-      "text": "Roman concrete self-heals: lime clasts react with water to reform calcium carbonate and seal cracks."
-    },
-    {
       "date": "2026-08-14",
       "topic_key": "googol",
       "text": "A googol (10^100) is larger than the number of atoms in the observable universe (~10^80)."
@@ -259,14 +254,14 @@
       "date": "2026-10-12",
       "topic_key": "ok",
       "text": "The word OK began as an 1839 joke spelling of 'oll korrect' (all correct)."
+    },
+    {
+      "date": "2026-10-13",
+      "topic_key": "bluetooth",
+      "text": "Bluetooth wireless technology is named after Harald 'Bluetooth' Gormsson, the 10th-century Danish king who unified Denma"
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-09-12",
-      "type": "quantitative",
-      "title_key": "broken-clock"
-    },
     {
       "date": "2026-09-13",
       "type": "lateral",
@@ -411,14 +406,14 @@
       "date": "2026-10-12",
       "type": "lateral",
       "title_key": "four-anglers-three-fish"
+    },
+    {
+      "date": "2026-10-13",
+      "type": "visual",
+      "title_key": "gear-train"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-09-12",
-      "type": "letterboxed",
-      "title_key": "boxed-in"
-    },
     {
       "date": "2026-09-13",
       "type": "grouping",
@@ -563,6 +558,11 @@
       "date": "2026-10-12",
       "type": "spellingbee",
       "title_key": "deep-end"
+    },
+    {
+      "date": "2026-10-13",
+      "type": "letterboxed",
+      "title_key": "full-dozen"
     }
   ]
 }

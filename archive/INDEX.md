@@ -3590,3 +3590,35 @@ is empty until the first run.
 2026-10-12	NASA's SPHEREx telescope captures a menagerie of brown dwarfs	ec5301b1	nasa,spherex,brown dwarfs,infrared
 2026-10-12	A Jurassic fossil reveals a platypus-like swimming mammal relative	3e81391f	megacauda sungei,jurassic,mammal,fossil
 2026-10-12	Startup unveils the first microbe designed for Mars, but experts are skeptical	626928c5	pioneer labs,mars,microbe,synthetic biology
+2026-10-13	WP MP Jamus Lim hospitalised with pneumonia after a bout of influenza	58940d71	jamus lim,workers party,singapore,pneumonia
+2026-10-13	Singapore may shut schools if next-day PSI is forecast to top 300 as haze bites	bf8019fa	singapore,haze,moe,desmond lee,psi
+2026-10-13	Singapore's 2026 Grand Prix drew 301,294 fans, the second-highest crowd on record	5debb304	singapore grand prix,attendance,f1,record
+2026-10-13	Chinese tourist's Louis Vuitton bag stolen at Gardens by the Bay by a fake helper	7cc56e59	singapore,gardens by the bay,theft,tourist
+2026-10-13	India's retail inflation jumps to 5.54% in September, above forecasts	6f444b5b	india,inflation,cpi,reserve bank of india
+2026-10-13	Reliance's Jio sets IPO price band for what will be India's largest-ever listing	bff76c2f	reliance,jio platforms,mukesh ambani,ipo
+2026-10-13	Update: Rupee rebounds as the RBI draws a line in the sand at 97 per dollar	9eeeace0	rupee,reserve bank of india,forex,dollar
+2026-10-13	Update: India's opposition marches to the Supreme Court to demand the election chief's removal	3a564ba6	india,congress,supreme court,gyanesh kumar,election commission
+2026-10-13	Burnham blames Iran for an RAF Fairford plot and sanctions two Iranians	2e0842d6	andy burnham,iran,raf fairford,irgc,sanctions
+2026-10-13	Burnham tells MPs Britain will renegotiate parts of its post-Brexit deal with the EU	91186913	andy burnham,brexit,european union,uk
+2026-10-13	Burnham and Healey meet business leaders ahead of a tough October budget	248b94c6	andy burnham,john healey,uk budget,business
+2026-10-13	Burnham races to plug a multi-billion-pound hole in his flagship care plan	e48ff35c	andy burnham,uk,social care,funding
+2026-10-13	Houthis strike Riyadh's main airport again as Trump weighs joining the fight	5ee116d6	houthis,riyadh airport,saudi arabia,trump
+2026-10-13	Nobel economics prize goes to Robert Hall and Michael Woodford	5e9538f2	nobel prize,economics,robert hall,michael woodford
+2026-10-13	Update: Zelensky says Russia already broke Trump's surprise energy ceasefire	dd859ffe	zelensky,russia,ukraine,trump,energy ceasefire
+2026-10-13	Pope Leo XIV to have surgery to remove an early-stage lung nodule	6f7b7021	pope leo xiv,vatican,surgery,lung nodule
+2026-10-13	Meta releases Muse Wonder, its first frontier AI model	8a3abab1	meta,muse wonder,frontier model,ai
+2026-10-13	Google brings agentic AI to Gemini, starting with business customers	b417c8c8	google,gemini,agentic ai,sundar pichai
+2026-10-13	Google opens a public SynthID site to flag AI-generated media	c373b1f5	google,synthid,ai watermarking,deepfakes
+2026-10-13	Asos confirms a customer-data breach after hackers hijack its app alerts	d2e9956d	asos,data breach,cybersecurity,hackers
+2026-10-13	US stocks waver before bank earnings as a chip selloff drags the Nasdaq	a5cb732e	us stocks,s&p 500,nasdaq,bank earnings,chips
+2026-10-13	Update: Oil holds near $107 Brent as an expanding Middle East war threatens supply	fde89edc	oil,brent crude,middle east,supply
+2026-10-13	US mortgage-bond funds suffer one of their worst outflows since 2021	c5339315	mortgage bonds,treasury yields,outflows,bonds
+2026-10-13	Paramount Skydance completes its roughly $110 billion Warner Bros. Discovery takeover	0f246b14	paramount skydance,warner bros discovery,merger,hollywood
+2026-10-13	Antonelli closes on the F1 title and can clinch it at the US Grand Prix in Austin	d7efe698	kimi antonelli,f1,us grand prix,championship
+2026-10-13	Bergs stuns Alcaraz in Shanghai, securing year-end No. 1 for Zverev	91c23872	zizou bergs,carlos alcaraz,alexander zverev,shanghai masters
+2026-10-13	Tsitsipas beats Fritz to set up a Shanghai fourth-round clash with Medvedev	8c3c6b03	stefanos tsitsipas,taylor fritz,daniil medvedev,shanghai masters
+2026-10-13	Arthur Gea upsets Ben Shelton to reach the Shanghai fourth round	f8ce4dbb	arthur gea,ben shelton,shanghai masters,tennis
+2026-10-13	Physicists build the first working thorium-229 nuclear clock	7d0f1cd3	thorium-229,nuclear clock,tu wien,physics
+2026-10-13	Mathematicians unveil a 3D 'einstein' tile that fills space without repeating	d7e43ab8	einstein tile,aperiodic monotile,mathematics,chair44
+2026-10-13	A new brain study probes why cannabis can trigger paranoia	f78d01c4	cannabis,paranoia,brain study,thc
+2026-10-13	Woody 'blankets' are laid on Arctic permafrost to keep its carbon locked away	58288d36	permafrost,carbon emissions,permac,climate
