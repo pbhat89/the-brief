@@ -3622,3 +3622,36 @@ is empty until the first run.
 2026-10-13	Mathematicians unveil a 3D 'einstein' tile that fills space without repeating	d7e43ab8	einstein tile,aperiodic monotile,mathematics,chair44
 2026-10-13	A new brain study probes why cannabis can trigger paranoia	f78d01c4	cannabis,paranoia,brain study,thc
 2026-10-13	Woody 'blankets' are laid on Arctic permafrost to keep its carbon locked away	58288d36	permafrost,carbon emissions,permac,climate
+2026-10-14	All three public healthcare clusters hit by a day-long IT disruption	3a9a3f5e	singapore,synapxe,public healthcare,it disruption
+2026-10-14	LTA pauses its self-driving public bus pilot to focus on narrower uses first	5cf61e0e	singapore,lta,self-driving bus,pilot
+2026-10-14	Singapore Airlines and Scoot to put over 380,000 discounted tickets on sale	d7a12cce	singapore,singapore airlines,scoot,ticket sale
+2026-10-14	Update: Modi hails India as the 'mother of democracy' as the voter-roll fight reaches the top court	1c20525f	india,modi,supreme court,gyanesh kumar,election commission
+2026-10-14	India-US trade talks are 'heading in the right direction', Jaishankar says	27460bd9	india,jaishankar,united states,trade talks
+2026-10-14	Indian bonds face a double blow from the rupee defence and high inflation	b72d5e83	india,bonds,rupee,inflation,rbi
+2026-10-14	Indian stocks climb 1.6% as Sitharaman signals more RBI steps to steady the rupee	87c30f59	india,sitharaman,stocks,rupee,rbi
+2026-10-14	Court rules the warrants used to raid former Prince Andrew were unlawful	0574c7d4	uk,prince andrew,search warrants,thames valley police,court
+2026-10-14	UK banks lobby against a windfall tax as Healey's first budget nears	07df4760	uk,john healey,banks,windfall tax,budget
+2026-10-14	Update: Burnham met Manchester City's chairman at an investment summit as mayor	d7b6c52a	uk,andy burnham,manchester city,khaldoon al mubarak
+2026-10-14	Burnham says it is 'clear' Russia interfered in the 2016 Brexit vote	96214cfd	uk,andy burnham,russia,brexit,eu
+2026-10-14	Update: Houthis strike Saudi Aramco's Dhahran offices as Riyadh's airport is hit again	064747c1	houthis,saudi aramco,dhahran,riyadh airport,trump
+2026-10-14	White House asks ambassador Kimberly Guilfoyle to resign over misconduct claims	c2c2b6d7	white house,kimberly guilfoyle,greece,ambassador
+2026-10-14	Sweden's centre-left leader Andersson fails in a second bid to form a government	adcd433a	sweden,magdalena andersson,government formation
+2026-10-14	A US trial opens for a Rwandan-American accused of hiding his role in the 1994 genocide	631a6117	united states,rwanda,genocide,boston trial
+2026-10-14	Update: Trump insists his energy ceasefire holds as Ukraine reports fresh Russian strikes	9bbf8638	trump,russia,ukraine,energy ceasefire
+2026-10-14	Cambridge Heavy Industries reveals it is building a desktop fusion device	6aa607fa	cambridge heavy industries,fusion,azolla ventures,startup
+2026-10-14	WindBorne wins a US Air Force deal worth up to $50 million for weather-balloon data	a6fc65bd	windborne,us air force,weather balloons,ai
+2026-10-14	Uber and China's Pony.ai plan to launch robotaxis in London	46c56993	uber,pony.ai,robotaxi,london
+2026-10-14	An AI startup says it can generate permit-ready building blueprints in minutes	fc770a10	ai,construction,blueprints,startup
+2026-10-14	Recycling-robot startup Danu Robotics races to sort waste more accurately	54774c33	danu robotics,recycling,robot,startup
+2026-10-14	JPMorgan posts a rare quarterly earnings miss on weaker bond trading	d95df5e5	jpmorgan,earnings,fixed income,banks
+2026-10-14	Goldman Sachs beats estimates on record advisory and surging equities trading	f238f04e	goldman sachs,earnings,equities trading,advisory
+2026-10-14	Wells Fargo tops profit estimates as loan losses stay contained	3a661229	wells fargo,earnings,loan losses,banks
+2026-10-14	Update: S&P 500 ends near flat as big banks report and memory chips slide	94df2f57	s&p 500,memory chips,micron,bank earnings
+2026-10-14	Delta delays its new Riyadh route as Houthi attacks batter the Saudi capital	0dc451cc	delta air lines,riyadh,houthi,aviation
+2026-10-14	Zverev saves four set points to beat Bublik and reach the Shanghai quarters	a448b02c	alexander zverev,alexander bublik,shanghai masters,tennis
+2026-10-14	Davidovich Fokina ends Hurkacz's nine-match Shanghai streak	27164962	davidovich fokina,hurkacz,shanghai masters,tennis
+2026-10-14	Arthur Gea upsets Mensik to reach the Shanghai quarter-finals	c00bb5b7	arthur gea,jakub mensik,shanghai masters,tennis
+2026-10-14	Australia beat South Africa by 214 runs in the first Durban Test	5d5ef669	australia,south africa,durban test,cricket
+2026-10-14	China aims to beat the US in the race to bring Mars rocks home	ac0cb74a	china,mars sample return,tianwen-3,nasa
+2026-10-14	Astronomers catch dwarf stars devouring their orbiting companions	d25a1ec0	dwarf stars,white dwarf,nature astronomy,astronomy
+2026-10-14	Could nature's 'constants' be shifting, and point to hidden dimensions?	705b7129	fundamental constants,hidden dimensions,physics,cosmology

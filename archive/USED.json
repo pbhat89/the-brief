@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-08-14",
-      "topic_key": "googol",
-      "text": "A googol (10^100) is larger than the number of atoms in the observable universe (~10^80)."
-    },
-    {
       "date": "2026-08-15",
       "topic_key": "oxford university",
       "text": "The University of Oxford is older than the Aztec Empire."
@@ -259,14 +254,14 @@
       "date": "2026-10-13",
       "topic_key": "bluetooth",
       "text": "Bluetooth wireless technology is named after Harald 'Bluetooth' Gormsson, the 10th-century Danish king who unified Denma"
+    },
+    {
+      "date": "2026-10-14",
+      "topic_key": "russia",
+      "text": "Russia spans 11 time zones, from Kaliningrad to Chukotka - more than any other country."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-09-13",
-      "type": "lateral",
-      "title_key": "seventh-floor"
-    },
     {
       "date": "2026-09-14",
       "type": "visual",
@@ -411,14 +406,14 @@
       "date": "2026-10-13",
       "type": "visual",
       "title_key": "gear-train"
+    },
+    {
+      "date": "2026-10-14",
+      "type": "logic",
+      "title_key": "truth-in-threes"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-09-13",
-      "type": "grouping",
-      "title_key": "tails-you-win"
-    },
     {
       "date": "2026-09-14",
       "type": "ladder",
@@ -563,6 +558,11 @@
       "date": "2026-10-13",
       "type": "letterboxed",
       "title_key": "full-dozen"
+    },
+    {
+      "date": "2026-10-14",
+      "type": "grouping",
+      "title_key": "royal-flush"
     }
   ]
 }
