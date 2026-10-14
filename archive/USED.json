@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-08-15",
-      "topic_key": "oxford university",
-      "text": "The University of Oxford is older than the Aztec Empire."
-    },
-    {
       "date": "2026-08-16",
       "topic_key": "great red spot",
       "text": "Jupiter's Great Red Spot is larger than Earth"
@@ -259,14 +254,14 @@
       "date": "2026-10-14",
       "topic_key": "russia",
       "text": "Russia spans 11 time zones, from Kaliningrad to Chukotka - more than any other country."
+    },
+    {
+      "date": "2026-10-15",
+      "topic_key": "africa",
+      "text": "Africa is the only continent that lies in all four hemispheres."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-09-14",
-      "type": "visual",
-      "title_key": "count-the-squares"
-    },
     {
       "date": "2026-09-15",
       "type": "logic",
@@ -411,14 +406,14 @@
       "date": "2026-10-14",
       "type": "logic",
       "title_key": "truth-in-threes"
+    },
+    {
+      "date": "2026-10-15",
+      "type": "quantitative",
+      "title_key": "cutting-the-chain"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-09-14",
-      "type": "ladder",
-      "title_key": "cooling-off"
-    },
     {
       "date": "2026-09-15",
       "type": "anagram",
@@ -563,6 +558,11 @@
       "date": "2026-10-14",
       "type": "grouping",
       "title_key": "royal-flush"
+    },
+    {
+      "date": "2026-10-15",
+      "type": "ladder",
+      "title_key": "raining-cats-and-dogs"
     }
   ]
 }

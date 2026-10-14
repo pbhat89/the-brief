@@ -3655,3 +3655,37 @@ is empty until the first run.
 2026-10-14	China aims to beat the US in the race to bring Mars rocks home	ac0cb74a	china,mars sample return,tianwen-3,nasa
 2026-10-14	Astronomers catch dwarf stars devouring their orbiting companions	d25a1ec0	dwarf stars,white dwarf,nature astronomy,astronomy
 2026-10-14	Could nature's 'constants' be shifting, and point to hidden dimensions?	705b7129	fundamental constants,hidden dimensions,physics,cosmology
+2026-10-15	Singapore starts handing out N95 masks as haze pushes the PSI into the unhealthy range	f89677b0	singapore,haze,n95 masks,psi,community clubs
+2026-10-15	MOE will consider closing schools only if the next-day PSI forecast tops 300	4ffa68cf	singapore,moe,desmond lee,schools,haze,psi
+2026-10-15	Workers' Party MP Jamus Lim is in hospital with pneumonia	63575e74	singapore,jamus lim,workers party,sengkang,pneumonia
+2026-10-15	Car and Go-Ahead bus collide near the National Museum, no injuries	2d72e2d3	singapore,go-ahead,bus collision,national museum
+2026-10-15	IMF lifts India's growth forecast to 7% in its October outlook	4d65e8e9	india,imf,world economic outlook,growth forecast
+2026-10-15	India's retail inflation jumps to a 22-month high of 5.54% in September	0dc6a1c8	india,retail inflation,cpi,rbi,food inflation
+2026-10-15	Burnham condemns the Greens' Zionism-is-racism motion and urges them to reverse it	60632647	uk,andy burnham,green party,zionism motion,zack polanski
+2026-10-15	UK blames Iran's IRGC for the RAF Fairford plot and sanctions two Iranians	8712c8e8	uk,iran,irgc,raf fairford,sanctions
+2026-10-15	Wealthy Britons rush to lock in gains before Healey's first Budget	1814c8db	uk,john healey,budget,capital gains tax
+2026-10-15	Government signals carbon-capture subsidy cuts as the Budget nears	7bd4ab41	uk,carbon capture,martin mccluskey,budget,subsidies
+2026-10-15	Former army chef jailed over a terror-related offence	908c58f2	uk,mark broadhurst,sheffield crown court,terror offence
+2026-10-15	France's student protests force a suspension of police stun grenades	545c920e	france,student protests,schools,lecornu,stun grenades
+2026-10-15	Alberta votes on 19 October on whether to pursue leaving Canada	cecde0b3	canada,alberta,mark carney,secession referendum,danielle smith
+2026-10-15	Russia detains a Japanese journalist in Sakhalin on espionage charges	f6ae5e03	russia,japan,hokkaido shimbun,espionage,sakhalin
+2026-10-15	Americans Robert Hall and Michael Woodford win the 2026 Nobel economics prize	afb29aeb	nobel prize,economics,robert hall,michael woodford
+2026-10-15	Bangladesh arrests two over a scheme to send locals to fight for Russia	bd55ae12	bangladesh,russia,ukraine,recruitment,arrests
+2026-10-15	Apple enters the smart home with a $299 HomeView hub	2cd81c56	apple,homeview,smart home,homepod mini
+2026-10-15	Meta releases Muse Wonder, its first frontier AI model	8a3abab1	meta,muse wonder,frontier model,ai
+2026-10-15	Scimplify raises $25M to challenge China's grip on critical materials	5238e106	scimplify,critical materials,hitachi ventures,funding
+2026-10-15	Google launches a $180 Fitbit Edge with a replaceable, week-long battery	4c38e085	google,fitbit edge,wearable,charge 6
+2026-10-15	Bank of America's profit falls on a record money-laundering penalty	779545b2	bank of america,earnings,money-laundering penalty,fixed income
+2026-10-15	Morgan Stanley beats estimates on a 41% jump in equities trading	d824f520	morgan stanley,earnings,equities trading,wealth management
+2026-10-15	Hot US inflation data knocks the S&P 500 lower	f7e186e5	united states,cpi,inflation,s&p 500,federal reserve
+2026-10-15	Singapore's MAS surprises markets by holding policy as GDP grows 5.4%	45e4e871	singapore,mas,monetary policy,gdp
+2026-10-15	Bumble agrees to go private in a $1.3bn deal	1be2ca84	bumble,ithaca holdings,take-private,dating app
+2026-10-15	🏎️ Red Bull extend team principal Laurent Mekies to 2031	cc91aff4	formula 1,red bull,laurent mekies,contract extension
+2026-10-15	🏎️ The US Grand Prix in Austin is up next, reverting to a standard format	dc78e864	formula 1,united states grand prix,austin,verstappen
+2026-10-15	🎾 Medvedev beats Tsitsipas to reach the Shanghai Masters quarter-finals	bdd07f21	tennis,daniil medvedev,stefanos tsitsipas,shanghai masters
+2026-10-15	🏏 West Indies level the T20I series with a 24-run win over India	d32ec63a	cricket,india,west indies,t20i series,shai hope
+2026-10-15	NASA's Roman telescope beats its optical target in a first instrument checkout	548a0351	nasa,roman space telescope,wide field instrument,optics
+2026-10-15	A newly described Jurassic bird appears to have lived on the ground, not in the air	9d714677	palaeontology,jurassic bird,yuezhuornis,nature,evolution
+2026-10-15	Weight-loss drug chemistry is being repurposed to treat the brain	cfed2344	glp-1,brain disorders,eli lilly,parkinsons,medicine
+2026-10-15	The world may be closer to its 30x30 land-protection goal than records show	677efe7b	conservation,30x30,land protection,biodiversity,nature
+2026-10-15	Webb pins down the most distant fast radio burst yet found	2d19f8a8	nasa,james webb,fast radio burst,astronomy
