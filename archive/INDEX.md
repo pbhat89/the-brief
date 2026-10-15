@@ -3689,3 +3689,31 @@ is empty until the first run.
 2026-10-15	Weight-loss drug chemistry is being repurposed to treat the brain	cfed2344	glp-1,brain disorders,eli lilly,parkinsons,medicine
 2026-10-15	The world may be closer to its 30x30 land-protection goal than records show	677efe7b	conservation,30x30,land protection,biodiversity,nature
 2026-10-15	Webb pins down the most distant fast radio burst yet found	2d19f8a8	nasa,james webb,fast radio burst,astronomy
+2026-10-16	Update: Singapore weighs legal action as the haze turns ‘very unhealthy’	cb688d19	singapore,haze,grace fu,transboundary haze act,psi
+2026-10-16	Singapore again tops global pollution rankings and subsidises haze-related care	c669f9f0	singapore,haze,iqair,pollution,subsidies
+2026-10-16	A Malaysian tycoon’s Singapore property spree targets a US$760m Chijmes deal	2e30f604	singapore,ioi properties,lee yeow seng,chijmes,property
+2026-10-16	AI could slow Asia-Pacific office demand, a CBRE study warns	eba81ada	singapore,cbre,ai,office demand,asia-pacific
+2026-10-16	Update: India says the first tranche of its US trade deal is finalised and in legal drafting	768834bc	india,united states,piyush goyal,trade deal,tariffs
+2026-10-16	Update: India’s Supreme Court issues notice to the Election Commission over the voter-roll revision	65918a30	india,supreme court,election commission,rahul gandhi,sir
+2026-10-16	India’s urban festive spending is set to fall about 6% as inflation bites	8fc53ca6	india,icra,festive spending,inflation,rbi
+2026-10-16	Faber stops supplying Sally Rooney’s books in the UK over her Palestine Action support	5bbe771f	uk,sally rooney,faber,palestine action,terrorism act
+2026-10-16	The government confirms Derby as the home of Great British Railways	6b32f930	uk,great british railways,derby,becketwell,department for transport
+2026-10-16	North Korea test-fires two submarine-launched cruise missiles	f188190c	north korea,submarine missile,south korea,sea of japan
+2026-10-16	Albania’s Tirana sees a third day of clashes over a Kushner-linked resort	e09c216f	albania,tirana,edi rama,kushner,protests
+2026-10-16	Update: Ukraine resumes strikes on Russian refineries as Zelensky ends the energy truce	06f3829f	ukraine,russia,ryazan refinery,zelensky,energy ceasefire
+2026-10-16	A Singapore-flagged container ship sinks in the Strait of Hormuz amid a surge of attacks	f3baaa0b	strait of hormuz,gfs pride,iran,singapore,shipping
+2026-10-16	A school roof collapse in Peshawar kills at least 34 children and a teacher	7d13c197	pakistan,peshawar,school collapse,khyber pakhtunkhwa
+2026-10-16	FBI arrests an OpenAI engineer over a hidden recording device found in a meeting room	bae759e8	openai,fbi,recording device,espionage,abdulrahman alfozan
+2026-10-16	Microsoft unveils the Maia 300, its custom AI chip to cut reliance on Nvidia	0df4e4e0	microsoft,maia 300,ai chip,nvidia,inference
+2026-10-16	Google makes Gemini 4 Argon broadly available at a cut-price introductory rate	2c8f4138	google,gemini 4 argon,ai model,api pricing
+2026-10-16	TSMC posts a record quarterly profit, up 69%, but its shares slip	7d473b17	tsmc,earnings,ai demand,semiconductors
+2026-10-16	Citigroup posts its best third-quarter revenue in a decade	ecf21ff8	citigroup,earnings,jane fraser,banks
+2026-10-16	BlackRock’s assets hit a record US$15.5 trillion on US$205bn of inflows	43522798	blackrock,earnings,assets under management,ishares,etf
+2026-10-16	Oil and shipping risk rises as attacks escalate in the Strait of Hormuz	f4c4222c	strait of hormuz,oil,shipping,markets,iran
+2026-10-16	🎾 Zverev beats de Minaur to reach the Shanghai Masters semi-finals	6642eb1e	tennis,alexander zverev,alex de minaur,shanghai masters
+2026-10-16	🎾 Davidovich Fokina reaches a first Masters 1000 semi-final after Gea retires	1c2163be	tennis,davidovich fokina,arthur gea,shanghai masters
+2026-10-16	🏎️ Haas sign Ferrari junior Rafael Camara for 2027, replacing Ocon	6a07cc40	formula 1,haas,rafael camara,esteban ocon,oliver bearman
+2026-10-16	🏏 West Indies and India head to a Bengaluru decider with the T20I series level	1a724fa6	cricket,india,west indies,t20i series,shai hope
+2026-10-16	A fossil in a museum drawer turns out to be Europe’s first known megaraptoran	8352145f	palaeontology,invictibellatrix,megaraptoran,isle of wight,ucl
+2026-10-16	Several cancers are rising faster among under-50s in England, studies find	d0aca511	cancer,under-50s,england,bmj oncology,public health
+2026-10-16	A keyhole treatment eases knee-arthritis pain for most patients without surgery	31926871	knee arthritis,embolisation,rsna,medicine

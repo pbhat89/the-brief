@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-08-16",
-      "topic_key": "great red spot",
-      "text": "Jupiter's Great Red Spot is larger than Earth"
-    },
-    {
       "date": "2026-08-17",
       "topic_key": "wombat",
       "text": "Wombats are the only animals that produce cube-shaped poop."
@@ -259,14 +254,14 @@
       "date": "2026-10-15",
       "topic_key": "africa",
       "text": "Africa is the only continent that lies in all four hemispheres."
+    },
+    {
+      "date": "2026-10-16",
+      "topic_key": "banana",
+      "text": "Bananas are mildly radioactive because of potassium-40 (banana equivalent dose)."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-09-15",
-      "type": "logic",
-      "title_key": "lone-truth"
-    },
     {
       "date": "2026-09-17",
       "type": "quantitative",
@@ -411,14 +406,14 @@
       "date": "2026-10-15",
       "type": "quantitative",
       "title_key": "cutting-the-chain"
+    },
+    {
+      "date": "2026-10-16",
+      "type": "lateral",
+      "title_key": "locked-study"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-09-15",
-      "type": "anagram",
-      "title_key": "say-it-another-way"
-    },
     {
       "date": "2026-09-17",
       "type": "spellingbee",
@@ -563,6 +558,11 @@
       "date": "2026-10-15",
       "type": "ladder",
       "title_key": "raining-cats-and-dogs"
+    },
+    {
+      "date": "2026-10-16",
+      "type": "anagram",
+      "title_key": "letter-perfect"
     }
   ]
 }
