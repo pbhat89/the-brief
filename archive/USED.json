@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-08-17",
-      "topic_key": "wombat",
-      "text": "Wombats are the only animals that produce cube-shaped poop."
-    },
-    {
       "date": "2026-08-18",
       "topic_key": "cleopatra",
       "text": "Cleopatra lived closer to the Moon landing than to the building of the Great Pyramid."
@@ -259,6 +254,11 @@
       "date": "2026-10-16",
       "topic_key": "banana",
       "text": "Bananas are mildly radioactive because of potassium-40 (banana equivalent dose)."
+    },
+    {
+      "date": "2026-10-17",
+      "topic_key": "bamboo",
+      "text": "Bamboo is the fastest-growing plant on Earth, growing up to about 91 cm in a day."
     }
   ],
   "puzzle_log": [
@@ -411,6 +411,11 @@
       "date": "2026-10-16",
       "type": "lateral",
       "title_key": "locked-study"
+    },
+    {
+      "date": "2026-10-17",
+      "type": "visual",
+      "title_key": "spider-and-the-fly"
     }
   ],
   "word_puzzle_log": [
@@ -563,6 +568,11 @@
       "date": "2026-10-16",
       "type": "anagram",
       "title_key": "letter-perfect"
+    },
+    {
+      "date": "2026-10-17",
+      "type": "spellingbee",
+      "title_key": "hive-mind"
     }
   ]
 }

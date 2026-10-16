@@ -3717,3 +3717,39 @@ is empty until the first run.
 2026-10-16	A fossil in a museum drawer turns out to be Europe’s first known megaraptoran	8352145f	palaeontology,invictibellatrix,megaraptoran,isle of wight,ucl
 2026-10-16	Several cancers are rising faster among under-50s in England, studies find	d0aca511	cancer,under-50s,england,bmj oncology,public health
 2026-10-16	A keyhole treatment eases knee-arthritis pain for most patients without surgery	31926871	knee arthritis,embolisation,rsna,medicine
+2026-10-17	Update: NEA issues haze notices to seven named Indonesian firms	2da6d356	NEA,Grace Fu,Transboundary Haze Pollution Act,Indonesia,haze
+2026-10-17	Ex-inmate from CNA prison documentary jailed again for reoffending	5b82e977	Graceson Ang,CNA,Inside Maximum Security,Singapore
+2026-10-17	Chain collision of three buses in Yishun injures five	0a001d72	Yishun,Tower Transit,SBS Transit,Singapore
+2026-10-17	Bukit Panjang LRT renewal substantially completed after eight years	befde47d	LTA,Bukit Panjang LRT,Singapore
+2026-10-17	Singapore-bound SIA flight returns to San Francisco after unruly passenger	26a3bb34	Singapore Airlines,SQ31,San Francisco
+2026-10-17	Update: Foreign investors pull a record US$32.5bn from Indian stocks in 2026	9cbb4be0	foreign portfolio investors,rupee,RBI,India,Sensex
+2026-10-17	US Secretary of State Rubio to visit Reliance's Jamnagar refinery	3f718c57	Marco Rubio,Reliance Industries,Jamnagar,Mukesh Ambani,India
+2026-10-17	Ex-DUP leader Jeffrey Donaldson jailed for 15 years for child sex offences	d1600a75	Jeffrey Donaldson,DUP,Newry Crown Court,Northern Ireland
+2026-10-17	Chancellor Healey backs a third Heathrow runway, risking a clash with PM Burnham	856a095f	John Healey,Heathrow,Andy Burnham,UK
+2026-10-17	Bank of England's Bailey sees little sign of entrenched inflation	cfe093d5	Bank of England,Andrew Bailey,inflation,UK
+2026-10-17	Harry and Meghan make first joint UK public engagement since returning	664f4528	Prince Harry,Meghan,Nottingham,UK
+2026-10-17	Russell Brand branded a 'ruthless predator' as his sex-assault trial opens	1fe80a26	Russell Brand,Southwark Crown Court,UK
+2026-10-17	EU leaders rally behind Ukraine as the Trump-Zelensky rift widens	7be72734	EU,European Council,Ukraine,Zelensky,Trump
+2026-10-17	Seven sailors missing after drone strikes hit two tankers off Romania	ca7616f6	Romania,Black Sea,Wine Trader,NATO,drones
+2026-10-17	Ethiopia installs a six-month interim administration in Tigray	6fb72367	Ethiopia,Abiy Ahmed,Tigray,TPLF,Mekelle
+2026-10-17	Settlers attack Palestinian olive harvesters and a US journalist in the West Bank	b7552e67	Israel,West Bank,Abu Falah,Heidi Levine,settlers
+2026-10-17	Pakistan-Afghanistan tensions persist after Moscow talks end without a deal	854b7928	Pakistan,Afghanistan,Taliban,Moscow format
+2026-10-17	Anthropic gives METR evaluators employee-level access to probe its AI models	f245f6ae	Anthropic,METR,AI safety
+2026-10-17	China proposes export controls on its own advanced AI models and chips	d0a22d4f	China,export controls,AI,semiconductors
+2026-10-17	Taiwan to fund up to US$4bn Texas complex for AI-hardware suppliers	3c7b02e7	Taiwan,Texas,TSMC,Nvidia,Kung Ming-hsin
+2026-10-17	Google launches Universal Cart shopping across Search and Gemini in the US	09a77a95	Google,Universal Cart,Gemini,shopping
+2026-10-17	Nvidia's Jensen Huang says the AI-stock selloff 'is going to pass'	c1d42c38	Nvidia,Jensen Huang,AI stocks,selloff
+2026-10-17	Nasdaq falls 2.1% on Friday for its worst week since June	df5aa0c4	Nasdaq,S&P 500,AI stocks,semiconductors
+2026-10-17	Jakarta stocks crash about 12% in their worst day since 1998	6c0b9398	Jakarta Composite,Indonesia,MSCI,Goldman Sachs
+2026-10-17	Fed's Warsh gives no October steer, cementing bets on a rate hold	b7468469	Federal Reserve,Kevin Warsh,interest rates,IMF
+2026-10-17	Thoma Bravo's Proofpoint to buy Varonis for US$6.3bn	7fdff72a	Thoma Bravo,Proofpoint,Varonis,acquisition
+2026-10-17	Citizens Financial third-quarter profit jumps 29% to US$636m	c54f1ebe	Citizens Financial,earnings,Bruce Van Saun
+2026-10-17	Medvedev beats Tommy Paul to reach the Shanghai Masters semi-finals	6154c6f8	Daniil Medvedev,Tommy Paul,Shanghai Masters,tennis
+2026-10-17	Jodar becomes the youngest Shanghai Masters semi-finalist	4fec4a1b	Rafael Jodar,Casper Ruud,Shanghai Masters,tennis
+2026-10-17	Antonelli can clinch the 2026 F1 title at the US Grand Prix	0601b2b2	Kimi Antonelli,George Russell,US Grand Prix,Formula 1
+2026-10-17	India and West Indies meet in a Bengaluru decider with the T20I series level	c909095a	India,West Indies,T20I,Bengaluru,cricket
+2026-10-17	World's timekeepers vote to abolish the leap second	eef587d0	leap second,CGPM,Versailles,timekeeping
+2026-10-17	Scientists propose how microplastics may trigger inflammation	22e0d76c	microplastics,reactive oxygen species,inflammation
+2026-10-17	ESA's Hera probe fires a 93-minute burn as it nears asteroid Dimorphos	825c051c	ESA,Hera,Dimorphos,Didymos,DART
+2026-10-17	Study links a brain enzyme to memory resilience in old age	d109dd23	Pla2g2f,brain,memory,Nature
+2026-10-17	Scientists turn cloned male mouse embryos into fertile females with CRISPR	369faf89	CRISPR,Y-CUT,mouse,endangered species
