@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T23:31:09.893Z",
+  "updated_at": "2026-10-17T23:32:37.671Z",
   "run_id": "morning-refresh-2026-10-18",
   "previous_run": {
     "run_id": "morning-preview-2026-10-18",
@@ -59,9 +59,9 @@
     {
       "id": "publication",
       "label": "Revised public report",
-      "state": "running",
-      "updated_at": "2026-10-17T23:31:09.893Z",
-      "detail": "Publishing separate revised edition; latest pointer waits for HTTPS accessibility verification."
+      "state": "completed",
+      "updated_at": "2026-10-17T23:32:37.671Z",
+      "detail": "Revised 18 October news-only report published and HTTPS 200 verified; early preview preserved as history."
     }
   ]
 }
