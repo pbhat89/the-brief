@@ -1,0 +1,41 @@
+{
+  "updated_at": "2026-10-17T21:58:14.038Z",
+  "run_id": "companion-setup",
+  "steps": [
+    {
+      "id": "inspect",
+      "label": "Inspect existing publishing workflow",
+      "state": "completed",
+      "updated_at": "2026-10-17T21:58:14.039Z",
+      "detail": "Existing brief, archive and Gmail workflow retained."
+    },
+    {
+      "id": "implementation",
+      "label": "Companion implementation",
+      "state": "running",
+      "updated_at": "2026-10-17T21:58:14.039Z",
+      "detail": "Building evidence contracts, player and validation."
+    },
+    {
+      "id": "research",
+      "label": "Today's verified research",
+      "state": "pending",
+      "updated_at": "2026-10-17T21:58:14.039Z",
+      "detail": "No research run is reported by this setup tracker."
+    },
+    {
+      "id": "audio",
+      "label": "Downloadable podcast",
+      "state": "blocked",
+      "updated_at": "2026-10-17T21:58:14.039Z",
+      "detail": "Awaiting approved media destination and a verified synthesis capability."
+    },
+    {
+      "id": "schedule",
+      "label": "07:00 Singapore automation",
+      "state": "pending",
+      "updated_at": "2026-10-17T21:58:14.039Z",
+      "detail": "Managed externally; repository changes do not configure it."
+    }
+  ]
+}
