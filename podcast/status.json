@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T22:03:01.417Z",
+  "updated_at": "2026-10-17T22:11:09.323Z",
   "run_id": "morning-preview-2026-10-18",
   "steps": [
     {
@@ -12,16 +12,16 @@
     {
       "id": "research",
       "label": "Verified research",
-      "state": "running",
-      "updated_at": "2026-10-17T22:03:01.417Z",
-      "detail": "NEA/MSS observations and Everyday AI checked; X scan continues. Source coverage will be reported explicitly."
+      "state": "completed",
+      "updated_at": "2026-10-17T22:11:09.323Z",
+      "detail": "Research cutoff 18 October 06:09:26 SGT. All 211 roster profiles attempted; limited logged-out timelines and partial reads prevent a fully-readable count."
     },
     {
       "id": "verification",
       "label": "Evidence and duplicate checks",
-      "state": "running",
-      "updated_at": "2026-10-17T22:03:01.417Z",
-      "detail": "Primary-source verification and cross-source event checks continue with research."
+      "state": "completed",
+      "updated_at": "2026-10-17T22:11:09.323Z",
+      "detail": "Selected original pages and displayed times verified; primary-source attribution and coverage limitations included. Semantic history coverage may have gaps."
     },
     {
       "id": "audio",
@@ -47,9 +47,9 @@
     {
       "id": "publication",
       "label": "Combined news report",
-      "state": "pending",
-      "updated_at": "2026-10-17T22:03:01.417Z",
-      "detail": "Awaiting verified news-only content for the first dated report."
+      "state": "running",
+      "updated_at": "2026-10-17T22:11:09.323Z",
+      "detail": "Publishing dated news-only preview; latest pointer waits for accessibility verification."
     },
     {
       "id": "delivery",

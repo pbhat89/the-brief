@@ -1,0 +1,113 @@
+{
+  "run_id": "morning-preview-2026-10-18",
+  "generated_at": "2026-10-17T22:09:26Z",
+  "cutoff_sgt": "2026-10-18T06:09:26+08:00",
+  "coverage": {
+    "roster_url": "https://xstarterpack.com/",
+    "roster_profiles_attempted": 211,
+    "fully_readable_count": null,
+    "extra_profiles": [
+      "Andrew Ng",
+      "Yann LeCun"
+    ],
+    "limitations": [
+      "Logged-out timelines typically exposed about five posts plus pinned content.",
+      "Replies/reposts were not comprehensively scanned.",
+      "Transient empty/partial reads and a browser restart prevented a reliable fully-readable count.",
+      "@levelsio remained empty on recheck."
+    ],
+    "selected_original_pages_read": true
+  },
+  "sources": [
+    {
+      "event_id": "opencode-console-incident-2026-10-18",
+      "url": "https://x.com/opencode/status/2111519637049319818",
+      "published_at": null,
+      "last_edited_at": "2026-10-18T02:08:00+08:00",
+      "basis": "Original company statement; creation time not separately verified",
+      "discovery_url": "https://x.com/kimmonismus/status/2111525476292341861"
+    },
+    {
+      "event_id": "deepseek-v4.1-flash-1017",
+      "url": "https://x.com/deepseek_ai/status/2111375640717033777",
+      "published_at": "2026-10-17T16:35:00+08:00",
+      "basis": "Original company announcement; comparative performance claims attributed",
+      "discovery_url": "https://x.com/natolambert/status/2111440910257099072"
+    },
+    {
+      "event_id": "replit-model-partner-clarification-2026-10-18",
+      "url": "https://x.com/amasad/status/2111494912562888939",
+      "published_at": "2026-10-18T00:29:00+08:00",
+      "basis": "Original CEO statement; not an exclusive partnership announcement"
+    },
+    {
+      "event_id": "vercel-tsc-ts-experiment-2026-10-17",
+      "url": "https://x.com/ctatedev/status/2111272070768185787",
+      "published_at": "2026-10-17T09:44:00+08:00",
+      "basis": "Original developer post; speedup is developer benchmark",
+      "discovery_url": "https://x.com/rauchg/status/2111274408706965898"
+    }
+  ],
+  "note": "Public source audit supplement; not a private delivery ledger. Source reading and timestamps verified by research operator; retrieval times not individually recorded. This supplement extends, rather than claims conformance to, evidence.schema.json.",
+  "general_sources": [
+    {
+      "section": "Singapore",
+      "title": "Prime Minister begins Middle East visits",
+      "text": "Lawrence Wong visits Qatar on 18–20 October and the UAE on 20–22 October, his first visits to the Middle East as Prime Minister. Energy security and economic resilience are on the agenda.",
+      "url": "https://www.pmo.gov.sg/newsroom/pm-lawrence-wong-to-visit-qatar-and-the-united-arab-emirates-oct-2026/",
+      "date": "17 October 2026"
+    },
+    {
+      "section": "India",
+      "title": "At least 17 reported dead at Kolkata Durga Puja pandal",
+      "text": "The Indian Express reports at least 17 deaths at the Chorebagan Sarbojanin Durga Puja pandal, with several people injured. Injury figures vary; the cause and responsibility should not be treated as established.",
+      "url": "https://indianexpress.com/article/cities/kolkata/kolkata-chorebagan-sarbojanin-durga-puja-pandal-stampede-dead-injured-10926194/",
+      "date": "Updated 17 October, 23:43 IST"
+    },
+    {
+      "section": "Global · Update",
+      "title": "Zelensky urges support for US sanctions",
+      "text": "AP reports that Volodymyr Zelensky urged support for US sanctions after Donald Trump signed an order putting the new restrictions on hold. This is a fresh development in the existing diplomatic dispute.",
+      "url": "https://apnews.com/article/07e1dfc41bdad7b3292c6c263005fabc",
+      "date": "17 October, 10:11 UTC"
+    },
+    {
+      "section": "Cricket",
+      "title": "India–West Indies T20I series finishes 2–2",
+      "text": "The final T20I was abandoned after 46 balls, leaving the series level at 2–2.",
+      "url": "https://www.icc-cricket.com/news/india-west-indies-share-t20i-series-honours",
+      "date": "17 October 2026"
+    },
+    {
+      "section": "Tennis",
+      "title": "Rafael Jodar reaches first Masters 1000 final",
+      "text": "Jodar beat Daniil Medvedev 6–3, 6–4 in Shanghai. He will face Alejandro Davidovich Fokina in his first Masters 1000 final.",
+      "url": "https://en.rolexshanghaimasters.com/en/media/news/medvedev-jodar-shanghai-2026-saturday",
+      "date": "17 October 2026"
+    }
+  ],
+  "environment_sources": [
+    {
+      "url": "https://api-open.data.gov.sg/v2/real-time/api/psi",
+      "observed_at": "2026-10-18T05:00:00+08:00",
+      "updated_at": "2026-10-18T05:30:34+08:00"
+    },
+    {
+      "url": "https://api-open.data.gov.sg/v2/real-time/api/pm25",
+      "observed_at": "2026-10-18T05:00:00+08:00",
+      "updated_at": "2026-10-18T05:30:34+08:00"
+    },
+    {
+      "url": "https://www.weather.gov.sg/weather-forecast-24hrforecast/",
+      "updated_at": "2026-10-18T05:37:00+08:00"
+    }
+  ],
+  "everyday_ai": {
+    "checked_at": "2026-10-18T06:00:00+08:00",
+    "latest_verified_original": "https://www.youtube.com/watch?v=9_XAioMMtDA",
+    "original_date": "2026-08-14",
+    "latest_video_replay": "https://www.youtube.com/watch?v=zfOAaWroo-g",
+    "result": "No new original verified; no replay summarized"
+  },
+  "fact_source": "https://www.nparks.gov.sg/florafaunaweb/flora/3/1/3106"
+}
