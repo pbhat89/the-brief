@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T23:32:37.671Z",
+  "updated_at": "2026-10-17T23:36:28.187Z",
   "run_id": "morning-refresh-2026-10-18",
   "previous_run": {
     "run_id": "morning-preview-2026-10-18",
@@ -38,23 +38,23 @@
     {
       "id": "audio",
       "label": "Private refreshed audio",
-      "state": "running",
-      "updated_at": "2026-10-17T23:25:24.651Z",
-      "detail": "Revised private narration preparation is in progress; delivery not yet confirmed."
+      "state": "completed",
+      "updated_at": "2026-10-17T23:36:28.187Z",
+      "detail": "Revised private narration completed with consistent stock narration; technical upload and content-integrity checks passed."
     },
     {
       "id": "streaming",
-      "label": "Private streaming and retention",
-      "state": "pending",
-      "updated_at": "2026-10-17T23:22:50.588Z",
-      "detail": "Authenticated streaming URL and seven-day audio deletion are under investigation; not implemented."
+      "label": "Private streaming",
+      "state": "completed",
+      "updated_at": "2026-10-17T23:36:28.187Z",
+      "detail": "Owner-only streaming available; range seeking verified and anonymous audio access denied. Seven-day playback expiry is active."
     },
     {
       "id": "delivery",
       "label": "Private refreshed delivery",
-      "state": "pending",
-      "updated_at": "2026-10-17T23:22:50.588Z",
-      "detail": "Refreshed edition requested around 08:00 SGT; delivery not yet confirmed."
+      "state": "completed",
+      "updated_at": "2026-10-17T23:36:28.187Z",
+      "detail": "Revised episode delivered privately through an owner-only player. Owner-browser playback remains unverified because sign-in was required."
     },
     {
       "id": "publication",
@@ -62,6 +62,13 @@
       "state": "completed",
       "updated_at": "2026-10-17T23:32:37.671Z",
       "detail": "Revised 18 October news-only report published and HTTPS 200 verified; early preview preserved as history."
+    },
+    {
+      "id": "retention",
+      "label": "Permanent audio storage deletion",
+      "state": "pending",
+      "updated_at": "2026-10-17T23:36:28.187Z",
+      "detail": "Seven-day permanent storage deletion awaits approval/setup. Active playback expiry does not prove stored bytes have been deleted."
     }
   ]
 }
