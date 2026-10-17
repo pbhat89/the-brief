@@ -1,0 +1,390 @@
+{
+  "edition": "revised",
+  "date": "2026-10-18",
+  "source_cutoff": "2026-10-18T07:28:00+08:00",
+  "upstream_commit": "df09d5e8c32cc2db6da92df47f0f40e773f8dc06",
+  "preview_evidence": "2026-10-18.sources.json",
+  "coverage": {
+    "profiles_attempted": 211,
+    "profiles_yielding_links": 190,
+    "empty_or_partial": 21,
+    "full_readability_count": null,
+    "limitation": "Logged-out timelines incomplete; links do not imply full access. Earlier scan limitations remain in preview evidence."
+  },
+  "sources": [
+    {
+      "id": "mss_weather",
+      "title": "MSS forecast",
+      "url": "https://www.weather.gov.sg/weather-forecast-24hrforecast/",
+      "checked_at": "2026-10-18T07:24:00+08:00"
+    },
+    {
+      "id": "nea_psi",
+      "title": "NEA 24-hour PSI",
+      "url": "https://api-open.data.gov.sg/v2/real-time/api/psi",
+      "checked_at": "2026-10-18T07:24:00+08:00"
+    },
+    {
+      "id": "nea_pm25",
+      "title": "NEA hourly PM2.5",
+      "url": "https://api-open.data.gov.sg/v2/real-time/api/pm25",
+      "checked_at": "2026-10-18T07:24:00+08:00"
+    },
+    {
+      "id": "nea_guidance",
+      "title": "NEA haze guidance",
+      "url": "https://www.haze.gov.sg/",
+      "checked_at": "2026-10-18T07:24:00+08:00"
+    },
+    {
+      "id": "sg_exams",
+      "title": "Examination haze contingency",
+      "url": "https://mothership.sg/2026/10/singapore-may-reschedule-national-examinations-haze/",
+      "checked_at": "2026-10-18T07:28:00+08:00"
+    },
+    {
+      "id": "pmo_port",
+      "title": "SM Lee: port workers’ anniversary",
+      "url": "https://www.pmo.gov.sg/newsroom/sm-lee-hsien-loong-at-the-80th-anniversary-dinner-celebration-of-singapore-port-workers-union/",
+      "checked_at": "2026-10-18T07:28:00+08:00"
+    },
+    {
+      "id": "jio_rhp",
+      "title": "SEBI prospectus",
+      "url": "https://www.sebi.gov.in/filings/public-issues/oct-2026/jio-platforms-limited-rhp_105274.html",
+      "checked_at": "2026-10-18T07:28:00+08:00"
+    },
+    {
+      "id": "jio_price",
+      "title": "Reliance exchange disclosure",
+      "url": "https://rilstaticasset.akamaized.net/sites/default/files/2026-10/RIL_SE_14102026_.pdf",
+      "checked_at": "2026-10-18T07:28:00+08:00"
+    },
+    {
+      "id": "rupee_reuters",
+      "title": "Reuters report via Business Standard",
+      "url": "https://www.business-standard.com/finance/news/rbi-has-spent-half-of-140-bn-fx-capital-to-defend-rupee-bankers-estimate-126101500638_1.html",
+      "checked_at": "2026-10-18T07:28:00+08:00"
+    },
+    {
+      "id": "rbi_derivatives",
+      "title": "RBI derivatives release",
+      "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63783",
+      "checked_at": "2026-10-18T07:28:00+08:00"
+    },
+    {
+      "id": "ukraine",
+      "title": "AP sanctions update",
+      "url": "https://apnews.com/article/russia-ukraine-war-trump-sanctions-energy-07e1dfc41bdad7b3292c6c263005fabc",
+      "checked_at": "2026-10-18T07:25:00+08:00"
+    },
+    {
+      "id": "uk_gdp",
+      "title": "ONS August GDP",
+      "url": "https://www.ons.gov.uk/economy/grossdomesticproductgdp/bulletins/gdpmonthlyestimateuk/august2026",
+      "checked_at": "2026-10-18T07:28:00+08:00"
+    },
+    {
+      "id": "morgan_stanley",
+      "title": "Morgan Stanley results",
+      "url": "https://www.morganstanley.com/about-us-ir/shareholder/3q2026.pdf",
+      "checked_at": "2026-10-18T07:28:00+08:00"
+    },
+    {
+      "id": "tennis_jodar",
+      "title": "Shanghai: Jodar",
+      "url": "https://en.rolexshanghaimasters.com/en/media/news/medvedev-jodar-shanghai-2026-saturday",
+      "checked_at": "2026-10-18T07:28:00+08:00"
+    },
+    {
+      "id": "tennis_davidovich",
+      "title": "Shanghai: Davidovich Fokina",
+      "url": "https://en.rolexshanghaimasters.com/en/media/news/zverev-davidovich-fokina-shanghai-2026-saturday",
+      "checked_at": "2026-10-18T07:28:00+08:00"
+    },
+    {
+      "id": "cricket",
+      "title": "ICC series result",
+      "url": "https://www.icc-cricket.com/news/india-west-indies-share-t20i-series-honours",
+      "checked_at": "2026-10-18T06:00:00+08:00"
+    },
+    {
+      "id": "f1_permutations",
+      "title": "F1 title permutations",
+      "url": "https://www.formula1.com/en/latest/article/points-permutations-when-is-the-earliest-antonelli-could-win-the-world-championship.24UKT2fsQl4GmC5DMrmYUy",
+      "checked_at": "2026-10-18T07:28:00+08:00"
+    },
+    {
+      "id": "opencode_incident",
+      "title": "OpenCode statement",
+      "url": "https://x.com/opencode/status/2111519637049319818",
+      "checked_at": "2026-10-18T07:26:00+08:00"
+    },
+    {
+      "id": "deepseek_official",
+      "title": "DeepSeek official release",
+      "url": "https://api-docs.deepseek.com/news/news261017/",
+      "checked_at": "2026-10-18T07:28:00+08:00"
+    },
+    {
+      "id": "replit_clarification",
+      "title": "Replit CEO clarification",
+      "url": "https://x.com/amasad/status/2111494912562888939",
+      "checked_at": "2026-10-18T07:26:00+08:00"
+    },
+    {
+      "id": "tsc_ts",
+      "title": "Original compiler post",
+      "url": "https://x.com/ctatedev/status/2111272070768185787",
+      "checked_at": "2026-10-18T06:09:00+08:00"
+    },
+    {
+      "id": "everyday_original",
+      "title": "Original episode audit reference",
+      "url": "https://www.youtube.com/watch?v=9_XAioMMtDA",
+      "checked_at": "2026-10-18T06:00:00+08:00"
+    },
+    {
+      "id": "everyday_replay",
+      "title": "Replay audit reference",
+      "url": "https://www.youtube.com/watch?v=zfOAaWroo-g",
+      "checked_at": "2026-10-18T06:00:00+08:00"
+    },
+    {
+      "id": "everyday_audit",
+      "title": "Everyday AI episodes",
+      "url": "https://www.youreverydayai.com/episodes/",
+      "checked_at": "2026-10-18T07:28:00+08:00"
+    },
+    {
+      "id": "ng_recent",
+      "title": "Andrew Ng original letter",
+      "url": "https://www.deeplearning.ai/the-batch/formal-verification-meets-unverifiable-judgement",
+      "checked_at": "2026-10-18T07:28:00+08:00"
+    },
+    {
+      "id": "thinker_audit",
+      "title": "Karpathy blog audit reference",
+      "url": "https://karpathy.bearblog.dev/blog/",
+      "checked_at": "2026-10-18T07:28:00+08:00"
+    },
+    {
+      "id": "upstream",
+      "title": "18 October upstream archive",
+      "url": "https://github.com/pbhat89/the-brief/blob/df09d5e8c32cc2db6da92df47f0f40e773f8dc06/archive/2026-10-18.html",
+      "checked_at": "2026-10-18T07:28:00+08:00"
+    }
+  ],
+  "sections": [
+    {
+      "id": "weather",
+      "title": "Singapore weather and haze",
+      "paragraphs": [
+        {
+          "text": "Forecast issued 05:37 SGT: 25–34°C, with afternoon thundery showers mainly in the north and west. Rain does not guarantee that haze will clear.",
+          "source_ids": [
+            "mss_weather"
+          ]
+        },
+        {
+          "text": "At 07:00 SGT, NEA’s 24-hour PSI ranged from 129 in the north to 228 in the west. The west was in the Very Unhealthy band; other regions were Unhealthy. One-hour PM2.5 ranged from 78 to 125 µg/m³, with all five regions Elevated. The hourly particle readings serve a different purpose from the 24-hour index.",
+          "source_ids": [
+            "nea_psi",
+            "nea_pm25",
+            "nea_guidance"
+          ]
+        },
+        {
+          "text": "For the next hour, NEA advises healthy people to reduce strenuous outdoor activity and vulnerable people to avoid it. Check current official readings and guidance before making outdoor plans.",
+          "source_ids": [
+            "nea_guidance"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "singapore",
+      "title": "Singapore",
+      "paragraphs": [
+        {
+          "text": "Education Minister Desmond Lee says national examination papers may be rescheduled if the next day’s 24-hour PSI forecast reaches the Hazardous range, above 300. Mothership’s report of Friday’s press conference says examinations otherwise take place in enclosed, air-conditioned venues with air purifiers. This is a contingency, not an announcement of postponement; changes would come through the examinations board and schools.",
+          "source_ids": [
+            "sg_exams"
+          ]
+        },
+        {
+          "text": "At the Port Workers Union’s 80th anniversary on Saturday, Senior Minister Lee Hsien Loong warned that rival ports are catching up with Singapore’s technology and stressed retraining workers as automation changes jobs. Tuas Port is planned to handle 65 million standard containers a year when fully completed in the 2040s.",
+          "source_ids": [
+            "pmo_port"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "india",
+      "title": "India",
+      "paragraphs": [
+        {
+          "text": "Jio Platforms’ public offering opens Wednesday, 21 October, and closes Friday. The regulatory filing proposes up to 270 million new shares; Reliance’s exchange disclosure gives a price band of ₹1,065–₹1,119 per share. These are offering terms, not a prediction of trading performance.",
+          "source_ids": [
+            "jio_rhp",
+            "jio_price"
+          ]
+        },
+        {
+          "text": "Reuters reports economists estimate the RBI has deployed US$75–80 billion in currency sales and swaps since June. That is an estimate, not an official intervention total. The RBI has separately tightened rules for certain currency derivatives; reporting cites rising oil costs and foreign outflows among pressures on the rupee.",
+          "source_ids": [
+            "rupee_reuters",
+            "rbi_derivatives"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "world",
+      "title": "World",
+      "paragraphs": [
+        {
+          "text": "Update: Volodymyr Zelensky is urging support for sanctions on Russia after Donald Trump put new US restrictions on hold, citing the national interest, according to AP. Russia continues attacks on Ukraine’s energy infrastructure. This is an update to the existing dispute, not a newly discovered event.",
+          "source_ids": [
+            "ukraine"
+          ]
+        },
+        {
+          "text": "ONS figures show UK GDP grew 0.1% in August after 0.4% in July. Production increased, services were flat and construction fell slightly. Growth over the three months through August was 0.7%, providing context beyond a single month.",
+          "source_ids": [
+            "uk_gdp"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "business",
+      "title": "Business and markets",
+      "paragraphs": [
+        {
+          "text": "Morgan Stanley reported third-quarter revenue of US$20.3 billion and diluted earnings of US$3.03 a share. Wealth management recorded US$232 billion in net new assets; just over half came from IPO-related flows. The transaction-linked portion matters when interpreting the record quarter. These company results were released Wednesday and are not a live market-price update.",
+          "source_ids": [
+            "morgan_stanley"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sports",
+      "title": "Sports",
+      "paragraphs": [
+        {
+          "text": "Shanghai’s men’s final is all-Spanish. Rafael Jodar, 20, beat Daniil Medvedev 6–3, 6–4 for his first Masters 1000 final; the tournament calls him its youngest finalist. Alejandro Davidovich Fokina beat Alexander Zverev 5–7, 6–4, 6–3 to reach his first Masters final since Monte Carlo in 2022.",
+          "source_ids": [
+            "tennis_jodar",
+            "tennis_davidovich"
+          ]
+        },
+        {
+          "text": "India and West Indies finished their T20I series 2–2 after the deciding match was abandoned following 46 balls, according to the ICC.",
+          "source_ids": [
+            "cricket"
+          ]
+        },
+        {
+          "text": "F1 look-ahead: Kimi Antonelli leads George Russell by 102 points. Formula 1 says he could clinch in Austin with a win, Russell ninth or lower and Lewis Hamilton fifth or lower. Those are conditional title permutations, not an assured outcome.",
+          "source_ids": [
+            "f1_permutations"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "AI developments · retained and rechecked",
+      "paragraphs": [
+        {
+          "text": "These four developments carry forward from the early preview. They are not presented as four newly discovered events.",
+          "source_ids": []
+        },
+        {
+          "text": "OpenCode says a breach related to a large-scale distillation attack affected 1.4% of Console users, a subset with external providers linked. It says those users were emailed and the incident remained ongoing, with Anthropic, OpenAI and Google involved in remediation. This is the company’s account; it does not establish the detailed breach mechanism. Consult the original notice and account-owner communications.",
+          "source_ids": [
+            "opencode_incident"
+          ]
+        },
+        {
+          "text": "DeepSeek’s V4.1-Flash-1017 release is available through its website, app and API. The company claims better benchmark performance, faster completion and shorter outputs than the prior revision; those remain vendor claims. Its official announcement also makes Search and Fetch interfaces available to developers.",
+          "source_ids": [
+            "deepseek_official"
+          ]
+        },
+        {
+          "text": "Replit CEO Amjad Masad says OpenAI is the preferred partner powering Replit Agent while Anthropic and model choice remain available. This is a clarification, not a new exclusive partnership or an announcement that Anthropic was dropped.",
+          "source_ids": [
+            "replit_clarification"
+          ]
+        },
+        {
+          "text": "Vercel Labs developer Chris Tate describes tsc-ts, porting the Go-based TypeScript compiler back to TypeScript and compiling it with ScriptC. His reported 2–4× speedup is a developer benchmark, not an independently verified gain for every project.",
+          "source_ids": [
+            "tsc_ts"
+          ]
+        },
+        {
+          "text": "Analysis: evaluate the whole workflow—correctness, cost, review time and the operational burden of connected services. A repeatable improvement on representative work is stronger evidence than a faster demonstration.",
+          "source_ids": []
+        }
+      ]
+    },
+    {
+      "id": "everyday_ai",
+      "title": "Everyday AI",
+      "paragraphs": [
+        {
+          "text": "No new original episode was verified in the checked publisher, podcast and video channels. Episode 883 is a replay and is not summarized as a new conversation. The latest original identified in the audit remains episode 841, dated 14 August. This is a coverage result, not a claim that the channels contain no other material.",
+          "source_ids": [
+            "everyday_original",
+            "everyday_replay",
+            "everyday_audit"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thinkers",
+      "title": "Thinker perspectives and access",
+      "paragraphs": [
+        {
+          "text": "Recent context, 16 October: Andrew Ng argues that gains on automatically checkable tasks, such as mathematics and some coding, should not be generalized to judgment-heavy work. Customer complaints, product choices and strategy often lack one unambiguous answer. This predates the fresh-news window.",
+          "source_ids": [
+            "ng_recent"
+          ]
+        },
+        {
+          "text": "Analysis: separate what can be checked automatically from what still needs human judgment when designing an AI trial. This is an application of Ng’s argument, not a new quotation.",
+          "source_ids": [
+            "ng_recent"
+          ]
+        },
+        {
+          "text": "No fresh first-party contribution from Andrej Karpathy, Yann LeCun or Naval Ravikant was verified on accessible checked channels. Access gaps remain, particularly LeCun’s LinkedIn authentication wall. The result describes this briefing’s coverage, not an assertion that they have been silent.",
+          "source_ids": [
+            "thinker_audit"
+          ]
+        }
+      ]
+    }
+  ],
+  "fact": {
+    "text": "Oxford has evidence of teaching from 1096 and no clear foundation date. The Triple Alliance that became the Aztec Empire rose to regional dominance in 1428, more than three centuries later. This compares an institution and empire, not the age of peoples or cultures.",
+    "sources": [
+      "https://www.ox.ac.uk/about/the-university/history",
+      "https://openstax.org/books/world-history-volume-1/pages/8-3-the-age-of-empires-in-the-americas"
+    ]
+  },
+  "original_x_timestamps": {
+    "opencode_last_edited": "2026-10-18T02:08:00+08:00",
+    "opencode_original_creation": null,
+    "deepseek": "2026-10-17T16:35:00+08:00",
+    "replit": "2026-10-18T00:29:00+08:00",
+    "compiler": "2026-10-17T09:44:00+08:00"
+  },
+  "note": "Public audit supplied by verified research operator. No private narration or delivery metadata. Retained AI developments are not new discoveries."
+}

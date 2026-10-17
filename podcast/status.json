@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T23:25:24.651Z",
+  "updated_at": "2026-10-17T23:31:09.893Z",
   "run_id": "morning-refresh-2026-10-18",
   "previous_run": {
     "run_id": "morning-preview-2026-10-18",
@@ -24,9 +24,9 @@
     {
       "id": "research",
       "label": "Refreshed report verification",
-      "state": "running",
-      "updated_at": "2026-10-17T23:25:24.651Z",
-      "detail": "Revised report preparation is in progress using the ready 18 October upstream."
+      "state": "completed",
+      "updated_at": "2026-10-17T23:31:09.893Z",
+      "detail": "Revised public sources checked through 07:28 SGT using today's upstream; delta X check attempted 211 profiles, 190 yielded links, 21 empty/partial. Full logged-out access not implied."
     },
     {
       "id": "schedule",
@@ -55,6 +55,13 @@
       "state": "pending",
       "updated_at": "2026-10-17T23:22:50.588Z",
       "detail": "Refreshed edition requested around 08:00 SGT; delivery not yet confirmed."
+    },
+    {
+      "id": "publication",
+      "label": "Revised public report",
+      "state": "running",
+      "updated_at": "2026-10-17T23:31:09.893Z",
+      "detail": "Publishing separate revised edition; latest pointer waits for HTTPS accessibility verification."
     }
   ]
 }
