@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "history_import": {
+    "completed": false,
+    "archive_through": null,
+    "prior_delivery_count": 0,
+    "gaps": []
+  },
+  "deliveries": [],
+  "coverage_runs": [],
+  "format": {
+    "delivery": {
+      "run_id": "unique-run-id",
+      "delivered_at": "ISO timestamp",
+      "event_id": "stable semantic event ID",
+      "canonical_url": "primary evidence URL",
+      "material_update_of": null,
+      "material_new_fact": null,
+      "channels": [
+        "report",
+        "podcast"
+      ]
+    },
+    "coverage_run": {
+      "run_id": "unique-run-id",
+      "roster_url": "https://xstarterpack.com/",
+      "roster_retrieved_at": "ISO timestamp",
+      "roster_count": 0,
+      "attempts": [
+        {
+          "handle": "example",
+          "attempted_at": "ISO timestamp",
+          "outcome": "accessible|blocked|error",
+          "post_urls": []
+        }
+      ],
+      "unvisited_handles": []
+    }
+  }
+}

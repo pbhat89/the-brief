@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T21:58:14.038Z",
+  "updated_at": "2026-10-17T21:59:54.982Z",
   "run_id": "companion-setup",
   "steps": [
     {
@@ -12,9 +12,9 @@
     {
       "id": "implementation",
       "label": "Companion implementation",
-      "state": "running",
-      "updated_at": "2026-10-17T21:58:14.039Z",
-      "detail": "Building evidence contracts, player and validation."
+      "state": "completed",
+      "updated_at": "2026-10-17T21:59:54.982Z",
+      "detail": "News-only UI, evidence contracts and validation implemented. No private media is published."
     },
     {
       "id": "research",
@@ -27,8 +27,8 @@
       "id": "audio",
       "label": "Downloadable podcast",
       "state": "blocked",
-      "updated_at": "2026-10-17T21:58:14.039Z",
-      "detail": "Awaiting approved media destination and a verified synthesis capability."
+      "updated_at": "2026-10-17T21:59:54.982Z",
+      "detail": "Private audio is handled separately; no synthesis or delivery is reported by this public setup tracker."
     },
     {
       "id": "schedule",

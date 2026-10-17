@@ -171,3 +171,9 @@ To paste the prompt into the claude.ai routine "Instructions" field:
 The addresses are also visible in the routine's bound Gmail connector, so they're
 not "secret" — but keeping them out of git means they never show up in the public
 commit history, GitHub search, or repo clones.
+
+## Morning companion
+
+The existing Claude brief and Gmail workflow remain unchanged. The companion adds an operational specification for verified X/Everyday AI/AI coverage, source evidence contracts and a public news hub. See [instructions](podcast/README.md), [news hub](https://pbhat89.github.io/the-brief/podcast/), [reports](https://pbhat89.github.io/the-brief/podcast/archive.html) and [live tracker](https://pbhat89.github.io/the-brief/podcast/tracker.html).
+
+The companion uses a 07:12 Singapore intake cutoff for a 07:30 delivery target. No companion schedule, research collector or synthesis service is configured by this commit. Editing a prompt does not update the saved Claude routine automatically. Public HTML is news only. Audio and its transcript are delivered privately as ChatGPT attachments; no private media URLs or personal configuration belong in this repo.
