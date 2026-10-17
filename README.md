@@ -1,5 +1,21 @@
 # The Brief
 
+## Combined morning briefing and private podcast
+
+The companion combines the existing general-news brief with fresh AI coverage and a warm, concise private podcast. **The runtime is the external scheduled ChatGPT assistant**; this repo provides instructions, evidence formats and public UI, not a bundled autonomous collector or synthesis engine.
+
+- **X research:** refresh the source roster dynamically from [X Starter Pack](https://xstarterpack.com/) (currently 211 profiles, rather than a fixed claim of 200). Read accessible public profiles and original posts; record attempted, accessible, blocked and unvisited counts. Access limits are explicit. Preserve actual post timestamps in Asia/Singapore and distinguish edited, uploaded and retrieved times. Verify claims against primary sources.
+- **Selection and dedup:** include up to 20 fresh AI items, with no padding. Group the underlying event across X, news, videos and newsletters, and compare against all available prior deliveries and the existing brief archive. A material update needs a concrete new fact; report missing history rather than claim complete dedup.
+- **Everyday AI:** check YouTube Videos and Live plus publisher episode pages, blog, AI News and newsletter. Summarize actual accessible transcripts with references. Exclude Start Here, replays and re-uploads even when they are not labelled as replays; preserve original publication date separately from upload date.
+- **Original-source spotlight:** look for genuinely fresh contributions from **Andrej Karpathy, Andrew Ng, Naval Ravikant and Yann LeCun**. When nothing fresh is verified, say so. Any evergreen perspective is clearly labelled and never counted as fresh news.
+- **Narrative:** the private 10–12-minute podcast uses grounded, warm encouragement and leadership/AI-transformation context, a practical mindset or healthy-day tip, concise news and implications, NEA/MSS weather and haze observations with timestamps, and a sourced interesting fact. No puzzles in the companion. Quotes must be real; commentary is distinguished from reporting.
+- **Timing:** the existing external companion automation is configured for **07:00 Asia/Singapore**, accepting the same-day Claude brief only through **07:12**, with a **07:30 delivery target**, not a guaranteed SLA. If the upstream brief arrives later, independently verify a smaller selection and disclose availability; never present yesterday's brief as today's.
+- **Privacy and phone access:** public HTML contains news only. Personalized audio and its transcript are **private**, delivered as native ChatGPT attachments accessible on the phone. No personal greeting, private script, voice configuration, media or private attachment URL is published here. An authenticated private player can be considered later.
+
+The existing Claude routine's schedule, general-news template, archive and Gmail workflow remain unchanged. The ChatGPT companion automation has been updated separately. Editing repo instructions does not automatically reconfigure either runtime.
+
+**Open:** [mobile news hub](https://pbhat89.github.io/the-brief/podcast/) · [live progress tracker](https://pbhat89.github.io/the-brief/podcast/tracker.html) · [report archive](https://pbhat89.github.io/the-brief/podcast/archive.html) · [full companion operations](podcast/README.md).
+
 A self-contained daily news brief that runs every morning at 07:00 Asia/Singapore
 on Anthropic's cloud as a Claude Code Routine. The routine fetches real news,
 fact-checks it, deduplicates stories against the last 2-3 days of archived
@@ -176,4 +192,4 @@ commit history, GitHub search, or repo clones.
 
 The existing Claude brief and Gmail workflow remain unchanged. The companion adds an operational specification for verified X/Everyday AI/AI coverage, source evidence contracts and a public news hub. See [instructions](podcast/README.md), [news hub](https://pbhat89.github.io/the-brief/podcast/), [reports](https://pbhat89.github.io/the-brief/podcast/archive.html) and [live tracker](https://pbhat89.github.io/the-brief/podcast/tracker.html).
 
-The companion uses a 07:12 Singapore intake cutoff for a 07:30 delivery target. No companion schedule, research collector or synthesis service is configured by this commit. Editing a prompt does not update the saved Claude routine automatically. Public HTML is news only. Audio and its transcript are delivered privately as ChatGPT attachments; no private media URLs or personal configuration belong in this repo.
+The companion uses a 07:12 Singapore intake cutoff for a 07:30 delivery target. The external ChatGPT companion automation is configured separately; no autonomous research collector or synthesis service is bundled in this repository. Editing a prompt does not update the saved Claude routine automatically. Public HTML is news only. Audio and its transcript are delivered privately as ChatGPT attachments; no private media URLs or personal configuration belong in this repo.
