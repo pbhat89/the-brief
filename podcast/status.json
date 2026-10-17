@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T22:11:09.323Z",
+  "updated_at": "2026-10-17T22:12:14.048Z",
   "run_id": "morning-preview-2026-10-18",
   "steps": [
     {
@@ -47,9 +47,9 @@
     {
       "id": "publication",
       "label": "Combined news report",
-      "state": "running",
-      "updated_at": "2026-10-17T22:11:09.323Z",
-      "detail": "Publishing dated news-only preview; latest pointer waits for accessibility verification."
+      "state": "completed",
+      "updated_at": "2026-10-17T22:12:14.048Z",
+      "detail": "18 October early preview is published; HTTPS 200 and expected cutoff/content verified. Latest report pointer updated after verification."
     },
     {
       "id": "delivery",
