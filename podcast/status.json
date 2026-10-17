@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T23:22:50.588Z",
+  "updated_at": "2026-10-17T23:25:24.651Z",
   "run_id": "morning-refresh-2026-10-18",
   "previous_run": {
     "run_id": "morning-preview-2026-10-18",
@@ -25,22 +25,22 @@
       "id": "research",
       "label": "Refreshed report verification",
       "state": "running",
-      "updated_at": "2026-10-17T23:22:50.588Z",
-      "detail": "Refreshing against the 18 October upstream report; prior coverage remains documented."
+      "updated_at": "2026-10-17T23:25:24.651Z",
+      "detail": "Revised report preparation is in progress using the ready 18 October upstream."
     },
     {
       "id": "schedule",
       "label": "07:45 Singapore automation",
-      "state": "pending",
-      "updated_at": "2026-10-17T23:22:50.588Z",
-      "detail": "Requested start documented. External automation change is handled separately; confirmation pending."
+      "state": "completed",
+      "updated_at": "2026-10-17T23:25:24.651Z",
+      "detail": "Daily external automation verified saved for 07:45 Asia/Singapore, beginning 19 October. Today's refresh is running immediately."
     },
     {
       "id": "audio",
       "label": "Private refreshed audio",
-      "state": "pending",
-      "updated_at": "2026-10-17T23:22:50.588Z",
-      "detail": "Awaiting private rendering and review under the revised narration requirements."
+      "state": "running",
+      "updated_at": "2026-10-17T23:25:24.651Z",
+      "detail": "Revised private narration preparation is in progress; delivery not yet confirmed."
     },
     {
       "id": "streaming",
