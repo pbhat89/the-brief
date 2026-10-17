@@ -109,5 +109,19 @@
     "latest_video_replay": "https://www.youtube.com/watch?v=zfOAaWroo-g",
     "result": "No new original verified; no replay summarized"
   },
-  "fact_source": "https://www.nparks.gov.sg/florafaunaweb/flora/3/1/3106"
+  "fact_source": "https://www.nparks.gov.sg/florafaunaweb/flora/3/1/3106",
+  "context_sources": [
+    {
+      "url": "https://www.deeplearning.ai/the-batch/formal-verification-meets-unverifiable-judgement",
+      "original_date": "2026-10-16",
+      "classification": "recent perspective outside fresh-news window",
+      "basis": "Original letter checked by research operator"
+    }
+  ],
+  "broader_thinker_coverage": {
+    "naval": "Latest visible nav.al entries older",
+    "karpathy": "Latest visible blog entries older",
+    "yann_lecun": "LinkedIn authentication wall; absence unverified",
+    "status": "Additional source checks may follow"
+  }
 }

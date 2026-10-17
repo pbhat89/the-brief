@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T22:12:14.048Z",
+  "updated_at": "2026-10-17T22:12:54.832Z",
   "run_id": "morning-preview-2026-10-18",
   "steps": [
     {
@@ -27,8 +27,8 @@
       "id": "audio",
       "label": "Private audio preparation",
       "state": "running",
-      "updated_at": "2026-10-17T22:03:01.417Z",
-      "detail": "Voice route tested. Media preparation is handled privately; no media or private links are published here."
+      "updated_at": "2026-10-17T22:12:54.832Z",
+      "detail": "Audio rendering continues with local fallback after service interruption. Private delivery remains pending."
     },
     {
       "id": "schedule",
