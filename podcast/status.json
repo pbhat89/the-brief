@@ -1,62 +1,60 @@
 {
-  "updated_at": "2026-10-17T22:18:14.267Z",
-  "run_id": "morning-preview-2026-10-18",
+  "updated_at": "2026-10-17T23:22:50.588Z",
+  "run_id": "morning-refresh-2026-10-18",
+  "previous_run": {
+    "run_id": "morning-preview-2026-10-18",
+    "state": "completed",
+    "detail": "Earlier preview was delivered. This tracker now follows the requested refresh."
+  },
   "steps": [
     {
       "id": "implementation",
-      "label": "Repository implementation",
+      "label": "Companion revision",
       "state": "completed",
-      "updated_at": "2026-10-17T22:03:01.417Z",
-      "detail": "News-only UI, evidence contracts and validation complete. Existing brief and email workflow retained."
+      "updated_at": "2026-10-17T23:22:50.588Z",
+      "detail": "Coherent section order, consistent stock narration guidance and revised timing documented."
+    },
+    {
+      "id": "upstream",
+      "label": "Same-day upstream intake",
+      "state": "completed",
+      "updated_at": "2026-10-17T23:22:50.588Z",
+      "detail": "archive/2026-10-18.html and JSON exist; published HTML returns HTTPS 200. Source freshness still requires verification."
     },
     {
       "id": "research",
-      "label": "Verified research",
-      "state": "completed",
-      "updated_at": "2026-10-17T22:11:09.323Z",
-      "detail": "Research cutoff 18 October 06:09:26 SGT. All 211 roster profiles attempted; limited logged-out timelines and partial reads prevent a fully-readable count."
-    },
-    {
-      "id": "verification",
-      "label": "Evidence and duplicate checks",
-      "state": "completed",
-      "updated_at": "2026-10-17T22:11:09.323Z",
-      "detail": "Selected original pages and displayed times verified; primary-source attribution and coverage limitations included. Semantic history coverage may have gaps."
-    },
-    {
-      "id": "audio",
-      "label": "Private audio preparation",
-      "state": "completed",
-      "updated_at": "2026-10-18T06:17:48+08:00",
-      "detail": "Private downloadable episode completed; technical audio checks passed. Fallback narration disclosed privately."
+      "label": "Refreshed report verification",
+      "state": "running",
+      "updated_at": "2026-10-17T23:22:50.588Z",
+      "detail": "Refreshing against the 18 October upstream report; prior coverage remains documented."
     },
     {
       "id": "schedule",
-      "label": "Morning automation",
-      "state": "completed",
-      "updated_at": "2026-10-17T22:01:32Z",
-      "detail": "Existing automation updated: daily 07:00 Asia/Singapore, targeting delivery by 07:30. Target is not a guaranteed SLA."
+      "label": "07:45 Singapore automation",
+      "state": "pending",
+      "updated_at": "2026-10-17T23:22:50.588Z",
+      "detail": "Requested start documented. External automation change is handled separately; confirmation pending."
     },
     {
-      "id": "deployment",
-      "label": "Public interface deployment",
-      "state": "completed",
-      "updated_at": "2026-10-17T22:03:01.417Z",
-      "detail": "GitHub Pages build and deployment succeeded for implementation commit 7f8ff32."
+      "id": "audio",
+      "label": "Private refreshed audio",
+      "state": "pending",
+      "updated_at": "2026-10-17T23:22:50.588Z",
+      "detail": "Awaiting private rendering and review under the revised narration requirements."
     },
     {
-      "id": "publication",
-      "label": "Combined news report",
-      "state": "completed",
-      "updated_at": "2026-10-17T22:12:14.048Z",
-      "detail": "18 October early preview is published; HTTPS 200 and expected cutoff/content verified. Latest report pointer updated after verification."
+      "id": "streaming",
+      "label": "Private streaming and retention",
+      "state": "pending",
+      "updated_at": "2026-10-17T23:22:50.588Z",
+      "detail": "Authenticated streaming URL and seven-day audio deletion are under investigation; not implemented."
     },
     {
       "id": "delivery",
-      "label": "Private delivery",
-      "state": "completed",
-      "updated_at": "2026-10-18T06:17:48+08:00",
-      "detail": "Private downloadable episode delivered to its intended listener; receipt confirmed."
+      "label": "Private refreshed delivery",
+      "state": "pending",
+      "updated_at": "2026-10-17T23:22:50.588Z",
+      "detail": "Refreshed edition requested around 08:00 SGT; delivery not yet confirmed."
     }
   ]
 }

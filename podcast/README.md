@@ -1,12 +1,12 @@
 # Morning podcast companion
 
-This bounded companion extends The Brief without replacing the existing Claude routine, general-news archive, templates, watchdog, recipients or Gmail draft sender. No new scheduler is installed here. The existing external ChatGPT companion automation has been updated for 07:00 Asia/Singapore with a 07:30 delivery target; the original Claude schedule and Gmail workflow are unchanged.
+This bounded companion extends The Brief without replacing the existing Claude routine, general-news archive, templates, watchdog, recipients or Gmail draft sender. No new scheduler is installed here. The requested external companion start is now 07:45 Asia/Singapore; configuration is handled outside this repo. The original Claude schedule and Gmail workflow are unchanged.
 
 ## Operator sequence and deadline
 
-Use the existing external automation: 07:00 Asia/Singapore start; 07:30 target, not a guaranteed SLA. At 07:00 record a run ID and timestamped status. Read prior delivery ledgers and the entire existing archive index before choosing stories. Research concurrently with checking for today's Claude HTML/JSON.
+The requested daily start is **07:45 Asia/Singapore**, after the same-day Claude HTML is expected. At start, record a new run ID and timestamped status; read prior delivery ledgers and the archive index, and verify the same-day upstream HTML/JSON before selecting stories. Keep upstream claims subject to freshness, primary-source and repeat checks.
 
-**07:12 SGT is the intake cutoff.** Use today's Claude payload only if it is available and verified by then. A 07:20–07:30 arrival must not hold up audio. At cutoff, independently verify a smaller general-news selection; if verification is unavailable omit that segment and say so. Never relabel yesterday's brief as today. Freeze script by 07:17, aim for synthesis by 07:24 and verify playback/download by 07:28. At 07:30 deliver a truthful partial-status notice if audio is blocked; never claim delivery because a script exists. Late source material goes to the next run after freshness and dedup checks.
+Use a bounded five-minute intake window, through 07:50 SGT on a normal run. If the same-day upstream is unavailable, disclose availability and independently verify current headlines; never present yesterday's brief as today's. Do not wait indefinitely. The refreshed 18 October edition is requested around 08:00 SGT, a target rather than a guaranteed SLA. Freeze the script and reserve time for complete rendering, technical checks and delivery; if that target cannot be met, give a truthful progress update rather than claim success.
 
 Editing a repository prompt does **not** reconfigure the existing Claude routine or an external automation. A human/operator must update its saved instructions separately. Do not add a GitHub cron that pretends it can research or synthesize without the necessary tools.
 
@@ -20,15 +20,23 @@ Editing a repository prompt does **not** reconfigure the existing Claude routine
 
 ## Editorial and audio contract
 
-Target 10–12 minutes (roughly 1,300–1,650 spoken words; measure actual MP3 duration). Warm, concise, credible: brief grounded confidence/leadership opening; timestamped Singapore weather/air quality; general and AI headlines with implications; fresh thinker spotlight; transcript-based Everyday AI insight; one practical mindset/healthy-day tip; one sourced interesting fact; short actionable close. No puzzles. Clearly mark commentary versus sourced claims. Keep factual links in the transcript/report.
+Target 10–12 minutes; measure the actual audio duration. Use this section order consistently:
 
-The separate private-audio stage uses a verified available voice and private pronunciation configuration. Never publish that configuration. No paid API, enrollment or credentials without approval. Browser speech synthesis is not a downloadable MP3. If synthesis is unavailable, report the blocker privately.
+1. Brief welcome and one grounded mindset tip.
+2. Singapore conditions: timestamped NEA/MSS weather and air quality.
+3. Main news grouped by Singapore, India, world, business and sports.
+4. AI and Everyday AI, with relevant fresh thinker contributions or clearly labelled context.
+5. Short sourced interesting fact and close.
+
+Keep encouragement in its opening segment; do not interrupt news with random personal encouragement. No puzzles. Mark commentary versus sourced claims and keep factual references in the private transcript/public report.
+
+Use **one soothing female stock voice throughout**, at a moderately faster pace with consistent volume. Retire mixed-voice openings. Keep names and pronunciation tests in the private runtime; audition them and obtain listener review before claiming correctness. Check completeness, duration, clipping and chapter-to-chapter loudness. If the selected voice fails, report the issue rather than silently splice in a different voice. No paid API, enrollment or credentials without approval. Browser speech synthesis is not a downloadable audio file.
 
 ## Publication and mobile access
 
 Public UI: [news hub](index.html), [report archive](archive.html), [tracker](tracker.html). Pin the news hub to a phone home screen. The public HTML contains news only: remove personal openings and encouragement.
 
-Audio is private and delivered separately as native ChatGPT attachments, including an MP3 with an ordinary download control and a private transcript. This public repository contains no audio, personalized scripts, transcripts, pronunciation preferences, personal configuration or private attachment URLs. An authenticated private player may be considered later. Public GitHub Pages has no per-listener authentication; a hidden URL is not access control.
+Audio is private and delivered separately as native ChatGPT attachments, including an MP3 with an ordinary download control and a private transcript. This public repository contains no audio, personalized scripts, transcripts, pronunciation preferences, personal configuration or private attachment URLs. The preferred private streaming URL and automatic seven-day audio deletion are pending authenticated-hosting implementation. Neither access control nor deletion is a working guarantee yet. Public GitHub Pages has no per-listener authentication; a hidden URL is not access control.
 
 For public news updates, atomically update `reports.json` with `latest_id` and `reports`. Each report needs `id`, `title`, ISO `published_at` and a relative same-origin or HTTPS `report_url`. Verify the news-only HTML is accessible before moving the latest pointer. Do not place private media URLs in this manifest.
 
@@ -55,11 +63,11 @@ The companion combines the existing general-news brief with fresh AI coverage an
 - **Selection and dedup:** include up to 20 fresh AI items, with no padding. Group the underlying event across X, news, videos and newsletters, and compare against all available prior deliveries and the existing brief archive. A material update needs a concrete new fact; report missing history rather than claim complete dedup.
 - **Everyday AI:** check YouTube Videos and Live plus publisher episode pages, blog, AI News and newsletter. Summarize actual accessible transcripts with references. Exclude Start Here, replays and re-uploads even when they are not labelled as replays; preserve original publication date separately from upload date.
 - **Original-source spotlight:** look for genuinely fresh contributions from **Andrej Karpathy, Andrew Ng, Naval Ravikant and Yann LeCun**. When nothing fresh is verified, say so. Any evergreen perspective is clearly labelled and never counted as fresh news.
-- **Narrative:** the private 10–12-minute podcast uses grounded, warm encouragement and leadership/AI-transformation context, a practical mindset or healthy-day tip, concise news and implications, NEA/MSS weather and haze observations with timestamps, and a sourced interesting fact. No puzzles in the companion. Quotes must be real; commentary is distinguished from reporting.
-- **Timing:** the existing external companion automation is configured for **07:00 Asia/Singapore**, accepting the same-day Claude brief only through **07:12**, with a **07:30 delivery target**, not a guaranteed SLA. If the upstream brief arrives later, independently verify a smaller selection and disclose availability; never present yesterday's brief as today's.
-- **Privacy and phone access:** public HTML contains news only. Personalized audio and its transcript are **private**, delivered as native ChatGPT attachments accessible on the phone. No personal greeting, private script, voice configuration, media or private attachment URL is published here. An authenticated private player can be considered later.
+- **Narrative:** the private 10–12-minute podcast follows one coherent order: brief welcome and mindset tip; Singapore weather and air quality; main news grouped by Singapore, India, world, business and sports; AI and Everyday AI with relevant thinkers; then a short sourced interesting fact and close. Keep encouragement in the opening rather than interleaving it with news. Use one soothing female stock voice throughout, at a moderately faster pace and consistent volume. Retire mixed-voice openings. Test names privately and do not claim pronunciation is correct without listener review. No puzzles; distinguish sourced reporting from commentary.
+- **Timing:** the companion's requested daily start is **07:45 Asia/Singapore**, after the upstream HTML is expected. The external automation is managed separately; repo edits do not change its schedule. Inspect and verify the same-day upstream HTML/JSON at start, with a bounded five-minute intake window. If unavailable, disclose the gap and use independently verified current news; never relabel yesterday's edition. The 18 October refreshed edition is requested around **08:00 SGT**, a target rather than a guaranteed SLA.
+- **Privacy and phone access:** public HTML contains news only. Personalized audio and transcript stay private. Native ChatGPT attachments are the available delivery route. A private streaming URL with automatic **seven-day audio deletion** is a requested preference **pending authenticated-hosting implementation**; it is not a working feature or a verified deletion guarantee. No personal greeting, private script, voice configuration, media or private URL is published here.
 
-The existing Claude routine's schedule, general-news template, archive and Gmail workflow remain unchanged. The ChatGPT companion automation has been updated separately. Editing repo instructions does not automatically reconfigure either runtime.
+The existing Claude routine's schedule, general-news template, archive and Gmail workflow remain unchanged. The external ChatGPT companion automation is managed separately; its requested start is now 07:45 SGT, with configuration confirmation tracked independently. Editing repo instructions does not automatically reconfigure either runtime.
 
 **Open:** [mobile news hub](https://pbhat89.github.io/the-brief/podcast/) · [live progress tracker](https://pbhat89.github.io/the-brief/podcast/tracker.html) · [report archive](https://pbhat89.github.io/the-brief/podcast/archive.html) · [root overview](../README.md).
 
