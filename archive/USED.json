@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-08-18",
-      "topic_key": "cleopatra",
-      "text": "Cleopatra lived closer to the Moon landing than to the building of the Great Pyramid."
-    },
-    {
       "date": "2026-08-20",
       "topic_key": "eiffel tower",
       "text": "The Eiffel Tower grows about 15 cm taller in summer"
@@ -259,14 +254,14 @@
       "date": "2026-10-17",
       "topic_key": "bamboo",
       "text": "Bamboo is the fastest-growing plant on Earth, growing up to about 91 cm in a day."
+    },
+    {
+      "date": "2026-10-18",
+      "topic_key": "oxford university",
+      "text": "The University of Oxford is older than the Aztec Empire."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-09-17",
-      "type": "quantitative",
-      "title_key": "there-and-back"
-    },
     {
       "date": "2026-09-18",
       "type": "lateral",
@@ -416,14 +411,14 @@
       "date": "2026-10-17",
       "type": "visual",
       "title_key": "spider-and-the-fly"
+    },
+    {
+      "date": "2026-10-18",
+      "type": "logic",
+      "title_key": "table-for-four"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-09-17",
-      "type": "spellingbee",
-      "title_key": "prime-position"
-    },
     {
       "date": "2026-09-18",
       "type": "letterboxed",
@@ -573,6 +568,11 @@
       "date": "2026-10-17",
       "type": "spellingbee",
       "title_key": "hive-mind"
+    },
+    {
+      "date": "2026-10-18",
+      "type": "letterboxed",
+      "title_key": "boxed-in"
     }
   ]
 }

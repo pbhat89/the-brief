@@ -3753,3 +3753,39 @@ is empty until the first run.
 2026-10-17	ESA's Hera probe fires a 93-minute burn as it nears asteroid Dimorphos	825c051c	ESA,Hera,Dimorphos,Didymos,DART
 2026-10-17	Study links a brain enzyme to memory resilience in old age	d109dd23	Pla2g2f,brain,memory,Nature
 2026-10-17	Scientists turn cloned male mouse embryos into fertile females with CRISPR	369faf89	CRISPR,Y-CUT,mouse,endangered species
+2026-10-18	Update: PM Wong says Singapore is identifying firms behind Indonesia fires and weighing prosecution	864296b8	singapore,lawrence wong,transboundary haze pollution act,indonesia,haze
+2026-10-18	O-Level written exams may be rescheduled if the haze forecast enters the hazardous band	260a7f9c	singapore,moe,desmond lee,o-level exams,haze
+2026-10-18	NEA distributes N95 masks to vulnerable Singaporeans through Community Clubs as haze persists	0435bce6	singapore,nea,n95 masks,community clubs,haze
+2026-10-18	Bodybuilder, 20, died after taking the banned weight-loss drug DNP, coroner rules	8ca1c2a1	singapore,dnp,coroner,adam nakhoda,bodybuilder
+2026-10-18	Woman, 77, found dead on the PIE had earlier been hit in Jurong West, over 2km away	730f9cd4	singapore,pie,jurong west,hit and run
+2026-10-18	Rupee pulled back from its record low but is seen sliding toward 100 to the dollar	680ebd8e	india,rupee,rbi,dollar
+2026-10-18	Reliance's Jio Platforms IPO set to raise up to 302 billion rupees in India's biggest listing	72516c01	india,reliance,jio platforms,ipo,mukesh ambani
+2026-10-18	Modi under pressure as youth-led 'cockroach' protests reach a decade high	0648c8c5	india,narendra modi,cockroach movement,election commission,voter roll
+2026-10-18	Speculation over a securities transaction tax cut lifts sentiment for Indian stocks	3c316d0b	india,securities transaction tax,nirmala sitharaman,nifty,stocks
+2026-10-18	Chancellor Healey set to raise the bank surcharge at the 28 October Budget, lenders warn of a growth hit	fb1b3c4f	uk,john healey,bank surcharge,budget,uk finance
+2026-10-18	SNP's Swinney renews his push for a second independence referendum at the Aberdeen conference	113a76f8	uk,snp,john swinney,independence referendum,andy burnham
+2026-10-18	UK economy unexpectedly grew 0.1% in August as manufacturing offset weaker services	0fab142c	uk,gdp,economy,manufacturing,ons
+2026-10-18	Former British Army chef jailed for nearly four years over terrorism-linked weapons offences	be19e798	uk,mark broadhurst,sheffield crown court,terrorism
+2026-10-18	Trump waives Russia sanctions days before they take effect, drawing bipartisan backlash	b0724180	united states,donald trump,russia sanctions,ukraine,zelensky
+2026-10-18	France sees nationwide protests, with about 550,000 marching and some 400 arrested	c5383318	france,protests,paris,macron
+2026-10-18	Pope Leo discharged from hospital four days after lung-cancer surgery	2fb26e32	pope leo,vatican,lung cancer
+2026-10-18	Venezuela's Maduro pleads not guilty to a US torture-conspiracy charge in New York	45d010ca	venezuela,nicolas maduro,united states,torture charge,new york
+2026-10-18	Russia's overnight strikes kill at least eight across Ukraine as hundreds of drones are launched	5022db4a	russia,ukraine,drones,air strikes
+2026-10-18	Replit drops Anthropic and makes OpenAI its default model	3ca01e88	replit,anthropic,openai,claude
+2026-10-18	Meta releases Muse Spark Open, an 816-billion-parameter model tuned to run on Macs	7b5c907c	meta,muse spark open,open-weight model,apple mlx
+2026-10-18	Amazon debuts new Bee AI wearables from US$75 with a US$12 monthly plan	df9374f3	amazon,bee,ai wearable,panos panay
+2026-10-18	DeepSeek ships a V4.1-Flash update it says runs faster and leaner	64730b74	deepseek,v4.1-flash,ai model,china
+2026-10-18	White House AI task force commissions a report on superintelligence risks	f23a573a	white house,ai task force,jay clayton,andrew ferguson
+2026-10-18	Big US bank stocks head for their worst weekly losing streak since the 2008 crisis	b7c854ba	united states,banks,stocks,earnings
+2026-10-18	Berkshire Hathaway rallies close to a record as the broader market sells off	4d4fe98f	berkshire hathaway,warren buffett,stocks
+2026-10-18	Morgan Stanley's wealth arm pulls in a record US$232bn of net new assets	b4a18ecc	morgan stanley,earnings,wealth management
+2026-10-18	Turkey faces losing its MSCI emerging-market status over a stock-fixing scandal	d3e0e264	turkey,msci,emerging markets,stock-fixing
+2026-10-18	🎾 Davidovich Fokina stuns top seed Zverev to reach his first Shanghai Masters final	617cd121	tennis,davidovich fokina,alexander zverev,shanghai masters
+2026-10-18	🎾 Jodar beats Medvedev to set up an all-Spanish Shanghai Masters final	7fce406b	tennis,rafael jodar,daniil medvedev,shanghai masters
+2026-10-18	🏎️ Antonelli can clinch his maiden F1 title at next week's US Grand Prix in Austin	af2a3248	formula 1,kimi antonelli,george russell,us grand prix
+2026-10-18	🏎️ Russell to take a grid penalty at the Las Vegas GP for an upgraded Mercedes power unit	d2abf7f3	formula 1,george russell,mercedes,las vegas grand prix
+2026-10-18	Bleached corals fully recover within eight weeks when touching a healthy neighbour	8f7b77a8	coral,bleaching,recovery,nature
+2026-10-18	Nearly half of reef-building corals face an elevated risk of extinction, a Red List reassessment finds	86c2501e	coral,extinction risk,iucn red list
+2026-10-18	A Jurassic flightless bird found in China shows early birds were more diverse than thought	75a5efd2	palaeontology,yuezhuornis,jurassic,china,birds
+2026-10-18	NASA's SpaceX Dragon docks at the ISS carrying the station's final roll-out solar arrays	d71000fa	nasa,spacex,dragon,iss,solar arrays
+2026-10-18	NASA's Perseverance rover sets an all-time off-world driving record on Mars	d079d2d6	nasa,perseverance,mars,driving record
