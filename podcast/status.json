@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T22:12:54.832Z",
+  "updated_at": "2026-10-17T22:18:14.267Z",
   "run_id": "morning-preview-2026-10-18",
   "steps": [
     {
@@ -26,9 +26,9 @@
     {
       "id": "audio",
       "label": "Private audio preparation",
-      "state": "running",
-      "updated_at": "2026-10-17T22:12:54.832Z",
-      "detail": "Audio rendering continues with local fallback after service interruption. Private delivery remains pending."
+      "state": "completed",
+      "updated_at": "2026-10-18T06:17:48+08:00",
+      "detail": "Private downloadable episode completed; technical audio checks passed. Fallback narration disclosed privately."
     },
     {
       "id": "schedule",
@@ -54,9 +54,9 @@
     {
       "id": "delivery",
       "label": "Private delivery",
-      "state": "pending",
-      "updated_at": "2026-10-17T22:03:01.417Z",
-      "detail": "Delivery has not yet been confirmed."
+      "state": "completed",
+      "updated_at": "2026-10-18T06:17:48+08:00",
+      "detail": "Private downloadable episode delivered to its intended listener; receipt confirmed."
     }
   ]
 }
