@@ -119,9 +119,30 @@
     }
   ],
   "broader_thinker_coverage": {
-    "naval": "Latest visible nav.al entries older",
-    "karpathy": "Latest visible blog entries older",
-    "yann_lecun": "LinkedIn authentication wall; absence unverified",
-    "status": "Additional source checks may follow"
+    "checked_at": "2026-10-18T06:12:00+08:00",
+    "result": "No fresh item verified on accessible checked channels",
+    "karpathy": {
+      "checked": [
+        "own site",
+        "blog",
+        "GitHub",
+        "YouTube Latest"
+      ],
+      "blog_latest_visible": "May 1",
+      "youtube_latest_visible": "How I use LLMs, approximately one year old",
+      "github": "No October activity visible on profile"
+    },
+    "naval": {
+      "checked": [
+        "nav.al"
+      ],
+      "latest_visible": "July 2"
+    },
+    "yann_lecun": {
+      "linkedin": "Authentication wall",
+      "homepage": "HTTP 502",
+      "bluesky": "Latest visible December 2024"
+    },
+    "limitation": "These bounded reads do not establish that no new posts exist."
   }
 }
