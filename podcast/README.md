@@ -49,7 +49,7 @@ Update `status.json` only after actual work, using pending/running/completed/blo
 
 The owner-private player includes a speech-reactive blue/purple liquid animation, with pause and reduced-motion handling, and still requires ChatGPT sign-in. Shared PIN listening is requested but **not implemented**: audience confirmation, secure user-entered PIN setup and a verified authorization design are pending. No access or credentials are changed by this documentation.
 
-A separate [Cloudflare review build — draft PR #10](https://github.com/pbhat89/the-brief/pull/10) at commit `432cd2a` has passed reported local security checks, Wrangler build/audit and synthetic 7.36 MB workerd audio/range tests. Independent review is in progress. **It is not deployed or merged.** The accessible in-app browser has no Cloudflare session; a reported login elsewhere has not been verified here. No further login polling until the correct-browser confirmation. Existing private playback remains in place; production PIN setup/credential approvals and permanent-retention activation remain pending.
+The tested [Cloudflare application source](cloudflare/) was merged through [PR #10](https://github.com/pbhat89/the-brief/pull/10). The Cloudflare application is now deployed with verified `AUTH` and `EPISODES` bindings. Public and preview URLs remain disabled pending secure setup and live tests. Listening-PIN setup, separate publisher authorization, media upload and cloud-only unattended publishing are pending; a local browser/CLI login does not establish cloud publishing. Permanent deletion remains unactivated pending its separate confirmation. Existing private playback remains available.
 
 ## Contracts and validation
 

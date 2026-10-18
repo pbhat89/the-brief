@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18T00:38:07.415Z",
+  "updated_at": "2026-10-18T02:05:45.149Z",
   "run_id": "morning-refresh-2026-10-18",
   "previous_run": {
     "run_id": "morning-preview-2026-10-18",
@@ -86,10 +86,24 @@
     },
     {
       "id": "cloudflare_review",
-      "label": "Cloudflare candidate review",
-      "state": "running",
-      "updated_at": "2026-10-18T00:38:07.415Z",
-      "detail": "Draft PR #10, commit 432cd2a: reported local security/build/audit and synthetic audio/range tests passed; independent review in progress. Not merged or deployed. Production session, PIN/credential approvals and retention activation pending."
+      "label": "Cloudflare application deployment",
+      "state": "completed",
+      "updated_at": "2026-10-18T02:05:45.149Z",
+      "detail": "Reviewed application deployed with AUTH and EPISODES bindings verified. Public/preview URLs disabled; secure setup and live tests pending."
+    },
+    {
+      "id": "cloudflare_setup",
+      "label": "Cloudflare secure listening setup",
+      "state": "pending",
+      "updated_at": "2026-10-18T02:05:45.149Z",
+      "detail": "User-entered listening PIN, separate publisher authorization, media upload and live access tests pending. No public listening endpoint enabled."
+    },
+    {
+      "id": "cloud_publishing",
+      "label": "Cloud-only unattended publishing",
+      "state": "pending",
+      "updated_at": "2026-10-18T02:05:45.149Z",
+      "detail": "Approved cloud publishing connection and secure secret storage not yet configured. Local CLI authorization is not cloud automation access."
     }
   ]
 }
