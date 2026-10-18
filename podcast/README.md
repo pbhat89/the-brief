@@ -42,6 +42,8 @@ For public news updates, atomically update `reports.json` with `latest_id` and `
 
 Update `status.json` only after actual work, using pending/running/completed/blocked and a timestamp/detail per step. Report ingestion, source coverage, verification/dedup, script, audio, publication and delivery separately. No fake percentages or simulated timers. This page polls every 30 seconds and labels updates older than 15 minutes stale. Persist pending work across failures. Only mark delivery completed after checking the actual approved destination.
 
+The owner-private player includes a speech-reactive blue/purple liquid animation, with pause and reduced-motion handling, and still requires ChatGPT sign-in. Shared PIN listening is requested but **not implemented**: audience confirmation, secure user-entered PIN setup and a verified authorization design are pending. No access or credentials are changed by this documentation.
+
 ## Contracts and validation
 
 `evidence.schema.json` describes source evidence, including timestamps, transcript basis and original/replay identity. `ledger.example.json` is an empty format, not research results. Keep the real append-only delivery ledger and coverage runs in the approved private store. Import all prior brief archive rows and previous podcast deliveries, review aliases and event clusters, and record history gaps; do not claim all-history dedup when history is missing.

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T23:36:28.187Z",
+  "updated_at": "2026-10-18T00:10:54.501Z",
   "run_id": "morning-refresh-2026-10-18",
   "previous_run": {
     "run_id": "morning-preview-2026-10-18",
@@ -46,8 +46,8 @@
       "id": "streaming",
       "label": "Private streaming",
       "state": "completed",
-      "updated_at": "2026-10-17T23:36:28.187Z",
-      "detail": "Owner-only streaming available; range seeking verified and anonymous audio access denied. Seven-day playback expiry is active."
+      "updated_at": "2026-10-18T00:10:54.501Z",
+      "detail": "Owner-private player requires ChatGPT sign-in and includes a speech-reactive blue/purple liquid animation with pause and reduced-motion handling. Playback expiry remains active."
     },
     {
       "id": "delivery",
@@ -69,6 +69,13 @@
       "state": "pending",
       "updated_at": "2026-10-17T23:36:28.187Z",
       "detail": "Seven-day permanent storage deletion awaits approval/setup. Active playback expiry does not prove stored bytes have been deleted."
+    },
+    {
+      "id": "shared_access",
+      "label": "Shared PIN listening access",
+      "state": "pending",
+      "updated_at": "2026-10-18T00:10:54.501Z",
+      "detail": "Not implemented. Audience confirmation, secure user-entered PIN setup and verified authorization design are required. No access or credentials changed."
     }
   ]
 }
