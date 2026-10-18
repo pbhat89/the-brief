@@ -22,3 +22,9 @@ Separate observed facts from hypotheses and proposals. Record remedies tried and
 Before shipping a source or UI change, use concrete checks appropriate to the change: evidence/date/link audit; event-level repeat check across available history; manifest validation; HTTPS readback before latest-pointer update; relevant mobile/readability check. Do not write tests that merely repeat prose. Report history or access gaps rather than invent completeness.
 
 Public learning files must remain sanitized: no personal identities, greetings, private scripts/media/URLs, PINs, credentials, sensitive context or private delivery IDs. Keep private tests and secret configuration outside this repository.
+
+## Cloudflare candidate build · 18 October
+
+A separate [Cloudflare review build — draft PR #10](https://github.com/pbhat89/the-brief/pull/10) at commit `432cd2a` has passed reported local security checks, Wrangler build/audit and synthetic 7.36 MB workerd audio/range tests. Independent review is in progress. **It is not deployed or merged.** The accessible in-app browser has no Cloudflare session; a reported login elsewhere has not been verified here. No further login polling until the correct-browser confirmation. Existing private playback remains in place; production PIN setup/credential approvals and permanent-retention activation remain pending.
+
+Do not confuse local/synthetic tests with production acceptance. Next gates: independent review, parent merge instruction, confirmed authorized deployment session, secure secret entry, live access/range tests and retention activation checks. No merge, credential setup or deployment is authorized by these learning notes. Preserve the existing player as the reversible fallback.

@@ -49,6 +49,8 @@ Update `status.json` only after actual work, using pending/running/completed/blo
 
 The owner-private player includes a speech-reactive blue/purple liquid animation, with pause and reduced-motion handling, and still requires ChatGPT sign-in. Shared PIN listening is requested but **not implemented**: audience confirmation, secure user-entered PIN setup and a verified authorization design are pending. No access or credentials are changed by this documentation.
 
+A separate [Cloudflare review build — draft PR #10](https://github.com/pbhat89/the-brief/pull/10) at commit `432cd2a` has passed reported local security checks, Wrangler build/audit and synthetic 7.36 MB workerd audio/range tests. Independent review is in progress. **It is not deployed or merged.** The accessible in-app browser has no Cloudflare session; a reported login elsewhere has not been verified here. No further login polling until the correct-browser confirmation. Existing private playback remains in place; production PIN setup/credential approvals and permanent-retention activation remain pending.
+
 ## Contracts and validation
 
 `evidence.schema.json` describes source evidence, including timestamps, transcript basis and original/replay identity. `ledger.example.json` is an empty format, not research results. Keep the real append-only delivery ledger and coverage runs in the approved private store. Import all prior brief archive rows and previous podcast deliveries, review aliases and event clusters, and record history gaps; do not claim all-history dedup when history is missing.

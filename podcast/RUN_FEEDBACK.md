@@ -42,3 +42,18 @@ Never record personal names/preferences tied to identity, private greetings/scri
 - **Proposal:** preflight the approved stock voice and keep one voice across all chapters. Success: complete chapters, no clipping, stable measured volume, and listener review of names before claiming pronunciation accuracy. Rollback: retain previous verified edition; disclose a blocked render rather than silently mix voices.
 - **Proposal:** verify owner playback in an existing authenticated session, without new credential handling. Success: play and seek at phone width. Otherwise report sign-in required.
 - **Pending authorization/setup:** permanent seven-day deletion needs a verified storage lifecycle and deletion check. Shared access needs audience confirmation, secure user-entered PIN setup and a verified authorization design. Do not implement these through this feedback loop.
+
+## 18 October 2026 · Cloudflare draft review build
+
+### Observations and evidence
+
+A separate [Cloudflare review build — draft PR #10](https://github.com/pbhat89/the-brief/pull/10) at commit `432cd2a` has passed reported local security checks, Wrangler build/audit and synthetic 7.36 MB workerd audio/range tests. Independent review is in progress. **It is not deployed or merged.** The accessible in-app browser has no Cloudflare session; a reported login elsewhere has not been verified here. No further login polling until the correct-browser confirmation. Existing private playback remains in place; production PIN setup/credential approvals and permanent-retention activation remain pending.
+
+Test outcomes were reported by the implementation operator; local security groups, build/audit and synthetic audio/range checks are not evidence of production deployment or real private-media playback. No production account access, PIN creation or retention activation occurred in this documentation update.
+
+### Limits and next proposal
+
+- Browser access is blocked pending confirmation of the correct signed-in browser. Do not enter credentials or poll repeatedly.
+- Independent review must finish before a merge instruction. Preserve the draft branch and current private player.
+- Production success requires authorized deployment, secure user-entered secrets, access-denial/range tests, and explicit retention activation with verification. Until those occur, keep production PIN and deletion pending.
+- Rollback: leave the tested draft unmerged and retain the existing private player. This entry does not grant credential, permission, account or spending approval.
