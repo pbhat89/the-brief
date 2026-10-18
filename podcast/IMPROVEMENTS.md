@@ -46,3 +46,10 @@ Success measures: fresh cloud access, verified size/hash/expiry receipt, duplica
 suppression, anonymous denial and honest scheduled-run status. Production-size relay,
 physical-device behavior and elapsed expiry remain separate checks. Keep the existing
 owner-only/attachment route as fallback; do not expand permissions or spending.
+
+
+## First production-sized cloud run · 19 October 2026
+
+The scheduled run completed research, narration and a production-sized cloud upload. A new receipt and an identical idempotent replay matched the local audio hash/size, with seven-day expiry. This supersedes the earlier production-size-transfer wait, but not phone listening, pronunciation review or elapsed storage deletion. Final conversation delivery is tracked independently.
+
+Keep observational freshness separate from retrieval time: a 07:09 feed check still returned 06:00 NEA observations. Keep those labels in both report and narration. Hold the public latest pointer through initial deployment 404s until HTTPS content hashes match. Proposed optimization: batch report/audit writes to reduce intermediate builds; retain the existing verified sequence as rollback.
