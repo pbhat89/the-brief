@@ -1,6 +1,6 @@
 # Code deployment and daily content publishing
 
-The protected listener has been deployed and its PIN secrets configured by the owner. Its URL is shared privately. No episode has been uploaded through this implementation, no publisher credential is configured, and unattended delivery is not established.
+The protected listener has been deployed and its PIN secrets configured by the owner. Its URL is shared privately. A one-time owner-authorized sample was uploaded and verified using existing control-plane access. No persistent publisher credential is configured, and unattended delivery is not established.
 
 ## Retention
 
