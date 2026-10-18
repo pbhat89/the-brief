@@ -101,3 +101,28 @@ access and idempotent receipt readback, not the whole news/audio workflow or an 
 Use the [daily API contract](PUBLISHING.md), preserve the prior player as fallback,
 and update this log after actual outcomes. No new permission or paid service is
 authorized by these notes.
+
+
+## 19 October 2026 · First full cloud morning production
+
+### Observed results
+
+- Start: 07:00 SGT. Same-day upstream JSON was available and dated 19 October. Selected claims were independently checked; repeated stories were removed or explicitly labelled with material changes.
+- Public selection: seven main-news items, three ranked AI developments, timestamped official Singapore conditions and one sourced pineapple/gelatin fact. AI checks compared 102 prior delivered events across nine editions plus repository history.
+- X coverage: 48 of 211 roster profiles inspected, 163 unvisited; supplementary primary posts and thinker profiles were checked. Logged-out windows were partial. This is not exhaustive coverage.
+- Everyday AI: Videos, Live, episodes, blog, AI News and newsletter pages checked. No qualifying new original found. Replay episode 883 was excluded; its transcript panel was unavailable and upload-date displays conflicted. No video was newly marked summarized.
+- Inshorts national, politics and business pages were checked. Two India items met this edition's freshness/evidence needs; no app ranking or quota was claimed. Several direct publisher fetches failed while original article text was available through search; attribution and gaps remain explicit.
+- NEA feeds still returned 06:00 observations at the 07:09:58 check. They were labelled 06:00, not relabelled as current-hour readings. The MSS forecast was issued 05:32. Rain was not treated as guaranteed haze clearance.
+- Production narration: 11 minutes 9.12 seconds, about 165 words/minute, full decode passed, integrated loudness -18.68 LUFS, true peak -1.63 dBTP, no clipped or non-finite samples detected. Pronunciation and physical-device listening were not independently certified.
+- Production-sized cloud transfer returned a new successful receipt. Local byte count and SHA-256 matched; expiry minus creation was exactly 604800 seconds. Identical replay returned the same completed receipt, without another episode. Private URLs, receipt identifiers and scripts are excluded from this log.
+- [Public report](reports/2026-10-19.html) and [source audit](reports/2026-10-19.sources.json) returned HTTPS 200 with matching local hashes before the latest pointer changed. Manifest checks and six dependency-free regression tests passed.
+
+### Remedies and limits
+
+- Initial Pages requests returned 404 while deployment was queued. Waiting for successful deployment resolved this; the latest pointer was held until verified. No stale page was presented as today's report.
+- Public HTML privacy checks found no personal branding, private links, credential names or local paths; all five regional observations and source links are retained. A local headless mobile render was blocked by the execution environment, so no visual mobile QA success is claimed.
+- This establishes full research, rendering and cloud publication. Final conversation delivery is recorded separately after its result. Phone playback and elapsed seven-day production deletion remain separate, unobserved checks.
+
+### Next bounded improvement
+
+Batch public report/audit writes where practical to reduce cancelled intermediate Pages builds; measure deployment time and preserve byte-readback-before-pointer behavior. This is a proposal, not an implemented change. Keep existing publication flow as fallback. No new permissions or spending are authorized.
