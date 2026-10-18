@@ -49,7 +49,7 @@ async function handle(req,env){
  if(p==='/api/logout'&&method==='POST'){await auth({op:'logout',token});return reply({ok:true},200,{'Set-Cookie':'__Host-brief=; Path=/; Secure; HttpOnly; SameSite=Strict; Max-Age=0'});}
  if(p==='/api/session'&&method==='GET')return reply(session);
  if(p==='/api/episodes'&&['GET','HEAD'].includes(method)){
-  const list=await env.EPISODES.list({prefix:'meta:',limit:100});const episodes=[];for(const k of list.keys){const v=await env.EPISODES.get(k.name,'json');if(v&&v.expires>now())episodes.push(v);}
+  const list=await env.EPISODES.list({prefix:'active:',limit:100});const episodes=[];for(const k of list.keys){const v=await env.EPISODES.get(k.name,'json');if(v&&v.expires>now())episodes.push(v);}
   return reply(method==='HEAD'?null:{episodes:episodes.sort((a,b)=>b.created-a.created)});
  }
  const match=/^\/api\/(media|episodes)\/([a-f0-9-]{36})$/.exec(p);
@@ -81,6 +81,9 @@ async function upload(req,env){
  if(!Array.isArray(chapters)||chapters.length>30||chapters.some(c=>!c||typeof c.title!=='string'||c.title.length>80||!Number.isFinite(c.start)||c.start<0))return reply('Invalid chapters',400);
  const meta={id,title,created,expires,size:bytes.length,chapters:chapters.map(c=>({title:c.title,start:c.start})).sort((a,b)=>a.start-b.start)};
  await env.EPISODES.put('audio:'+id,bytes.buffer,{expiration:expires});
- await env.EPISODES.put('meta:'+id,JSON.stringify(meta),{expiration:expires});
+ // Retain private playback metadata independently of expiring audio bytes.
+ await env.EPISODES.put('meta:'+id,JSON.stringify(meta));
+ // The disposable listing index prevents retained history crowding out current audio.
+ await env.EPISODES.put('active:'+id,JSON.stringify(meta),{expiration:expires});
  return reply(meta,201);
 }
