@@ -130,3 +130,8 @@ Batch public report/audit writes where practical to reduce cancelled intermediat
 ### Final delivery check · 19 October 07:15 SGT
 
 Conversation delivery was accepted at 07:15:08 SGT, including the listener/report links and standalone report/private transcript attachments. Acceptance does not prove mobile push or playback. Direct listener root, metadata and media requests from the research runtime returned 403; because the root also failed, these responses are not evidence of application-level authorization denial. Today's publishing evidence is the matched production receipt and exact replay, with local audio decode. Prior application security checks remain historical; no new playback claim is made.
+
+
+## Public reader catalogue check · 19 October 2026
+
+After the new report manifest was published, CI caught the stale generated reader catalogue (30 of 31 application tests passed). Regenerate `podcast/cloudflare/src/reports.js` with `node podcast/cloudflare/scripts/build-reports.mjs` after every manifest addition and before final regression checks. The generator preserves prior entries. The source-link test also needed the same own-site exclusion on both sides: absolute navigation links in downloadable HTML exposed its asymmetric comparison. External source-link multiplicity and full extractor equality checks remain enforced. The four targeted reader tests passed locally; full CI/deployment outcome is recorded when observed. This is a bounded generated-data/test correction, with no credential, privacy or runtime access changes.
