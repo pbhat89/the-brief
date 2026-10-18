@@ -126,3 +126,7 @@ authorized by these notes.
 ### Next bounded improvement
 
 Batch public report/audit writes where practical to reduce cancelled intermediate Pages builds; measure deployment time and preserve byte-readback-before-pointer behavior. This is a proposal, not an implemented change. Keep existing publication flow as fallback. No new permissions or spending are authorized.
+
+### Final delivery check · 19 October 07:15 SGT
+
+Conversation delivery was accepted at 07:15:08 SGT, including the listener/report links and standalone report/private transcript attachments. Acceptance does not prove mobile push or playback. Direct listener root, metadata and media requests from the research runtime returned 403; because the root also failed, these responses are not evidence of application-level authorization denial. Today's publishing evidence is the matched production receipt and exact replay, with local audio decode. Prior application security checks remain historical; no new playback claim is made.
