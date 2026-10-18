@@ -53,3 +53,8 @@ owner-only/attachment route as fallback; do not expand permissions or spending.
 The scheduled run completed research, narration and a production-sized cloud upload. A new receipt and an identical idempotent replay matched the local audio hash/size, with seven-day expiry. This supersedes the earlier production-size-transfer wait, but not phone listening, pronunciation review or elapsed storage deletion. Final conversation delivery is tracked independently.
 
 Keep observational freshness separate from retrieval time: a 07:09 feed check still returned 06:00 NEA observations. Keep those labels in both report and narration. Hold the public latest pointer through initial deployment 404s until HTTPS content hashes match. Proposed optimization: batch report/audit writes to reduce intermediate builds; retain the existing verified sequence as rollback.
+
+
+## Public reader catalogue check · 19 October 2026
+
+After the new report manifest was published, CI caught the stale generated reader catalogue (30 of 31 application tests passed). Regenerate `podcast/cloudflare/src/reports.js` with `node podcast/cloudflare/scripts/build-reports.mjs` after every manifest addition and before final regression checks. The generator preserves prior entries. The source-link test also needed the same own-site exclusion on both sides: absolute navigation links in downloadable HTML exposed its asymmetric comparison. External source-link multiplicity and full extractor equality checks remain enforced. The four targeted reader tests passed locally; full CI/deployment outcome is recorded when observed. This is a bounded generated-data/test correction, with no credential, privacy or runtime access changes.
