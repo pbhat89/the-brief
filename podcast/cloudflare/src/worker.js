@@ -56,11 +56,12 @@ async function handle(req,env){
  if(match&&['GET','HEAD'].includes(method)){
   const meta=await env.EPISODES.get('meta:'+match[2],'json');if(!meta||meta.expires<=now())return reply('Not found',404);
   if(match[1]==='episodes')return reply(method==='HEAD'?null:meta);
-  const bounds=range(req.headers.get('Range'),meta.size);if(!bounds)return reply(null,416,{'Content-Range':`bytes */${meta.size}`});
-  const [a,b]=bounds,partial=!!req.headers.get('Range'),h={'Content-Type':'audio/mpeg','Accept-Ranges':'bytes','Content-Length':String(b-a+1),...(partial?{'Content-Range':`bytes ${a}-${b}/${meta.size}`}:{})};
+  const requestedRange=method==='GET'?req.headers.get('Range'):null;
+  const bounds=range(requestedRange,meta.size);if(!bounds)return reply(null,416,{'Content-Range':`bytes */${meta.size}`});
+  const [a,b]=bounds,partial=!!requestedRange,h={'Content-Type':'audio/mpeg','Accept-Ranges':'bytes','Content-Length':String(b-a+1),...(partial?{'Content-Range':`bytes ${a}-${b}/${meta.size}`}:{})};
   if(method==='HEAD')return reply(null,partial?206:200,h);
   const audio=await env.EPISODES.get('audio:'+match[2],'arrayBuffer');if(!audio||audio.byteLength!==meta.size)return reply('Not found',404);
-  return reply(audio.slice(a,b+1),partial?206:200,h);
+  return reply(partial?audio.slice(a,b+1):audio,partial?206:200,h);
  }
  return reply('Not found',404);
 }

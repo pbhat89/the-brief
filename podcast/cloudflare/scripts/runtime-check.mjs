@@ -18,6 +18,7 @@ try{
  const full=await fetch(base+'/api/media/'+meta.id,{headers:{Cookie:cookie}});assert.equal(full.status,200);assert.equal((await full.arrayBuffer()).byteLength,bytes.length);
  const partial=await fetch(base+'/api/media/'+meta.id,{headers:{Cookie:cookie,Range:'bytes=7359900-'}});assert.equal(partial.status,206);assert.equal((await partial.arrayBuffer()).byteLength,100);
  const head=await fetch(base+'/api/media/'+meta.id,{method:'HEAD',headers:{Cookie:cookie}});assert.equal(head.headers.get('Content-Length'),String(bytes.length));assert.equal(await head.text(),'');
+ for(const Range of ['bytes=1-99','invalid','bytes=99999999-']){const h=await fetch(base+'/api/media/'+meta.id,{method:'HEAD',headers:{Cookie:cookie,Range}});assert.equal(h.status,200);assert.equal(h.headers.get('Content-Length'),String(bytes.length));assert.equal(h.headers.get('Content-Range'),null);assert.equal(await h.text(),'');}
  const attempts=await Promise.all(Array.from({length:11},()=>fetch(base+'/api/login',{method:'POST',headers:{Origin:base},body:'{"pin":"bad"}'})));
  assert.equal(attempts.filter(r=>r.status===401).length,9);assert.equal(attempts.filter(r=>r.status===429).length,2);
  console.log('PASS: workerd + SQLite DO PIN verification, session, private KV list, 7.36 MB upload/full/range/HEAD, concurrent global limiter');
