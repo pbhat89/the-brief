@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Mon, 19 October 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .wpuzzle-box{background:linear-gradient(135deg,#0e1a1a,#0d1620);border:1px solid #234a44;border-left:3px solid #16a085;padding:24px 28px;border-radius:2px}
+  .wptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#16a085;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .wpuzzle-box .puzzle-title{color:#cdeae3}
+  .wpuzzle-box .puzzle-how{color:#8fb8ac;background:#08140f;border-left-color:#1a6a5a}
+  .wpuzzle-box .puzzle-q{color:#dfeae6;font-family:'Source Sans 3',sans-serif}
+  .wpuzzle-box .answer{color:#bfe0d6}
+  .wpuzzle-box .answer .alabel{color:#16a085}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Monday, 19 October 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Monday, 19 October 2026 · 🔍 34 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eleven entries in this exact order:
+     id    : one of "sg" | "india" | "uk" | "geo" | "tech" | "biz" | "sports" | "misc" | "fun" | "puzzle" | "wpuzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 8 news tabs; fun/puzzle/wpuzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+
+   WORD_PUZZLE shape (separate, daily word game — NYT-style, static reveal):
+     type     : one of "Connections" | "Word Ladder" | "Anagram" | "Spelling Bee" | "Letter Boxed" | "Mini Crossword"
+     title    : short evocative name for the word puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle body; supports \n for line breaks (grids render as pre-formatted text)
+     answer   : the answer; supports \n for line breaks; appears inside its own toggle (id "wpans")
+============================================================================= */
+
+const SECTIONS = [
+  { id:"sg", title:"🇸🇬 Singapore", color:"#e74c3c", items:[
+    { headline:"Two Singapore-listed palm oil firms named in a Greenpeace report on Indonesian plantation fires", summary:"A Greenpeace report linked two Singapore-listed palm oil companies to plantation fires fuelling the transboundary haze; shares of both firms fell when trading opened on 16 October as scrutiny of corporate accountability grew.", source:"Mothership", url:"https://mothership.sg/2026/10/two-singapore-listed-palm-oil-firms-greenpeace-report-indonesian-plantation-fires/", date:"Oct 16", spectrum:null, bias:null },
+    { headline:"Borneo residents take the Indonesian government to court over the fires driving the haze", summary:"Residents of Indonesian Borneo filed a lawsuit accusing the government of negligence in handling the forest fires that have pushed smoke haze across the region, as Singapore&rsquo;s air stayed in the unhealthy range.", source:"Mothership", url:"https://mothership.sg/2026/10/borneo-residents-sue-government-haze/", date:"Oct 17", spectrum:null, bias:null },
+    { headline:"Seah Kian Peng and Pritam Singh lead a parliamentary delegation to Europe", summary:"Speaker Seah Kian Peng and Workers&rsquo; Party chief Pritam Singh are leading a cross-party parliamentary delegation to Vatican City, Italy and France, aimed at strengthening inter-parliamentary ties.", source:"Mothership", url:"https://mothership.sg/2026/10/seah-kian-peng-parliament-vatican-city-visit/", date:"Oct 17", spectrum:null, bias:null },
+    { headline:"SportSG shuts outdoor and non-air-conditioned facilities at all ActiveSG centres as haze persists", summary:"Sport Singapore closed outdoor and non-air-conditioned facilities at every ActiveSG Sport Centre as a precaution while the haze lingered, with indoor air-conditioned facilities staying open.", source:"Mothership", url:"https://mothership.sg/2026/10/sportsg-close-all-outdoor-non-air-conditioned-facilities/", date:"Oct 16", spectrum:null, bias:null },
+  ]},
+  { id:"india", title:"🇮🇳 India", color:"#e67e22", items:[
+    { headline:"At least 19 killed in a Durga Puja pandal stampede in Kolkata", summary:"A crowd rushing for cover from rain at a Durga Puja pavilion in Kolkata triggered a stampede on 17 October that killed at least 19 people, including a seven-year-old girl, and injured 25; police detained organisers and opened a crowd-control probe.", source:"South China Morning Post", url:"https://www.scmp.com/news/asia/south-asia/article/3371278/19-dead-25-hurt-stampede-india-religious-festival", date:"Oct 17", spectrum:null, bias:null },
+    { headline:"Update: India frees &lsquo;Cockroach&rsquo; party founder as voter-roll protests spread", summary:"Police released Cockroach Janta Party founder Abhijeet Dipke on 17 October, a day after detaining him en route to a Delhi rally, and his legal team said two more jailed leaders were set to be freed, as demands for the Chief Election Commissioner to resign over a voter-roll purge intensified.", source:"South China Morning Post", url:"https://www.scmp.com/news/asia/south-asia/article/3371274/cockroach-party-founder-released-indian-police", date:"Oct 18", spectrum:null, bias:null },
+    { headline:"Marco Rubio&rsquo;s India visit, centred on Mumbai, ruffles feathers in New Delhi", summary:"US Secretary of State Marco Rubio&rsquo;s trip to India, focused on Mumbai and skipping New Delhi, drew unease in the capital as ties strain over tariffs and purchases of Russian oil; the State Department said he would meet officials and business leaders on energy and strategic cooperation.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/10/18/why-marco-rubios-visit-to-mumbai-has-ruffled-feathers-in-india", date:"Oct 18", spectrum:null, bias:null },
+  ]},
+  { id:"uk", title:"🇬🇧 UK News", color:"#3949ab", items:[
+    { headline:"Police rule out a criminal probe into a Palestine Action post by an adviser&rsquo;s wife", summary:"The Metropolitan Police said a social-media post by writer Sarah Helm, wife of national security adviser Jonathan Powell, expressing support for the banned group Palestine Action did not meet the criminal threshold, so no investigation would follow.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/10/18/uk-police-rule-out-probe-into-palestine-action-post-by-pm-advisers-wife", date:"Oct 18", spectrum:null, bias:null },
+    { headline:"Green Party member reports death threats over a conference motion on Zionism", summary:"Green Party member Lubna Speitan said she had received death and rape threats after the party&rsquo;s Brighton conference passed a motion, by 1,022 votes to 813, classing Zionism as a form of racism; Prime Minister Andy Burnham called the motion &lsquo;wrong&rsquo; and ruled out any pact with the Greens.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/10/15/uk-green-member-behind-anti-zionism-motion-receives-death-threats", date:"Oct 15", spectrum:null, bias:null },
+  ]},
+  { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
+    { headline:"Ukraine launches one of its largest drone attacks of the year on Russia", summary:"Ukraine struck a St Petersburg oil terminal in one of its biggest drone assaults of 2026, defying US pressure to halt attacks on Russian energy sites; Russia said it downed more than 1,000 drones overnight into 18 October and at least one person was killed.", source:"CNN", url:"https://www.cnn.com/2026/10/18/europe/ukraine-russia-drone-attack-trump-intl", date:"Oct 18", spectrum:null, bias:null },
+    { headline:"Trump endorses Netanyahu nine days before Israel&rsquo;s election", summary:"President Trump endorsed Benjamin Netanyahu on 18 October, nine days before Israel&rsquo;s 27 October parliamentary election, reversing an earlier refusal to back him as the prime minister faces a tight race.", source:"CNN", url:"https://www.cnn.com/2026/10/18/world/trump-netanyahu-elections-relations-intl", date:"Oct 18", spectrum:null, bias:null },
+    { headline:"Fighting intensifies across Yemen as a humanitarian crisis deepens", summary:"Escalating fighting across Yemen has displaced more than 233,000 people since the latest surge, the International Organization for Migration said, with about 121,000 uprooted in Taiz governorate alone.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/10/18/fighting-intensifies-across-yemen-as-humanitarian-crisis-deepens", date:"Oct 18", spectrum:null, bias:null },
+    { headline:"Ukraine targets Russia&rsquo;s Yandex as the internet becomes a new front line", summary:"Ukraine said it hit a data centre tied to Yandex, often called &lsquo;Russia&rsquo;s Google&rsquo;, signalling a shift toward striking the digital infrastructure that underpins Russia&rsquo;s economy and daily life.", source:"CNN", url:"https://www.cnn.com/2026/10/17/europe/russia-yandex-data-center-internet-ukraine-intl", date:"Oct 17", spectrum:null, bias:null },
+  ]},
+  { id:"tech", title:"💻 Tech & AI", color:"#27ae60", items:[
+    { headline:"Anthropic plans to move 5% of its equity into a new public-good fund ahead of an IPO", summary:"Anthropic said it would shift about 5% of its shares into a new public-benefit fund that can finance donations addressing issues such as AI&rsquo;s labour-market impact, as the company prepares a November IPO that could value it at up to roughly US$2 trillion.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-10-18/anthropic-plans-to-shift-some-shares-into-new-public-good-fund", date:"Oct 18", spectrum:null, bias:null },
+    { headline:"Rivian moves to license its software, AI and autonomy stack", summary:"Rivian said it would open up its electric-vehicle architecture, AI models and self-driving stack for licensing, while a venture it partly owns, Mind Robotics, builds industrial robots for its factories and outside customers.", source:"TechCrunch", url:"https://techcrunch.com/2026/10/18/techcrunch-mobility-rivians-next-act/", date:"Oct 18", spectrum:null, bias:null },
+    { headline:"Waymo&rsquo;s robotaxis are heading to Canada", summary:"Waymo said it would enter Toronto through Ontario&rsquo;s automated-vehicle pilot programme, first mapping and testing with safety operators on board before carrying passengers, in its first move outside the United States.", source:"TechCrunch", url:"https://techcrunch.com/2026/10/16/waymos-robotaxis-are-headed-to-canada/", date:"Oct 16", spectrum:null, bias:null },
+    { headline:"Eight US states sue OpenAI over ChatGPT child-safety claims", summary:"Attorneys general in eight states &mdash; Iowa, Kansas, Nebraska, West Virginia, Arkansas, Arizona, Idaho and Montana &mdash; filed separate lawsuits alleging ChatGPT is a defective product that has harmed children; OpenAI said its tools include age-specific protections &lsquo;many other AI products lack&rsquo;.", source:"CNBC", url:"https://www.cnbc.com/2026/10/14/openai-sued-by-8-states-over-chatgpt-safety-concerns-.html", date:"Oct 14", spectrum:null, bias:null },
+  ]},
+  { id:"biz", title:"📈 Business & Markets", color:"#8e44ad", items:[
+    { headline:"Brent crude tops US$110 for the first time since May", summary:"Brent crude touched US$110 a barrel for the first time since May, settling around US$109.86 on 16 October, as Iran stepped up attacks around the Strait of Hormuz and Houthi forces struck Saudi Arabia; the IEA warned diesel-market strains could persist into 2027.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-10-16/oil-tops-110-for-first-time-since-may-as-supply-risk-grows", date:"Oct 16", spectrum:null, bias:null },
+    { headline:"Netflix, Meta and Tesla headline a heavy week of earnings", summary:"Netflix, Meta and Tesla lead a packed earnings week starting 19 October; Netflix reports on 20 October after cutting about 1,000 jobs, or 6% of staff, and replacing its chief content officer, with analysts expecting roughly 40% earnings growth.", source:"CNBC", url:"https://www.cnbc.com/2026/10/18/meta-tesla-netflix-earnings-preview.html", date:"Oct 18", spectrum:null, bias:null },
+    { headline:"Gold holds near US$4,165 as haven demand meets a cautious Fed", summary:"Gold held around US$4,165 an ounce on haven demand and lower yields, still well below its January record above US$5,500, as traders weighed the odds of a Federal Reserve rate decision later this month.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-10-15/gold-holds-gains-with-haven-demand-and-lower-yields-in-focus", date:"Oct 16", spectrum:null, bias:null },
+    { headline:"Trump&rsquo;s Russia &lsquo;diesel deal&rsquo; could hand Moscow more than money", summary:"Analysts warned that a reported arrangement easing pressure on Russian diesel flows could aid Moscow&rsquo;s war effort and complicate support for Ukraine, even as it aims to cool fuel prices, CNBC reported.", source:"CNBC", url:"https://www.cnbc.com/2026/10/17/trump-diesel-russia-ukraine-war.html", date:"Oct 17", spectrum:null, bias:null },
+  ]},
+  { id:"sports", title:"🎾🏏🏎️ Sports", color:"#c0392b", items:[
+    { headline:"🎾 Davidovich Fokina wins the Shanghai Masters for his first Masters 1000 title", summary:"Spain&rsquo;s Alejandro Davidovich Fokina fought back to beat compatriot Rafael Jodar 1-6, 7-6(5), 6-4 in the Shanghai Masters final on 18 October, claiming his first ATP Masters 1000 title and rising to a career-high No. 13.", source:"ATP Tour", url:"https://www.atptour.com/en/news/jodar-davidovich-fokina-shanghai-2026-final", date:"Oct 18", spectrum:null, bias:null },
+    { headline:"🎾 Jodar, 20, falls in the Shanghai final but nears an ATP Finals debut", summary:"Rafael Jodar, the youngest Shanghai Masters finalist in the event&rsquo;s history, lost the final to Davidovich Fokina but stayed on course to qualify for the season-ending Nitto ATP Finals in his breakthrough year.", source:"ATP Tour", url:"https://www.atptour.com/en/news/jodar-reaction-shanghai-2026-sunday", date:"Oct 18", spectrum:null, bias:null },
+    { headline:"🏏 India and West Indies finish their T20I series level at 2-2", summary:"The deciding fifth T20I in Bengaluru was washed out with India 118-5 after 7.4 overs on 17 October, leaving the five-match series drawn 2-2; West Indies&rsquo; Shai Hope was named Player of the Series.", source:"ESPNcricinfo", url:"https://www.espn.com/cricket/series/24289/scorecard/1529234/india-vs-west-indies-5th-t20i-24289", date:"Oct 17", spectrum:null, bias:null },
+    { headline:"🏎️ Red Bull extends team principal Laurent Mekies&rsquo; contract to 2031", summary:"Red Bull handed team principal and chief executive Laurent Mekies a contract extension through the end of 2031; he took over from Christian Horner in July 2025 and has overseen back-to-back wins for Max Verstappen in Malaysia and Singapore. The US Grand Prix in Austin is next, on 23-25 October.", source:"Formula1.com", url:"https://www.formula1.com/en/latest/article/mekies-commits-to-long-term-contract-extension-as-red-bull-team-principal.1NfCP1Zas2IAzVa3sNa3yf", date:"Oct 14", spectrum:null, bias:null },
+  ]},
+  { id:"misc", title:"🔬 Other Miscellaneous News", color:"#1abc9c", items:[
+    { headline:"An amateur astronomer uses AI to flag a possible hidden super-Earth", summary:"Amateur astronomer Pavel Rabtsevich, running custom AI tools on NASA&rsquo;s archived TESS data, found a repeating transit-like signal around the star TIC 4206066 about 116 light-years away; NASA&rsquo;s TESS team plans to re-examine the star in November to test whether it is a planet.", source:"Scientific American", url:"https://www.scientificamerican.com/article/amateur-astronomer-harnesses-ai-to-find-a-possible-hidden-exoplanet/", date:"Oct 14", spectrum:null, bias:null },
+    { headline:"The world is closer to a key conservation target than thought, a study finds", summary:"A Nature study sampling 25 countries estimated that protected and conserved areas already cover about 26.81% of land, closer to the global &lsquo;30% by 2030&rsquo; goal than official tallies suggest.", source:"Nature", url:"https://www.nature.com/articles/d41586-026-03307-5", date:"Oct 14", spectrum:null, bias:null },
+    { headline:"A blind test of methane-detecting satellites lends credibility to emissions data", summary:"In a year-long Arizona trial of 746 events, researchers found many of 12 government, commercial and non-profit satellites accurately detected and quantified controlled methane releases, with instruments purpose-built for methane sensing performing best.", source:"Nature", url:"https://www.nature.com/articles/d41586-026-03075-2", date:"Oct 14", spectrum:null, bias:null },
+    { headline:"An unprecedented atlas maps mitochondria across the tree of life", summary:"Scientists charted the mitochondrial proteins of six organisms &mdash; five single-celled parasites and a plant &mdash; uncovering dozens of proteins absent in humans but shared among parasites that cause diseases such as malaria, and reopening debate over when the mitochondrion first evolved.", source:"Nature", url:"https://www.nature.com/articles/d41586-026-03195-9", date:"Oct 16", spectrum:null, bias:null },
+  ]},
+  { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
+  { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
+  { id:"wpuzzle", title:"🔤 Word Puzzles", color:"#16a085", custom:"wpuzzle" },
+];
+
+const FUN_FACT = {
+  text: "Fresh pineapple fights back when you eat it. The fruit is loaded with bromelain, a mix of protein-digesting enzymes, so a big helping can leave your tongue, lips and the roof of your mouth feeling raw &mdash; the pineapple is literally breaking down the proteins in your mouth faster than your saliva can wash them away. The same enzyme makes pineapple a natural meat tenderiser, and because heat destroys bromelain, tinned or cooked pineapple does not bite back.",
+  tag: "Category · Food & Chemistry"
+};
+
+const PUZZLE = {
+  type: "Quantitative",
+  title: "Hands Together",
+  how: "Work out how fast each hand moves in degrees per minute, then find the moment they line up.",
+  question: "At exactly 3:00, a clock&rsquo;s hour hand points at the 3 and the minute hand points at the 12. Some time shortly after 3:00, the two hands overlap perfectly.\n\nTo the nearest second, at what time does this happen?",
+  answer: "About 3:16:22 &mdash; more precisely, 3 hours and 16 and 4/11 minutes past the hour.\n\nThe minute hand sweeps 360&deg; in 60 minutes, or 6&deg; per minute. The hour hand sweeps 360&deg; in 12 hours, or 0.5&deg; per minute.\n\nAt 3:00 the hour hand is already 90&deg; ahead of the minute hand. Let t be the number of minutes after 3:00. The minute hand is then at 6t degrees and the hour hand at 90 + 0.5t degrees. They meet when:\n\n6t = 90 + 0.5t\n5.5t = 90\nt = 180 / 11 = 16.36 minutes\n\nThat is 16 minutes and about 22 seconds, so the hands overlap at roughly 3:16:22."
+};
+
+const WORD_PUZZLE = {
+  type: "Connections",
+  title: "Snake in the Grass",
+  how: "Sort the 16 words into four groups of four. One &lsquo;obvious&rsquo; member of a few groups has been lured into a trickier category &mdash; watch for words doing double duty.",
+  question: "Sort these 16 words into four hidden groups of four:\n\nRUBY · COBRA · SWALLOW · JADE · PYTHON · WREN · VIPER · OPAL · SWIFT · ADDER · ROBIN · JAVA · PEARL · MAMBA · FINCH · CORAL\n\nEach word belongs to exactly one group. Three tempting words are not where they first appear to belong.",
+  answer: "SNAKES: COBRA, VIPER, ADDER, MAMBA\nPROGRAMMING LANGUAGES: PYTHON, RUBY, JAVA, SWIFT\nBIRDS: SWALLOW, ROBIN, WREN, FINCH\nGEMSTONES: JADE, PEARL, OPAL, CORAL\n\nThe trap: PYTHON reads as a snake, RUBY as a gemstone and SWIFT as a bird &mdash; but here all three are programming languages. Spotting that frees ADDER and MAMBA to finish the snakes, OPAL to join the gems, and FINCH to complete the birds."
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function renderWordPuzzle(){
+  let h='<div class="sec-title">🔤 Word Puzzle of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#16a085,transparent)"></div>';
+  h+='<div class="wpuzzle-box"><span class="wptype">'+WORD_PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+WORD_PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+WORD_PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+WORD_PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this,\'wpans\')">Show Answer</button>';
+  h+='<div class="answer" id="wpans"><span class="alabel">Answer</span>'+WORD_PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn,ansId){var a=document.getElementById(ansId||'ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else if(sec.custom==="wpuzzle"){div.innerHTML=renderWordPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>

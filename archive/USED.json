@@ -259,14 +259,14 @@
       "date": "2026-10-18",
       "topic_key": "oxford university",
       "text": "The University of Oxford is older than the Aztec Empire."
+    },
+    {
+      "date": "2026-10-19",
+      "topic_key": "pineapple",
+      "text": "Fresh pineapple contains bromelain, a protein-digesting enzyme, so eating a lot can make your mouth feel raw; heat destroys it, so tinned pineapple does not bite back."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-09-18",
-      "type": "lateral",
-      "title_key": "the-unopened-package"
-    },
     {
       "date": "2026-09-19",
       "type": "visual",
@@ -416,14 +416,14 @@
       "date": "2026-10-18",
       "type": "logic",
       "title_key": "table-for-four"
+    },
+    {
+      "date": "2026-10-19",
+      "type": "quantitative",
+      "title_key": "hands-together"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-09-18",
-      "type": "letterboxed",
-      "title_key": "trace-the-square"
-    },
     {
       "date": "2026-09-19",
       "type": "grouping",
@@ -573,6 +573,11 @@
       "date": "2026-10-18",
       "type": "letterboxed",
       "title_key": "boxed-in"
+    },
+    {
+      "date": "2026-10-19",
+      "type": "grouping",
+      "title_key": "snake-in-the-grass"
     }
   ]
 }

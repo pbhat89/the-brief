@@ -3789,3 +3789,32 @@ is empty until the first run.
 2026-10-18	A Jurassic flightless bird found in China shows early birds were more diverse than thought	75a5efd2	palaeontology,yuezhuornis,jurassic,china,birds
 2026-10-18	NASA's SpaceX Dragon docks at the ISS carrying the station's final roll-out solar arrays	d71000fa	nasa,spacex,dragon,iss,solar arrays
 2026-10-18	NASA's Perseverance rover sets an all-time off-world driving record on Mars	d079d2d6	nasa,perseverance,mars,driving record
+2026-10-19	Two Singapore-listed palm oil firms named in a Greenpeace report on Indonesian plantation fires	1eb0e22e	singapore,palm oil,greenpeace,indonesia,haze
+2026-10-19	Borneo residents take the Indonesian government to court over the fires driving the haze	06c5d851	borneo,indonesia,lawsuit,forest fires,haze
+2026-10-19	Seah Kian Peng and Pritam Singh lead a parliamentary delegation to Europe	35b13b18	singapore,seah kian peng,pritam singh,parliamentary delegation,europe
+2026-10-19	SportSG shuts outdoor and non-air-conditioned facilities at all ActiveSG centres as haze persists	6c6b75f5	singapore,sportsg,activesg,haze,facilities
+2026-10-19	At least 19 killed in a Durga Puja pandal stampede in Kolkata	0562fc92	india,kolkata,durga puja,stampede,west bengal
+2026-10-19	Update: India frees ‘Cockroach’ party founder as voter-roll protests spread	b0307ada	india,cockroach janta party,abhijeet dipke,election commission,voter roll
+2026-10-19	Marco Rubio’s India visit, centred on Mumbai, ruffles feathers in New Delhi	26b0dd8d	india,marco rubio,mumbai,united states,tariffs
+2026-10-19	Police rule out a criminal probe into a Palestine Action post by an adviser’s wife	f0381b7e	uk,metropolitan police,sarah helm,jonathan powell,palestine action
+2026-10-19	Green Party member reports death threats over a conference motion on Zionism	be79dc41	uk,green party,lubna speitan,zionism,andy burnham
+2026-10-19	Ukraine launches one of its largest drone attacks of the year on Russia	8546ded3	ukraine,russia,st petersburg,drones,oil terminal
+2026-10-19	Trump endorses Netanyahu nine days before Israel’s election	4fb7d965	donald trump,benjamin netanyahu,israel,election
+2026-10-19	Fighting intensifies across Yemen as a humanitarian crisis deepens	2b58c166	yemen,iom,displacement,taiz,humanitarian crisis
+2026-10-19	Ukraine targets Russia’s Yandex as the internet becomes a new front line	3c4d200f	ukraine,russia,yandex,data centre,cyber
+2026-10-19	Anthropic plans to move 5% of its equity into a new public-good fund ahead of an IPO	dafacdaa	anthropic,public-benefit fund,ipo,ai
+2026-10-19	Rivian moves to license its software, AI and autonomy stack	142f23f6	rivian,licensing,autonomy,mind robotics
+2026-10-19	Waymo’s robotaxis are heading to Canada	5dd23f6e	waymo,toronto,canada,robotaxi,ontario
+2026-10-19	Eight US states sue OpenAI over ChatGPT child-safety claims	469a89e0	openai,chatgpt,state attorneys general,lawsuit,child safety
+2026-10-19	Brent crude tops US$110 for the first time since May	0ad78050	brent crude,oil,strait of hormuz,iran,iea
+2026-10-19	Netflix, Meta and Tesla headline a heavy week of earnings	6e81652a	netflix,meta,tesla,earnings,layoffs
+2026-10-19	Gold holds near US$4,165 as haven demand meets a cautious Fed	34822b3e	gold,haven demand,federal reserve,markets
+2026-10-19	Trump’s Russia ‘diesel deal’ could hand Moscow more than money	c44af34b	donald trump,russia,diesel,ukraine,oil
+2026-10-19	🎾 Davidovich Fokina wins the Shanghai Masters for his first Masters 1000 title	a466e482	tennis,davidovich fokina,rafael jodar,shanghai masters
+2026-10-19	🎾 Jodar, 20, falls in the Shanghai final but nears an ATP Finals debut	91ce330f	tennis,rafael jodar,shanghai masters,atp finals
+2026-10-19	🏏 India and West Indies finish their T20I series level at 2-2	05778f53	cricket,india,west indies,t20i series,shai hope
+2026-10-19	🏎️ Red Bull extends team principal Laurent Mekies’ contract to 2031	82e87093	formula 1,red bull,laurent mekies,contract
+2026-10-19	An amateur astronomer uses AI to flag a possible hidden super-Earth	ef508aa6	super-earth,tess,exoplanet,ai,pavel rabtsevich
+2026-10-19	The world is closer to a key conservation target than thought, a study finds	f9ccba4e	conservation,protected areas,30 by 2030,biodiversity
+2026-10-19	A blind test of methane-detecting satellites lends credibility to emissions data	dbd46277	methane,satellites,emissions,blind test,arizona
+2026-10-19	An unprecedented atlas maps mitochondria across the tree of life	984fd97e	mitochondria,parasites,evolution,atlas,proteins
