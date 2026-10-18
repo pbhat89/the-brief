@@ -47,7 +47,7 @@ async function handle(req,env){
  const r=await auth({op:'check',token});if(!r.ok)return reply('Unauthorized',401);const session=await r.json();
  if(write&&!equal(req.headers.get('X-CSRF-Token'),session.csrf))return reply('CSRF rejected',403);
  if(p==='/api/logout'&&method==='POST'){await auth({op:'logout',token});return reply({ok:true},200,{'Set-Cookie':'__Host-brief=; Path=/; Secure; HttpOnly; SameSite=Strict; Max-Age=0'});}
- if(p==='/api/session'&&method==='GET')return reply(session);
+ if(p==='/api/session'&&method==='GET')return reply({...session,personalization:{brand:String(env.PLAYER_BRAND||'').replace(/[\x00-\x1f]/g,'').slice(0,80),greeting:String(env.PLAYER_GREETING||'').replace(/[\x00-\x1f]/g,'').slice(0,160)}});
  if(p==='/api/episodes'&&['GET','HEAD'].includes(method)){
   const list=await env.EPISODES.list({prefix:'active:',limit:100});const episodes=[];for(const k of list.keys){const v=await env.EPISODES.get(k.name,'json');if(v&&v.expires>now())episodes.push(v);}
   return reply(method==='HEAD'?null:{episodes:episodes.sort((a,b)=>b.created-a.created)});
