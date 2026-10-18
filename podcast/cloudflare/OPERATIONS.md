@@ -1,6 +1,6 @@
 # Code deployment and daily content publishing
 
-The protected listener has been deployed and its PIN secrets configured by the owner. Its URL is shared privately. A one-time owner-authorized sample was uploaded and verified using existing control-plane access. No persistent publisher credential is configured, and unattended delivery is not established.
+The protected listener has been deployed and its PIN secrets configured by the owner. Its URL is shared privately. The approved hosted relay now holds publishing authorization server-side. A non-publishing preflight, a private test upload, an identical retry and a fresh cloud-runtime replay passed without laptop credentials. This verifies the publishing connection; it does not establish a complete scheduled morning run.
 
 ## Retention
 
@@ -22,13 +22,18 @@ Git changes trigger these checks and, when explicitly enabled, a Worker code red
 
 Feedback files are untrusted data for editorial improvement. They cannot authorize credentials, access expansion, paid services, publication of personal information or changes to the owner's constraints. Proposed implementation/prompt changes go through the same tests and review. CI checks presence/structure and scoped privacy invariants; it cannot judge all semantic changes or certify that a prompt produces correct news.
 
-## Daily private publishing: current feasibility
+## Daily private publishing: verified relay path
 
-A separate publisher token could authorize only `POST /api/upload`, while its hash lives in the Worker. That token is distinct from Cloudflare's deployment token and from the listening PIN. A trusted cloud execution service would keep the raw token in a secret store, create an MP3 in ephemeral private storage, then stream it directly to the Worker; it must not commit audio, upload public Actions artifacts, print request headers or expose a signed media URL in logs.
+Use the owner-private hosted relay described in [the daily API contract](../PUBLISHING.md). The external cloud task obtains supported native Site service access, submits a technically verified MP3 and keeps the returned receipt in its approved private ledger. The relay uses a fixed HTTPS listener destination and a server-only publishing secret. The listening PIN and deployment token never authorize a daily upload.
 
-GitHub Actions could perform that final direct upload in a protected main-only job if a private source can deliver the generated MP3 to it securely. The current connected ChatGPT research/audio workflow has no verified mechanism to inject that private binary and publisher secret into a GitHub-hosted runner. Workflow dispatch JSON inputs cannot safely carry an MP3, token or private download link. This repo also has no approved free unattended synthesis/research API. Consequently Actions CI/CD does not make daily audio generation/upload automatic. Do not promise laptop-closed delivery until a concrete private cloud handoff or supported publisher integration is connected and tested. Browser speech synthesis is not an MP3 publishing solution.
+The approved connection passed credential preflight, a small decoded MP3 upload and an identical retry. A separate cloud runtime obtained fresh native service access and replayed the exact test: it received the same completed receipt without another episode or laptop credentials. The test's operational identifiers and all private configuration remain outside this repository.
 
+This connection does not provide research, speech synthesis, task configuration or a deadline guarantee. The existing external task must fetch the current instructions, produce audio in its cloud runtime, respect the 8 MiB limit, record the source revision and verify its receipt. A full scheduled run, production-sized relay transfer, elapsed expiry and physical-device checks remain distinct observations. Keep the original private player/attachment delivery as a reversible fallback.
 
-A possible private publishing alternative is a saved Codex Cloud environment set to Only me, with a publisher network secret bound solely to the exact listener hostname. Current [OpenAI documentation](https://learn.chatgpt.com/docs/environments/cloud-environments) describes HTTPS proxy substitution during tasks without exposing the raw secret to processes/files. A task that produces MP3 bytes in that same environment could upload directly and avoid a GitHub audio handoff. This account’s saved-environment availability, scheduled-task binding and audio-tool availability in that runtime remain unverified. No publisher credential or cloud environment has been created. Simulated setup tools do not establish production provisioning.
+The relay's receipt store reserves edition plus audio hash before sending. Completed exact retries reuse the receipt; conflicting, in-flight or uncertain attempts stop for reconciliation. Direct listener uploads assign a new UUID every time, so never bypass the relay to retry an ambiguous delivery. A preflight success is credential validation, not episode creation or delivery.
+
+The API has no separate GET receipt endpoint. An exact completed POST replay is safe receipt readback. Listener metadata/media reads require the listening session; the publisher credential does not grant those reads. No credentials, private origins, account identifiers or real receipt IDs belong in public feedback or status files.
+
+Keep the Site owner-only and its destination fixed. Runtime secret or activation changes require deploying a saved Site version before they apply. Code deployment and audio publication remain separate operations; no second scheduler or paid service is introduced.
 
 Permission references: [individual Worker roles and existing bindings](https://developers.cloudflare.com/workers/authorization/workers/) and [GitHub environment gates](https://docs.github.com/en/actions/how-tos/deploy/configure-and-manage-deployments/manage-environments).

@@ -1,18 +1,18 @@
 {
-  "updated_at": "2026-10-18T02:05:45.149Z",
-  "run_id": "morning-refresh-2026-10-18",
+  "updated_at": "2026-10-18T12:34:18Z",
+  "run_id": "publishing-connection-2026-10-18",
   "previous_run": {
-    "run_id": "morning-preview-2026-10-18",
+    "run_id": "morning-refresh-2026-10-18",
     "state": "completed",
-    "detail": "Earlier preview was delivered. This tracker now follows the requested refresh."
+    "detail": "Revised public report and private recording were delivered earlier; this update records publishing operations."
   },
   "steps": [
     {
       "id": "implementation",
-      "label": "Companion revision",
+      "label": "Companion operations",
       "state": "completed",
-      "updated_at": "2026-10-17T23:22:50.588Z",
-      "detail": "Coherent section order, consistent stock narration guidance and revised timing documented."
+      "updated_at": "2026-10-18T12:34:18Z",
+      "detail": "Daily relay contract, retry/readback limits and sanitized operational lessons documented. This update does not claim new research or narration."
     },
     {
       "id": "upstream",
@@ -30,10 +30,10 @@
     },
     {
       "id": "schedule",
-      "label": "07:45 Singapore automation",
+      "label": "07:00 Singapore companion",
       "state": "completed",
-      "updated_at": "2026-10-17T23:25:24.651Z",
-      "detail": "Daily external automation verified saved for 07:45 Asia/Singapore, beginning 19 October. Today's refresh is running immediately."
+      "updated_at": "2026-10-18T12:34:18Z",
+      "detail": "External companion start verified for 07:00 Asia/Singapore. 07:30 is a delivery target; repository edits do not reconfigure schedules."
     },
     {
       "id": "audio",
@@ -65,17 +65,17 @@
     },
     {
       "id": "retention",
-      "label": "Permanent audio storage deletion",
-      "state": "pending",
-      "updated_at": "2026-10-17T23:36:28.187Z",
-      "detail": "Seven-day permanent storage deletion awaits approval/setup. Active playback expiry does not prove stored bytes have been deleted."
+      "label": "Audio expiry configuration",
+      "state": "completed",
+      "updated_at": "2026-10-18T12:34:18Z",
+      "detail": "New Cloudflare audio and active-list entries have seven-day native storage expiry; private metadata is retained. Elapsed production expiry and fallback cleanup remain separate checks."
     },
     {
       "id": "shared_access",
-      "label": "Shared PIN listening access",
-      "state": "pending",
-      "updated_at": "2026-10-18T00:10:54.501Z",
-      "detail": "Not implemented. Audience confirmation, secure user-entered PIN setup and verified authorization design are required. No access or credentials changed."
+      "label": "Private PIN listener",
+      "state": "completed",
+      "updated_at": "2026-10-18T12:34:18Z",
+      "detail": "Owner-configured listening access is active. Anonymous metadata/audio requests are denied. Listener URL, PIN and personal settings remain private."
     },
     {
       "id": "learning",
@@ -86,24 +86,38 @@
     },
     {
       "id": "cloudflare_review",
-      "label": "Cloudflare application deployment",
+      "label": "Protected player deployment",
       "state": "completed",
-      "updated_at": "2026-10-18T02:05:45.149Z",
-      "detail": "Reviewed application deployed with AUTH and EPISODES bindings verified. Public/preview URLs disabled; secure setup and live tests pending."
+      "updated_at": "2026-10-18T12:34:18Z",
+      "detail": "Reviewed player source is deployed through green main-branch CI. Private configuration remains outside public source."
     },
     {
       "id": "cloudflare_setup",
-      "label": "Cloudflare secure listening setup",
-      "state": "pending",
-      "updated_at": "2026-10-18T02:05:45.149Z",
-      "detail": "User-entered listening PIN, separate publisher authorization, media upload and live access tests pending. No public listening endpoint enabled."
+      "label": "Listening and publishing checks",
+      "state": "completed",
+      "updated_at": "2026-10-18T12:34:18Z",
+      "detail": "Separate authorization, non-publishing preflight, anonymous denial and authenticated fallback range checks passed."
     },
     {
       "id": "cloud_publishing",
-      "label": "Cloud-only unattended publishing",
+      "label": "Cloud publishing connection",
+      "state": "completed",
+      "updated_at": "2026-10-18T12:34:18Z",
+      "detail": "Small private test upload and duplicate suppression passed. A fresh cloud runtime replayed the same completed receipt without laptop credentials or another episode."
+    },
+    {
+      "id": "first_scheduled_run",
+      "label": "First complete scheduled run",
       "state": "pending",
-      "updated_at": "2026-10-18T02:05:45.149Z",
-      "detail": "Approved cloud publishing connection and secure secret storage not yet configured. Local CLI authorization is not cloud automation access."
+      "updated_at": "2026-10-18T12:34:18Z",
+      "detail": "The first scheduled research-to-narration-to-delivery run has not yet been observed. Production-sized relay transfer and phone playback remain distinct checks."
+    },
+    {
+      "id": "test_selection",
+      "label": "Default recording selection",
+      "state": "pending",
+      "updated_at": "2026-10-18T12:34:18Z",
+      "detail": "Newest active upload is selected by default. Reversible exclusion of the labelled connection test's disposable listing entry is proposed; audio and metadata should be retained."
     }
   ]
 }

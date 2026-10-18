@@ -1,8 +1,10 @@
-# Private Cloudflare player — review build
+# Private Cloudflare player
 
-This directory is isolated from the existing hosted player. It contains no episodes, transcripts, PINs, publisher tokens or account identifiers. The PIN listener is deployed; its URL is shared privately. Episode publishing is not configured. See [current operations and CI/CD](OPERATIONS.md). Only Workers Free, a new private Workers KV namespace, and a SQLite Durable Object are required. No R2, paid plan or public audio assets.
+This directory is isolated from the existing hosted player. It contains no episodes, transcripts, PINs, publisher tokens or account identifiers. The PIN listener is deployed; its URL is shared privately. The approved private hosted relay now publishes episodes with server-held authorization and durable retry receipts; a fresh cloud-runtime replay passed. The first complete scheduled morning run remains to be observed. See the [daily relay API contract](../PUBLISHING.md). See [current operations and CI/CD](OPERATIONS.md). Only Workers Free, a new private Workers KV namespace, and a SQLite Durable Object are required. No R2, paid plan or public audio assets.
 
 ## Owner handoff and deployment configuration
+
+These bootstrap steps describe a fresh installation. The existing deployed listener reuses its approved bindings; do not recreate namespaces, reset the PIN or replace credentials during daily runs. Current daily publishing uses the [private relay contract](../PUBLISHING.md).
 
 1. In this directory run `npm ci`, `npm test`, and `npm run check`. Use a current supported Node release. Authenticate Wrangler yourself in the intended Cloudflare account; this change does not switch accounts or create account credentials.
 2. Run `npx wrangler kv namespace create EPISODES`. Create a **new, empty** namespace; copy its ID into `wrangler.jsonc`. Never bind an existing live namespace. The placeholder deliberately prevents production deployment.
@@ -41,7 +43,9 @@ Before live use, measure Worker and DO CPU/memory in Cloudflare metrics with a s
 
 Official references: [Worker limits](https://developers.cloudflare.com/workers/platform/limits/), [KV limits](https://developers.cloudflare.com/kv/platform/limits/), [KV expiration and consistency](https://developers.cloudflare.com/kv/api/write-key-value-pairs/), [SQLite Durable Object storage](https://developers.cloudflare.com/durable-objects/api/sqlite-storage-api/), [Durable Object limits](https://developers.cloudflare.com/durable-objects/platform/limits/), [pricing](https://developers.cloudflare.com/workers/platform/pricing/).
 
-## Review follow-up validation
+## Historical review follow-up validation
+
+The staged counts below record earlier review milestones; current CI is authoritative for the present source.
 
 The current test suite has 12 passing tests, including browser-script tests with a minimal DOM harness. A centralized reset clears the PIN, CSRF state, audio source, episode/chapter content and playback controls, then shows and focuses the PIN form on API 401 or expired-session logout. Media errors recheck the session because audio elements do not expose HTTP status. A generation guard prevents an older in-flight episode request from reopening a player after reset. Actual mobile/browser behavior still requires verification.
 
@@ -52,4 +56,4 @@ Full GET now passes the existing KV ArrayBuffer directly to Response instead of 
 Playback review: pause now runs synchronously with no session request, including when offline. AudioContext resume and initial audio play are both invoked in the click handler before any await, preserving the mobile user gesture. Media access remains server-authenticated and audio errors use the existing session recheck/401 reset. All 14 tests pass, including regression tests for offline pause and gesture-timed play initiation; actual mobile autoplay behavior remains a browser verification gate.
 
 
-The current regression suite includes audio-only expiry and retained-metadata isolation. Public HTML/news history remains independent. Feedback and prompt edits trigger CI, but player deployment does not execute or synchronize the external morning task; see [OPERATIONS.md](OPERATIONS.md) for the credential gate and private cloud handoff limitation.
+The current regression suite includes audio-only expiry and retained-metadata isolation. Public HTML/news history remains independent. Feedback and prompt edits trigger CI, but player deployment does not execute or synchronize the external morning task; see [OPERATIONS.md](OPERATIONS.md) for the verified relay connection and remaining scheduled-run checks.
