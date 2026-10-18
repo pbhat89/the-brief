@@ -1,6 +1,6 @@
 {
   "run_id": "morning-2026-10-19",
-  "updated_at": "2026-10-18T23:04:23.439Z",
+  "updated_at": "2026-10-18T23:13:00.917Z",
   "previous_run": {
     "run_id": "publishing-connection-2026-10-18",
     "state": "completed",
@@ -11,43 +11,43 @@
       "id": "history",
       "label": "History and operational feedback",
       "state": "completed",
-      "updated_at": "2026-10-18T23:04:23.439Z",
+      "updated_at": "2026-10-18T23:13:00.917Z",
       "detail": "Repository archive, prior public source reports and operational feedback loaded; private all-delivery history is being reconciled separately."
     },
     {
       "id": "upstream",
       "label": "Same-day upstream intake",
-      "state": "running",
-      "updated_at": "2026-10-18T23:04:23.439Z",
-      "detail": "19 October entries are present in the archive index. Same-day HTML and individual claims are being verified."
+      "state": "completed",
+      "updated_at": "2026-10-18T23:13:00.917Z",
+      "detail": "Same-day 19 October JSON read; only independently checked claims selected. Prior archives preserved."
     },
     {
       "id": "research",
       "label": "Source research and deduplication",
-      "state": "running",
-      "updated_at": "2026-10-18T23:04:23.439Z",
-      "detail": "News, official Singapore conditions, X and Everyday AI checks are underway in parallel. Coverage will be reported from actual outcomes."
+      "state": "completed",
+      "updated_at": "2026-10-18T23:13:00.917Z",
+      "detail": "Seven main-news items and three AI developments selected. 48 of 211 X roster profiles checked; incomplete logged-out coverage disclosed. No new qualifying Everyday AI original found."
     },
     {
       "id": "script",
       "label": "Narrative preparation",
-      "state": "pending",
-      "updated_at": "2026-10-18T23:04:23.439Z",
-      "detail": "Awaiting verified research and preceding checks."
+      "state": "completed",
+      "updated_at": "2026-10-18T23:13:00.917Z",
+      "detail": "Private narrative prepared in fixed section order. No personalized content is published in this repository."
     },
     {
       "id": "audio",
       "label": "Private narration checks",
-      "state": "pending",
-      "updated_at": "2026-10-18T23:04:23.439Z",
-      "detail": "Awaiting verified research and preceding checks."
+      "state": "running",
+      "updated_at": "2026-10-18T23:13:00.917Z",
+      "detail": "Stock narration is rendering; duration, decode and publication checks remain pending."
     },
     {
       "id": "publication",
       "label": "Public report publication",
-      "state": "pending",
-      "updated_at": "2026-10-18T23:04:23.439Z",
-      "detail": "Awaiting verified research and preceding checks."
+      "state": "completed",
+      "updated_at": "2026-10-18T23:13:00.917Z",
+      "detail": "19 October news-only report and audit returned HTTPS 200 with local byte hashes matched before latest-pointer update."
     },
     {
       "id": "delivery",
