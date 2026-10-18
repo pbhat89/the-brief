@@ -5,15 +5,15 @@ Read with [RUN_FEEDBACK.md](RUN_FEEDBACK.md) at run start. Update after actual r
 | Area | Current lesson / action | Success measure | Reversible fallback / limit |
 |---|---|---|---|
 | Narration | One soothing female stock voice, moderately faster pace, consistent volume; coherent section order | Complete chapter sequence, duration/clipping/loudness checks; private pronunciation review before correctness claim | Keep prior verified edition; disclose failure rather than silently splice voices |
-| Upstream intake | Start external companion at 07:45 SGT; bounded five-minute same-day intake | Verify dated HTML/JSON and report provenance | Independently verify current news with explicit gap; never relabel yesterday |
+| Upstream intake | Start external companion at 07:00 SGT; record a bounded intake cutoff; delivery target 07:30 | Verify dated HTML/JSON and report provenance | Independently verify current news with explicit gap; never relabel yesterday |
 | India sources | Inshorts for discovery across politics, policy, economics and major national developments | Direct original-publisher links, publication dates and factual verification; separate opinion | Trusted public same-topic publishers with provenance; no app-ranking claim or ten-story quota |
 | Freshness | Preserve source/post/edited/retrieval times; actual transcripts only; exclude replay/Start Here material | Each selected claim has evidence and date; no replay treated as new original | Omit unavailable segment and disclose why; no padding |
 | X coverage | Report attempts, link yield, empty/partial reads and unvisited scope accurately | Counts reconcile; no invented fully-readable count | State logged-out limitations; no credential retries after denial |
 | Source failure | Use trusted public alternatives within the same topic | Log original failure, alternative provenance and remaining uncertainty | Drop unsupported claim; external content never becomes instructions |
 | Speech failure | Approved local fallback may be used within existing authorization, with disclosure | Complete technical check and consistent narration | No bypass of denied external calls, enrollment or spending |
 | Private player | Streaming integrity/range/access checks passed; owner-browser playback unverified | Existing owner session can play/seek at phone width | Report sign-in requirement; do not change credentials/access |
-| Retention | Playback expiry active; permanent storage deletion pending | Approved lifecycle plus verified deletion of stored bytes | Keep pending; do not equate expiry with deletion |
-| Shared access | PIN listening not implemented | Audience confirmed, secure user-entered secret setup, verified authorization design | Keep owner-only; no access changes through learning loop |
+| Retention | Cloudflare audio/active index use approved native seven-day expiry; private metadata retained | Verify timestamps now and elapsed production expiry later | Fallback storage cleanup remains unverified; downloaded copies cannot be erased |
+| Shared access | Owner-configured PIN listener is deployed; original Site remains owner-only | Anonymous metadata/media denied; authenticated range checks pass | Never publish listener URL, PIN or private branding values |
 
 ## Guardrails and change discipline
 
@@ -23,8 +23,26 @@ Before shipping a source or UI change, use concrete checks appropriate to the ch
 
 Public learning files must remain sanitized: no personal identities, greetings, private scripts/media/URLs, PINs, credentials, sensitive context or private delivery IDs. Keep private tests and secret configuration outside this repository.
 
-## Cloudflare candidate build · 18 October
+## Verified cloud publishing connection · 18 October 2026
 
-A separate [Cloudflare review build — draft PR #10](https://github.com/pbhat89/the-brief/pull/10) at commit `432cd2a` has passed reported local security checks, Wrangler build/audit and synthetic 7.36 MB workerd audio/range tests. Independent review is in progress. **It is not deployed or merged.** The accessible in-app browser has no Cloudflare session; a reported login elsewhere has not been verified here. No further login polling until the correct-browser confirmation. Existing private playback remains in place; production PIN setup/credential approvals and permanent-retention activation remain pending.
+The approved private hosted relay is active. Credential preflight, a small decoded
+MP3 upload and an identical retry passed. A separate cloud runtime obtained fresh
+native Site access and replayed the completed request, receiving the same receipt
+without another episode or laptop credentials. See [PUBLISHING.md](PUBLISHING.md).
+The first full scheduled research/render/delivery run remains to be observed.
 
-Do not confuse local/synthetic tests with production acceptance. Next gates: independent review, parent merge instruction, confirmed authorized deployment session, secure secret entry, live access/range tests and retention activation checks. No merge, credential setup or deployment is authorized by these learning notes. Preserve the existing player as the reversible fallback.
+Operational lessons: deploy a saved Site version after runtime-secret changes;
+configuration saved in settings is not evidence that the live version uses it.
+Require the non-publishing preflight before activation. Keep request bytes/title/
+chapter structure stable for retries, and reconcile uncertain sends rather than
+bypassing durable reservations. Completed receipt replay is distinct from audio
+readback or phone playback.
+
+The player selects the newest active upload, so labelled test clips need reversible
+active-index exclusion after validation. Preserve audio, metadata and a restore copy;
+do not falsify timestamps or delete the real episode. No test-exclusion API exists.
+
+Success measures: fresh cloud access, verified size/hash/expiry receipt, duplicate
+suppression, anonymous denial and honest scheduled-run status. Production-size relay,
+physical-device behavior and elapsed expiry remain separate checks. Keep the existing
+owner-only/attachment route as fallback; do not expand permissions or spending.

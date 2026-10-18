@@ -57,3 +57,47 @@ Test outcomes were reported by the implementation operator; local security group
 - Independent review must finish before a merge instruction. Preserve the draft branch and current private player.
 - Production success requires authorized deployment, secure user-entered secrets, access-denial/range tests, and explicit retention activation with verification. Until those occur, keep production PIN and deletion pending.
 - Rollback: leave the tested draft unmerged and retain the existing private player. This entry does not grant credential, permission, account or spending approval.
+
+## 18 October 2026 · Publishing connection verified
+
+This dated update supersedes earlier pending-deployment/setup statements above.
+The companion's externally configured start is 07:00 Asia/Singapore; 07:30 is a
+delivery target. Record a bounded intake cutoff rather than assuming the same-day
+upstream will arrive in time. No repository edit changes the upstream routine or
+either external schedule automatically.
+
+### Observed results and evidence
+
+- Reviewed player code and protected main deployment are active. Listening and
+  publishing authorization are separate; private listener information stays private.
+- The approved hosted relay passed non-publishing credential preflight, a small
+  valid MP3 upload and an exact retry returning the same durable receipt.
+- At 20:28 SGT, a separate cloud runtime obtained fresh native service access and
+  replayed the completed request successfully without laptop credentials. It created
+  no duplicate. The private operational receipt is deliberately not published here.
+- Anonymous Site/player metadata and audio requests were denied, authenticated
+  fallback byte-range access passed, and cross-origin relay requests were rejected.
+- The Site regression suite passed 25 tests plus type/build checks. The downstream
+  invalid-MIME probe was tested to perform no episode-storage calls.
+- New Cloudflare audio and its active index have native seven-day expiry; private
+  metadata is retained. Actual elapsed production expiry has not yet been observed.
+
+### Remedies, limits and next checks
+
+A saved runtime secret initially differed from the live deployed revision.
+Redeploying the saved Site version applied the current revision and the preflight
+then matched. This is a configuration-application lesson, not a request to reveal
+or retry credentials after denial. No secret values or private identifiers are
+included in this log.
+
+The listener sorts by upload time and automatically selects the newest recording;
+a connection test can therefore displace the real edition. Proposed remedy:
+preserve a restore copy and exclude only that test's disposable active-list entry,
+retaining audio/metadata and original timestamps. No irreversible deletion is needed.
+
+The first complete scheduled morning run, production-sized relay upload, phone
+playback and elapsed expiry remain unobserved. The cloud replay proves connection
+access and idempotent receipt readback, not the whole news/audio workflow or an SLA.
+Use the [daily API contract](PUBLISHING.md), preserve the prior player as fallback,
+and update this log after actual outcomes. No new permission or paid service is
+authorized by these notes.
