@@ -4,7 +4,7 @@ import vm from 'node:vm';
 import {JS} from '../src/app.js';
 function harness(){
  const nodes=new Map();function node(selector){if(!nodes.has(selector))nodes.set(selector,{hidden:false,value:'',textContent:'',children:[],attributes:{},style:{setProperty(){}},setAttribute(k,v){this.attributes[k]=v},getAttribute(k){return this.attributes[k]||null},removeAttribute(k){delete this.attributes[k]},replaceChildren(){this.children=[]},append(x){this.children.push(x)},focus(){this.focused=true}});return nodes.get(selector);}
- const audio=node('audio');audio.pause=()=>{audio.paused=true;audio.onpause?.()};audio.load=()=>audio.loaded=true;
+ const audio=node('audio');audio.paused=true;audio.pause=()=>{audio.paused=true;audio.onpause?.()};audio.load=()=>audio.loaded=true;
  let response={status:200,ok:true,json:async()=>({csrf:'synthetic',episodes:[]})};
  const context=vm.createContext({document:{querySelector:node,createElement:()=>node('created-'+Math.random()),body:{classList:{add(){},remove(){}}}},matchMedia:()=>({matches:true}),fetch:async()=>response,cancelAnimationFrame(){},requestAnimationFrame(){},Uint8Array,Error,Number,String});
  vm.runInContext(JS,context);
@@ -18,3 +18,5 @@ test('expired-session Lock player returns to login even when logout is 401',asyn
 test('audio auth failure rechecks session and returns to login',async()=>{const h=await unlocked();h.setResponse({status:401,ok:false});await h.audio.onerror();assertReset(h)});
 test('a non-auth audio failure preserves the unlocked player',async()=>{const h=await unlocked();await h.audio.onerror();assert.equal(h.node('#player').hidden,false);assert.match(h.node('#error').textContent,/Audio unavailable/)});
 test('an in-flight episode load cannot reopen the player after reset',async()=>{const h=await unlocked();let finish;h.setResponse({status:200,ok:true,json:()=>new Promise(r=>finish=r)});const pending=h.run('load()');await settle();h.run('resetToLogin()');finish({episodes:[]});await assert.rejects(pending);assertReset(h)});
+test('pause is synchronous and never requests the unreachable session endpoint',async()=>{const h=await unlocked();h.audio.paused=false;let requests=0;h.context.fetch=()=>{requests++;throw Error('Offline')};const pending=h.node('#play').onclick();assert.equal(h.audio.paused,true);assert.equal(requests,0);await pending;assert.equal(requests,0)});
+test('resume and initial play start in the click gesture before any await',async()=>{const h=await unlocked();const calls=[];let resumed,played;h.context.AudioContext=class{createAnalyser(){return {fftSize:0,connect(){}}}createMediaElementSource(){return {connect(){}}}resume(){calls.push('resume');return new Promise(r=>resumed=r)}};h.audio.play=()=>{calls.push('play');return new Promise(r=>played=r)};h.context.fetch=()=>{throw Error('Playback must not wait on session fetch')};const pending=h.node('#play').onclick();assert.deepEqual(calls,['resume','play']);resumed();played();await pending;});

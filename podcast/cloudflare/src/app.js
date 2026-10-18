@@ -43,10 +43,12 @@ $('form').onsubmit=async e=>{e.preventDefault();try{
 }catch(e){error(e);}};
 function animate(){if(!analyser||audio.paused||reduced.matches)return;const bins=new Uint8Array(analyser.frequencyBinCount);analyser.getByteFrequencyData(bins);const power=bins.reduce((a,b)=>a+b,0)/bins.length/255;$('#orb').style.setProperty('--energy',1+power*.35);frame=requestAnimationFrame(animate);}
 $('#play').onclick=async()=>{try{
+ if(!audio.paused){audio.pause();return;}
  if(!audio.getAttribute('src'))return;
- await api('/api/session');
  if(!context){context=new AudioContext();analyser=context.createAnalyser();analyser.fftSize=128;context.createMediaElementSource(audio).connect(analyser);analyser.connect(context.destination);}
- await context.resume();if(audio.paused)await audio.play();else audio.pause();
+ // Start both calls within the user gesture; the media endpoint enforces auth.
+ const resumed=context.resume(),played=audio.play();
+ await Promise.all([resumed,played]);
 }catch(e){error(e);}};
 audio.onplay=()=>{document.body.classList.add('playing');$('#play').textContent='Ⅱ';$('#play').setAttribute('aria-label','Pause');$('#status').textContent='Now playing';animate();};
 audio.onpause=()=>{document.body.classList.remove('playing');cancelAnimationFrame(frame);$('#orb').style.setProperty('--energy',1);$('#play').textContent='▶';$('#play').setAttribute('aria-label','Play');$('#status').textContent='Paused';};
