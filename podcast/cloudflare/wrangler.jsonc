@@ -1,0 +1,11 @@
+{
+  "name": "brief-private-player",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-10-18",
+  "workers_dev": true,
+  "kv_namespaces": [{"binding":"EPISODES","id":"REPLACE_WITH_NEW_PRIVATE_KV_NAMESPACE_ID"}],
+  "durable_objects": {"bindings":[{"name":"AUTH","class_name":"Auth"}]},
+  "migrations": [{"tag":"v1","new_sqlite_classes":["Auth"]}],
+  "vars": {"EXPIRY_APPROVED":"false"},
+  "observability": {"enabled":false}
+}
