@@ -1,123 +1,60 @@
 {
-  "updated_at": "2026-10-18T12:34:18Z",
-  "run_id": "publishing-connection-2026-10-18",
+  "run_id": "morning-2026-10-19",
+  "updated_at": "2026-10-18T23:04:23.439Z",
   "previous_run": {
-    "run_id": "morning-refresh-2026-10-18",
+    "run_id": "publishing-connection-2026-10-18",
     "state": "completed",
-    "detail": "Revised public report and private recording were delivered earlier; this update records publishing operations."
+    "detail": "Connection preflight and small upload tests passed; this is the first full morning production run."
   },
   "steps": [
     {
-      "id": "implementation",
-      "label": "Companion operations",
+      "id": "history",
+      "label": "History and operational feedback",
       "state": "completed",
-      "updated_at": "2026-10-18T12:34:18Z",
-      "detail": "Daily relay contract, retry/readback limits and sanitized operational lessons documented. This update does not claim new research or narration."
+      "updated_at": "2026-10-18T23:04:23.439Z",
+      "detail": "Repository archive, prior public source reports and operational feedback loaded; private all-delivery history is being reconciled separately."
     },
     {
       "id": "upstream",
       "label": "Same-day upstream intake",
-      "state": "completed",
-      "updated_at": "2026-10-17T23:22:50.588Z",
-      "detail": "archive/2026-10-18.html and JSON exist; published HTML returns HTTPS 200. Source freshness still requires verification."
+      "state": "running",
+      "updated_at": "2026-10-18T23:04:23.439Z",
+      "detail": "19 October entries are present in the archive index. Same-day HTML and individual claims are being verified."
     },
     {
       "id": "research",
-      "label": "Refreshed report verification",
-      "state": "completed",
-      "updated_at": "2026-10-17T23:31:09.893Z",
-      "detail": "Revised public sources checked through 07:28 SGT using today's upstream; delta X check attempted 211 profiles, 190 yielded links, 21 empty/partial. Full logged-out access not implied."
+      "label": "Source research and deduplication",
+      "state": "running",
+      "updated_at": "2026-10-18T23:04:23.439Z",
+      "detail": "News, official Singapore conditions, X and Everyday AI checks are underway in parallel. Coverage will be reported from actual outcomes."
     },
     {
-      "id": "schedule",
-      "label": "07:00 Singapore companion",
-      "state": "completed",
-      "updated_at": "2026-10-18T12:34:18Z",
-      "detail": "External companion start verified for 07:00 Asia/Singapore. 07:30 is a delivery target; repository edits do not reconfigure schedules."
+      "id": "script",
+      "label": "Narrative preparation",
+      "state": "pending",
+      "updated_at": "2026-10-18T23:04:23.439Z",
+      "detail": "Awaiting verified research and preceding checks."
     },
     {
       "id": "audio",
-      "label": "Private refreshed audio",
-      "state": "completed",
-      "updated_at": "2026-10-17T23:36:28.187Z",
-      "detail": "Revised private narration completed with consistent stock narration; technical upload and content-integrity checks passed."
-    },
-    {
-      "id": "streaming",
-      "label": "Private streaming",
-      "state": "completed",
-      "updated_at": "2026-10-18T00:10:54.501Z",
-      "detail": "Owner-private player requires ChatGPT sign-in and includes a speech-reactive blue/purple liquid animation with pause and reduced-motion handling. Playback expiry remains active."
-    },
-    {
-      "id": "delivery",
-      "label": "Private refreshed delivery",
-      "state": "completed",
-      "updated_at": "2026-10-17T23:36:28.187Z",
-      "detail": "Revised episode delivered privately through an owner-only player. Owner-browser playback remains unverified because sign-in was required."
+      "label": "Private narration checks",
+      "state": "pending",
+      "updated_at": "2026-10-18T23:04:23.439Z",
+      "detail": "Awaiting verified research and preceding checks."
     },
     {
       "id": "publication",
-      "label": "Revised public report",
-      "state": "completed",
-      "updated_at": "2026-10-17T23:32:37.671Z",
-      "detail": "Revised 18 October news-only report published and HTTPS 200 verified; early preview preserved as history."
-    },
-    {
-      "id": "retention",
-      "label": "Audio expiry configuration",
-      "state": "completed",
-      "updated_at": "2026-10-18T12:34:18Z",
-      "detail": "New Cloudflare audio and active-list entries have seven-day native storage expiry; private metadata is retained. Elapsed production expiry and fallback cleanup remain separate checks."
-    },
-    {
-      "id": "shared_access",
-      "label": "Private PIN listener",
-      "state": "completed",
-      "updated_at": "2026-10-18T12:34:18Z",
-      "detail": "Owner-configured listening access is active. Anonymous metadata/audio requests are denied. Listener URL, PIN and personal settings remain private."
-    },
-    {
-      "id": "learning",
-      "label": "Operational learning documentation",
-      "state": "completed",
-      "updated_at": "2026-10-18T00:18:23.672Z",
-      "detail": "Inshorts discovery approach and sanitized run-feedback/current-lessons files added. External scheduled instructions must load/update them separately."
-    },
-    {
-      "id": "cloudflare_review",
-      "label": "Protected player deployment",
-      "state": "completed",
-      "updated_at": "2026-10-18T12:34:18Z",
-      "detail": "Reviewed player source is deployed through green main-branch CI. Private configuration remains outside public source."
-    },
-    {
-      "id": "cloudflare_setup",
-      "label": "Listening and publishing checks",
-      "state": "completed",
-      "updated_at": "2026-10-18T12:34:18Z",
-      "detail": "Separate authorization, non-publishing preflight, anonymous denial and authenticated fallback range checks passed."
-    },
-    {
-      "id": "cloud_publishing",
-      "label": "Cloud publishing connection",
-      "state": "completed",
-      "updated_at": "2026-10-18T12:34:18Z",
-      "detail": "Small private test upload and duplicate suppression passed. A fresh cloud runtime replayed the same completed receipt without laptop credentials or another episode."
-    },
-    {
-      "id": "first_scheduled_run",
-      "label": "First complete scheduled run",
+      "label": "Public report publication",
       "state": "pending",
-      "updated_at": "2026-10-18T12:34:18Z",
-      "detail": "The first scheduled research-to-narration-to-delivery run has not yet been observed. Production-sized relay transfer and phone playback remain distinct checks."
+      "updated_at": "2026-10-18T23:04:23.439Z",
+      "detail": "Awaiting verified research and preceding checks."
     },
     {
-      "id": "test_selection",
-      "label": "Default recording selection",
+      "id": "delivery",
+      "label": "Private episode delivery",
       "state": "pending",
-      "updated_at": "2026-10-18T12:34:18Z",
-      "detail": "Newest active upload is selected by default. Reversible exclusion of the labelled connection test's disposable listing entry is proposed; audio and metadata should be retained."
+      "updated_at": "2026-10-18T23:04:23.439Z",
+      "detail": "Awaiting verified research and preceding checks."
     }
   ]
 }
