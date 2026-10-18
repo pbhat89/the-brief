@@ -5,7 +5,7 @@ Read with [RUN_FEEDBACK.md](RUN_FEEDBACK.md) at run start. Update after actual r
 | Area | Current lesson / action | Success measure | Reversible fallback / limit |
 |---|---|---|---|
 | Narration | One soothing female stock voice, moderately faster pace, consistent volume; coherent section order | Complete chapter sequence, duration/clipping/loudness checks; private pronunciation review before correctness claim | Keep prior verified edition; disclose failure rather than silently splice voices |
-| Upstream intake | Start external companion at 07:45 SGT; bounded five-minute same-day intake | Verify dated HTML/JSON and report provenance | Independently verify current news with explicit gap; never relabel yesterday |
+| Upstream intake | Start external companion at 07:00 SGT; same-day intake closes 07:05; delivery target 07:30 | Verify dated HTML/JSON and report provenance | Independently verify current news with explicit gap; never relabel yesterday |
 | India sources | Inshorts for discovery across politics, policy, economics and major national developments | Direct original-publisher links, publication dates and factual verification; separate opinion | Trusted public same-topic publishers with provenance; no app-ranking claim or ten-story quota |
 | Freshness | Preserve source/post/edited/retrieval times; actual transcripts only; exclude replay/Start Here material | Each selected claim has evidence and date; no replay treated as new original | Omit unavailable segment and disclose why; no padding |
 | X coverage | Report attempts, link yield, empty/partial reads and unvisited scope accurately | Counts reconcile; no invented fully-readable count | State logged-out limitations; no credential retries after denial |
