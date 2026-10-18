@@ -1,0 +1,369 @@
+{
+  "edition": "2026-10-19",
+  "generated_at": "2026-10-18T23:09:40.421513+00:00",
+  "general_cutoff": "2026-10-19T07:06:30+08:00",
+  "ai_cutoff": "2026-10-19T07:07:30+08:00",
+  "previous_ai_cutoff": "2026-10-18T06:09:26+08:00",
+  "upstream": {
+    "repository_path": "archive/2026-10-19.json",
+    "sha": "616e0a783591d7f92d5bf4e1bb19f23d94557de5",
+    "availability": "GitHub connector succeeded; public Pages fetch failed; date checked inside JSON"
+  },
+  "conditions": {
+    "observed_at": "2026-10-19T06:00:00+08:00",
+    "checked_at": "2026-10-19T07:06:30+08:00",
+    "psi24": {
+      "north": 92,
+      "south": 104,
+      "west": 139,
+      "east": 107,
+      "central": 117
+    },
+    "pm25_hourly": {
+      "north": 40,
+      "south": 60,
+      "west": 75,
+      "east": 68,
+      "central": 75
+    },
+    "forecast": {
+      "issued_at": "2026-10-19T05:32:00+08:00",
+      "temperature_c": [
+        25,
+        34
+      ],
+      "wind": "Southeast 10–20 km/h",
+      "description": "Thundery showers mainly over northern and western Singapore in the afternoon"
+    },
+    "sources": [
+      "https://api-open.data.gov.sg/v2/real-time/api/psi",
+      "https://api-open.data.gov.sg/v2/real-time/api/pm25",
+      "https://www.weather.gov.sg/weather-forecast-24hrforecast/",
+      "https://www.moh.gov.sg/others/haze/"
+    ],
+    "caveat": "Latest returned feed observation remains06:00; do not call these07:00 readings. PSI is a rolling24-hour index; hourlyPM2.5 is appropriate for immediate outdoor activity. MOH page updated17Oct."
+  },
+  "general_items": [
+    {
+      "id": "sg-haze-daily-impact",
+      "section": "Singapore",
+      "title": "Sunday haze disrupts western Singapore routines and businesses",
+      "event_date": "2026-10-18",
+      "published_sgt": "2026-10-18T17:17:00+08:00",
+      "sources": [
+        "https://www.channelnewsasia.com/singapore/haze-western-region-daily-routines-psi-businesses-6469406"
+      ],
+      "verification": "CNA original reporting body retrieved in search; direct article availability variable.",
+      "summary": "CNA reported residents reducing outdoor activity and stallholders describing weaker trade in western Singapore. The west's24-hourPSI reached230 at10:00 Sunday; that is historical, not today's reading."
+    },
+    {
+      "id": "india-chennai-rain",
+      "section": "India",
+      "title": "Tamil Nadu and Puducherry face very-heavy-rain warnings through Wednesday",
+      "event_date": "2026-10-19",
+      "published_sgt": null,
+      "sources": [
+        "https://inshorts.com/en/read/national",
+        "https://mausam.imd.gov.in/imd_latest/contents/subdivisionwise-warning_mc.php?id=24"
+      ],
+      "verification": "Inshorts national page directly read (Chennai red-alert summary dated18Oct16:32, timezone unspecified). IMD subdivision page directly read with issue date19Oct.",
+      "summary": "IMD's19October warning lists very heavy rain with thunderstorm/lightning for Tamil Nadu and Puducherry on19–21October, followed by heavy rain22–25October. Inshorts highlighted a Chennai red alert on Sunday; district-specific red level not independently confirmed in primary page.",
+      "caveat": "Do not convert Inshorts publication time toSGT without timezone verification. IMD warning covers a subdivision, not identical rainfall at every location."
+    },
+    {
+      "id": "india-kolkata-stampede-update",
+      "section": "India",
+      "title": "Kolkata Durga Puja stampede death toll rises to19",
+      "event_date": "2026-10-17",
+      "published_sgt": "2026-10-18T07:31:00+08:00",
+      "updated_sgt": "2026-10-18T13:20:00+08:00",
+      "sources": [
+        "https://www.scmp.com/news/asia/south-asia/article/3371278/19-dead-25-hurt-stampede-india-religious-festival",
+        "https://inshorts.com/en/news/death-toll-in-kolkata-durga-puja-pandal-stampede-rises-to-19---25l--govt-job-announced-for-victims--kin--1792292904503"
+      ],
+      "verification": "SCMP/AFP article directly read; Inshorts corroborating summary retrieved. Fatality count attributed to authorities in AFP.",
+      "update": true,
+      "what_changed": "Prior Oct18preview covered17dead. New reported toll19dead and25injured; do not reintroduce event as newly occurring.",
+      "summary": "AFP reports at least19people killed and25injured when crowds rushed for shelter during rain at a Durga Puja pavilion in Kolkata onSaturday."
+    },
+    {
+      "id": "world-ukraine-st-petersburg",
+      "section": "World",
+      "title": "Russian authorities report fatal St Petersburg strike and oil-facility fires",
+      "event_date": "2026-10-18",
+      "published_sgt": null,
+      "sources": [
+        "https://www.channelnewsasia.com/world/ukraine-russia-saint-petersburg-strike-6469746"
+      ],
+      "verification": "CNA/AFP article body retrieved via search; direct open failed. Statements attributed to Russian regional officials and Ukraine's president; battlefield claims not independently established.",
+      "summary": "Russian officials reported one person killed and five hospitalised after Ukrainian strikes around St Petersburg, including fires at energy facilities. Ukraine meanwhile accused Russia of continued attacks on its energy network.",
+      "caveat": "Do not repeat upstream claim that Russia downed1,000drones; independently retrieved corroboration supports narrower event only."
+    },
+    {
+      "id": "world-trump-netanyahu-endorsement",
+      "section": "World",
+      "title": "Trump endorses Netanyahu before27October election",
+      "event_date": "2026-10-18",
+      "published_sgt": "2026-10-18T22:55:00+08:00",
+      "sources": [
+        "https://abcnews.com/amp/Politics/wireStory/trump-endorses-embattled-israeli-prime-minister-benjamin-netanyahu-137361719",
+        "https://amp.dw.com/en/israel-trump-endorses-netanyahu-ahead-of-elections/a-79693698"
+      ],
+      "verification": "AP syndicated story and DW/AFP body retrieved via search; original social post not directly accessed. AP publication10:55amEDT converted22:55SGT.",
+      "summary": "Trump publicly endorsed Netanyahu on18October, nine days before Israel's27October parliamentary election. The endorsement's electoral effect is uncertain."
+    },
+    {
+      "id": "business-efta-vietnam-signed",
+      "section": "Business",
+      "title": "Vietnam and EFTA sign free-trade agreement; implementation still pending",
+      "event_date": "2026-10-18",
+      "published_sgt": null,
+      "sources": [
+        "https://www.efta.int/trade-relations/free-trade-network/viet-nam",
+        "https://www.efta.int/media-resources/news/efta-and-viet-nam-sign-free-trade-agreement"
+      ],
+      "verification": "EFTA official treaty page directly read; official signing announcement retrieved via search.",
+      "summary": "EFTA confirms agreement signed inHanoi18October covering goods, services, investment and other areas. Entry into force is pending. EFTA comprises Iceland, Liechtenstein, Norway and Switzerland.",
+      "caveat": "Interpretation about diversification is analysis. No automatic insurance-market-opening or immediate tariff claim."
+    },
+    {
+      "id": "sports-shanghai-final",
+      "section": "Sports",
+      "title": "Davidovich Fokina wins first Masters1000 title in Shanghai",
+      "event_date": "2026-10-18",
+      "published_sgt": null,
+      "sources": [
+        "https://en.rolexshanghaimasters.com/en/media/news/jodar-davidovich-fokina-shanghai-2026-final",
+        "https://www.atptour.com/en/news/jodar-davidovich-fokina-shanghai-2026-final"
+      ],
+      "verification": "Official tournament article body dated18Oct retrieved via search; direct open failed. ATP direct URL also inaccessible.",
+      "update": true,
+      "what_changed": "Yesterday's briefing previewed the all-Spanish final. Today's final result is new.",
+      "summary": "Alejandro Davidovich Fokina defeated Rafael Jodar1–6,7–6(5),6–4 in2hours28minutes for his first Masters1000 title. He recovered from a set and a break down."
+    }
+  ],
+  "ai": {
+    "edition": "2026-10-19",
+    "research_cutoff": "2026-10-19T07:07:30+08:00",
+    "window_start": "2026-10-18T06:09:26+08:00",
+    "history_checked": {
+      "editions": 9,
+      "events": 102,
+      "repository_archive_index": true
+    },
+    "coverage": {
+      "roster_url": "https://xstarterpack.com/",
+      "roster_count": 211,
+      "profiles_attempted": 48,
+      "profiles_read": 48,
+      "roster_profiles_read": [
+        "karpathy",
+        "AnthropicAI",
+        "OpenAI",
+        "GoogleDeepMind",
+        "OfficialLoganK",
+        "bcherny",
+        "trq212",
+        "embirico",
+        "thsottiaux",
+        "ArtificialAnlys",
+        "simonw",
+        "naval",
+        "amasad",
+        "rauchg",
+        "swyx",
+        "rohanpaul_ai",
+        "emollick",
+        "kimmonismus",
+        "levie",
+        "AravSrinivas",
+        "steipete",
+        "clairevo",
+        "btaylor",
+        "mntruell",
+        "natolambert",
+        "rasbt",
+        "ericjang11",
+        "svlevine",
+        "fchollet",
+        "ch402",
+        "jackclarkSF",
+        "tamaybes",
+        "RyanGreenblatt",
+        "kevinweil",
+        "satyanadella",
+        "sundarpichai",
+        "nickcammarata",
+        "venturetwins",
+        "petergyang",
+        "levelsio",
+        "dhh",
+        "JeffDean",
+        "sama",
+        "deanwball",
+        "alexalbert__",
+        "romainhuet",
+        "karrisaarinen",
+        "demishassabis"
+      ],
+      "supplementary_profiles": [
+        "AndrewYNg",
+        "ylecun",
+        "opencode"
+      ],
+      "supplementary_primary_posts": [
+        "vercel_dev",
+        "thdxr"
+      ],
+      "method": "Public X profiles read in cloud Chrome, logged out. Visible recent posts and linked primary announcements inspected. Exact selected-post times read from individual X pages in Singapore time.",
+      "gaps": "Partial coverage: 48 of 211 roster profiles checked. Logged-out profile windows generally show only the newest five posts plus pinned posts; older posts and busy profiles may have gaps. No access denial or rate limit encountered on these profiles. No claim of exhaustive coverage or no fresh news elsewhere.",
+      "excluded": "Previously delivered events including OpenCode breach announcement, DeepSeek V4.1 Flash 1017, Replit model policy, tsc-ts, AI-lab expectations survey, and earlier model/product releases were excluded. Generic commentary, personal anecdotes, demonstrations without substantive release and speculative attacks were excluded."
+    },
+    "items": [
+      {
+        "rank": 1,
+        "title": "Anthropic proposes a share-funded Public Benefit Fund",
+        "handle": "@AnthropicAI",
+        "source_url": "https://x.com/AnthropicAI/status/2111881963657412903",
+        "posted_at_sgt": "2026-10-19T02:07:00+08:00",
+        "primary_url": "https://www.anthropic.com/news/public-benefit-fund",
+        "primary_date": "2026-10-18",
+        "summary": "Anthropic plans to allocate 5% of its shares, subject to stockholder approval, to a wholly owned public-benefit fund. For each 50% increase in valuation above a baseline, the board may allocate up to another 2%. Governance and operating milestones are still to be detailed.",
+        "why_it_matters": "A concrete proposal for sharing AI-created value, including potential responses to labor disruption, rather than only general responsible-AI promises.",
+        "caveat": "Company announcement, not evidence of money already distributed or independently measured benefit. The roughly 20% figure combines this plan with prior founder and employee commitments; it is not the fund's starting allocation. No IPO valuation verified or used.",
+        "dedup": "New event; also appears in today's upstream general-news edition, so include only once in combined briefing."
+      },
+      {
+        "rank": 2,
+        "title": "Vercel makes agent-session cost and caching visible in AI Gateway logs",
+        "handle": "@rauchg",
+        "source_url": "https://x.com/rauchg/status/2111871697842495810",
+        "posted_at_sgt": "2026-10-19T01:27:00+08:00",
+        "primary_post_url": "https://x.com/vercel_dev/status/2111865122813784173",
+        "primary_posted_at_sgt": "2026-10-19T01:00:00+08:00",
+        "primary_url": "https://vercel.com/changelog/ai-gateway-logs-now-show-session-affinity",
+        "primary_date": "2026-10-18",
+        "summary": "A new Sessions view groups an agent's requests into conversations, exposing cost, models, providers, cache-hit rates, duration and turn-by-turn routing. Session affinity keeps later turns with the provider that handled prior turns, to reuse its prompt cache.",
+        "why_it_matters": "Helps teams investigate agent behavior and understand spending across multi-turn workflows, an operational concern as AI moves into production.",
+        "caveat": "Verified against the vendor changelog, not an independent benchmark. No quantified cost reduction or reliability improvement established. Session affinity defaults to text/chat; explicit session IDs can be supplied.",
+        "dedup": "New observability feature, distinct from previously covered Vercel persistent drives, fx durable sessions, domain purchases and tsc-ts."
+      },
+      {
+        "rank": 3,
+        "title": "OpenCode follow-up: developer reports AI refusals during incident response",
+        "handle": "@kimmonismus",
+        "source_url": "https://x.com/kimmonismus/status/2111895589307003210",
+        "posted_at_sgt": "2026-10-19T03:02:00+08:00",
+        "primary_url": "https://x.com/thdxr/status/2111831348336091179",
+        "primary_handle": "@thdxr",
+        "primary_posted_at_sgt": "2026-10-18T22:46:00+08:00",
+        "summary": "OpenCode developer dax says AI models initially helped investigate its security incident, then began refusing further work; he says access to Daybreak Blue subsequently improved the situation.",
+        "why_it_matters": "Raises a practical incident-response question: whether defensive teams have reliable, authorized assistance when ordinary model safeguards interrupt legitimate investigation.",
+        "caveat": "First-person developer account, not an independent incident report. Do not infer which models refused, that safeguards caused the breach, that the attack is resolved, or that another severe incident is imminent. The commentator's Hugging Face comparison and prediction are not included.",
+        "dedup": "Material follow-up to the already delivered October18 OpenCode breach: the new fact is the developer's account of investigation refusals and subsequent Daybreak Blue access, not the existence of the breach.",
+        "previous_event_url": "https://x.com/opencode/status/2111519637049319818"
+      }
+    ],
+    "thinkers": {
+      "fresh_originals_verified": [],
+      "status": "No qualifying fresh original AI development found in the visible X profiles of Karpathy, Andrew Ng, Naval or Yann LeCun. This is a profile-window finding, not exhaustive coverage of every channel.",
+      "latest_visible": {
+        "karpathy": "2026-10-12",
+        "AndrewYNg": "2026-09-30",
+        "naval": "2026-10-09",
+        "ylecun": "2026-08-16"
+      },
+      "evergreen_optional": {
+        "person": "Naval Ravikant",
+        "date": "2026-09-30",
+        "url": "https://x.com/naval/status/2105231982309564765",
+        "paraphrase": "An evergreen reminder from Naval: choose the long-term version of the work. For leadership, that can mean building repeatable habits and systems rather than chasing one impressive day.",
+        "caveat": "Label explicitly evergreen. The leadership application is the briefing's interpretation, not a new Naval statement."
+      }
+    }
+  },
+  "everyday_ai": {
+    "checked_at": "2026-10-19T07:07:00+08:00",
+    "status": "no_new_qualifying_original_found",
+    "qualifying_summaries": [],
+    "coverage": [
+      {
+        "url": "https://www.youtube.com/@EverydayAI_/videos",
+        "method": "Cloud browser, Latest selected, first 30 visible video entries",
+        "result": "Latest remains Ep883 zfOAaWroo-g, explicit Replay, shown 2 days ago. No later upload visible."
+      },
+      {
+        "url": "https://www.youtube.com/@EverydayAI_/streams",
+        "method": "Cloud browser, Latest selected, first 30 visible Live entries",
+        "result": "Latest remains 9_XAioMMtDA (Ep841), streamed 2 months ago; publisher explicitly dates original August14."
+      },
+      {
+        "url": "https://www.youreverydayai.com/",
+        "method": "Web read",
+        "result": "Latest Ep841"
+      },
+      {
+        "url": "https://www.youreverydayai.com/episodes/",
+        "method": "Web read",
+        "result": "Latest Ep841 dated August14 2026"
+      },
+      {
+        "url": "https://www.youreverydayai.com/blog/",
+        "method": "Web read",
+        "result": "Latest Ep841 dated August14 2026"
+      },
+      {
+        "url": "https://www.youreverydayai.com/ai-news-podcast/",
+        "method": "Web read of category linked from publisher episodes",
+        "result": "Latest Ep841 dated August14 2026"
+      },
+      {
+        "url": "https://read.youreverydayai.com/",
+        "method": "Web read",
+        "result": "Archive latest August14 Ep841"
+      }
+    ],
+    "latest_original": {
+      "episode": 841,
+      "video_id": "9_XAioMMtDA",
+      "video_url": "https://www.youtube.com/watch?v=9_XAioMMtDA",
+      "original_date": "2026-08-14",
+      "publisher_url": "https://www.youreverydayai.com/ep-841-chatgpt-computer-history-new-gemini-model-claude-flexes-on-the-browser-and-7-more-ai-updates-you-should-use-today/",
+      "transcript_evidence": "Actual publisher timestamped transcript 33:56–35:04 says livestream/newsletter take a break and 30 Start Here episodes will be rerun. Read again this scan for context, not summarized as fresh news."
+    },
+    "latest_upload": {
+      "episode": 883,
+      "video_id": "zfOAaWroo-g",
+      "video_url": "https://www.youtube.com/watch?v=zfOAaWroo-g",
+      "title": "Ep 883: How To Make Slides with AI: Hands on Comparison With the 9 Most Popular Options (Replay)",
+      "expanded_watch_date": "2026-10-17",
+      "released_date": "2026-10-16",
+      "exact_upload_timestamp": null,
+      "date_caveat": "Both conflicting dates remain visibly displayed in expanded YouTube description; do not infer an exact UTC timestamp.",
+      "original_episode": 790,
+      "original_date": "2026-06-03",
+      "publisher_url": "https://www.youreverydayai.com/ep-790-how-to-make-slides-with-ai-hands-on-comparison-with-the-9-most-popular-options/",
+      "decision": "exclude_existing_historical_replay",
+      "reupload_transcript": "Show transcript opened empty panel with no usable transcript text. No new upload summary made; original historical transcript exists but cannot establish whether replay has minor additions."
+    },
+    "access_caveats": [
+      "Web text extraction for YouTube Videos/Live gave only stale footer; actual current listings were inspected successfully in cloud browser instead.",
+      "Guessed /ai-news/ path inaccessible; correct publisher-linked /ai-news-podcast/ category inspected.",
+      "Latest replay transcript not available in opened panel; no claims of exhaustive video-content comparison or new transcript coverage."
+    ]
+  },
+  "fact": {
+    "id": "pineapple-gelatin-bromelain",
+    "evergreen": true,
+    "source": "https://edu.rsc.org/everyday-chemistry/why-does-jelly-wobble/4015724.article",
+    "verification": "Royal Society of Chemistry article text retrieved in search; direct open405. Same topic as today's upstream fact; corrected to directly supported chemistry example.",
+    "text": "Fresh pineapple can stop gelatin jelly setting because bromelain breaks down protein chains. Canning heat deactivates the enzyme, so canned pineapple behaves differently."
+  },
+  "gaps": [
+    "Public web/source coverage is partial; several direct article fetches failed despite accessible text in search.",
+    "Inshorts national, politics and business public pages were checked; some pages lagged. No private-app access or top10ranking claimed.",
+    "Only a few substantive India items met freshness/evidence requirements; do not pad to10.",
+    "Rubio itinerary already appeared inOct17archive; omit recycled framing. StateDepartment original403. CJP release occurred17Oct, before previous successful cutoff; omit unless expressly identified as catch-up rather than fresh."
+  ],
+  "note": "Source audit supplement, not a private delivery ledger. This file extends the evidence schema; no private publication receipt or listener URL is included."
+}
