@@ -4,7 +4,9 @@ import vm from 'node:vm';
 import {parse} from 'parse5';
 import {JS} from '../src/app.js';
 import {HTML,CSS} from '../src/ui.js';
-import {LogbookModel as model} from '../src/logbook-model.js';
+import {LogbookModel as model,createLogbookModel} from '../src/logbook-model.js';
+import {LOGBOOK_MODEL_SOURCE} from '../src/logbook-model-browser.js';
+import {verifyBrowserScript} from '../scripts/browser-smoke.mjs';
 const TODAY='2026-10-19';
 const record=(date,habits={})=>({date,version:1,status:'completed',habits:{...model.savePayload(date).habits,...habits},fitnessActivities:[],savedAt:'2026-10-19T10:00:00.000Z'});
 const state=(extra={})=>({schemaVersion:1,timeZone:'Asia/Singapore',today:TODAY,startDate:TODAY,weekStart:model.monday(TODAY),records:[],pendingDates:[TODAY],...extra});
@@ -89,4 +91,8 @@ test('no browser persistence, external analytics or habit reminder scheduler is 
 
 test('finishing an animation after changing tabs never steals keyboard focus',async()=>{
  const h=await opened({reduced:false});h.find('#log-check-noSmoke').onclick();h.find('#tab-latest').onclick();h.find('#tab-latest').focus();h.timers[0]();assert.equal(h.document.activeElement.id,'tab-latest');assert.equal(h.find('#latest').hidden,false);
+});
+
+test('generated browser model exactly matches the shared source before bundling',()=>{
+ assert.equal(LOGBOOK_MODEL_SOURCE,createLogbookModel.toString(),'Run node scripts/build-logbook-model.mjs after changing the model.');verifyBrowserScript(JS);
 });

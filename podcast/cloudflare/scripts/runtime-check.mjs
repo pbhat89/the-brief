@@ -5,6 +5,7 @@ import {mkdir} from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import {pinHash,digest} from '../src/security.js';
 import {LogbookModel} from '../src/logbook-model.js';
+import {verifyBrowserScript} from './browser-smoke.mjs';
 const hash=await pinHash('123456789012','isolated-test');
 const publisher='synthetic-test-token-'.repeat(3);
 const publisherHash=await digest(publisher),persistence='.wrangler/runtime-'+crypto.randomUUID();
@@ -20,6 +21,7 @@ async function ready(){let available=false;for(let i=0;i<80;i++){try{const r=awa
 launch();
 try{
  await ready();
+ const browserScript=await fetch(base+'/app.js');assert.equal(browserScript.status,200);verifyBrowserScript(await browserScript.text());
  assert.equal((await fetch(base+'/api/episodes')).status,401);
  assert.equal((await fetch(base+'/api/logbook')).status,401);
  const login=await fetch(base+'/api/login',{method:'POST',headers:{Origin:base,'Content-Type':'application/json'},body:'{"pin":"123456789012"}'});
@@ -65,6 +67,6 @@ try{
  const attempts=await Promise.all(Array.from({length:11},()=>fetch(base+'/api/login',{method:'POST',headers:{Origin:base},body:'{"pin":"bad"}'})));
  assert.equal(attempts.filter(r=>r.status===401).length,9);assert.equal(attempts.filter(r=>r.status===429).length,2);
  const logout=await fetch(base+'/api/logout',{method:'POST',headers:{Origin:base,Cookie:cookie,'X-CSRF-Token':csrf}});assert.equal(logout.status,200);assert.equal((await logbookRead()).status,401);assert.equal((await saveDay()).status,401);
- console.log('PASS: workerd + SQLite DO PIN verification, session, private KV list, 7.36 MB upload/full/range/HEAD, personal collection/duration, authenticated deletion, storage estimate, concurrent global limiter; Log book private initialization, explicit false values, CSRF/origin rejection, identical retry, conflict, readback, persisted restart, logout protection');
+ console.log('PASS: served browser bundle initialization; workerd + SQLite DO PIN verification, session, private KV list, 7.36 MB upload/full/range/HEAD, personal collection/duration, authenticated deletion, storage estimate, concurrent global limiter; Log book private initialization, explicit false values, CSRF/origin rejection, identical retry, conflict, readback, persisted restart, logout protection');
 }finally{await stop();}
 

@@ -143,3 +143,11 @@ values, authentication/CSRF, invalid inputs, concurrent writes, save retries,
 read-only history, reset races, focus and reduced motion. The isolated local
 workerd runtime check exercises SQLite persistence across a local process restart,
 plus normal player regressions. These checks do not write production habit records.
+
+Browser-model build note: after editing src/logbook-model.js, run
+`node scripts/build-logbook-model.mjs` to refresh the checked-in browser source
+literal. A test enforces exact parity. Do not serialize a build-transformed
+function at Worker runtime: bundlers can inject helper references that do not
+exist in the separate browser script. The workerd smoke test also executes the
+exact served /app.js in an isolated synthetic DOM before testing authenticated
+storage, so browser-bundle initialization is a deployment gate.

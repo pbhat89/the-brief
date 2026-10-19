@@ -1,5 +1,5 @@
-import {createLogbookModel} from './logbook-model.js';
-export const LOGBOOK_JS='\nconst LogbookModel=('+createLogbookModel.toString()+')();\n'+String.raw`
+import {LOGBOOK_MODEL_SOURCE} from './logbook-model-browser.js';
+export const LOGBOOK_JS='\nconst LogbookModel=('+LOGBOOK_MODEL_SOURCE+')();\n'+String.raw`
 let logbookState=null,logbookDate=null,logbookWeek=null,logbookRecords=new Map(),logbookDrafts=new Map(),logbookAttempts=new Map(),logbookLoading=false,logbookSaving=false,logbookSequence=0,logbookAnimations=new Set();
 function logNode(tag,className,text){const node=document.createElement(tag);if(className)node.className=className;if(text!==undefined)node.textContent=text;return node;}
 function logButton(text,action,className=''){const button=logNode('button',className,text);button.type='button';button.onclick=action;return button;}
