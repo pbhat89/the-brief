@@ -1,0 +1,606 @@
+{
+  "date": "2026-10-20",
+  "items": [
+    {
+      "tab": "Singapore",
+      "headline": "Update: ASEAN raises its top haze alert as Singapore activates health subsidies for the first time since 2015",
+      "summary": "The ASEAN Specialised Meteorological Centre issued Alert Level 3, the highest of four, for southern ASEAN on Oct 16 as the one-hour PSI hit 288 in western Singapore. The government activated haze medical subsidies, capping treatment at S$10 (S$5 for seniors) for the first time since 2015, and began distributing N95 masks through community clubs.",
+      "url": "https://www.scmp.com/news/asia/southeast-asia/article/3370563/singapore-tops-global-air-pollution-ranks-again-rolls-out-haze-subsidies",
+      "outlet": "SCMP",
+      "publish_date": "Oct 17",
+      "short_hash": "9972b2a4",
+      "key_entities": [
+        "singapore",
+        "asean",
+        "haze",
+        "psi",
+        "subsidies"
+      ],
+      "is_update": true
+    },
+    {
+      "tab": "Singapore",
+      "headline": "Doctors must report three deadly infectious diseases to the authorities from Oct 31",
+      "summary": "From Oct 31, doctors and laboratories must notify the Communicable Diseases Agency of suspected or confirmed Crimean-Congo haemorrhagic fever, Lassa fever and Marburg virus disease, none of which has an approved cure. The agency said Singapore's risk level remains low.",
+      "url": "https://mothership.sg/2026/10/spore-infectious-diseases/",
+      "outlet": "Mothership",
+      "publish_date": "Oct 18",
+      "short_hash": "203fce0a",
+      "key_entities": [
+        "singapore",
+        "communicable diseases agency",
+        "marburg",
+        "lassa",
+        "notifiable diseases"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "Company director, 67, jailed for bribing a defence-lab officer over a S$46 million project",
+      "summary": "A 67-year-old company director was sentenced to 10 months and two weeks' jail for abetting the corrupt giving of gratification to an officer at DSO National Laboratories tied to a S$46 million project. He is due to begin serving his sentence on Nov 23.",
+      "url": "https://mothership.sg/2026/10/company-director-jailed-corruption-dso/",
+      "outlet": "Mothership",
+      "publish_date": "Oct 16",
+      "short_hash": "8c52eb58",
+      "key_entities": [
+        "singapore",
+        "dso national laboratories",
+        "corruption",
+        "company director"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "Man, 73, jailed 13.5 years for years of sexual abuse of his young daughter",
+      "summary": "A 73-year-old Singaporean was sentenced on Oct 19 to 13 years and six months' jail after pleading guilty to four charges, including aggravated statutory rape, for abusing his daughter from around the age of 10. Six further charges were taken into consideration; he is exempt from caning as he is over 50.",
+      "url": "https://mothership.sg/2026/10/man-raped-underage-daughter-jailed/",
+      "outlet": "Mothership",
+      "publish_date": "Oct 19",
+      "short_hash": "775b9ef6",
+      "key_entities": [
+        "singapore",
+        "court",
+        "sexual abuse",
+        "sentencing"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "Chief Justice Surya Kant opens India's highest-altitude High Court bench in Leh",
+      "summary": "Chief Justice of India Surya Kant inaugurated a permanent bench of the Jammu & Kashmir and Ladakh High Court at Leh, described as the country's highest-altitude High Court bench, saying it will spare Ladakh litigants costly travel to Srinagar or Delhi. It comes almost a century after the J&K High Court was established.",
+      "url": "https://indianexpress.com/article/india/cji-surya-kant-inaugurates-india-highest-high-court-bench-in-leh-10927303/",
+      "outlet": "The Indian Express",
+      "publish_date": "Oct 19",
+      "short_hash": "a37981a4",
+      "key_entities": [
+        "india",
+        "surya kant",
+        "leh",
+        "ladakh",
+        "high court"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "YSRCP moves the Supreme Court alleging attacks on its candidates before Andhra civic polls",
+      "summary": "The YSRCP petitioned the Supreme Court alleging its candidates are being attacked by the ruling TDP ahead of Andhra Pradesh's urban local body elections, and sought an extended nomination deadline and additional nomination centres so candidates can file papers safely.",
+      "url": "https://indianexpress.com/article/india/ysrcp-supreme-court-petition-andhra-pradesh-urban-local-body-elections-tdp-violence-10928410/",
+      "outlet": "The Indian Express",
+      "publish_date": "Oct 19",
+      "short_hash": "4072b2c3",
+      "key_entities": [
+        "india",
+        "ysrcp",
+        "tdp",
+        "andhra pradesh",
+        "supreme court"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "Three gunmen who fired at actor Tiger Shroff arrested in Rajasthan's Kota",
+      "summary": "Three men who opened fire targeting actor Tiger Shroff in Mumbai's Juhu, where the actor was unhurt, were caught in Kota, Rajasthan while trying to flee to Nepal. Police named gangster Anil Pandit, linked to the Lawrence Bishnoi network, as the prime suspect; the accused were granted transit remand to Mumbai.",
+      "url": "https://indianexpress.com/article/india/gunmen-bollywood-actor-tiger-shroff-mumbai-caught-rajasthan-kota-10927710/",
+      "outlet": "The Indian Express",
+      "publish_date": "Oct 19",
+      "short_hash": "edc35de6",
+      "key_entities": [
+        "india",
+        "tiger shroff",
+        "anil pandit",
+        "lawrence bishnoi",
+        "kota"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "Three Meitei men shot dead in Manipur, reviving fears of ethnic conflict",
+      "summary": "Three Meitei men were killed and three others injured in an attack by suspected Kuki militants near Nongsum Hills in Imphal East district on Monday, along the Imphal East-Kangpokpi boundary, raising fears of renewed violence after a period of relative calm.",
+      "url": "https://indianexpress.com/article/india/manipur-shot-dead-militants-locals-bodies-cm-house-injured-10928171/",
+      "outlet": "The Indian Express",
+      "publish_date": "Oct 19",
+      "short_hash": "1b139968",
+      "key_entities": [
+        "india",
+        "manipur",
+        "meitei",
+        "kuki",
+        "imphal east"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "Home Ministry warns of deepfake videos of PM Modi and ministers pushing fake welfare schemes",
+      "summary": "India's Ministry of Home Affairs and its national cyber unit flagged a rise in online financial fraud using AI deepfake videos of Prime Minister Narendra Modi, chief ministers and other ministers to promote fake government welfare schemes, and issued a public advisory urging caution.",
+      "url": "https://economictimes.indiatimes.com/news/india/mha-warns-of-fake-welfare-scheme-ads-using-deepfake-videos-of-pm-modi-cms-and-ministers/articleshow/135051458.cms",
+      "outlet": "The Economic Times",
+      "publish_date": "Oct 19",
+      "short_hash": "e9bd81ed",
+      "key_entities": [
+        "india",
+        "home ministry",
+        "deepfake",
+        "narendra modi",
+        "cyber fraud"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "Big bond funds buy UK gilts, betting Chancellor Healey plays it safe in his first Budget",
+      "summary": "With Chancellor John Healey's first Budget due Oct 28, large investors including M&G and Ninety One have been buying UK government bonds, positioning for yields to fall if Healey signals spending restraint. UK public debt stands around 94.9% of GDP, and economists reckon Healey has lost roughly half the fiscal headroom he inherited.",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-19/uk-debt-is-a-buy-for-traders-betting-on-a-play-it-safe-budget",
+      "outlet": "Bloomberg",
+      "publish_date": "Oct 19",
+      "short_hash": "f73eed33",
+      "key_entities": [
+        "uk",
+        "john healey",
+        "gilts",
+        "budget",
+        "public debt"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "UK bank shares slide as Healey weighs a Budget surcharge hike on lenders",
+      "summary": "Shares in UK-focused lenders fell on reports the bank surcharge could rise to 8% from 3% in the Oct 28 Budget, while HSBC and Standard Chartered gained. Bloomberg Intelligence estimates reversing the 2023 cut would raise about GBP3 billion and could put Healey at odds with Bank of England Governor Andrew Bailey.",
+      "url": "https://www.cnbc.com/2026/10/16/banking-tax-london-uk-lenders.html",
+      "outlet": "CNBC",
+      "publish_date": "Oct 16",
+      "short_hash": "8a40d90a",
+      "key_entities": [
+        "uk",
+        "john healey",
+        "bank surcharge",
+        "budget",
+        "lenders"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "Daniel Dubois stops Fabio Wardley in the second round to retain his WBO heavyweight title",
+      "summary": "Daniel Dubois retained the WBO heavyweight belt by stopping fellow Briton Fabio Wardley in the second round of their rematch at London's O2 Arena, flooring Wardley inside the opening seconds before the corner threw in the towel. Dubois had won their first bout by an 11th-round stoppage.",
+      "url": "https://www.aljazeera.com/sports/2026/10/18/daniel-dubois-defeats-fabio-wardley-to-retain-wbo-heavyweight-boxing-title",
+      "outlet": "Al Jazeera",
+      "publish_date": "Oct 18",
+      "short_hash": "9b818f0f",
+      "key_entities": [
+        "uk",
+        "daniel dubois",
+        "fabio wardley",
+        "wbo heavyweight",
+        "o2 arena"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "Former army chef jailed for terrorism-related weapons offences, Al Jazeera reports",
+      "summary": "Mark Broadhurst, 28, a former British Army chef, was sentenced at Sheffield Crown Court to nearly four years for possessing firearms and an explosive, which a judge ruled were connected to terrorism. Counter-terrorism police said he had an extreme right-wing mindset; he had pleaded guilty to possession but denied a terrorist motive.",
+      "url": "https://www.aljazeera.com/news/2026/10/14/ex-uk-army-chef-jailed-for-terror-related-offence",
+      "outlet": "Al Jazeera",
+      "publish_date": "Oct 14",
+      "short_hash": "e3ba85f8",
+      "key_entities": [
+        "uk",
+        "mark broadhurst",
+        "sheffield crown court",
+        "terrorism",
+        "firearms"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "France imposes city curfews after a weekend of riots leaves more than 2,000 arrested",
+      "summary": "Prime Minister Sebastien Lecornu asked several cities to impose partial curfews after cost-of-living and school protests escalated into nationwide rioting; the Interior Ministry reported more than 2,000 arrests and over 600 injured officers. President Emmanuel Macron condemned the violence and refused Interior Minister Laurent Nunez's offer to resign.",
+      "url": "https://www.cnn.com/2026/10/19/europe/france-protests-violence-wwk-intl-hnk",
+      "outlet": "CNN",
+      "publish_date": "Oct 19",
+      "short_hash": "db355b6e",
+      "key_entities": [
+        "france",
+        "protests",
+        "curfew",
+        "macron",
+        "lecornu"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "Kenya confirms an eighth Ebola case as the DR Congo outbreak widens",
+      "summary": "Kenya confirmed an eighth Ebola case, a hospital attendant exposed to the country's first patient who died in Nairobi on Oct 5, with up to 128 contacts quarantined and no community transmission yet. The far larger DR Congo outbreak, of the Bundibugyo strain with no approved vaccine, has spread to an eighth province.",
+      "url": "https://www.aljazeera.com/news/2026/10/19/kenya-confirms-eighth-ebola-case-amid-widening-regional-outbreak",
+      "outlet": "Al Jazeera",
+      "publish_date": "Oct 19",
+      "short_hash": "651a1288",
+      "key_entities": [
+        "kenya",
+        "ebola",
+        "dr congo",
+        "outbreak",
+        "bundibugyo"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "Alberta votes in a non-binding independence referendum as polls point to staying in Canada",
+      "summary": "Albertans voted on Monday in a non-binding referendum asking whether to remain in Canada or begin a legal process toward independence; a Leger poll put support for remaining at about 70%. Premier Danielle Smith, who called the vote, opposes separation, and Prime Minister Mark Carney urged a pro-unity result. Hand-counted results are expected within 48 hours.",
+      "url": "https://www.aljazeera.com/news/2026/10/18/alberta-independence-referendum-will-separatists-survive-a-loss",
+      "outlet": "Al Jazeera",
+      "publish_date": "Oct 19",
+      "short_hash": "5f8b589d",
+      "key_entities": [
+        "canada",
+        "alberta",
+        "referendum",
+        "danielle smith",
+        "mark carney"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "Lula and Flavio Bolsonaro clash in Brazil's first run-off debate before the Oct 25 vote",
+      "summary": "President Lula and Senator Flavio Bolsonaro traded corruption accusations in a fiery first run-off debate in Sao Paulo, where Lula pressed Flavio on whether he would copy Javier Milei's Argentine spending cuts and Flavio sidestepped the question. Flavio led the Oct 4 first round with about 47% to Lula's 45%; a second debate is set for Oct 23.",
+      "url": "https://www.aljazeera.com/news/2026/10/19/lula-and-bolsonaro-spar-in-brazils-fiery-first-presidential-run-off-debate",
+      "outlet": "Al Jazeera",
+      "publish_date": "Oct 19",
+      "short_hash": "6e7aa143",
+      "key_entities": [
+        "brazil",
+        "lula",
+        "flavio bolsonaro",
+        "runoff",
+        "debate"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "AI-chip start-up Tenstorrent raises US$1.5bn at a US$6.2bn valuation",
+      "summary": "Jim Keller's Tenstorrent closed a US$1.5 billion Series E that more than doubled its valuation to US$6.2 billion, with Trace Capital and Innovation X leading and ARK Invest, Fidelity and T. Rowe Price joining. The funds will scale production of chips tuned to serve open-weight AI models.",
+      "url": "https://techcrunch.com/2026/10/19/tenstorrent-hits-6-2b-valuation-to-scale-open-weight-ai-chips/",
+      "outlet": "TechCrunch",
+      "publish_date": "Oct 19",
+      "short_hash": "6516edf1",
+      "key_entities": [
+        "tenstorrent",
+        "jim keller",
+        "series e",
+        "ai chips",
+        "valuation"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "Microsoft pulls out of Nscale's flagship UK data centre over power-grid delays",
+      "summary": "Microsoft terminated its deal to anchor Nscale's planned data centre in Loughton, Essex after grid operators said power would not arrive until the 2030s. Microsoft was to take the first 50MW of the site and had agreed to house about 23,000 Nvidia GB300 GPUs, but said it remains committed to the wider Nscale partnership.",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-18/microsoft-scraps-uk-data-center-deal-with-nscale-telegraph-says",
+      "outlet": "Bloomberg",
+      "publish_date": "Oct 18",
+      "short_hash": "7df25f6a",
+      "key_entities": [
+        "microsoft",
+        "nscale",
+        "data centre",
+        "loughton",
+        "nvidia"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "Amazon launches TorchNeuron to run PyTorch on its Trainium chips, taking aim at Nvidia",
+      "summary": "Amazon's Annapurna Labs unveiled TorchNeuron, a tool that lets existing PyTorch code run on AWS Trainium chips with a one-line configuration change, timed to the PyTorch Conference. Amazon said it is also working with the PyTorch community to make the framework less tied to any single chipmaker.",
+      "url": "https://techcrunch.com/2026/10/19/amazon-is-taking-its-biggest-shot-at-nvidia-yet-with-new-torchneuron-dev-tool/",
+      "outlet": "TechCrunch",
+      "publish_date": "Oct 19",
+      "short_hash": "cfa3d7a9",
+      "key_entities": [
+        "amazon",
+        "torchneuron",
+        "trainium",
+        "pytorch",
+        "nvidia"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "Schwab and JPMorgan block outside AI agents from moving customer money",
+      "summary": "Charles Schwab chief executive Rick Wurster said the firm blocks unauthorised AI agents, including Meta's Muse, from reaching client money while allowing read-only data access. JPMorgan's Jamie Dimon said the bank will not let outside AI agents operate on customer accounts, permitting read-only connections only.",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-16/us-banks-block-ai-agents-attempting-to-move-money-for-customers",
+      "outlet": "Bloomberg",
+      "publish_date": "Oct 16",
+      "short_hash": "d6f00ecb",
+      "key_entities": [
+        "schwab",
+        "jpmorgan",
+        "ai agents",
+        "rick wurster",
+        "jamie dimon"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "China's third-quarter GDP growth quickens to 4.5%, topping forecasts",
+      "summary": "China's economy grew 4.5% year-on-year in the third quarter, up from 4.3% in the second and above the 4.4% consensus, taking nine-month growth to 4.6% and within Beijing's target. September industrial output rose 5.5% while retail sales grew just 1.1%, underscoring reliance on tech exports.",
+      "url": "https://www.cnbc.com/2026/10/19/chinas-economic-growth-quickens-to-4point6percent-as-exports-surge-stimulus-rolls-out.html",
+      "outlet": "CNBC",
+      "publish_date": "Oct 19",
+      "short_hash": "c279250e",
+      "key_entities": [
+        "china",
+        "gdp",
+        "third quarter",
+        "industrial output",
+        "retail sales"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Wall Street rebounds as chip stocks snap an eight-day losing streak",
+      "summary": "US stocks bounced on Monday after the previous week's AI-driven selloff, with the Nasdaq Composite closing up about 1.1% at 26,430.89 and the S&P 500 up 0.4% at 7,690.73. The Philadelphia Semiconductor Index rose about 2.5%, snapping an eight-day losing streak, as Nvidia and AMD advanced.",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-19/us-futures-climb-with-semiconductor-stocks-rebounding-after-rout",
+      "outlet": "Bloomberg",
+      "publish_date": "Oct 19",
+      "short_hash": "3b82b43f",
+      "key_entities": [
+        "wall street",
+        "nasdaq",
+        "s&p 500",
+        "semiconductors",
+        "rebound"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Silgan agrees to buy Trivium Packaging in a US$3.4bn deal",
+      "summary": "Silgan Holdings, together with American Industrial Partners, agreed to buy Trivium Packaging at about US$3.4 billion enterprise value and combine it with Silgan's metal-container and closures units into a roughly US$7.3 billion partnership, keeping a 60% stake and receiving about US$2.3 billion in cash. The deal targets US$225 million of synergies and is expected to close in mid-2027.",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-19/silgan-nears-3-4-billion-purchase-of-trivium-packaging",
+      "outlet": "Bloomberg",
+      "publish_date": "Oct 19",
+      "short_hash": "6bbb448f",
+      "key_entities": [
+        "silgan",
+        "trivium packaging",
+        "acquisition",
+        "american industrial partners"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Germany's Merck KGaA to buy Silence Therapeutics for about US$1.1bn",
+      "summary": "Merck KGaA agreed to acquire UK-based, Nasdaq-listed Silence Therapeutics for US$20.00 per American Depositary Share, a 130% premium to its Oct 16 close, in an all-cash deal with an enterprise value of about US$1.1 billion. The deal centres on divesiran, Silence's Phase 2 polycythaemia vera drug, and is expected to close in the first quarter of 2027.",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-19/merck-kgaa-to-buy-silence-therapeutics-for-1-1-billion",
+      "outlet": "Bloomberg",
+      "publish_date": "Oct 19",
+      "short_hash": "938dee57",
+      "key_entities": [
+        "merck kgaa",
+        "silence therapeutics",
+        "acquisition",
+        "divesiran"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "NYSE pushes toward near-round-the-clock trading with extended options hours",
+      "summary": "NYSE American began adding extended trading hours for 29 equity-options classes on Monday, with early (7:30am) and late (4:00pm) sessions that bar market orders. NYSE Arca and Nasdaq plan to launch overnight equity sessions around Dec 6, moving toward a 23/5 trading framework, subject to regulatory approval.",
+      "url": "https://www.cnbc.com/2026/10/19/nyse-extends-options-trading-hours.html",
+      "outlet": "CNBC",
+      "publish_date": "Oct 19",
+      "short_hash": "5912b03f",
+      "key_entities": [
+        "nyse",
+        "options trading",
+        "overnight trading",
+        "nasdaq"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🏏 Pakistan beat Sri Lanka by 37 runs in their ODI tri-series opener",
+      "summary": "Captain Salman Agha struck 107 off 90 balls, his fourth ODI hundred, to lift Pakistan to 305 in Rawalpindi, and Sri Lanka were bowled out for 268 in 48.1 overs despite a 119-run stand between Pavan Rathnayake and Janith Liyanage. Agha was named Player of the Match.",
+      "url": "https://www.espncricinfo.com/series/pakistan-odi-tri-series-2026-27-1550706/pakistan-vs-sri-lanka-1st-match-1550713/match-report",
+      "outlet": "ESPNcricinfo",
+      "publish_date": "Oct 18",
+      "short_hash": "bf36bdc4",
+      "key_entities": [
+        "cricket",
+        "pakistan",
+        "sri lanka",
+        "salman agha",
+        "tri-series"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🏏 Zimbabwe rout Bangladesh by 99 runs in the UAE tri-series opener",
+      "summary": "Craig Ervine (93) and Brendan Taylor (81) added 150 for the fourth wicket to rescue Zimbabwe from 24 for 3 to 271 for 8 in Abu Dhabi, before Bangladesh, without the injured Litton Das, were dismissed for 172 in 33.4 overs. Ervine was named Player of the Match.",
+      "url": "https://www.espncricinfo.com/series/uae-odi-tri-series-2026-27-1555109/bangladesh-vs-zimbabwe-1st-match-1555117/match-report",
+      "outlet": "ESPNcricinfo",
+      "publish_date": "Oct 17",
+      "short_hash": "9eeda498",
+      "key_entities": [
+        "cricket",
+        "zimbabwe",
+        "bangladesh",
+        "craig ervine",
+        "tri-series"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🏎️ Formula 1 heads to Austin with Antonelli on the brink of the title",
+      "summary": "Formula 1 returns from a four-week break for the United States Grand Prix at Austin's Circuit of the Americas on Oct 23-25, where runaway championship leader Kimi Antonelli can clinch a maiden title with the right result. Max Verstappen, winner of the Singapore Grand Prix, has surged back into contention, and Mercedes boss Toto Wolff has warned of a tougher fight ahead.",
+      "url": "https://www.skysports.com/f1/news/13600888/f1-toto-wolff-says-max-verstappen-red-bull-resurgence-adds-to-expectation-of-full-on-fight-into-2027-season",
+      "outlet": "Sky Sports F1",
+      "publish_date": "Oct 19",
+      "short_hash": "cb697c1a",
+      "key_entities": [
+        "formula 1",
+        "kimi antonelli",
+        "us grand prix",
+        "austin",
+        "max verstappen"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🏎️ Verstappen finishes ninth on his GT World Challenge debut at Portimao",
+      "summary": "Between Formula 1 triple-headers, Max Verstappen made his GT World Challenge Europe debut in a three-hour endurance race at Portimao, charging from as low as 24th to finish ninth after a drive-through penalty ended his podium hopes. He stood in for two regular drivers who had a clashing commitment.",
+      "url": "https://www.espn.com/f1/story/_/id/50203944/max-verstappen-clinches-top-10-finish-first-gt-world-challenge",
+      "outlet": "ESPN",
+      "publish_date": "Oct 18",
+      "short_hash": "01db4486",
+      "key_entities": [
+        "formula 1",
+        "max verstappen",
+        "gt world challenge",
+        "portimao"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "Microdosing LSD sharpened attention in women but not men, researchers report",
+      "summary": "In a re-analysis of a placebo-controlled trial of 48 volunteers, women who took four 15-microgram doses of LSD over two weeks responded faster on an attention task and had fewer lapses than those on placebo, while men showed no comparable gain. Presented at a European congress, the work is preliminary and not yet peer-reviewed.",
+      "url": "https://www.nature.com/articles/d41586-026-03265-y",
+      "outlet": "Nature",
+      "publish_date": "Oct 19",
+      "short_hash": "3d01f027",
+      "key_entities": [
+        "lsd",
+        "microdosing",
+        "attention",
+        "clinical trial"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "Japan launches the first mission to return a sample from Mars's moon Phobos",
+      "summary": "JAXA's Martian Moons eXploration (MMX) probe lifted off on an H3 rocket from Tanegashima, becoming the first mission aimed at collecting material from Phobos and returning it to Earth. Carrying instruments from NASA and ESA, MMX is designed to land briefly on Phobos and help settle whether Mars's moons are captured asteroids or impact debris.",
+      "url": "https://www.scientificamerican.com/article/japans-mission-to-collect-rocks-from-mars-moon-phobos-achieves-liftoff/",
+      "outlet": "Scientific American",
+      "publish_date": "Oct 19",
+      "short_hash": "ce133dea",
+      "key_entities": [
+        "jaxa",
+        "mmx",
+        "phobos",
+        "mars",
+        "sample return"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "Plant roots actively grow away from rotting vegetation, a study finds",
+      "summary": "Researchers report that roots of Arabidopsis, tomato and wheat bend away from decaying plant matter by sensing the acidic pH it produces, a response the team named 'saprotropism.' The finding, published in Science, emerged after a laboratory plate was accidentally contaminated by airborne microbes.",
+      "url": "https://www.scientificamerican.com/article/plants-move-to-get-away-from-their-decaying-brethren/",
+      "outlet": "Scientific American",
+      "publish_date": "Oct 17",
+      "short_hash": "63401607",
+      "key_entities": [
+        "plants",
+        "roots",
+        "saprotropism",
+        "science journal"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "Gene therapy with light-sensing proteins partly restores sight in a blindness trial",
+      "summary": "In an early-stage trial reported last week, 10 people with advanced retinitis pigmentosa received an injection of a light-sensing gene together with camera goggles; seven improved in light sensitivity and some could locate a doorway, though vision was not normalised. Researchers called the results promising but preliminary.",
+      "url": "https://www.nature.com/articles/d41591-026-00051-1",
+      "outlet": "Nature",
+      "publish_date": "Oct 15",
+      "short_hash": "5176a2aa",
+      "key_entities": [
+        "optogenetics",
+        "retinitis pigmentosa",
+        "gene therapy",
+        "vision"
+      ],
+      "is_update": false
+    }
+  ],
+  "fun_fact": {
+    "headline": "Wombats are the only animals that produce cube-shaped droppings",
+    "body": "Wombats are the only known animals that produce cube-shaped droppings, leaving dozens of the flat-sided pellets each night. Researchers found that the final stretch of a wombat&rsquo;s intestine has regions of differing stiffness that mould the soft mass into corners and flat faces; the animals then stack the cubes to mark territory. The discovery won an Ig Nobel Prize in Physics in 2019.",
+    "source": "Encyclopaedic / peer-reviewed (Soft Matter 2021; 2019 Ig Nobel)",
+    "fun_fact_id": "funfact-bc1344c0",
+    "topic": "biology",
+    "topic_key": "wombat"
+  },
+  "puzzle": {
+    "type": "lateral",
+    "title": "The Lift That Stops Early",
+    "title_key": "lift-that-stops-early",
+    "body": "Every morning a woman rides the lift from her 10th-floor flat down to the ground and goes to work.\nEvery evening she comes home, rides the lift only to the 7th floor, and walks up the last three flights, except when it is raining, when she rides all the way to the 10th.\nThe lift works perfectly and she is not exercising. Why does she stop at the 7th floor on dry days?",
+    "approach": "Ask what physically changes on a rainy day, and what the woman can and cannot reach.",
+    "answer": "The woman is very short. She can reach the lift&rsquo;s lower buttons but not the button for the 10th floor &mdash; the highest she can reach is the 7th &mdash; so on an ordinary day she rides to the 7th and climbs the last three flights.\nOn rainy days she carries an umbrella, and uses its tip to press the out-of-reach 10th-floor button.",
+    "puzzle_hash": "bfc31fc9"
+  },
+  "word_puzzle": {
+    "type": "ladder",
+    "title": "Daily Bread",
+    "title_key": "daily-bread",
+    "body": "Turn FLOUR into BREAD, changing exactly one letter at each step. Every rung must be a valid five-letter English word, and there are five words in between.\n\nFLOUR\n_ _ _ _ _\n_ _ _ _ _\n_ _ _ _ _\n_ _ _ _ _\n_ _ _ _ _\nBREAD\n\nSix steps in total.",
+    "approach": "Change one letter at a time; every rung must be a real five-letter word. Six steps in all.",
+    "answer": "FLOUR → FLOOR → FLOOD → BLOOD → BROOD → BROAD → BREAD\n\nFLOUR→FLOOR (U→O)\nFLOOR→FLOOD (R→D)\nFLOOD→BLOOD (F→B)\nBLOOD→BROOD (L→R)\nBROOD→BROAD (O→A)\nBROAD→BREAD (O→E)\n\nThis is Lewis Carroll&rsquo;s original &lsquo;doublets&rsquo; puzzle.",
+    "word_puzzle_hash": "171ed235"
+  },
+  "notes": [
+    "Environment limitation: WebFetch/direct fetch to news domains was blocked this run; article facts were cross-verified across two allowed sources via live web search, but URLs could not be confirmed by live fetch.",
+    "UK News ran on the fallback source tier (Bloomberg, CNBC, CNN, Al Jazeera) because BBC, Sky News and The Guardian were all unreachable; fresh non-Budget UK-domestic stories were thin, and two UK items (bank surcharge Oct 16, Broadhurst Oct 14) sit just outside the 72h window.",
+    "Singapore had limited fresh non-haze hard news; the haze item is carried as an Update leading with the new ASEAN Level 3 alert and first-since-2015 health subsidies.",
+    "Dropped at verification: a Wuhan Open tennis result (unconfirmable), an Alberta referendum outcome (no result yet at publish), a Serbia Pegasus item (not on any reachable allowed outlet), an Indian Express Gwalior temple-truck crash (no second allowed source), and SG National Wages Council / PM Wong Gulf-trip items (unverified)."
+  ]
+}

@@ -3818,3 +3818,37 @@ is empty until the first run.
 2026-10-19	The world is closer to a key conservation target than thought, a study finds	f9ccba4e	conservation,protected areas,30 by 2030,biodiversity
 2026-10-19	A blind test of methane-detecting satellites lends credibility to emissions data	dbd46277	methane,satellites,emissions,blind test,arizona
 2026-10-19	An unprecedented atlas maps mitochondria across the tree of life	984fd97e	mitochondria,parasites,evolution,atlas,proteins
+2026-10-20	Update: ASEAN raises its top haze alert as Singapore activates health subsidies for the first time since 2015	9972b2a4	singapore,asean,haze,psi,subsidies
+2026-10-20	Doctors must report three deadly infectious diseases to the authorities from Oct 31	203fce0a	singapore,communicable diseases agency,marburg,lassa,notifiable diseases
+2026-10-20	Company director, 67, jailed for bribing a defence-lab officer over a S$46 million project	8c52eb58	singapore,dso national laboratories,corruption,company director
+2026-10-20	Man, 73, jailed 13.5 years for years of sexual abuse of his young daughter	775b9ef6	singapore,court,sexual abuse,sentencing
+2026-10-20	Chief Justice Surya Kant opens India's highest-altitude High Court bench in Leh	a37981a4	india,surya kant,leh,ladakh,high court
+2026-10-20	YSRCP moves the Supreme Court alleging attacks on its candidates before Andhra civic polls	4072b2c3	india,ysrcp,tdp,andhra pradesh,supreme court
+2026-10-20	Three gunmen who fired at actor Tiger Shroff arrested in Rajasthan's Kota	edc35de6	india,tiger shroff,anil pandit,lawrence bishnoi,kota
+2026-10-20	Three Meitei men shot dead in Manipur, reviving fears of ethnic conflict	1b139968	india,manipur,meitei,kuki,imphal east
+2026-10-20	Home Ministry warns of deepfake videos of PM Modi and ministers pushing fake welfare schemes	e9bd81ed	india,home ministry,deepfake,narendra modi,cyber fraud
+2026-10-20	Big bond funds buy UK gilts, betting Chancellor Healey plays it safe in his first Budget	f73eed33	uk,john healey,gilts,budget,public debt
+2026-10-20	UK bank shares slide as Healey weighs a Budget surcharge hike on lenders	8a40d90a	uk,john healey,bank surcharge,budget,lenders
+2026-10-20	Daniel Dubois stops Fabio Wardley in the second round to retain his WBO heavyweight title	9b818f0f	uk,daniel dubois,fabio wardley,wbo heavyweight,o2 arena
+2026-10-20	Former army chef jailed for terrorism-related weapons offences, Al Jazeera reports	e3ba85f8	uk,mark broadhurst,sheffield crown court,terrorism,firearms
+2026-10-20	France imposes city curfews after a weekend of riots leaves more than 2,000 arrested	db355b6e	france,protests,curfew,macron,lecornu
+2026-10-20	Kenya confirms an eighth Ebola case as the DR Congo outbreak widens	651a1288	kenya,ebola,dr congo,outbreak,bundibugyo
+2026-10-20	Alberta votes in a non-binding independence referendum as polls point to staying in Canada	5f8b589d	canada,alberta,referendum,danielle smith,mark carney
+2026-10-20	Lula and Flavio Bolsonaro clash in Brazil's first run-off debate before the Oct 25 vote	6e7aa143	brazil,lula,flavio bolsonaro,runoff,debate
+2026-10-20	AI-chip start-up Tenstorrent raises US$1.5bn at a US$6.2bn valuation	6516edf1	tenstorrent,jim keller,series e,ai chips,valuation
+2026-10-20	Microsoft pulls out of Nscale's flagship UK data centre over power-grid delays	7df25f6a	microsoft,nscale,data centre,loughton,nvidia
+2026-10-20	Amazon launches TorchNeuron to run PyTorch on its Trainium chips, taking aim at Nvidia	cfa3d7a9	amazon,torchneuron,trainium,pytorch,nvidia
+2026-10-20	Schwab and JPMorgan block outside AI agents from moving customer money	d6f00ecb	schwab,jpmorgan,ai agents,rick wurster,jamie dimon
+2026-10-20	China's third-quarter GDP growth quickens to 4.5%, topping forecasts	c279250e	china,gdp,third quarter,industrial output,retail sales
+2026-10-20	Wall Street rebounds as chip stocks snap an eight-day losing streak	3b82b43f	wall street,nasdaq,s&p 500,semiconductors,rebound
+2026-10-20	Silgan agrees to buy Trivium Packaging in a US$3.4bn deal	6bbb448f	silgan,trivium packaging,acquisition,american industrial partners
+2026-10-20	Germany's Merck KGaA to buy Silence Therapeutics for about US$1.1bn	938dee57	merck kgaa,silence therapeutics,acquisition,divesiran
+2026-10-20	NYSE pushes toward near-round-the-clock trading with extended options hours	5912b03f	nyse,options trading,overnight trading,nasdaq
+2026-10-20	🏏 Pakistan beat Sri Lanka by 37 runs in their ODI tri-series opener	bf36bdc4	cricket,pakistan,sri lanka,salman agha,tri-series
+2026-10-20	🏏 Zimbabwe rout Bangladesh by 99 runs in the UAE tri-series opener	9eeda498	cricket,zimbabwe,bangladesh,craig ervine,tri-series
+2026-10-20	🏎️ Formula 1 heads to Austin with Antonelli on the brink of the title	cb697c1a	formula 1,kimi antonelli,us grand prix,austin,max verstappen
+2026-10-20	🏎️ Verstappen finishes ninth on his GT World Challenge debut at Portimao	01db4486	formula 1,max verstappen,gt world challenge,portimao
+2026-10-20	Microdosing LSD sharpened attention in women but not men, researchers report	3d01f027	lsd,microdosing,attention,clinical trial
+2026-10-20	Japan launches the first mission to return a sample from Mars's moon Phobos	ce133dea	jaxa,mmx,phobos,mars,sample return
+2026-10-20	Plant roots actively grow away from rotting vegetation, a study finds	63401607	plants,roots,saprotropism,science journal
+2026-10-20	Gene therapy with light-sensing proteins partly restores sight in a blindness trial	5176a2aa	optogenetics,retinitis pigmentosa,gene therapy,vision

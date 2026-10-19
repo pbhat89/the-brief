@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-08-20",
-      "topic_key": "eiffel tower",
-      "text": "The Eiffel Tower grows about 15 cm taller in summer"
-    },
-    {
       "date": "2026-08-22",
       "topic_key": "anglo-zanzibar war",
       "text": "The shortest war in history, the Anglo-Zanzibar War of 1896, lasted about 38 minutes."
@@ -264,14 +259,14 @@
       "date": "2026-10-19",
       "topic_key": "pineapple",
       "text": "Fresh pineapple contains bromelain, a protein-digesting enzyme, so eating a lot can make your mouth feel raw; heat destroys it, so tinned pineapple does not bite back."
+    },
+    {
+      "date": "2026-10-20",
+      "topic_key": "wombat",
+      "text": "Wombats are the only animals that produce cube-shaped droppings"
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-09-19",
-      "type": "visual",
-      "title_key": "punch-lines"
-    },
     {
       "date": "2026-09-20",
       "type": "logic",
@@ -421,14 +416,14 @@
       "date": "2026-10-19",
       "type": "quantitative",
       "title_key": "hands-together"
+    },
+    {
+      "date": "2026-10-20",
+      "type": "lateral",
+      "title_key": "lift-that-stops-early"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-09-19",
-      "type": "grouping",
-      "title_key": "board-meeting"
-    },
     {
       "date": "2026-09-20",
       "type": "ladder",
@@ -578,6 +573,11 @@
       "date": "2026-10-19",
       "type": "grouping",
       "title_key": "snake-in-the-grass"
+    },
+    {
+      "date": "2026-10-20",
+      "type": "ladder",
+      "title_key": "daily-bread"
     }
   ]
 }
