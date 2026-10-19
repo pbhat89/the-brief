@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "timezone": "Asia/Singapore",
+  "daily_limit": 1,
+  "updated_at": "2026-10-19T00:21:00Z",
+  "catchup": {
+    "initialized_at": "2026-10-19T00:21:00Z",
+    "limit": 3,
+    "order": "newest-first",
+    "seed_episode_ids": [
+      "big-technology:b95d2b3c-c8f7-11f1-b194-17950957eda4",
+      "big-technology:c0727dae-c7e0-11f1-acdb-33421e150eaa",
+      "big-technology:797a2b74-c400-11f1-baca-c7e0f44bb120"
+    ]
+  },
+  "episodes": [
+    {
+      "episode_id": "big-technology:b95d2b3c-c8f7-11f1-b194-17950957eda4",
+      "show": "big-technology",
+      "title": "Anthropic IPO Panic, A Spy At OpenAI?, The Great Food Slop Debate",
+      "published_at": "2026-10-16T16:00:00Z",
+      "source_url": "https://podcasts.apple.com/us/podcast/big-technology-podcast/id1522960417?i=1000796690149",
+      "aliases": [
+        "rss:b95d2b3c-c8f7-11f1-b194-17950957eda4",
+        "apple:1000796690149",
+        "https://podscripts.co/podcasts/big-technology-podcast/anthropic-ipo-panic-a-spy-at-openai-the-great-food-slop-debate"
+      ],
+      "classification": {
+        "original": true,
+        "substantive": true,
+        "replay": false,
+        "promotional": false,
+        "beginner_series": false
+      },
+      "transcript": {
+        "status": "retrieved",
+        "body_retrieved": true,
+        "source_url": "https://podscripts.co/podcasts/big-technology-podcast/anthropic-ipo-panic-a-spy-at-openai-the-great-food-slop-debate",
+        "provenance": "third-party-transcription",
+        "checked_at": "2026-10-19T00:21:00Z",
+        "access_note": "Public Podscripts transcription body spans intro to sign-off. Not publisher-approved. Recheck access each selected SGT day."
+      },
+      "dedup_review": {
+        "status": "pending",
+        "story_keys": [],
+        "contribution": null,
+        "reviewed_at": null
+      },
+      "status": "pending",
+      "status_reason": null,
+      "publication_id": null
+    },
+    {
+      "episode_id": "big-technology:c0727dae-c7e0-11f1-acdb-33421e150eaa",
+      "show": "big-technology",
+      "title": "The Bumpy Road To AGI — With Kevin Roose",
+      "published_at": "2026-10-15T02:00:00Z",
+      "source_url": "https://podcasts.apple.com/us/podcast/big-technology-podcast/id1522960417?i=1000796329967",
+      "aliases": [
+        "rss:c0727dae-c7e0-11f1-acdb-33421e150eaa",
+        "apple:1000796329967",
+        "https://podscripts.co/podcasts/big-technology-podcast/the-bumpy-road-to-agi-with-kevin-roose",
+        "youtube:TmMYvtp4abI",
+        "https://www.youtube.com/watch?v=TmMYvtp4abI",
+        "https://podscripts.co/podcasts/big-technology-podcast/ai-leaders-cant-get-along-so-how-will-they-keep-us-safe-with-kevin-roose"
+      ],
+      "classification": {
+        "original": true,
+        "substantive": true,
+        "replay": false,
+        "promotional": false,
+        "beginner_series": false
+      },
+      "transcript": {
+        "status": "retrieved",
+        "body_retrieved": true,
+        "source_url": "https://podscripts.co/podcasts/big-technology-podcast/the-bumpy-road-to-agi-with-kevin-roose",
+        "provenance": "third-party-transcription",
+        "checked_at": "2026-10-19T00:21:00Z",
+        "access_note": "Public Podscripts transcription body spans intro to sign-off. Not publisher-approved. Recheck access each selected SGT day."
+      },
+      "dedup_review": {
+        "status": "pending",
+        "story_keys": [],
+        "contribution": null,
+        "reviewed_at": null
+      },
+      "status": "pending",
+      "status_reason": null,
+      "publication_id": null
+    },
+    {
+      "episode_id": "big-technology:797a2b74-c400-11f1-baca-c7e0f44bb120",
+      "show": "big-technology",
+      "title": "Meta & Microsoft's Claude Slowdown,  His Agent Leaked His Banking Info, Don’t Bully Your AI",
+      "published_at": "2026-10-09T16:51:00Z",
+      "source_url": "https://podcasts.apple.com/us/podcast/big-technology-podcast/id1522960417?i=1000794229364",
+      "aliases": [
+        "rss:797a2b74-c400-11f1-baca-c7e0f44bb120",
+        "apple:1000794229364",
+        "https://podscripts.co/podcasts/big-technology-podcast/meta-microsofts-claude-slowdown-his-agent-leaked-his-banking-info-dont-bully-your-ai",
+        "youtube:x_Y-Ivc3HnU",
+        "https://www.youtube.com/watch?v=x_Y-Ivc3HnU"
+      ],
+      "classification": {
+        "original": true,
+        "substantive": true,
+        "replay": false,
+        "promotional": false,
+        "beginner_series": false
+      },
+      "transcript": {
+        "status": "retrieved",
+        "body_retrieved": true,
+        "source_url": "https://podscripts.co/podcasts/big-technology-podcast/meta-microsofts-claude-slowdown-his-agent-leaked-his-banking-info-dont-bully-your-ai",
+        "provenance": "third-party-transcription",
+        "checked_at": "2026-10-19T00:21:00Z",
+        "access_note": "Public Podscripts transcription body spans intro to sign-off. Not publisher-approved. Recheck access each selected SGT day."
+      },
+      "dedup_review": {
+        "status": "pending",
+        "story_keys": [],
+        "contribution": null,
+        "reviewed_at": null
+      },
+      "status": "pending",
+      "status_reason": null,
+      "publication_id": null
+    }
+  ],
+  "publications": []
+}

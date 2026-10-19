@@ -1,0 +1,140 @@
+{
+  "verifiedAt": "2026-10-19T00:21:00Z",
+  "asOf": "2026-10-19",
+  "show": "Big Technology Podcast",
+  "publisher": "Alex Kantrowitz",
+  "officialWebsite": "https://www.bigtechnology.com/",
+  "rssFeed": "https://feeds.megaphone.fm/LI3617121267",
+  "rssVerification": {
+    "retrievedSuccessfully": true,
+    "showTitle": "Big Technology Podcast",
+    "publisherWebsite": "https://www.bigtechnology.com/",
+    "transcriptTagCount": 0,
+    "sha256": "9ecee3a0fe0a502d36e4931df21e001d16b69553e5b664ec88268d5b45040c6b",
+    "notes": "Publisher Megaphone channel links this feed. Live XML, not index crawl date, determines episode order and UTC publication times."
+  },
+  "officialYouTubeChannel": {
+    "url": "https://www.youtube.com/@Alex.kantrowitz",
+    "channelId": "UCye1YedIypHffYb8k6Gp9wg",
+    "evidence": "Channel page metadata names Alex Kantrowitz and identifies him as Big Technology Podcast host; matching interview video metadata identifies same channel."
+  },
+  "otherSources": {
+    "appleShow": "https://podcasts.apple.com/us/podcast/big-technology-podcast/id1522960417",
+    "publisherMegaphone": "https://cms.megaphone.fm/channel/LI3617121267",
+    "historicalTranscriptArchive": "https://bigtechnologypodcast.substack.com/archive",
+    "historicalTranscriptArchiveStatus": "Visible archive stops March 2023; not evidence of current transcript access."
+  },
+  "initialCatchupLimit": 3,
+  "initialCatchupOrder": "newest first within this fixed seed; recommendation, not an inferred explicit user preference",
+  "episodes": [
+    {
+      "episodeId": "big-technology:b95d2b3c-c8f7-11f1-b194-17950957eda4",
+      "rssGuid": "b95d2b3c-c8f7-11f1-b194-17950957eda4",
+      "title": "Anthropic IPO Panic, A Spy At OpenAI?, The Great Food Slop Debate",
+      "publishedAt": "2026-10-16T16:00:00Z",
+      "publishedAtEvidence": "RSS pubDate, independently matched against Apple episode page",
+      "rssEpisodeType": "full",
+      "rssDurationSeconds": 3525,
+      "canonicalUrl": "https://podcasts.apple.com/us/podcast/big-technology-podcast/id1522960417?i=1000796690149",
+      "appleEpisodeId": "1000796690149",
+      "enclosureUrl": "https://pdst.fm/e/tracking.swap.fm/track/t7yC0rGPUqahTF4et8YD/pscrb.fm/rss/p/traffic.megaphone.fm/AMPP9209422034.mp3",
+      "seedPriority": 1,
+      "status": "pending",
+      "covered": false,
+      "transcript": {
+        "url": "https://podscripts.co/podcasts/big-technology-podcast/anthropic-ipo-panic-a-spy-at-openai-the-great-food-slop-debate",
+        "provenance": "third-party public transcription, not publisher-approved",
+        "httpStatus": 200,
+        "status": "retrieved_body_spans_intro_to_signoff",
+        "timestampedSegmentCount": 109,
+        "firstTimestamp": "00:00:00",
+        "lastTimestamp": "00:58:48",
+        "sourceTitleAndEpisodeDateMatch": true,
+        "notes": "Runtime differs across copies; use transcript timestamps only with that transcript/audio copy. No summary has been generated or published."
+      },
+      "youtube": null
+    },
+    {
+      "episodeId": "big-technology:c0727dae-c7e0-11f1-acdb-33421e150eaa",
+      "rssGuid": "c0727dae-c7e0-11f1-acdb-33421e150eaa",
+      "title": "The Bumpy Road To AGI — With Kevin Roose",
+      "publishedAt": "2026-10-15T02:00:00Z",
+      "publishedAtEvidence": "RSS pubDate, independently matched against Apple episode page",
+      "rssEpisodeType": "full",
+      "rssDurationSeconds": 3861,
+      "canonicalUrl": "https://podcasts.apple.com/us/podcast/big-technology-podcast/id1522960417?i=1000796329967",
+      "appleEpisodeId": "1000796329967",
+      "enclosureUrl": "https://pdst.fm/e/tracking.swap.fm/track/t7yC0rGPUqahTF4et8YD/pscrb.fm/rss/p/traffic.megaphone.fm/AMPP4233666696.mp3",
+      "seedPriority": 2,
+      "status": "pending",
+      "covered": false,
+      "transcript": {
+        "url": "https://podscripts.co/podcasts/big-technology-podcast/the-bumpy-road-to-agi-with-kevin-roose",
+        "provenance": "third-party public transcription, not publisher-approved",
+        "httpStatus": 200,
+        "status": "retrieved_body_spans_intro_to_signoff",
+        "timestampedSegmentCount": 137,
+        "firstTimestamp": "00:00:00",
+        "lastTimestamp": "01:03:32",
+        "sourceTitleAndEpisodeDateMatch": true,
+        "notes": "Runtime differs across copies; use transcript timestamps only with that transcript/audio copy. No summary has been generated or published."
+      },
+      "youtube": {
+        "url": "https://www.youtube.com/watch?v=TmMYvtp4abI",
+        "videoId": "TmMYvtp4abI",
+        "title": "AI Leaders Can't Get Along. So How Will They Keep Us Safe? — With Kevin Roose",
+        "publishedAt": "2026-10-15T09:30:07-07:00",
+        "channelId": "UCye1YedIypHffYb8k6Gp9wg",
+        "englishCaptionMetadataPresent": true,
+        "englishCaptionBodyRetrieved": false,
+        "captionFetchResult": "HTTP 200 with empty body; do not treat metadata as transcript access."
+      },
+      "aliases": [
+        {
+          "title": "AI Leaders Can't Get Along. So How Will They Keep Us Safe? — With Kevin Roose",
+          "transcriptUrl": "https://podscripts.co/podcasts/big-technology-podcast/ai-leaders-cant-get-along-so-how-will-they-keep-us-safe-with-kevin-roose",
+          "listedDate": "2026-10-14",
+          "disposition": "same conversation; do not enqueue independently",
+          "evidence": "Same guest, matching substantive introduction and final Nasdaq sign-off, same interview topics; publisher feed only contains canonical Oct 15 episode. YouTube uses alternate title but upload metadata is Oct 15."
+        }
+      ]
+    },
+    {
+      "episodeId": "big-technology:797a2b74-c400-11f1-baca-c7e0f44bb120",
+      "rssGuid": "797a2b74-c400-11f1-baca-c7e0f44bb120",
+      "title": "Meta & Microsoft's Claude Slowdown,  His Agent Leaked His Banking Info, Don’t Bully Your AI",
+      "publishedAt": "2026-10-09T16:51:00Z",
+      "publishedAtEvidence": "RSS pubDate, independently matched against Apple episode page",
+      "rssEpisodeType": "full",
+      "rssDurationSeconds": 3279,
+      "canonicalUrl": "https://podcasts.apple.com/us/podcast/big-technology-podcast/id1522960417?i=1000794229364",
+      "appleEpisodeId": "1000794229364",
+      "enclosureUrl": "https://pdst.fm/e/tracking.swap.fm/track/t7yC0rGPUqahTF4et8YD/pscrb.fm/rss/p/traffic.megaphone.fm/AMPP5617885384.mp3",
+      "seedPriority": 3,
+      "status": "pending",
+      "covered": false,
+      "transcript": {
+        "url": "https://podscripts.co/podcasts/big-technology-podcast/meta-microsofts-claude-slowdown-his-agent-leaked-his-banking-info-dont-bully-your-ai",
+        "provenance": "third-party public transcription, not publisher-approved",
+        "httpStatus": 200,
+        "status": "retrieved_body_spans_intro_to_signoff",
+        "timestampedSegmentCount": 103,
+        "firstTimestamp": "00:00:00",
+        "lastTimestamp": "00:56:04",
+        "sourceTitleAndEpisodeDateMatch": true,
+        "notes": "Runtime differs across copies; use transcript timestamps only with that transcript/audio copy. No summary has been generated or published."
+      },
+      "youtube": {
+        "url": "https://www.youtube.com/watch?v=x_Y-Ivc3HnU",
+        "videoId": "x_Y-Ivc3HnU",
+        "title": "Anthropic's Top Customers Pull Back?, His Agent Leaked His Banking Info, Don’t Bully Your AI",
+        "publishedAt": "2026-10-12T09:30:10-07:00",
+        "channelId": "UCye1YedIypHffYb8k6Gp9wg",
+        "englishCaptionMetadataPresent": true,
+        "englishCaptionBodyRetrieved": false,
+        "captionFetchResult": "HTTP 200 with empty body; do not treat metadata as transcript access."
+      }
+    }
+  ],
+  "publicationState": "Discovery only. No candidates are marked covered. Before use, reconcile with existing brief history and story/episode ledgers."
+}

@@ -1,0 +1,32 @@
+{
+  "edition_date": "2026-10-20",
+  "source_revision": "REPLACE_WITH_ACTUAL_REPOSITORY_COMMIT",
+  "conditions_seconds": 25,
+  "expert_seconds": 60,
+  "ending_seconds": 17,
+  "routine_safety_announcement": false,
+  "regional_psi_recital": false,
+  "spoken_source_diagnostics": false,
+  "repeated_closing_summary": false,
+  "improvement_sentences": 0,
+  "singapore_stories": [
+    {
+      "event_id": "REPLACE_WITH_FIRST_VERIFIED_EVENT",
+      "weather": false,
+      "fresh_verified": true,
+      "source_url": "https://example.org/first-original"
+    },
+    {
+      "event_id": "REPLACE_WITH_SECOND_VERIFIED_EVENT",
+      "weather": false,
+      "fresh_verified": true,
+      "source_url": "https://example.org/second-original"
+    }
+  ],
+  "expert_concept_ids": [
+    "REPLACE_WITH_REVIEWED_UNUSED_CONCEPT_ID"
+  ],
+  "expert_semantic_history_reviewed": true,
+  "expert_source_url": "https://example.org/expert-original",
+  "podcast_recaps": []
+}

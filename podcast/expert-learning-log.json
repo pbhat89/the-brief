@@ -1,0 +1,323 @@
+{
+  "version": 1,
+  "updated_on": "2026-10-19",
+  "timezone": "Asia/Singapore",
+  "history": {
+    "complete": false,
+    "reviewed_reports": [
+      "2026-10-18-revised",
+      "2026-10-19"
+    ],
+    "gaps": [
+      "Earlier public archive and private podcast history have not been fully imported into this concept log.",
+      "Candidate status means researched, not proven unseen. Check all available history before selection."
+    ]
+  },
+  "entries": [
+    {
+      "concept_id": "inspect-real-input-data",
+      "aliases": [
+        "inspect examples before modeling",
+        "input data quality before architecture"
+      ],
+      "experts": [
+        "Andrej Karpathy"
+      ],
+      "theme": "technical_coding",
+      "title": "Inspect the data before changing the model",
+      "sources": [
+        {
+          "title": "A Recipe for Training Neural Networks",
+          "url": "https://karpathy.github.io/2019/04/25/recipe/",
+          "authors": [
+            "Andrej Karpathy"
+          ],
+          "original_date": "2019-04-25",
+          "original_date_basis": "Date displayed on original publisher page",
+          "checked_on": "2026-10-19",
+          "kind": "first_party",
+          "verification": "direct_primary",
+          "locator": "The recipe, section 1: Become one with the data"
+        }
+      ],
+      "classification": "evergreen",
+      "takeaway": "Karpathy recommends examining real examples, distributions and outliers before building a model; duplicate or corrupted inputs can explain failures.",
+      "editorial_application": "For an AI coding project, inspect representative inputs and failure cases before changing prompts or architecture. This is an editorial application.",
+      "caveat": "The source concerns neural-network training. Do not generalize its dated architecture or optimizer advice into current best practice.",
+      "status": "researched_candidate",
+      "dedup_review": "pending_full_history",
+      "last_used": null,
+      "last_narrated": null,
+      "uses": []
+    },
+    {
+      "concept_id": "tiny-case-pipeline-validation",
+      "aliases": [
+        "overfit one batch",
+        "validate smallest working pipeline"
+      ],
+      "experts": [
+        "Andrej Karpathy"
+      ],
+      "theme": "technical_coding",
+      "title": "Prove the smallest pipeline works",
+      "sources": [
+        {
+          "title": "A Recipe for Training Neural Networks",
+          "url": "https://karpathy.github.io/2019/04/25/recipe/",
+          "authors": [
+            "Andrej Karpathy"
+          ],
+          "original_date": "2019-04-25",
+          "original_date_basis": "Date displayed on original publisher page",
+          "checked_on": "2026-10-19",
+          "kind": "first_party",
+          "verification": "direct_primary",
+          "locator": "The recipe, section 2: overfit one batch and visualize just before the net"
+        }
+      ],
+      "classification": "evergreen",
+      "takeaway": "Karpathy suggests overfitting a tiny batch and inspecting the exact model inputs to expose pipeline bugs before scaling.",
+      "editorial_application": "Create a small, known-answer test case before expanding an AI workflow. A passing demo still needs separate generalization checks.",
+      "caveat": "A tiny training-set fit is a debugging check, not evidence of production quality. Keep this distinct from inspecting dataset quality.",
+      "status": "researched_candidate",
+      "dedup_review": "pending_full_history",
+      "last_used": null,
+      "last_narrated": null,
+      "uses": []
+    },
+    {
+      "concept_id": "build-ai-capability-through-pilots",
+      "aliases": [
+        "pilot team training strategy communication",
+        "AI adoption capability sequence"
+      ],
+      "experts": [
+        "Andrew Ng"
+      ],
+      "theme": "ai_transition",
+      "title": "Build capability through pilots and training",
+      "sources": [
+        {
+          "title": "Introducing the AI Transformation Playbook",
+          "url": "https://medium.com/@andrewng/introducing-the-ai-transformation-playbook-58ccad4393e9",
+          "authors": [
+            "Andrew Ng"
+          ],
+          "original_date": "2018-12-13",
+          "original_date_basis": "Date displayed on original publisher page",
+          "checked_on": "2026-10-19",
+          "kind": "first_party",
+          "verification": "direct_primary",
+          "locator": "Author introduction, five-step roadmap"
+        }
+      ],
+      "classification": "evergreen",
+      "takeaway": "Ng sequences AI transformation through pilot projects, an internal AI team, broad training, strategy, and communication, with sustained investment.",
+      "editorial_application": "Choose a bounded pilot, then identify the team skills and communication needed to turn it into repeatable capability. This is an editorial application.",
+      "caveat": "This is an evergreen 2018 roadmap, not a new announcement or a universal fixed implementation timetable.",
+      "status": "researched_candidate",
+      "dedup_review": "pending_full_history",
+      "last_used": null,
+      "last_narrated": null,
+      "uses": []
+    },
+    {
+      "concept_id": "self-supervision-from-data-structure",
+      "aliases": [
+        "hidden input prediction",
+        "learning supervisory signals from data"
+      ],
+      "experts": [
+        "Yann LeCun"
+      ],
+      "theme": "technical_coding",
+      "title": "Learn from the structure already in data",
+      "sources": [
+        {
+          "title": "Self-supervised learning: The dark matter of intelligence",
+          "url": "https://ai.meta.com/blog/self-supervised-learning-the-dark-matter-of-intelligence/",
+          "authors": [
+            "Yann LeCun",
+            "Ishan Misra"
+          ],
+          "original_date": "2021-03-04",
+          "original_date_basis": "Date displayed on original publisher page",
+          "checked_on": "2026-10-19",
+          "kind": "first_party",
+          "verification": "direct_primary",
+          "locator": "Self-supervised learning is predictive learning; author byline"
+        }
+      ],
+      "classification": "evergreen",
+      "takeaway": "LeCun and Misra describe self-supervision as learning to predict hidden aspects from observed data, reducing dependence on manually supplied labels.",
+      "editorial_application": "When planning an AI project, distinguish the broad representations learned in pretraining from evidence needed to validate the actual task.",
+      "caveat": "Coauthored research perspective from 2021. The authors present a promising research direction, not proof of human-level intelligence or label-free deployment.",
+      "status": "researched_candidate",
+      "dedup_review": "pending_full_history",
+      "last_used": null,
+      "last_narrated": null,
+      "uses": []
+    },
+    {
+      "concept_id": "specific-knowledge-through-curiosity",
+      "aliases": [
+        "domain judgment from experience",
+        "build on distinctive expertise"
+      ],
+      "experts": [
+        "Naval Ravikant"
+      ],
+      "theme": "ai_transition",
+      "title": "Build on distinctive domain knowledge",
+      "sources": [
+        {
+          "title": "Arm Yourself With Specific Knowledge",
+          "url": "https://nav.al/specific-knowledge",
+          "authors": [
+            "Naval Ravikant",
+            "Babak Nivi"
+          ],
+          "original_date": "2019-03-25",
+          "original_date_basis": "Date displayed on original publisher page",
+          "checked_on": "2026-10-19",
+          "kind": "first_party",
+          "verification": "direct_primary",
+          "locator": "Naval replies under specific knowledge and genuine curiosity"
+        }
+      ],
+      "classification": "evergreen",
+      "takeaway": "Naval connects distinctive expertise to curiosity, experience and judgment in a domain, rather than simply pursuing whichever skill is fashionable.",
+      "editorial_application": "Pair AI tooling with a domain you understand deeply; evaluate whether the tool improves a real problem there. This is an editorial application.",
+      "caveat": "Career philosophy, not a guaranteed earnings claim. The AI application is not a quotation or original claim from the 2019 discussion.",
+      "status": "researched_candidate",
+      "dedup_review": "pending_full_history",
+      "last_used": null,
+      "last_narrated": null,
+      "uses": []
+    },
+    {
+      "concept_id": "accountability-includes-visible-failure",
+      "aliases": [
+        "own outcomes and accept criticism",
+        "accountable ownership within current role"
+      ],
+      "experts": [
+        "Naval Ravikant"
+      ],
+      "theme": "management",
+      "title": "Own the result, including failure",
+      "sources": [
+        {
+          "title": "Accountability Means Letting People Criticize You",
+          "url": "https://nav.al/accountability",
+          "authors": [
+            "Naval Ravikant",
+            "Babak Nivi"
+          ],
+          "original_date": "2019-06-21",
+          "original_date_basis": "Date displayed on original publisher page",
+          "checked_on": "2026-10-19",
+          "kind": "first_party",
+          "verification": "direct_primary",
+          "locator": "Opening Q&A, first three Naval paragraphs"
+        }
+      ],
+      "classification": "evergreen",
+      "takeaway": "Naval frames accountability as accepting criticism and the possibility of failure; he says it can be practiced within an existing career.",
+      "editorial_application": "For a team experiment, state who owns the outcome and how mistakes will be reviewed. This is an editorial application.",
+      "caveat": "Personal business philosophy. Accountability should not be equated with blame, public humiliation or taking unapproved risks.",
+      "status": "researched_candidate",
+      "dedup_review": "pending_full_history",
+      "last_used": null,
+      "last_narrated": null,
+      "uses": []
+    },
+    {
+      "concept_id": "long-term-repeatable-work",
+      "aliases": [
+        "choose long term version of work",
+        "systems and habits over one impressive day"
+      ],
+      "experts": [
+        "Naval Ravikant"
+      ],
+      "theme": "management",
+      "title": "Choose the long-term version of the work",
+      "sources": [
+        {
+          "title": "Naval original post",
+          "url": "https://x.com/naval/status/2105231982309564765",
+          "authors": [
+            "Naval Ravikant"
+          ],
+          "original_date": "2026-09-30",
+          "original_date_basis": "Original date recorded in 2026-10-19.sources.json; not independently re-read in this seed pass",
+          "checked_on": "2026-10-19",
+          "kind": "first_party",
+          "verification": "archived_primary_evidence",
+          "locator": "Original post; source/date preserved in the 19 October source audit"
+        }
+      ],
+      "classification": "evergreen",
+      "takeaway": "Choose a long-term approach to the work.",
+      "editorial_application": "The 19 October briefing applied this to repeatable leadership habits and systems rather than a single impressive day.",
+      "caveat": "The leadership application is editorial interpretation. Public source evidence labels the item optional; separate operator confirmation establishes that it was narrated.",
+      "status": "narrated",
+      "dedup_review": "covered",
+      "last_used": "2026-10-19",
+      "last_narrated": "2026-10-19",
+      "uses": [
+        {
+          "date": "2026-10-19",
+          "channel": "podcast",
+          "public_evidence_url": "https://github.com/pbhat89/the-brief/blob/main/podcast/reports/2026-10-19.sources.json",
+          "confirmation": "Narration confirmed by the operator; linked public audit supports source provenance, not private delivery details."
+        }
+      ]
+    },
+    {
+      "concept_id": "verifiable-tasks-versus-human-judgment",
+      "aliases": [
+        "automatic checks do not replace judgment",
+        "checkable tasks versus strategic judgment"
+      ],
+      "experts": [
+        "Andrew Ng"
+      ],
+      "theme": "management",
+      "title": "Separate automatic checks from human judgment",
+      "sources": [
+        {
+          "title": "Formal Verification Meets Unverifiable Judgement",
+          "url": "https://www.deeplearning.ai/the-batch/formal-verification-meets-unverifiable-judgement",
+          "authors": [
+            "Andrew Ng"
+          ],
+          "original_date": "2026-10-16",
+          "original_date_basis": "Original date recorded in the 18 October revised public report; original page fetch returned 403 in this seed pass",
+          "checked_on": "2026-10-19",
+          "kind": "first_party",
+          "verification": "archived_primary_evidence",
+          "locator": "Referenced and summarized in 18 October revised report, thinker perspectives section"
+        }
+      ],
+      "classification": "recent_context",
+      "takeaway": "The archived briefing attributes to Ng a distinction between automatically checkable tasks and work requiring human judgment.",
+      "editorial_application": "The 18 October report applied the distinction to deciding which parts of an AI trial can be checked automatically.",
+      "caveat": "Already covered publicly. Podcast narration is unconfirmed; do not relabel the concept unused. Re-read the primary letter before any new detailed quotation.",
+      "status": "covered_in_report",
+      "dedup_review": "covered",
+      "last_used": "2026-10-18",
+      "last_narrated": null,
+      "uses": [
+        {
+          "date": "2026-10-18",
+          "channel": "report",
+          "public_evidence_url": "https://github.com/pbhat89/the-brief/blob/main/podcast/reports/2026-10-18-revised.sources.json",
+          "confirmation": "Public report and source audit contain this concept; podcast narration not independently confirmed."
+        }
+      ]
+    }
+  ]
+}

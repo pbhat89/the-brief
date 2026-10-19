@@ -8,7 +8,7 @@ With audio expiry approved, new audio bytes receive native KV expiration at uplo
 
 ## CI and optional deployment
 
-`brief-ci.yml` checks every PR and main push, including prompt, config and feedback edits. It runs locked dependency installation, report/dedup tests and manifests, operational document/config/privacy guards, Worker/security/UI/retention tests, a dry-run build, and a high-severity dependency audit. These are bounded automated checks, not a guarantee of factual reporting, privacy or mobile compatibility. There are no uploaded logs or build artifacts. Existing watchdog and Pages publishing remain unchanged.
+`brief-ci.yml` checks every PR and main push, including prompt, config and feedback edits. It runs locked dependency installation, report/dedup tests and manifests, editorial policy/private-audit and learning-ledger checks, operational document/config/privacy guards, Worker/security/UI/retention tests, a dry-run build, and a high-severity dependency audit. These are bounded automated checks, not a guarantee of factual reporting, privacy or mobile compatibility. There are no uploaded logs or build artifacts. Existing watchdog and Pages publishing remain unchanged.
 
 The deployment job runs only after successful regression on a main push, and only when repository variable `ENABLE_CF_DEPLOY` is `true`. This variable is now enabled following owner approval and configuration. A full rerun of the merged-main push verified both regression and deployment success: [run 39104235244, attempt 2](https://github.com/pbhat89/the-brief/actions/runs/39104235244). PR/fork jobs receive no deployment secret. Deployment checks out the exact tested SHA with persisted Git credentials disabled. The `cloudflare-production` environment permits only main and no tags, with administrator bypass disabled. Required reviewers and the wait timer are disabled under the owner’s explicit approval for automatic deployment after green checks. Adding a required reviewer would pause every deployment; one-time credential setup would not remove that gate. Check any organization/repository policy before future changes.
 
@@ -37,3 +37,4 @@ The API has no separate GET receipt endpoint. An exact completed POST replay is 
 Keep the Site owner-only and its destination fixed. Runtime secret or activation changes require deploying a saved Site version before they apply. Code deployment and audio publication remain separate operations; no second scheduler or paid service is introduced.
 
 Permission references: [individual Worker roles and existing bindings](https://developers.cloudflare.com/workers/authorization/workers/) and [GitHub environment gates](https://docs.github.com/en/actions/how-tos/deploy/configure-and-manage-deployments/manage-environments).
+

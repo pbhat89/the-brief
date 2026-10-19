@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "timezone": "Asia/Singapore",
+  "daily_limit": 1,
+  "updated_at": "2026-10-19T00:21:00Z",
+  "catchup": {
+    "initialized_at": "2026-10-19T00:21:00Z",
+    "limit": 3,
+    "order": "newest-first",
+    "seed_episode_ids": [
+      "big-technology:fixture-1",
+      "big-technology:fixture-2",
+      "big-technology:fixture-3"
+    ]
+  },
+  "episodes": [
+    {
+      "episode_id": "big-technology:fixture-1",
+      "show": "big-technology",
+      "title": "Synthetic substantive episode 1",
+      "published_at": "2026-10-16T16:00:00Z",
+      "source_url": "https://example.org/episodes/fixture-1",
+      "aliases": [
+        "rss:fixture-1",
+        "apple:fixture-1"
+      ],
+      "classification": {
+        "original": true,
+        "substantive": true,
+        "replay": false,
+        "promotional": false,
+        "beginner_series": false
+      },
+      "transcript": {
+        "status": "retrieved",
+        "body_retrieved": true,
+        "source_url": "https://example.org/transcripts/fixture-1",
+        "provenance": "third-party-transcription",
+        "checked_at": "2026-10-19T00:21:00Z",
+        "access_note": "Synthetic immutable fixture only; not source evidence."
+      },
+      "dedup_review": {
+        "status": "pending",
+        "story_keys": [],
+        "contribution": null,
+        "reviewed_at": null
+      },
+      "status": "pending",
+      "status_reason": null,
+      "publication_id": null
+    },
+    {
+      "episode_id": "big-technology:fixture-2",
+      "show": "big-technology",
+      "title": "Synthetic substantive episode 2",
+      "published_at": "2026-10-15T02:00:00Z",
+      "source_url": "https://example.org/episodes/fixture-2",
+      "aliases": [
+        "rss:fixture-2",
+        "apple:fixture-2",
+        "youtube:fixture-roose",
+        "https://example.org/video/fixture-roose"
+      ],
+      "classification": {
+        "original": true,
+        "substantive": true,
+        "replay": false,
+        "promotional": false,
+        "beginner_series": false
+      },
+      "transcript": {
+        "status": "retrieved",
+        "body_retrieved": true,
+        "source_url": "https://example.org/transcripts/fixture-2",
+        "provenance": "third-party-transcription",
+        "checked_at": "2026-10-19T00:21:00Z",
+        "access_note": "Synthetic immutable fixture only; not source evidence."
+      },
+      "dedup_review": {
+        "status": "pending",
+        "story_keys": [],
+        "contribution": null,
+        "reviewed_at": null
+      },
+      "status": "pending",
+      "status_reason": null,
+      "publication_id": null
+    },
+    {
+      "episode_id": "big-technology:fixture-3",
+      "show": "big-technology",
+      "title": "Synthetic substantive episode 3",
+      "published_at": "2026-10-09T16:51:00Z",
+      "source_url": "https://example.org/episodes/fixture-3",
+      "aliases": [
+        "rss:fixture-3",
+        "apple:fixture-3"
+      ],
+      "classification": {
+        "original": true,
+        "substantive": true,
+        "replay": false,
+        "promotional": false,
+        "beginner_series": false
+      },
+      "transcript": {
+        "status": "retrieved",
+        "body_retrieved": true,
+        "source_url": "https://example.org/transcripts/fixture-3",
+        "provenance": "third-party-transcription",
+        "checked_at": "2026-10-19T00:21:00Z",
+        "access_note": "Synthetic immutable fixture only; not source evidence."
+      },
+      "dedup_review": {
+        "status": "pending",
+        "story_keys": [],
+        "contribution": null,
+        "reviewed_at": null
+      },
+      "status": "pending",
+      "status_reason": null,
+      "publication_id": null
+    }
+  ],
+  "publications": []
+}

@@ -1,0 +1,377 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pbhat89.github.io/the-brief/podcast/expert-learning-log.schema.json",
+  "title": "Source-backed expert learning concepts",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "updated_on": {
+      "type": "string",
+      "format": "date"
+    },
+    "timezone": {
+      "const": "Asia/Singapore"
+    },
+    "history": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "complete": {
+          "type": "boolean"
+        },
+        "reviewed_reports": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "gaps": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "complete",
+        "reviewed_reports",
+        "gaps"
+      ]
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "concept_id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "aliases": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "experts": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "Andrej Karpathy",
+                "Andrew Ng",
+                "Yann LeCun",
+                "Naval Ravikant"
+              ]
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "theme": {
+            "enum": [
+              "technical_coding",
+              "ai_transition",
+              "management"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "url": {
+                  "type": "string",
+                  "format": "uri",
+                  "pattern": "^https://"
+                },
+                "authors": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "minItems": 1
+                },
+                "original_date": {
+                  "type": "string",
+                  "format": "date"
+                },
+                "original_date_basis": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "checked_on": {
+                  "type": "string",
+                  "format": "date"
+                },
+                "kind": {
+                  "const": "first_party"
+                },
+                "verification": {
+                  "enum": [
+                    "direct_primary",
+                    "archived_primary_evidence"
+                  ]
+                },
+                "locator": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "title",
+                "url",
+                "authors",
+                "original_date",
+                "original_date_basis",
+                "checked_on",
+                "kind",
+                "verification",
+                "locator"
+              ]
+            },
+            "minItems": 1
+          },
+          "classification": {
+            "enum": [
+              "evergreen",
+              "recent_context"
+            ]
+          },
+          "takeaway": {
+            "type": "string",
+            "minLength": 1
+          },
+          "editorial_application": {
+            "type": "string",
+            "minLength": 1
+          },
+          "caveat": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "enum": [
+              "researched_candidate",
+              "covered_in_report",
+              "narrated"
+            ]
+          },
+          "dedup_review": {
+            "enum": [
+              "pending_full_history",
+              "reviewed_no_match",
+              "covered"
+            ]
+          },
+          "last_used": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "last_narrated": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "uses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "date": {
+                  "type": "string",
+                  "format": "date"
+                },
+                "channel": {
+                  "enum": [
+                    "report",
+                    "podcast"
+                  ]
+                },
+                "public_evidence_url": {
+                  "type": "string",
+                  "format": "uri",
+                  "pattern": "^https://"
+                },
+                "confirmation": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "date",
+                "channel",
+                "public_evidence_url",
+                "confirmation"
+              ]
+            },
+            "minItems": 0
+          }
+        },
+        "required": [
+          "concept_id",
+          "aliases",
+          "experts",
+          "theme",
+          "title",
+          "sources",
+          "classification",
+          "takeaway",
+          "editorial_application",
+          "caveat",
+          "status",
+          "dedup_review",
+          "last_used",
+          "last_narrated",
+          "uses"
+        ],
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "status": {
+                  "const": "researched_candidate"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "uses": {
+                  "maxItems": 0
+                },
+                "last_used": {
+                  "type": "null"
+                },
+                "last_narrated": {
+                  "type": "null"
+                },
+                "dedup_review": {
+                  "enum": [
+                    "pending_full_history",
+                    "reviewed_no_match"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "status": {
+                  "enum": [
+                    "covered_in_report",
+                    "narrated"
+                  ]
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "uses": {
+                  "minItems": 1
+                },
+                "last_used": {
+                  "type": "string",
+                  "format": "date"
+                },
+                "dedup_review": {
+                  "const": "covered"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "status": {
+                  "const": "covered_in_report"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "last_narrated": {
+                  "type": "null"
+                },
+                "uses": {
+                  "items": {
+                    "properties": {
+                      "channel": {
+                        "const": "report"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "status": {
+                  "const": "narrated"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "last_narrated": {
+                  "type": "string",
+                  "format": "date"
+                },
+                "uses": {
+                  "contains": {
+                    "properties": {
+                      "channel": {
+                        "const": "podcast"
+                      }
+                    },
+                    "required": [
+                      "channel"
+                    ]
+                  },
+                  "minContains": 1,
+                  "maxContains": 1
+                }
+              }
+            }
+          }
+        ]
+      },
+      "minItems": 0
+    }
+  },
+  "required": [
+    "version",
+    "updated_on",
+    "timezone",
+    "history",
+    "entries"
+  ]
+}

@@ -4,8 +4,8 @@ import {fileURLToPath} from 'node:url';
 import {join} from 'node:path';
 const root=fileURLToPath(new URL('../../../',import.meta.url));
 const read=p=>readFileSync(join(root,p),'utf8');
-for(const p of ['podcast/evidence.schema.json','podcast/ledger.example.json','podcast/reports.json','podcast/status.json'])assert.ok(JSON.parse(read(p)));
-for(const p of ['routine-prompt.md','podcast/README.md','podcast/IMPROVEMENTS.md','podcast/RUN_FEEDBACK.md'])assert.ok(read(p).trim().length>100,'Required operational document is empty: '+p);
+for(const p of ['podcast/evidence.schema.json','podcast/ledger.example.json','podcast/reports.json','podcast/status.json','podcast/editorial-policy.json','podcast/expert-learning-log.json','podcast/expert-learning-log.schema.json','podcast/editorial-audit.example.json','podcast/podcast-learning-ledger.json','podcast/big-technology-source-review.json'])assert.ok(JSON.parse(read(p)));
+for(const p of ['routine-prompt.md','podcast/README.md','podcast/IMPROVEMENTS.md','podcast/RUN_FEEDBACK.md','podcast/EDITORIAL_POLICY.md','podcast/EXPERT_LEARNING_LOG.md','podcast/PODCAST_LEARNING.md'])assert.ok(read(p).trim().length>100,'Required operational document is empty: '+p);
 const config=JSON.parse(read('podcast/cloudflare/wrangler.jsonc'));
 assert.equal(config.observability.enabled,false);assert.equal(config.preview_urls,false);
 assert.equal(config.vars.EXPIRY_APPROVED,'false','Public example must remain opt-in.');
@@ -14,3 +14,4 @@ assert.ok(!('account_id' in config),'Account configuration belongs in protected 
 function scan(dir){for(const item of readdirSync(join(root,dir),{withFileTypes:true})){if(['node_modules','.wrangler','.git'].includes(item.name))continue;const p=join(dir,item.name);if(item.isDirectory())scan(p);else{assert.ok(!/\.(mp3|wav|m4a|ogg|pem|key)$/i.test(p),'Private media/key material must not enter source.');if(/\.(js|mjs|json|jsonc|md|html|yml)$/.test(p)){const text=read(p);assert.ok(!/-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----/.test(text),'Private key detected.');assert.ok(!/https:\/\/[^\s"'<>]+\.workers\.dev/.test(text),'Private listener URL must stay out of source.');}}}}
 scan('podcast/cloudflare');
 console.log('Repository contracts, operational documents, example config and scoped privacy guards passed. Feedback remains data; semantic truth and permissions require review.');
+

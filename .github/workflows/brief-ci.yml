@@ -22,8 +22,11 @@ jobs:
           node-version: '22'
       - run: npm ci --ignore-scripts --no-audit --no-fund
         working-directory: podcast/cloudflare
-      - run: node --test podcast/validate.test.mjs
+      - run: node --test podcast/*.test.mjs
       - run: node podcast/validate.mjs
+      - run: node podcast/validate-editorial.mjs
+      - run: node podcast/validate-expert-learning.mjs
+      - run: node podcast/validate-podcast-learning.mjs
       - run: node podcast/cloudflare/scripts/validate-repository.mjs
       - run: npm test
         working-directory: podcast/cloudflare
@@ -62,3 +65,4 @@ jobs:
           AUDIO_EXPIRY_APPROVED: ${{ vars.AUDIO_EXPIRY_APPROVED }}
           WRANGLER_SEND_METRICS: 'false'
         run: node scripts/deploy-ci.mjs
+
