@@ -1,0 +1,306 @@
+{
+  "edition": "2026-10-20",
+  "research_cutoff_sgt": "2026-10-20T07:07:08+08:00",
+  "upstream": {
+    "available": true,
+    "repository_path": "archive/2026-10-20.html",
+    "commit": "e9993ed79626a49018e835e535a069b4f7d30937"
+  },
+  "general_items": [
+    {
+      "id": "sg-nwc-2026-guidelines",
+      "section": "Singapore",
+      "title": "Government accepts new wage guidelines, including calibrated6–8% rises for lower-wage workers",
+      "event_date": "2026-10-19",
+      "sources": [
+        "https://www.mom.gov.sg/newsroom/press-releases/2026/1019-nwc-guidelines-for-2026-2027",
+        "https://www.mom.gov.sg/-/media/mom/documents/press-releases/2026/fa-mom-infographic-nwc-guidelines-2026.pdf",
+        "https://snef.org.sg/event/snef-sbf-briefing-on-national-wages-council-guidelines-for-2026-2027/"
+      ],
+      "verification": "Official MOM announcement and four-page infographic directly read. SNEF confirms applicable period1Dec2026–30Nov2027.",
+      "summary": "Workers earning gross monthly wages up toS$2,800: higher/middle/lower part of6–8% depending on performance and prospects. Stronger firms haveS$135–170 floors, poorer-performing but profitable firms at leastS$120 or percentage whichever higher. Unprofitable firms at leastS$120. Recommendations, not automatic entitlement.",
+      "event_id": "sg-nwc-2026-guidelines",
+      "caveat": "Guidelines are recommendations and depend on employer circumstances."
+    },
+    {
+      "id": "sg-qatar-lng-renewal",
+      "section": "Singapore",
+      "title": "Singapore and Qatar renew energy cooperation and plan a Strategic Partnership",
+      "event_date": "2026-10-19",
+      "sources": [
+        "https://www.mfa.gov.sg/newsroom/press-statements-transcripts-and-photos/official-visit-by-prime-minister-and-minister-for-finance-lawrence-wong-to-qatar--18-to-20-october-2026-/"
+      ],
+      "verification": "Official MFA press statement and joint statement dated19Oct directly retrieved.",
+      "summary": "Wong and Emir co-chair ninth HLJC; renewed QatarEnergy-Singapore LNG/low-carbon MOU. Agreed to work towards Strategic Partnership, with launch at future Emir state visit; not already launched. Wong due UAE20Oct.",
+      "event_id": "sg-qatar-lng-renewal",
+      "caveat": "See verification; do not overstate agreement, current status, or policy implications."
+    },
+    {
+      "id": "sg-youtrip-restored",
+      "section": "Singapore",
+      "title": "YouTrip services restored after Monday outage",
+      "event_date": "2026-10-19",
+      "updated_sgt": "2026-10-19T18:50:00+08:00",
+      "sources": [
+        "https://status.you.co/",
+        "https://www.asiaone.com/singapore/youtrip-down-service-outage-recovery",
+        "https://berita.mediacorp.sg/singapura/semua-khidmat-youtrip-pulih-selepas-alami-gangguan-besar-di-sg-thailand-1079576"
+      ],
+      "verification": "Official live status read07:04SG shows23/23 Singapore and14/14Thailand operational; company restoration statement reported18:45byMediacorp and18:50byAsiaOne. AsiaOne page header timestamps inconsistent, so use body statement time.",
+      "summary": "Monday outage affected e-wallet services in Singapore/Thailand; company attributed to third-party-system technical issue. All services now operational.",
+      "event_id": "sg-youtrip-restored",
+      "caveat": "See verification; do not overstate agreement, current status, or policy implications."
+    },
+    {
+      "id": "india-rbi-repo-oct19",
+      "section": "India",
+      "title": "RBI allots about₹1lakh crore in seven-day liquidity auction",
+      "event_date": "2026-10-19",
+      "sources": [
+        "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63825",
+        "https://economictimes.indiatimes.com/news/economy/finance/rbi-injects-rs-1-lakh-crore-as-liquidity-tightens-before-festive-season/articleshow/135055953.cms"
+      ],
+      "verification": "Official RBI auction result directly read; ET context published20Oct01:17IST. Inshorts national/business pages checked; selected substantive India item sourced independently.",
+      "summary": "RBI seven-day VRR: notified₹100,000crore, bids₹150,735crore, allotted₹100,014crore, cutoff5.51%, weightedaverage5.52%. Temporary liquidity management; does not announce policy-rate cut.",
+      "event_id": "india-rbi-repo-oct19",
+      "caveat": "See verification; do not overstate agreement, current status, or policy implications."
+    },
+    {
+      "id": "india-deepfake-welfare-warning",
+      "section": "India",
+      "title": "Indian cybercrime agency warns of deepfake welfare advertisements",
+      "event_date": "2026-10-19",
+      "published_sgt": "2026-10-19T23:15:00+08:00",
+      "sources": [
+        "https://theprint.in/india/scammers-using-deepfake-videos-of-pm-cms-in-social-media-political-ads-to-dupe-people-i4c/3076267/",
+        "https://news.webindia123.com/news/articles/india/20261019/4512942.html",
+        "https://economictimes.indiatimes.com/news/india/mha-warns-of-fake-welfare-scheme-ads-using-deepfake-videos-of-pm-modi-cms-and-ministers/articleshow/135051458.cms"
+      ],
+      "verification": "PTI, ANI and ET directly report the Oct19 I4C/NCTAU advisory. Original advisory not independently retrieved; keep attributed. This is public-safety reporting, not a technical model-performance claim.",
+      "summary": "I4C warned that manipulated videos impersonating Modi and ministers advertise fake welfare schemes, then demand processing fees or induce UPI payments. Public advised to verify claims through official channels.",
+      "caveat": "No original advisory retrieved. Attribute to agency as reported by PTI/ANI. Do not duplicate this event in the AI section.",
+      "event_id": "india-deepfake-welfare-warning"
+    },
+    {
+      "id": "business-china-q3-gdp",
+      "section": "Business",
+      "title": "China's Q3 growth picks up to4.5%, while retail demand stays weak",
+      "event_date": "2026-10-19",
+      "published_sgt": "2026-10-19T10:00:00+08:00",
+      "sources": [
+        "https://www.stats.gov.cn/sj/zxfbhjd/202610/t20261019_1965618.html",
+        "https://www.stats.gov.cn/sj/zxfbhjd/202610/t20261019_1965614.html",
+        "https://english.www.gov.cn/archive/statistics/202610/19/content_WS6ad5a59bc6d00ca5f9a0dc86.html"
+      ],
+      "verification": "Primary National Bureau of Statistics data tables and State Council/Xinhua summary retrieved. Same underlying event as Oct20upstream; absentOct19research.",
+      "summary": "Q3 GDP4.5%YoY versus4.3%Q2; first9months4.6%; September industrial output5.5%YoY, retail sales1.1%YoY. Nominal retail versus real GDP; do not imply directly comparable measures.",
+      "event_id": "business-china-q3-gdp",
+      "caveat": "See verification; do not overstate agreement, current status, or policy implications."
+    },
+    {
+      "id": "world-france-targeted-curfews",
+      "section": "World",
+      "title": "France turns to targeted curfews after weekend unrest",
+      "event_date": "2026-10-19",
+      "sources": [
+        "https://www.info.gouv.fr/discours/cellule-interministerielle-de-crise-point-de-situation-du-premier-ministre",
+        "https://www.aol.ca/articles/frances-macron-declines-interior-ministers-052023000.html"
+      ],
+      "verification": "French government transcript dated19Oct confirms PM requested prefects implement partial curfews with mayors/businessgroups; Reuters syndicated article reports curfews in parts ofParis and othercities. Avoid exact locality schedules without prefectural-order check.",
+      "summary": "Partial/local curfews response to weekend unrest, not nationwide curfew. Arrest totals developing; omit exactcounts.",
+      "event_id": "world-france-targeted-curfews",
+      "caveat": "Local curfew schedules vary; no nationwide restriction or exact arrest count claimed."
+    }
+  ],
+  "conditions": {
+    "observed_at": "2026-10-20T06:00:00+08:00",
+    "checked_at": "2026-10-20T07:04:25+08:00",
+    "psi24": {
+      "north": 89,
+      "south": 95,
+      "west": 124,
+      "east": 99,
+      "central": 114
+    },
+    "pm25_hourly": {
+      "north": 52,
+      "south": 58,
+      "west": 102,
+      "east": 69,
+      "central": 65
+    },
+    "forecast": {
+      "issued_at": "2026-10-20T05:34:00+08:00",
+      "temperature_c": [
+        26,
+        34
+      ],
+      "description": "Thundery showers mainly over northern, western and eastern Singapore in the afternoon",
+      "wind": "SE 10–20 km/h"
+    },
+    "sources": [
+      "https://api-open.data.gov.sg/v2/real-time/api/psi",
+      "https://api-open.data.gov.sg/v2/real-time/api/pm25",
+      "https://www.weather.gov.sg/weather-forecast-24hrforecast/"
+    ],
+    "caveat": "06:00 is the observation; update timestamps06:30/06:45 are not observation times. West and central PSI Unhealthy; other regions Moderate. HourlyPM2.5 north Normal, other four Elevated. No need to recite every number.",
+    "summary": "MSS 05:34 forecast: 26–34°C and afternoon thundery showers mainly north/west/east. NEA 06:00 readings: 24-hour PSI89–124; west and central Unhealthy. Hourly PM2.5 52–102µg/m³."
+  },
+  "ai_items": [
+    {
+      "event_id": "openai-low-resource-coding-evaluations-20261019",
+      "title": "OpenAI measures progress in legacy-code migration",
+      "source_url": "https://x.com/OpenAI/status/2112310345863930168",
+      "posted_at_sgt": "2026-10-20T06:30:00+08:00",
+      "primary_url": "https://openai.com/index/low-resource-programming-languages/",
+      "primary_date": "2026-10-19",
+      "verification": "Full original X post, displayed timestamp, and complete official publication directly read.",
+      "summary": "OpenAI reports GPT-6.1 Sol scores 86.6% on its COBOL migration evaluation at low reasoning versus 5.4% for GPT-5.6 Sol at 39% lower estimated API cost. Hidden tests demand byte-for-byte output parity.",
+      "caveat": "Company-designed evaluation; no independent production outcome established. Higher-effort 97.9% is a separate setting, omitted from narration. Expert review and business-rule/dependency testing remain required.",
+      "dedup": "No matching underlying event in 102 previous AI events, Oct19 three AI events or available archive headlines."
+    },
+    {
+      "event_id": "aa-healthbench-leaderboards-20261020",
+      "title": "Artificial Analysis adds health-conversation leaderboards",
+      "source_url": "https://x.com/ArtificialAnlys/status/2112318755321868493",
+      "posted_at_sgt": "2026-10-20T07:03:00+08:00",
+      "primary_url": "https://x.com/ArtificialAnlys/status/2112318755321868493",
+      "primary_date": "2026-10-20",
+      "verification": "Complete evaluator-authored announcement read in cloud browser, including original displayed timestamp; publisher paper checked for benchmark provenance.",
+      "secondary_primary_url": "https://arxiv.org/abs/2604.27470",
+      "summary": "New comparative leaderboards use physician-written rubrics and automated graders. On Professional, Claude Opus 5.5 has highest raw score, 71.4%, but falls to sixth and 59.9% after length adjustment. GPT-6 Astra leads length-adjusted at 66.0%.",
+      "caveat": "Evaluation of model responses, not a clinical trial, insurance claims outcome, or proof of clinical safety. Length normalization and model-based grading materially shape results.",
+      "dedup": "New leaderboard release, not new release of the underlying preexisting benchmarks. No matched prior event."
+    }
+  ],
+  "x_coverage": {
+    "roster_count": 211,
+    "profiles_attempted": 12,
+    "profiles_with_recent_posts_read": 9,
+    "read": [
+      "OpenAI",
+      "AnthropicAI",
+      "GoogleDeepMind",
+      "ArtificialAnlys",
+      "karpathy",
+      "simonw",
+      "bcherny",
+      "trq212",
+      "embirico"
+    ],
+    "incomplete": [
+      "thsottiaux",
+      "levie",
+      "AravSrinivas"
+    ],
+    "method": "Logged-out public X profiles in cloud Chrome, current visible recent posts; exact selected post pages and times checked.",
+    "limits": "Bounded sample, not exhaustive. Typically only five recent posts plus pinned posts accessible. Three profiles remained incomplete in this pass. Other fresh AA releases identified but omitted for time/relevance. No unsupported no-news claim.",
+    "cutoff_start": "2026-10-19T07:07:30+08:00"
+  },
+  "everyday_ai": {
+    "check_status": "complete",
+    "checked_at": "2026-10-19T23:07:08.917576+00:00",
+    "newest_observed_upload": "Ep884 Codex Record and Replay (Replay)",
+    "youtube_url": "https://www.youtube.com/watch?v=OZUmIL42BAM",
+    "displayed_date": "2026-10-20",
+    "disposition": "Explicit Replay in expanded description; links original Ep805 June24. Excluded.",
+    "original_url": "https://www.youreverydayai.com/ep-805-codex-record-and-replay-how-to-teach-an-agent-once-your-most-time-consuming-workflows/",
+    "latest_verified_original": "Ep841, 2026-08-14",
+    "surfaces_checked": [
+      "https://www.youtube.com/@EverydayAI_/videos",
+      "https://www.youtube.com/@EverydayAI_/streams",
+      "https://www.youreverydayai.com/episodes/",
+      "https://www.youreverydayai.com/"
+    ],
+    "limits": "Publisher homepage is newsletter signup surface; no inbox or inaccessible private newsletter used."
+  },
+  "podcast": {
+    "selected_episode": {
+      "episode_id": "big-technology:b95d2b3c-c8f7-11f1-b194-17950957eda4",
+      "show": "big-technology",
+      "title": "Anthropic IPO Panic, A Spy At OpenAI?, The Great Food Slop Debate",
+      "published_at": "2026-10-16T16:00:00Z",
+      "source_url": "https://podcasts.apple.com/us/podcast/big-technology-podcast/id1522960417?i=1000796690149",
+      "aliases": [
+        "rss:b95d2b3c-c8f7-11f1-b194-17950957eda4",
+        "apple:1000796690149",
+        "https://podscripts.co/podcasts/big-technology-podcast/anthropic-ipo-panic-a-spy-at-openai-the-great-food-slop-debate"
+      ],
+      "classification": {
+        "original": true,
+        "substantive": true,
+        "replay": false,
+        "promotional": false,
+        "beginner_series": false
+      },
+      "transcript": {
+        "status": "retrieved",
+        "body_retrieved": true,
+        "source_url": "https://podscripts.co/podcasts/big-technology-podcast/anthropic-ipo-panic-a-spy-at-openai-the-great-food-slop-debate",
+        "provenance": "third-party-transcription",
+        "checked_at": "2026-10-19T23:07:08.917576+00:00",
+        "access_note": "Public Podscripts transcription body spans intro to sign-off. Not publisher-approved. Recheck access each selected SGT day."
+      },
+      "dedup_review": {
+        "status": "distinct_contribution",
+        "story_keys": [
+          "bigtech-20261016-financial-metric-literacy"
+        ],
+        "contribution": "Distinct educational treatment of annualized run-rate versus realized revenue and secondary-market bond yield versus fixed coupon. Do not repeat prior OpenAI recording-device or HomeView news, nor present Oct16 market moves as fresh. Prior Anthropic IPO and CoreWeave events checked across available archive; these two metric distinctions have no matched prior lesson.",
+        "reviewed_at": "2026-10-19T23:07:08.917576+00:00"
+      },
+      "status": "pending",
+      "status_reason": null,
+      "publication_id": null
+    },
+    "segment_references": [
+      {
+        "start": "00:11:32",
+        "end": "00:16:43",
+        "topic": "Definitions of annualized revenue, actual annual revenue and uncertainty about business model"
+      },
+      {
+        "start": "00:22:50",
+        "end": "00:27:23",
+        "topic": "Debt costs; correction distinguishing secondary-market yield from issuance coupon"
+      }
+    ],
+    "provenance": "third-party-transcription",
+    "transcript_body_retrieved": true,
+    "rss_check": "Live publisher RSS retrieved, parsed, confirms newest episode GUID and Fri16Oct16:00Z. Apple show newest matches.",
+    "source_budget_note": "Keep source-derived summary plus short HTML summary below 200 words total. Editorial application separate and explicitly attributed."
+  },
+  "expert": {
+    "concept_id": "inspect-real-input-data",
+    "source_url": "https://karpathy.github.io/2019/04/25/recipe/",
+    "original_date": "2019-04-25",
+    "locator": "Section1 Become one with the data",
+    "classification": "evergreen",
+    "dedup_review": "reviewed_no_match",
+    "report_summary": "Karpathy recommends inspecting real examples and outliers before modeling. Application: distinguish missing or malformed inputs from model errors before changing an AI workflow."
+  },
+  "history_review": {
+    "sources": [
+      "102-event AI history through Oct18",
+      "Oct19 three AI events",
+      "all three available public report HTML pages and expert concept log",
+      "general archive headline index June5-Oct19, concept and episode-topic searches",
+      "Oct19 private transcript"
+    ],
+    "concept_near_duplicates_checked": [
+      "Ng automatic verification versus human judgment (covered Oct18)",
+      "Naval repeatable long-term work (covered Oct19)",
+      "Karpathy tiny-batch pipeline validation (different candidate)"
+    ],
+    "gaps": "Available archive headlines and 102-event AI ledger are not full transcripts of every past edition. Expert global history gap remains; no exhaustive historical claim. No match for selected input-inspection concept in available records."
+  },
+  "fact": {
+    "event_id": "wombat-intestinal-stiffness-cubes",
+    "source": "https://pubs.rsc.org/en/content/articlehtml/2021/sm/d0sm01230k",
+    "original_year": 2021
+  },
+  "optional_checks": {
+    "insurance": "Primary Swiss Re and Munich Re sources and recent industry search inspected; no fresh qualifying material item selected. Older EXL announcement omitted.",
+    "sports": "No fresh result selected after prior delivered results; no padding."
+  }
+}
