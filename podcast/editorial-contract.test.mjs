@@ -9,6 +9,13 @@ import {validateEditorialPolicy, validateEditorialAudit, validateExpertSelection
 const policy = JSON.parse(readFileSync(new URL('./editorial-policy.json', import.meta.url), 'utf8'));
 const audit = () => ({edition_date:'2026-10-20', source_revision:'fixture-revision', conditions_seconds:25, expert_seconds:60, ending_seconds:17, routine_safety_announcement:false, regional_psi_recital:false, spoken_source_diagnostics:false, repeated_closing_summary:false, improvement_sentences:0, singapore_stories:[{event_id:'sg-policy-1',weather:false,fresh_verified:true,source_url:'https://example.org/policy'},{event_id:'sg-transport-2',weather:false,fresh_verified:true,source_url:'https://example.org/transport'}], expert_concept_ids:['fixture-concept'],expert_semantic_history_reviewed:true,expert_source_url:'https://example.org/original',podcast_recaps:[]});
 test('shipped policy preserves requested budgets and source rules', () => assert.equal(validateEditorialPolicy(policy), true));
+test('insurance coverage remains optional, useful, verified and integrated', () => {
+ for (const [field,value] of [['scope',['health']],['emphasis',['general']],['priority',['all-announcements']],['minimum_stories',1],['omit_when_no_qualifying_news',false],['empty_segment_announcement',true],['require_fresh_verified',false],['preferred_sources',['vendor']],['label_vendor_claims',false],['distinguish_announcements_from_efficacy',false],['dedup','url-only'],['placement','mandatory-daily-segment'],['padding',true]]) {
+  const p=structuredClone(policy);p.insurance_news[field]=value;assert.throws(()=>validateEditorialPolicy(p),field);
+ }
+ // An edition with no qualifying insurance story needs no segment or omission announcement.
+ assert.equal(validateEditorialAudit(policy,audit()),true);
+});
 test('representative private audit passes', () => assert.equal(validateEditorialAudit(policy, audit()), true));
 test('long weather fails unless an actionable sourced exception is recorded', () => {
  const a=audit();a.conditions_seconds=48;assert.throws(()=>validateEditorialAudit(policy,a));
