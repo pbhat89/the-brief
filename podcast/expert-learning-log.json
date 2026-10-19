@@ -1,12 +1,13 @@
 {
   "version": 1,
-  "updated_on": "2026-10-19",
+  "updated_on": "2026-10-20",
   "timezone": "Asia/Singapore",
   "history": {
     "complete": false,
     "reviewed_reports": [
       "2026-10-18-revised",
-      "2026-10-19"
+      "2026-10-19",
+      "2026-10-20"
     ],
     "gaps": [
       "Earlier public archive and private podcast history have not been fully imported into this concept log.",
@@ -34,7 +35,7 @@
           ],
           "original_date": "2019-04-25",
           "original_date_basis": "Date displayed on original publisher page",
-          "checked_on": "2026-10-19",
+          "checked_on": "2026-10-20",
           "kind": "first_party",
           "verification": "direct_primary",
           "locator": "The recipe, section 1: Become one with the data"
@@ -44,11 +45,18 @@
       "takeaway": "Karpathy recommends examining real examples, distributions and outliers before building a model; duplicate or corrupted inputs can explain failures.",
       "editorial_application": "For an AI coding project, inspect representative inputs and failure cases before changing prompts or architecture. This is an editorial application.",
       "caveat": "The source concerns neural-network training. Do not generalize its dated architecture or optimizer advice into current best practice.",
-      "status": "researched_candidate",
-      "dedup_review": "pending_full_history",
-      "last_used": null,
-      "last_narrated": null,
-      "uses": []
+      "status": "narrated",
+      "dedup_review": "covered",
+      "last_used": "2026-10-20",
+      "last_narrated": "2026-10-20",
+      "uses": [
+        {
+          "date": "2026-10-20",
+          "channel": "podcast",
+          "public_evidence_url": "https://github.com/pbhat89/the-brief/blob/main/podcast/reports/2026-10-20.sources.json",
+          "confirmation": "Final delivered narration contains the source-backed input-inspection lesson; public evidence preserves source provenance only."
+        }
+      ]
     },
     {
       "concept_id": "tiny-case-pipeline-validation",

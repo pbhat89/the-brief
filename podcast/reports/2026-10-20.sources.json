@@ -210,9 +210,14 @@
       "https://www.youtube.com/@EverydayAI_/videos",
       "https://www.youtube.com/@EverydayAI_/streams",
       "https://www.youreverydayai.com/episodes/",
-      "https://www.youreverydayai.com/"
+      "https://www.youreverydayai.com/",
+      "https://www.youreverydayai.com/blog/",
+      "https://www.youreverydayai.com/category/ai-news/",
+      "https://read.youreverydayai.com/"
     ],
-    "limits": "Publisher homepage is newsletter signup surface; no inbox or inaccessible private newsletter used."
+    "limits": "Publisher homepage is newsletter signup surface; no inbox or inaccessible private newsletter used.",
+    "supplemental_check_at": "2026-10-20T07:12:40+08:00",
+    "supplemental_result": "Blog and public newsletter archive still led with episode841 August14; AI News category inspected. No new eligible original found."
   },
   "podcast": {
     "selected_episode": {

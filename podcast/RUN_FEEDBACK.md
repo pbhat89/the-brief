@@ -144,3 +144,18 @@ After the new report manifest was published, CI caught the stale generated reade
 - Requested podcast fallback: when Everyday AI has no eligible original, catch up on the most recent three Big Technology originals one per day; after that, use only unseen latest originals. Require transcripts and preserve original identity/date.
 - Remedy: added bounded companion policy and private-audit checks, persistent expert/podcast learning contracts, and operational instructions. The original Claude/email workflow, existing publishing credentials and free-tier limits remain unchanged. Today's audio is unchanged.
 - Verification boundary: contract/unit checks and the exact-commit CI/Worker redeploy are distinct from editorial quality. Assess actual chapter duration, Singapore breadth, source fidelity and concise ending in the next delivered edition. Do not claim listener satisfaction or physical-phone playback from tests.
+
+
+## 20 October 2026 · Concise conditions and substantive local coverage
+
+- Same-day upstream archive was available at intake. Seven independently checked general-news items were selected, including three non-weather Singapore stories: wage guidance, Qatar energy cooperation and restored payment services. The upstream haze item was omitted because its underlying event was old and its PSI terminology was inaccurate.
+- X coverage: 12 of 211 profiles attempted, recent posts read on 9, 3 incomplete, 199 unvisited. Two fresh developments selected; prior event history and archive headlines checked. Incomplete/unvisited source windows remain open.
+- Everyday AI episode 884 was an explicit June replay. Videos, Live, episodes, blog, AI News and public newsletter pages showed no eligible new original. One Big Technology catch-up recap used the actual accessible third-party transcript, preserving the October 16 original date and discussing financial-metric definitions rather than recycling old news. The Karpathy input-inspection concept was reviewed against available history and narrated once.
+- Official Singapore observations were from 06:00, not retrieval time. Conditions occupied 19.3 seconds, expert learning 56.8 seconds and fact/sign-off 15.3 seconds. No routine safety announcement, regional PSI recital or spoken source diagnostics. The total 7:53 is shorter than the usual target because verified content was not padded.
+- Local technical checks: full MP3 decode, zero nonfinite/clipped samples, approximately 165 words/minute, consistent stock voice. Private editorial audit passed after adding the required transcript selection context and provenance fields. No human pronunciation or physical-device playback verification is claimed.
+- Public report was verified over HTTPS with matching bytes before the latest pointer moved; its reader catalogue was regenerated. Repository regression passed 63 tests and player regression passed 84 tests. Private cloud publication matched local hash/size and seven-day expiry; conversation delivery was accepted at 07:12:53 SGT. Delivery acceptance does not prove a mobile push or playback.
+- Optional insurance and sports searches yielded no qualifying fresh material item for this selection, so neither was padded or announced as empty. Inshorts supported discovery; the selected RBI item used the primary auction result, while the I4C warning remains attributed to PTI/ANI because its original advisory was not retrieved.
+
+### Next bounded improvement
+
+Rotate the next X research pass toward unvisited profiles while retaining their earlier catch-up windows. Success means a larger reconciled source sample, not a larger story quota. Preserve the concise conditions and ending budgets; no new permissions or spending are authorized.

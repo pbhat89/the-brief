@@ -2,7 +2,7 @@
   "version": 1,
   "timezone": "Asia/Singapore",
   "daily_limit": 1,
-  "updated_at": "2026-10-19T00:21:00Z",
+  "updated_at": "2026-10-19T23:10:15.621496+00:00",
   "catchup": {
     "initialized_at": "2026-10-19T00:21:00Z",
     "limit": 3,
@@ -37,18 +37,20 @@
         "body_retrieved": true,
         "source_url": "https://podscripts.co/podcasts/big-technology-podcast/anthropic-ipo-panic-a-spy-at-openai-the-great-food-slop-debate",
         "provenance": "third-party-transcription",
-        "checked_at": "2026-10-19T00:21:00Z",
+        "checked_at": "2026-10-19T23:07:08.917576+00:00",
         "access_note": "Public Podscripts transcription body spans intro to sign-off. Not publisher-approved. Recheck access each selected SGT day."
       },
       "dedup_review": {
-        "status": "pending",
-        "story_keys": [],
-        "contribution": null,
-        "reviewed_at": null
+        "status": "distinct_contribution",
+        "story_keys": [
+          "bigtech-20261016-financial-metric-literacy"
+        ],
+        "contribution": "Distinct educational treatment of annualized run-rate versus realized revenue and secondary-market bond yield versus fixed coupon. Do not repeat prior OpenAI recording-device or HomeView news, nor present Oct16 market moves as fresh. Prior Anthropic IPO and CoreWeave events checked across available archive; these two metric distinctions have no matched prior lesson.",
+        "reviewed_at": "2026-10-19T23:07:08.917576+00:00"
       },
-      "status": "pending",
+      "status": "published",
       "status_reason": null,
-      "publication_id": null
+      "publication_id": "morning-2026-10-20-bigtech"
     },
     {
       "episode_id": "big-technology:c0727dae-c7e0-11f1-acdb-33421e150eaa",
@@ -128,5 +130,18 @@
       "publication_id": null
     }
   ],
-  "publications": []
+  "publications": [
+    {
+      "publication_id": "morning-2026-10-20-bigtech",
+      "episode_id": "big-technology:b95d2b3c-c8f7-11f1-b194-17950957eda4",
+      "status": "verified_published",
+      "output_url": "https://pbhat89.github.io/the-brief/podcast/reports/2026-10-20.html",
+      "revision": "a02b5be07b9d74ba99ec5ea3139d68e1365a9353",
+      "content_sha256": "cb881594a5d0980b1c6454bdb02dc5a2d75f40c07b3036fac95324fe2bfb53d0",
+      "verified_at": "2026-10-19T23:10:15.621496+00:00",
+      "confirmation": "Original public report returned HTTPS 200 with exact byte hash. Private narration subsequently confirmed delivered; private delivery details retained separately.",
+      "date_sgt": "2026-10-20",
+      "show": "big-technology"
+    }
+  ]
 }
