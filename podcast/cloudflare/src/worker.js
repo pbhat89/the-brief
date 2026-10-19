@@ -3,6 +3,17 @@ import {HTML,JS,CSS} from './ui.js';
 const headers={'Cache-Control':'private, no-store, max-age=0','Pragma':'no-cache','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer','Cross-Origin-Resource-Policy':'same-origin','Content-Security-Policy':"default-src 'none'; script-src 'self'; style-src 'self'; media-src 'self'; connect-src 'self'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'"};
 const reply=(body,status=200,extra={})=>new Response(body!==null&&typeof body==='object'&&!(body instanceof ArrayBuffer)?JSON.stringify(body):body,{status,headers:{...headers,'Content-Type':'application/json',...extra}});
 const now=()=>Math.floor(Date.now()/1000);
+const collectionOf=meta=>meta.collection==='personal'?'personal':'daily';
+const indexPrefix=collection=>collection==='personal'?'active-personal:':'active:';
+async function activeEpisodes(env,collection='all'){
+ const episodes=[];let complete=true;
+ for(const kind of collection==='all'?['daily','personal']:[collection]){
+  const list=await env.EPISODES.list({prefix:indexPrefix(kind),limit:100});
+  if(list.list_complete===false)complete=false;
+  for(const k of list.keys){const v=await env.EPISODES.get('meta:'+k.name.slice(indexPrefix(kind).length),'json');if(v&&!v.deleted&&Number.isFinite(v.expires)&&v.expires>now()&&collectionOf(v)===kind)episodes.push({...v,collection:kind});}
+ }
+ return {episodes:episodes.sort((a,b)=>b.created-a.created),complete};
+}
 export class Auth {
  constructor(ctx,env){this.ctx=ctx;this.env=env;}
  async fetch(req){
@@ -49,13 +60,31 @@ async function handle(req,env){
  if(p==='/api/logout'&&method==='POST'){await auth({op:'logout',token});return reply({ok:true},200,{'Set-Cookie':'__Host-brief=; Path=/; Secure; HttpOnly; SameSite=Strict; Max-Age=0'});}
  if(p==='/api/session'&&method==='GET')return reply({...session,personalization:{brand:String(env.PLAYER_BRAND||'').replace(/[\x00-\x1f]/g,'').slice(0,80),greeting:String(env.PLAYER_GREETING||'').replace(/[\x00-\x1f]/g,'').slice(0,160)}});
  if(p==='/api/episodes'&&['GET','HEAD'].includes(method)){
-  const list=await env.EPISODES.list({prefix:'active:',limit:100});const episodes=[];for(const k of list.keys){const v=await env.EPISODES.get(k.name,'json');if(v&&v.expires>now())episodes.push(v);}
-  return reply(method==='HEAD'?null:{episodes:episodes.sort((a,b)=>b.created-a.created)});
+  const collection=u.searchParams.get('collection')||'daily';
+  if(!['daily','personal','all'].includes(collection))return reply('Invalid collection',400);
+  const {episodes}=await activeEpisodes(env,collection);
+  return reply(method==='HEAD'?null:{episodes});
+ }
+ if(p==='/api/storage'&&method==='GET'){
+  const {episodes,complete}=await activeEpisodes(env);
+  return reply({activeAudioBytes:episodes.reduce((n,e)=>n+(Number.isFinite(e.size)?e.size:0),0),activeEpisodes:episodes.length,complete,freeStorageBytes:1000000000,estimateOnly:true});
  }
  const match=/^\/api\/(media|episodes)\/([a-f0-9-]{36})$/.exec(p);
+ if(match&&match[1]==='episodes'&&method==='DELETE'){
+  if(req.headers.get('X-Brief-Delete')!==match[2])return reply('Deletion confirmation required',400);
+  const key='meta:'+match[2],meta=await env.EPISODES.get(key,'json');
+  if(!meta)return reply('Not found',404);
+  if(collectionOf(meta)!=='personal')return reply('Only personal podcasts can be deleted here',400);
+  // Tombstone first: failed cleanup remains non-playable and can safely be retried.
+  const tombstone={...meta,deleted:meta.deleted||now()};
+  if(!meta.deleted)await env.EPISODES.put(key,JSON.stringify(tombstone));
+  await env.EPISODES.delete('audio:'+match[2]);
+  await env.EPISODES.delete(indexPrefix(collectionOf(meta))+match[2]);
+  return reply({id:match[2],deleted:true});
+ }
  if(match&&['GET','HEAD'].includes(method)){
-  const meta=await env.EPISODES.get('meta:'+match[2],'json');if(!meta||meta.expires<=now())return reply('Not found',404);
-  if(match[1]==='episodes')return reply(method==='HEAD'?null:meta);
+  const meta=await env.EPISODES.get('meta:'+match[2],'json');if(!meta||meta.deleted||!Number.isFinite(meta.expires)||meta.expires<=now()||!Number.isSafeInteger(meta.size)||meta.size<1||meta.size>MAX)return reply('Not found',404);
+  if(match[1]==='episodes')return reply(method==='HEAD'?null:{...meta,collection:collectionOf(meta)});
   const requestedRange=method==='GET'?req.headers.get('Range'):null;
   const bounds=range(requestedRange,meta.size);if(!bounds)return reply(null,416,{'Content-Range':`bytes */${meta.size}`});
   const [a,b]=bounds,partial=!!requestedRange,h={'Content-Type':'audio/mpeg','Accept-Ranges':'bytes','Content-Length':String(b-a+1),...(partial?{'Content-Range':`bytes ${a}-${b}/${meta.size}`}:{})};
@@ -75,15 +104,23 @@ async function upload(req,env){
  if(req.headers.get('Content-Type')!=='audio/mpeg')return reply('MP3 required',415);
  const length=Number(req.headers.get('Content-Length'));if(!Number.isInteger(length)||length<8||length>MAX)return reply('Invalid size',413);
  const bytes=await bounded(req,MAX);if(!bytes||bytes.length!==length||!mp3(bytes))return reply('Invalid MP3',415);
- const title=req.headers.get('X-Episode-Title')||'Daily brief';if(title.length>120||/[\x00-\x1f]/.test(title))return reply('Invalid title',400);
+ const collection=req.headers.get('X-Episode-Collection')||'daily';
+ if(!['daily','personal'].includes(collection))return reply('Invalid collection',400);
+ const episodeKey=req.headers.get('X-Episode-Key');
+ if(collection==='personal'&&(!episodeKey||!/^[a-z0-9][a-z0-9-]{0,79}$/.test(episodeKey)))return reply('Invalid episode key',400);
+ if(collection==='daily'&&episodeKey!==null)return reply('Episode key is for personal podcasts',400);
+ const rawDuration=req.headers.get('X-Episode-Duration'),duration=rawDuration===null?undefined:Number(rawDuration);
+ if(rawDuration!==null&&(!rawDuration.trim()||!Number.isFinite(duration)||duration<=0||duration>86400))return reply('Invalid duration',400);
+ const title=req.headers.get('X-Episode-Title')||(collection==='personal'?'Personal podcast':'Daily brief');if(title.length>120||/[\x00-\x1f]/.test(title))return reply('Invalid title',400);
  const id=crypto.randomUUID(),created=now(),expires=created+TTL;
  let chapters=[];try{chapters=JSON.parse(req.headers.get('X-Episode-Chapters')||'[]');}catch{return reply('Invalid chapters',400);}
  if(!Array.isArray(chapters)||chapters.length>30||chapters.some(c=>!c||typeof c.title!=='string'||c.title.length>80||!Number.isFinite(c.start)||c.start<0))return reply('Invalid chapters',400);
- const meta={id,title,created,expires,size:bytes.length,chapters:chapters.map(c=>({title:c.title,start:c.start})).sort((a,b)=>a.start-b.start)};
+ const meta={id,title,collection,...(episodeKey?{episodeKey}:{}),...(duration===undefined?{}:{duration}),created,expires,size:bytes.length,chapters:chapters.map(c=>({title:c.title,start:c.start})).sort((a,b)=>a.start-b.start)};
  await env.EPISODES.put('audio:'+id,bytes.buffer,{expiration:expires});
  // Retain private playback metadata independently of expiring audio bytes.
  await env.EPISODES.put('meta:'+id,JSON.stringify(meta));
  // The disposable listing index prevents retained history crowding out current audio.
- await env.EPISODES.put('active:'+id,JSON.stringify(meta),{expiration:expires});
+ await env.EPISODES.put(indexPrefix(collection)+id,JSON.stringify(meta),{expiration:expires});
  return reply(meta,201);
 }
+

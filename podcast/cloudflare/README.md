@@ -17,7 +17,7 @@ These bootstrap steps describe a fresh installation. The existing deployed liste
 
 `POST /api/upload` requires exact same-origin `Origin`, `Authorization: Bearer <owner token>`, `X-Brief-Publish: 1`, `Content-Type: audio/mpeg`, exact `Content-Length` and raw MP3 bytes. Do not use multipart. Size is capped at 8 MiB (suitable for approximately 7.36 MB episodes), below KV's 25 MiB limit. The streaming read enforces the cap even when a length is spoofed. The endpoint requires two consecutive MPEG Layer III frames after an optional ID3 header; this is a format sanity check, not a malware scanner or full decoder. Source files should come from the trusted publisher pipeline.
 
-Optional `X-Episode-Title` is at most 120 characters. Optional `X-Episode-Chapters` is a JSON array of at most 30 `{ "title": "Introduction", "start": 0 }` entries (title up to 80 characters, start in seconds). The server generates the UUID and expiry; callers cannot choose KV keys or an expiration. Audio is written before metadata; a partial write is invisible and expires automatically. UUID writes avoid KV's one-write-per-key-per-second constraint. No update/delete endpoint exists. KV is eventually consistent: allow propagation before playback. The player lists up to 100 unexpired active-index keys. Retained private metadata is not scanned for the current listing.
+Optional `X-Episode-Title` is at most 120 characters. Optional `X-Episode-Chapters` is a JSON array of at most 30 `{ "title": "Introduction", "start": 0 }` entries (title up to 80 characters, start in seconds). The server generates the UUID and expiry; callers cannot choose KV keys or an expiration. Audio is written before metadata; a partial write is invisible and expires automatically. UUID writes avoid KV's one-write-per-key-per-second constraint. No update endpoint exists; personal audio has a separately confirmed, authenticated deletion endpoint described below. KV is eventually consistent: allow propagation before playback. The player lists up to 100 unexpired active-index keys per collection. Retained private metadata is not scanned for the current listing.
 
 ## Security and behavior
 
@@ -57,3 +57,39 @@ Playback review: pause now runs synchronously with no session request, including
 
 
 The current regression suite includes audio-only expiry and retained-metadata isolation. Public HTML/news history remains independent. Feedback and prompt edits trigger CI, but player deployment does not execute or synchronize the external morning task; see [OPERATIONS.md](OPERATIONS.md) for the verified relay connection and remaining scheduled-run checks.
+
+
+## Personal Podcasts
+
+The authenticated player includes Today, Previous and Personal Podcasts. Topic
+recordings show their title, upload date, measured duration when provided, chapter
+count and seven-day expiry. Selecting a personal recording opens its chapters and
+playback controls in that tab. Returning to Today selects the remembered daily
+recording; personal uploads never become the daily latest. Selection/progress are
+kept only in browser memory and cleared when the player is locked.
+
+For direct listener uploads, set `X-Episode-Collection: personal`, required
+`X-Episode-Key` matching `^[a-z0-9][a-z0-9-]{0,79}$`, and optional
+`X-Episode-Duration` (finite seconds, greater than zero, at most 86400). Production
+publishing must use the [relay contract](../PUBLISHING.md), whose stable personal
+receipt prevents duplicate delivery; direct Worker uploads still create a new UUID
+every time. Daily uploads omit the collection and key. Existing metadata and daily
+active indexes need no migration.
+
+Personal audio and its `active-personal:` index use the same approved seven-day
+expiry. Private metadata, including any later deletion tombstone, stays retained.
+The Delete button explains permanent hosted deletion and shared-PIN permissions
+before its final confirmation. Deletion checks Origin, session, CSRF and explicit
+ID; removes actual audio and active-index storage; preserves the metadata tombstone;
+and supports safe retries. Daily recordings cannot be deleted through this feature.
+Changes can take time to propagate across Cloudflare. No deletion is performed
+merely by deploying this code.
+
+Storage information is an authenticated estimate of listed active audio, not an
+account-wide quota meter. It identifies partial counts and warns near 1 GB while
+explaining excluded storage and independent request/compute limits. No billing or
+permission change is needed. The collection/deletion/UI tests and local workerd
+smoke test cover isolation, legacy defaults, authentication, cross-origin/CSRF
+rejection, interrupted cleanup, repeated deletion, expiry, storage counts, keyboard
+tabs, cancelled confirmation and stale-list handling. Physical-device playback and
+global KV propagation remain separate production observations.

@@ -11,7 +11,7 @@ try{
  let ready=false;for(let i=0;i<80;i++){try{const r=await fetch(base);if(r.ok){ready=true;break}}catch{}await new Promise(r=>setTimeout(r,250));}assert.ok(ready,logs);
  assert.equal((await fetch(base+'/api/episodes')).status,401);
  const login=await fetch(base+'/api/login',{method:'POST',headers:{Origin:base,'Content-Type':'application/json'},body:'{"pin":"123456789012"}'});
- assert.equal(login.status,200,await login.clone().text());const cookie=login.headers.get('set-cookie').split(';')[0];
+ assert.equal(login.status,200,await login.clone().text());const cookie=login.headers.get('set-cookie').split(';')[0];const {csrf}=await login.json();
  const session=await fetch(base+'/api/episodes',{headers:{Cookie:cookie}});assert.equal(session.status,200);assert.deepEqual(await session.json(),{episodes:[]});
  const bytes=new Uint8Array(7360000);bytes.set([255,251,144,0]);bytes.set([255,251,144,0],417);
  const upload=await fetch(base+'/api/upload',{method:'POST',headers:{Origin:base,Authorization:'Bearer '+publisher,'X-Brief-Publish':'1','Content-Type':'audio/mpeg','Content-Length':String(bytes.length)},body:bytes});assert.equal(upload.status,201,await upload.clone().text());const meta=await upload.json();
@@ -19,7 +19,19 @@ try{
  const partial=await fetch(base+'/api/media/'+meta.id,{headers:{Cookie:cookie,Range:'bytes=7359900-'}});assert.equal(partial.status,206);assert.equal((await partial.arrayBuffer()).byteLength,100);
  const head=await fetch(base+'/api/media/'+meta.id,{method:'HEAD',headers:{Cookie:cookie}});assert.equal(head.headers.get('Content-Length'),String(bytes.length));assert.equal(await head.text(),'');
  for(const Range of ['bytes=1-99','invalid','bytes=99999999-']){const h=await fetch(base+'/api/media/'+meta.id,{method:'HEAD',headers:{Cookie:cookie,Range}});assert.equal(h.status,200);assert.equal(h.headers.get('Content-Length'),String(bytes.length));assert.equal(h.headers.get('Content-Range'),null);assert.equal(await h.text(),'');}
+ const topic=await fetch(base+'/api/upload',{method:'POST',headers:{Origin:base,Authorization:'Bearer '+publisher,'X-Brief-Publish':'1','Content-Type':'audio/mpeg','Content-Length':'834','X-Episode-Collection':'personal','X-Episode-Key':'synthetic-topic','X-Episode-Duration':'13'},body:bytes.slice(0,834)});assert.equal(topic.status,201,await topic.clone().text());const topicMeta=await topic.json();assert.equal(topicMeta.collection,'personal');assert.equal(topicMeta.episodeKey,'synthetic-topic');
+ const dailyList=await (await fetch(base+'/api/episodes',{headers:{Cookie:cookie}})).json();assert.equal(dailyList.episodes.length,1);assert.equal(dailyList.episodes[0].id,meta.id);
+ const topics=await (await fetch(base+'/api/episodes?collection=personal',{headers:{Cookie:cookie}})).json();assert.equal(topics.episodes.length,1);
+ const storage=await (await fetch(base+'/api/storage',{headers:{Cookie:cookie}})).json();assert.equal(storage.activeAudioBytes,bytes.length+834);
+ // KV permits only one write per key per second, including the initial metadata write.
+ await new Promise(r=>setTimeout(r,1100));
+ const remove=()=>fetch(base+'/api/episodes/'+topicMeta.id,{method:'DELETE',headers:{Origin:base,Cookie:cookie,'X-CSRF-Token':csrf,'X-Brief-Delete':topicMeta.id}});
+ for(let i=0;i<2;i++){const deleted=await remove();assert.equal(deleted.status,200,await deleted.clone().text());}
+ assert.equal((await fetch(base+'/api/media/'+topicMeta.id,{headers:{Cookie:cookie}})).status,404);
+ assert.equal((await (await fetch(base+'/api/episodes?collection=personal',{headers:{Cookie:cookie}})).json()).episodes.length,0);
+ const remaining=await (await fetch(base+'/api/storage',{headers:{Cookie:cookie}})).json();assert.equal(remaining.activeAudioBytes,bytes.length);
  const attempts=await Promise.all(Array.from({length:11},()=>fetch(base+'/api/login',{method:'POST',headers:{Origin:base},body:'{"pin":"bad"}'})));
  assert.equal(attempts.filter(r=>r.status===401).length,9);assert.equal(attempts.filter(r=>r.status===429).length,2);
- console.log('PASS: workerd + SQLite DO PIN verification, session, private KV list, 7.36 MB upload/full/range/HEAD, concurrent global limiter');
+ console.log('PASS: workerd + SQLite DO PIN verification, session, private KV list, 7.36 MB upload/full/range/HEAD, personal collection/duration, authenticated deletion, storage estimate, concurrent global limiter');
 }finally{child.kill();}
+
