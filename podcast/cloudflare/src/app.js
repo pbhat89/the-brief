@@ -1,12 +1,13 @@
 import {REPORTS} from './reports.js';
+import {LOGBOOK_JS} from './logbook.js';
 export const JS='const REPORTS='+JSON.stringify(REPORTS)+';\n'+String.raw`
 const $=s=>document.querySelector(s),audio=$('audio');
 let csrf,context,analyser,frame,epoch=0,currentEpisode=null,viewing='latest',catalog={daily:[],personal:[]},selected={daily:null,personal:null},positions=new Map(),branding={},deleting=new Set(),removed=new Set();
-const tabs=['latest','previous','personal'];
+const tabs=['latest','previous','personal','logbook'];
 const collectionOf=e=>e?.collection==='personal'?'personal':'daily';
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');
 function resetToLogin(message='Please unlock the player.') {
- epoch++; csrf=undefined; currentEpisode=null; catalog={daily:[],personal:[]}; selected={daily:null,personal:null}; positions.clear(); deleting.clear(); removed.clear(); branding={}; resetBranding(); document.body.classList.remove('unlocked'); document.body.classList.remove('reader');
+ epoch++; resetLogbook(); csrf=undefined; currentEpisode=null; catalog={daily:[],personal:[]}; selected={daily:null,personal:null}; positions.clear(); deleting.clear(); removed.clear(); branding={}; resetBranding(); document.body.classList.remove('unlocked'); document.body.classList.remove('reader');
  audio.pause(); audio.removeAttribute('src'); audio.load(); audio.playbackRate=1;
  cancelAnimationFrame(frame); document.body.classList.remove('playing');
  $('#orb').style.setProperty('--energy',1);
@@ -26,7 +27,7 @@ async function api(url,options={}) {
  const r=await fetch(url,{...options,cache:'no-store'});
  if(generation!==epoch)throw Error('Session changed. Please unlock again.');
  if(r.status===401){resetToLogin();throw Error('Please unlock the player.');}
- if(!r.ok)throw Error(r.status===429?'Too many attempts. Try again in 15 minutes.':'Request failed ('+r.status+').');
+ if(!r.ok){const failure=Error(r.status===429?'Too many attempts. Try again in 15 minutes.':'Request failed ('+r.status+').');failure.status=r.status;if(r.status===409){try{failure.currentRecord=(await r.json()).currentRecord;}catch{}}throw failure;}
  const data=await r.json();
  if(generation!==epoch)throw Error('Session changed. Please unlock again.');
  return data;
@@ -39,8 +40,8 @@ function applyPersonalization(value){const p=value&&typeof value==='object'?valu
 // The first title segment is the editorial title. Technical annotations belong to metadata, not the heading.
 function episodeTitle(episode){return typeof episode.title==='string'&&episode.title.trim()?episode.title.split('·')[0].trim():'Daily brief';}
 function setControls(ready){for(const s of ['#play','#back','#forward','#seek','#speed'])$(s).disabled=!ready;}
-function showTab(name){viewing=name;document.body.classList[name==='previous'?'add':'remove']('archive');for(const n of tabs){$('#'+n).hidden=n!==name;$('#tab-'+n).setAttribute('aria-selected',String(n===name));$('#tab-'+n).setAttribute('tabindex',n===name?'0':'-1');}$('#listening').hidden=name==='previous'||!currentEpisode||collectionOf(currentEpisode)!==(name==='personal'?'personal':'daily');}
-function openTab(name){showTab(name);if(name==='previous')return;const kind=name==='personal'?'personal':'daily';const episode=selected[kind]||catalog[kind][0];if(episode&&currentEpisode?.id!==episode.id)chooseEpisode(episode);}
+function showTab(name){viewing=name;document.body.classList[['previous','logbook'].includes(name)?'add':'remove']('archive');for(const n of tabs){$('#'+n).hidden=n!==name;$('#tab-'+n).setAttribute('aria-selected',String(n===name));$('#tab-'+n).setAttribute('tabindex',n===name?'0':'-1');}$('#listening').hidden=['previous','logbook'].includes(name)||!currentEpisode||collectionOf(currentEpisode)!==(name==='personal'?'personal':'daily');}
+function openTab(name){showTab(name);if(name==='logbook'){openLogbook();return;}if(name==='previous')return;const kind=name==='personal'?'personal':'daily';const episode=selected[kind]||catalog[kind][0];if(episode&&currentEpisode?.id!==episode.id)chooseEpisode(episode);}
 for(const name of tabs){$('#tab-'+name).onclick=()=>openTab(name);$('#tab-'+name).onkeydown=e=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();const next=e.key==='Home'?tabs[0]:e.key==='End'?tabs.at(-1):tabs[(tabs.indexOf(name)+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length];openTab(next);$('#tab-'+next).focus();}};}
 function card(title,meta,icon,action){const b=document.createElement('button');b.className='edition-card';const badge=document.createElement('span');badge.className='card-icon';badge.textContent=icon;badge.setAttribute('aria-hidden','true');const body=document.createElement('span');body.className='card-body';const name=document.createElement('span');name.className='card-title';name.textContent=title;const detail=document.createElement('span');detail.className='card-meta';detail.textContent=meta;const arrow=document.createElement('span');arrow.className='card-arrow';arrow.textContent='↗';arrow.setAttribute('aria-hidden','true');body.append(name);body.append(detail);b.append(badge);b.append(body);b.append(arrow);b.onclick=action;return b;}
 function chooseEpisode(e){
@@ -133,5 +134,4 @@ $('#logout').onclick=async()=>{try{
  await api('/api/logout',{method:'POST',headers:{'X-CSRF-Token':csrf}});resetToLogin('Player locked.');
 }catch(e){resetToLogin(e.message);}};
 api('/api/session').then(s=>{csrf=s.csrf;return load(s.personalization);}).catch(()=>{});
-`;
-
+`+LOGBOOK_JS;

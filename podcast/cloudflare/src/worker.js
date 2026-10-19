@@ -1,10 +1,71 @@
 import {TTL,MAX,digest,equal,pinHash,range,mp3} from './security.js';
 import {HTML,JS,CSS} from './ui.js';
+import {LogbookModel as logbook} from './logbook-model.js';
 const headers={'Cache-Control':'private, no-store, max-age=0','Pragma':'no-cache','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer','Cross-Origin-Resource-Policy':'same-origin','Content-Security-Policy':"default-src 'none'; script-src 'self'; style-src 'self'; media-src 'self'; connect-src 'self'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'"};
 const reply=(body,status=200,extra={})=>new Response(body!==null&&typeof body==='object'&&!(body instanceof ArrayBuffer)?JSON.stringify(body):body,{status,headers:{...headers,'Content-Type':'application/json',...extra}});
 const now=()=>Math.floor(Date.now()/1000);
 const collectionOf=meta=>meta.collection==='personal'?'personal':'daily';
 const indexPrefix=collection=>collection==='personal'?'active-personal:':'active:';
+const logbookConfigKey='logbook:v1:config',logbookDayKey=date=>'logbook:v1:day:'+date;
+const object=value=>value!==null&&typeof value==='object'&&!Array.isArray(value);
+function logbookPayload(date,value){
+ if(!object(value)||Object.keys(value).length!==3||!Number.isSafeInteger(value.version)||value.version<0||!object(value.habits)||!Array.isArray(value.fitnessActivities))return null;
+ const keys=logbook.habitsFor(date).map(h=>h.id),activities=value.fitnessActivities;
+ if(Object.keys(value.habits).length!==keys.length||!keys.every(key=>Object.hasOwn(value.habits,key)&&typeof value.habits[key]==='boolean')||activities.length>4||new Set(activities).size!==activities.length||activities.some(activity=>!logbook.activityOptions.includes(activity))||(!value.habits.fitness&&activities.length))return null;
+ // Stable ordering makes semantically identical retries match, regardless of JSON key order.
+ return {version:value.version,habits:Object.fromEntries(keys.map(key=>[key,value.habits[key]])),fitnessActivities:logbook.activityOptions.filter(activity=>activities.includes(activity))};
+}
+async function logbookOperation(x,storage,env,sessionKey){
+ return storage.transaction(async t=>{
+  // Check again inside the same serialized transaction as the private record access.
+  const session=await t.get(sessionKey);
+  if(!session||session.exp<=now()||session.version!==env.PIN_HASH)return reply('Unauthorized',401);
+  if(x.op==='logbook:put'&&!equal(x.csrf,session.csrf))return reply('CSRF rejected',403);
+  const timestamp=Date.now(),today=logbook.singaporeDate(new Date(timestamp));
+  const weekStart=x.week===null||x.week===undefined?logbook.monday(today):x.week;
+  if(x.op==='logbook:get'&&(!logbook.validDate(weekStart)||logbook.weekday(weekStart)!==1))return reply('Invalid week',400);
+  let payload;
+  if(x.op==='logbook:put'){
+   if(!logbook.validDate(x.date))return reply('Invalid date',400);
+   payload=logbookPayload(x.date,x.data);if(!payload)return reply('Invalid log book entry',400);
+  }
+  let config=await t.get(logbookConfigKey);
+  if(!config){
+   if(x.op!=='logbook:get')return reply({error:'Open Log book before saving a day',currentRecord:null},409);
+   // First use starts tracking; reading never invents or finalizes a day's habits.
+   config={schemaVersion:1,timeZone:logbook.timeZone,startDate:today};await t.put(logbookConfigKey,config);
+  }
+  if(config.schemaVersion!==1||config.timeZone!==logbook.timeZone||!logbook.validDate(config.startDate)||config.startDate>today)return reply('Log book unavailable',503);
+  if(x.op==='logbook:get'){
+   const dates=new Set();
+   for(let offset=0;offset<7;offset++)dates.add(logbook.addDays(weekStart,offset));
+   for(let offset=0;offset<=5;offset++)dates.add(logbook.addDays(today,-offset));
+   const records=[];
+   for(const date of [...dates].sort()){
+    if(date<config.startDate||date>today)continue;
+    const record=await t.get(logbookDayKey(date));
+    if(record){if(!logbook.validRecord(record)||record.date!==date)return reply('Log book unavailable',503);records.push(record);}
+   }
+   const completed=new Set(records.map(record=>record.date)),pendingDates=[];
+   for(let offset=0;offset<=5;offset++){const date=logbook.addDays(today,-offset);if(date>=config.startDate&&!completed.has(date))pendingDates.push(date);}
+   return reply({schemaVersion:1,timeZone:logbook.timeZone,today,startDate:config.startDate,weekStart,records,pendingDates});
+  }
+  const currentRecord=await t.get(logbookDayKey(x.date));
+  if(currentRecord){
+   if(!logbook.validRecord(currentRecord)||currentRecord.date!==x.date)return reply('Log book unavailable',503);
+   const same=Object.keys(payload.habits).every(key=>payload.habits[key]===currentRecord.habits[key])&&JSON.stringify(payload.fitnessActivities)===JSON.stringify(currentRecord.fitnessActivities);
+   // A lost response can be retried even after the five-day entry window closes.
+   if(same&&payload.version<=currentRecord.version)return reply({record:currentRecord});
+   return reply({error:'This day has already been completed',currentRecord},409);
+  }
+  if(x.date<config.startDate||x.date>today||x.date<logbook.addDays(today,-5))return reply('Date is outside the log book entry window',400);
+  if(payload.version!==0)return reply({error:'This day has changed; reload Log book',currentRecord:null},409);
+  const record={date:x.date,version:1,status:'completed',habits:payload.habits,fitnessActivities:payload.fitnessActivities,savedAt:new Date(timestamp).toISOString()};
+  // No expiration: habit records are separate from the disposable audio and session data.
+  await t.put(logbookDayKey(x.date),record);
+  return reply({record});
+ });
+}
 async function activeEpisodes(env,collection='all'){
  const episodes=[];let complete=true;
  for(const kind of collection==='all'?['daily','personal']:[collection]){
@@ -28,7 +89,9 @@ export class Auth {
    await s.put('s:'+await digest(token),{csrf,exp,version:this.env.PIN_HASH});await s.setAlarm(Date.now()+3100000);
    return reply({token,csrf,exp});
   }
-  const key='s:'+await digest(x.token||'');const session=await s.get(key);
+  const key='s:'+await digest(x.token||'');
+  if(x.op==='logbook:get'||x.op==='logbook:put')return logbookOperation(x,s,this.env,key);
+  const session=await s.get(key);
   if(!session||session.exp<=now()||session.version!==this.env.PIN_HASH)return reply('Unauthorized',401);
   if(x.op==='logout'){await s.delete(key);return reply({ok:true});}
   return reply({csrf:session.csrf});
@@ -59,6 +122,19 @@ async function handle(req,env){
  if(write&&!equal(req.headers.get('X-CSRF-Token'),session.csrf))return reply('CSRF rejected',403);
  if(p==='/api/logout'&&method==='POST'){await auth({op:'logout',token});return reply({ok:true},200,{'Set-Cookie':'__Host-brief=; Path=/; Secure; HttpOnly; SameSite=Strict; Max-Age=0'});}
  if(p==='/api/session'&&method==='GET')return reply({...session,personalization:{brand:String(env.PLAYER_BRAND||'').replace(/[\x00-\x1f]/g,'').slice(0,80),greeting:String(env.PLAYER_GREETING||'').replace(/[\x00-\x1f]/g,'').slice(0,160)}});
+ if(p==='/api/logbook'&&method==='GET'){
+  if(req.headers.get('Sec-Fetch-Site')==='cross-site'||(req.headers.has('Origin')&&req.headers.get('Origin')!==u.origin))return reply('Origin rejected',403);
+  if(u.searchParams.getAll('week').length>1)return reply('Invalid week',400);
+  return auth({op:'logbook:get',token,week:u.searchParams.get('week')});
+ }
+ const logbookMatch=/^\/api\/logbook\/([^/]+)$/.exec(p);
+ if(logbookMatch&&method==='PUT'){
+  if((req.headers.get('Content-Type')||'').split(';')[0].trim().toLowerCase()!=='application/json')return reply('JSON required',415);
+  if(Number(req.headers.get('Content-Length')||0)>2048)return reply('Too large',413);
+  const text=await bounded(req,2048);if(!text)return reply('Too large',413);
+  let data;try{data=JSON.parse(new TextDecoder().decode(text));}catch{return reply('Bad request',400);}
+  return auth({op:'logbook:put',token,csrf:req.headers.get('X-CSRF-Token'),date:logbookMatch[1],data});
+ }
  if(p==='/api/episodes'&&['GET','HEAD'].includes(method)){
   const collection=u.searchParams.get('collection')||'daily';
   if(!['daily','personal','all'].includes(collection))return reply('Invalid collection',400);

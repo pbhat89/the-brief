@@ -93,3 +93,53 @@ smoke test cover isolation, legacy defaults, authentication, cross-origin/CSRF
 rejection, interrupted cleanup, repeated deletion, expiry, storage counts, keyboard
 tabs, cancelled confirmation and stale-list handling. Physical-device playback and
 global KV propagation remain separate production observations.
+
+## Log book
+
+Log book is the fourth authenticated tab. It uses the server's Asia/Singapore
+calendar day, starts on the first authenticated Log book visit, and never creates
+pre-start history. Today is the default view. Unfinished days from the preceding
+five calendar days appear as optional catch-up choices; completed days do not
+return just because one or more habits were missed. There is no end-of-day prompt,
+notification, streak pressure or reminder schedule.
+
+The five weekday habits are No smoke, No sugar, One way public transport, Fitness,
+and Meditation. Saturday and Sunday omit public transport. Fitness is a single
+habit, with optional walk, tennis, cycle and yoga activity labels. Checking a circle
+animates a strike-through and removes that habit from the remaining list. The
+checked tray offers Undo. Reduced-motion mode skips the animation and keyboard
+focus moves to the next habit or Done.
+
+Only Done stores a habit record. Each applicable habit is explicitly true or false,
+so saved missed habits are distinct from an unlogged day. Unsaved selections are
+kept in memory only and cleared by Lock, expiry or page reload. An uncertain save
+freezes its original payload for an idempotent retry; a conflicting finalized day
+shows the saved record rather than overwriting it. Finalized days are read-only.
+The collapsed Week in view section shows saved Did / Didn't do summaries and
+labels absent records Not logged. Weekend transport is not applicable.
+
+Private records live in the already-bound Auth SQLite Durable Object, separately
+from session keys and seven-day audio. No new service, binding, credential,
+migration, repository-data write or paid plan is required. The first read stores
+only schema/timezone/start-date configuration. A record has date, version, completed
+status, exact applicable habit booleans, optional fitness activities and savedAt.
+Habit records have no expiration; session cleanup does not delete them. Anyone
+with the existing shared PIN can view and finalize these shared records. This is
+shared access, not an owner-only identity system.
+
+GET /api/logbook optionally accepts a Monday week date and returns the requested
+week plus today/recent saved records, with server date and pending dates. PUT
+/api/logbook/YYYY-MM-DD requires exact Origin, valid session, CSRF, JSON under
+2 KiB and an expected version. The Durable Object rechecks session and CSRF inside
+its serialized transaction. It refuses future/pre-start/out-of-window dates,
+incomplete/mistyped booleans, weekend transport, unknown activities and conflicting
+finalization. Exact retry receipts remain available after the entry window closes.
+All responses retain private/no-store headers and the existing restrictive CSP.
+Request-body logging remains disabled. No real habits or private identifiers are
+included in source, fixtures, CI logs, screenshots or public reports.
+
+Synthetic Node tests cover date rollover, catch-up boundaries, explicit false
+values, authentication/CSRF, invalid inputs, concurrent writes, save retries,
+read-only history, reset races, focus and reduced motion. The isolated local
+workerd runtime check exercises SQLite persistence across a local process restart,
+plus normal player regressions. These checks do not write production habit records.
