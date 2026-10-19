@@ -1,60 +1,60 @@
 {
-  "run_id": "morning-2026-10-19",
-  "updated_at": "2026-10-18T23:16:04.698Z",
+  "run_id": "morning-2026-10-20",
+  "updated_at": "2026-10-19T23:04:27.041Z",
   "previous_run": {
-    "run_id": "publishing-connection-2026-10-18",
+    "run_id": "morning-2026-10-19",
     "state": "completed",
-    "detail": "Connection preflight and small upload tests passed; this is the first full morning production run."
+    "detail": "Prior edition published; new research underway."
   },
   "steps": [
     {
       "id": "history",
       "label": "History and operational feedback",
       "state": "completed",
-      "updated_at": "2026-10-18T23:13:00.917Z",
-      "detail": "Repository archive, prior public source reports and operational feedback loaded; private all-delivery history is being reconciled separately."
+      "updated_at": "2026-10-19T23:04:27.041Z",
+      "detail": "Prior companion editions, source history and current editorial feedback loaded."
     },
     {
       "id": "upstream",
       "label": "Same-day upstream intake",
       "state": "completed",
-      "updated_at": "2026-10-18T23:13:00.917Z",
-      "detail": "Same-day 19 October JSON read; only independently checked claims selected. Prior archives preserved."
+      "updated_at": "2026-10-19T23:04:27.041Z",
+      "detail": "Dated 20 October upstream archive available; claims subject to independent verification."
     },
     {
       "id": "research",
       "label": "Source research and deduplication",
-      "state": "completed",
-      "updated_at": "2026-10-18T23:13:00.917Z",
-      "detail": "Seven main-news items and three AI developments selected. 48 of 211 X roster profiles checked; incomplete logged-out coverage disclosed. No new qualifying Everyday AI original found."
+      "state": "running",
+      "updated_at": "2026-10-19T23:04:27.041Z",
+      "detail": "Checking official Singapore sources, fresh AI developments and transcript-based podcast learning."
     },
     {
       "id": "script",
       "label": "Narrative preparation",
-      "state": "completed",
-      "updated_at": "2026-10-18T23:13:00.917Z",
-      "detail": "Private narrative prepared in fixed section order. No personalized content is published in this repository."
+      "state": "pending",
+      "updated_at": "2026-10-19T23:04:27.041Z",
+      "detail": "Awaiting preceding verified work."
     },
     {
       "id": "audio",
       "label": "Private narration checks",
-      "state": "completed",
-      "updated_at": "2026-10-18T23:15:29.578Z",
-      "detail": "Production narration is 11:09 with full decode, loudness and clipping checks passed. Production-sized cloud upload matched hash/size and seven-day expiry; exact replay reused the same receipt."
+      "state": "pending",
+      "updated_at": "2026-10-19T23:04:27.041Z",
+      "detail": "Awaiting preceding verified work."
     },
     {
       "id": "publication",
       "label": "Public report publication",
-      "state": "completed",
-      "updated_at": "2026-10-18T23:13:00.917Z",
-      "detail": "19 October news-only report and audit returned HTTPS 200 with local byte hashes matched before latest-pointer update."
+      "state": "pending",
+      "updated_at": "2026-10-19T23:04:27.041Z",
+      "detail": "Awaiting preceding verified work."
     },
     {
       "id": "delivery",
       "label": "Private episode delivery",
-      "state": "completed",
-      "updated_at": "2026-10-18T23:16:04.698Z",
-      "detail": "Combined conversation delivery accepted at 07:15 SGT. This does not prove mobile push or playback. Direct listener requests from the research runtime returned 403; media playback was not independently verified."
+      "state": "pending",
+      "updated_at": "2026-10-19T23:04:27.041Z",
+      "detail": "Awaiting preceding verified work."
     }
   ]
 }
