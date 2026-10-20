@@ -31,7 +31,7 @@
         "https://www.police.gov.sg/Media-Hub/News/2026/10/20261020_police_advisory_on_malware_from_social_media_advertisements"
       ],
       "summary": "Police disclosed at least 62 cases and S$989,000 in losses since April involving malicious apps promoted through fake social-media advertisements. The disclosure is new; the losses accumulated over several months.",
-      "caveat": "Original police release directly inspected; issued 20 October at 16:00 SGT. Do not interpret cumulative losses as a single-day total."
+      "caveat": "Original police release directly inspected; issued 20 October at 16:00 SGT. These are cumulative losses, not a single-day total."
     },
     {
       "id": "india-nz-fta-entry-20261020",
@@ -144,7 +144,7 @@
       "primary_url": "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design",
       "primary_date": "2026-10-20",
       "summary": "Anthropic reports that 17 of 211 tested protein designs met binding criteria against four scorpion toxins. The supervised design campaign included human follow-up prompts. Binding is not neutralisation; cell, animal and further efficacy/safety work remain. No antivenom was produced.",
-      "caveat": "Do not call campaign fully autonomous: initial prompt plus four followups and human supervision. 17 binders each against one of four toxins; five toxins targeted; no qualifying Brazil Ts1 binder. No cell neutralisation or mouse efficacy result; recombinant binding alone is not therapeutic efficacy.",
+      "caveat": "The campaign used an initial prompt, four follow-ups and human supervision. 17 binders each against one of four toxins; five toxins targeted; no qualifying Brazil Ts1 binder. No cell neutralisation or mouse efficacy result; recombinant binding alone is not therapeutic efficacy.",
       "supporting_urls": [
         "https://www-cdn.anthropic.com/31ac578806cffd8b3d92d8affe6edc4c04d502e1.pdf",
         "https://huggingface.co/datasets/Anthropic/scorpion-toxin-binder-design"
@@ -162,7 +162,7 @@
       "primary_url": "https://mistral.ai/news/voxtral-3/",
       "primary_date": "Launch available by 2026-10-21 00:53 SGT; page has no separately visible publication timestamp. Embedded benchmark states generated 2026-10-20.",
       "summary": "Voxtral 3 combines new transcription and speech models with a voice-agent SDK. Mistral offers API and self-deployment options. Artificial Analysis independently reports Small Transcribe 3 third on its speech-to-text index; rankings do not establish performance in a particular contact centre.",
-      "caveat": "Transcription supports 50-plus languages; TTS 35-plus languages/50-plus dialects. Do not claim every component supports 50-plus languages. Vendor speed and workflow claims are not independently demonstrated production outcomes here. No voice cloning or paid-service use performed.",
+      "caveat": "Transcription supports 50-plus languages; TTS 35-plus languages/50-plus dialects. Language coverage varies by component. Vendor speed and workflow claims are not independently demonstrated production outcomes here.",
       "supporting_urls": [],
       "coverage": "HTML; audio inclusion tracked separately"
     },
@@ -177,7 +177,7 @@
       "primary_url": "https://www.perplexity.ai/en-GB/hub/blog/perplexity-computer-now-runs-fully-local-on-mac",
       "primary_date": "2026-10-20",
       "summary": "Perplexity says its Mac app can now run both model and agent locally, with permission to access files/apps. Available to Pro, Max and Enterprise; supported Apple-silicon hardware and 36GB-plus memory recommended. Cloud escalation remains optional for current information or external services. This is a vendor launch, not an independent security audit.",
-      "caveat": "36GB is recommended, not stated as a universal hard minimum. Local inference does not imply all app integrations or every workflow stay offline. Do not mark delivered if omitted from final HTML/audio.",
+      "caveat": "36GB is recommended, not stated as a universal hard minimum. Local inference does not imply all app integrations or every workflow stay offline.",
       "supporting_urls": [],
       "coverage": "HTML; audio inclusion tracked separately"
     }
@@ -264,7 +264,7 @@
     "original_date": "2021-11-17",
     "classification": "evergreen",
     "claim": "Martian sunsets can show a blue glow because fine atmospheric dust lets blue light penetrate more efficiently than longer wavelengths. NASA rover imagery documents the effect.",
-    "caveat": "Do not imply the entire sky is blue or every sunset equally vivid; the linked image has a muted blue effect because of less dust."
+    "caveat": "The glow is concentrated near the Sun; not every sunset has the same intensity."
   },
   "optional_checks": {
     "insurance": "Sapiens announcement dated 6 October was excluded despite later syndication. Experian acquisition full-page access returned 403; Moody’s survey original was not located. No insufficiently verified item included."
