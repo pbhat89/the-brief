@@ -1,60 +1,60 @@
 {
-  "run_id": "morning-2026-10-20",
-  "updated_at": "2026-10-19T23:14:01.207Z",
+  "run_id": "morning-2026-10-21",
+  "updated_at": "2026-10-20T23:06:40Z",
   "previous_run": {
-    "run_id": "morning-2026-10-19",
+    "run_id": "morning-2026-10-20",
     "state": "completed",
-    "detail": "Prior edition published; new research underway."
+    "detail": "Prior edition delivered; fresh research underway."
   },
   "steps": [
     {
       "id": "history",
       "label": "History and operational feedback",
       "state": "completed",
-      "updated_at": "2026-10-19T23:14:01.207Z",
-      "detail": "Prior event ledger, companion reports, available archive headlines and learning logs reviewed; historical transcript gaps retained."
+      "updated_at": "2026-10-20T23:06:40Z",
+      "detail": "Prior reports, event history, learning logs and listener editorial feedback reviewed."
     },
     {
       "id": "upstream",
       "label": "Same-day upstream intake",
       "state": "completed",
-      "updated_at": "2026-10-19T23:14:01.207Z",
-      "detail": "Dated 20 October upstream available and selected claims independently checked."
+      "updated_at": "2026-10-20T23:06:40Z",
+      "detail": "Today's upstream archive explicitly skipped; no same-day HTML. Independently verified highlights are being researched."
     },
     {
       "id": "research",
       "label": "Source research and deduplication",
-      "state": "completed",
-      "updated_at": "2026-10-19T23:14:01.207Z",
-      "detail": "Seven main-news items including three substantive Singapore stories, two AI developments, one transcript-based podcast recap and one expert lesson. Bounded X coverage: 12 attempted, 9 recent-post reads, 3 incomplete."
+      "state": "running",
+      "updated_at": "2026-10-20T23:06:40Z",
+      "detail": "Parallel source verification and semantic deduplication underway."
     },
     {
       "id": "script",
       "label": "Narrative preparation",
-      "state": "completed",
-      "updated_at": "2026-10-19T23:14:01.207Z",
-      "detail": "Coherent private script completed; measured conditions 19.3 seconds, expert lesson 56.8 seconds, ending 15.3 seconds."
+      "state": "pending",
+      "updated_at": "2026-10-20T23:06:40Z",
+      "detail": "Clear spoken section transitions, intuitive examples and business context required."
     },
     {
       "id": "audio",
       "label": "Private narration checks",
-      "state": "completed",
-      "updated_at": "2026-10-19T23:14:01.207Z",
-      "detail": "7:53 narration fully decoded with no nonfinite or clipped samples, approximately 165 words/minute. Private publication matched hash, size and seven-day expiry."
+      "state": "pending",
+      "updated_at": "2026-10-20T23:06:40Z",
+      "detail": "Local narration pipeline ready; rendering awaits verified script."
     },
     {
       "id": "publication",
       "label": "Public report publication",
-      "state": "completed",
-      "updated_at": "2026-10-19T23:14:01.207Z",
-      "detail": "Public report returned HTTPS 200 with matching bytes before latest-pointer update. Reader catalogue regenerated; 63 repository and 84 player regression checks passed."
+      "state": "pending",
+      "updated_at": "2026-10-20T23:06:40Z",
+      "detail": "Awaiting verified report."
     },
     {
       "id": "delivery",
       "label": "Private episode delivery",
-      "state": "completed",
-      "updated_at": "2026-10-19T23:14:01.207Z",
-      "detail": "Combined conversation delivery accepted at 07:12:53 SGT. Mobile push and physical playback are not established by acceptance."
+      "state": "pending",
+      "updated_at": "2026-10-20T23:06:40Z",
+      "detail": "Not yet delivered."
     }
   ]
 }
