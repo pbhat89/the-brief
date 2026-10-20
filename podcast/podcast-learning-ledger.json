@@ -2,7 +2,7 @@
   "version": 1,
   "timezone": "Asia/Singapore",
   "daily_limit": 1,
-  "updated_at": "2026-10-20T23:10:40Z",
+  "updated_at": "2026-10-20T23:20:31.344844Z",
   "catchup": {
     "initialized_at": "2026-10-19T00:21:00Z",
     "limit": 3,
@@ -89,9 +89,9 @@
         "contribution": "Management explanation of shared conviction as a coordination mechanism, attributed to Roose, with a separate illustrative business application. Distinct from prior financial metrics, recursive self-improvement and frontier-race news; avoids repeating those events. All 11 private delivered records, public reports, learning ledger and archive checked.",
         "reviewed_at": "2026-10-20T23:07:10Z"
       },
-      "status": "pending",
+      "status": "published",
       "status_reason": null,
-      "publication_id": null
+      "publication_id": "2026-10-21"
     },
     {
       "episode_id": "big-technology:797a2b74-c400-11f1-baca-c7e0f44bb120",
@@ -172,6 +172,18 @@
       "verified_at": "2026-10-19T23:10:15.621496+00:00",
       "confirmation": "Original public report returned HTTPS 200 with exact byte hash. Private narration subsequently confirmed delivered; private delivery details retained separately.",
       "date_sgt": "2026-10-20",
+      "show": "big-technology"
+    },
+    {
+      "publication_id": "2026-10-21",
+      "episode_id": "big-technology:c0727dae-c7e0-11f1-acdb-33421e150eaa",
+      "status": "verified_published",
+      "output_url": "https://pbhat89.github.io/the-brief/podcast/reports/2026-10-21.html",
+      "revision": "c7b2cbf47fdcaa6e08c31b1c70ccb5dd69e04f8b",
+      "content_sha256": "6d0f896f48bdf8c082ca14955f302dcab90de2750aa189d1ff1c888bb571aed6",
+      "verified_at": "2026-10-20T23:20:31.344844Z",
+      "confirmation": "Public report fetched and verified at 23:16:56 UTC against the stated content hash and revision; final combined delivery accepted at 23:20:31 UTC. Selected transcript-based recap confirmed in the delivered edition.",
+      "date_sgt": "2026-10-21",
       "show": "big-technology"
     }
   ]

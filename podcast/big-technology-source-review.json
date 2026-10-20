@@ -160,10 +160,17 @@
         "bodyRetrieved": true,
         "reviewedSegment": "00:54:48–00:58:37",
         "theme": "Shared conviction and organisational alignment; speaker interpretation, with separate editorial application",
-        "status": "researched_pending_publication"
+        "status": "published"
       },
       "everydayAI": "Publisher episodes/blog/AI News category showed August14 latest original. YouTube web extractor did not expose current Videos/Live listings; direct AI News/newsletter paths errored. No complete-current-source claim or new qualifying transcript established.",
-      "stateAuthority": "This dated review records research, not delivery. podcast-learning-ledger.json preserves authoritative publication states; the original discovery snapshot above remains historical."
+      "stateAuthority": "This dated review records research, not delivery. podcast-learning-ledger.json preserves authoritative publication states; the original discovery snapshot above remains historical.",
+      "coverageReconciliation": {
+        "verifiedAt": "2026-10-20T23:20:31.344844Z",
+        "edition": "2026-10-21",
+        "publicationId": "2026-10-21",
+        "publicReport": "https://pbhat89.github.io/the-brief/podcast/reports/2026-10-21.html",
+        "result": "Selected Roose recap confirmed in published report and accepted combined delivery. Pichai remains pending; original fixed seed preserved."
+      }
     }
   ]
 }

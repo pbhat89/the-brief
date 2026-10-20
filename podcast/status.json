@@ -1,6 +1,6 @@
 {
   "run_id": "morning-2026-10-21",
-  "updated_at": "2026-10-20T23:14:11.450711+00:00",
+  "updated_at": "2026-10-20T23:21:22.963833+00:00",
   "previous_run": {
     "run_id": "morning-2026-10-20",
     "state": "completed",
@@ -11,50 +11,50 @@
       "id": "history",
       "label": "History and operational feedback",
       "state": "completed",
-      "updated_at": "2026-10-20T23:06:40Z",
+      "updated_at": "2026-10-20T23:21:22.963833+00:00",
       "detail": "Prior reports, event history, learning logs and listener editorial feedback reviewed."
     },
     {
       "id": "upstream",
       "label": "Same-day upstream intake",
       "state": "completed",
-      "updated_at": "2026-10-20T23:06:40Z",
-      "detail": "Today's upstream archive explicitly skipped; no same-day HTML. Independently verified highlights are being researched."
+      "updated_at": "2026-10-20T23:21:22.963833+00:00",
+      "detail": "Same-day upstream explicitly skipped; independent verified coverage published with disclosure."
     },
     {
       "id": "research",
       "label": "Source research and deduplication",
       "state": "completed",
-      "updated_at": "2026-10-20T23:14:11.450711+00:00",
+      "updated_at": "2026-10-20T23:21:22.963833+00:00",
       "detail": "Six general news stories, four AI developments and source-backed learning verified; coverage limits retained."
     },
     {
       "id": "script",
       "label": "Narrative preparation",
       "state": "completed",
-      "updated_at": "2026-10-20T23:14:11.450711+00:00",
+      "updated_at": "2026-10-20T23:21:22.963833+00:00",
       "detail": "Grouped sections, spoken transitions and intuitive business explanations prepared."
     },
     {
       "id": "audio",
       "label": "Private narration checks",
-      "state": "running",
-      "updated_at": "2026-10-20T23:14:11.450711+00:00",
-      "detail": "Local synthesis and technical checks underway; no completed audio publication yet."
+      "state": "completed",
+      "updated_at": "2026-10-20T23:21:22.963833+00:00",
+      "detail": "Technical decode, clipping, duration and chapter-pause checks passed; no human listening or physical-device playback claim."
     },
     {
       "id": "publication",
       "label": "Public report publication",
       "state": "completed",
-      "updated_at": "2026-10-20T23:14:11.450711+00:00",
+      "updated_at": "2026-10-20T23:21:22.963833+00:00",
       "detail": "Report and source audit returned HTTPS 200 with exact local byte hashes; deployment succeeded."
     },
     {
       "id": "delivery",
       "label": "Private episode delivery",
-      "state": "pending",
-      "updated_at": "2026-10-20T23:06:40Z",
-      "detail": "Not yet delivered."
+      "state": "completed",
+      "updated_at": "2026-10-20T23:21:22.963833+00:00",
+      "detail": "Cloud publication verified and combined conversation delivery accepted; acceptance is not mobile-push proof."
     }
   ]
 }

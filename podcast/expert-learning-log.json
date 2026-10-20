@@ -161,11 +161,18 @@
       "takeaway": "LeCun and Misra describe self-supervision as learning to predict hidden aspects from observed data, reducing dependence on manually supplied labels.",
       "editorial_application": "When planning an AI project, distinguish the broad representations learned in pretraining from evidence needed to validate the actual task.",
       "caveat": "Coauthored research perspective from 2021. The authors present a promising research direction, not proof of human-level intelligence or label-free deployment.",
-      "status": "researched_candidate",
-      "dedup_review": "reviewed_no_match",
-      "last_used": null,
-      "last_narrated": null,
-      "uses": []
+      "status": "narrated",
+      "dedup_review": "covered",
+      "last_used": "2026-10-21",
+      "last_narrated": "2026-10-21",
+      "uses": [
+        {
+          "date": "2026-10-21",
+          "channel": "podcast",
+          "public_evidence_url": "https://github.com/pbhat89/the-brief/blob/main/podcast/reports/2026-10-21.sources.json",
+          "confirmation": "Final delivered narration contains the source-backed hidden-input-prediction lesson; public source audit establishes provenance, with delivery separately verified."
+        }
+      ]
     },
     {
       "concept_id": "specific-knowledge-through-curiosity",

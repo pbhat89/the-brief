@@ -54,3 +54,7 @@ These checks reject duplicate concept IDs and normalized aliases, missing origin
 ## Source review, 21 October 2026
 
 Re-read LeCun and Misra’s original 4 March 2021 self-supervised-learning article. The hidden-input-prediction concept was compared semantically with available delivered history through 20 October, companion reports and upstream archives. No matching underlying lesson was found; the existing concept is now `reviewed_no_match`, not a new concept or a recorded use. Its source date remains evergreen. Separate the authors’ explanation from the editorial business application, and do not equate general pretraining with validated task performance. Global historical-import gaps remain unchanged. No publication or narration is established by this review.
+
+### Confirmed use, 21 October 2026
+
+Following verified report publication and accepted combined delivery, `self-supervision-from-data-structure` is recorded as narrated on 21 October. The lesson explains hidden-input prediction, separately applying the distinction between broad pretraining and actual-workflow validation. It is no longer an unused candidate. Earlier source review above records the prepublication state; all other concepts and uses remain unchanged.

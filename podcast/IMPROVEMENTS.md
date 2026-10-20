@@ -77,3 +77,8 @@ The revised structure produced three substantive Singapore stories, 19.3 seconds
 ## Audible structure and intuition · 21 October 2026
 
 Observed feedback: both news and topic podcasts sounded disconnected; technical explanations needed simpler examples and clearer business relevance. Apply a brief roadmap, explicit spoken section transitions and rendered pauses, with intuition → example → business application → technical nuance. Success measures for the next edition are inspected script transitions, actual chapter-silence measurements and accessible examples; these do not themselves prove listener satisfaction. Preserve concise conditions and ending budgets, source caveats and no-padding rules. No retroactive audio regeneration is implied.
+
+
+### 21 October measured implementation check
+
+The new roadmap, section transitions and ten one-second pauses were rendered and silence-checked. Intuitive explanations and explicit business examples passed an independent written editorial check. Conditions measured 19.11 seconds; the combined fact/close was 19.80 seconds. These are verified implementation outcomes, not evidence of listener satisfaction or phone playback. Retain this structure and use future direct feedback to assess comprehension. The local-engine telemetry safeguard was resolved only by replacing the denied component with a verified offline implementation; do not revive the denied path.
