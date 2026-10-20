@@ -2,7 +2,7 @@
   "version": 1,
   "timezone": "Asia/Singapore",
   "daily_limit": 1,
-  "updated_at": "2026-10-19T23:10:15.621496+00:00",
+  "updated_at": "2026-10-20T23:10:40Z",
   "catchup": {
     "initialized_at": "2026-10-19T00:21:00Z",
     "limit": 3,
@@ -78,14 +78,16 @@
         "body_retrieved": true,
         "source_url": "https://podscripts.co/podcasts/big-technology-podcast/the-bumpy-road-to-agi-with-kevin-roose",
         "provenance": "third-party-transcription",
-        "checked_at": "2026-10-19T00:21:00Z",
-        "access_note": "Public Podscripts transcription body spans intro to sign-off. Not publisher-approved. Recheck access each selected SGT day."
+        "checked_at": "2026-10-20T23:07:10Z",
+        "access_note": "Actual public timestamped transcript body retrieved from opening through 01:03:32 sign-off. Third-party transcription contains errors; no uncertain names or numerical claims used. Selected 54:48–58:37 remarks framed as Roose interpretation, not independently proven causation."
       },
       "dedup_review": {
-        "status": "pending",
-        "story_keys": [],
-        "contribution": null,
-        "reviewed_at": null
+        "status": "distinct_contribution",
+        "story_keys": [
+          "bigtech-20261015-shared-conviction-organisational-alignment"
+        ],
+        "contribution": "Management explanation of shared conviction as a coordination mechanism, attributed to Roose, with a separate illustrative business application. Distinct from prior financial metrics, recursive self-improvement and frontier-race news; avoids repeating those events. All 11 private delivered records, public reports, learning ledger and archive checked.",
+        "reviewed_at": "2026-10-20T23:07:10Z"
       },
       "status": "pending",
       "status_reason": null,
@@ -124,6 +126,35 @@
         "story_keys": [],
         "contribution": null,
         "reviewed_at": null
+      },
+      "status": "pending",
+      "status_reason": null,
+      "publication_id": null
+    },
+    {
+      "episode_id": "big-technology:5a1b2336-cca8-11f1-9844-a3a2a08c94a2",
+      "show": "big-technology",
+      "title": "Google CEO Sundar Pichai: AI’s Infinite Possibilities, Compute Scarcity Dilemmas, Future AI Products",
+      "published_at": "2026-10-20T17:18:00Z",
+      "source_url": "https://feeds.megaphone.fm/LI3617121267",
+      "aliases": [
+        "rss:5a1b2336-cca8-11f1-9844-a3a2a08c94a2"
+      ],
+      "classification": {
+        "original": true,
+        "substantive": true,
+        "replay": false,
+        "promotional": false,
+        "beginner_series": false
+      },
+      "transcript": {
+        "status": "unverified",
+        "body_retrieved": false,
+        "access_note": "New publisher RSS original discovered during catch-up; actual transcript not retrieved or summarized today."
+      },
+      "dedup_review": {
+        "status": "pending",
+        "story_keys": []
       },
       "status": "pending",
       "status_reason": null,

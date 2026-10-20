@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_on": "2026-10-20",
+  "updated_on": "2026-10-21",
   "timezone": "Asia/Singapore",
   "history": {
     "complete": false,
@@ -151,7 +151,7 @@
           ],
           "original_date": "2021-03-04",
           "original_date_basis": "Date displayed on original publisher page",
-          "checked_on": "2026-10-19",
+          "checked_on": "2026-10-21",
           "kind": "first_party",
           "verification": "direct_primary",
           "locator": "Self-supervised learning is predictive learning; author byline"
@@ -162,7 +162,7 @@
       "editorial_application": "When planning an AI project, distinguish the broad representations learned in pretraining from evidence needed to validate the actual task.",
       "caveat": "Coauthored research perspective from 2021. The authors present a promising research direction, not proof of human-level intelligence or label-free deployment.",
       "status": "researched_candidate",
-      "dedup_review": "pending_full_history",
+      "dedup_review": "reviewed_no_match",
       "last_used": null,
       "last_narrated": null,
       "uses": []

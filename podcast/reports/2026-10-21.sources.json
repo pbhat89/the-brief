@@ -1,0 +1,275 @@
+{
+  "edition": "2026-10-21",
+  "research_cutoff_sgt": "2026-10-21T07:08:00+08:00",
+  "upstream": {
+    "available": false,
+    "repository_path": "archive/2026-10-21.json",
+    "status": "skipped",
+    "item_count": 0,
+    "note": "No same-day upstream HTML. Independently verified companion selection; no relabelled prior-day edition."
+  },
+  "general_items": [
+    {
+      "id": "sg-sweden-energy-20261020",
+      "event_id": "sg-sweden-energy-20261020",
+      "section": "Singapore",
+      "title": "Singapore and Sweden deepen clean-energy cooperation",
+      "event_date": "2026-10-20",
+      "sources": [
+        "https://www.ema.gov.sg/news-events/news/media-releases/2026/singapore-and-sweden-deepen-cooperation-on-the-clean-energy-transition"
+      ],
+      "summary": "EMA announced deeper cooperation with Sweden on hydrogen, ammonia and cross-border electricity technologies. This extends the existing partnership rather than announcing a completed energy project.",
+      "caveat": "Primary EMA release dated 20 October was retrieved through search; direct-page access failed. Cooperation is exploratory, not evidence of delivered capacity or lower bills."
+    },
+    {
+      "id": "sg-malware-advisory-20261020",
+      "event_id": "sg-malware-advisory-20261020",
+      "section": "Singapore",
+      "title": "Police disclose malware-enabled social-ad scam losses",
+      "event_date": "2026-10-20T16:00:00+08:00",
+      "sources": [
+        "https://www.police.gov.sg/Media-Hub/News/2026/10/20261020_police_advisory_on_malware_from_social_media_advertisements"
+      ],
+      "summary": "Police disclosed at least 62 cases and S$989,000 in losses since April involving malicious apps promoted through fake social-media advertisements. The disclosure is new; the losses accumulated over several months.",
+      "caveat": "Original police release directly inspected; issued 20 October at 16:00 SGT. Do not interpret cumulative losses as a single-day total."
+    },
+    {
+      "id": "india-nz-fta-entry-20261020",
+      "event_id": "india-nz-fta-entry-20261020",
+      "section": "India",
+      "title": "India–New Zealand free-trade agreement enters into force",
+      "event_date": "2026-10-20",
+      "sources": [
+        "https://www.customs.govt.nz/information-releases-and-legislation/legislation/international-agreements/free-trade-agreements/new-zealand-india-free-trade-agreement",
+        "https://www.mfat.govt.nz/en/trade/free-trade-agreements/free-trade-agreements-in-force/new-zealand-india-free-trade-agreement",
+        "https://www.pib.gov.in/newsite/erelcontent.aspx?lang=2&reg=48&relid=295052"
+      ],
+      "summary": "The India–New Zealand trade agreement entered into force on 20 October. Indian goods gain duty-free access under its terms; exporters must still meet relevant origin and documentation requirements.",
+      "caveat": "Entry into force is the new milestone, not the original signing. Customs and MFAT independently confirm the effective date."
+    },
+    {
+      "id": "india-rubio-meeting-20261020",
+      "event_id": "india-rubio-meeting-20261020",
+      "section": "India",
+      "title": "Rubio and Jaishankar discuss energy and defence in Mumbai",
+      "event_date": "2026-10-20",
+      "sources": [
+        "https://www.forth.news/lists/state/CgDUnnyWsye8nFuL5DxMr",
+        "https://newsonair.gov.in/eam-s-jaishankar-holds-talks-with-us-secretary-of-state-marco-rubio-in-mumbai/",
+        "https://inshorts.com/en/news/india-expects-zero-tolerance-on-terrorism-from-partners--jaishankar-at-event-attended-by-rubio-1792513288321",
+        "https://www.hindustantimes.com/india-news/s-jaishankar-mumbai-american-independence-day-celebration-terrorism-marco-rubio-india-visit-101792506818497-amp.html"
+      ],
+      "summary": "Rubio and Jaishankar met in Mumbai on 20 October. The US readout highlighted energy diversification and defence and civil nuclear cooperation. These were discussions, not newly verified supply contracts.",
+      "caveat": "Completed meeting is a material update to the earlier visit preview. State Department readout retrieved through Forth syndication and corroborated by Akashvani; no signed energy deal claimed."
+    },
+    {
+      "id": "gm-q3-buyback-20261020",
+      "event_id": "gm-q3-buyback-20261020",
+      "section": "World/business",
+      "title": "GM reports quarterly earnings and authorizes $20bn repurchases",
+      "event_date": "2026-10-20T18:30:00+08:00",
+      "sources": [
+        "https://investor.gm.com/static-files/9d069ca0-896f-42f9-a7c5-3b4a9622c0d1"
+      ],
+      "summary": "GM reported US$50.0 billion in revenue and US$3.3 billion in quarterly net income. Its new US$20 billion buyback authorisation permits future repurchases; it does not mean that amount has already been spent.",
+      "caveat": "Original investor-relations 8-K downloaded and inspected. Adjusted cash-flow guidance is a non-GAAP measure; repurchases remain discretionary."
+    },
+    {
+      "id": "sport-toh-bronze-20261020",
+      "event_id": "sport-toh-bronze-20261020",
+      "section": "Sports",
+      "title": "Toh wins second bronze; Wong sets national record",
+      "event_date": "2026-10-20",
+      "sources": [
+        "https://www.activesgcircle.gov.sg/read/asian-para-games-2026-toh-doubles-tally-wong-sets-new-national-record"
+      ],
+      "summary": "Toh Wei Soong won 100m freestyle S7 bronze, his second medal. Wong Zhi Wei set a 400m freestyle S13 national record and met the Paralympic minimum qualifying standard, which does not guarantee selection.",
+      "caveat": "Original Sport Singapore report directly inspected. Medal colour and qualifying-standard distinction were checked against the article body."
+    }
+  ],
+  "conditions": {
+    "forecast_source": "https://api-open.data.gov.sg/v2/real-time/api/twenty-four-hr-forecast",
+    "forecast_issued": "2026-10-21T05:37:00+08:00",
+    "forecast_updated": "2026-10-21T05:40:58+08:00",
+    "valid_from": "2026-10-21T06:00:00+08:00",
+    "valid_to": "2026-10-22T06:00:00+08:00",
+    "temperature_c": [
+      25,
+      34
+    ],
+    "periods": "06–12cloudy all;12–18thunderyshowersnorth/west,cloudyothers;18–06cloudyall",
+    "psi_source": "https://api-open.data.gov.sg/v2/real-time/api/psi",
+    "psi_observed": "2026-10-21T07:00:00+08:00",
+    "psi_updated": "2026-10-21T07:00:37+08:00",
+    "psi_24h": {
+      "north": 82,
+      "south": 91,
+      "west": 133,
+      "east": 97,
+      "central": 116
+    },
+    "psi_forecast": [
+      110,
+      180
+    ],
+    "psi_forecast_category": "Unhealthy",
+    "psi_forecast_source": "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-20-october-2026",
+    "psi_forecast_issue_date": "2026-10-20",
+    "caveat": "24-hour PSI is a rolling measure. The forecast is not the same as the current observation; rainfall does not guarantee haze clearance."
+  },
+  "ai_items": [
+    {
+      "event_id": "openai-acquires-orchestra-bio-2026-10-20",
+      "rank": 1,
+      "title": "OpenAI acquires Orchestra Bio to coordinate drug-development work",
+      "handle": "@OpenAI",
+      "source_url": "https://x.com/OpenAI/status/2112607347688583586",
+      "posted_at_sgt": "2026-10-21T02:10:00+08:00",
+      "timestamp_precision": "minute; exact displayed original-post timestamp",
+      "primary_url": "https://openai.com/index/openai-to-acquire-orchestra-bio/",
+      "primary_date": "2026-10-20",
+      "summary": "OpenAI says it acquired Orchestra Bio, which coordinates biopharma development workflows, and plans to combine it with Rosalind. The immediate story is operational coordination, not proof that AI has shortened clinical trials or produced an approved medicine.",
+      "caveat": "Primary page says has acquired despite URL slug to-acquire. No demonstrated patient-outcome or regulatory-approval benefit established.",
+      "supporting_urls": [],
+      "coverage": "HTML; audio inclusion tracked separately"
+    },
+    {
+      "event_id": "anthropic-scorpion-toxin-binders-2026-10-20",
+      "rank": 2,
+      "title": "Anthropic reports lab-tested scorpion-toxin protein binders, not an antivenom",
+      "handle": "@AnthropicAI",
+      "source_url": "https://x.com/AnthropicAI/status/2112579251555721573",
+      "posted_at_sgt": "2026-10-21T00:18:00+08:00",
+      "timestamp_precision": "minute; exact displayed original-post timestamp",
+      "primary_url": "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design",
+      "primary_date": "2026-10-20",
+      "summary": "Anthropic reports that 17 of 211 tested protein designs met binding criteria against four scorpion toxins. The supervised design campaign included human follow-up prompts. Binding is not neutralisation; cell, animal and further efficacy/safety work remain. No antivenom was produced.",
+      "caveat": "Do not call campaign fully autonomous: initial prompt plus four followups and human supervision. 17 binders each against one of four toxins; five toxins targeted; no qualifying Brazil Ts1 binder. No cell neutralisation or mouse efficacy result; recombinant binding alone is not therapeutic efficacy.",
+      "supporting_urls": [
+        "https://www-cdn.anthropic.com/31ac578806cffd8b3d92d8affe6edc4c04d502e1.pdf",
+        "https://huggingface.co/datasets/Anthropic/scorpion-toxin-binder-design"
+      ],
+      "coverage": "HTML; audio inclusion tracked separately"
+    },
+    {
+      "event_id": "mistral-voxtral-3-release-2026-10-20",
+      "rank": 3,
+      "title": "Mistral releases Voxtral 3 speech models and voice-agent SDK",
+      "handle": "@ArtificialAnlys",
+      "source_url": "https://x.com/ArtificialAnlys/status/2112587905222709432",
+      "posted_at_sgt": "2026-10-21T00:53:00+08:00",
+      "timestamp_precision": "minute; exact displayed original-post timestamp of independent evaluation, not claimed as Mistral launch time",
+      "primary_url": "https://mistral.ai/news/voxtral-3/",
+      "primary_date": "Launch available by 2026-10-21 00:53 SGT; page has no separately visible publication timestamp. Embedded benchmark states generated 2026-10-20.",
+      "summary": "Voxtral 3 combines new transcription and speech models with a voice-agent SDK. Mistral offers API and self-deployment options. Artificial Analysis independently reports Small Transcribe 3 third on its speech-to-text index; rankings do not establish performance in a particular contact centre.",
+      "caveat": "Transcription supports 50-plus languages; TTS 35-plus languages/50-plus dialects. Do not claim every component supports 50-plus languages. Vendor speed and workflow claims are not independently demonstrated production outcomes here. No voice cloning or paid-service use performed.",
+      "supporting_urls": [],
+      "coverage": "HTML; audio inclusion tracked separately"
+    },
+    {
+      "event_id": "perplexity-fully-local-mac-computer-2026-10-20",
+      "rank": 4,
+      "title": "Perplexity launches fully local Computer mode on supported Macs",
+      "handle": "@AravSrinivas",
+      "source_url": "https://x.com/perplexity_ai/status/2112571597798461920",
+      "posted_at_sgt": "2026-10-20T23:48:13+08:00",
+      "timestamp_precision": "second; original post displays 23:48 Oct20; quoted rendered DOM timestamp 1792511293000 independently converted to Singapore time",
+      "primary_url": "https://www.perplexity.ai/en-GB/hub/blog/perplexity-computer-now-runs-fully-local-on-mac",
+      "primary_date": "2026-10-20",
+      "summary": "Perplexity says its Mac app can now run both model and agent locally, with permission to access files/apps. Available to Pro, Max and Enterprise; supported Apple-silicon hardware and 36GB-plus memory recommended. Cloud escalation remains optional for current information or external services. This is a vendor launch, not an independent security audit.",
+      "caveat": "36GB is recommended, not stated as a universal hard minimum. Local inference does not imply all app integrations or every workflow stay offline. Do not mark delivered if omitted from final HTML/audio.",
+      "supporting_urls": [],
+      "coverage": "HTML; audio inclusion tracked separately"
+    }
+  ],
+  "x_coverage": {
+    "roster_url": "https://xstarterpack.com/",
+    "roster_count": 211,
+    "profiles_attempted": 12,
+    "profiles_read": 12,
+    "profiles_unvisited": 199,
+    "handles_read": [
+      "OpenAI",
+      "AnthropicAI",
+      "GoogleDeepMind",
+      "ArtificialAnlys",
+      "simonw",
+      "bcherny",
+      "embirico",
+      "karpathy",
+      "trq212",
+      "thsottiaux",
+      "levie",
+      "AravSrinivas"
+    ],
+    "limits": "Cloud browser, logged out, bounded recent profile windows (usually five posts, plus nested quotes and selected full threads), not exhaustive timelines/replies/reposts. No follow or account changes. 199 roster profiles unvisited. Search-index dates were not used as X post times.",
+    "prior_partial_cutoff": "2026-10-20T07:07:08+08:00",
+    "unvisited_gap_anchor": "2026-10-18T06:09:26+08:00"
+  },
+  "everyday_ai": {
+    "check_status": "partial_access",
+    "note": "YouTube Videos/Live extraction returned no usable listing; publisher pages exposed an older original, and direct AI News/newsletter paths failed. No current qualifying original with an accessible transcript was verified. This is an access gap, not proof of no new episode."
+  },
+  "podcast": {
+    "selected_episode": {
+      "episode_id": "big-technology:c0727dae-c7e0-11f1-acdb-33421e150eaa",
+      "show": "big-technology",
+      "title": "The Bumpy Road To AGI — With Kevin Roose",
+      "published_at": "2026-10-15T02:00:00Z",
+      "source_url": "https://podcasts.apple.com/us/podcast/big-technology-podcast/id1522960417?i=1000796329967",
+      "aliases": [
+        "rss:c0727dae-c7e0-11f1-acdb-33421e150eaa",
+        "apple:1000796329967",
+        "https://podscripts.co/podcasts/big-technology-podcast/the-bumpy-road-to-agi-with-kevin-roose",
+        "youtube:TmMYvtp4abI",
+        "https://www.youtube.com/watch?v=TmMYvtp4abI",
+        "https://podscripts.co/podcasts/big-technology-podcast/ai-leaders-cant-get-along-so-how-will-they-keep-us-safe-with-kevin-roose"
+      ]
+    },
+    "summary": "In the October15 Big Technology conversation, Roose argues that shared conviction helps explain organisational persistence and willingness to make long-term bets. This is his interpretation, not established causation. Editorial application: agree on a specific AI workflow outcome while keeping evidence and dissent welcome.",
+    "recorded_date": "2026-10-09",
+    "transcript_source": "https://podscripts.co/podcasts/big-technology-podcast/the-bumpy-road-to-agi-with-kevin-roose",
+    "provenance": "third-party-transcription",
+    "segment_references": [
+      {
+        "start": "00:54:48",
+        "end": "00:58:37",
+        "theme": "Roose explicitly attributes organisational persistence to shared belief, with Google internal-memo contrast."
+      }
+    ],
+    "caveat": "Interpretation attributed to Kevin Roose; business application is editorial, not a reported deployment. Transcript may contain errors.",
+    "newer_original": {
+      "title": "Google CEO Sundar Pichai: AI’s Infinite Possibilities, Compute Scarcity Dilemmas, Future AI Products",
+      "published_at": "2026-10-20T17:18:00Z",
+      "source_url": "https://feeds.megaphone.fm/LI3617121267",
+      "status": "Found but not summarized; transcript not retrieved."
+    }
+  },
+  "expert": {
+    "concept_id": "self-supervision-from-data-structure",
+    "title": "Learn from the structure already in data",
+    "authors": [
+      "Yann LeCun",
+      "Ishan Misra"
+    ],
+    "source_url": "https://ai.meta.com/blog/self-supervised-learning-the-dark-matter-of-intelligence/",
+    "original_date": "2021-03-04",
+    "classification": "evergreen",
+    "summary": "LeCun and Misra explain learning by predicting hidden parts of data. Editorial application: distinguish broad pretraining from validation for a specific workflow."
+  },
+  "fact": {
+    "event_id": "mars-blue-sunset-dust-scattering",
+    "title": "Blue light around a Martian sunset",
+    "source_url": "https://science.nasa.gov/resource/mastcam-zs-first-martian-sunset/",
+    "original_date": "2021-11-17",
+    "classification": "evergreen",
+    "claim": "Martian sunsets can show a blue glow because fine atmospheric dust lets blue light penetrate more efficiently than longer wavelengths. NASA rover imagery documents the effect.",
+    "caveat": "Do not imply the entire sky is blue or every sunset equally vivid; the linked image has a muted blue effect because of less dust."
+  },
+  "optional_checks": {
+    "insurance": "Sapiens announcement dated 6 October was excluded despite later syndication. Experian acquisition full-page access returned 403; Moody’s survey original was not located. No insufficiently verified item included."
+  },
+  "history_review": {
+    "note": "Selected underlying events and concepts checked against available delivered history, repository archives, companion reports and learning logs. The completed Mumbai meeting is explicitly a material follow-up to a visit preview. No new global exhaustive-monitoring claim."
+  }
+}

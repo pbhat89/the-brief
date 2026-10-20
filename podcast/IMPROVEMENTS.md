@@ -72,3 +72,8 @@ Success measures: private chapter measurements, source-backed Singapore story ID
 ## Observed editorial outcome · 20 October 2026
 
 The revised structure produced three substantive Singapore stories, 19.3 seconds of conditions, a 56.8-second expert lesson and a 15.3-second ending. The 7:53 edition deliberately avoided padding. The first Big Technology catch-up slot and Karpathy input-inspection concept are now recorded as used after verified publication/delivery. Next proposed improvement: rotate X coverage toward unvisited profiles without resetting their earlier catch-up windows. Phone playback and listener satisfaction remain separate checks.
+
+
+## Audible structure and intuition · 21 October 2026
+
+Observed feedback: both news and topic podcasts sounded disconnected; technical explanations needed simpler examples and clearer business relevance. Apply a brief roadmap, explicit spoken section transitions and rendered pauses, with intuition → example → business application → technical nuance. Success measures for the next edition are inspected script transitions, actual chapter-silence measurements and accessible examples; these do not themselves prove listener satisfaction. Preserve concise conditions and ending budgets, source caveats and no-padding rules. No retroactive audio regeneration is implied.

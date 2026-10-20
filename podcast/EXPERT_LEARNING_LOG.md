@@ -50,3 +50,7 @@ node --test podcast/validate-expert-learning.test.mjs
 ```
 
 These checks reject duplicate concept IDs and normalized aliases, missing original-source provenance, contradictory candidate/coverage states, inconsistent dates, repeat podcast uses and obvious private URL patterns. They cannot prove source accuracy, actual narration, absence of personal data, semantic novelty or full historical coverage. Review those editorially. Validate again after every update.
+
+## Source review, 21 October 2026
+
+Re-read LeCun and Misra’s original 4 March 2021 self-supervised-learning article. The hidden-input-prediction concept was compared semantically with available delivered history through 20 October, companion reports and upstream archives. No matching underlying lesson was found; the existing concept is now `reviewed_no_match`, not a new concept or a recorded use. Its source date remains evergreen. Separate the authors’ explanation from the editorial business application, and do not equate general pretraining with validated task performance. Global historical-import gaps remain unchanged. No publication or narration is established by this review.
