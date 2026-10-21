@@ -1,6 +1,6 @@
 {
   "run_id": "morning-2026-10-22",
-  "updated_at": "2026-10-21T23:20:28.014860+00:00",
+  "updated_at": "2026-10-21T23:28:11.749555Z",
   "previous_run": {
     "run_id": "morning-2026-10-21",
     "state": "completed",
@@ -11,50 +11,50 @@
       "id": "history",
       "label": "History and operational feedback",
       "state": "completed",
-      "updated_at": "2026-10-21T23:15:03.421935+00:00",
+      "updated_at": "2026-10-21T23:28:11.749555Z",
       "detail": "Twelve delivered editions, current repository policies and latest editorial feedback reviewed."
     },
     {
       "id": "upstream",
       "label": "Same-day upstream intake",
       "state": "completed",
-      "updated_at": "2026-10-21T23:15:03.421935+00:00",
+      "updated_at": "2026-10-21T23:28:11.749555Z",
       "detail": "Same-day HTML and JSON available:35 items including5 sports. All items are being reconciled for verified coverage or explicit exclusions."
     },
     {
       "id": "research",
       "label": "Source research and deduplication",
       "state": "completed",
-      "updated_at": "2026-10-21T23:20:28.014860+00:00",
+      "updated_at": "2026-10-21T23:28:11.749555Z",
       "detail": "All35 upstream items reconciled:27 verified items retained,8 duplicates/stale items excluded;1 additional AI item. All5 sports accounted for;4 retained. Bounded source-access gaps retained."
     },
     {
       "id": "script",
       "label": "Narrative preparation",
       "state": "completed",
-      "updated_at": "2026-10-21T23:20:28.014860+00:00",
+      "updated_at": "2026-10-21T23:28:11.749555Z",
       "detail": "Twelve clear sections; each news item a headline plus one factual context line. Learning separates source claims from examples."
     },
     {
       "id": "audio",
       "label": "Private narration checks",
-      "state": "running",
-      "updated_at": "2026-10-21T23:20:28.014860+00:00",
-      "detail": "Private narration rendering; publication and delivery are not yet verified."
+      "state": "completed",
+      "updated_at": "2026-10-21T23:28:11.749555Z",
+      "detail": "Private narration measured and decoded successfully; clipping and inter-section silence checks passed."
     },
     {
       "id": "publication",
       "label": "Public report publication",
-      "state": "pending",
-      "updated_at": "2026-10-21T23:15:03.421935+00:00",
-      "detail": "Awaiting verified completion."
+      "state": "completed",
+      "updated_at": "2026-10-21T23:28:11.749555Z",
+      "detail": "Public report and authorized private audio publication verified; seven-day expiry interval confirmed."
     },
     {
       "id": "delivery",
       "label": "Private episode delivery",
-      "state": "pending",
-      "updated_at": "2026-10-21T23:15:03.421935+00:00",
-      "detail": "Awaiting verified completion."
+      "state": "completed",
+      "updated_at": "2026-10-21T23:28:11.749555Z",
+      "detail": "Combined delivery accepted. Device playback and elapsed expiry remain unverified."
     }
   ]
 }

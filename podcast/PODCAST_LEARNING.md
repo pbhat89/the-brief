@@ -53,3 +53,8 @@ The required prepublication command is `node podcast/validate-editorial.mjs --au
 ## Coverage reconciliation, 21 October 2026
 
 The fixed catch-up queue’s second episode, Kevin Roose’s original 15 October conversation, was published and included in the accepted combined delivery for 21 October. The distinct recap concerns shared conviction and organisational alignment, explicitly treating Roose’s view as interpretation and separating an illustrative business application. The third-party transcript provenance and limitations remain recorded. The newer Sundar Pichai original, published 20 October at 17:18 UTC, remains pending and unsummarized; the fixed three-episode seed has not been changed. Publication evidence is in the sanitized ledger, without private playback or delivery references.
+
+
+## Coverage reconciliation, 22 October 2026
+
+The fixed catch-up queue's third original, published 9 October at 16:51 UTC, was included in the accepted combined edition. The selected actual transcript at 30:01–32:54 concerns general-purpose assistants versus workflow specialization; the business example was explicitly editorial. Third-party transcription caveats remain. The three-item seed is unchanged and now completed. The newer Pichai original remains pending and unsummarized; subsequent selection must check for newly released unseen qualifying originals, not re-seed the catch-up queue.

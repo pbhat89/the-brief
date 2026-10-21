@@ -242,11 +242,18 @@
       "takeaway": "Naval frames accountability as accepting criticism and the possibility of failure; he says it can be practiced within an existing career.",
       "editorial_application": "For a team experiment, state who owns the outcome and how mistakes will be reviewed. This is an editorial application.",
       "caveat": "Personal business philosophy. Accountability should not be equated with blame, public humiliation or taking unapproved risks.",
-      "status": "researched_candidate",
-      "dedup_review": "reviewed_no_match",
-      "last_used": null,
-      "last_narrated": null,
-      "uses": []
+      "status": "narrated",
+      "dedup_review": "covered",
+      "last_used": "2026-10-22",
+      "last_narrated": "2026-10-22",
+      "uses": [
+        {
+          "date": "2026-10-22",
+          "channel": "podcast",
+          "public_evidence_url": "https://github.com/pbhat89/the-brief/blob/main/podcast/reports/2026-10-22.sources.json",
+          "confirmation": "Final delivered narration contains the source-backed accountability lesson, with the illustrative application explicitly separated from the original claim. Public evidence records provenance only."
+        }
+      ]
     },
     {
       "concept_id": "long-term-repeatable-work",

@@ -58,3 +58,8 @@ Re-read LeCun and Misra’s original 4 March 2021 self-supervised-learning artic
 ### Confirmed use, 21 October 2026
 
 Following verified report publication and accepted combined delivery, `self-supervision-from-data-structure` is recorded as narrated on 21 October. The lesson explains hidden-input prediction, separately applying the distinction between broad pretraining and actual-workflow validation. It is no longer an unused candidate. Earlier source review above records the prepublication state; all other concepts and uses remain unchanged.
+
+
+## Coverage reconciliation, 22 October 2026
+
+Naval Ravikant's evergreen 21 June 2019 accountability lesson was included in the verified, accepted combined edition. The application to outcome ownership and review was explicitly separated from his original claim. The concept is now narrated, not an unused candidate; private delivery references are retained outside this repository.

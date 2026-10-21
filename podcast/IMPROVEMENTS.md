@@ -91,3 +91,10 @@ Latest listener feedback supersedes deeper treatment of news items: each NEWS it
 Use the same-day upstream HTML as a complete intake checklist, including every sports item. Account for every item as covered, materially updated, duplicate, stale or insufficiently verified with evidence and a reason; do not arbitrarily choose one of several sports stories. The checklist does not override factual verification, date accuracy or permanent delivered-event dedup. If upstream is absent, use only its format and independently verify current reporting. Do not regenerate delivered audio merely for this wording change.
 
 Success measures: news-item sentence counts, absence of assistant commentary in news, and a complete upstream disposition checklist checked against rendered coverage. Listener approval remains separate from these mechanical measures.
+
+
+### Verification after the 22 October edition
+
+Completed and checked: all 35 upstream entries have explicit dispositions; 28 spoken news items each use a headline plus one factual context line, with no assistant takes. Twelve sections have measured audible breaks. The report catalogue was regenerated and deployment verified. Catch-up and expert delivery states were advanced only after accepted combined delivery. A missing source-audit cursor mapping was corrected to preserve the six actual bounded observation times; these do not clear full-window gaps.
+
+Observed limitation: measured written-word pace is lower for number-heavy chapters because narration expands digits. Proposed, not implemented: compare expanded spoken counts with measured duration before changing pace. Also rotate bounded profile sampling without erasing previous source gaps. Do not extend an edition merely to meet a nominal length, or regenerate a delivered recording for wording alone.

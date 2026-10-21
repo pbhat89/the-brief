@@ -912,5 +912,55 @@
       "No narration or frozen AI-event changes."
     ]
   },
-  "ai_profile_observation_cursors": []
+  "ai_profile_observation_cursors": [
+    {
+      "handle": "RichardSocher",
+      "observed_at": "2026-10-22T07:15:33+08:00",
+      "requested_window_start": "2026-10-21T07:08:00+08:00",
+      "scope": "Visible public-profile snapshot only, not an exhaustive timeline or full-window clearance.",
+      "full_window_verified": false,
+      "advance_global_cutoff": false
+    },
+    {
+      "handle": "alexandr_wang",
+      "observed_at": "2026-10-22T07:15:33+08:00",
+      "requested_window_start": "2026-10-21T07:08:00+08:00",
+      "scope": "Visible public-profile snapshot only, not an exhaustive timeline or full-window clearance.",
+      "full_window_verified": false,
+      "advance_global_cutoff": false
+    },
+    {
+      "handle": "alexalbert__",
+      "observed_at": "2026-10-22T07:16:01+08:00",
+      "requested_window_start": "2026-10-21T07:08:00+08:00",
+      "scope": "Visible public-profile snapshot only, not an exhaustive timeline or full-window clearance.",
+      "full_window_verified": false,
+      "advance_global_cutoff": false
+    },
+    {
+      "handle": "GoogleDeepMind",
+      "observed_at": "2026-10-22T07:16:01+08:00",
+      "requested_window_start": "2026-10-21T07:08:00+08:00",
+      "scope": "Visible public-profile snapshot only, not an exhaustive timeline or full-window clearance.",
+      "full_window_verified": false,
+      "advance_global_cutoff": false
+    },
+    {
+      "handle": "OpenAI",
+      "observed_at": "2026-10-22T07:16:24+08:00",
+      "requested_window_start": "2026-10-21T07:08:00+08:00",
+      "scope": "Visible public-profile snapshot only, not an exhaustive timeline or full-window clearance.",
+      "full_window_verified": false,
+      "advance_global_cutoff": false
+    },
+    {
+      "handle": "AnthropicAI",
+      "observed_at": "2026-10-22T07:16:24+08:00",
+      "requested_window_start": "2026-10-21T07:08:00+08:00",
+      "scope": "Visible public-profile snapshot only, not an exhaustive timeline or full-window clearance.",
+      "full_window_verified": false,
+      "advance_global_cutoff": false
+    }
+  ],
+  "ai_partial_research_checkpoint_sgt": "2026-10-22T07:16:40+08:00"
 }

@@ -2,7 +2,7 @@
   "version": 1,
   "timezone": "Asia/Singapore",
   "daily_limit": 1,
-  "updated_at": "2026-10-21T23:16:37.106556+00:00",
+  "updated_at": "2026-10-21T23:28:11.749555Z",
   "catchup": {
     "initialized_at": "2026-10-19T00:21:00Z",
     "limit": 3,
@@ -129,9 +129,9 @@
         "contribution": "Distinct educational debate about shared software components versus task-specific agent design. Avoids prior financial-metric recap, Oct15 AGI-failure lesson and repeated episode news. Specialized-model news previously covered is not repeated as a headline.",
         "reviewed_at": "2026-10-21T23:16:37.106556+00:00"
       },
-      "status": "pending",
+      "status": "published",
       "status_reason": null,
-      "publication_id": null
+      "publication_id": "2026-10-22"
     },
     {
       "episode_id": "big-technology:5a1b2336-cca8-11f1-9844-a3a2a08c94a2",
@@ -186,6 +186,18 @@
       "verified_at": "2026-10-20T23:20:31.344844Z",
       "confirmation": "Public report fetched and verified at 23:16:56 UTC against the stated content hash and revision; final combined delivery accepted at 23:20:31 UTC. Selected transcript-based recap confirmed in the delivered edition.",
       "date_sgt": "2026-10-21",
+      "show": "big-technology"
+    },
+    {
+      "publication_id": "2026-10-22",
+      "episode_id": "big-technology:797a2b74-c400-11f1-baca-c7e0f44bb120",
+      "status": "verified_published",
+      "output_url": "https://pbhat89.github.io/the-brief/podcast/reports/2026-10-22.html",
+      "revision": "2c44f423b66b5e94859e65d0e973d1a6551eb3c5",
+      "content_sha256": "47516be08d3e814b898fc2dc2c4d01ea4a2c20a8308dbc9952388799af2fd992",
+      "verified_at": "2026-10-21T23:28:11.749555Z",
+      "confirmation": "Live public report verified by HTTP 200 and exact content hash; selected transcript-based learning was included in the accepted combined delivery. Private delivery evidence remains outside this repository.",
+      "date_sgt": "2026-10-22",
       "show": "big-technology"
     }
   ]
