@@ -3852,3 +3852,38 @@ is empty until the first run.
 2026-10-20	Japan launches the first mission to return a sample from Mars's moon Phobos	ce133dea	jaxa,mmx,phobos,mars,sample return
 2026-10-20	Plant roots actively grow away from rotting vegetation, a study finds	63401607	plants,roots,saprotropism,science journal
 2026-10-20	Gene therapy with light-sensing proteins partly restores sight in a blindness trial	5176a2aa	optogenetics,retinitis pigmentosa,gene therapy,vision
+2026-10-22	IMDA fines Singtel S$1 million over March mobile outages that hit 720,000 subscribers	9255518f	singtel,imda,fine,march-outages,mobile
+2026-10-22	COE premium for smaller cars climbs to S$132,004, edging past the larger-car category	98efe5b4	coe,category-a,premium,singapore,cars
+2026-10-22	Former SAF captain jailed 17 months for sexually abusing a teenage boy	0a8a780a	saf-captain,chaw-chia-jun,jailed,abuse,singapore
+2026-10-22	Two Singaporean women charged over the alleged abuse of domestic workers	579958e0	domestic-helpers,abuse,charged,singapore,court
+2026-10-22	Singapore and Qatar agree to work towards a strategic partnership on PM Wong's visit	1b8aac96	lawrence-wong,qatar,strategic-partnership,visit,lng
+2026-10-22	Update: India's Supreme Court takes up the mass voter-roll challenge as ~133 million names are struck	d5fc6517	supreme-court,voter-roll,gyanesh-kumar,election-commission,protests
+2026-10-22	Update: Reliance's Jio Platforms opens India's largest rupee IPO as anchor bids top US$26 billion	674a4b8f	jio-platforms,reliance,ipo,ambani,anchor-bids
+2026-10-22	Sitharaman says India's fundamentals are sound as foreign investors pull US$32.5 billion from stocks	d558528a	sitharaman,markets,foreign-investors,equities,outflows
+2026-10-22	Rupee climbs to a six-week high as Jio IPO inflows and RBI measures lift the currency	add22fa9	rupee,dollar,rbi,jio-inflows,currency
+2026-10-22	UK approves the Jackdaw North Sea gas field, reviving a project a court had quashed	748557f1	jackdaw,north-sea,gas-field,approved,uk
+2026-10-22	UK inflation jumps to 3.5% in September, hardening Bank of England rate-hike expectations	f2e21600	inflation,cpi,bank-of-england,september,fuel
+2026-10-22	Chancellor Healey rules out a capital-gains-tax rise in the 28 October Budget	67e2c3db	healey,budget,capital-gains-tax,chancellor,bank-levy
+2026-10-22	Bank of England's Greene urges a November rate rise as officials split over inflation risk	85d27578	greene,bank-of-england,rate-rise,breeden,mpc
+2026-10-22	Putin agrees 'in principle' to resume three-way Ukraine peace talks after meeting US envoy Witkoff	4128fe73	putin,witkoff,ukraine,peace-talks,hubbard
+2026-10-22	UN food agency halves Gaza rations and cuts those it feeds to 1.1 million	62ca0a95	gaza,wfp,food-rations,hunger,un
+2026-10-22	Israel heads to its 27 October election with polls pointing to a stalemate	6cc1f23c	israel,election,netanyahu,eisenkot,knesset
+2026-10-22	Iran rules out surrendering its enriched-uranium stockpile as tensions rise	e9257a0e	iran,uranium,enrichment,iaea,tensions
+2026-10-22	Nvidia releases new open-weight 'Nemotron' models for enterprise and on-device AI agents	ef89a932	nvidia,nemotron,open-models,ai-agents,launch
+2026-10-22	Recursive launches Flint, a free laptop-sized coding model it says was largely built by AI	7602405d	recursive,flint,coding-model,hugging-face,ai
+2026-10-22	Nscale nears a ~US$45 billion deal to supply Anthropic computing power from West Virginia	b0571e2f	nscale,anthropic,data-center,west-virginia,compute
+2026-10-22	Meta lifts its 2026 AI capital-spending outlook to as much as US$145 billion	952233bf	meta,ai-capex,earnings,spending,q3
+2026-10-22	Tesla tops Q3 estimates but net profit falls 29% as car prices slip	91cdb7f0	tesla,q3-earnings,net-income,revenue,musk
+2026-10-22	Musk says Tesla and SpaceX form committees to explore a merger	5f6b0a15	musk,tesla,spacex,merger,committees
+2026-10-22	Netflix beats on Q3 profit but shares fall about 7% on a trimmed outlook	a46986d5	netflix,q3-earnings,revenue,shares-fall,guidance
+2026-10-22	IBM beats Q3 estimates on software strength	7a90e8c7	ibm,q3-earnings,software,revenue,beat
+2026-10-22	Traders expect the Fed to hold rates at its 27-28 October meeting	a47794cd	federal-reserve,interest-rates,fomc,hold,yields
+2026-10-22	Antonelli can clinch his first F1 title at this weekend's US Grand Prix	020df072	antonelli,f1,us-grand-prix,championship,mercedes
+2026-10-22	Pakistan beat England by 87 runs in their ODI tri-series clash in Rawalpindi	801374c7	pakistan,england,odi,tri-series,rawalpindi
+2026-10-22	India Women complete a 3-0 T20I sweep of Zimbabwe Women	00a3f07a	india-women,zimbabwe-women,t20i,sweep,harmanpreet
+2026-10-22	Tsitsipas and Khachanov advance at the Almaty Open	5d2405ba	tsitsipas,khachanov,almaty-open,atp,tennis
+2026-10-22	Quarter-finals take shape at the WTA Ningbo Open	e7173b1b	ningbo-open,wta,quarterfinals,badosa,tennis
+2026-10-22	Expedition to a remote Pacific island finds no fresh clues to Amelia Earhart's plane	d105d49c	amelia-earhart,nikumaroro,expedition,plane,pacific
+2026-10-22	A Neanderthal at Shanidar Cave may have been killed by a spear 75,000 years ago	cce24837	neanderthal,shanidar,spear,iraq,archaeology
+2026-10-22	A new extinct crocodile is identified in the limestone that built the Great Sphinx	7fbcb012	herugavialis,crocodile,great-sphinx,fossil,egypt
+2026-10-22	A strengthening 'super' El Nino is on track to set an all-time intensity record	b1fb7c1c	el-nino,ocean-temperature,record,noaa,climate

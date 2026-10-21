@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-08-22",
-      "topic_key": "anglo-zanzibar war",
-      "text": "The shortest war in history, the Anglo-Zanzibar War of 1896, lasted about 38 minutes."
-    },
-    {
       "date": "2026-08-23",
       "topic_key": "neutron star",
       "text": "A teaspoon of neutron-star material would weigh about a billion tonnes."
@@ -264,14 +259,14 @@
       "date": "2026-10-20",
       "topic_key": "wombat",
       "text": "Wombats are the only animals that produce cube-shaped droppings"
+    },
+    {
+      "date": "2026-10-22",
+      "topic_key": "cleopatra",
+      "text": "Cleopatra lived closer in time to the Moon landing than to the building of the Great Pyramid."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-09-21",
-      "type": "quantitative",
-      "title_key": "count-the-pages"
-    },
     {
       "date": "2026-09-22",
       "type": "lateral",
@@ -416,14 +411,14 @@
       "date": "2026-10-20",
       "type": "lateral",
       "title_key": "lift-that-stops-early"
+    },
+    {
+      "date": "2026-10-22",
+      "type": "visual",
+      "title_key": "roll-with-it"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-09-21",
-      "type": "anagram",
-      "title_key": "head-of-the-class"
-    },
     {
       "date": "2026-09-22",
       "type": "spellingbee",
@@ -568,6 +563,11 @@
       "date": "2026-10-20",
       "type": "ladder",
       "title_key": "daily-bread"
+    },
+    {
+      "date": "2026-10-22",
+      "type": "anagram",
+      "title_key": "mixed-messages"
     }
   ]
 }
