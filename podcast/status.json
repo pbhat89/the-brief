@@ -19,14 +19,14 @@
       "label": "Same-day upstream intake",
       "state": "completed",
       "updated_at": "2026-10-21T23:28:11.749555Z",
-      "detail": "Same-day HTML and JSON available:35 items including5 sports. All items are being reconciled for verified coverage or explicit exclusions."
+      "detail": "Same-day HTML and JSON available: 35 items including five sports. Every item has a verified-coverage or explicit-exclusion disposition."
     },
     {
       "id": "research",
       "label": "Source research and deduplication",
       "state": "completed",
       "updated_at": "2026-10-21T23:28:11.749555Z",
-      "detail": "All35 upstream items reconciled:27 verified items retained,8 duplicates/stale items excluded;1 additional AI item. All5 sports accounted for;4 retained. Bounded source-access gaps retained."
+      "detail": "All 35 upstream items reconciled: 27 retained, eight duplicates/stale items excluded; one additional AI item. All five sports accounted for; four retained. Bounded source-access gaps preserved."
     },
     {
       "id": "script",
