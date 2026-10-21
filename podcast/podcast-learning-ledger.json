@@ -2,7 +2,7 @@
   "version": 1,
   "timezone": "Asia/Singapore",
   "daily_limit": 1,
-  "updated_at": "2026-10-20T23:20:31.344844Z",
+  "updated_at": "2026-10-21T23:16:37.106556+00:00",
   "catchup": {
     "initialized_at": "2026-10-19T00:21:00Z",
     "limit": 3,
@@ -118,14 +118,16 @@
         "body_retrieved": true,
         "source_url": "https://podscripts.co/podcasts/big-technology-podcast/meta-microsofts-claude-slowdown-his-agent-leaked-his-banking-info-dont-bully-your-ai",
         "provenance": "third-party-transcription",
-        "checked_at": "2026-10-19T00:21:00Z",
-        "access_note": "Public Podscripts transcription body spans intro to sign-off. Not publisher-approved. Recheck access each selected SGT day."
+        "checked_at": "2026-10-21T23:16:37.106556+00:00",
+        "access_note": "Actual third-party transcript body read again on October22 SGT, especially30:01–32:54. Transcription contains name errors; no uncertain names or direct quotations used. Host debate is not an established product-performance finding."
       },
       "dedup_review": {
-        "status": "pending",
-        "story_keys": [],
-        "contribution": null,
-        "reviewed_at": null
+        "status": "distinct_contribution",
+        "story_keys": [
+          "bigtech-20261009-general-agent-versus-workflow-specialization"
+        ],
+        "contribution": "Distinct educational debate about shared software components versus task-specific agent design. Avoids prior financial-metric recap, Oct15 AGI-failure lesson and repeated episode news. Specialized-model news previously covered is not repeated as a headline.",
+        "reviewed_at": "2026-10-21T23:16:37.106556+00:00"
       },
       "status": "pending",
       "status_reason": null,

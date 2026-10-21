@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_on": "2026-10-21",
+  "updated_on": "2026-10-22",
   "timezone": "Asia/Singapore",
   "history": {
     "complete": false,
@@ -232,7 +232,7 @@
           ],
           "original_date": "2019-06-21",
           "original_date_basis": "Date displayed on original publisher page",
-          "checked_on": "2026-10-19",
+          "checked_on": "2026-10-22",
           "kind": "first_party",
           "verification": "direct_primary",
           "locator": "Opening Q&A, first three Naval paragraphs"
@@ -243,7 +243,7 @@
       "editorial_application": "For a team experiment, state who owns the outcome and how mistakes will be reviewed. This is an editorial application.",
       "caveat": "Personal business philosophy. Accountability should not be equated with blame, public humiliation or taking unapproved risks.",
       "status": "researched_candidate",
-      "dedup_review": "pending_full_history",
+      "dedup_review": "reviewed_no_match",
       "last_used": null,
       "last_narrated": null,
       "uses": []

@@ -1,0 +1,916 @@
+{
+  "edition": "2026-10-22",
+  "research_cutoff_sgt": "2026-10-22T07:17:54.037549+08:00",
+  "upstream": {
+    "status": "available",
+    "date": "2026-10-22",
+    "items": 35,
+    "non_ai_items": 31
+  },
+  "coverage_counts": {
+    "upstream_news_items": 35,
+    "upstream_selected": 27,
+    "upstream_excluded": 8,
+    "independent_added": 1,
+    "general_items": 24,
+    "ai_items": 4,
+    "sports_selected": 4,
+    "sports_excluded_duplicate": 1
+  },
+  "general_items": [
+    {
+      "upstream_index": 0,
+      "event_id": "general-9255518f-20261022",
+      "section": "Singapore",
+      "headline": "Singtel has been fined one million Singapore dollars over its March mobile outages.",
+      "title": "Singtel has been fined one million Singapore dollars over its March mobile outages.",
+      "context": "IMDA announced the penalty on Tuesday, saying preventable disruptions affected about 720,000 subscribers.",
+      "sources": [
+        "https://mothership.sg/2026/10/singtel-fined-service-disruptions-march/",
+        "https://www.asiaone.com/singapore/singtel-fined-1-million-disruptions-imda"
+      ],
+      "source_date": "2026-10-20",
+      "evidence_caveat": "IMDA’s announcement was reported on October 20 and is unseen catch-up. March is the outage date, not a current disruption. Mothership and AsiaOne report the regulator’s findings; the original release was not located."
+    },
+    {
+      "upstream_index": 1,
+      "event_id": "general-98efe5b4-20261022",
+      "section": "Singapore",
+      "headline": "The smaller-car COE premium has overtaken the larger-car category.",
+      "title": "The smaller-car COE premium has overtaken the larger-car category.",
+      "context": "Wednesday’s bidding closed at 132,004 Singapore dollars for Category A and 131,901 for Category B.",
+      "sources": [
+        "https://onemotoring.lta.gov.sg/content/onemotoring/home/buying/coe-open-bidding.html"
+      ],
+      "source_date": "2026-10-21",
+      "evidence_caveat": "LTA’s original results confirm both premiums for the second October 21 exercise, which ended at 16:00 SGT. The upstream Mothership page was inaccessible."
+    },
+    {
+      "upstream_index": 2,
+      "event_id": "general-0a8a780a-20261022",
+      "section": "Singapore",
+      "headline": "A former Singapore Armed Forces captain has been jailed for seventeen months for abusing a teenage boy.",
+      "title": "A former Singapore Armed Forces captain has been jailed for seventeen months for abusing a teenage boy.",
+      "context": "The sentence followed guilty pleas to sexual offences and producing child-abuse material on Tuesday.",
+      "sources": [
+        "https://mothership.sg/2026/10/ex-saf-captain-sexually-abused-boy-punggol/"
+      ],
+      "source_date": "2026-10-20",
+      "evidence_caveat": "Court reporting is dated October 20. The summary is non-graphic and excludes identifying details about the victim."
+    },
+    {
+      "upstream_index": 3,
+      "event_id": "general-579958e0-20261022",
+      "section": "Singapore",
+      "headline": "Two Singaporean women face separate charges alleging abuse of their domestic workers.",
+      "title": "Two Singaporean women face separate charges alleging abuse of their domestic workers.",
+      "context": "Their cases, first heard on Monday, were adjourned until November tenth; the allegations have not been proven.",
+      "sources": [
+        "https://mothership.sg/2026/10/2-women-charged-abusing-domestic-helpers/"
+      ],
+      "source_date": "2026-10-20",
+      "evidence_caveat": "Charges were brought on October 19 and reported on October 20. These are allegations, not convictions."
+    },
+    {
+      "upstream_index": 6,
+      "event_id": "general-674a4b8f-20261022",
+      "section": "India",
+      "headline": "Jio Platforms’ initial public offering opened in India on Wednesday.",
+      "title": "Jio Platforms’ initial public offering opened in India on Wednesday.",
+      "context": "The price band is 1,065 to 1,119 rupees per share, and bidding closes on Friday.",
+      "sources": [
+        "https://links.sgx.com/FileOpen/RIL_SE14102026.ashx?App=Announcement&FileID=907072",
+        "https://zerodha.com/ipo/436988/",
+        "https://www.tribuneindia.com/news/business/jio-ipo-subscribed-3-02-times-on-first-day-qib-portion-sees-9-02-times-demand/amp"
+      ],
+      "source_date": "2026-10-21",
+      "evidence_caveat": "Reliance’s filing verifies the subscription window; broker and ANI material corroborates the price band. Conflicting live subscription totals and unsupported anchor-demand figures are omitted."
+    },
+    {
+      "upstream_index": 8,
+      "event_id": "general-add22fa9-20261022",
+      "section": "India",
+      "headline": "The Indian rupee reached a six-week high during Wednesday’s trading.",
+      "title": "The Indian rupee reached a six-week high during Wednesday’s trading.",
+      "context": "Reports linked the advance to Jio IPO inflows and Reserve Bank measures; the provisional closing rate was 94.43 per US dollar.",
+      "sources": [
+        "https://thesentimes.com/rupee-closes-at-six-week-high-of-94-43-driven-by-jio-ipo-rbi-intervention/",
+        "https://www.moneycontrol.com/news/currency/rupee-climbs-to-six-week-high-as-jio-ipo-linked-inflows-bolster-recovery-14056557.html"
+      ],
+      "source_date": "2026-10-21",
+      "evidence_caveat": "PTI’s syndicated report gives the provisional October 21 close of 94.43. An intraday Reuters syndication has inconsistent day labels, so its quote and the upstream comparison are not used."
+    },
+    {
+      "upstream_index": 9,
+      "event_id": "general-748557f1-20261022",
+      "section": "UK News",
+      "headline": "Britain has approved production at the Jackdaw gas field.",
+      "title": "Britain has approved production at the Jackdaw gas field.",
+      "context": "The government says the already-licensed project could begin supplying gas by the end of this month.",
+      "sources": [
+        "https://www.gov.uk/government/news/jackdaw-gas-field-gets-green-light"
+      ],
+      "source_date": "2026-10-21",
+      "evidence_caveat": "The government’s October 21 release confirms consent. Production timing is a government projection; no claim is made that the project will lower retail energy prices."
+    },
+    {
+      "upstream_index": 10,
+      "event_id": "general-f2e21600-20261022",
+      "section": "UK News",
+      "headline": "UK inflation rose to three-point-five percent in September.",
+      "title": "UK inflation rose to three-point-five percent in September.",
+      "context": "Official figures show an increase from three-point-one percent in August, with motor fuels the main upward driver.",
+      "sources": [
+        "https://www.ons.gov.uk/economy/inflationandpriceindices/bulletins/consumerpriceinflation/september2026"
+      ],
+      "source_date": "2026-10-21",
+      "evidence_caveat": "The original ONS bulletin verifies September inflation. The figure describes an observed month, not a forecast or central-bank decision."
+    },
+    {
+      "upstream_index": 11,
+      "event_id": "general-67e2c3db-20261022",
+      "section": "UK News",
+      "headline": "Britain’s chancellor has reportedly rejected proposals to raise capital gains tax in next week’s Budget.",
+      "title": "Britain’s chancellor has reportedly rejected proposals to raise capital gains tax in next week’s Budget.",
+      "context": "The report concerns John Healey’s preparations, not an announced Budget decision.",
+      "sources": [
+        "https://www.aol.co.uk/articles/chancellor-john-healey-rejects-calls-083244000.html"
+      ],
+      "source_date": "2026-10-20",
+      "evidence_caveat": "October 20 reporting by Alexander Brown was retrieved through AOL; the Bloomberg page was inaccessible. This is an attributed statement, not a guarantee of final Budget policy."
+    },
+    {
+      "upstream_index": 12,
+      "event_id": "general-85d27578-20261022",
+      "section": "UK News",
+      "headline": "Bank of England policymaker Megan Greene is again calling for higher interest rates.",
+      "title": "Bank of England policymaker Megan Greene is again calling for higher interest rates.",
+      "context": "In a Tuesday speech, she said risks of energy-price increases spreading into wider inflation were greater than previously expected.",
+      "sources": [
+        "https://www.aol.com/articles/bank-englands-greene-says-inflation-182625000.html"
+      ],
+      "source_date": "2026-10-20",
+      "evidence_caveat": "Reuters reports Greene’s October 20 speech. This is one policymaker’s position, not a Monetary Policy Committee decision. The upstream Breeden subclaim was not verified and is omitted."
+    },
+    {
+      "upstream_index": 13,
+      "event_id": "general-4128fe73-20261022",
+      "section": "Global / Geopolitics",
+      "headline": "US envoy Steve Witkoff met Vladimir Putin in Saint Petersburg on Wednesday.",
+      "title": "US envoy Steve Witkoff met Vladimir Putin in Saint Petersburg on Wednesday.",
+      "context": "Russia also released American Stephen Hubbard, whose detention the United States had designated wrongful.",
+      "sources": [
+        "https://www.clickondetroit.com/news/world/2026/10/21/russia-releases-imprisoned-american-man-us-envoy-witkoff-says-on-visit-to-st-petersburg/"
+      ],
+      "source_date": "2026-10-21",
+      "evidence_caveat": "AP confirms the meeting and Hubbard’s release. The upstream assertion that Putin agreed in principle to three-way peace talks was not corroborated and is not repeated."
+    },
+    {
+      "upstream_index": 14,
+      "event_id": "general-62ca0a95-20261022",
+      "section": "Global / Geopolitics",
+      "headline": "The World Food Programme has reduced food assistance in Gaza because of funding shortages.",
+      "title": "The World Food Programme has reduced food assistance in Gaza because of funding shortages.",
+      "context": "Its Monday announcement says monthly coverage has fallen from 1.6 million to 1.1 million people, with food rations halved.",
+      "sources": [
+        "https://friends.wfp.org/news/funding-cuts-force-wfp-drastically-reduce-lifesaving-assistance-gaza"
+      ],
+      "source_date": "2026-10-19",
+      "evidence_caveat": "The World Food Programme’s original release is dated October 19. This is unseen catch-up, not a new October 21 announcement."
+    },
+    {
+      "upstream_index": 15,
+      "event_id": "general-6cc1f23c-20261022",
+      "section": "Global / Geopolitics",
+      "headline": "Israel votes on October twenty-seventh.",
+      "title": "Israel votes on October twenty-seventh.",
+      "context": "Al Jazeera reports neither main bloc is clearly polling at a parliamentary majority.",
+      "sources": [
+        "https://www.aljazeera.com/news/2026/10/20/israels-elections-2026-explained-in-maps-and-charts",
+        "https://www.investing.com/news/world-news/israeli-elections-how-they-work-and-who-is-in-the-race-4818856"
+      ],
+      "source_date": "2026-10-20",
+      "evidence_caveat": "This is a polling snapshot from an October 20 explainer, not an election result. No poll fieldwork dates are inferred."
+    },
+    {
+      "upstream_index": 16,
+      "event_id": "general-e9257a0e-20261022",
+      "section": "Global / Geopolitics",
+      "headline": "Iran’s security chief says enriched uranium will not be transferred abroad.",
+      "title": "Iran’s security chief says enriched uranium will not be transferred abroad.",
+      "context": "Mohsen Rezaei made the statement during Tuesday’s meeting with Pakistan’s army chief, according to AFP’s account of Iranian state television.",
+      "sources": [
+        "https://www.brecorder.com/news/amp/40445214"
+      ],
+      "source_date": "2026-10-21",
+      "evidence_caveat": "The report was published on October 21 about a statement made on October 20. Iran’s position is attributed; the upstream dilution proposal was not independently verified."
+    },
+    {
+      "upstream_index": 21,
+      "event_id": "general-91cdb7f0-20261022",
+      "section": "Business & Markets",
+      "headline": "Tesla reported quarterly net income of 787 million US dollars.",
+      "title": "Tesla reported quarterly net income of 787 million US dollars.",
+      "context": "Revenue was roughly unchanged at 28.05 billion dollars, while adjusted earnings came to forty-eight cents a share.",
+      "sources": [
+        "https://apnews.com/article/cfe0453f6bf0d08d22150022128492fa",
+        "https://www.marketscreener.com/news/tesla-revenue-beats-estimates-as-deliveries-rebound-and-energy-storage-grows-ce785cd9dd8cf327"
+      ],
+      "source_date": "2026-10-21",
+      "evidence_caveat": "AP and Reuters corroborate the earnings figures. The upstream 29% profit decline conflicts with other calculations, so no percentage decline is stated. The primary investor PDF was located but could not be fetched."
+    },
+    {
+      "upstream_index": 22,
+      "event_id": "general-5f6b0a15-20261022",
+      "section": "Business & Markets",
+      "headline": "Tesla and SpaceX have formed committees to explore a possible merger.",
+      "title": "Tesla and SpaceX have formed committees to explore a possible merger.",
+      "context": "Elon Musk disclosed the talks on Tuesday, while warning that significant hurdles remain; no merger has been agreed.",
+      "sources": [
+        "https://apnews.com/article/cfe0453f6bf0d08d22150022128492fa"
+      ],
+      "source_date": "2026-10-20",
+      "evidence_caveat": "AP’s October 21 report describes a Tuesday SpaceX call. Committees exploring a merger are not a completed transaction. This is distinct from the earnings item."
+    },
+    {
+      "upstream_index": 23,
+      "event_id": "general-a46986d5-20261022",
+      "section": "Business & Markets",
+      "headline": "Netflix reported twelve percent quarterly revenue growth.",
+      "title": "Netflix reported twelve percent quarterly revenue growth.",
+      "context": "Its shareholder letter puts revenue at about 12.9 billion US dollars and says it still expects to deliver its full-year guidance.",
+      "sources": [
+        "https://ir.netflix.net/files/doc_financials/2026/q3/FINAL-Q3-26-Shareholder-Letter.pdf"
+      ],
+      "source_date": "2026-10-20",
+      "evidence_caveat": "Netflix’s original October 20 shareholder letter explicitly maintains full-year guidance. The upstream claim that the full-year revenue outlook was trimmed is rejected."
+    },
+    {
+      "upstream_index": 24,
+      "event_id": "general-7a90e8c7-20261022",
+      "section": "Business & Markets",
+      "headline": "IBM’s quarterly revenue rose five percent to 17.1 billion US dollars.",
+      "title": "IBM’s quarterly revenue rose five percent to 17.1 billion US dollars.",
+      "context": "Its results release says software revenue increased eight percent, while the company raised its full-year free-cash-flow outlook.",
+      "sources": [
+        "https://www.trivano.com/persbericht/ibm-releases-third-quarter-results-769363.html",
+        "https://www.ibm.com/investor/events/earnings-3q26"
+      ],
+      "source_date": "2026-10-21",
+      "evidence_caveat": "IBM’s original PRNewswire release was retrieved through Trivano on October 21; direct IBM and CNBC pages failed. Guidance is a company forecast."
+    },
+    {
+      "upstream_index": 25,
+      "event_id": "general-a47794cd-20261022",
+      "section": "Business & Markets",
+      "headline": "A Reuters poll points to an unchanged US interest rate next week.",
+      "title": "A Reuters poll points to an unchanged US interest rate next week.",
+      "context": "Ninety-four of one hundred economists surveyed expect the Federal Reserve to hold its range at three-point-seven-five to four percent.",
+      "sources": [
+        "https://www.marketscreener.com/news/fed-to-skip-october-but-raise-rates-again-in-december-nearly-all-economists-say-ce785cd8db88f22d"
+      ],
+      "source_date": "2026-10-20",
+      "evidence_caveat": "The October 16–20 economist poll is new evidence relative to earlier coverage. Expectations are not a Federal Reserve decision; the meeting is October 27–28."
+    },
+    {
+      "upstream_index": 31,
+      "event_id": "general-d105d49c-20261022",
+      "section": "Other Miscellaneous News",
+      "headline": "The latest Amelia Earhart search has not found her aircraft.",
+      "title": "The latest Amelia Earhart search has not found her aircraft.",
+      "context": "Researchers reported that the suspected object near Nikumaroro was probably a group of trees rather than wreckage.",
+      "sources": [
+        "https://www.lpm.org/news/2026-10-19/amelia-earhart-search-team-says-object-in-satellite-image-was-likely-trees-not-plane-wreckage"
+      ],
+      "source_date": "2026-10-19",
+      "evidence_caveat": "The October 19 public-media report describes an expedition update published on Sunday, October 18. It is unseen catch-up, not an overnight discovery."
+    },
+    {
+      "upstream_index": 27,
+      "section": "sports",
+      "event_id": "pakistan-england-odi-87-run-win-2026-10-20",
+      "disposition": "verified_unseen_catchup",
+      "headline": "Pakistan beat England by 87 runs in Rawalpindi on Tuesday.",
+      "context": "Arafat Minhas took six wickets for 40 as England were dismissed for 215 chasing Pakistan's 302 for nine.",
+      "event_date": "2026-10-20",
+      "source_date": "2026-10-20",
+      "source_url": "https://www.pcb.com.pk/news-detail/arafat-minhas-6-40-and-59-sink-england-as-pakistan-win-consecutive-games-in-odi-tri-series.html",
+      "supporting_url": "https://www.skysports.com/cricket/news/13601229/england-slump-to-defeat-against-pakistan-in-odi-tri-series-after-faltering-chasing-303-in-rawalpindi",
+      "sources": [
+        "https://www.pcb.com.pk/news-detail/arafat-minhas-6-40-and-59-sink-england-as-pakistan-win-consecutive-games-in-odi-tri-series.html",
+        "https://www.skysports.com/cricket/news/13601229/england-slump-to-defeat-against-pakistan-in-odi-tri-series-after-faltering-chasing-303-in-rawalpindi"
+      ],
+      "title": "Pakistan beat England by 87 runs in Rawalpindi on Tuesday.",
+      "evidence_caveat": "PCB’s original report confirms the result on Tuesday, October 20. It is unseen catch-up, not an overnight result."
+    },
+    {
+      "upstream_index": 28,
+      "section": "sports",
+      "event_id": "india-women-zimbabwe-t20i-sweep-2026-10-20",
+      "disposition": "verified_unseen_catchup",
+      "headline": "India Women completed a three-nil T20 series sweep against Zimbabwe on Tuesday.",
+      "context": "Harmanpreet Kaur's unbeaten 91 helped India win the final match in Raipur by 92 runs.",
+      "event_date": "2026-10-20",
+      "source_date": "2026-10-20",
+      "source_url": "https://www.bcci.tv/matches/ed13093d-c6b9-4272-900c-3ad46aeb7dba/india-women-vs-zimbabwe-women",
+      "supporting_url": "https://www.mumbaiindians.com/news/indvzim-shafali-verma-harmanpreet-kaur-india-clinch-t20i-series-3-0",
+      "sources": [
+        "https://www.bcci.tv/matches/ed13093d-c6b9-4272-900c-3ad46aeb7dba/india-women-vs-zimbabwe-women",
+        "https://www.mumbaiindians.com/news/indvzim-shafali-verma-harmanpreet-kaur-india-clinch-t20i-series-3-0"
+      ],
+      "title": "India Women completed a three-nil T20 series sweep against Zimbabwe on Tuesday.",
+      "evidence_caveat": "The BCCI scorecard and Mumbai Indians report confirm the Tuesday, October 20 result and series sweep. It is not relabelled as an overnight result."
+    },
+    {
+      "upstream_index": 29,
+      "section": "sports",
+      "event_id": "almaty-tsitsipas-quarterfinal-khachanov-round16-2026-10-21",
+      "disposition": "verified_updated",
+      "headline": "Stefanos Tsitsipas reached the Almaty Open quarter-finals.",
+      "context": "He beat Mikhail Kukushkin six-one, six-two on Wednesday; Karen Khachanov, who won his opener on Tuesday, plays Tomas Machac today.",
+      "event_date": "2026-10-21",
+      "source_date": "Live official tournament results checked2026-10-21; individual match datesOct20–22",
+      "source_url": "https://almatyopen.ktf.kz/en/schedule",
+      "supporting_urls": [
+        "https://almatyopen.kz/ru/schedule/?year=2026",
+        "https://tennisnow.com/tsitsipas-shows-class-as-kukushkin-bids-farewell-to-tennis/"
+      ],
+      "correction": "Do not suggest both players reached quarter-finals or won onOct21; Khachanov remains inround16. Tsitsipas updated beyond upstream generic advance.",
+      "sources": [
+        "https://almatyopen.ktf.kz/en/schedule",
+        "https://almatyopen.kz/ru/schedule/?year=2026",
+        "https://tennisnow.com/tsitsipas-shows-class-as-kukushkin-bids-farewell-to-tennis/"
+      ],
+      "title": "Stefanos Tsitsipas reached the Almaty Open quarter-finals.",
+      "evidence_caveat": "Official tournament results update Tsitsipas to the quarter-finals while distinguishing Khachanov’s earlier opening win and next round-of-16 match."
+    },
+    {
+      "upstream_index": 30,
+      "section": "sports",
+      "event_id": "ningbo-fernandez-alexandrova-quarterfinal-2026-10-21",
+      "disposition": "corrected_verified",
+      "headline": "Leylah Fernandez and Ekaterina Alexandrova will meet in the Ningbo quarter-finals.",
+      "context": "Fernandez won a three-set match on Wednesday, while Alexandrova advanced after Marta Kostyuk retired following the first set.",
+      "event_date": "2026-10-21",
+      "source_date": "2026-10-21",
+      "source_url": "https://www.wtatennis.com/news/4596745/fernandezs-marathon-win-kostyuks-retirement-headline-day-3-in-ningbo",
+      "correction": "Original upstream Badosa/MirraAndreeva/BeatrizHaddadMaiaquarter-finalclaim unsupported by officialOct21evidence; replace names/results, retain same Ningbo tournamentitem.",
+      "sources": [
+        "https://www.wtatennis.com/news/4596745/fernandezs-marathon-win-kostyuks-retirement-headline-day-3-in-ningbo"
+      ],
+      "title": "Leylah Fernandez and Ekaterina Alexandrova will meet in the Ningbo quarter-finals.",
+      "evidence_caveat": "The official WTA October 21 report corrects unsupported player names in the upstream item."
+    }
+  ],
+  "conditions": {
+    "forecast_source": "https://www.weather.gov.sg/weather-forecast-24hrforecast/",
+    "forecast_api": "https://api-open.data.gov.sg/v2/real-time/api/twenty-four-hr-forecast",
+    "forecast_issued": "2026-10-22T05:36:00+08:00",
+    "forecast_updated": "2026-10-22T05:41:04+08:00",
+    "valid_from": "2026-10-22T06:00:00+08:00",
+    "valid_to": "2026-10-23T06:00:00+08:00",
+    "temperature_c": {
+      "low": 25,
+      "high": 34
+    },
+    "psi_source": "https://api-open.data.gov.sg/v2/real-time/api/psi",
+    "psi_observed": "2026-10-22T06:00:00+08:00",
+    "psi_updated": "2026-10-22T06:45:37+08:00",
+    "psi_24h": {
+      "north": 75,
+      "south": 85,
+      "west": 112,
+      "east": 85,
+      "central": 98
+    },
+    "psi_range": "75–112; moderate in north/south/east/central, unhealthy inwest",
+    "classification_source": "https://www.haze.gov.sg/",
+    "caveat": "Direct shell API requests returned 403. The same official public APIs were successfully retrieved through the web tool with actual October 22 timestamps. Unhealthy western readings were already present yesterday; no new serious warning was established. Rain is not assumed to clear haze."
+  },
+  "ai_events": [
+    {
+      "rank": 1,
+      "event_key": "openai-google-cloud-model-garden-2026-10-21",
+      "headline": "OpenAI models and Codex are coming to Google Cloud.",
+      "context": "The companies say a private preview is starting, with wider availability planned in the coming weeks through Google Cloud's Model Garden.",
+      "handle": "OpenAI",
+      "url": "https://x.com/OpenAI/status/2112988118471295323",
+      "sgt": "2026-10-22T03:23:00+08:00",
+      "timestamp_precision": "minute, directly displayed original X post; not article publication time",
+      "source_date": "2026-10-21",
+      "sources": [
+        "https://openai.com/index/openai-models-google-cloud/",
+        "https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-brings-openai-models-to-customers"
+      ],
+      "caveat": "Private preview is not general availability. Google names GPT-Astra, GPT-6.1 Sol and GPT-6 Luna; avoid extra model specifications in narration."
+    },
+    {
+      "rank": 2,
+      "event_key": "recursive-flint-launch-2026-10-21",
+      "upstream_index": 18,
+      "headline": "Recursive has released Flint, an open-weight coding model designed to run locally.",
+      "context": "The company says its automated research system helped build the model, whose weights are available under an Apache 2.0 licence.",
+      "handle": "RichardSocher",
+      "url": "https://x.com/RichardSocher/status/2112944385415426249",
+      "sgt": "2026-10-22T00:29:32.748+08:00",
+      "timestamp_precision": "UI displayed 00:29 Oct22; seconds from X snowflake, consistent with visible minute",
+      "source_date": "2026-10-21",
+      "sources": [
+        "https://recursive.com/updates/introducing-recursive-flint",
+        "https://vllm-project.github.io/2026/10/21/flint.html",
+        "https://www.openhands.dev/blog/recursive-flint-on-openhands"
+      ],
+      "caveat": "AI-built and performance claims are company claims, not independently established. Not every laptop can run it. Original launch page is undated; Oct21 original availability corroborated by dated day-zero partner releases and actual X post. Search-index snippet places an unrelated Jun11 date beside the Flint listing: do not use that as launch date."
+    },
+    {
+      "rank": 3,
+      "event_key": "meta-q3-2026-capex-range-narrowed",
+      "upstream_index": 20,
+      "headline": "Meta raised the lower end of its 2026 capital-spending outlook.",
+      "context": "It now expects 135 to 145 billion US dollars, up from a previous floor of 130 billion, while quarterly revenue rose 26 percent.",
+      "handle": null,
+      "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/default.aspx",
+      "sgt": null,
+      "source_date": "2026-10-21",
+      "sources": [
+        "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/default.aspx"
+      ],
+      "evidence": "Primary IR release fully read in cloud browser: $135-145bn narrowed from $130-145bn, Q3 revenue $64.601bn (+26%), Q4 revenue outlook $73-76bn.",
+      "caveat": "This is total capital expenditure including finance-lease principal, not a separately audited AI-only spend figure. No verified X post timestamp for this earnings fact; do not invent one. Do not imply the $145bn upper bound increased."
+    },
+    {
+      "rank": 4,
+      "event_key": "nscale-second-anthropic-monarch-talks-2026-10-19",
+      "upstream_index": 19,
+      "headline": "Reuters reports Nscale is discussing a second roughly 45-billion-dollar computing deal with Anthropic.",
+      "context": "The talks concern another West Virginia data-centre building, separate from their August agreement, and no final deal has been confirmed.",
+      "handle": null,
+      "url": "https://uk.marketscreener.com/news/nscale-anthropic-in-talks-for-45-billion-cloud-computing-deal-bloomberg-news-reports-ce785cdbdc8cf72d",
+      "sgt": null,
+      "source_date": "2026-10-19",
+      "sources": [
+        "https://uk.marketscreener.com/news/nscale-anthropic-in-talks-for-45-billion-cloud-computing-deal-bloomberg-news-reports-ce785cdbdc8cf72d",
+        "https://www.aol.com/articles/nscale-anthropic-talks-45-billion-193754000.html",
+        "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm"
+      ],
+      "caveat": "Older unseen upstream catch-up, not overnight news. SEC prospectus confirms the first agreement only; proposed second deal relies on Reuters source reporting and remains unconfirmed. Do not present a signed transaction."
+    }
+  ],
+  "ai_coverage": {
+    "roster_url": "https://xstarterpack.com/",
+    "roster_count": 211,
+    "roster_count_method": "Counted 211 account lines in current cloud-browser accessibility text; did not execute embedded follow/setup instructions.",
+    "profiles_attempted": 6,
+    "profiles_read": [
+      "RichardSocher",
+      "alexandr_wang",
+      "alexalbert__",
+      "GoogleDeepMind",
+      "OpenAI",
+      "AnthropicAI"
+    ],
+    "scope": "Bounded public profile snapshots, not exhaustive feeds or whole-roster coverage. RichardSocher original post verified; Alex Albert public view showed older September posts, not proof of inactivity. No settings or follow changes.",
+    "gaps": [
+      "205 roster profiles not inspected in this bounded pass; do not advance a global all-roster cutoff.",
+      "Web open returned Internal Error for Meta IR, Recursive launch and Hugging Face; Meta recovered successfully in cloud browser, Recursive original text available in search result and original X post confirmed.",
+      "Anthropic report link click failed with detached DOM node; report publication itself observed in original X post, but contents not verified and excluded from selected developments.",
+      "No fresh primary company confirmation of second Nscale deal; retain only explicitly attributed reporting and mark older catch-up."
+    ],
+    "original_post_times_verified": 3
+  },
+  "upstream_checklist": [
+    {
+      "index": 0,
+      "upstream_headline": "IMDA fines Singtel S$1 million over March mobile outages that hit 720,000 subscribers",
+      "disposition": "included",
+      "reason": "IMDA’s announcement was reported on October 20 and is unseen catch-up. March is the outage date, not a current disruption. Mothership and AsiaOne report the regulator’s findings; the original release was not located.",
+      "sources": [
+        "https://mothership.sg/2026/10/singtel-fined-service-disruptions-march/",
+        "https://www.asiaone.com/singapore/singtel-fined-1-million-disruptions-imda"
+      ]
+    },
+    {
+      "index": 1,
+      "upstream_headline": "COE premium for smaller cars climbs to S$132,004, edging past the larger-car category",
+      "disposition": "included",
+      "reason": "LTA’s original results confirm both premiums for the second October 21 exercise, which ended at 16:00 SGT. The upstream Mothership page was inaccessible.",
+      "sources": [
+        "https://onemotoring.lta.gov.sg/content/onemotoring/home/buying/coe-open-bidding.html"
+      ]
+    },
+    {
+      "index": 2,
+      "upstream_headline": "Former SAF captain jailed 17 months for sexually abusing a teenage boy",
+      "disposition": "included",
+      "reason": "Court reporting is dated October 20. The summary is non-graphic and excludes identifying details about the victim.",
+      "sources": [
+        "https://mothership.sg/2026/10/ex-saf-captain-sexually-abused-boy-punggol/"
+      ]
+    },
+    {
+      "index": 3,
+      "upstream_headline": "Two Singaporean women charged over the alleged abuse of domestic workers",
+      "disposition": "included",
+      "reason": "Charges were brought on October 19 and reported on October 20. These are allegations, not convictions.",
+      "sources": [
+        "https://mothership.sg/2026/10/2-women-charged-abusing-domestic-helpers/"
+      ]
+    },
+    {
+      "index": 4,
+      "upstream_headline": "Singapore and Qatar agree to work towards a strategic partnership on PM Wong's visit",
+      "disposition": "excluded_duplicate",
+      "reason": "The strategic-partnership and energy-cooperation event was already covered on October 20. No material new fact was established.",
+      "sources": [
+        "https://mothership.sg/2026/10/spore-qatar-work-towards-upgrading-relations/"
+      ]
+    },
+    {
+      "index": 5,
+      "upstream_headline": "Update: India's Supreme Court takes up the mass voter-roll challenge as ~133 million names are struck",
+      "disposition": "excluded_duplicate_stale",
+      "reason": "The October 15 report is stale. The voter-roll challenge and court notice already appeared in the October 10, 14 and 16 archives; no new hearing outcome was verified.",
+      "sources": [
+        "https://www.bloomberg.com/news/articles/2026-10-15/india-top-court-to-hear-election-challenge-delhi-protest-cases"
+      ]
+    },
+    {
+      "index": 6,
+      "upstream_headline": "Update: Reliance's Jio Platforms opens India's largest rupee IPO as anchor bids top US$26 billion",
+      "disposition": "included",
+      "reason": "Reliance’s filing verifies the subscription window; broker and ANI material corroborates the price band. Conflicting live subscription totals and unsupported anchor-demand figures are omitted.",
+      "sources": [
+        "https://links.sgx.com/FileOpen/RIL_SE14102026.ashx?App=Announcement&FileID=907072",
+        "https://zerodha.com/ipo/436988/",
+        "https://www.tribuneindia.com/news/business/jio-ipo-subscribed-3-02-times-on-first-day-qib-portion-sees-9-02-times-demand/amp"
+      ]
+    },
+    {
+      "index": 7,
+      "upstream_headline": "Sitharaman says India's fundamentals are sound as foreign investors pull US$32.5 billion from stocks",
+      "disposition": "excluded_stale",
+      "reason": "The interview was given on October 16 and reported on October 18–19. No new statement was verified. The claim about fundamentals is the minister’s opinion, not an independent finding.",
+      "sources": [
+        "https://www.cnbc.com/2026/10/18/india-ai-nifty50-sensex-investors.html"
+      ]
+    },
+    {
+      "index": 8,
+      "upstream_headline": "Rupee climbs to a six-week high as Jio IPO inflows and RBI measures lift the currency",
+      "disposition": "corrected",
+      "reason": "PTI’s syndicated report gives the provisional October 21 close of 94.43. An intraday Reuters syndication has inconsistent day labels, so its quote and the upstream comparison are not used.",
+      "sources": [
+        "https://thesentimes.com/rupee-closes-at-six-week-high-of-94-43-driven-by-jio-ipo-rbi-intervention/",
+        "https://www.moneycontrol.com/news/currency/rupee-climbs-to-six-week-high-as-jio-ipo-linked-inflows-bolster-recovery-14056557.html"
+      ]
+    },
+    {
+      "index": 9,
+      "upstream_headline": "UK approves the Jackdaw North Sea gas field, reviving a project a court had quashed",
+      "disposition": "included",
+      "reason": "The government’s October 21 release confirms consent. Production timing is a government projection; no claim is made that the project will lower retail energy prices.",
+      "sources": [
+        "https://www.gov.uk/government/news/jackdaw-gas-field-gets-green-light"
+      ]
+    },
+    {
+      "index": 10,
+      "upstream_headline": "UK inflation jumps to 3.5% in September, hardening Bank of England rate-hike expectations",
+      "disposition": "included",
+      "reason": "The original ONS bulletin verifies September inflation. The figure describes an observed month, not a forecast or central-bank decision.",
+      "sources": [
+        "https://www.ons.gov.uk/economy/inflationandpriceindices/bulletins/consumerpriceinflation/september2026"
+      ]
+    },
+    {
+      "index": 11,
+      "upstream_headline": "Chancellor Healey rules out a capital-gains-tax rise in the 28 October Budget",
+      "disposition": "included",
+      "reason": "October 20 reporting by Alexander Brown was retrieved through AOL; the Bloomberg page was inaccessible. This is an attributed statement, not a guarantee of final Budget policy.",
+      "sources": [
+        "https://www.aol.co.uk/articles/chancellor-john-healey-rejects-calls-083244000.html"
+      ]
+    },
+    {
+      "index": 12,
+      "upstream_headline": "Bank of England's Greene urges a November rate rise as officials split over inflation risk",
+      "disposition": "included",
+      "reason": "Reuters reports Greene’s October 20 speech. This is one policymaker’s position, not a Monetary Policy Committee decision. The upstream Breeden subclaim was not verified and is omitted.",
+      "sources": [
+        "https://www.aol.com/articles/bank-englands-greene-says-inflation-182625000.html"
+      ]
+    },
+    {
+      "index": 13,
+      "upstream_headline": "Putin agrees 'in principle' to resume three-way Ukraine peace talks after meeting US envoy Witkoff",
+      "disposition": "corrected",
+      "reason": "AP confirms the meeting and Hubbard’s release. The upstream assertion that Putin agreed in principle to three-way peace talks was not corroborated and is not repeated.",
+      "sources": [
+        "https://www.clickondetroit.com/news/world/2026/10/21/russia-releases-imprisoned-american-man-us-envoy-witkoff-says-on-visit-to-st-petersburg/"
+      ]
+    },
+    {
+      "index": 14,
+      "upstream_headline": "UN food agency halves Gaza rations and cuts those it feeds to 1.1 million",
+      "disposition": "included",
+      "reason": "The World Food Programme’s original release is dated October 19. This is unseen catch-up, not a new October 21 announcement.",
+      "sources": [
+        "https://friends.wfp.org/news/funding-cuts-force-wfp-drastically-reduce-lifesaving-assistance-gaza"
+      ]
+    },
+    {
+      "index": 15,
+      "upstream_headline": "Israel heads to its 27 October election with polls pointing to a stalemate",
+      "disposition": "included",
+      "reason": "This is a polling snapshot from an October 20 explainer, not an election result. No poll fieldwork dates are inferred.",
+      "sources": [
+        "https://www.aljazeera.com/news/2026/10/20/israels-elections-2026-explained-in-maps-and-charts",
+        "https://www.investing.com/news/world-news/israeli-elections-how-they-work-and-who-is-in-the-race-4818856"
+      ]
+    },
+    {
+      "index": 16,
+      "upstream_headline": "Iran rules out surrendering its enriched-uranium stockpile as tensions rise",
+      "disposition": "included",
+      "reason": "The report was published on October 21 about a statement made on October 20. Iran’s position is attributed; the upstream dilution proposal was not independently verified.",
+      "sources": [
+        "https://www.brecorder.com/news/amp/40445214"
+      ]
+    },
+    {
+      "index": 17,
+      "upstream_headline": "Nvidia releases new open-weight 'Nemotron' models for enterprise and on-device AI agents",
+      "disposition": "excluded_duplicate",
+      "reason": "NVIDIA Nemotron 3.5 Super VL/Bolt launch was delivered Oct16. Original NVIDIA project/release dates Oct14-15; Oct19 TechCrunch/localized coverage does not make a new release.",
+      "sources": [
+        "https://research.nvidia.com/labs/nemotron/projects/",
+        "https://research.nvidia.com/labs/nemotron/Nemotron-3.5-Bolt-24GB/"
+      ]
+    },
+    {
+      "index": 18,
+      "upstream_headline": "Recursive launches Flint, a free laptop-sized coding model it says was largely built by AI",
+      "disposition": "included_corrected",
+      "reason": "AI-built and performance claims are company claims, not independently established. Not every laptop can run it. Original launch page is undated; Oct21 original availability corroborated by dated day-zero partner releases and actual X post. Search-index snippet places an unrelated Jun11 date beside the Flint listing: do not use that as launch date.",
+      "sources": [
+        "https://recursive.com/updates/introducing-recursive-flint",
+        "https://vllm-project.github.io/2026/10/21/flint.html",
+        "https://www.openhands.dev/blog/recursive-flint-on-openhands"
+      ]
+    },
+    {
+      "index": 19,
+      "upstream_headline": "Nscale nears a ~US$45 billion deal to supply Anthropic computing power from West Virginia",
+      "disposition": "included_attributed_older_unseen_catchup",
+      "reason": "Older unseen upstream catch-up, not overnight news. SEC prospectus confirms the first agreement only; proposed second deal relies on Reuters source reporting and remains unconfirmed. Do not present a signed transaction.",
+      "sources": [
+        "https://uk.marketscreener.com/news/nscale-anthropic-in-talks-for-45-billion-cloud-computing-deal-bloomberg-news-reports-ce785cdbdc8cf72d",
+        "https://www.aol.com/articles/nscale-anthropic-talks-45-billion-193754000.html",
+        "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm"
+      ]
+    },
+    {
+      "index": 20,
+      "upstream_headline": "Meta lifts its 2026 AI capital-spending outlook to as much as US$145 billion",
+      "disposition": "included_corrected_primary_verified",
+      "reason": "This is total capital expenditure including finance-lease principal, not a separately audited AI-only spend figure. No verified X post timestamp for this earnings fact; do not invent one. Do not imply the $145bn upper bound increased.",
+      "sources": [
+        "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/default.aspx"
+      ]
+    },
+    {
+      "index": 21,
+      "upstream_headline": "Tesla tops Q3 estimates but net profit falls 29% as car prices slip",
+      "disposition": "corrected",
+      "reason": "AP and Reuters corroborate the earnings figures. The upstream 29% profit decline conflicts with other calculations, so no percentage decline is stated. The primary investor PDF was located but could not be fetched.",
+      "sources": [
+        "https://apnews.com/article/cfe0453f6bf0d08d22150022128492fa",
+        "https://www.marketscreener.com/news/tesla-revenue-beats-estimates-as-deliveries-rebound-and-energy-storage-grows-ce785cd9dd8cf327"
+      ]
+    },
+    {
+      "index": 22,
+      "upstream_headline": "Musk says Tesla and SpaceX form committees to explore a merger",
+      "disposition": "included",
+      "reason": "AP’s October 21 report describes a Tuesday SpaceX call. Committees exploring a merger are not a completed transaction. This is distinct from the earnings item.",
+      "sources": [
+        "https://apnews.com/article/cfe0453f6bf0d08d22150022128492fa"
+      ]
+    },
+    {
+      "index": 23,
+      "upstream_headline": "Netflix beats on Q3 profit but shares fall about 7% on a trimmed outlook",
+      "disposition": "corrected",
+      "reason": "Netflix’s original October 20 shareholder letter explicitly maintains full-year guidance. The upstream claim that the full-year revenue outlook was trimmed is rejected.",
+      "sources": [
+        "https://ir.netflix.net/files/doc_financials/2026/q3/FINAL-Q3-26-Shareholder-Letter.pdf"
+      ]
+    },
+    {
+      "index": 24,
+      "upstream_headline": "IBM beats Q3 estimates on software strength",
+      "disposition": "included",
+      "reason": "IBM’s original PRNewswire release was retrieved through Trivano on October 21; direct IBM and CNBC pages failed. Guidance is a company forecast.",
+      "sources": [
+        "https://www.trivano.com/persbericht/ibm-releases-third-quarter-results-769363.html",
+        "https://www.ibm.com/investor/events/earnings-3q26"
+      ]
+    },
+    {
+      "index": 25,
+      "upstream_headline": "Traders expect the Fed to hold rates at its 27-28 October meeting",
+      "disposition": "included",
+      "reason": "The October 16–20 economist poll is new evidence relative to earlier coverage. Expectations are not a Federal Reserve decision; the meeting is October 27–28.",
+      "sources": [
+        "https://www.marketscreener.com/news/fed-to-skip-october-but-raise-rates-again-in-december-nearly-all-economists-say-ce785cd8db88f22d"
+      ]
+    },
+    {
+      "index": 26,
+      "upstream_headline": "Antonelli can clinch his first F1 title at this weekend's US Grand Prix",
+      "disposition": "excluded_duplicate_stale",
+      "reason": "The same Austin title-permutation story already appears in the October 13, 17, 18 and 20 archives. Autosport’s actual source date is October 11, not October 21. A later preview adds no verified material change.",
+      "sources": [
+        "https://www.autosport.com/f1/news/how-can-antonelli-become-f1-world-champion-at-us-gp/10864377/"
+      ]
+    },
+    {
+      "index": 27,
+      "upstream_headline": "Pakistan beat England by 87 runs in their ODI tri-series clash in Rawalpindi",
+      "disposition": "verified_unseen_catchup",
+      "reason": "PCB’s original report confirms the result on Tuesday, October 20. It is unseen catch-up, not an overnight result.",
+      "sources": [
+        "https://www.pcb.com.pk/news-detail/arafat-minhas-6-40-and-59-sink-england-as-pakistan-win-consecutive-games-in-odi-tri-series.html",
+        "https://www.skysports.com/cricket/news/13601229/england-slump-to-defeat-against-pakistan-in-odi-tri-series-after-faltering-chasing-303-in-rawalpindi"
+      ]
+    },
+    {
+      "index": 28,
+      "upstream_headline": "India Women complete a 3-0 T20I sweep of Zimbabwe Women",
+      "disposition": "verified_unseen_catchup",
+      "reason": "The BCCI scorecard and Mumbai Indians report confirm the Tuesday, October 20 result and series sweep. It is not relabelled as an overnight result.",
+      "sources": [
+        "https://www.bcci.tv/matches/ed13093d-c6b9-4272-900c-3ad46aeb7dba/india-women-vs-zimbabwe-women",
+        "https://www.mumbaiindians.com/news/indvzim-shafali-verma-harmanpreet-kaur-india-clinch-t20i-series-3-0"
+      ]
+    },
+    {
+      "index": 29,
+      "upstream_headline": "Tsitsipas and Khachanov advance at the Almaty Open",
+      "disposition": "verified_updated",
+      "reason": "Official tournament results update Tsitsipas to the quarter-finals while distinguishing Khachanov’s earlier opening win and next round-of-16 match.",
+      "sources": [
+        "https://almatyopen.ktf.kz/en/schedule",
+        "https://almatyopen.kz/ru/schedule/?year=2026",
+        "https://tennisnow.com/tsitsipas-shows-class-as-kukushkin-bids-farewell-to-tennis/"
+      ]
+    },
+    {
+      "index": 30,
+      "upstream_headline": "Quarter-finals take shape at the WTA Ningbo Open",
+      "disposition": "corrected_verified",
+      "reason": "The official WTA October 21 report corrects unsupported player names in the upstream item.",
+      "sources": [
+        "https://www.wtatennis.com/news/4596745/fernandezs-marathon-win-kostyuks-retirement-headline-day-3-in-ningbo"
+      ]
+    },
+    {
+      "index": 31,
+      "upstream_headline": "Expedition to a remote Pacific island finds no fresh clues to Amelia Earhart's plane",
+      "disposition": "included",
+      "reason": "The October 19 public-media report describes an expedition update published on Sunday, October 18. It is unseen catch-up, not an overnight discovery.",
+      "sources": [
+        "https://www.lpm.org/news/2026-10-19/amelia-earhart-search-team-says-object-in-satellite-image-was-likely-trees-not-plane-wreckage"
+      ]
+    },
+    {
+      "index": 32,
+      "upstream_headline": "A Neanderthal at Shanidar Cave may have been killed by a spear 75,000 years ago",
+      "disposition": "excluded_stale",
+      "reason": "The source is dated October 15. No material new finding was verified; the older science story is not relabelled as current news.",
+      "sources": [
+        "https://edition.cnn.com/2026/10/15/science/neanderthal-fossil-discovery-spear-death"
+      ]
+    },
+    {
+      "index": 33,
+      "upstream_headline": "A new extinct crocodile is identified in the limestone that built the Great Sphinx",
+      "disposition": "excluded_stale",
+      "reason": "The source is dated October 6. No material new finding was verified; the older science story is not relabelled as current news.",
+      "sources": [
+        "https://www.cnn.com/2026/10/06/science/ancient-crocodile-egypt-great-sphinx"
+      ]
+    },
+    {
+      "index": 34,
+      "upstream_headline": "A strengthening 'super' El Nino is on track to set an all-time intensity record",
+      "disposition": "excluded_stale",
+      "reason": "The source is dated October 14. No material new development was verified; the older climate story is not relabelled as current news.",
+      "sources": [
+        "https://www.cnn.com/2026/10/14/climate/el-nino-myths"
+      ]
+    }
+  ],
+  "podcast_learning": {
+    "original_date": "2026-10-09",
+    "original_date_sgt": "2026-10-10T00:51:00+08:00",
+    "original_date_basis": "Publisher RSS guid and pubDate, re-fetched today; distinct from upload date.",
+    "report_summary": "October9 original: the hosts debate whether agents will consolidate into a general assistant or specialize by workflow. Shared software components do not settle that question. Catch-up learning, not fresh news.",
+    "segment_references": [
+      "30:01–30:38: general assistant argument and shared-component analogy",
+      "30:38–32:06: workflow-specific instructions, tools and specialization argument",
+      "32:06–32:54: possible coordinator and specialized use cases"
+    ],
+    "summary_coverage": [
+      "general assistant versus workflow-specific specialization",
+      "shared components versus different products"
+    ],
+    "caveat": "Third-party transcript is not publisher-approved and contains transcription errors; paraphrase the debate, no uncertain names/quotes, no empirical claim that specialization wins. Business example explicitly editorial.",
+    "newer_original_check": "RSS latest remains Pichai October20 17:18UTC; pending, transcript unverified, not summarized. Fixed seed retained."
+  },
+  "podcast_episode_id": "big-technology:797a2b74-c400-11f1-baca-c7e0f44bb120",
+  "podcast_sources": [
+    "https://podcasts.apple.com/us/podcast/big-technology-podcast/id1522960417?i=1000794229364",
+    "https://podscripts.co/podcasts/big-technology-podcast/meta-microsofts-claude-slowdown-his-agent-leaked-his-banking-info-dont-bully-your-ai"
+  ],
+  "expert_learning": {
+    "concept_id": "accountability-includes-visible-failure",
+    "thinkers": [
+      "Naval Ravikant"
+    ],
+    "theme": "management",
+    "source_url": "https://nav.al/accountability",
+    "original_date": "2019-06-21",
+    "classification": "evergreen",
+    "faithful_paraphrase": "Naval frames accountability as accepting criticism and the possibility of failure; he says it can be practiced within an existing career.",
+    "editorial_application": "For a team experiment, state who owns the outcome and how mistakes will be reviewed. This is an editorial application."
+  },
+  "interesting_fact": {
+    "event_id": "uranus-sideways-axial-tilt",
+    "title": "Uranus spins almost sideways",
+    "source_url": "https://science.nasa.gov/uranus/facts/",
+    "classification": "evergreen",
+    "claim": "Uranus has axial tilt97.77degrees and appears to spin sideways, producing extreme seasons.",
+    "upstream_change": "Replaces today's Cleopatra fact because same comparison appeared June17 and August18 archives."
+  },
+  "diagnostics": [
+    "The current X roster contains 211 profiles. Six bounded public profile snapshots were inspected;205 were not visited. This is not exhaustive feed coverage. Two selected developments have directly checked original X timestamps; a third observed post was not selected. Search-index dates were not treated as post times.",
+    "Original posts from Richard Socher and OpenAI were checked. Alex Albert’s visible profile showed older September posts, which is not evidence of inactivity. No follows or settings were changed.",
+    "Research uses the previous partial cutoff of October 21 at 07:08 SGT and includes overnight developments. Older unseen upstream catch-up is separately dated. Unvisited-source gaps remain open; no exhaustive global cutoff is advanced.",
+    "Inshorts’ public national page was accessible but returned October 19 entries; its business listing returned September 10 material. Verified wire and primary India sources were substituted. No private app access or app-specific ranking is claimed.",
+    "Several CNN, CNBC and Bloomberg pages could not be fetched. Trusted wire and primary substitutions are documented beside each affected item.",
+    "Meta’s original investor release was recovered in the cloud browser after web access failed. Recursive’s original launch text was available through search, with the original post and dated partner releases corroborating availability.",
+    "Anthropic’s annual public-benefit report announcement was observed, but its contents could not be inspected successfully. It was not summarized or marked covered. Other unverified or repeated AI candidates were not added to fill space.",
+    "The proposed second Nscale–Anthropic deal remains attributed reporting, not a confirmed signed transaction. It is October 19 catch-up, distinct from the earlier August agreement.",
+    "Everyday AI’s accessible episode, blog and AI News listings stopped at August 14. Videos/Live extraction showed only a footer, the newsletter was inaccessible, and its RSS returned 403. No usable current original transcript was established; this does not show that no new episode exists.",
+    "Big Technology’s official RSS was fetched today. The actual third-party transcript for the October 9 original was retrieved and read; the fixed third catch-up entry was selected. The newer October 20 Pichai original remains pending and was not summarized.",
+    "Naval’s original accountability page and June 21, 2019 source date were verified. NASA’s original Uranus page supports the fact. The repeated upstream Cleopatra comparison was excluded."
+  ],
+  "insurance_screening": {
+    "status": "bounded_screen_completed_no_selected_item",
+    "checked_at": "2026-10-22T07:21:08+08:00",
+    "search_count": 5,
+    "sources_attempted": [
+      "Swiss Re official site: exact Oct21 and broader October2026 life/health/AI searches",
+      "Munich Re official site: exact Oct21 and broader October2026 life/health/AI searches",
+      "MAS and IRDAI official domains: October2026 and Oct21–22 insurance/regulatory searches"
+    ],
+    "outcome": "No material newly dated Oct21–22 life/health or reinsurance development was verified in this bounded search. This is not exhaustive coverage; retain no spoken no-news item.",
+    "findings": [
+      {
+        "url": "https://www.munichre.com/us-life/en/insights/future-of-risk/beyond-the-pilot-how-leading-insurers-are-scaling-ai-in-underwriting.html",
+        "date": "2026-09-30",
+        "disposition": "Older AI underwriting commentary, not fresh daily news."
+      },
+      {
+        "url": "https://www.swissre.com/reinsurance/life-and-health.html",
+        "disposition": "Primary landing page surfaced cancer-classification and Life Guide2026 material, but no Oct21–22 original publication date established."
+      },
+      {
+        "url": "https://www.mas.gov.sg/news/media-releases/2026/mas-sets-out-supervisory-expectations-on-responsible-ai-adoption-by-financial-institutions",
+        "date": "2026-10-07",
+        "disposition": "Earlier regulatory guidance, not an overnight change."
+      },
+      {
+        "url": "https://irdai.gov.in/circulars",
+        "disposition": "Search result stale, showing2024–25 entries; does not establish latest actual circular availability."
+      },
+      {
+        "url": "https://news.ambest.com/pr/PressContent.aspx?altsrc=2&refnum=37946",
+        "date": "2026-10-21",
+        "disposition": "Playback announcement for sponsored AI operations webinar, not a verified new implementation or measured result."
+      },
+      {
+        "url": "https://www.zurich.com/insights/personal/how-to-manage-the-journey-not-just-the-diagnosis",
+        "date": "2026-10-21",
+        "disposition": "Chronic-care commentary, no newly verified material development; not selected."
+      }
+    ],
+    "limitations": [
+      "Search-index snippets and results, not exhaustive newsroom/circular retrieval.",
+      "No claim that the sector had no new developments.",
+      "No narration or frozen AI-event changes."
+    ]
+  },
+  "ai_profile_observation_cursors": []
+}

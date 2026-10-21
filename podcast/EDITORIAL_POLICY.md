@@ -46,3 +46,10 @@ Run the dependency-free checks with `node podcast/validate-editorial.mjs`, `node
 Apply the latest listener feedback to both news and topic podcasts. Open with a short roadmap, group related points into clearly introduced sections, and use brief spoken transitions plus audible pauses between them. A heading in HTML is not a substitute for a transition in the recording. End a substantive learning section with one concise takeaway before moving on; avoid repetitive wrap-ups or padding.
 
 Explain intuition first, illustrate it with a simple concrete example, connect it explicitly to a business decision or workflow, and then add technical detail where it improves understanding. Preserve nuance and evidence limits. Distinguish the source's claims from editorial examples and applications. Do not assume expertise makes intuitive explanation unnecessary. Check the final script and measured chapter breaks, while treating listener comprehension as distinct from structural validation. Earlier recordings are not regenerated solely for this change.
+
+
+## Headline-first news and complete intake reconciliation · 22 October 2026
+
+Latest listener feedback supersedes deeper treatment of news items: each NEWS item gets a broad headline and at most one short factual context sentence. Do not insert assistant opinions, takes, analogies or business advice between news items. Preserve coherent section handoffs and audible pauses. Distinct podcast/expert learning segments retain intuitive explanations, simple examples and clearly separated applications.
+
+Use the same-day upstream HTML as a complete intake checklist, including every sports item. Account for every item as covered, materially updated, duplicate, stale or insufficiently verified with evidence and a reason; do not arbitrarily choose one of several sports stories. The checklist does not override factual verification, date accuracy or permanent delivered-event dedup. If upstream is absent, use only its format and independently verify current reporting. Do not regenerate delivered audio merely for this wording change.

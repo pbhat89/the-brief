@@ -82,3 +82,12 @@ Observed feedback: both news and topic podcasts sounded disconnected; technical 
 ### 21 October measured implementation check
 
 The new roadmap, section transitions and ten one-second pauses were rendered and silence-checked. Intuitive explanations and explicit business examples passed an independent written editorial check. Conditions measured 19.11 seconds; the combined fact/close was 19.80 seconds. These are verified implementation outcomes, not evidence of listener satisfaction or phone playback. Retain this structure and use future direct feedback to assess comprehension. The local-engine telemetry safeguard was resolved only by replacing the denied component with a verified offline implementation; do not revive the denied path.
+
+
+## Headline-first news and complete intake reconciliation · 22 October 2026
+
+Latest listener feedback supersedes deeper treatment of news items: each NEWS item gets a broad headline and at most one short factual context sentence. Do not insert assistant opinions, takes, analogies or business advice between news items. Preserve coherent section handoffs and audible pauses. Distinct podcast/expert learning segments retain intuitive explanations, simple examples and clearly separated applications.
+
+Use the same-day upstream HTML as a complete intake checklist, including every sports item. Account for every item as covered, materially updated, duplicate, stale or insufficiently verified with evidence and a reason; do not arbitrarily choose one of several sports stories. The checklist does not override factual verification, date accuracy or permanent delivered-event dedup. If upstream is absent, use only its format and independently verify current reporting. Do not regenerate delivered audio merely for this wording change.
+
+Success measures: news-item sentence counts, absence of assistant commentary in news, and a complete upstream disposition checklist checked against rendered coverage. Listener approval remains separate from these mechanical measures.
