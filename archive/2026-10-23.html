@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Fri, 23 October 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .wpuzzle-box{background:linear-gradient(135deg,#0e1a1a,#0d1620);border:1px solid #234a44;border-left:3px solid #16a085;padding:24px 28px;border-radius:2px}
+  .wptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#16a085;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .wpuzzle-box .puzzle-title{color:#cdeae3}
+  .wpuzzle-box .puzzle-how{color:#8fb8ac;background:#08140f;border-left-color:#1a6a5a}
+  .wpuzzle-box .puzzle-q{color:#dfeae6;font-family:'Source Sans 3',sans-serif}
+  .wpuzzle-box .answer{color:#bfe0d6}
+  .wpuzzle-box .answer .alabel{color:#16a085}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Friday, 23 October 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Friday, 23 October 2026 · 🔍 90 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eleven entries in this exact order:
+     id    : one of "sg" | "india" | "uk" | "geo" | "tech" | "biz" | "sports" | "misc" | "fun" | "puzzle" | "wpuzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 8 news tabs; fun/puzzle/wpuzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+
+   WORD_PUZZLE shape (separate, daily word game — NYT-style, static reveal):
+     type     : one of "Connections" | "Word Ladder" | "Anagram" | "Spelling Bee" | "Letter Boxed" | "Mini Crossword"
+     title    : short evocative name for the word puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle body; supports \n for line breaks (grids render as pre-formatted text)
+     answer   : the answer; supports \n for line breaks; appears inside its own toggle (id "wpans")
+============================================================================= */
+
+const SECTIONS = [
+  {
+    "id": "sg",
+    "title": "🇸🇬 Singapore",
+    "color": "#e74c3c",
+    "items": [
+      {
+        "headline": "Singapore couple convicted over the abuse and death of their eight-month-old son",
+        "summary": "Chloe Gan Ci Xuan, 23, and Neo Jia Ming, 27, pleaded guilty on Oct 12 over the death of their son Trevor, who died in September 2024 after months of being shaken and smothered. The pair were sentenced this week to lengthy jail terms, Mothership and SCMP reported.",
+        "source": "Mothership",
+        "url": "https://mothership.sg/2026/10/couple-8-month-old-baby-death-abuse-suffocate-trevor-neo/",
+        "date": "Oct 21",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Temasek and GIC reject an Indonesian ex-minister's claim they triggered a market rout",
+        "summary": "Temasek and GIC publicly rejected allegations by former Indonesian trade minister Muhammad Lutfi that they engineered a threatened MSCI downgrade of Indonesia's market, Mothership and SCMP reported. MSCI has warned it could cut Indonesia's status, with a decision due by mid-2027.",
+        "source": "Mothership",
+        "url": "https://mothership.sg/2026/10/temasek-gic-deny-ex-indonesian-ministers-claims-they-were-behind-msci-downgrade-threat-indonesias-stock-market-plunge/",
+        "date": "Oct 21",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Court orders a Singapore man to pay S$600,000 to two brothers cut out of a will",
+        "summary": "A judge found a handwritten family agreement binding and ordered a man to pay his two brothers their S$600,000 share from the S$5 million sale of the family home, rejecting his claim of economic duress, Mothership reported.",
+        "source": "Mothership",
+        "url": "https://mothership.sg/2026/10/man-ordered-pay-600000/",
+        "date": "Oct 21",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Update: PM Wong courts the UAE on energy and investment on his first visit as premier",
+        "summary": "On the UAE leg of his Gulf trip (Oct 20-22), PM Lawrence Wong met President Sheikh Mohamed bin Zayed and Abu Dhabi's Crown Prince Sheikh Khaled, with talks focused on energy security and economic resilience. It followed his Qatar visit earlier in the week.",
+        "source": "Mothership",
+        "url": "https://mothership.sg/2026/10/pm-wong-qatar-uae-official-visit/",
+        "date": "Oct 22",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "india",
+    "title": "🇮🇳 India",
+    "color": "#e67e22",
+    "items": [
+      {
+        "headline": "Update: Reliance's Jio Platforms draws strong demand as its record IPO nears its close",
+        "summary": "Jio Platforms' roughly US$3.2 billion IPO, India's largest, drew heavy institutional demand on its second day, with the issue set to close on Oct 23 and list on Oct 28. Its anchor book had earlier pulled in bids worth about US$26 billion.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-10-22/jio-leverage-play-pops-up-at-sbi-as-india-brokers-lure-ipo-bets",
+        "date": "Oct 22",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "India readies a data-centre policy as Google and Amazon projects draw local protests",
+        "summary": "India is preparing a dedicated data-centre policy to curb power costs, as residents in Visakhapatnam and near Mumbai protest Google- and Amazon-linked projects over water and electricity strains. Google's roughly US$15 billion Vizag hub is a flashpoint; both firms say the concerns are unfounded.",
+        "source": "CNBC",
+        "url": "https://www.cnbc.com/2026/10/22/india-data-center-google-amazon.html",
+        "date": "Oct 22",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "US and India say a first trade-deal tranche is close as Rubio tours Gujarat",
+        "summary": "US Secretary of State Marco Rubio visited Mumbai and the Jamnagar refinery, skipping New Delhi, as both sides signalled a first tranche of a trade deal is near. Trade Minister Piyush Goyal said it is in final drafting but India will not sign until exporters gain an edge; a February framework cut US tariffs on Indian goods to 18%.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/10/18/why-marco-rubios-visit-to-mumbai-has-ruffled-feathers-in-india",
+        "date": "Oct 18",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "India emerges as a major ammunition supplier to Europe since the Ukraine war",
+        "summary": "Indian arms makers have shipped at least US$872 million of ammunition to European states since Russia's 2022 invasion of Ukraine, making India one of the largest suppliers to those countries, Bloomberg reported, citing trade data; officials describe the motive as commercial.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/graphics/2026-india-defense-exports/",
+        "date": "Oct 21",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "uk",
+    "title": "🇬🇧 UK News",
+    "color": "#3949ab",
+    "items": [
+      {
+        "headline": "UK national debt tops £3 trillion for the first time as borrowing overshoots before the Budget",
+        "summary": "UK public-sector net debt exceeded £3 trillion for the first time at the end of September, ONS data showed, with September borrowing of £24.5 billion running about £1.9 billion above the OBR forecast and debt-interest costs hitting a record for the month. It narrows Chancellor John Healey's room ahead of the Oct 28 Budget.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-10-21/uk-borrowing-exceeds-forecast-in-final-data-before-budget",
+        "date": "Oct 21",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Healey to aim his first Budget at cutting business costs and regulation",
+        "summary": "Chancellor John Healey will pitch his Oct 28 Budget at backing profit-making firms and cutting what he called the 'thicket' of regulation, Bloomberg reported, citing a Times interview, while declining to rule out new bank taxes.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-10-21/uk-chancellor-to-court-entrepreneurs-with-cuts-to-regulation",
+        "date": "Oct 21",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "PM Burnham floats scrapping the gas standing charge to ease energy bills",
+        "summary": "Prime Minister Andy Burnham is considering removing the roughly £108-a-year standing charge from household gas bills to cushion rising energy costs, Bloomberg reported, a move that could feature in the Oct 28 Budget.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-10-21/uk-mulls-removing-standing-charges-from-gas-bills-burnham-says",
+        "date": "Oct 21",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "UK bond dealers expect extra gilt sales as fiscal headroom shrinks",
+        "summary": "Dealers expect UK gilt issuance of about £249 billion this fiscal year, roughly £3 billion above the Debt Management Office's April plan, to cover higher debt costs ahead of the Budget, a Bloomberg survey found.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-10-20/uk-dealers-see-3-4-billion-more-gilt-sales-as-headroom-shrinks",
+        "date": "Oct 20",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "geo",
+    "title": "🌍 Global / Geopolitics",
+    "color": "#2980b9",
+    "items": [
+      {
+        "headline": "Iran intensifies its tanker war in the Strait of Hormuz, driving oil toward $110",
+        "summary": "Iran's Revolutionary Guard has stepped up attacks on oil tankers in the Strait of Hormuz, with multiple vessels hit this month and a container ship sunk on Oct 14, in the most sustained assault on Gulf shipping since the Iran war began in late February. Both Washington and Tehran claim control of the waterway, and Brent crude has pushed toward $110 a barrel.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/10/17/us-and-iran-both-claim-control-of-strait-of-hormuz-amid-attacks-on-vessels",
+        "date": "Oct 22",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Serbia heads to a snap election on Oct 25 with a student-led list challenging Vucic",
+        "summary": "Serbs vote on Oct 25 in a snap parliamentary election pitting Aleksandar Vucic, who resigned the presidency to run for prime minister, against a student-led 'Student List' born from a year of protests. Several polls put the students ahead or level; the unrest followed the November 2024 Novi Sad station collapse that killed 16.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/10/22/thousands-gather-at-final-student-led-rally-ahead-of-serbia-election",
+        "date": "Oct 22",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Lula and Flavio Bolsonaro face a final debate before Brazil's Oct 25 run-off",
+        "summary": "President Lula and Senator Flavio Bolsonaro meet in their last televised debate on Oct 23, two days before a run-off that polls show deadlocked. Bolsonaro led the Oct 4 first round with about 47% to Lula's 45%, and the campaign has turned bitter.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/10/21/lula-bolsonaro-seek-to-disqualify-each-other-ahead-of-brazil-runoff",
+        "date": "Oct 22",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Canada and Türkiye launch a strategic partnership and push for a free-trade deal",
+        "summary": "On the first bilateral visit to Türkiye by a Canadian prime minister in years, Mark Carney and President Recep Tayyip Erdogan agreed in Ankara (Oct 21-22) to launch a strategic partnership and accelerate free-trade talks, with cooperation planned on energy, defence and minerals as Canada diversifies away from the US.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/10/22/carney-and-erdogan-launch-strong-and-resilient-canada-turkiye-partnership",
+        "date": "Oct 22",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "tech",
+    "title": "💻 Tech & AI",
+    "color": "#27ae60",
+    "items": [
+      {
+        "headline": "Update: DeepSeek moves to raise up to about US$15 billion with Tencent and CATL backing",
+        "summary": "Chinese AI lab DeepSeek is raising as much as roughly US$15 billion (around 100 billion yuan), lifting an earlier target, with Tencent and battery maker CATL among the biggest backers, Bloomberg reported. The push comes days after the US ordered federal agencies to remove DeepSeek technology.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-10-22/deepseek-raises-15-billion-in-challenge-to-leading-us-labs",
+        "date": "Oct 22",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "AI research lab Flapping Airplanes raises US$1 billion at a US$6 billion valuation",
+        "summary": "The year-old AI research lab Flapping Airplanes raised US$1 billion at a US$6 billion valuation in a round led by Index Ventures and Lux Capital, about nine months after a US$180 million seed round. The lab focuses on training models with less data and compute.",
+        "source": "TechCrunch",
+        "url": "https://techcrunch.com/2026/10/21/year-old-ai-lab-flapping-airplanes-raises-1b-at-a-6b-valuation/",
+        "date": "Oct 21",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Anthropic launches Claude Duet, a proactive AI agent in research preview",
+        "summary": "Anthropic opened a research preview of Claude Duet, a standalone app in which its Claude model works as a proactive agent that can run tasks in the background and connect to outside services, TechCrunch reported.",
+        "source": "TechCrunch",
+        "url": "https://techcrunch.com/2026/10/22/claude-duet-app-is-anthropics-bet-on-agents/",
+        "date": "Oct 22",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "1Password lets AI agents sign in on your behalf without seeing the password",
+        "summary": "1Password launched a capability that lets AI agents authenticate on a user's behalf without exposing the underlying password, with support for newly launched agent apps, TechCrunch reported.",
+        "source": "TechCrunch",
+        "url": "https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/",
+        "date": "Oct 22",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "biz",
+    "title": "📈 Business & Markets",
+    "color": "#8e44ad",
+    "items": [
+      {
+        "headline": "Lockheed Martin beats on profit as its order backlog hits a record US$292 billion",
+        "summary": "Lockheed Martin reported third-quarter sales up 11% to US$20.7 billion and earnings of US$7.97 a share, and said its order backlog reached a record US$292 billion, lifted by a US$52.5 billion multi-year PAC-3 interceptor award. It raised its full-year outlook.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-10-22/lockheed-martin-raises-outlook-on-robust-demand-for-missiles",
+        "date": "Oct 22",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Oil jumps and gold slips as Strait of Hormuz attacks stoke supply fears",
+        "summary": "Oil rose and gold fell more than 1% to a two-week low as intensifying attacks in the Strait of Hormuz raised supply-disruption fears, reinforcing a higher-for-longer rate outlook. Brent has pushed toward its highest level since May.",
+        "source": "CNBC",
+        "url": "https://www.cnbc.com/2026/10/22/gold-drops-over-1percent-as-oil-rally-reinforces-higher-for-longer-rate-outlook.html",
+        "date": "Oct 22",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "GM beats on Q3 profit, lifts guidance and unveils a US$20 billion buyback",
+        "summary": "General Motors reported third-quarter revenue of US$50.0 billion and net income of US$3.3 billion, raised its full-year guidance, and authorised a new US$20 billion share buyback. EBIT-adjusted came in at US$4.1 billion.",
+        "source": "CNBC",
+        "url": "https://www.cnbc.com/2026/10/20/general-motors-gm-earnings-q3-2026.html",
+        "date": "Oct 20",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "OpenAI nears a US$30 billion round at a US$1.25 trillion valuation",
+        "summary": "OpenAI is closing in on a funding round of up to US$30 billion at a US$1.25 trillion pre-money valuation, led by investors from the United Arab Emirates and Coatue, CNBC reported, a sharp jump from the US$852 billion valuation it set in March.",
+        "source": "CNBC",
+        "url": "https://www.cnbc.com/2026/10/22/openai-funding-round-uae-investors.html",
+        "date": "Oct 22",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "sports",
+    "title": "🎾🏏🏎️ Sports",
+    "color": "#c0392b",
+    "items": [
+      {
+        "headline": "🎾 Muchova clinches the last WTA Finals berth as Kostyuk retires at Ningbo",
+        "summary": "Karolina Muchova secured the eighth and final spot at the WTA Finals after Marta Kostyuk retired from her Ningbo Open second-round match with a wrist injury, ending Kostyuk's qualification bid. It is Muchova's first WTA Finals appearance.",
+        "source": "ESPN",
+        "url": "https://www.espn.com/tennis/story/_/id/50237865/kostyuk-retires-ningbo-match-hands-muchova-wta-finals-slot",
+        "date": "Oct 21",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "🎾 WTA Finals field set as the event moves from Riyadh to Indian Wells",
+        "summary": "The eight-woman WTA Finals field is complete, with Sabalenka, Gauff, Rybakina, Pegula, Andreeva, Svitolina, Noskova and Muchova through for the Nov 8-15 event, relocated from Riyadh to Indian Wells over safety concerns tied to the Iran war. Iga Swiatek ended her season early with a thigh injury.",
+        "source": "WTA",
+        "url": "https://www.wtatennis.com/news/4594854/meet-your-elite-eight-a-snapshot-of-the-wta-finals-contenders",
+        "date": "Oct 22",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "🏎️ Hamilton backs Antonelli to seal the F1 title as the decider reaches Austin",
+        "summary": "Lewis Hamilton backed his Mercedes successor Kimi Antonelli to clinch the championship at the US Grand Prix in Austin (Oct 23-25), where Antonelli arrives 102 points clear of George Russell and can wrap up a maiden title with the right result.",
+        "source": "Formula1.com",
+        "url": "https://www.formula1.com/en/latest/article/fia-thursday-press-conference-united-states.2A8M8916h5IdXXKkH3bWco",
+        "date": "Oct 22",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "🏎️ Sainz questions whether F1's Qatar and Abu Dhabi finales will go ahead",
+        "summary": "Williams driver Carlos Sainz said at the US Grand Prix that it is 'premature' to assume Formula 1's season-closing rounds in Qatar (Nov 29) and Abu Dhabi (Dec 6) will proceed, citing the Iran conflict and attacks on Gulf shipping.",
+        "source": "Autosport",
+        "url": "https://www.autosport.com/f1/news/sainz-not-convinced-f1-2026-will-finish-in-middle-east/10867117/",
+        "date": "Oct 22",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "misc",
+    "title": "🔬 Other Miscellaneous News",
+    "color": "#1abc9c",
+    "items": [
+      {
+        "headline": "ESA's Euclid telescope discovers its first comet, C/2026 S1",
+        "summary": "The European Space Agency's Euclid telescope, built to map dark matter and dark energy, spotted its first comet in images taken in September; a Helsinki PhD student, Mikko Pöntinen, flagged it and the Minor Planet Center confirmed C/2026 S1 (Euclid) on Oct 8. It lies about 1.3 billion km away on a thousands-of-years orbit.",
+        "source": "ESA",
+        "url": "https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_discovers_new_comet",
+        "date": "Oct 19",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Webb traces the most distant fast radio burst to a tiny early-universe galaxy",
+        "summary": "Astronomers used the James Webb Space Telescope to pinpoint the host of the most distant fast radio burst yet, FRB 20240304B, from when the universe was about 3 billion years old, more than doubling the previous record. The host is a small, star-forming dwarf galaxy; the study appeared in Science.",
+        "source": "NASA",
+        "url": "https://science.nasa.gov/missions/webb/webb-measures-distance-to-farthest-fast-radio-burst-suggesting-origin/",
+        "date": "Oct 8",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Study links microplastics to inflammation through reactive molecules",
+        "summary": "Researchers report that microplastics can react with water to generate highly reactive molecules, offering a possible mechanism for the inflammation increasingly associated with plastic exposure, according to a study covered by Scientific American.",
+        "source": "Scientific American",
+        "url": "https://www.scientificamerican.com/article/microplastics-are-linked-to-inflammation-scientists-might-have-finally-worked-out-why/",
+        "date": "Oct 14",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "A study of over a million women finds a biological 'cliff' around menopause",
+        "summary": "Analysing health data from more than one million women, a Nature Medicine study found sharp shifts in markers such as bone density and liver health around the onset of menopause, suggesting the transition brings abrupt biological change.",
+        "source": "Scientific American",
+        "url": "https://www.scientificamerican.com/article/what-happens-to-the-body-during-menopause-new-research-hints-at-a-biological-cliff/",
+        "date": "Oct 13",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "fun",
+    "title": "✦ Fun Fact",
+    "color": "#27ae60",
+    "custom": "fun"
+  },
+  {
+    "id": "puzzle",
+    "title": "🧩 Puzzle",
+    "color": "#e67e22",
+    "custom": "puzzle"
+  },
+  {
+    "id": "wpuzzle",
+    "title": "🔤 Word Puzzles",
+    "color": "#16a085",
+    "custom": "wpuzzle"
+  }
+];
+
+const FUN_FACT = {
+  "text": "The shortest war in recorded history was the Anglo-Zanzibar War of 1896, fought between the United Kingdom and the Sultanate of Zanzibar. It began at around 9am on 27 August 1896 and was over in roughly 38 to 45 minutes, after British warships bombarded the sultan's palace. The Zanzibari side suffered about 500 casualties; one British sailor was wounded.",
+  "tag": "Category · History"
+};
+
+const PUZZLE = {
+  "type": "Logic",
+  "title": "The Last Card",
+  "how": "Place the fixed card first, then use the ranking clue to break the remaining tie.",
+  "question": "Four friends — Ava, Ben, Cara and Dan — each hold one card: the Ace, King, Queen and Jack, in some order.\n• Ava holds neither the Ace nor the Jack.\n• Ben's card outranks Cara's (ranking: Ace high, then King, Queen, Jack).\n• Dan holds the Queen.\nWho holds the Ace?",
+  "answer": "Ben holds the Ace.\nDan has the Queen, so the Ace, King and Jack are shared by Ava, Ben and Cara. Ava can hold neither the Ace nor the Jack, so Ava has the King. That leaves the Ace and Jack for Ben and Cara, and since Ben's card outranks Cara's, Ben must hold the Ace (and Cara the Jack)."
+};
+
+const WORD_PUZZLE = {
+  "type": "Spelling Bee",
+  "title": "Making Waves",
+  "how": "Every word must include the centre letter and use only the seven given letters; letters may repeat. One word uses all seven.",
+  "question": "Centre letter:  O\nOuter letters:  D · L · P · H · I · N\n\nMake as many words as you can. Each word must contain O and use only these seven letters (letters may be reused). Find the pangram that uses all seven.\n\nTarget: 12+ words, including the seven-letter pangram.",
+  "answer": "Pangram: DOLPHIN\n\nOther valid words include:\nHOLD · HOOD · HOOP · POOH · POOL · LOOP · POLO · IDOL · LION · LOIN · LOON · NOON · ONION · OPINION · POND · PLOD · DOLL · POLL · HIPPO\n\n(Any valid answer must contain O and use only D, O, L, P, H, I, N.)"
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function renderWordPuzzle(){
+  let h='<div class="sec-title">🔤 Word Puzzle of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#16a085,transparent)"></div>';
+  h+='<div class="wpuzzle-box"><span class="wptype">'+WORD_PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+WORD_PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+WORD_PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+WORD_PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this,\'wpans\')">Show Answer</button>';
+  h+='<div class="answer" id="wpans"><span class="alabel">Answer</span>'+WORD_PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn,ansId){var a=document.getElementById(ansId||'ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else if(sec.custom==="wpuzzle"){div.innerHTML=renderWordPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>

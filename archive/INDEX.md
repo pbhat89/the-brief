@@ -3887,3 +3887,35 @@ is empty until the first run.
 2026-10-22	A Neanderthal at Shanidar Cave may have been killed by a spear 75,000 years ago	cce24837	neanderthal,shanidar,spear,iraq,archaeology
 2026-10-22	A new extinct crocodile is identified in the limestone that built the Great Sphinx	7fbcb012	herugavialis,crocodile,great-sphinx,fossil,egypt
 2026-10-22	A strengthening 'super' El Nino is on track to set an all-time intensity record	b1fb7c1c	el-nino,ocean-temperature,record,noaa,climate
+2026-10-23	Singapore couple convicted over the abuse and death of their eight-month-old son	d56cd223	singapore,court,child-abuse,sentencing
+2026-10-23	Temasek and GIC reject an Indonesian ex-minister's claim they triggered a market rout	9c77efdb	temasek,gic,indonesia,msci
+2026-10-23	Court orders a Singapore man to pay S$600,000 to two brothers cut out of a will	2a1c3c11	singapore,court,inheritance,ruling
+2026-10-23	Update: PM Wong courts the UAE on energy and investment on his first visit as premier	9150d112	lawrence-wong,uae,abu-dhabi,visit
+2026-10-23	Update: Reliance's Jio Platforms draws strong demand as its record IPO nears its close	d51c05fe	jio-platforms,reliance,ipo,ambani
+2026-10-23	India readies a data-centre policy as Google and Amazon projects draw local protests	0e92c8df	india,data-centres,google,amazon,visakhapatnam
+2026-10-23	US and India say a first trade-deal tranche is close as Rubio tours Gujarat	82f814c4	india,us,rubio,goyal,trade-deal
+2026-10-23	India emerges as a major ammunition supplier to Europe since the Ukraine war	bebe5c20	india,defence-exports,ammunition,europe
+2026-10-23	UK national debt tops £3 trillion for the first time as borrowing overshoots before the Budget	294a5090	uk,national-debt,borrowing,ons,budget
+2026-10-23	Healey to aim his first Budget at cutting business costs and regulation	8833e774	uk,healey,budget,deregulation,business
+2026-10-23	PM Burnham floats scrapping the gas standing charge to ease energy bills	3bf773c5	uk,burnham,energy-bills,standing-charge,budget
+2026-10-23	UK bond dealers expect extra gilt sales as fiscal headroom shrinks	c7c5a921	uk,gilts,issuance,debt-management-office
+2026-10-23	Iran intensifies its tanker war in the Strait of Hormuz, driving oil toward $110	d005817a	iran,strait-of-hormuz,tankers,oil,us
+2026-10-23	Serbia heads to a snap election on Oct 25 with a student-led list challenging Vucic	289c5107	serbia,election,vucic,student-list
+2026-10-23	Lula and Flavio Bolsonaro face a final debate before Brazil's Oct 25 run-off	8e027f4d	brazil,lula,flavio-bolsonaro,runoff,debate
+2026-10-23	Canada and Türkiye launch a strategic partnership and push for a free-trade deal	de29b250	canada,turkiye,carney,erdogan,trade
+2026-10-23	Update: DeepSeek moves to raise up to about US$15 billion with Tencent and CATL backing	d6905777	deepseek,tencent,catl,funding
+2026-10-23	AI research lab Flapping Airplanes raises US$1 billion at a US$6 billion valuation	773ed78f	flapping-airplanes,funding,index-ventures,lux-capital
+2026-10-23	Anthropic launches Claude Duet, a proactive AI agent in research preview	9e991cbe	anthropic,claude-duet,ai-agent,launch
+2026-10-23	1Password lets AI agents sign in on your behalf without seeing the password	96bd53bb	1password,ai-agents,authentication,security
+2026-10-23	Lockheed Martin beats on profit as its order backlog hits a record US$292 billion	74f48b1f	lockheed-martin,earnings,backlog,pac-3
+2026-10-23	Oil jumps and gold slips as Strait of Hormuz attacks stoke supply fears	9642e861	oil,gold,hormuz,markets,rates
+2026-10-23	GM beats on Q3 profit, lifts guidance and unveils a US$20 billion buyback	3e37a2ef	general-motors,earnings,buyback,guidance
+2026-10-23	OpenAI nears a US$30 billion round at a US$1.25 trillion valuation	9b867d72	openai,funding,valuation,uae,coatue
+2026-10-23	🎾 Muchova clinches the last WTA Finals berth as Kostyuk retires at Ningbo	f3d5688d	tennis,muchova,kostyuk,wta-finals,ningbo
+2026-10-23	🎾 WTA Finals field set as the event moves from Riyadh to Indian Wells	d3426d1f	tennis,wta-finals,indian-wells,swiatek
+2026-10-23	🏎️ Hamilton backs Antonelli to seal the F1 title as the decider reaches Austin	dc25df74	f1,antonelli,hamilton,us-grand-prix,austin
+2026-10-23	🏎️ Sainz questions whether F1's Qatar and Abu Dhabi finales will go ahead	125a87ad	f1,sainz,qatar,abu-dhabi,calendar
+2026-10-23	ESA's Euclid telescope discovers its first comet, C/2026 S1	4ea44f4a	euclid,comet,esa,astronomy
+2026-10-23	Webb traces the most distant fast radio burst to a tiny early-universe galaxy	478862f7	webb,fast-radio-burst,galaxy,nasa
+2026-10-23	Study links microplastics to inflammation through reactive molecules	6ffc593c	microplastics,inflammation,health,study
+2026-10-23	A study of over a million women finds a biological 'cliff' around menopause	e401db8a	menopause,nature-medicine,womens-health,study
