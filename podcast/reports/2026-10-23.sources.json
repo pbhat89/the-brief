@@ -1,0 +1,1025 @@
+{
+  "edition": "2026-10-23",
+  "research_cutoff_sgt": "2026-10-23T07:13:20+08:00",
+  "ai_partial_research_checkpoint_sgt": "2026-10-23T07:14:02.952763+08:00",
+  "upstream": {
+    "date": "2026-10-23",
+    "json_url": "https://pbhat89.github.io/the-brief/archive/2026-10-23.json",
+    "html_url": "https://pbhat89.github.io/the-brief/archive/2026-10-23.html",
+    "verified_same_day": true,
+    "item_count": 32
+  },
+  "coverage_counts": {
+    "upstream_total": 32,
+    "upstream_represented": 21,
+    "upstream_excluded": 11,
+    "distinct_news_cards": 25
+  },
+  "general_items": [
+    {
+      "upstream_index": 1,
+      "upstream_indices": [
+        1
+      ],
+      "section": "Singapore",
+      "event_id": "oct23-1",
+      "headline": "Temasek and GIC have rejected allegations that they helped trigger Indonesia’s stock-market rout.",
+      "context": "Both denied the claims on Wednesday, and Temasek said it had neither approached MSCI nor influenced its decisions.",
+      "source_date": "2026-10-21",
+      "sources": [
+        "https://mothership.sg/2026/10/temasek-gic-deny-ex-indonesian-ministers-claims-they-were-behind-msci-downgrade-threat-indonesias-stock-market-plunge/"
+      ],
+      "source_url": "https://mothership.sg/2026/10/temasek-gic-deny-ex-indonesian-ministers-claims-they-were-behind-msci-downgrade-threat-indonesias-stock-market-plunge/",
+      "evidence_caveat": "Original Mothership report dated October21 at20:55SGT. Allegation attributed to former minister Muhammad Lutfi, not established fact; no claim of wrongdoing is endorsed.",
+      "status": "candidate_verified_not_delivered",
+      "disposition": "included_verified"
+    },
+    {
+      "upstream_index": 2,
+      "upstream_indices": [
+        2
+      ],
+      "section": "Singapore",
+      "event_id": "oct23-2",
+      "headline": "A Singapore court has upheld a family agreement to distribute six hundred thousand dollars to two brothers.",
+      "context": "Monday’s judgment found the handwritten promise binding, despite their exclusion from their mother’s will.",
+      "source_date": "2026-10-19",
+      "sources": [
+        "https://www.elitigation.sg/gd/s/2026_SGHC_219",
+        "https://mothership.sg/2026/10/man-ordered-pay-600000/"
+      ],
+      "source_url": "https://www.elitigation.sg/gd/s/2026_SGHC_219",
+      "evidence_caveat": "Unseen catch-up: primary judgment October19, reporting October21 at18:10SGT; not a judgment issued today.",
+      "status": "candidate_verified_not_delivered",
+      "disposition": "included_unseen_catchup"
+    },
+    {
+      "upstream_index": 3,
+      "upstream_indices": [
+        3
+      ],
+      "section": "Singapore",
+      "event_id": "oct23-3",
+      "headline": "Singapore and the United Arab Emirates plan to negotiate a comprehensive economic partnership.",
+      "context": "At Wednesday’s leaders’ meeting, they also witnessed agreements covering energy, water and disease-vector control.",
+      "source_date": "2026-10-21",
+      "sources": [
+        "https://www.mfa.gov.sg/newsroom/press-statements-transcripts-and-photos/official-visit-by-prime-minister-and-minister-for-finance-lawrence-wong-to-the-united-arab-emirates--20-to-22-october-2026/"
+      ],
+      "source_url": "https://www.mfa.gov.sg/newsroom/press-statements-transcripts-and-photos/official-visit-by-prime-minister-and-minister-for-finance-lawrence-wong-to-the-united-arab-emirates--20-to-22-october-2026/",
+      "evidence_caveat": "Replaces October19 travel preview with October21 completed UAE meeting and agreements. Prior delivered Qatar visit is distinct. CEPA negotiations, not a completed free-trade agreement.",
+      "status": "candidate_verified_not_delivered",
+      "disposition": "corrected_material_update"
+    },
+    {
+      "upstream_index": 4,
+      "upstream_indices": [
+        4
+      ],
+      "section": "India",
+      "event_id": "oct23-4",
+      "headline": "Institutional demand for Jio Platforms’ IPO increased on its second day.",
+      "context": "Upstox reported institutional bids at nine point four two times the allocation by ten fifteen on Thursday morning, India time.",
+      "source_date": "2026-10-22",
+      "sources": [
+        "https://upstox.com/news/market-news/ipo/jio-platforms-ipo-day-2-live-updates-subscription-status-price-band-lot-size-allotment-listing-date-time-oct-22-2026/liveblog-202205/"
+      ],
+      "source_url": "https://upstox.com/news/market-news/ipo/jio-platforms-ipo-day-2-live-updates-subscription-status-price-band-lot-size-allotment-listing-date-time-oct-22-2026/liveblog-202205/",
+      "evidence_caveat": "Material new day-two demand observation, not repeat of IPO opening. Broker reports NSE cumulative data at10:15IST; not closing subscription figures. Moneycontrol internally inconsistent retail numbers not used.",
+      "status": "candidate_verified_not_delivered",
+      "disposition": "included_material_update"
+    },
+    {
+      "upstream_index": null,
+      "upstream_indices": [],
+      "section": "India",
+      "event_id": "karnataka-dasara-inquiry-20261022",
+      "headline": "Karnataka’s chief minister has ordered an inquiry after ministers were stopped at Mysuru Dasara.",
+      "context": "He directed the chief secretary to investigate the police intervention; opposition parties have alleged caste discrimination.",
+      "source_date": "2026-10-22",
+      "sources": [
+        "https://www.thenewsminute.com/karnataka/karnataka-cm-orders-probe-after-police-stop-three-dalit-ministers-at-mysuru-dasara",
+        "https://inshorts.com/en/read/national",
+        "https://indianexpress.com/article/cities/bangalore/mysuru-dasara-protocol-row-cop-stops-ministers-10932037/"
+      ],
+      "source_url": "https://www.thenewsminute.com/karnataka/karnataka-cm-orders-probe-after-police-stop-three-dalit-ministers-at-mysuru-dasara",
+      "evidence_caveat": "Found in Inshorts22Oct12:41; original SouthFirst link returned InternalError. Substituted original NewsMinute reporting22Oct10:38 with embedded chief minister statement. Inconsistent Tuesday/Wednesday event dating and three/four ministers omitted. Opposition allegation clearly attributed. Independently corroborated by IndianExpressOctober22at14:13IST.",
+      "status": "candidate_verified_not_delivered",
+      "disposition": "added_independently_verified"
+    },
+    {
+      "upstream_index": 8,
+      "upstream_indices": [
+        8
+      ],
+      "section": "UK",
+      "event_id": "oct23-8",
+      "headline": "UK public-sector debt exceeded three trillion pounds at the end of September.",
+      "context": "Official figures released on Wednesday put monthly borrowing at twenty-four and a half billion pounds.",
+      "source_date": "2026-10-21",
+      "sources": [
+        "https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/publicsectorfinance/bulletins/publicsectorfinances/september2026/pdf"
+      ],
+      "source_url": "https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/publicsectorfinance/bulletins/publicsectorfinances/september2026/pdf",
+      "evidence_caveat": "ONS September release, not a newly issued October22 statistic; underlying release unseen in delivered history.",
+      "status": "candidate_verified_not_delivered",
+      "disposition": "included_unseen_catchup"
+    },
+    {
+      "upstream_index": 9,
+      "upstream_indices": [
+        9
+      ],
+      "section": "UK",
+      "event_id": "oct23-9",
+      "headline": "Chancellor John Healey is signalling cuts to business regulation in next week’s UK Budget.",
+      "context": "His interview with The Times outlined support for entrepreneurs, but did not announce the detailed measures.",
+      "source_date": "2026-10-22",
+      "sources": [
+        "https://citywire.com/new-model-adviser/news/thursday-papers-tesla-roars-back-as-profits-beat-expectations/a2501644",
+        "https://indmedia.in/chancellor-to-pitch-budget-at-wealth-creators-uk-politics-live-politics/",
+        "https://www.bloomberg.com/news/articles/2026-10-21/uk-chancellor-to-court-entrepreneurs-with-cuts-to-regulation"
+      ],
+      "source_url": "https://citywire.com/new-model-adviser/news/thursday-papers-tesla-roars-back-as-profits-beat-expectations/a2501644",
+      "evidence_caveat": "Times interview independently described in Citywire press review and syndicated Guardian live reporting. Detailed policy remains proposed, not enacted. Prior delivered capital-gains-tax story distinct.",
+      "status": "candidate_verified_not_delivered",
+      "disposition": "included_verified"
+    },
+    {
+      "upstream_index": 10,
+      "upstream_indices": [
+        10
+      ],
+      "section": "UK",
+      "event_id": "oct23-10",
+      "headline": "Britain is considering scrapping gas standing charges.",
+      "context": "Prime Minister Andy Burnham has requested a ministerial review; no abolition has been agreed.",
+      "source_date": "2026-10-21",
+      "sources": [
+        "https://www.independent.co.uk/bulletin/news/andy-burnham-standing-charges-pmqs-b3070702.html"
+      ],
+      "source_url": "https://www.independent.co.uk/bulletin/news/andy-burnham-standing-charges-pmqs-b3070702.html",
+      "evidence_caveat": "October21 PMQs announcement, unseen catch-up; proposal not enacted. Spoken summary is24 words, respecting source25-word limit.",
+      "status": "candidate_verified_not_delivered",
+      "disposition": "included_unseen_catchup"
+    },
+    {
+      "upstream_index": 11,
+      "upstream_indices": [
+        11
+      ],
+      "section": "UK",
+      "event_id": "oct23-11",
+      "headline": "A Bloomberg survey suggests UK bond dealers expect extra government borrowing.",
+      "context": "Tuesday’s poll forecast gilt issuance about three point four billion pounds above the existing plan, ahead of next week’s Budget.",
+      "source_date": "2026-10-20",
+      "sources": [
+        "https://ca.finance.yahoo.com/news/uk-dealers-see-3-4-080006624.html"
+      ],
+      "source_url": "https://ca.finance.yahoo.com/news/uk-dealers-see-3-4-080006624.html",
+      "evidence_caveat": "Bloomberg original syndicated by Yahoo datedOctober20; median10dealers surveyedSept28–Oct16, forecast249.6bn versus AprilDMO246.2bn. Unseen catch-up explicitly dated; not a government announcement.",
+      "status": "candidate_verified_not_delivered",
+      "disposition": "included_unseen_catchup"
+    },
+    {
+      "upstream_index": 13,
+      "upstream_indices": [
+        13
+      ],
+      "section": "World",
+      "event_id": "oct23-13",
+      "headline": "Thousands gathered in Belgrade for the student movement’s final election rally.",
+      "context": "Thursday’s gathering came ahead of Serbia’s parliamentary election on Sunday.",
+      "source_date": "2026-10-22",
+      "sources": [
+        "https://n1info.ba/regija/beograd-preplavljen-kolonama-gradjana-slavija-puna-pred-veliki-studentski-skup-zatvoreni-mostovi-i-ulice/"
+      ],
+      "source_url": "https://n1info.ba/regija/beograd-preplavljen-kolonama-gradjana-slavija-puna-pred-veliki-studentski-skup-zatvoreni-mostovi-i-ulice/",
+      "evidence_caveat": "Original N1 regional reportingOctober22 at18:34 with datedReuters photograph. Prior election-call archive is different; no prediction or polling claim.",
+      "status": "candidate_verified_not_delivered",
+      "disposition": "included_verified"
+    },
+    {
+      "upstream_index": 14,
+      "upstream_indices": [
+        14
+      ],
+      "section": "World",
+      "event_id": "oct23-14",
+      "headline": "Lula and Flávio Bolsonaro face Brazil’s final presidential debate on Friday, local time.",
+      "context": "Sunday’s run-off will determine the presidency.",
+      "source_date": "2026-10-21",
+      "sources": [
+        "https://www.aljazeera.com/news/2026/10/21/lula-bolsonaro-seek-to-disqualify-each-other-ahead-of-brazil-runoff",
+        "https://bntonline.com.br/en/globo-debate-lula-and-bolsonaro-face-off-on-october-23-684241/"
+      ],
+      "source_url": "https://www.aljazeera.com/news/2026/10/21/lula-bolsonaro-seek-to-disqualify-each-other-ahead-of-brazil-runoff",
+      "evidence_caveat": "Upcoming-event preview; source articleOctober21, debateOctober23Braziltime (SaturdaySingapore), not already held. Original BnT reportOctober19 independently confirms schedule. No polling numbers included.",
+      "status": "candidate_verified_not_delivered",
+      "disposition": "included_upcoming_event"
+    },
+    {
+      "upstream_index": 15,
+      "upstream_indices": [
+        15
+      ],
+      "section": "World",
+      "event_id": "oct23-15",
+      "headline": "Canada and Türkiye have launched a strategic partnership.",
+      "context": "Mark Carney and Recep Tayyip Erdoğan agreed to deepen ties during Thursday’s meeting in Ankara.",
+      "source_date": "2026-10-22",
+      "sources": [
+        "https://www.algemeiner.com/2026/10/22/canada-turkey-sign-strategic-partnership-part-carney-push-cut-reliance-us/",
+        "https://www.newswire.ca/news-releases/statement-by-prime-minister-carney-and-president-recep-tayyip-erdogan-829941437.html"
+      ],
+      "source_url": "https://www.algemeiner.com/2026/10/22/canada-turkey-sign-strategic-partnership-part-carney-push-cut-reliance-us/",
+      "evidence_caveat": "Reuters syndication confirms completed partnership; official statement was found via indexed source but direct retrieval failed. Avoid claiming free-trade negotiations began today: these beganJuly.",
+      "status": "candidate_verified_not_delivered",
+      "disposition": "included_verified"
+    },
+    {
+      "upstream_index": 20,
+      "upstream_indices": [
+        20
+      ],
+      "section": "Business",
+      "event_id": "oct23-20",
+      "headline": "Lockheed Martin’s order backlog reached a record two hundred and ninety-two billion US dollars.",
+      "context": "Quarterly sales rose eleven percent, and the defence company raised its full-year financial outlook.",
+      "source_date": "2026-10-22",
+      "sources": [
+        "https://investors.lockheedmartin.com/node/53326/pdf"
+      ],
+      "source_url": "https://investors.lockheedmartin.com/node/53326/pdf",
+      "evidence_caveat": "Company earnings release; company-reported results, not independently audited production efficacy.",
+      "status": "candidate_verified_not_delivered",
+      "disposition": "included_verified"
+    },
+    {
+      "upstream_index": 21,
+      "upstream_indices": [
+        21
+      ],
+      "section": "Business",
+      "event_id": "oct23-21",
+      "headline": "Gold fell more than one percent in Thursday’s early trading as oil prices rose.",
+      "context": "Reuters linked the move to inflation concerns and expectations that interest rates could stay higher for longer.",
+      "source_date": "2026-10-22",
+      "sources": [
+        "https://bfsi.economictimes.indiatimes.com/news/financial-services/gold-drops-over-1-as-oil-rally-reinforces-higher-for-longer-rate-outlook/135107430",
+        "https://www.marketscreener.com/news/gold-drops-over-1-as-oil-rally-reinforces-higher-for-longer-rate-outlook-ce785cd9df8cff21",
+        "https://www.reuters.com/world/india/gold-drops-over-1-oil-rally-reinforces-higher-for-longer-rate-outlook-2026-10-22/"
+      ],
+      "source_url": "https://bfsi.economictimes.indiatimes.com/news/financial-services/gold-drops-over-1-as-oil-rally-reinforces-higher-for-longer-rate-outlook/135107430",
+      "evidence_caveat": "Reuters original reporting syndicated by EconomicTimesBFSI, publishedOctober22at10:29IST; spotgoldfell1.1%by03:33GMT. Early-session move, not closing price. Additional laterReuterssyndication confirms1.3%by05:30GMT. No unverified110USD oil price repeated.",
+      "status": "candidate_verified_not_delivered",
+      "disposition": "included_verified"
+    },
+    {
+      "upstream_index": 24,
+      "upstream_indices": [
+        24,
+        25
+      ],
+      "section": "Sports",
+      "event_id": "wta-finals-muchova-final-field-20261021",
+      "disposition": "verified_unseen_catchup_merged",
+      "headline": "Karolina Muchova has secured the last singles place at the WTA Finals.",
+      "context": "Wednesday's qualification completes the eight-player field for Indian Wells, after Marta Kostyuk retired from her Ningbo match.",
+      "source_date": "2026-10-21",
+      "event_date": "2026-10-21",
+      "source_url": "https://www.wtatennis.com/news/4596744/karolina-muchova-secures-final-qualification-place-for-fage-wta-finals-indian-wells",
+      "sources": [
+        "https://www.wtatennis.com/news/4596744/karolina-muchova-secures-final-qualification-place-for-fage-wta-finals-indian-wells",
+        "https://www.foxsports.com/articles/tennis/muchova-secures-the-last-wta-finals-spot-after-kostyuk-retires-at-ningbo-open",
+        "https://www.wtatennis.com/news/4594854/meet-your-elite-eight-a-snapshot-of-the-wta-finals-contenders"
+      ],
+      "evidence_caveat": "Official WTA October 21 release verifies qualification, full field and Indian Wells venue. AP October 21 report syndicated by Fox verifies retirement trigger. Indian Wells is established venue context, not a newly announced move today; the WTA overview retains an October 19 header despite updated qualification text. ESPN supplied URL met a JavaScript challenge and was not bypassed.",
+      "dedup_note": "October 22 delivery already covered Kostyuk's retirement as a Ningbo match result. This is the distinct, previously uncovered final-qualification consequence. Avoid repeating match scores. Upstream 25 is the same completed-field event as 24 and is explicitly merged, not silently omitted.",
+      "status": "candidate_verified_not_delivered"
+    },
+    {
+      "upstream_index": 26,
+      "upstream_indices": [
+        26
+      ],
+      "section": "Sports",
+      "event_id": "hamilton-antonelli-deserves-title-austin-20261022",
+      "disposition": "corrected_primary_replacement",
+      "headline": "Lewis Hamilton says Kimi Antonelli deserves to become Formula One world champion.",
+      "context": "At Thursday's Austin press conference, Hamilton praised his performances, while Antonelli said the championship was not yet settled.",
+      "source_date": "2026-10-22",
+      "event_date": "2026-10-22",
+      "source_url": "https://api.fia.com/news/f1-2026-united-states-grand-prix-thursday-press-conference-transcript",
+      "sources": [
+        "https://api.fia.com/news/f1-2026-united-states-grand-prix-thursday-press-conference-transcript"
+      ],
+      "evidence_caveat": "The upstream Formula1 URL is actually the October 30, 2014 press conference and does not support the 2026 claim. Replaced with FIA's primary transcript headed 22.10.26, retrieved in full through indexed primary-source search after direct-open internal errors. Hamilton expresses an attributed view, not a guarantee that Antonelli will clinch at Austin.",
+      "dedup_note": "Prior archives and October 22 exclusions contain old Austin title permutations. This October 22 attributed Hamilton statement is a new factual development; no permutations are repeated.",
+      "status": "candidate_verified_not_delivered"
+    },
+    {
+      "upstream_index": 27,
+      "upstream_indices": [
+        27
+      ],
+      "section": "Sports",
+      "event_id": "sainz-personal-middle-east-finale-concerns-20261022",
+      "disposition": "verified_corrected_context",
+      "headline": "Carlos Sainz has raised personal concerns about Formula One's Qatar and Abu Dhabi finales.",
+      "context": "The races remain scheduled, and he said drivers would follow the FIA and Formula One's safety assessment.",
+      "source_date": "2026-10-22",
+      "event_date": "2026-10-22",
+      "source_url": "https://api.fia.com/news/f1-2026-united-states-grand-prix-thursday-press-conference-transcript",
+      "sources": [
+        "https://api.fia.com/news/f1-2026-united-states-grand-prix-thursday-press-conference-transcript",
+        "https://www.autosport.com/f1/news/sainz-not-convinced-f1-2026-will-finish-in-middle-east/10867117/"
+      ],
+      "evidence_caveat": "Sainz explicitly spoke personally, not on behalf of the GPDA. Neither race has been cancelled in these sources. Autosport shows October 22, 2026, 7:28 PM without a verified timezone, so no fabricated Singapore timestamp is assigned. FIA transcript is dated 22.10.26.",
+      "dedup_note": "No matching Sainz Middle East finale concern in all delivered history or relevant archive scans.",
+      "status": "candidate_verified_not_delivered"
+    }
+  ],
+  "conditions": {
+    "weather": {
+      "source": "https://api-open.data.gov.sg/v2/real-time/api/twenty-four-hr-forecast",
+      "timestamp": "2026-10-23T05:30:00+08:00",
+      "updated": "2026-10-23T05:41:15+08:00",
+      "valid_from": "2026-10-23T06:00:00+08:00",
+      "valid_to": "2026-10-24T06:00:00+08:00",
+      "temperature_c": [
+        25,
+        34
+      ],
+      "outlook": "Morning partly cloudy; noon–18:00 thunderstorms north/east/west, cloudy south/central; evening cloudy."
+    },
+    "air": {
+      "source": "https://api-open.data.gov.sg/v2/real-time/api/psi",
+      "timestamp": "2026-10-23T06:00:00+08:00",
+      "updated": "2026-10-23T06:45:37+08:00",
+      "psi_24h": {
+        "north": 68,
+        "south": 68,
+        "west": 89,
+        "east": 71,
+        "central": 79
+      },
+      "status": "Moderate in all five regions"
+    },
+    "new_serious_official_warning": false,
+    "psi_24h": {
+      "north": 68,
+      "south": 68,
+      "west": 89,
+      "east": 71,
+      "central": 79
+    },
+    "temperature_c": [
+      25,
+      34
+    ],
+    "forecast_issued": "2026-10-23T05:30:00+08:00",
+    "forecast_updated": "2026-10-23T05:41:15+08:00",
+    "valid_from": "2026-10-23T06:00:00+08:00",
+    "valid_to": "2026-10-24T06:00:00+08:00",
+    "psi_observed": "2026-10-23T06:00:00+08:00",
+    "psi_updated": "2026-10-23T06:45:37+08:00",
+    "forecast_source": "https://api-open.data.gov.sg/v2/real-time/api/twenty-four-hr-forecast",
+    "psi_source": "https://api-open.data.gov.sg/v2/real-time/api/psi"
+  },
+  "ai_events": [
+    {
+      "event_id": "anthropic-theorem-oss-verification-2026-10-22",
+      "headline": "Anthropic and Theorem report AI-assisted security proofs across 123 open-source libraries.",
+      "context": "The proofs cover specified behaviours under restricted computing assumptions, not a guarantee that the libraries are bug-free.",
+      "sources": [
+        "https://www.anthropic.com/research/formal-verification",
+        "https://github.com/theorem-labs/oss-verify-proofs"
+      ],
+      "source_date": "2026-10-22",
+      "upstream_index": null,
+      "handle": "@AnthropicAI",
+      "direct_post": "https://x.com/AnthropicAI/status/2113390212911083894",
+      "post_timestamp_sgt": "2026-10-23T06:01:00+08:00",
+      "timestamp_precision": "minute from public post UI",
+      "evidence_caveat": "Primary article read in cloud browser after web reader InternalError. Covers 239 entrypoints across123 OSS-Fuzz libraries, single-threaded static RISC-V binaries, modeled OS and memory assumptions, inputs under64MB. Scope and trusted specification/checker limitations matter. June19 Pramaana funding is a distinct event.",
+      "freshness": "new since previous partial checkpoint",
+      "status": "candidate_not_delivered",
+      "rank": 1
+    },
+    {
+      "event_id": "metr-redwood-openai-monitoring-audit-2026-10-22",
+      "headline": "METR and Redwood have published findings from a summer review of OpenAI’s agent monitoring.",
+      "context": "They found weaknesses in the historical system; OpenAI says production-safeguard vulnerabilities were patched, but the reviewers have not verified those fixes.",
+      "sources": [
+        "https://metr.org/blog/2026-10-22-red-teaming-openai-agent-monitoring/"
+      ],
+      "source_date": "2026-10-22",
+      "upstream_index": null,
+      "handle": "@METR_Evals via @OpenAI",
+      "direct_post": "https://x.com/METR_Evals/status/2113290966933389390",
+      "post_timestamp_sgt": "2026-10-22T23:26:00+08:00",
+      "timestamp_precision": "minute from public post UI",
+      "evidence_caveat": "Original primary article read in cloud browser after web reader failure. Exercise July21-Aug11 assessed system on/beforeJuly21, not current coverage. Public brief is not a full safety certification. Distinct from prior HuggingFace incident and Oct14 evaluator proposal; no operational exploit detail needed.",
+      "freshness": "new since previous partial checkpoint",
+      "status": "candidate_not_delivered",
+      "rank": 2
+    },
+    {
+      "event_id": "1password-agents-platform-2026-10-22",
+      "headline": "1Password has announced a credential platform for personal AI agents.",
+      "context": "Users approve sign-ins on their own device, and the company says passwords are filled without being exposed to the agent.",
+      "sources": [
+        "https://www.businesswire.com/news/home/20261022810032/en/1Password-for-Agents-Launches-as-the-Trust-Layer-for-Personal-AI-Agents",
+        "https://1password.com/blog/1password-for-ai-agents"
+      ],
+      "source_date": "2026-10-22",
+      "upstream_index": 19,
+      "handle": "@1Password",
+      "direct_post": null,
+      "post_timestamp_sgt": null,
+      "timestamp_precision": "original date only; no verified X timestamp",
+      "evidence_caveat": "Company press release verified in cloud browser, published Oct22 09:00EDT =21:00SGT. Vendor security/design claims, not independently established efficacy. Integrations are being built/rolled out; Claude Duet described as soon, do not imply all currently available. New broad platform differs from July Claude integration.",
+      "freshness": "new since previous partial checkpoint",
+      "status": "candidate_not_delivered",
+      "rank": 3
+    },
+    {
+      "event_id": "claude-duet-research-preview-2026-10-21",
+      "headline": "Anthropic has opened a research preview of Claude Duet, its proactive assistant.",
+      "context": "Access starts through a waitlist for US Pro and Max subscribers, with background work sharing their existing usage limits.",
+      "sources": [
+        "https://claude.com/resources/articles/claude-duet"
+      ],
+      "source_date": "2026-10-21",
+      "upstream_index": 18,
+      "handle": "@claudeai",
+      "direct_post": null,
+      "post_timestamp_sgt": null,
+      "timestamp_precision": "original date only; no verified X timestamp",
+      "evidence_caveat": "Original official article datedOct21, notOct22 coverage date. Separate app/claude.ai experience, early preview limitations. Public profile returned header only, no verified direct post time.",
+      "freshness": "unseen catch-up; original Oct21, not asserted newly released overnight",
+      "status": "candidate_not_delivered",
+      "rank": 4
+    },
+    {
+      "event_id": "agent-skills-aaif-donation-2026-10-22",
+      "headline": "Anthropic says it is donating Agent Skills to the Agentic AI Foundation.",
+      "context": "The reusable agent-instruction standard joins MCP under the same foundation.",
+      "sources": [
+        "https://x.com/ClaudeDevs/status/2113328526413996100",
+        "https://github.com/aaif/project-proposals/issues/47"
+      ],
+      "source_date": "2026-10-22",
+      "upstream_index": null,
+      "handle": "@bcherny / @ClaudeDevs",
+      "direct_post": "https://x.com/ClaudeDevs/status/2113328526413996100",
+      "post_timestamp_sgt": "2026-10-23T01:55:00+08:00",
+      "timestamp_precision": "minute from public post UI",
+      "evidence_caveat": "Official developer announcement verified directly. Boris Cherny amplified at02:17SGT https://x.com/bcherny/status/2113333859907747871. Donation announcement is new, not the Skills format (Oct2025) or standard opening (Dec2025); proposal existed inSeptember. Omit unverified independent adoption-count claim.",
+      "freshness": "new since previous partial checkpoint",
+      "status": "candidate_not_delivered",
+      "rank": 5
+    },
+    {
+      "event_id": "google-forty-forest-map-2026-10-22",
+      "headline": "Google and research partners have released a new AI-based map of the world’s forest types.",
+      "context": "The ten-metre-resolution data distinguish natural forests, plantations and tree crops, alongside an early annual series covering 2017 to 2025.",
+      "sources": [
+        "https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/"
+      ],
+      "source_date": "2026-10-22",
+      "upstream_index": null,
+      "handle": "@GoogleDeepMind",
+      "direct_post": "https://x.com/GoogleDeepMind/status/2113278710795153785",
+      "post_timestamp_sgt": "2026-10-22T22:38:00+08:00",
+      "timestamp_precision": "minute from public post UI",
+      "evidence_caveat": "ForTy2020 and early2017–2025series, co-developed GoogleResearch/WRI/IIASA, available EarthEngine. New classification/time-series differs from prior binary naturalforestmap. Accuracy claims are authors’ validation, no inference of perfect plot-level compliance.",
+      "freshness": "new since previous partial checkpoint",
+      "status": "candidate_not_delivered",
+      "rank": 6
+    },
+    {
+      "event_id": "deepseek-funding-wrapup-2026-10-22",
+      "headline": "Reuters reports that DeepSeek is wrapping up a roughly fifteen-billion-US-dollar funding round.",
+      "context": "Tencent and battery maker CATL are among the biggest investors, according to sources, but the terms could still change.",
+      "sources": [
+        "https://www.kslm.news/news/deepseek-wrapping-up-15-billion-fundraising-to-fuel-ai-race-mvj2o4de",
+        "https://hk.marketscreener.com/news/deepseek-raises-15-billion-in-challenge-to-leading-us-labs-bloomberg-news-reports-ce785cd9df8afe20"
+      ],
+      "source_date": "2026-10-22",
+      "upstream_index": 16,
+      "handle": null,
+      "direct_post": null,
+      "post_timestamp_sgt": null,
+      "timestamp_precision": "original date only; no verified X timestamp",
+      "evidence_caveat": "Reuters original reporting via syndication, two unnamed knowledgeable sources, companies could not immediately be reached. Not a company-confirmed completed round. MarketScreener body initially exposed older Bloomberg-sourced version; updated Reuters text verified through KSLM.",
+      "freshness": "material follow-up: round wrapping up/having generated funds, versus Oct7 archive’s possible doubled target",
+      "status": "candidate_not_delivered",
+      "rank": 7
+    },
+    {
+      "event_id": "flapping-airplanes-series-a-2026-10-21",
+      "headline": "AI research lab Flapping Airplanes has raised one billion US dollars.",
+      "context": "Index Ventures and Lux co-led the round, while Bloomberg reports a six-billion-dollar valuation.",
+      "sources": [
+        "https://www.indexventures.com/perspectives/toward-more-efficient-ai-leading-flapping-airplanes-1b-series-a/",
+        "https://x.com/flappyairplanes/status/2112955212612919318",
+        "https://siliconangle.com/2026/10/21/year-old-ai-research-lab-flapping-airplanes-raises-1b-at-a-reported-6b-valuation/"
+      ],
+      "source_date": "2026-10-21",
+      "upstream_index": 17,
+      "handle": "@flappyairplanes",
+      "direct_post": "https://x.com/flappyairplanes/status/2112955212612919318",
+      "post_timestamp_sgt": "2026-10-22T01:12:00+08:00",
+      "timestamp_precision": "minute from public post UI",
+      "evidence_caveat": "Company confirms amount/co-leads, Index confirms SeriesA; valuation attributed Bloomberg, not primary company confirmation. Research aims not measured commercial savings.",
+      "freshness": "unseen catch-up predating previous partial checkpoint; no prior archive/delivery match",
+      "status": "candidate_not_delivered",
+      "rank": 8
+    }
+  ],
+  "ai_coverage": {
+    "roster_profiles_attempted": 9,
+    "roster_profiles_with_visible_posts": 6,
+    "exhaustive": false,
+    "global_cutoff_advance": false,
+    "global_gap_anchor_preserved": "2026-10-18T06:09:26+08:00",
+    "previous_partial_checkpoint": "2026-10-22T07:16:40+08:00",
+    "description": "Bounded visible public posts only, not full timeline scans. Supplementary official posts read. Older unseen originals explicitly labeled catch-up. Do not advance full-window/profile coverage cursors based on this sample.",
+    "roster_count": 211,
+    "profiles_attempted": 9,
+    "scope": "Nine of 211 roster profiles were attempted; six exposed posts. This bounded sample is not a full timeline review. Older unseen originals are labelled catch-up, and earlier coverage gaps remain open."
+  },
+  "upstream_checklist": [
+    {
+      "index": 0,
+      "upstream_headline": "Singapore couple convicted over the abuse and death of their eight-month-old son",
+      "disposition": "excluded",
+      "reason": "Original article is October12 and reports guilty pleas then; no independently verified new sentencing this week. Upstream October21 date and lengthy-sentences claim unsupported.",
+      "sources": [
+        "https://mothership.sg/2026/10/couple-8-month-old-baby-death-abuse-suffocate-trevor-neo/"
+      ]
+    },
+    {
+      "index": 1,
+      "upstream_headline": "Temasek and GIC reject an Indonesian ex-minister's claim they triggered a market rout",
+      "disposition": "included_verified",
+      "reason": "Original Mothership report dated October21 at20:55SGT. Allegation attributed to former minister Muhammad Lutfi, not established fact; no claim of wrongdoing is endorsed.",
+      "sources": [
+        "https://mothership.sg/2026/10/temasek-gic-deny-ex-indonesian-ministers-claims-they-were-behind-msci-downgrade-threat-indonesias-stock-market-plunge/"
+      ]
+    },
+    {
+      "index": 2,
+      "upstream_headline": "Court orders a Singapore man to pay S$600,000 to two brothers cut out of a will",
+      "disposition": "included_unseen_catchup",
+      "reason": "Unseen catch-up: primary judgment October19, reporting October21 at18:10SGT; not a judgment issued today.",
+      "sources": [
+        "https://www.elitigation.sg/gd/s/2026_SGHC_219",
+        "https://mothership.sg/2026/10/man-ordered-pay-600000/"
+      ]
+    },
+    {
+      "index": 3,
+      "upstream_headline": "Update: PM Wong courts the UAE on energy and investment on his first visit as premier",
+      "disposition": "corrected_material_update",
+      "reason": "Replaces October19 travel preview with October21 completed UAE meeting and agreements. Prior delivered Qatar visit is distinct. CEPA negotiations, not a completed free-trade agreement.",
+      "sources": [
+        "https://www.mfa.gov.sg/newsroom/press-statements-transcripts-and-photos/official-visit-by-prime-minister-and-minister-for-finance-lawrence-wong-to-the-united-arab-emirates--20-to-22-october-2026/"
+      ]
+    },
+    {
+      "index": 4,
+      "upstream_headline": "Update: Reliance's Jio Platforms draws strong demand as its record IPO nears its close",
+      "disposition": "included_material_update",
+      "reason": "Material new day-two demand observation, not repeat of IPO opening. Broker reports NSE cumulative data at10:15IST; not closing subscription figures. Moneycontrol internally inconsistent retail numbers not used.",
+      "sources": [
+        "https://upstox.com/news/market-news/ipo/jio-platforms-ipo-day-2-live-updates-subscription-status-price-band-lot-size-allotment-listing-date-time-oct-22-2026/liveblog-202205/"
+      ]
+    },
+    {
+      "index": 5,
+      "upstream_headline": "India readies a data-centre policy as Google and Amazon projects draw local protests",
+      "disposition": "excluded",
+      "reason": "The policy announcement was October14, not October22; CNBC original inaccessible and no separately dated new protest/policy action verified. New article date alone is not a new development.",
+      "sources": [
+        "https://www.cnbc.com/2026/10/22/india-data-center-google-amazon.html",
+        "https://slguardian.org/india-plans-data-centre-rules-as-big-tech-projects-face-water-and-power-backlash/"
+      ]
+    },
+    {
+      "index": 6,
+      "upstream_headline": "US and India say a first trade-deal tranche is close as Rubio tours Gujarat",
+      "disposition": "excluded",
+      "reason": "Original sourceOctober18 travel analysis predates already delivered Rubio-Mumbai visit; no new signed trade tranche or fresh material outcome verified.",
+      "sources": [
+        "https://www.aljazeera.com/news/2026/10/18/why-marco-rubios-visit-to-mumbai-has-ruffled-feathers-in-india"
+      ]
+    },
+    {
+      "index": 7,
+      "upstream_headline": "India emerges as a major ammunition supplier to Europe since the Ukraine war",
+      "disposition": "excluded",
+      "reason": "Bloomberg graphics inaccessible. Exact872m ammunition total found only in social repost, not accessible original/data or reliable corroboration. Withheld rather than repeat consequential unverified trade claim.",
+      "sources": [
+        "https://www.bloomberg.com/graphics/2026-india-defense-exports/"
+      ]
+    },
+    {
+      "index": 8,
+      "upstream_headline": "UK national debt tops £3 trillion for the first time as borrowing overshoots before the Budget",
+      "disposition": "included_unseen_catchup",
+      "reason": "ONS September release, not a newly issued October22 statistic; underlying release unseen in delivered history.",
+      "sources": [
+        "https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/publicsectorfinance/bulletins/publicsectorfinances/september2026/pdf"
+      ]
+    },
+    {
+      "index": 9,
+      "upstream_headline": "Healey to aim his first Budget at cutting business costs and regulation",
+      "disposition": "included_verified",
+      "reason": "Times interview independently described in Citywire press review and syndicated Guardian live reporting. Detailed policy remains proposed, not enacted. Prior delivered capital-gains-tax story distinct.",
+      "sources": [
+        "https://citywire.com/new-model-adviser/news/thursday-papers-tesla-roars-back-as-profits-beat-expectations/a2501644",
+        "https://indmedia.in/chancellor-to-pitch-budget-at-wealth-creators-uk-politics-live-politics/",
+        "https://www.bloomberg.com/news/articles/2026-10-21/uk-chancellor-to-court-entrepreneurs-with-cuts-to-regulation"
+      ]
+    },
+    {
+      "index": 10,
+      "upstream_headline": "PM Burnham floats scrapping the gas standing charge to ease energy bills",
+      "disposition": "included_unseen_catchup",
+      "reason": "October21 PMQs announcement, unseen catch-up; proposal not enacted. Spoken summary is24 words, respecting source25-word limit.",
+      "sources": [
+        "https://www.independent.co.uk/bulletin/news/andy-burnham-standing-charges-pmqs-b3070702.html"
+      ]
+    },
+    {
+      "index": 11,
+      "upstream_headline": "UK bond dealers expect extra gilt sales as fiscal headroom shrinks",
+      "disposition": "included_unseen_catchup",
+      "reason": "Bloomberg original syndicated by Yahoo datedOctober20; median10dealers surveyedSept28–Oct16, forecast249.6bn versus AprilDMO246.2bn. Unseen catch-up explicitly dated; not a government announcement.",
+      "sources": [
+        "https://ca.finance.yahoo.com/news/uk-dealers-see-3-4-080006624.html"
+      ]
+    },
+    {
+      "index": 12,
+      "upstream_headline": "Iran intensifies its tanker war in the Strait of Hormuz, driving oil toward $110",
+      "disposition": "excluded",
+      "reason": "Supplied AlJazeera source is October17, notOctober22; Iran/Hormuz disruption already covered. No fresh vessel-attack facts verified from this old source. Current market movement covered separately at21.",
+      "sources": [
+        "https://www.aljazeera.com/news/2026/10/17/us-and-iran-both-claim-control-of-strait-of-hormuz-amid-attacks-on-vessels"
+      ]
+    },
+    {
+      "index": 13,
+      "upstream_headline": "Serbia heads to a snap election on Oct 25 with a student-led list challenging Vucic",
+      "disposition": "included_verified",
+      "reason": "Original N1 regional reportingOctober22 at18:34 with datedReuters photograph. Prior election-call archive is different; no prediction or polling claim.",
+      "sources": [
+        "https://n1info.ba/regija/beograd-preplavljen-kolonama-gradjana-slavija-puna-pred-veliki-studentski-skup-zatvoreni-mostovi-i-ulice/"
+      ]
+    },
+    {
+      "index": 14,
+      "upstream_headline": "Lula and Flavio Bolsonaro face a final debate before Brazil's Oct 25 run-off",
+      "disposition": "included_upcoming_event",
+      "reason": "Upcoming-event preview; source articleOctober21, debateOctober23Braziltime (SaturdaySingapore), not already held. Original BnT reportOctober19 independently confirms schedule. No polling numbers included.",
+      "sources": [
+        "https://www.aljazeera.com/news/2026/10/21/lula-bolsonaro-seek-to-disqualify-each-other-ahead-of-brazil-runoff",
+        "https://bntonline.com.br/en/globo-debate-lula-and-bolsonaro-face-off-on-october-23-684241/"
+      ]
+    },
+    {
+      "index": 15,
+      "upstream_headline": "Canada and Türkiye launch a strategic partnership and push for a free-trade deal",
+      "disposition": "included_verified",
+      "reason": "Reuters syndication confirms completed partnership; official statement was found via indexed source but direct retrieval failed. Avoid claiming free-trade negotiations began today: these beganJuly.",
+      "sources": [
+        "https://www.algemeiner.com/2026/10/22/canada-turkey-sign-strategic-partnership-part-carney-push-cut-reliance-us/",
+        "https://www.newswire.ca/news-releases/statement-by-prime-minister-carney-and-president-recep-tayyip-erdogan-829941437.html"
+      ]
+    },
+    {
+      "index": 16,
+      "disposition": "retain_with_correction_or_caveat",
+      "event_id": "deepseek-funding-wrapup-2026-10-22",
+      "reason": "Reuters original reporting via syndication, two unnamed knowledgeable sources, companies could not immediately be reached. Not a company-confirmed completed round. MarketScreener body initially exposed older Bloomberg-sourced version; updated Reuters text verified through KSLM.",
+      "sources": [
+        "https://www.kslm.news/news/deepseek-wrapping-up-15-billion-fundraising-to-fuel-ai-race-mvj2o4de",
+        "https://hk.marketscreener.com/news/deepseek-raises-15-billion-in-challenge-to-leading-us-labs-bloomberg-news-reports-ce785cd9df8afe20"
+      ]
+    },
+    {
+      "index": 17,
+      "disposition": "retain_with_correction_or_caveat",
+      "event_id": "flapping-airplanes-series-a-2026-10-21",
+      "reason": "Company confirms amount/co-leads, Index confirms SeriesA; valuation attributed Bloomberg, not primary company confirmation. Research aims not measured commercial savings.",
+      "sources": [
+        "https://www.indexventures.com/perspectives/toward-more-efficient-ai-leading-flapping-airplanes-1b-series-a/",
+        "https://x.com/flappyairplanes/status/2112955212612919318",
+        "https://siliconangle.com/2026/10/21/year-old-ai-research-lab-flapping-airplanes-raises-1b-at-a-reported-6b-valuation/"
+      ]
+    },
+    {
+      "index": 18,
+      "disposition": "retain_with_correction_or_caveat",
+      "event_id": "claude-duet-research-preview-2026-10-21",
+      "reason": "Original official article datedOct21, notOct22 coverage date. Separate app/claude.ai experience, early preview limitations. Public profile returned header only, no verified direct post time.",
+      "sources": [
+        "https://claude.com/resources/articles/claude-duet"
+      ]
+    },
+    {
+      "index": 19,
+      "disposition": "retain_with_correction_or_caveat",
+      "event_id": "1password-agents-platform-2026-10-22",
+      "reason": "Company press release verified in cloud browser, published Oct22 09:00EDT =21:00SGT. Vendor security/design claims, not independently established efficacy. Integrations are being built/rolled out; Claude Duet described as soon, do not imply all currently available. New broad platform differs from July Claude integration.",
+      "sources": [
+        "https://www.businesswire.com/news/home/20261022810032/en/1Password-for-Agents-Launches-as-the-Trust-Layer-for-Personal-AI-Agents",
+        "https://1password.com/blog/1password-for-ai-agents"
+      ]
+    },
+    {
+      "index": 20,
+      "upstream_headline": "Lockheed Martin beats on profit as its order backlog hits a record US$292 billion",
+      "disposition": "included_verified",
+      "reason": "Company earnings release; company-reported results, not independently audited production efficacy.",
+      "sources": [
+        "https://investors.lockheedmartin.com/node/53326/pdf"
+      ]
+    },
+    {
+      "index": 21,
+      "upstream_headline": "Oil jumps and gold slips as Strait of Hormuz attacks stoke supply fears",
+      "disposition": "included_verified",
+      "reason": "Reuters original reporting syndicated by EconomicTimesBFSI, publishedOctober22at10:29IST; spotgoldfell1.1%by03:33GMT. Early-session move, not closing price. Additional laterReuterssyndication confirms1.3%by05:30GMT. No unverified110USD oil price repeated.",
+      "sources": [
+        "https://bfsi.economictimes.indiatimes.com/news/financial-services/gold-drops-over-1-as-oil-rally-reinforces-higher-for-longer-rate-outlook/135107430",
+        "https://www.marketscreener.com/news/gold-drops-over-1-as-oil-rally-reinforces-higher-for-longer-rate-outlook-ce785cd9df8cff21",
+        "https://www.reuters.com/world/india/gold-drops-over-1-oil-rally-reinforces-higher-for-longer-rate-outlook-2026-10-22/"
+      ]
+    },
+    {
+      "index": 22,
+      "upstream_headline": "GM beats on Q3 profit, lifts guidance and unveils a US$20 billion buyback",
+      "disposition": "excluded",
+      "reason": "GM earnings and20bn repurchase previously deliveredOctober21; same underlying event, no material update.",
+      "sources": [
+        "https://www.cnbc.com/2026/10/20/general-motors-gm-earnings-q3-2026.html"
+      ]
+    },
+    {
+      "index": 23,
+      "disposition": "exclude_unverified",
+      "headline": "OpenAI nears a US$30 billion round at a US$1.25 trillion valuation",
+      "reason": "CNBC original returned web InternalError and cloud-browser Access Denied. Targeted search did not corroborate this valuation/new Oct22 development. Reuters Oct19 reported talks around$30b at over$1.4T, while Sep17 archive already covered above$1.2T talks. Do not present conflicting figures or negotiations as a closed round.",
+      "sources": [
+        "https://www.cnbc.com/2026/10/22/openai-funding-round-uae-investors.html",
+        "https://www.marketscreener.com/news/openai-seeks-to-accelerate-fundraising-ahead-of-anthropic-ipo-sources-say-ce785cdbdf8cf321"
+      ]
+    },
+    {
+      "index": 24,
+      "disposition": "included_unseen_catchup",
+      "event_id": "wta-finals-muchova-final-field-20261021",
+      "reason": "October 21 official WTA qualification is an unseen consequence; previous delivery covered the underlying retirement only.",
+      "upstream_headline": "🎾 Muchova clinches the last WTA Finals berth as Kostyuk retires at Ningbo",
+      "sources": [
+        "https://www.espn.com/tennis/story/_/id/50237865/kostyuk-retires-ningbo-match-hands-muchova-wta-finals-slot"
+      ]
+    },
+    {
+      "index": 25,
+      "disposition": "merged_same_event",
+      "event_id": "wta-finals-muchova-final-field-20261021",
+      "reason": "Eight-player completed field and Indian Wells venue covered within index 24. Relocation is existing context, not newly announced today.",
+      "upstream_headline": "🎾 WTA Finals field set as the event moves from Riyadh to Indian Wells",
+      "sources": [
+        "https://www.wtatennis.com/news/4594854/meet-your-elite-eight-a-snapshot-of-the-wta-finals-contenders"
+      ]
+    },
+    {
+      "index": 26,
+      "disposition": "corrected_primary_replacement",
+      "event_id": "hamilton-antonelli-deserves-title-austin-20261022",
+      "reason": "Upstream source is October 30, 2014. Actual October 22, 2026 FIA transcript supports Hamilton's attributed endorsement, not a clinching prediction.",
+      "upstream_headline": "🏎️ Hamilton backs Antonelli to seal the F1 title as the decider reaches Austin",
+      "sources": [
+        "https://www.formula1.com/en/latest/article/fia-thursday-press-conference-united-states.2A8M8916h5IdXXKkH3bWco"
+      ]
+    },
+    {
+      "index": 27,
+      "disposition": "included_attributed",
+      "event_id": "sainz-personal-middle-east-finale-concerns-20261022",
+      "reason": "New October 22 personal concern, explicitly not a GPDA statement or cancellation; verified against FIA transcript and Autosport.",
+      "upstream_headline": "🏎️ Sainz questions whether F1's Qatar and Abu Dhabi finales will go ahead",
+      "sources": [
+        "https://www.autosport.com/f1/news/sainz-not-convinced-f1-2026-will-finish-in-middle-east/10867117/"
+      ]
+    },
+    {
+      "index": 28,
+      "upstream_headline": "ESA's Euclid telescope discovers its first comet, C/2026 S1",
+      "disposition": "excluded",
+      "reason": "ESA sourceOctober19, comet confirmedOctober8 fromSeptemberimages. No newOctober22development; excluded from fresh news rather than relabelled.",
+      "sources": [
+        "https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_discovers_new_comet"
+      ]
+    },
+    {
+      "index": 29,
+      "upstream_headline": "Webb traces the most distant fast radio burst to a tiny early-universe galaxy",
+      "disposition": "excluded",
+      "reason": "NASA original datedOctober8; no newOctober22measurement or result.",
+      "sources": [
+        "https://science.nasa.gov/missions/webb/webb-measures-distance-to-farthest-fast-radio-burst-suggesting-origin/"
+      ]
+    },
+    {
+      "index": 30,
+      "upstream_headline": "Study links microplastics to inflammation through reactive molecules",
+      "disposition": "excluded",
+      "reason": "Same microplastics/inflammation event already in repositoryOctober17 archive, no material new finding. Syndicated reportOctober17, not freshOctober22.",
+      "sources": [
+        "https://www.aol.com/articles/scientists-may-finally-pinpointed-microplastics-032147000.html"
+      ]
+    },
+    {
+      "index": 31,
+      "upstream_headline": "A study of over a million women finds a biological 'cliff' around menopause",
+      "disposition": "excluded",
+      "reason": "Study publishedOctober12 and ScientificAmericanreportOctober13; no fresh result. Avoid presenting observational associations as a proven biological causal mechanism.",
+      "sources": [
+        "https://health.yahoo.com/your-body/womens-health/menopause/articles/happens-body-during-menopause-research-143500181.html",
+        "https://www.natureasia.com/en/info/press-releases/detail/9458"
+      ]
+    }
+  ],
+  "podcast_learning": {
+    "selected_episode": {
+      "episode_id": "big-technology:5a1b2336-cca8-11f1-9844-a3a2a08c94a2",
+      "show": "big-technology",
+      "title": "Google CEO Sundar Pichai: AI’s Infinite Possibilities, Compute Scarcity Dilemmas, Future AI Products",
+      "published_at": "2026-10-20T17:18:00Z",
+      "source_url": "https://feeds.megaphone.fm/LI3617121267",
+      "aliases": [
+        "rss:5a1b2336-cca8-11f1-9844-a3a2a08c94a2",
+        "https://podscripts.co/podcasts/big-technology-podcast/google-ceo-sundar-pichai-ais-infinite-possibilities-compute-scarcity-dilemmas-future-ai-products"
+      ],
+      "classification": {
+        "original": true,
+        "substantive": true,
+        "replay": false,
+        "promotional": false,
+        "beginner_series": false
+      },
+      "transcript": {
+        "status": "retrieved",
+        "body_retrieved": true,
+        "source_url": "https://podscripts.co/podcasts/big-technology-podcast/google-ceo-sundar-pichai-ais-infinite-possibilities-compute-scarcity-dilemmas-future-ai-products",
+        "provenance": "third-party-transcription",
+        "checked_at": "2026-10-22T23:10:43.843468+00:00",
+        "access_note": "Full actual transcript retrieved October23 SGT. Selected passage16:54–22:52 read, excluding ads and uncertain model-name transcriptions. Publisher RSS independently confirms original publication20October17:18UTC and full episode classification."
+      },
+      "dedup_review": {
+        "status": "distinct_contribution",
+        "story_keys": [
+          "pichai-20261020-compute-allocation-lead-times"
+        ],
+        "contribution": "Management explanation of capacity lead times and competing commitments, distinct from the already delivered Gemini launch and prior workflow-specialization recap. No model specifications, adoption claims or market predictions repeated.",
+        "reviewed_at": "2026-10-22T23:10:43.843468+00:00"
+      },
+      "status": "pending",
+      "status_reason": null,
+      "publication_id": null
+    },
+    "reason": "big_technology_latest_only",
+    "original_date": "2026-10-20",
+    "original_date_sgt": "2026-10-21T01:18:00+08:00",
+    "original_date_basis": "Current publisher RSS pubDate and GUID; episodeType full. Original publication, not inferred upload or recording date.",
+    "report_summary": "Pichai describes allocating scarce computing capacity between research and customer demand, with long lead times and uncertain forecasts. The document-processing example is an editorial application, not a claim about a real deployment.",
+    "segment_references": [
+      "16:54–19:47: research priority, business demand signals and long planning lead times",
+      "20:31–22:52: capacity use, committed demand, bottlenecks and possible economic shocks"
+    ],
+    "summary_coverage": [
+      "compute allocation among research and customer work",
+      "capacity lead times and uncertainty"
+    ],
+    "caveat": "Actual third-party transcript used; it includes transcription errors and is not publisher approved. Uncertain model names and quantitative adoption claims omitted. Management statements attributed to Pichai; example and takeaway clearly editorial.",
+    "newer_original_check": "Fresh publisher RSS still lists October20 Pichai as newest original. Fixed three-episode seed is completed and unchanged; this is latest-only selection, not a re-seeded catch-up."
+  },
+  "expert_learning": {
+    "concept_id": "tiny-case-pipeline-validation",
+    "thinkers": [
+      "Andrej Karpathy"
+    ],
+    "theme": "technical_coding",
+    "source_url": "https://karpathy.github.io/2019/04/25/recipe/",
+    "original_date": "2019-04-25",
+    "classification": "evergreen",
+    "dedup_review": "reviewed_no_match",
+    "faithful_paraphrase": "Karpathy recommends fitting a tiny batch to test the training pipeline before scaling. This debugging check does not establish generalization.",
+    "editorial_application": "Test a document workflow with two invented known-answer inputs before large-scale integration; then evaluate unfamiliar cases separately.",
+    "report_summary": "Evergreen April25 2019: prove a tiny pipeline works before scaling. Distinguish a wiring check from performance on unseen inputs.",
+    "status": "candidate",
+    "history_review": "All13 delivered daily records and public companion reports reviewed semantically. October20 input-data inspection is distinct; earlier overfitting mentions concerned benchmark failure, not this debugging lesson. Existing partial-history-import caveat retained."
+  },
+  "interesting_fact": {
+    "event_id": "mercury-water-ice-shadowed-polar-craters",
+    "title": "Water ice survives in Mercury’s polar shadows",
+    "source_url": "https://www.jpl.nasa.gov/news/nasa-spacecraft-finds-new-mercury-water-ice-evidence/",
+    "original_date": "2012-11-29",
+    "classification": "evergreen",
+    "claim": "MESSENGER found compelling evidence of water ice in permanently shadowed polar craters despite Mercury’s proximity to the Sun.",
+    "dedup_review": "No matching underlying polar-ice fact found across archive JSON, USED.json, companion sources and13 daily delivery records. Distinct from yesterday’s Uranus fact and personal coloured-seas/calendar-era episodes. Calendar episode script also checked for Mercury/ice references.",
+    "upstream_change": "The original brief retains its Anglo-Zanzibar shortest-war fact. This verified companion and audio substitute an unseen Mercury fact because the war comparison already appeared in June21 and August22 archives. Original archive unchanged.",
+    "status": "candidate"
+  },
+  "diagnostics": [
+    "Bloomberg ammunition graphics inaccessible; social repost not treated as confirmation.",
+    "CNBC India data-centre original unavailable; older policy announcement not relabelled.",
+    "Inshorts publicnational feed inspected22Oct; original SouthFirst click failed, NewsMinute independently corroborated inquiry with embedded chief minister statement.",
+    "Some UK/market reports available via search-index article text or reliable syndication rather than directopen; exact event dates kept.",
+    "@claudeai public profile header only, no post timestamps obtained.",
+    "Web reader failed on Anthropic formal verification, METR audit and BusinessWire; cloud browser recovered primary articles.",
+    "CNBC Access Denied; no retry/bypass.",
+    "Flapping homepage web reader empty; company X and Index investor article verified instead.",
+    "Not all211 roster profiles inspected; longstanding global window gap remains.",
+    "Publisher episodes/blog and AI News listings remain stale at August14; both public YouTube Videos views expose only footer content and Live views fail. Newsletter is inaccessible. Two date-specific searches yielded no usable original. No current qualifying original with an accessible actual transcript was established; this is not proof that no new episode exists.",
+    "Official RSS fetched directly and parsed; web tool rejected XML content type, not access. Actual full Pichai transcript downloaded and selected passage read. Publisher description corroborates subject but was not used as transcript substitute.",
+    "Original Karpathy article read directly, publication date and tiny-batch instruction verified.",
+    "Original NASA/JPL release read directly with date November29 2012. Upstream war fact repeated June21/Aug22 and substituted transparently.",
+    "No sufficiently verified substantive life/health/reinsurance development selected in this bounded pass. Results included generic conference listings, vendor cyber-underwriting promotion and Chubb executive AI-liability commentary; not promoted to news without stronger primary evidence. No spoken no-news announcement."
+  ],
+  "insurance_screening": {
+    "selected": [],
+    "queries": [
+      "SwissRe/MunichRe official datedOct22 screen",
+      "insurance AI underwriting/claims Oct22",
+      "life/health reinsurance Oct22"
+    ],
+    "outcome": "No sufficiently verified substantive life/health/reinsurance development selected in this bounded pass. Results included generic conference listings, vendor cyber-underwriting promotion and Chubb executive AI-liability commentary; not promoted to news without stronger primary evidence. No spoken no-news announcement."
+  },
+  "ai_partial_observations": [
+    {
+      "handle": "AnthropicAI",
+      "observed_sgt": "2026-10-23T07:07:00+08:00",
+      "status": "visible posts; observation time approximate minute",
+      "scope": "bounded visible public profile, no exhaustive window assertion"
+    },
+    {
+      "handle": "bcherny",
+      "observed_sgt": "2026-10-23T07:07:00+08:00",
+      "status": "visible posts; observation time approximate minute",
+      "scope": "bounded visible public profile, no exhaustive window assertion"
+    },
+    {
+      "handle": "embirico",
+      "observed_sgt": "2026-10-23T07:07:00+08:00",
+      "status": "profile header only; gap, observation time approximate minute",
+      "scope": "bounded visible public profile, no exhaustive window assertion"
+    },
+    {
+      "handle": "simonw",
+      "observed_sgt": "2026-10-23T07:07:00+08:00",
+      "status": "visible posts; observation time approximate minute",
+      "scope": "bounded visible public profile, no exhaustive window assertion"
+    },
+    {
+      "handle": "OpenAI",
+      "observed_sgt": "2026-10-23T07:11:00+08:00",
+      "status": "five visible entries including pinned and duplicate PHP thread",
+      "scope": "bounded visible public profile, no exhaustive window assertion"
+    },
+    {
+      "handle": "GoogleDeepMind",
+      "observed_sgt": "2026-10-23T07:11:00+08:00",
+      "status": "five visible entries including pinned",
+      "scope": "bounded visible public profile, no exhaustive window assertion"
+    },
+    {
+      "handle": "kevinweil",
+      "observed_sgt": "2026-10-23T07:12:14+08:00",
+      "status": "profile header only; gap",
+      "scope": "bounded visible public profile, no exhaustive window assertion"
+    },
+    {
+      "handle": "natolambert",
+      "observed_sgt": "2026-10-23T07:12:49+08:00",
+      "status": "profile header only; gap",
+      "scope": "bounded visible public profile, no exhaustive window assertion"
+    },
+    {
+      "handle": "mntruell",
+      "observed_sgt": "2026-10-23T07:12:49+08:00",
+      "status": "five visible older posts; no selected fresh item",
+      "scope": "bounded visible public profile, no exhaustive window assertion"
+    }
+  ],
+  "ai_profile_observation_cursors": []
+}

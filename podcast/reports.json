@@ -1,39 +1,45 @@
 {
-  "latest_id": "2026-10-22",
+  "latest_id": "2026-10-23",
   "reports": [
     {
+      "id": "2026-10-23",
+      "title": "23 October 2026 \u00b7 Morning news",
+      "published_at": "2026-10-22T23:15:53.755085+00:00",
+      "report_url": "reports/2026-10-23.html"
+    },
+    {
       "id": "2026-10-22",
-      "title": "22 October 2026 · Morning news",
+      "title": "22 October 2026 \u00b7 Morning news",
       "published_at": "2026-10-21T23:19:24.941412+00:00",
       "report_url": "reports/2026-10-22.html"
     },
     {
       "id": "2026-10-21",
-      "title": "21 October 2026 · Morning news",
+      "title": "21 October 2026 \u00b7 Morning news",
       "published_at": "2026-10-20T23:14:11.450711+00:00",
       "report_url": "reports/2026-10-21.html"
     },
     {
       "id": "2026-10-20",
-      "title": "20 October 2026 · Morning news",
+      "title": "20 October 2026 \u00b7 Morning news",
       "published_at": "2026-10-19T23:10:26.585523+00:00",
       "report_url": "reports/2026-10-20.html"
     },
     {
       "id": "2026-10-19",
-      "title": "19 October 2026 · Morning news",
+      "title": "19 October 2026 \u00b7 Morning news",
       "published_at": "2026-10-18T23:12:35.190Z",
       "report_url": "reports/2026-10-19.html"
     },
     {
       "id": "2026-10-18-revised",
-      "title": "18 October 2026 · Revised news edition",
+      "title": "18 October 2026 \u00b7 Revised news edition",
       "published_at": "2026-10-17T23:32:37.671Z",
       "report_url": "reports/2026-10-18-revised.html"
     },
     {
       "id": "2026-10-18",
-      "title": "18 October 2026 · Early news preview",
+      "title": "18 October 2026 \u00b7 Early news preview",
       "published_at": "2026-10-17T22:12:14.048Z",
       "report_url": "reports/2026-10-18.html"
     }
