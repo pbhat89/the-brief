@@ -75,3 +75,5 @@ test('original and verified reader views switch, fall back, and clean up on Back
  h.run("openReport(REPORTS.find(r=>r.id==='2026-10-21'))");assert.equal(h.node('#reader-original').disabled,true);assert.match(h.node('#reader-notice').textContent,/No original upstream/);assert.equal(h.node('#reader-content').hidden,false);
  h.run("openReport(REPORTS.find(r=>r.id==='2026-10-22'));resetToLogin()");assert.equal(h.run('currentReport'),null);assert.equal(h.node('#reader-original-frame').hidden,true);assert.equal(h.node('#reader-original-frame').getAttribute('src'),null);
 });
+
+test('written dates remain in Singapore even when the browser is in UTC',()=>{const h=harness();assert.equal(h.run("date('2026-10-21T23:00:00Z')"),'22 October 2026')});

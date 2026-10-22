@@ -15,6 +15,7 @@ try{
   await page.route('**/api/**',route=>{const path=new URL(route.request().url()).pathname;return route.fulfill({json:path==='/api/session'?{csrf:'synthetic'}:path==='/api/episodes'?{episodes:[]}:{activeAudioBytes:0,activeEpisodes:0,freeStorageBytes:1000000000,complete:true}});});
   await page.goto('http://127.0.0.1:9880/');await page.locator('#tab-previous').click();await page.locator('#reports button').first().click();
   const frame=page.frameLocator('#reader-original-frame');await frame.locator('.title').waitFor();
+  assert.equal(await page.locator('#viewer-date').innerText(),'22 October 2026');
   assert.equal(await page.locator('#reader-original').getAttribute('aria-pressed'),'true');
   assert.equal(await frame.locator('.title').evaluate(e=>getComputedStyle(e).fontFamily),'"Playfair Display", serif');
   await frame.locator('.title').evaluate(()=>document.fonts.ready);await page.screenshot({path:`qa-original/${width}-original.png`,fullPage:true});

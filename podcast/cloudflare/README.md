@@ -154,7 +154,7 @@ storage, so browser-bundle initialization is a deployment gate.
 
 ## Original and verified written views
 
-Written editions default to **Original brief** when a same-date upstream archive exists. This retains the original dark/gold design, typography and section tabs, without executing upstream JavaScript. **Verified companion** stays separate and contains checked coverage and the podcast-matching fact. Original text may include repeated or subsequently corrected claims; the view labels and source links make that distinction explicit. When there is no original for that date, the app says so and shows the companion; it never substitutes another date.
+Written editions default to **Original brief** when a same-date upstream archive exists. This retains the original dark/gold design, typography and section tabs, without executing upstream JavaScript. On narrow screens the section tabs use a horizontal touch-scroll strip so headlines remain visible. Written-edition dates are explicitly displayed in Asia/Singapore. **Verified companion** stays separate and contains checked coverage and the podcast-matching fact. Original text may include repeated or subsequently corrected claims; the view labels and source links make that distinction explicit. When there is no original for that date, the app says so and shows the companion; it never substitutes another date.
 
 After every public report/manifest or upstream archive update, run the existing repository-root command `node podcast/cloudflare/scripts/build-reports.mjs`. It now generates both `src/reports.js` and `src/originals.js`; include both in the validated change set. No separate per-day viewer edits are needed. Archived upstream files are not modified.
 

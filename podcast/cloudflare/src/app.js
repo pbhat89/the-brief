@@ -35,7 +35,7 @@ async function api(url,options={}) {
 }
 function error(e){$('#error').textContent=e.message;}
 function time(t){return Number.isFinite(t)?Math.floor(t/60)+':'+String(Math.floor(t%60)).padStart(2,'0'):'0:00';}
-function date(t){const d=new Date(t);return Number.isFinite(d.getTime())?d.toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'}):'Written edition';}
+function date(t){const d=new Date(t);return Number.isFinite(d.getTime())?d.toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric',timeZone:'Asia/Singapore'}):'Written edition';}
 function resetBranding(){document.title='The Brief · Your daily perspective';$('#brand-label').textContent='the brief';$('#brand-dot').hidden=false;$('#brand-link').setAttribute('aria-label','The Brief home');$('#hero-line-one').textContent='Make sense of';$('#hero-line-two').textContent='what matters.';$('#hero-intro').textContent='Your world, thoughtfully distilled. Listen, catch up, and carry on.';}
 function applyPersonalization(value){const p=value&&typeof value==='object'?value:{};const clean=(x,max)=>typeof x==='string'?x.replace(/[\x00-\x1f\x7f]/g,'').trim().slice(0,max):'';const brand=clean(p.brand,80),greeting=clean(p.greeting,180);$('#brand-label').textContent=brand||'the brief';$('#brand-dot').hidden=!!brand;$('#brand-link').setAttribute('aria-label',brand?brand+' home':'The Brief home');document.title=brand?brand+' · Listen':'The Brief · Listen';$('#hero-line-one').textContent='A little perspective,';$('#hero-line-two').textContent='just for you.';$('#hero-intro').textContent=greeting||'A small pause, a clearer view. Welcome back.';}
 // The first title segment is the editorial title. Technical annotations belong to metadata, not the heading.
@@ -84,7 +84,7 @@ function setReportView(kind){
  if(!currentReport)return;const original=kind==='original'&&currentReport.original;
  $('#reader-original').setAttribute('aria-pressed',String(!!original));$('#reader-verified').setAttribute('aria-pressed',String(!original));
  $('#reader-content').hidden=!!original;$('#reader-original-frame').hidden=!original;
- if(original){$('#reader-original-frame').src=currentReport.original.path;$('#reader-notice').textContent='Original upstream edition, with its original design and content. It may contain repeated or corrected claims. Verified companion contains the checked version that matches the podcast.';}
+ if(original){$('#reader-original-frame').src=currentReport.original.path;$('#reader-notice').textContent='Original design and content. For corrections and the fact used in the podcast, choose Verified companion.';}
  else{$('#reader-original-frame').removeAttribute('src');$('#reader-notice').textContent=(currentReport.original?'':'No original upstream HTML was available for this date. ' )+'Verified companion: checked headlines, corrections, sources and the fact used in the podcast.';}
  const source=safeURL(original?currentReport.original.source:currentReport.source);$('#reader-source').href=source||'';$('#reader-source').hidden=!source;$('#reader-source').textContent=original?'Open original brief in a new tab ↗':'Open verified companion in a new tab ↗';
 }
