@@ -26,7 +26,7 @@ try{
   await page.screenshot({path:`qa-original/${width}-verified.png`,fullPage:true});
   await page.locator('#reader-original').click();await frame.locator('.title').waitFor();await page.locator('#reader-back').click();assert.equal(await page.locator('#reader-original-frame').getAttribute('src'),null);
   await page.locator('#reports button').nth(1).click();assert.ok(await page.locator('#reader-original').isDisabled());assert.match(await page.locator('#reader-notice').innerText(),/No original upstream HTML/);
-  await page.locator('#reader-back').click();await page.locator('#reports button').first().click();await page.locator('#logout').click();assert.ok(await page.locator('#login').isVisible());assert.equal(await page.locator('#reader-original-frame').getAttribute('src'),null);
+  await page.locator('#reader-back').click();await page.locator('#reports button').first().click();await page.locator('#logout').click();await page.locator('#login').waitFor({state:'visible'});assert.ok(await page.locator('#login').isVisible());assert.equal(await page.locator('#reader-original-frame').getAttribute('src'),null);
   assert.deepEqual(errors,[]);assert.deepEqual(external,[]);await page.close();
  }
  console.log('PASS: 390px/1280px original design and local fonts, original/verified fact distinction, section selection, repeated view switching, missing original fallback, Back/Lock cleanup, no external network requests or page errors.');
