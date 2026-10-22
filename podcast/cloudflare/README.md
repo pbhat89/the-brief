@@ -161,3 +161,29 @@ After every public report/manifest or upstream archive update, run the existing 
 Original snapshots are public-only static pages. The build parses literal data with Acorn, escapes text, filters source links and rejects unsupported CSS. It does not evaluate archive scripts. The viewer uses an opaque-origin sandbox with no scripts, forms or same-origin privileges, and a restrictive response CSP. Original fonts are locally embedded under their OFL licenses (see ORIGINAL-FONTS.md), with no third-party requests. Private audio, session, PIN and retention behavior are unchanged.
 
 `node scripts/original-browser-check.mjs` (from this directory, after `npx playwright install --with-deps chromium`) checks 390px and 1280px rendering, locally loaded fonts, section controls, both facts, view switching, unavailable originals and Back/Lock cleanup using synthetic session responses. CI retains only public-content screenshots for seven days; it never uses production PINs, private episodes or playback metadata. Local socket restrictions may prevent browser/workerd startup; hosted CI remains the required deployment gate.
+
+## Focused Today view and daily reflection (22 October 2026)
+
+Today selects only the current Asia/Singapore edition (explicit edition date,
+falling back to Singapore upload date for legacy metadata). Older audio stays in
+Previous, including when selected for playback. Missing same-day audio or HTML is
+labelled unavailable; it is never replaced with yesterday's edition. The reading
+button opens the existing isolated Original brief/Verified companion reader and
+returns to Today. Personal Podcasts and private storage behavior are unchanged.
+
+The compact header uses 30 original, unattributed reflections, explicitly labelled
+“Daily reflection”. These are not quotations from named people. The deterministic
+Singapore-date rotation repeats every 30 days. It updates on opening, tab changes
+and a local once-per-minute date check, without a remote service, schedule, data
+collection, or reminders. Long text wraps responsively.
+
+Checking a Log book item opens a native modal celebration. Keep going or Escape
+closes it, then the completed label appears struck through with Undo. Native
+modal focus containment and reduced-motion styling apply. Navigation and Lock
+clean it up, and reloading a saved record never celebrates it again. As before,
+checking is a session-only draft; Done is the explicit private save. No schema,
+record, access, authentication, retention, or persistence migration is introduced.
+
+`node scripts/daily-layout-browser-check.mjs` covers synthetic-only 390/1280-pixel
+views, motion preferences, focus/Escape, undo, same-day reading, Previous playback,
+and Singapore midnight rollover. It never accesses or changes owner task state.

@@ -198,3 +198,10 @@ Keep the spoken signposts and one-second section breaks, then use direct listene
 - Verified completion: commit 8dbdac4 passed hosted regression and deployment (run 39773671096), including 63 repository tests, 90 player tests, 390px/1280px browser checks, Worker runtime checks and dependency audit. Public-only screenshots were inspected; the original design and both distinct facts rendered correctly. Live original rendering was confirmed separately in a cloud browser.
 - Fixes verified: narrow screens now use a touch-scroll section strip, written dates use Asia/Singapore, and Lock QA waits for actual asynchronous completion. The next QA revision selects fixed reviewed archive rows rather than catalogue positions, so a new daily report does not invalidate historical fixture assertions.
 - Limits: browser QA used synthetic sessions and public content, not a physical phone or private production audio. No new claim about mobile-device playback or elapsed seven-day audio deletion.
+
+### 2026-10-22 — Focused player layout validation
+- Implemented same-Singapore-day Today audio/read link, with historical listening remaining in Previous and explicit missing-edition states.
+- Replaced the large tagline with a compact, date-rotated original daily reflection (30-day recurrence, no attributed quotation or remote service).
+- Replaced task-removal animation with a native completion modal, then struck-through completion and Undo. Explicit Done saving is unchanged; synthetic-only tests do not touch live task data.
+- Local validation: 63 repository tests, 99 Worker tests and all five contract validators passed; Worker dry-run bundle passed. Hosted browser/runtime/deployment verification is pending at this commit. Added 390/1280 QA for reduced motion, keyboard modal focus, same-day reader, Singapore rollover and reset.
+- Next verification: inspect hosted screenshots and deployed assets. Physical Android interaction remains a separate user-device check.

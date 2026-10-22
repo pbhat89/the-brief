@@ -34,6 +34,8 @@ jobs:
         working-directory: podcast/cloudflare
       - run: node scripts/original-browser-check.mjs
         working-directory: podcast/cloudflare
+      - run: node scripts/daily-layout-browser-check.mjs
+        working-directory: podcast/cloudflare
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:

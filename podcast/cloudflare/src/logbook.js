@@ -4,7 +4,7 @@ let logbookState=null,logbookDate=null,logbookWeek=null,logbookRecords=new Map()
 function logNode(tag,className,text){const node=document.createElement(tag);if(className)node.className=className;if(text!==undefined)node.textContent=text;return node;}
 function logButton(text,action,className=''){const button=logNode('button',className,text);button.type='button';button.onclick=action;return button;}
 function logMessage(text){$('#logbook-message').textContent=text;}
-function resetLogbook(){logbookSequence++;logbookState=null;logbookDate=null;logbookWeek=null;logbookRecords.clear();logbookDrafts.clear();logbookAttempts.clear();logbookLoading=false;logbookSaving=false;logbookAnimations.clear();for(const id of ['logbook-days','logbook-day','logbook-history-days'])$('#'+id).replaceChildren();$('#logbook-history').open=false;$('#logbook-history').hidden=true;$('#logbook-message').textContent='';$('#logbook-load').hidden=false;$('#logbook-load').textContent='Open your Log book';$('#logbook-load').disabled=false;}
+function resetLogbook(){closeCelebration(false);$('#celebration-detail').textContent='';logbookSequence++;logbookState=null;logbookDate=null;logbookWeek=null;logbookRecords.clear();logbookDrafts.clear();logbookAttempts.clear();logbookLoading=false;logbookSaving=false;logbookAnimations.clear();for(const id of ['logbook-days','logbook-day','logbook-history-days'])$('#'+id).replaceChildren();$('#logbook-history').open=false;$('#logbook-history').hidden=true;$('#logbook-message').textContent='';$('#logbook-load').hidden=false;$('#logbook-load').textContent='Open your Log book';$('#logbook-load').disabled=false;}
 function logbookDraft(date){if(!logbookDrafts.has(date))logbookDrafts.set(date,{habits:{},fitnessActivities:[]});return logbookDrafts.get(date);}
 function logbookOffered(){return logbookState?LogbookModel.offeredDates(logbookState.today,logbookState.startDate,[...logbookRecords.values()]):[];}
 function logbookBusy(){return logbookLoading||logbookSaving||logbookAnimations.size>0;}
@@ -49,15 +49,19 @@ function renderLogbook(){
  }
  renderLogbookHistory();
 }
+let celebrationFinish=null;
+function closeCelebration(restore=true){const finish=celebrationFinish;celebrationFinish=null;const dialog=$('#logbook-celebration');if(dialog.open&&typeof dialog.close==='function')dialog.close();else dialog.removeAttribute('open');if(finish)finish(restore);}
+$('#celebration-close').onclick=()=>closeCelebration();
+$('#logbook-celebration').oncancel=e=>{e.preventDefault();closeCelebration();};
+$('#logbook-celebration').onclose=()=>closeCelebration();
 function checkLogbookHabit(id,row){
  if(logbookBusy()||!logbookState||logbookRecords.has(logbookDate)||logbookAttempts.has(logbookDate))return;
  if(LogbookModel.singaporeDate()!==logbookState.today){loadLogbook(logbookWeek);return;}
- const targetDate=logbookDate,draft=logbookDraft(targetDate),generation=epoch,sequence=logbookSequence;draft.habits[id]=true;
+ const targetDate=logbookDate,draft=logbookDraft(targetDate),generation=epoch,sequence=logbookSequence;if(draft.habits[id])return;draft.habits[id]=true;
  const habit=LogbookModel.habitsFor(targetDate).find(h=>h.id===id),remaining=LogbookModel.habitsFor(targetDate).filter(h=>!draft.habits[h.id]);
- const finish=()=>{logbookAnimations.delete(id);if(generation!==epoch||sequence!==logbookSequence||logbookDate!==targetDate)return;renderLogbook();focusLogbookControl(remaining.length?'log-check-'+remaining[0].id:'logbook-done');logMessage(habit.label+' checked. Use Undo to put it back.');};
- if(reduced.matches){finish();return;}
- logbookAnimations.add(id);row.className+=' log-checking';row.children[0].setAttribute('aria-checked','true');row.children[0].disabled=true;$('#logbook-done').disabled=true;
- setTimeout(finish,480);
+ logbookAnimations.add(id);row.children[0].setAttribute('aria-checked','true');row.children[0].disabled=true;$('#logbook-done').disabled=true;
+ celebrationFinish=restore=>{logbookAnimations.delete(id);if(generation!==epoch||sequence!==logbookSequence||logbookDate!==targetDate)return;renderLogbook();if(restore)focusLogbookControl(remaining.length?'log-check-'+remaining[0].id:'logbook-done');logMessage(habit.label+' checked. Use Undo to put it back.');};
+ $('#celebration-detail').textContent=habit.label+' completed.';const dialog=$('#logbook-celebration');if(typeof dialog.showModal==='function')dialog.showModal();else dialog.setAttribute('open','');$('#celebration-close').focus();
 }
 async function saveLogbook(){
  if(logbookBusy()||!logbookState||logbookRecords.has(logbookDate))return;

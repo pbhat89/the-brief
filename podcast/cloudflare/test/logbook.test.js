@@ -5,6 +5,7 @@ import {parse} from 'parse5';
 import {JS} from '../src/app.js';
 import {HTML,CSS} from '../src/ui.js';
 import {LogbookModel as model,createLogbookModel} from '../src/logbook-model.js';
+import {LOGBOOK_JS} from '../src/logbook.js';
 import {LOGBOOK_MODEL_SOURCE} from '../src/logbook-model-browser.js';
 import {verifyBrowserScript} from '../scripts/browser-smoke.mjs';
 const TODAY='2026-10-19';
@@ -23,6 +24,8 @@ function harness({payload=state(),reduced=true}={}){
   getAttribute(k){return k==='src'?this.src||this.attributes.src||null:this.attributes[k]??null;}
   removeAttribute(k){delete this.attributes[k];if(k==='src')this.src='';}
   focus(){document.activeElement=this;}
+  showModal(){this.open=true;}
+  close(){this.open=false;this.onclose?.();}
  }
  const convert=n=>{const node=new Element(n.tagName||'root');for(const a of n.attrs||[]){node.setAttribute(a.name,a.value);if(a.name==='hidden')node.hidden=true;}for(const c of n.childNodes||[]){if(c.nodeName==='#text')node._text+=c.value;else node.append(convert(c));}return node;};
  const root=convert(parse(HTML));
@@ -53,10 +56,10 @@ test('Log book loads only on its tab, shows today alone initially, and keeps his
  const h=harness();await settle();assert.equal(h.requests.filter(r=>r.url.startsWith('/api/logbook')).length,0);h.find('#tab-logbook').onclick();await settle();assert.equal(h.find('#logbook-day-title').textContent,'Monday');assert.equal(h.find('#logbook-days').hidden,true);assert.equal(h.find('#logbook-day').textContent.includes('One way public transport'),true);assert.equal(h.find('#listening').hidden,true);assert.notEqual(h.find('#logbook-history').open,true);assert.equal(h.find('#logbook-history-days').textContent.includes('Not logged'),true);
 });
 test('circle removes a habit, retains Undo and keyboard focus, and never saves before Done',async()=>{
- const h=await opened();h.find('#log-check-noSmoke').onclick();assert.equal(h.find('#log-check-noSmoke'),null);assert.equal(h.document.activeElement.id,'log-check-noSugar');assert.match(h.find('#logbook-day').textContent,/Checked · 1/);const undo=h.find('#logbook-day').children.flatMap(n=>n.children).flatMap(n=>n.children).find(n=>n.attributes['aria-label']==='Undo No smoke');assert.ok(undo);undo.onclick();assert.ok(h.find('#log-check-noSmoke'));assert.equal(h.document.activeElement.id,'log-check-noSmoke');assert.equal(h.requests.filter(r=>r.options.method==='PUT').length,0);
+ const h=await opened();h.find('#log-check-noSmoke').onclick();h.find('#celebration-close').onclick();assert.equal(h.find('#log-check-noSmoke'),null);assert.equal(h.document.activeElement.id,'log-check-noSugar');assert.match(h.find('#logbook-day').textContent,/Checked · 1/);const undo=h.find('#logbook-day').children.flatMap(n=>n.children).flatMap(n=>n.children).find(n=>n.attributes['aria-label']==='Undo No smoke');assert.ok(undo);undo.onclick();assert.ok(h.find('#log-check-noSmoke'));assert.equal(h.document.activeElement.id,'log-check-noSmoke');assert.equal(h.requests.filter(r=>r.options.method==='PUT').length,0);
 });
 test('Done saves checked true and unchecked false once, then shows an immutable honest summary',async()=>{
- const h=await opened();h.find('#log-check-noSmoke').onclick();let body;h.setHandler(async(url,options)=>{body=JSON.parse(options.body);return h.respond({record:record(TODAY,body.habits)});});await h.find('#logbook-done').onclick();assert.deepEqual(body.habits,{noSmoke:true,noSugar:false,publicTransport:false,fitness:false,meditation:false});assert.equal(h.find('#logbook-done'),null);assert.match(h.find('#logbook-day').textContent,/Didn’t do/);assert.match(h.find('#logbook-day').textContent,/Saved/);assert.equal(h.run('logbookDrafts.size'),0);
+ const h=await opened();h.find('#log-check-noSmoke').onclick();h.find('#celebration-close').onclick();let body;h.setHandler(async(url,options)=>{body=JSON.parse(options.body);return h.respond({record:record(TODAY,body.habits)});});await h.find('#logbook-done').onclick();assert.deepEqual(body.habits,{noSmoke:true,noSugar:false,publicTransport:false,fitness:false,meditation:false});assert.equal(h.find('#logbook-done'),null);assert.match(h.find('#logbook-day').textContent,/Didn’t do/);assert.match(h.find('#logbook-day').textContent,/Saved/);assert.equal(h.run('logbookDrafts.size'),0);
 });
 test('missed habits in a completed earlier day do not keep that day in catch-up',async()=>{
  const h=await opened({payload:state({startDate:'2026-10-14',records:[record('2026-10-18')]})});assert.equal(h.find('#logbook-days').children.length,5);assert.ok(!h.find('#logbook-days').textContent.includes('18 Oct'));assert.match(h.find('#logbook-history-days').textContent,/Monday/);
@@ -65,10 +68,10 @@ test('weekend list omits transport and saved weekend summary marks it not applic
  const h=await opened({payload:state({today:'2026-10-18',startDate:'2026-10-18',weekStart:'2026-10-12',records:[record('2026-10-18')]})});assert.match(h.find('#logbook-day').textContent,/Sunday/);assert.match(h.find('#logbook-day').textContent,/Not applicable on weekends/);assert.equal(h.find('#log-check-publicTransport'),null);
 });
 test('a failed or ambiguous save keeps exact selections frozen for idempotent retry',async()=>{
- const h=await opened();h.find('#log-check-noSmoke').onclick();const bodies=[];h.setHandler(async(url,options)=>{bodies.push(options.body);if(bodies.length===1)throw Error('Offline');return h.respond({record:record(TODAY,JSON.parse(options.body).habits)});});await h.find('#logbook-done').onclick();assert.equal(h.find('#logbook-done').textContent,'Retry Done');assert.equal(h.find('#log-check-noSugar').disabled,true);h.find('#log-check-noSugar').onclick();assert.equal(h.run('logbookDrafts.get(logbookDate).habits.noSugar'),undefined);await h.find('#logbook-done').onclick();assert.equal(bodies.length,2);assert.equal(bodies[0],bodies[1]);assert.equal(h.find('#logbook-done'),null);
+ const h=await opened();h.find('#log-check-noSmoke').onclick();h.find('#celebration-close').onclick();const bodies=[];h.setHandler(async(url,options)=>{bodies.push(options.body);if(bodies.length===1)throw Error('Offline');return h.respond({record:record(TODAY,JSON.parse(options.body).habits)});});await h.find('#logbook-done').onclick();assert.equal(h.find('#logbook-done').textContent,'Retry Done');assert.equal(h.find('#log-check-noSugar').disabled,true);h.find('#log-check-noSugar').onclick();assert.equal(h.run('logbookDrafts.get(logbookDate).habits.noSugar'),undefined);await h.find('#logbook-done').onclick();assert.equal(bodies.length,2);assert.equal(bodies[0],bodies[1]);assert.equal(h.find('#logbook-done'),null);
 });
 test('concurrent save conflict displays saved values and does not invite endless retry',async()=>{
- const h=await opened();h.find('#log-check-noSmoke').onclick();h.setHandler(async()=>({status:409,ok:false,json:async()=>({error:'Already saved',currentRecord:record(TODAY,{meditation:true})})}));await h.find('#logbook-done').onclick();assert.equal(h.find('#logbook-done'),null);assert.match(h.find('#logbook-message').textContent,/already saved in another session/);assert.match(h.find('#logbook-message').textContent,/new selections were not applied/);assert.equal(h.run('logbookRecords.get(logbookDate).habits.noSmoke'),false);assert.equal(h.run('logbookRecords.get(logbookDate).habits.meditation'),true);
+ const h=await opened();h.find('#log-check-noSmoke').onclick();h.find('#celebration-close').onclick();h.setHandler(async()=>({status:409,ok:false,json:async()=>({error:'Already saved',currentRecord:record(TODAY,{meditation:true})})}));await h.find('#logbook-done').onclick();assert.equal(h.find('#logbook-done'),null);assert.match(h.find('#logbook-message').textContent,/already saved in another session/);assert.match(h.find('#logbook-message').textContent,/new selections were not applied/);assert.equal(h.run('logbookRecords.get(logbookDate).habits.noSmoke'),false);assert.equal(h.run('logbookRecords.get(logbookDate).habits.meditation'),true);
 });
 test('rapid Done clicks create one request and lock day switching and all choices while saving',async()=>{
  const h=await opened({payload:state({startDate:'2026-10-18'})});let finish,count=0;h.setHandler(async()=>{count++;return new Promise(r=>finish=()=>r(h.respond({record:record(TODAY)})));});const first=h.find('#logbook-done').onclick();await h.find('#logbook-done').onclick();assert.equal(count,1);assert.equal(h.find('#logbook-done').disabled,true);assert.equal(h.find('#log-check-noSmoke').disabled,true);assert.ok(h.find('#logbook-days').children.every(button=>button.disabled));finish();await first;
@@ -77,20 +80,20 @@ test('late load and late save responses cannot restore private DOM after Lock',a
  for(const operation of ['load','save']){const h=await opened();let finish;h.setHandler(async()=>new Promise(r=>finish=data=>r(h.respond(data))));const pending=operation==='load'?h.run('loadLogbook()'):h.find('#logbook-done').onclick();h.run('resetToLogin()');finish(operation==='load'?state():{record:record(TODAY)});await pending;assert.equal(h.find('#player').hidden,true);assert.equal(h.find('#logbook-day').textContent,'');assert.equal(h.find('#logbook-history-days').textContent,'');assert.equal(h.run('logbookRecords.size'),0);assert.equal(h.run('logbookDrafts.size'),0);}
 });
 test('401 during save clears all private habit state and returns to PIN entry',async()=>{
- const h=await opened();h.find('#log-check-noSmoke').onclick();h.setHandler(async()=>({status:401,ok:false}));await h.find('#logbook-done').onclick();assert.equal(h.find('#player').hidden,true);assert.equal(h.find('#logbook-day').textContent,'');assert.equal(h.run('logbookAttempts.size'),0);assert.equal(h.document.activeElement.id,'pin');
+ const h=await opened();h.find('#log-check-noSmoke').onclick();h.find('#celebration-close').onclick();h.setHandler(async()=>({status:401,ok:false}));await h.find('#logbook-done').onclick();assert.equal(h.find('#player').hidden,true);assert.equal(h.find('#logbook-day').textContent,'');assert.equal(h.run('logbookAttempts.size'),0);assert.equal(h.document.activeElement.id,'pin');
 });
-test('slash animation honors reduced motion and cannot repopulate after reset',async()=>{
- const h=await opened({reduced:false});h.find('#log-check-noSmoke').onclick();assert.equal(h.timers.length,1);assert.equal(h.find('#log-check-noSmoke').attributes['aria-checked'],'true');assert.equal(h.find('#logbook-done').disabled,true);h.run('resetToLogin()');h.timers[0]();assert.equal(h.find('#logbook-day').textContent,'');assert.equal(h.run('logbookAnimations.size'),0);assert.match(CSS,/@media\(prefers-reduced-motion:reduce\)/);assert.match(CSS,/@keyframes log-slash/);
+test('celebration respects reduced motion and cannot repopulate after reset',async()=>{
+ for(const reduced of [false,true]){const h=await opened({reduced});h.find('#log-check-noSmoke').onclick();assert.equal(h.find('#logbook-celebration').open,true);assert.equal(h.timers.length,0);assert.equal(h.find('#log-check-noSmoke').attributes['aria-checked'],'true');assert.equal(h.find('#logbook-done').disabled,true);h.run('resetToLogin()');assert.equal(h.find('#logbook-celebration').open,false);assert.equal(h.find('#logbook-day').textContent,'');assert.equal(h.run('logbookAnimations.size'),0);assert.match(CSS,/@media\(prefers-reduced-motion:reduce\)/);assert.match(CSS,/text-decoration:line-through/);assert.ok(!CSS.includes('@keyframes log-slash'));}
 });
 test('a user action after Singapore midnight refreshes dates before toggling the old day',async()=>{
- const h=await opened();h.setDate('2026-10-19T16:01:00Z');h.setHandler(async()=>h.respond(state({today:'2026-10-20',startDate:TODAY,weekStart:TODAY})));h.find('#log-check-noSmoke').onclick();await settle();assert.equal(h.run('logbookState.today'),'2026-10-20');assert.equal(h.find('#logbook-day-title').textContent,'Tuesday');assert.equal(h.run('logbookDrafts.get("2026-10-19").habits.noSmoke'),undefined);assert.equal(h.requests.filter(r=>r.options.method==='PUT').length,0);
+ const h=await opened();h.setDate('2026-10-19T16:01:00Z');h.setHandler(async()=>h.respond(state({today:'2026-10-20',startDate:TODAY,weekStart:TODAY})));h.find('#log-check-noSmoke').onclick();h.find('#celebration-close').onclick();await settle();assert.equal(h.run('logbookState.today'),'2026-10-20');assert.equal(h.find('#logbook-day-title').textContent,'Tuesday');assert.equal(h.run('logbookDrafts.get("2026-10-19").habits.noSmoke'),undefined);assert.equal(h.requests.filter(r=>r.options.method==='PUT').length,0);
 });
 test('no browser persistence, external analytics or habit reminder scheduler is introduced',()=>{
- assert.ok(!JS.includes('localStorage'));assert.ok(!JS.includes('sessionStorage'));assert.ok(!JS.includes('indexedDB'));assert.ok(!JS.includes('Notification'));assert.ok(!JS.includes('setInterval'));assert.equal(flat(model.savePayload(TODAY)).version,0);
+ assert.ok(!JS.includes('localStorage'));assert.ok(!JS.includes('sessionStorage'));assert.ok(!JS.includes('indexedDB'));assert.ok(!JS.includes('Notification'));assert.ok(!LOGBOOK_JS.includes('setInterval'));assert.equal(flat(model.savePayload(TODAY)).version,0);
 });
 
-test('finishing an animation after changing tabs never steals keyboard focus',async()=>{
- const h=await opened({reduced:false});h.find('#log-check-noSmoke').onclick();h.find('#tab-latest').onclick();h.find('#tab-latest').focus();h.timers[0]();assert.equal(h.document.activeElement.id,'tab-latest');assert.equal(h.find('#latest').hidden,false);
+test('dismissing celebration while changing tabs never steals keyboard focus',async()=>{
+ const h=await opened({reduced:false});h.find('#log-check-noSmoke').onclick();h.find('#tab-latest').onclick();h.find('#tab-latest').focus();h.find('#logbook-celebration').onclose();assert.equal(h.document.activeElement.id,'tab-latest');assert.equal(h.find('#latest').hidden,false);assert.equal(h.find('#logbook-celebration').open,false);
 });
 
 test('generated browser model exactly matches the shared source before bundling',()=>{

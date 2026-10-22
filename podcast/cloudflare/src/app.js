@@ -2,7 +2,7 @@ import {REPORTS} from './reports.js';
 import {LOGBOOK_JS} from './logbook.js';
 export const JS='const REPORTS='+JSON.stringify(REPORTS)+';\n'+String.raw`
 const $=s=>document.querySelector(s),audio=$('audio');
-let currentReport=null;
+let currentReport=null,reportReturn='previous';
 let csrf,context,analyser,frame,epoch=0,currentEpisode=null,viewing='latest',catalog={daily:[],personal:[]},selected={daily:null,personal:null},positions=new Map(),branding={},deleting=new Set(),removed=new Set();
 const tabs=['latest','previous','personal','logbook'];
 const collectionOf=e=>e?.collection==='personal'?'personal':'daily';
@@ -36,23 +36,60 @@ async function api(url,options={}) {
 function error(e){$('#error').textContent=e.message;}
 function time(t){return Number.isFinite(t)?Math.floor(t/60)+':'+String(Math.floor(t%60)).padStart(2,'0'):'0:00';}
 function date(t){const d=new Date(t);return Number.isFinite(d.getTime())?d.toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric',timeZone:'Asia/Singapore'}):'Written edition';}
-function resetBranding(){document.title='The Brief · Your daily perspective';$('#brand-label').textContent='the brief';$('#brand-dot').hidden=false;$('#brand-link').setAttribute('aria-label','The Brief home');$('#hero-line-one').textContent='Make sense of';$('#hero-line-two').textContent='what matters.';$('#hero-intro').textContent='Your world, thoughtfully distilled. Listen, catch up, and carry on.';}
-function applyPersonalization(value){const p=value&&typeof value==='object'?value:{};const clean=(x,max)=>typeof x==='string'?x.replace(/[\x00-\x1f\x7f]/g,'').trim().slice(0,max):'';const brand=clean(p.brand,80),greeting=clean(p.greeting,180);$('#brand-label').textContent=brand||'the brief';$('#brand-dot').hidden=!!brand;$('#brand-link').setAttribute('aria-label',brand?brand+' home':'The Brief home');document.title=brand?brand+' · Listen':'The Brief · Listen';$('#hero-line-one').textContent='A little perspective,';$('#hero-line-two').textContent='just for you.';$('#hero-intro').textContent=greeting||'A small pause, a clearer view. Welcome back.';}
+const DAILY_REFLECTIONS=[
+'Listen to understand before you speak to be understood.',
+'A clear next step is often more useful than a perfect plan.',
+'Make room for the person behind the opinion.',
+'You can be kind without leaving the difficult thing unsaid.',
+'Progress can be quiet. Notice it anyway.',
+'The way you recover matters more than a flawless day.',
+'Lead with curiosity; leave room to be surprised.',
+'A pause can change the quality of your next decision.',
+'Connection begins when attention stops being divided.',
+'Choose one thing today that your future self will thank you for.',
+'Confidence grows when your actions keep small promises.',
+'Ask what is needed, not only what is missing.',
+'Rest is part of a sustainable rhythm, not a reward for exhaustion.',
+'The strongest room is one where people can disagree safely.',
+'Let your standards be high and your manner humane.',
+'Small steps count even when no one is watching.',
+'Before solving the problem, make sure you have heard it.',
+'Give your attention to what you can influence today.',
+'A thoughtful question can open a door that certainty closes.',
+'Notice the effort as well as the outcome.',
+'You do not need to hurry every moment to move forward.',
+'Let a short walk make space for a fresh perspective.',
+'Trust grows through ordinary moments of consistency.',
+'Be honest about what you know, and curious about what you do not.',
+'A boundary can protect the energy you bring to others.',
+'Celebrate the step you took, then choose the next one.',
+'Clarity is a kindness you can offer your team.',
+'You can change your mind without losing your direction.',
+'Leave a little space between the feeling and the response.',
+'Today is a chance to practice, not a test of perfection.'
+];
+function singaporeDay(value=Date.now()){const parts=new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Singapore',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date(value));return ['year','month','day'].map(type=>parts.find(p=>p.type===type).value).join('-');}
+function renderDailyQuote(){const day=singaporeDay(),index=Math.floor(Date.parse(day+'T00:00:00Z')/86400000)%DAILY_REFLECTIONS.length;$('#daily-quote').textContent=DAILY_REFLECTIONS[index];$('#quote-credit').textContent='DAILY REFLECTION · '+date(day+'T00:00:00+08:00');}
+function resetBranding(){document.title='The Brief · Your daily perspective';$('#brand-label').textContent='the brief';$('#brand-dot').hidden=false;$('#brand-link').setAttribute('aria-label','The Brief home');renderDailyQuote();}
+function applyPersonalization(value){const p=value&&typeof value==='object'?value:{};const clean=(x,max)=>typeof x==='string'?x.replace(/[\x00-\x1f\x7f]/g,'').trim().slice(0,max):'';const brand=clean(p.brand,80);$('#brand-label').textContent=brand||'the brief';$('#brand-dot').hidden=!!brand;$('#brand-link').setAttribute('aria-label',brand?brand+' home':'The Brief home');document.title=brand?brand+' · Listen':'The Brief · Listen';renderDailyQuote();}
+function episodeDay(e){return /^\d{4}-\d{2}-\d{2}$/.test(e.edition||'')?e.edition:singaporeDay(e.created*1000);}
+function todayEpisode(){return catalog.daily.find(e=>episodeDay(e)===singaporeDay())||null;}
+function renderToday(){const report=REPORTS.find(r=>r.id===singaporeDay());$('#today-read').hidden=!report;$('#today-read-note').textContent=report?'Read today’s edition in its original design, or switch to the verified companion.':'Today’s written brief is not available yet. Earlier editions remain in Previous.';$('#today-read').onclick=()=>{if(report)openReport(report,'latest');};$('#today-empty').hidden=!!todayEpisode();}
 // The first title segment is the editorial title. Technical annotations belong to metadata, not the heading.
 function episodeTitle(episode){return typeof episode.title==='string'&&episode.title.trim()?episode.title.split('·')[0].trim():'Daily brief';}
 function setControls(ready){for(const s of ['#play','#back','#forward','#seek','#speed'])$(s).disabled=!ready;}
-function showTab(name){viewing=name;document.body.classList[['previous','logbook'].includes(name)?'add':'remove']('archive');for(const n of tabs){$('#'+n).hidden=n!==name;$('#tab-'+n).setAttribute('aria-selected',String(n===name));$('#tab-'+n).setAttribute('tabindex',n===name?'0':'-1');}$('#listening').hidden=['previous','logbook'].includes(name)||!currentEpisode||collectionOf(currentEpisode)!==(name==='personal'?'personal':'daily');}
-function openTab(name){showTab(name);if(name==='logbook'){openLogbook();return;}if(name==='previous')return;const kind=name==='personal'?'personal':'daily';const episode=selected[kind]||catalog[kind][0];if(episode&&currentEpisode?.id!==episode.id)chooseEpisode(episode);}
+function showTab(name){viewing=name;document.body.classList[['previous','logbook'].includes(name)?'add':'remove']('archive');for(const n of tabs){$('#'+n).hidden=n!==name;$('#tab-'+n).setAttribute('aria-selected',String(n===name));$('#tab-'+n).setAttribute('tabindex',n===name?'0':'-1');}$('#listening').hidden=name==='logbook'||!!currentReport||!currentEpisode||(name==='personal'?collectionOf(currentEpisode)!=='personal':collectionOf(currentEpisode)!=='daily'||(name==='latest'&&episodeDay(currentEpisode)!==singaporeDay()));}
+function openTab(name){closeCelebration(false);if(currentReport){clearReport();document.body.classList.remove('reader');$('#viewer').hidden=true;$('#archive-list').hidden=false;}renderDailyQuote();renderToday();showTab(name);if(name==='logbook'){openLogbook();return;}if(name==='previous')return;const episode=name==='latest'?todayEpisode():selected.personal||catalog.personal[0];if(episode&&currentEpisode?.id!==episode.id)chooseEpisode(episode);}
 for(const name of tabs){$('#tab-'+name).onclick=()=>openTab(name);$('#tab-'+name).onkeydown=e=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();const next=e.key==='Home'?tabs[0]:e.key==='End'?tabs.at(-1):tabs[(tabs.indexOf(name)+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length];openTab(next);$('#tab-'+next).focus();}};}
 function card(title,meta,icon,action){const b=document.createElement('button');b.className='edition-card';const badge=document.createElement('span');badge.className='card-icon';badge.textContent=icon;badge.setAttribute('aria-hidden','true');const body=document.createElement('span');body.className='card-body';const name=document.createElement('span');name.className='card-title';name.textContent=title;const detail=document.createElement('span');detail.className='card-meta';detail.textContent=meta;const arrow=document.createElement('span');arrow.className='card-arrow';arrow.textContent='↗';arrow.setAttribute('aria-hidden','true');body.append(name);body.append(detail);b.append(badge);b.append(body);b.append(arrow);b.onclick=action;return b;}
 function chooseEpisode(e){
  if(removed.has(e.id)||!Number.isFinite(e.expires)||e.expires<=Date.now()/1000){error(Error('This recording has expired. Refresh to see available audio.'));return;}
- const kind=collectionOf(e);if(currentEpisode?.id===e.id){showTab(kind==='personal'?'personal':'latest');return;}
+ const kind=collectionOf(e);if(currentEpisode?.id===e.id){showTab(kind==='personal'?'personal':episodeDay(e)===singaporeDay()?'latest':'previous');return;}
  if(currentEpisode&&Number.isFinite(audio.currentTime))positions.set(currentEpisode.id,audio.currentTime);
  audio.pause();currentEpisode=e;selected[kind]=e;audio.src='/api/media/'+encodeURIComponent(e.id);audio.load();
  $('#error').textContent='';$('#title').textContent=episodeTitle(e);$('#episode-date').textContent=(kind==='personal'?'PERSONAL PODCAST · ':'')+date(e.created*1000).toUpperCase();$('#status').textContent='Ready when you are';$('#seek').value=0;$('#elapsed').textContent=time(positions.get(e.id)||0);$('#duration').textContent=time(e.duration);$('#chapters').replaceChildren();setControls(true);
  for(const c of e.chapters||[]){const b=document.createElement('button');b.textContent=time(c.start)+' · '+c.title;b.onclick=()=>audio.currentTime=c.start;$('#chapters').append(b);}
- showTab(kind==='personal'?'personal':'latest');
+ showTab(kind==='personal'?'personal':episodeDay(e)===singaporeDay()?'latest':'previous');
 }
 function personalCard(e,label){const row=document.createElement('div');row.className='episode-row';row.append(card(episodeTitle(e),label,'♪',()=>chooseEpisode(e)));const remove=document.createElement('button');remove.className='delete-episode';remove.textContent='Delete';remove.setAttribute('aria-label','Delete '+episodeTitle(e));remove.onclick=()=>deleteEpisode(e,remove);row.append(remove);return row;}
 async function deleteEpisode(e,button){
@@ -88,9 +125,9 @@ function setReportView(kind){
  else{$('#reader-original-frame').removeAttribute('src');$('#reader-notice').textContent=(currentReport.original?'':'No original upstream HTML was available for this date. ' )+'Verified companion: checked headlines, corrections, sources and the fact used in the podcast.';}
  const source=safeURL(original?currentReport.original.source:currentReport.source);$('#reader-source').href=source||'';$('#reader-source').hidden=!source;$('#reader-source').textContent=original?'Open original brief in a new tab ↗':'Open verified companion in a new tab ↗';
 }
-function openReport(report){clearReport();currentReport=report;document.body.classList.add('reader');$('#archive-list').hidden=true;$('#viewer').hidden=false;$('#viewer-title').textContent=report.title;$('#viewer-date').textContent=date(report.published_at);for(const block of report.blocks)renderBlock($('#reader-content'),block);$('#reader-original').disabled=!report.original;setReportView(report.original?'original':'verified');$('#viewer-title').focus();}
+function openReport(report,origin='previous'){clearReport();reportReturn=origin;showTab('previous');currentReport=report;$('#listening').hidden=true;$('#reader-back').textContent=origin==='latest'?'← Back to Today':'← All previous editions';document.body.classList.add('reader');$('#archive-list').hidden=true;$('#viewer').hidden=false;$('#viewer-title').textContent=report.title;$('#viewer-date').textContent=date(report.published_at);for(const block of report.blocks)renderBlock($('#reader-content'),block);$('#reader-original').disabled=!report.original;setReportView(report.original?'original':'verified');$('#viewer-title').focus();}
 $('#reader-original').onclick=()=>setReportView('original');$('#reader-verified').onclick=()=>setReportView('verified');
-$('#reader-back').onclick=()=>{clearReport();document.body.classList.remove('reader');$('#viewer').hidden=true;$('#archive-list').hidden=false;$('#tab-previous').focus();};
+$('#reader-back').onclick=()=>{clearReport();document.body.classList.remove('reader');$('#viewer').hidden=true;$('#archive-list').hidden=false;openTab(reportReturn);$(reportReturn==='latest'?'#today-read':'#tab-previous').focus();};
 function renderReports(){$('#reports').replaceChildren();for(const r of REPORTS)$('#reports').append(card(r.title,date(r.published_at)+' · Read edition','≡',()=>openReport(r)));}
 function renderPersonal(){
  $('#personal-episodes').replaceChildren();
@@ -103,15 +140,14 @@ async function load(personalization={}){
  const active=data.episodes.filter(e=>e.expires>Date.now()/1000&&!e.deleted&&!removed.has(e.id)).sort((a,b)=>b.created-a.created);
  catalog={daily:active.filter(e=>collectionOf(e)==='daily').slice(0,20),personal:active.filter(e=>collectionOf(e)==='personal')};
  for(const kind of ['daily','personal'])selected[kind]=catalog[kind].find(e=>e.id===selected[kind]?.id)||catalog[kind][0]||null;
- for(const e of catalog.daily){const label=date(e.created*1000)+(e.duration?' · '+time(e.duration):'')+' · Audio available until '+date(e.expires*1000);$('#episodes').append(card(episodeTitle(e),label,'♪',()=>chooseEpisode(e)));$('#previous-audio').append(card(episodeTitle(e),label,'♪',()=>chooseEpisode(e)));}
+ for(const e of catalog.daily){const label=date(e.created*1000)+(e.duration?' · '+time(e.duration):'')+' · Audio available until '+date(e.expires*1000);$('#previous-audio').append(card(episodeTitle(e),label,'♪',()=>chooseEpisode(e)));}
  renderPersonal();
  if(!catalog.daily.length){
-  const empty=document.createElement('div');empty.className='empty-state';const text=document.createElement('p');text.textContent='Your next daily recording will appear here.';const browse=document.createElement('button');browse.textContent='Explore previous editions ↗';browse.onclick=()=>openTab('previous');empty.append(text);empty.append(browse);$('#episodes').append(empty);
   const note=document.createElement('div');note.className='empty-state';note.textContent='No recordings from the last seven days. Written editions are available below.';$('#previous-audio').append(note);
  }
  if(currentEpisode&&!active.some(e=>e.id===currentEpisode.id)){audio.pause();audio.removeAttribute('src');audio.load();currentEpisode=null;$('#chapters').replaceChildren();}
  if(!currentEpisode){setControls(false);$('#title').textContent='Ready when you are.';$('#status').textContent='Choose a recording to start listening.';$('#duration').textContent='0:00';$('#elapsed').textContent='0:00';}
- openTab(viewing);await refreshStorage();
+ renderToday();openTab(viewing);await refreshStorage();
 }
 $('form').onsubmit=async e=>{e.preventDefault();try{
  const pin=$('#pin').value;$('#pin').value='';
@@ -144,5 +180,7 @@ $('#speed').onchange=e=>audio.playbackRate=+e.target.value;
 $('#logout').onclick=async()=>{try{
  await api('/api/logout',{method:'POST',headers:{'X-CSRF-Token':csrf}});resetToLogin('Player locked.');
 }catch(e){resetToLogin(e.message);}};
+renderDailyQuote();
+if(typeof setInterval==='function')setInterval(()=>{renderDailyQuote();if(!$('#player').hidden){renderToday();if(viewing==='latest')openTab('latest');}},60000);
 api('/api/session').then(s=>{csrf=s.csrf;return load(s.personalization);}).catch(()=>{});
 `+LOGBOOK_JS;
