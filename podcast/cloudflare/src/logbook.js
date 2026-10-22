@@ -52,6 +52,7 @@ function renderLogbook(){
 let celebrationFinish=null;
 function closeCelebration(restore=true){const finish=celebrationFinish;celebrationFinish=null;const dialog=$('#logbook-celebration');if(dialog.open&&typeof dialog.close==='function')dialog.close();else dialog.removeAttribute('open');if(finish)finish(restore);}
 $('#celebration-close').onclick=()=>closeCelebration();
+$('#logbook-celebration').onkeydown=e=>{if(e.key==='Tab'){e.preventDefault();$('#celebration-close').focus();}};
 $('#logbook-celebration').oncancel=e=>{e.preventDefault();closeCelebration();};
 $('#logbook-celebration').onclose=()=>closeCelebration();
 function checkLogbookHabit(id,row){

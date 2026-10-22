@@ -205,3 +205,5 @@ Keep the spoken signposts and one-second section breaks, then use direct listene
 - Replaced task-removal animation with a native completion modal, then struck-through completion and Undo. Explicit Done saving is unchanged; synthetic-only tests do not touch live task data.
 - Local validation: 63 repository tests, 99 Worker tests and all five contract validators passed; Worker dry-run bundle passed. Hosted browser/runtime/deployment verification is pending at this commit. Added 390/1280 QA for reduced motion, keyboard modal focus, same-day reader, Singapore rollover and reset.
 - Next verification: inspect hosted screenshots and deployed assets. Physical Android interaction remains a separate user-device check.
+
+- Hosted QA follow-up: original reader regression passed. Native Chromium Tab navigation briefly left the modal control for browser chrome; added an explicit single-control Tab/Shift+Tab focus loop rather than weakening the focus test. Deployment was gated off on the failed QA run. Rerun pending.

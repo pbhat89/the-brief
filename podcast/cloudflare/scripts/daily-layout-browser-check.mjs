@@ -23,7 +23,7 @@ try{
   await page.locator('#tab-previous').click();await page.locator('#previous-audio button').filter({hasText:'Earlier fixture'}).click();assert.equal(await page.locator('#tab-previous').getAttribute('aria-selected'),'true');assert.ok(await page.locator('#listening').isVisible());
   await page.locator('#tab-latest').click();assert.equal(await page.locator('#title').innerText(),'Today fixture');
   await page.locator('#tab-logbook').click();await page.locator('#log-check-noSmoke').click();assert.ok(await page.locator('#logbook-celebration').isVisible());assert.equal(await page.evaluate(()=>document.activeElement.id),'celebration-close');
-  await page.keyboard.press('Tab');assert.equal(await page.evaluate(()=>document.activeElement.id),'celebration-close');
+  await page.keyboard.press('Shift+Tab');assert.equal(await page.evaluate(()=>document.activeElement.id),'celebration-close');await page.keyboard.press('Tab');assert.equal(await page.evaluate(()=>document.activeElement.id),'celebration-close');
   if(reducedMotion==='reduce')assert.equal(await page.locator('.celebration-art').evaluate(e=>getComputedStyle(e).animationName),'none');
   await page.screenshot({path:`qa-original/${width}-${reducedMotion}-celebration.png`,fullPage:true});
   await page.keyboard.press('Escape');await page.locator('#logbook-celebration').waitFor({state:'hidden'});assert.equal(await page.evaluate(()=>document.activeElement.id),'log-check-noSugar');
