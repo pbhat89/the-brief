@@ -2,7 +2,7 @@
   "version": 1,
   "timezone": "Asia/Singapore",
   "daily_limit": 1,
-  "updated_at": "2026-10-21T23:28:11.749555Z",
+  "updated_at": "2026-10-22T23:24:02.811820+00:00",
   "catchup": {
     "initialized_at": "2026-10-19T00:21:00Z",
     "limit": 3,
@@ -140,7 +140,9 @@
       "published_at": "2026-10-20T17:18:00Z",
       "source_url": "https://feeds.megaphone.fm/LI3617121267",
       "aliases": [
-        "rss:5a1b2336-cca8-11f1-9844-a3a2a08c94a2"
+        "rss:5a1b2336-cca8-11f1-9844-a3a2a08c94a2",
+        "https://podscripts.co/podcasts/big-technology-podcast/google-ceo-sundar-pichai-ais-infinite-possibilities-compute-scarcity-dilemmas-future-ai-products",
+        "https://feeds.megaphone.fm/LI3617121267"
       ],
       "classification": {
         "original": true,
@@ -150,17 +152,24 @@
         "beginner_series": false
       },
       "transcript": {
-        "status": "unverified",
-        "body_retrieved": false,
-        "access_note": "New publisher RSS original discovered during catch-up; actual transcript not retrieved or summarized today."
+        "status": "retrieved",
+        "body_retrieved": true,
+        "source_url": "https://podscripts.co/podcasts/big-technology-podcast/google-ceo-sundar-pichai-ais-infinite-possibilities-compute-scarcity-dilemmas-future-ai-products",
+        "provenance": "third-party-transcription",
+        "checked_at": "2026-10-22T23:10:43.843468+00:00",
+        "access_note": "Full actual transcript retrieved October23 SGT. Selected passage16:54–22:52 read, excluding ads and uncertain model-name transcriptions. Publisher RSS independently confirms original publication20October17:18UTC and full episode classification."
       },
       "dedup_review": {
-        "status": "pending",
-        "story_keys": []
+        "status": "distinct_contribution",
+        "story_keys": [
+          "pichai-20261020-compute-allocation-lead-times"
+        ],
+        "contribution": "Management explanation of capacity lead times and competing commitments, distinct from the already delivered Gemini launch and prior workflow-specialization recap. No model specifications, adoption claims or market predictions repeated.",
+        "reviewed_at": "2026-10-22T23:10:43.843468+00:00"
       },
-      "status": "pending",
+      "status": "published",
       "status_reason": null,
-      "publication_id": null
+      "publication_id": "2026-10-23"
     }
   ],
   "publications": [
@@ -198,6 +207,18 @@
       "verified_at": "2026-10-21T23:28:11.749555Z",
       "confirmation": "Live public report verified by HTTP 200 and exact content hash; selected transcript-based learning was included in the accepted combined delivery. Private delivery evidence remains outside this repository.",
       "date_sgt": "2026-10-22",
+      "show": "big-technology"
+    },
+    {
+      "publication_id": "2026-10-23",
+      "episode_id": "big-technology:5a1b2336-cca8-11f1-9844-a3a2a08c94a2",
+      "status": "verified_published",
+      "output_url": "https://pbhat89.github.io/the-brief/podcast/reports/2026-10-23.html",
+      "revision": "0bd0fef1d3401cf93ba695ef755b4f78d4847c37",
+      "content_sha256": "d0cb1b5a6375c32627c472d04ef898dcc2bd86abcab5b3baa38e26e09d926f8c",
+      "verified_at": "2026-10-22T23:24:02.811820+00:00",
+      "confirmation": "Live public report verified by exact content hash; the selected transcript-based learning was included in the accepted combined delivery. Private delivery evidence remains outside this repository.",
+      "date_sgt": "2026-10-23",
       "show": "big-technology"
     }
   ]

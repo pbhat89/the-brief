@@ -1,13 +1,14 @@
 {
   "version": 1,
-  "updated_on": "2026-10-22",
+  "updated_on": "2026-10-23",
   "timezone": "Asia/Singapore",
   "history": {
     "complete": false,
     "reviewed_reports": [
       "2026-10-18-revised",
       "2026-10-19",
-      "2026-10-20"
+      "2026-10-20",
+      "https://pbhat89.github.io/the-brief/podcast/reports/2026-10-23.html"
     ],
     "gaps": [
       "Earlier public archive and private podcast history have not been fully imported into this concept log.",
@@ -78,7 +79,7 @@
           ],
           "original_date": "2019-04-25",
           "original_date_basis": "Date displayed on original publisher page",
-          "checked_on": "2026-10-19",
+          "checked_on": "2026-10-23",
           "kind": "first_party",
           "verification": "direct_primary",
           "locator": "The recipe, section 2: overfit one batch and visualize just before the net"
@@ -88,11 +89,18 @@
       "takeaway": "Karpathy suggests overfitting a tiny batch and inspecting the exact model inputs to expose pipeline bugs before scaling.",
       "editorial_application": "Create a small, known-answer test case before expanding an AI workflow. A passing demo still needs separate generalization checks.",
       "caveat": "A tiny training-set fit is a debugging check, not evidence of production quality. Keep this distinct from inspecting dataset quality.",
-      "status": "researched_candidate",
-      "dedup_review": "pending_full_history",
-      "last_used": null,
-      "last_narrated": null,
-      "uses": []
+      "status": "narrated",
+      "dedup_review": "covered",
+      "last_used": "2026-10-23",
+      "last_narrated": "2026-10-23",
+      "uses": [
+        {
+          "date": "2026-10-23",
+          "channel": "podcast",
+          "public_evidence_url": "https://pbhat89.github.io/the-brief/podcast/reports/2026-10-23.html",
+          "confirmation": "Final delivered narration includes the tiny-batch wiring-test lesson, separately distinguishing correct pipeline operation from generalization. Report provenance and accepted combined delivery were verified."
+        }
+      ]
     },
     {
       "concept_id": "build-ai-capability-through-pilots",

@@ -58,3 +58,8 @@ The fixed catch-up queue’s second episode, Kevin Roose’s original 15 October
 ## Coverage reconciliation, 22 October 2026
 
 The fixed catch-up queue's third original, published 9 October at 16:51 UTC, was included in the accepted combined edition. The selected actual transcript at 30:01–32:54 concerns general-purpose assistants versus workflow specialization; the business example was explicitly editorial. Third-party transcription caveats remain. The three-item seed is unchanged and now completed. The newer Pichai original remains pending and unsummarized; subsequent selection must check for newly released unseen qualifying originals, not re-seed the catch-up queue.
+
+
+## Coverage reconciliation, 23 October 2026
+
+After the unchanged three-episode seed was completed, the latest-only check selected Sundar Pichai's original 20 October episode (17:18 UTC). The actual third-party transcript at 16:54–22:52 supports the recap on compute allocation, capacity lead times and demand uncertainty. The document-processing capacity example is editorial, not a Pichai claim; transcription limitations remain. Everyday AI's current qualifying original and transcript could not be established, so Big Technology was used without claiming exhaustive source coverage. The recap was included in the verified, accepted combined edition: [public report](https://pbhat89.github.io/the-brief/podcast/reports/2026-10-23.html). Earlier episodes and the fixed seed are preserved.

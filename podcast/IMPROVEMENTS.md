@@ -109,3 +109,10 @@ Observed limitation: measured written-word pace is lower for number-heavy chapte
 Verified deployed (Actions run 39779042967, commit a2334a2): Today only shows the current Singapore-date recording and a same-day reading link; Previous retains history. A 30-entry original daily-reflection rotation replaces the large tagline. Log book completion uses a dismissible native dialog before a struck-through item, preserving Undo and explicit Done save. Success measures: no stale edition labelled Today, mobile overflow absent, original reader isolation preserved, modal focus/Escape and reduced motion pass, no live task state modified by QA. No workflow schedule, authentication, retention or upstream archive changes.
 
 Verified measures: 162 unit tests; hosted 390/1280-pixel original-reader and layout suites, including midnight rollover, Tab/Shift+Tab/Escape, reduced motion and Undo; runtime/security/dependency checks passed. Live public assets byte-matched source and private endpoints rejected anonymous reads. One native-browser focus escape was fixed before deployment. Physical-device use is still a separate check.
+
+
+## Measured concise intake · 23 October 2026
+
+The headline-plus-context format covered 25 distinct verified developments and reconciled every upstream entry, including merged tennis coverage, without padding to a duration target. Actual chapter silences and separate intuitive learning examples were retained. Original and companion fact differences are explicitly disclosed when archive dedup requires substitution. These are implementation observations, not evidence of listener satisfaction.
+
+A hosted date-rollover fixture assumed a future date had no report, which daily publication invalidated. The narrow correction now derives its positive fixture from the newest report and checks the next absent date, keeping all existing UI assertions. Hosted original-reader and daily-layout browser QA, runtime checks and dependency audit passed on commit 078cb6f. No application behaviour changed.

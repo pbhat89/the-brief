@@ -63,3 +63,8 @@ Following verified report publication and accepted combined delivery, `self-supe
 ## Coverage reconciliation, 22 October 2026
 
 Naval Ravikant's evergreen 21 June 2019 accountability lesson was included in the verified, accepted combined edition. The application to outcome ownership and review was explicitly separated from his original claim. The concept is now narrated, not an unused candidate; private delivery references are retained outside this repository.
+
+
+## Coverage reconciliation, 23 October 2026
+
+Andrej Karpathy's evergreen 25 April 2019 tiny-batch debugging lesson was included in the verified, accepted combined edition: [public report](https://pbhat89.github.io/the-brief/podcast/reports/2026-10-23.html). The lesson distinguishes checking pipeline wiring from proving generalization; the invented-document business application is explicitly editorial. Semantic review found this distinct from the earlier input-inspection lesson, despite sharing an original source. The concept is now narrated, not an unused candidate. All previous concepts, uses and historical coverage gaps remain preserved.
