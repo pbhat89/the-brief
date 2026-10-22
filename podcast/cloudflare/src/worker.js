@@ -1,7 +1,9 @@
+import {ORIGINAL_FONT_CSS} from './original-fonts.js';
+import {ORIGINALS} from './originals.js';
 import {TTL,MAX,digest,equal,pinHash,range,mp3} from './security.js';
 import {HTML,JS,CSS} from './ui.js';
 import {LogbookModel as logbook} from './logbook-model.js';
-const headers={'Cache-Control':'private, no-store, max-age=0','Pragma':'no-cache','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer','Cross-Origin-Resource-Policy':'same-origin','Content-Security-Policy':"default-src 'none'; script-src 'self'; style-src 'self'; media-src 'self'; connect-src 'self'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'"};
+const headers={'Cache-Control':'private, no-store, max-age=0','Pragma':'no-cache','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer','Cross-Origin-Resource-Policy':'same-origin','Content-Security-Policy':"default-src 'none'; script-src 'self'; style-src 'self'; media-src 'self'; connect-src 'self'; frame-src 'self'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'"};
 const reply=(body,status=200,extra={})=>new Response(body!==null&&typeof body==='object'&&!(body instanceof ArrayBuffer)?JSON.stringify(body):body,{status,headers:{...headers,'Content-Type':'application/json',...extra}});
 const now=()=>Math.floor(Date.now()/1000);
 const collectionOf=meta=>meta.collection==='personal'?'personal':'daily';
@@ -104,6 +106,9 @@ async function handle(req,env){
  if(u.protocol!=='https:'&&u.hostname!=='localhost'&&u.hostname!=='127.0.0.1')return reply('HTTPS required',400);
  const write=!['GET','HEAD'].includes(method);
  if(write&&(req.headers.get('Origin')!==u.origin||req.headers.get('Sec-Fetch-Site')==='cross-site'))return reply('Origin rejected',403);
+ // Public, build-time escaped archive snapshots. No private/session data is exposed here.
+ const originalId=/^\/originals\/(\d{4}-\d{2}-\d{2})\.html$/.exec(p)?.[1];
+ if(originalId&&method==='GET')return Object.hasOwn(ORIGINALS,originalId)?reply(ORIGINALS[originalId].replace('</head>','<style>'+ORIGINAL_FONT_CSS+'</style></head>'),200,{'Content-Type':'text/html; charset=utf-8','Content-Security-Policy':"default-src 'none'; style-src 'unsafe-inline'; font-src data:; base-uri 'none'; form-action 'none'; frame-ancestors 'self'; sandbox allow-popups allow-popups-to-escape-sandbox"}):reply('Original edition unavailable',404);
  if(p==='/'&&method==='GET')return reply(HTML,200,{'Content-Type':'text/html; charset=utf-8'});
  if(p==='/app.js'&&method==='GET')return reply(JS,200,{'Content-Type':'text/javascript'});
  if(p==='/app.css'&&method==='GET')return reply(CSS,200,{'Content-Type':'text/css'});

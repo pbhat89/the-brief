@@ -2,12 +2,13 @@ import {REPORTS} from './reports.js';
 import {LOGBOOK_JS} from './logbook.js';
 export const JS='const REPORTS='+JSON.stringify(REPORTS)+';\n'+String.raw`
 const $=s=>document.querySelector(s),audio=$('audio');
+let currentReport=null;
 let csrf,context,analyser,frame,epoch=0,currentEpisode=null,viewing='latest',catalog={daily:[],personal:[]},selected={daily:null,personal:null},positions=new Map(),branding={},deleting=new Set(),removed=new Set();
 const tabs=['latest','previous','personal','logbook'];
 const collectionOf=e=>e?.collection==='personal'?'personal':'daily';
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');
 function resetToLogin(message='Please unlock the player.') {
- epoch++; resetLogbook(); csrf=undefined; currentEpisode=null; catalog={daily:[],personal:[]}; selected={daily:null,personal:null}; positions.clear(); deleting.clear(); removed.clear(); branding={}; resetBranding(); document.body.classList.remove('unlocked'); document.body.classList.remove('reader');
+ epoch++; clearReport(); resetLogbook(); csrf=undefined; currentEpisode=null; catalog={daily:[],personal:[]}; selected={daily:null,personal:null}; positions.clear(); deleting.clear(); removed.clear(); branding={}; resetBranding(); document.body.classList.remove('unlocked'); document.body.classList.remove('reader');
  audio.pause(); audio.removeAttribute('src'); audio.load(); audio.playbackRate=1;
  cancelAnimationFrame(frame); document.body.classList.remove('playing');
  $('#orb').style.setProperty('--energy',1);
@@ -78,8 +79,18 @@ function renderBlock(parent,block){
  }
  const tag=['h2','h3','p','li','blockquote'].includes(block.type)?block.type:'p';const p=document.createElement(tag==='li'?'p':tag);p.textContent=block.text;parent.append(p);appendLinks(parent,block.links);
 }
-function openReport(report){document.body.classList.add('reader');$('#archive-list').hidden=true;$('#viewer').hidden=false;$('#viewer-title').textContent=report.title;$('#viewer-date').textContent=date(report.published_at);$('#reader-content').replaceChildren();for(const block of report.blocks)renderBlock($('#reader-content'),block);const source=safeURL(report.source);$('#reader-source').href=source||'';$('#reader-source').hidden=!source;$('#viewer-title').focus();}
-$('#reader-back').onclick=()=>{document.body.classList.remove('reader');$('#viewer').hidden=true;$('#archive-list').hidden=false;$('#reader-content').replaceChildren();$('#tab-previous').focus();};
+function clearReport(){currentReport=null;$('#reader-original-frame').removeAttribute('src');$('#reader-original-frame').hidden=true;$('#reader-content').replaceChildren();}
+function setReportView(kind){
+ if(!currentReport)return;const original=kind==='original'&&currentReport.original;
+ $('#reader-original').setAttribute('aria-pressed',String(!!original));$('#reader-verified').setAttribute('aria-pressed',String(!original));
+ $('#reader-content').hidden=!!original;$('#reader-original-frame').hidden=!original;
+ if(original){$('#reader-original-frame').src=currentReport.original.path;$('#reader-notice').textContent='Original upstream edition, with its original design and content. It may contain repeated or corrected claims. Verified companion contains the checked version that matches the podcast.';}
+ else{$('#reader-original-frame').removeAttribute('src');$('#reader-notice').textContent=(currentReport.original?'':'No original upstream HTML was available for this date. ' )+'Verified companion: checked headlines, corrections, sources and the fact used in the podcast.';}
+ const source=safeURL(original?currentReport.original.source:currentReport.source);$('#reader-source').href=source||'';$('#reader-source').hidden=!source;$('#reader-source').textContent=original?'Open original brief in a new tab ↗':'Open verified companion in a new tab ↗';
+}
+function openReport(report){clearReport();currentReport=report;document.body.classList.add('reader');$('#archive-list').hidden=true;$('#viewer').hidden=false;$('#viewer-title').textContent=report.title;$('#viewer-date').textContent=date(report.published_at);for(const block of report.blocks)renderBlock($('#reader-content'),block);$('#reader-original').disabled=!report.original;setReportView(report.original?'original':'verified');$('#viewer-title').focus();}
+$('#reader-original').onclick=()=>setReportView('original');$('#reader-verified').onclick=()=>setReportView('verified');
+$('#reader-back').onclick=()=>{clearReport();document.body.classList.remove('reader');$('#viewer').hidden=true;$('#archive-list').hidden=false;$('#tab-previous').focus();};
 function renderReports(){$('#reports').replaceChildren();for(const r of REPORTS)$('#reports').append(card(r.title,date(r.published_at)+' · Read edition','≡',()=>openReport(r)));}
 function renderPersonal(){
  $('#personal-episodes').replaceChildren();

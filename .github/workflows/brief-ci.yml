@@ -30,6 +30,16 @@ jobs:
       - run: node podcast/cloudflare/scripts/validate-repository.mjs
       - run: npm test
         working-directory: podcast/cloudflare
+      - run: npx playwright install --with-deps chromium
+        working-directory: podcast/cloudflare
+      - run: node scripts/original-browser-check.mjs
+        working-directory: podcast/cloudflare
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: original-reader-public-qa
+          path: podcast/cloudflare/qa-original/*.png
+          retention-days: 7
       - run: npm run check
         working-directory: podcast/cloudflare
       - run: node scripts/runtime-check.mjs

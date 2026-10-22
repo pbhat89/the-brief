@@ -98,3 +98,9 @@ Success measures: news-item sentence counts, absence of assistant commentary in 
 Completed and checked: all 35 upstream entries have explicit dispositions; 28 spoken news items each use a headline plus one factual context line, with no assistant takes. Twelve sections have measured audible breaks. The report catalogue was regenerated and deployment verified. Catch-up and expert delivery states were advanced only after accepted combined delivery. A missing source-audit cursor mapping was corrected to preserve the six actual bounded observation times; these do not clear full-window gaps.
 
 Observed limitation: measured written-word pace is lower for number-heavy chapters because narration expands digits. Proposed, not implemented: compare expanded spoken counts with measured duration before changing pace. Also rotate bounded profile sampling without erasing previous source gaps. Do not extend an edition merely to meet a nominal length, or regenerate a delivered recording for wording alone.
+
+
+### 2026-10-22 · Distinguish original design from verified coverage
+- Observed: the structured companion reader intentionally dropped the original archive styling, and its deduplicated fact could differ from upstream.
+- Implemented in source: separate Original brief and Verified companion views, preserved original design in a script-free sandbox, and explicit correction/fact distinction. The existing daily catalogue build now generates same-date original snapshots automatically.
+- Success measure: mobile/desktop browser tests pass without external network requests, original and companion facts remain distinct, and private session/audio behavior remains unchanged. Hosted deployment and screenshots must be checked before reporting completion.

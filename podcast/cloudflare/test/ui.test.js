@@ -67,3 +67,11 @@ test('four-tab HTML has unique IDs, associated panels and shared playback outsid
  for(const name of ['latest','previous','personal','logbook']){const tab=ids.get('tab-'+name),panel=ids.get(name);assert.ok(tab);assert.ok(panel);assert.equal(tab.attrs.find(a=>a.name==='aria-controls').value,name);assert.equal(panel.attrs.find(a=>a.name==='aria-labelledby').value,'tab-'+name);}
  assert.ok(!ancestors.get('listening').some(n=>n.attrs?.some(a=>a.name==='role'&&a.value==='tabpanel')));assert.ok(ids.has('personal-episodes'));assert.ok(ids.has('storage'));
 });
+
+test('original and verified reader views switch, fall back, and clean up on Back and Lock',async()=>{
+ const h=await unlocked();h.run("openReport(REPORTS.find(r=>r.id==='2026-10-22'))");assert.equal(h.node('#reader-original-frame').hidden,false);assert.equal(h.node('#reader-content').hidden,true);assert.equal(h.node('#reader-original').attributes['aria-pressed'],'true');
+ h.node('#reader-verified').onclick();assert.equal(h.node('#reader-content').hidden,false);assert.equal(h.node('#reader-original-frame').hidden,true);assert.equal(h.node('#reader-original-frame').getAttribute('src'),null);
+ h.node('#reader-original').onclick();assert.equal(h.node('#reader-original-frame').hidden,false);h.node('#reader-back').onclick();assert.equal(h.run('currentReport'),null);assert.equal(h.node('#reader-original-frame').getAttribute('src'),null);
+ h.run("openReport(REPORTS.find(r=>r.id==='2026-10-21'))");assert.equal(h.node('#reader-original').disabled,true);assert.match(h.node('#reader-notice').textContent,/No original upstream/);assert.equal(h.node('#reader-content').hidden,false);
+ h.run("openReport(REPORTS.find(r=>r.id==='2026-10-22'));resetToLogin()");assert.equal(h.run('currentReport'),null);assert.equal(h.node('#reader-original-frame').hidden,true);assert.equal(h.node('#reader-original-frame').getAttribute('src'),null);
+});

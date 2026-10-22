@@ -151,3 +151,13 @@ function at Worker runtime: bundlers can inject helper references that do not
 exist in the separate browser script. The workerd smoke test also executes the
 exact served /app.js in an isolated synthetic DOM before testing authenticated
 storage, so browser-bundle initialization is a deployment gate.
+
+## Original and verified written views
+
+Written editions default to **Original brief** when a same-date upstream archive exists. This retains the original dark/gold design, typography and section tabs, without executing upstream JavaScript. **Verified companion** stays separate and contains checked coverage and the podcast-matching fact. Original text may include repeated or subsequently corrected claims; the view labels and source links make that distinction explicit. When there is no original for that date, the app says so and shows the companion; it never substitutes another date.
+
+After every public report/manifest or upstream archive update, run the existing repository-root command `node podcast/cloudflare/scripts/build-reports.mjs`. It now generates both `src/reports.js` and `src/originals.js`; include both in the validated change set. No separate per-day viewer edits are needed. Archived upstream files are not modified.
+
+Original snapshots are public-only static pages. The build parses literal data with Acorn, escapes text, filters source links and rejects unsupported CSS. It does not evaluate archive scripts. The viewer uses an opaque-origin sandbox with no scripts, forms or same-origin privileges, and a restrictive response CSP. Original fonts are locally embedded under their OFL licenses (see ORIGINAL-FONTS.md), with no third-party requests. Private audio, session, PIN and retention behavior are unchanged.
+
+`node scripts/original-browser-check.mjs` (from this directory, after `npx playwright install --with-deps chromium`) checks 390px and 1280px rendering, locally loaded fonts, section controls, both facts, view switching, unavailable originals and Back/Lock cleanup using synthetic session responses. CI retains only public-content screenshots for seven days; it never uses production PINs, private episodes or playback metadata. Local socket restrictions may prevent browser/workerd startup; hosted CI remains the required deployment gate.
