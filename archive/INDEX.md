@@ -3919,3 +3919,35 @@ is empty until the first run.
 2026-10-23	Webb traces the most distant fast radio burst to a tiny early-universe galaxy	478862f7	webb,fast-radio-burst,galaxy,nasa
 2026-10-23	Study links microplastics to inflammation through reactive molecules	6ffc593c	microplastics,inflammation,health,study
 2026-10-23	A study of over a million women finds a biological 'cliff' around menopause	e401db8a	menopause,nature-medicine,womens-health,study
+2026-10-24	Opposition politician Lim Tean handed three fresh charges for absconding while on bail	5e34fc4f	lim tean,singapore,absconding,bail
+2026-10-24	Lee Biscuits to end production and close its factory after 92 years	9432bc80	lee biscuits,marie biscuits,johor,closure
+2026-10-24	Man jailed 18 months for emailing an intimate video of his ex-girlfriend to her colleagues	52c1b83f	singapore,intimate video,jail
+2026-10-24	Man fined S$7,000 for running an unlicensed massage parlour at Orchard Towers	78ae4d05	orchard towers,massage parlour,fine,singapore
+2026-10-24	Update: Jio Platforms closes India's largest rupee IPO with heavy demand, listing set for Oct 28	086de6f0	jio platforms,reliance,ipo,india
+2026-10-24	US presses Reliance to refine more Venezuelan crude as Rubio tours the Jamnagar plant	b45592ef	reliance,rubio,venezuela,jamnagar
+2026-10-24	India's central bank tightens scrutiny of large overseas investments to curb capital outflows	3fe810f6	reserve bank of india,capital outflows,rupee
+2026-10-24	Update: Rupee extends its rally to an eighth session, its strongest since June, on Jio IPO inflows	f85a2499	rupee,jio ipo,india,currency
+2026-10-24	UK retail sales fell 0.4% in September, worse than expected before the Budget	47f2ae09	uk,retail sales,budget
+2026-10-24	UK consumer confidence slumps 11 points to minus 24, the steepest monthly drop since the pandemic	2b6e1176	uk,consumer confidence,gfk,budget
+2026-10-24	UK private-sector activity unexpectedly quickens as the composite PMI rises to 53.1	75bb72de	uk,pmi,economy
+2026-10-24	Investors warm to UK gilts, betting on a disciplined first Budget from Chancellor Healey	b18b580f	uk,gilts,healey,budget
+2026-10-24	Update: Russia and Ukraine agree to resume peace talks in Abu Dhabi in early November	5e3f268e	russia,ukraine,abu dhabi,peace talks
+2026-10-24	Update: WHO warns of a 'more complex' Ebola outbreak now spanning three African countries	01ce22eb	who,ebola,nigeria,africa
+2026-10-24	Ultra-Orthodox military conscription dominates Israel's election battleground before the Oct 27 vote	ed836a30	israel,election,ultra-orthodox,conscription
+2026-10-24	Israel plans a full West Bank lockdown after a deadly gunfight near Hebron	ca83baef	israel,west bank,hebron,lockdown
+2026-10-24	Nvidia's open-source 'Microduck' robots top 20,000 pre-orders after a GTC Berlin demo	035ae13f	nvidia,microduck,robots,hugging face
+2026-10-24	Tesla begins early production of its Optimus humanoid robot in California	f95f2fdd	tesla,optimus,robot,musk
+2026-10-24	Physical-AI start-up Eka Robotics raises US$150 million at a US$1.45 billion valuation	ac8029ba	eka robotics,ai,funding,robot
+2026-10-24	AI assistant start-up Town hits a unicorn valuation with a US$108 million Series B	1cddc6ba	town,ai assistant,funding,unicorn
+2026-10-24	Procter & Gamble beats on fiscal first-quarter earnings as organic sales rise 4%	745569a0	procter gamble,earnings,organic sales
+2026-10-24	American Express to cut about 5% of its workforce to 'prepare for AI'	b636f338	american express,job cuts,ai
+2026-10-24	Wall Street sells off as the Dow drops 653 points and oil tops US$100	e1c7b52d	wall street,dow,oil,selloff
+2026-10-24	Gold heads for its steepest weekly loss since June as oil fuels Fed rate worries	f0947578	gold,oil,federal reserve
+2026-10-24	India pull off a record T20I chase to beat New Zealand in the Christchurch opener	da1398f5	india,new zealand,t20i,cricket
+2026-10-24	Leclerc tops first practice for the US Grand Prix as Verstappen's quickest lap is deleted	84ed587a	leclerc,verstappen,us grand prix,f1
+2026-10-24	Antonelli can clinch a maiden F1 title at Sunday's US Grand Prix in Austin	0ada85f9	antonelli,f1,title,austin
+2026-10-24	Rybakina leads the WTA Finals race as the eight-woman field heads to Indian Wells	7cfd169c	rybakina,wta finals,tennis,indian wells
+2026-10-24	Astronomers match the stars in Van Gogh's 'The Starry Night' to the Hyades cluster	50974a81	van gogh,starry night,hyades,astronomy
+2026-10-24	NASA revises its Thwaites 'Doomsday' Glacier forecast, warning of faster sea-level rise	b867289f	nasa,thwaites glacier,sea level
+2026-10-24	NASA's Perseverance sets an off-world driving record, passing Opportunity's distance on Mars	64cfd86e	nasa,perseverance,mars,driving record
+2026-10-24	Scientists turn cloned male mouse embryos into fertile females in a first for genetics	330730e8	mouse,crispr,genetics,endangered species

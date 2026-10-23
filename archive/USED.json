@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-08-24",
-      "topic_key": "birthday problem",
-      "text": "In a room of just 23 people, there is a better-than-even chance two share a birthday."
-    },
-    {
       "date": "2026-08-25",
       "topic_key": "human bones",
       "text": "Babies are born with about 300 bones but adults have 206"
@@ -264,14 +259,14 @@
       "date": "2026-10-23",
       "topic_key": "anglo-zanzibar war",
       "text": "The shortest war in history lasted about 40 minutes (Anglo-Zanzibar War, 1896)."
+    },
+    {
+      "date": "2026-10-24",
+      "topic_key": "neutron star",
+      "text": "A teaspoon of neutron-star material would weigh about a billion tonnes."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-09-23",
-      "type": "visual",
-      "title_key": "tumbling-die"
-    },
     {
       "date": "2026-09-24",
       "type": "logic",
@@ -416,14 +411,14 @@
       "date": "2026-10-23",
       "type": "logic",
       "title_key": "last-card"
+    },
+    {
+      "date": "2026-10-24",
+      "type": "quantitative",
+      "title_key": "split-the-bill"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-09-23",
-      "type": "letterboxed",
-      "title_key": "around-the-box"
-    },
     {
       "date": "2026-09-24",
       "type": "grouping",
@@ -568,6 +563,11 @@
       "date": "2026-10-23",
       "type": "spellingbee",
       "title_key": "making-waves"
+    },
+    {
+      "date": "2026-10-24",
+      "type": "grouping",
+      "title_key": "cross-purposes"
     }
   ]
 }
