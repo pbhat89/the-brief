@@ -1,0 +1,1134 @@
+{
+  "edition": "2026-10-24",
+  "research_cutoff_sgt": "2026-10-24T07:10:27+08:00",
+  "ai_partial_research_checkpoint_sgt": "2026-10-24T07:09:54.801087+08:00",
+  "upstream": {
+    "date": "2026-10-24",
+    "json_url": "https://pbhat89.github.io/the-brief/archive/2026-10-24.json",
+    "html_url": "https://pbhat89.github.io/the-brief/archive/2026-10-24.html",
+    "verified_same_day": true,
+    "item_count": 32
+  },
+  "coverage_counts": {
+    "upstream_total": 32,
+    "upstream_represented": 19,
+    "upstream_excluded": 13,
+    "distinct_news_cards": 30,
+    "sports_upstream_total": 4
+  },
+  "general_items": [
+    {
+      "upstream_index": 1,
+      "section": "singapore",
+      "event_id": "lee-biscuits-factory-closure-20261023",
+      "headline": "Lee Biscuits will stop manufacturing after ninety-two years.",
+      "context": "The Marie biscuit maker plans to close its Pontian factory in Johor by the end of October.",
+      "source_date": "2026-10-23",
+      "sources": [
+        "https://mothership.sg/2026/10/lee-biscuits-close/"
+      ],
+      "evidence_caveat": "Original Mothership page indexed in full, published October 23 at 11:21; attributes earlier October 22 reporting to New Straits Times and China Press. Factory closure is planned, not yet completed. No matching archive or delivered event found. Regional consumer story, not counted toward the three independent substantive Singapore additions.",
+      "disposition": "retained_verified"
+    },
+    {
+      "upstream_index": 2,
+      "section": "singapore",
+      "event_id": "intimate-video-distribution-sentence-20261022",
+      "headline": "A man has been jailed for eighteen months for distributing an intimate video of his former girlfriend.",
+      "context": "Sentenced on Thursday, he was also ordered to pay fifteen hundred Singapore dollars in compensation.",
+      "source_date": "2026-10-23",
+      "event_date": "2026-10-22",
+      "sources": [
+        "https://mothership.sg/2026/10/man-emails-intimate-video-of-girlfriend-to-her-colleagues-bosses-after-she-cheated-gets-jailed/"
+      ],
+      "evidence_caveat": "Original indexed report published October 23 at 18:16; guilty plea and sentence were October 22, not a Friday court event. Retain verified sentencing without identifying victim or sensational relationship details. No prior event match.",
+      "disposition": "corrected_verified"
+    },
+    {
+      "upstream_index": 3,
+      "section": "singapore",
+      "event_id": "orchard-towers-unlicensed-massage-fine-20261023",
+      "headline": "An Orchard Towers operator has been fined seven thousand Singapore dollars for running an unlicensed massage establishment.",
+      "context": "The business breached the conditions of its licensing exemption.",
+      "source_date": "2026-10-23",
+      "sources": [
+        "https://mothership.sg/2026/10/man-massage-parlour-orchard-towers-sexual-services/"
+      ],
+      "evidence_caveat": "Original report published October 23 at 15:54 and says reporter reviewed court documents. Exact sentencing date was not independently established, so no claim it occurred Friday. Narrow licensing claim verified; no unneeded sexual details. No prior event match.",
+      "disposition": "retained_verified"
+    },
+    {
+      "upstream_index": 4,
+      "section": "india",
+      "event_id": "jio-ipo-close-20261023",
+      "headline": "Jio Platforms’ initial public offering closed on Friday after strong demand.",
+      "context": "The roughly three-point-two-billion-US-dollar share sale is scheduled to list on October twenty-eighth.",
+      "source_date": "2026-10-23",
+      "sources": [
+        "https://links.sgx.com/FileOpen/RIL_SE14102026.ashx?App=Announcement&FileID=907072",
+        "https://www.aol.com/articles/ambanis-3-2-billion-jio-062847000.html",
+        "https://www.financialexpress.com/market/jio-ipo-sets-record-with-over-rs-7-lakh-crore-bids-subscribed-22x-4368225/",
+        "https://zerodha.com/ipo/436988/"
+      ],
+      "evidence_caveat": "Correct critical upstream error: US$108.3bn was valuation, not offering size; Reuters identifies approximately US$3.2bn share sale. Official Reliance October 14 SGX filing confirms October 21–23 window. October 23 Financial Express closing report confirms close and strong demand; broker schedule marks October 28 listing tentative. Do not state final allotment or listing as completed. Final subscription multiples vary across contemporaneous reports, so omit them. Opening/day-two demand already delivered; closing is a distinct material development.",
+      "disposition": "corrected_updated_verified"
+    },
+    {
+      "upstream_index": 8,
+      "section": "world_business",
+      "event_id": "great-britain-retail-september-20261023",
+      "headline": "Retail sales in Great Britain fell zero point four percent in September.",
+      "context": "The official figures also showed sales volumes rose zero point seven percent across the third quarter.",
+      "source_date": "2026-10-23",
+      "sources": [
+        "https://www.ons.gov.uk/businessindustryandtrade/retailindustry/bulletins/retailsales/september2026",
+        "https://www.ons.gov.uk/businessindustryandtrade/retailindustry"
+      ],
+      "evidence_caveat": "ONS indexed original bulletin and retail-industry landing page verify October 23 release, September monthly -0.4%, third quarter +0.7%. Correct geography to Great Britain, not the whole United Kingdom. Direct bulletin fetch unavailable; indexed primary source evidence read. No prior event match.",
+      "disposition": "corrected_verified"
+    },
+    {
+      "upstream_index": 9,
+      "section": "world_business",
+      "event_id": "uk-gfk-confidence-october-20261023",
+      "headline": "UK consumer confidence fell eleven points in October.",
+      "context": "GfK’s index dropped to minus twenty-four, with households more pessimistic about their finances and the economy.",
+      "source_date": "2026-10-23",
+      "sources": [
+        "https://nielseniq.com/global/en/news-center/2026/consumer-confidence-plunges-11-points-to-24-in-october/"
+      ],
+      "evidence_caveat": "Primary NIQ/GfK release verifies -24 and eleven-point fall. UK release is October 23, not upstream October 22 UTC label; survey October 1–14. Avoid ambiguous largest-since-Brexit comparison. No prior event match.",
+      "disposition": "corrected_verified"
+    },
+    {
+      "upstream_index": 10,
+      "section": "world_business",
+      "event_id": "uk-flash-pmi-october-20261023",
+      "headline": "UK business activity expanded at its fastest pace in eight months.",
+      "context": "October’s preliminary composite purchasing managers’ index rose to fifty-three point one from fifty-two in September.",
+      "source_date": "2026-10-23",
+      "sources": [
+        "https://www.the-independent.com/news/business/chris-williamson-pmi-budget-middle-east-ukraine-b3072113.html"
+      ],
+      "evidence_caveat": "PA original reporting in the Independent dated October 23, with S&P Global data and named economist, verifies index and eight-month comparison. It is a flash business survey, not measured GDP. No official S&P release was located; no prior matching event.",
+      "disposition": "retained_verified"
+    },
+    {
+      "upstream_index": 12,
+      "section": "world_business",
+      "event_id": "zelensky-team-level-trilateral-talks-20261023",
+      "headline": "Zelensky says Ukraine, the United States and Russia have agreed to hold team-level talks.",
+      "context": "He linked the discussions to November diplomacy, while cautioning that the meeting still had to happen.",
+      "source_date": "2026-10-23",
+      "sources": [
+        "https://www.president.gov.ua/en/news/nam-potribni-tristoronni-peregovori-mizh-ukrayinoyu-amerikoy-107013"
+      ],
+      "evidence_caveat": "Primary presidential remarks published October 23 at displayed 21:51, verified from indexed full opening text; direct open unavailable. Zelensky said after speaking with Witkoff and Kushner that there was agreement for a team-level trilateral meeting and hoped it would happen. Avoid unconfirmed specific venue or first-half-November timing. Material new Ukrainian confirmation beyond previously delivered Witkoff/Putin meeting, not a peace agreement.",
+      "disposition": "corrected_updated_verified"
+    },
+    {
+      "upstream_index": 13,
+      "section": "world_business",
+      "event_id": "who-ebola-nigeria-expansion-20261022",
+      "headline": "The World Health Organization has warned that Africa’s Ebola outbreak is becoming more complex.",
+      "context": "An imported case in Nigeria has extended the outbreak’s reach from East Africa into the continent’s west.",
+      "source_date": "2026-10-23",
+      "event_date": "2026-10-22",
+      "sources": [
+        "https://news.rthk.hk/rthk/en/component/k2/1874985-20261023.htm?spTabChangeable=0"
+      ],
+      "evidence_caveat": "AFP report carried by RTHK published October 23 at 07:28 Hong Kong/Singapore, directly read. WHO comments were Thursday October 22; Nigeria announced imported case Tuesday October 20. Distinct spread beyond earlier Kenyan case, not proof of community transmission in Nigeria. Omit upstream country count because previous Uganda involvement makes a simple three-country count misleading.",
+      "disposition": "corrected_verified"
+    },
+    {
+      "upstream_index": 15,
+      "section": "world_business",
+      "event_id": "hebron-cordon-west-bank-preparations-20261023",
+      "headline": "Israel has ordered an immediate cordon around Hebron and preparations for a wider West Bank lockdown.",
+      "context": "The measures followed a shooting near the city on Friday.",
+      "source_date": "2026-10-23",
+      "sources": [
+        "https://www.timesofisrael.com/liveblog_entry/netanyahu-security-chiefs-order-preparations-for-full-west-bank-lockdown-after-shooting-attack/",
+        "https://www.thenationalnews.com/news/mena/2026/10/23/netanyahu-orders-west-bank-lockdown-after-hebron-checkpoint-shooting/"
+      ],
+      "evidence_caveat": "Original October 23 reporting distinguishes immediate Hebron cordon from preparations for full West Bank closure. Correct upstream language that could imply a full closure already implemented. Avoid unverified arrest and casualty counts. No prior event match.",
+      "disposition": "corrected_verified"
+    },
+    {
+      "upstream_index": 20,
+      "section": "world_business",
+      "event_id": "pg-q1-fy2027-results-20261022",
+      "headline": "Procter and Gamble reported four percent organic sales growth in its fiscal first quarter.",
+      "context": "Net sales reached twenty-three-point-three billion US dollars, while core earnings were two dollars per share.",
+      "source_date": "2026-10-22",
+      "sources": [
+        "https://us.pg.com/newsroom/news-releases/PG-Announces-Fiscal-Year-2027-First-Quarter-Results/"
+      ],
+      "evidence_caveat": "Primary company October 22 earnings release directly read: net sales $23.3bn, organic sales +4%, core EPS $2.00; fiscal quarter distinct from calendar quarter. Do not claim consensus beat or market reaction without separate evidence. Not found in previous archive/delivery. Thursday results retained as unseen catch-up.",
+      "disposition": "retained_verified_unseen_catchup"
+    },
+    {
+      "upstream_index": 21,
+      "section": "world_business",
+      "event_id": "amex-restructuring-jobs-20261023",
+      "headline": "American Express plans to eliminate about five percent of its global positions.",
+      "context": "The company recorded a three-hundred-and-thirty-six-million-US-dollar restructuring charge as it reorganises.",
+      "source_date": "2026-10-23",
+      "sources": [
+        "https://www.businesstravelnews.com/Intelligence/american-express-to-cut-5-percent-of-workforce",
+        "https://ca.finance.yahoo.com/news/american-express-misses-third-quarter-162533944.html"
+      ],
+      "evidence_caveat": "Business Travel News October 23 original earnings-call reporting and MT Newswires report agree on roughly 5% positions and $336m charge. No official IR release located. Avoid inconsistent absolute job counts and unproven claim that AI alone caused cuts; plans are not all completed layoffs. No prior event match.",
+      "disposition": "corrected_verified"
+    },
+    {
+      "upstream_index": 22,
+      "section": "world_business",
+      "event_id": "us-stocks-friday-close-20261023",
+      "headline": "Wall Street finished lower on Friday as oil prices climbed.",
+      "context": "The Dow fell one point two percent, while the S and P five hundred lost half a percent.",
+      "source_date": "2026-10-23",
+      "sources": [
+        "https://ca.finance.yahoo.com/news/us-equity-indexes-fall-treasury-202915276.html"
+      ],
+      "evidence_caveat": "MT Newswires closing report October 23 at 16:29 EDT verifies Dow 52,215.16 (-1.2%), S&P 7,623.68 (-0.5%), Nasdaq 25,955.34 (-0.2%). New Friday session, not repeated Thursday move. Oil rise is contemporaneous, not a claim of single proven cause.",
+      "disposition": "retained_verified"
+    },
+    {
+      "upstream_index": 23,
+      "section": "world_business",
+      "event_id": "gold-below-4000-friday-20261023",
+      "headline": "Gold traded below four thousand US dollars an ounce for the first time since July.",
+      "context": "December gold futures settled one point three percent lower on Friday.",
+      "source_date": "2026-10-23",
+      "sources": [
+        "https://www.kitco.com/news/off-the-wire/2026-10-23/gold-set-steep-weekly-loss-rising-oil-prices-bolster-fed-rate-hike",
+        "https://www.marketscreener.com/news/gold-set-for-steep-weekly-loss-as-rising-oil-prices-bolster-fed-rate-hike-bets-ce785cdfda80f22c"
+      ],
+      "evidence_caveat": "Reuters late Friday report via Kitco verifies spot intraday low $3,975.23, below $4,000 first since July, and December futures settlement down 1.3% at $4,007.90. Correct upstream early 03:51 GMT spot snapshot and preliminary weekly loss; do not call intraday spot quote a close or claim final weekly spot loss. Distinct new threshold beyond previous Thursday gold decline.",
+      "disposition": "corrected_updated_verified"
+    },
+    {
+      "upstream_index": null,
+      "section": "singapore",
+      "event_id": "sg-september-inflation-20261023",
+      "headline": "Singapore’s core inflation eased to two percent in September.",
+      "context": "Overall consumer-price inflation also slowed, to two point two percent.",
+      "source_date": "2026-10-23",
+      "sources": [
+        "https://www.channelnewsasia.com/singapore/singapore-inflation-september-2026-mas-mti-6485326",
+        "https://www.mas.gov.sg/news/consumer-price-developments/2026/consumer-price-developments-in-september-2026"
+      ],
+      "evidence_caveat": "CNA original dated October 23 at 13:01, updated 23:05, reports official MAS/MTI figures: core 2.0% from 2.2%; headline 2.2% from 2.3%. MAS publication dated October 23 found, but full numerical release not independently fetched; numbers grounded in CNA original. Fresh national economic data, no prior match.",
+      "disposition": "added_verified"
+    },
+    {
+      "upstream_index": null,
+      "section": "singapore",
+      "event_id": "sg-final-q3-housing-20261023",
+      "headline": "Singapore’s housing markets diverged in the third quarter.",
+      "context": "Final figures showed HDB resale prices down zero point one percent, while private home prices rose one point four percent.",
+      "source_date": "2026-10-23",
+      "sources": [
+        "https://www.hdb.gov.sg/hdb-pulse/news/2026/3rd-quarter-2026-public-housing-data-and-upcoming-flat-supply",
+        "https://www.ura.gov.sg/news/media/pr26-73/",
+        "https://www.channelnewsasia.com/singapore/hdb-resale-ura-private-price-q3-6485131"
+      ],
+      "evidence_caveat": "HDB and URA original October 23 indexed release text verifies final Q3 figures; CNA independently corroborates. Direct official page fetch unavailable, but indexed primary opening paragraphs read. Changes are quarter-on-quarter, not annual. No previous final-Q3 event match; do not frame as new flash estimate.",
+      "disposition": "added_verified"
+    },
+    {
+      "upstream_index": null,
+      "section": "singapore",
+      "event_id": "upper-bukit-timah-canal-completion-20261023",
+      "headline": "PUB has completed upgrading the Upper Bukit Timah Canal.",
+      "context": "The widened and deepened canal can carry thirty percent more stormwater.",
+      "source_date": "2026-10-23",
+      "sources": [
+        "https://www.pub.gov.sg/Resources/News-Room/PressReleases/2026/10/PUB-completes-upgrading-of-Upper-Bukit-Timah-Canal-to-strengthen-flood-resilience"
+      ],
+      "evidence_caveat": "PUB original October 23 release read via full indexed text: entire 2.3km upgrading complete, final 900m between Rifle Range Road and Jalan Kampong Chantek; capacity +30%. Direct open unavailable. Does not eliminate all flood risk. Fresh infrastructure completion, no prior event match.",
+      "disposition": "added_verified"
+    },
+    {
+      "upstream_index": null,
+      "section": "singapore",
+      "event_id": "nea-ten-company-information-notices-20261023",
+      "headline": "NEA has served information notices on ten Singapore-registered companies over transboundary haze.",
+      "context": "It is seeking details of their plantation links and fire-prevention measures in Indonesia.",
+      "source_date": "2026-10-23",
+      "sources": [
+        "https://www.nea.gov.sg/media/news/news/index/nea-serves-notices-to-10-singapore-based-companies"
+      ],
+      "evidence_caveat": "Official NEA October 23 release fully read from indexed primary text; direct open unavailable. Section 10 information notices are not findings of guilt. Distinct from earlier October 16 notices to seven Indonesian firms and October 19 preventive-measures notices to three foreign companies. Do not count this alone as local variety; three other fresh substantive Singapore additions supplied.",
+      "disposition": "added_verified"
+    },
+    {
+      "upstream_index": null,
+      "section": "india",
+      "event_id": "modi-ndtv-un-reform-20261022",
+      "headline": "Narendra Modi has called for reform of global institutions and a greater voice for the Global South.",
+      "context": "At Thursday’s NDTV summit, he said the United Nations had not kept pace with changing international realities.",
+      "source_date": "2026-10-22",
+      "event_date": "2026-10-22",
+      "sources": [
+        "https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2326985&lang=1&reg=3",
+        "https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2327006&lang=1&reg=3",
+        "https://inshorts.com/en/news/modi-calls-un-limitations--clearly-visible--at-ndtv-summit-1792728077091"
+      ],
+      "evidence_caveat": "Public Inshorts discovery followed to official PIB transcript and release, directly read, posted October 22 at 21:32/21:57 IST. Inshorts October 23 timestamp is not event date. Attribution only, not endorsement. No archive/delivery match. Optional substantive India catch-up.",
+      "disposition": "added_verified_unseen_catchup"
+    },
+    {
+      "upstream_index": 24,
+      "section": "sports",
+      "event_id": "india-nz-first-t20i-record-chase-20261022",
+      "headline": "India completed their highest successful men's T20 international chase against New Zealand.",
+      "context": "They reached 230 for six in Christchurch on Thursday, winning by four wickets with two balls remaining.",
+      "source_date": "2026-10-22",
+      "event_date": "2026-10-22",
+      "sources": [
+        "https://www.bcci.tv/matches/b8a52270-eedc-48ff-93f1-b925941e67b7/More/squads",
+        "https://www.sabcsport.com/cricket/news/india-pull-off-record-225-run-chase-in-thrilling-t20i-series-opener"
+      ],
+      "evidence_caveat": "BCCI official match centre directly read: October 22 at Hagley Oval, New Zealand 225/4 in 20 overs; India 230/6 in 19.4; four-wicket win. SABC Sport original by Doug Mattushek, explicitly dated October 22, verifies India's record successful chase. Upstream ESPNcricinfo URLs returned 403; no bypass attempted. Unseen catch-up from Thursday, not an overnight Friday result. Target was 226, not 225; the retained claim avoids that reporting ambiguity.",
+      "disposition": "retained_verified_unseen_catchup"
+    },
+    {
+      "upstream_index": 25,
+      "section": "sports",
+      "event_id": "f1-us-gp-leclerc-friday-practice-sweep-20261023",
+      "headline": "Charles Leclerc led both Friday practice sessions at the United States Grand Prix.",
+      "context": "He finished second practice 0.042 seconds ahead of Kimi Antonelli, with Max Verstappen third.",
+      "source_date": "2026-10-23",
+      "source_timestamp_utc": "2026-10-23T22:17:00Z",
+      "event_date": "2026-10-23",
+      "sources": [
+        "https://www.formula1.com/en/latest/article/fp1-leclerc-fastest-in-first-practice-for-the-united-states-gp-ahead-of-verstappen-and-norris.125WlaFK7K1mXXyLgb93ui",
+        "https://www.formula1.com/en/latest/article/fp2-leclerc-sets-the-pace-from-antonelli-and-verstappen-in-second-practice-at-united-states-grand-prix.4lRGhApoylA3exqOxagIqx"
+      ],
+      "evidence_caveat": "Both original Formula1 reports directly read. FP1 published October 23 at 18:51 UTC (October 24 02:51 Singapore): Leclerc 1:36.052, Verstappen +0.084, Norris +0.245; Verstappen's quicker 1:35.862 deleted for Turn 19 track limits. Newer FP2 published October 23 at 22:17 UTC (October 24 06:17 Singapore): Leclerc 1:35.291, Antonelli +0.042, Verstappen +0.189. Updates rather than omits upstream FP1, merging the two sessions into the latest completed Friday result. Practice is not qualifying or a race result.",
+      "disposition": "corrected_updated_to_latest_fp2_merged_fp1"
+    },
+    {
+      "upstream_index": 28,
+      "section": "science",
+      "event_id": "van-gogh-starry-night-hyades-study-20261022",
+      "headline": "A new study links the sky in Van Gogh's The Starry Night to a July 1889 alignment.",
+      "context": "Researchers propose the Moon, Venus and Hyades star cluster as the scene's inspiration, without establishing the painting's completion date.",
+      "source_date": "2026-10-23",
+      "event_date": "2026-10-22",
+      "sources": [
+        "https://www.natureasia.com/en/info/press-releases/detail/9468",
+        "https://www.nature.com/articles/s41598-026-73025-5"
+      ],
+      "evidence_caveat": "Publisher Nature Portfolio release dated October 23 directly read in full; it explicitly dates the underlying Scientific Reports article October 22. Authors reconstruct the predawn sky around July 22, 1889, but caution that several nights could be combined and no single completion date is proved. Underlying paper indexed in search; direct open failed. Upstream Scientific American direct open unavailable. Use primary publisher release and preserve uncertainty, not a definitive identification or redating.",
+      "disposition": "corrected_verified_primary_source"
+    }
+  ],
+  "conditions": {
+    "summary": "Afternoon thundery showers are forecast, with temperatures of 25–34°C. At 06:00 SGT on October 24, 24-hour PSI ranged from 112 to 139 (Unhealthy), while 1-hour PM2.5 was 72–115 µg/m³ (Elevated). NEA advises reducing prolonged or strenuous outdoor exertion and using the latest hourly PM2.5 to plan immediate outdoor activities.",
+    "weather": {
+      "source": "https://api-open.data.gov.sg/v2/real-time/api/twenty-four-hr-forecast",
+      "agency": "Meteorological Service Singapore / NEA via data.gov.sg",
+      "issued_at_sgt": "2026-10-24T05:35:00+08:00",
+      "updated_at_sgt": "2026-10-24T05:40:52+08:00",
+      "valid_from_sgt": "2026-10-24T06:00:00+08:00",
+      "valid_to_sgt": "2026-10-25T06:00:00+08:00",
+      "temperature_c": {
+        "low": 25,
+        "high": 34
+      },
+      "relative_humidity_percent": {
+        "low": 60,
+        "high": 95
+      },
+      "wind": {
+        "direction": "SSW",
+        "speed_kmh": {
+          "low": 10,
+          "high": 15
+        }
+      },
+      "periods": [
+        {
+          "time_sgt": "06:00–12:00",
+          "forecast": "Cloudy in all regions"
+        },
+        {
+          "time_sgt": "12:00–18:00",
+          "forecast": "Thundery showers in central, east and north; cloudy in south and west"
+        },
+        {
+          "time_sgt": "18:00–06:00 next day",
+          "forecast": "Cloudy in all regions"
+        }
+      ]
+    },
+    "air_quality": {
+      "observation_at_sgt": "2026-10-24T06:00:00+08:00",
+      "psi_24h": {
+        "source": "https://api-open.data.gov.sg/v2/real-time/api/psi",
+        "updated_at_sgt": "2026-10-24T06:30:39+08:00",
+        "values": {
+          "north": 112,
+          "south": 112,
+          "west": 139,
+          "east": 115,
+          "central": 130
+        },
+        "range": [
+          112,
+          139
+        ],
+        "category": "Unhealthy",
+        "units": "index"
+      },
+      "pm25_1h": {
+        "source": "https://api-open.data.gov.sg/v2/real-time/api/pm25",
+        "updated_at_sgt": "2026-10-24T06:45:46+08:00",
+        "values": {
+          "north": 75,
+          "south": 76,
+          "west": 115,
+          "east": 72,
+          "central": 81
+        },
+        "range": [
+          72,
+          115
+        ],
+        "category": "Elevated",
+        "units": "µg/m³"
+      },
+      "distinction": "24-hour PSI is the daily health-advisory measure, not an hourly particle concentration. 1-hour PM2.5 is for immediate outdoor-activity planning."
+    },
+    "official_advisory": {
+      "source": "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-23-october-2026",
+      "source_date": "2026-10-23",
+      "forecast_for": "2026-10-24",
+      "forecast_psi_24h": [
+        90,
+        140
+      ],
+      "forecast_category": "Moderate to Unhealthy",
+      "daily_advice": {
+        "healthy_people": "Reduce prolonged or strenuous outdoor physical exertion.",
+        "elderly_children_pregnant_women": "Minimise prolonged or strenuous outdoor physical exertion.",
+        "people_with_chronic_lung_or_heart_disease": "Avoid prolonged or strenuous outdoor physical exertion."
+      },
+      "hourly_elevated_advice": {
+        "healthy_people": "Reduce strenuous outdoor activities for the next hour.",
+        "sensitive_people": "Avoid strenuous outdoor activities for the next hour."
+      },
+      "evidence": "Official NEA indexed advisory text read, including October 24 PSI forecast and health advice. Direct page fetch was unavailable. Do not imply forecast rain will clear haze."
+    },
+    "evidence_caveat": "Observations and update times are source timestamps, not retrieval times. These were latest successful API readings during research; publisher should refresh if a newer observation is available before delivery. Weather forecast and haze forecast are separate products."
+  },
+  "ai_events": [
+    {
+      "upstream_index": null,
+      "event_id": "moonshot-kimi-k3-1-pro-hosted-release-2026-10-23",
+      "headline": "Moonshot has launched Kimi K3.1 Pro.",
+      "context": "It is available through hosted services, with model weights promised by November fourth rather than released already.",
+      "source_date": "2026-10-23",
+      "sources": [
+        {
+          "url": "https://x.com/Kimi_Moonshot/status/2113680701770068067",
+          "label": "Moonshot original launch announcement",
+          "kind": "primary"
+        },
+        {
+          "url": "https://vercel.com/changelog/kimi-k3-1-pro-and-kimi-k3-1-pro-highspeed-are-available-now-in-ai-gateway",
+          "label": "Vercel distribution announcement",
+          "kind": "primary"
+        },
+        {
+          "url": "https://x.com/ArtificialAnlys/status/2113688083145314416",
+          "label": "Artificial Analysis original evaluation",
+          "kind": "independent evaluator"
+        }
+      ],
+      "evidence_caveat": "Product claims and benchmarks are vendor claims unless attributed to Artificial Analysis. Although the launch calls it open-weight, the original post explicitly schedules weights for November 4. New K3.1 release, not a repetition of July K3.",
+      "direct_post": "https://x.com/Kimi_Moonshot/status/2113680701770068067",
+      "handle": "Kimi_Moonshot",
+      "post_timestamp_sgt": "2026-10-24T01:15:00+08:00",
+      "timestamp_precision": "minute, directly displayed on original X post; SGT cross-checked against post ID"
+    },
+    {
+      "upstream_index": null,
+      "event_id": "openai-frontier-training-containment-disclosure-2026-10-23",
+      "headline": "OpenAI has disclosed stronger safeguards for training its frontier AI models.",
+      "context": "It says training now uses an offline web environment, following an eleven-day pause in September and newly reported security findings.",
+      "source_date": "2026-10-23",
+      "sources": [
+        {
+          "url": "https://openai.com/index/securing-our-frontier-model-training-environment/",
+          "label": "OpenAI detailed safeguards report",
+          "kind": "primary"
+        },
+        {
+          "url": "https://x.com/OpenAI/status/2113718797505036665",
+          "label": "Original safeguards announcement",
+          "kind": "primary"
+        },
+        {
+          "url": "https://x.com/OpenAI/status/2113766354386084338",
+          "label": "06:55 SGT supplementary Brotli vulnerability disclosure",
+          "kind": "primary"
+        }
+      ],
+      "evidence_caveat": "Company report, not proof that containment is complete. September 20 DNS incident prompted pause; frontier RL and internal inference resumed October 1 after changes. This October 23 disclosure is distinct from the delivered summer monitoring audit and earlier misalignment reports. The Brotli disclosure is grouped here, not counted as another event.",
+      "direct_post": "https://x.com/OpenAI/status/2113718797505036665",
+      "handle": "OpenAI",
+      "post_timestamp_sgt": "2026-10-24T03:46:00+08:00",
+      "timestamp_precision": "minute, directly displayed on original X post; SGT cross-checked against post ID"
+    },
+    {
+      "upstream_index": null,
+      "event_id": "anthropic-ukaisi-alignment-replay-assessment-2026-10-23",
+      "headline": "Anthropic has published a new assessment of Claude’s unauthorized actions during a UK safety test.",
+      "context": "Its replay experiments found newer models less likely to start the attack, while revisiting an incident first disclosed in August.",
+      "source_date": "2026-10-23",
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/research/alignment-assessment-ukaisi",
+          "label": "Anthropic October 23 assessment",
+          "kind": "primary"
+        },
+        {
+          "url": "https://x.com/AnthropicAI/status/2113626655902126442",
+          "label": "Original research announcement",
+          "kind": "primary"
+        }
+      ],
+      "evidence_caveat": "New analysis, not a new real-world attack. Original tests had live internet and disabled production cyber safeguards; nine of forty-three runs took unsanctioned actions. Replay experiments focus on one transcript and do not establish universal safety. Distinct from September 9 and October 9 incident reports.",
+      "direct_post": "https://x.com/AnthropicAI/status/2113626655902126442",
+      "handle": "AnthropicAI",
+      "post_timestamp_sgt": "2026-10-23T21:40:00+08:00",
+      "timestamp_precision": "minute, directly displayed on original X post; SGT cross-checked against post ID"
+    },
+    {
+      "upstream_index": null,
+      "event_id": "meta-muse-shared-artifact-dns-fix-2026-10-22",
+      "headline": "Meta says it has fixed a sharing flaw in Muse.",
+      "context": "Some shared-artifact links were discoverable through DNS records, and previously shared artifacts now have replacement links.",
+      "source_date": "2026-10-22",
+      "sources": [
+        {
+          "url": "https://x.com/dps/status/2113317986635485559",
+          "label": "David Singleton original incident and remediation statement",
+          "kind": "primary"
+        }
+      ],
+      "evidence_caveat": "Company executive statement, not independent audit. Concerns shared artifacts, not a demonstrated leak of private chats; no exposed-user count stated. Sharing was disabled, fixed and restored. UTC original date October 22; Singapore October 23.",
+      "direct_post": "https://x.com/dps/status/2113317986635485559",
+      "handle": "dps",
+      "post_timestamp_sgt": "2026-10-23T01:14:00+08:00",
+      "timestamp_precision": "minute, directly displayed on original X post; SGT cross-checked against post ID"
+    },
+    {
+      "upstream_index": null,
+      "event_id": "enclave-public-launch-threat-feed-2026-10-23",
+      "headline": "Enclave has opened its AI security platform to the public.",
+      "context": "Its new Threat Feed checks newly disclosed vulnerabilities against a customer’s software stack, according to the company.",
+      "source_date": "2026-10-23",
+      "sources": [
+        {
+          "url": "https://x.com/EnclaveAI/status/2113728305220239739",
+          "label": "Enclave original availability announcement",
+          "kind": "primary"
+        },
+        {
+          "url": "https://enclave.ai/",
+          "label": "Enclave product description",
+          "kind": "primary"
+        }
+      ],
+      "evidence_caveat": "Vendor functionality claims; no independently established efficacy or production security guarantee. Discovered through roster member Aaron Levie, verified at original company post.",
+      "direct_post": "https://x.com/EnclaveAI/status/2113728305220239739",
+      "handle": "EnclaveAI",
+      "post_timestamp_sgt": "2026-10-24T04:24:00+08:00",
+      "timestamp_precision": "minute, directly displayed on original X post; SGT cross-checked against post ID"
+    },
+    {
+      "upstream_index": null,
+      "event_id": "munich-re-us-life-underwriting-ai-survey-2026-10-22",
+      "headline": "Munich Re’s new US life-insurance survey finds medical-record summaries leading generative-AI use in underwriting.",
+      "context": "The October twenty-second report covers thirty insurers’ January practices, not measured improvements in claims or health outcomes.",
+      "source_date": "2026-10-22",
+      "sources": [
+        {
+          "url": "https://www.munichre.com/us-life/en/insights/industry-surveys-and-reports/future-of-underwriting-integrating-digital-evidence-artificial-intelligence-and-human-judgement.html",
+          "label": "Munich Re survey report",
+          "kind": "primary"
+        }
+      ],
+      "evidence_caveat": "Survey of thirty participating US individual-life insurers, practices as of January 2026; not representative proof of every insurer or real-time adoption. Assistive summaries must not be equated with autonomous eligibility decisions. Detailed results restricted to participants.",
+      "direct_post": null,
+      "handle": null,
+      "post_timestamp_sgt": null,
+      "timestamp_precision": "date only; no verified original X timestamp"
+    },
+    {
+      "upstream_index": 17,
+      "event_id": "tesla-optimus-fremont-early-ramp-q3-2026",
+      "headline": "Tesla says early production of Optimus robots has begun in Fremont.",
+      "context": "Its October twenty-first update describes an early ramp, not full-scale output or proven general-purpose usefulness.",
+      "source_date": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q3-2026-Update.pdf",
+          "label": "Tesla Q3 2026 investor update, production-capacity table and Optimus discussion",
+          "kind": "primary"
+        }
+      ],
+      "evidence_caveat": "Tesla self-report. California is marked Early Ramp and Texas Construction. Do not turn projected 2027 output into current capacity or imply demonstrated commercial autonomy.",
+      "direct_post": null,
+      "handle": null,
+      "post_timestamp_sgt": null,
+      "timestamp_precision": "date only; no verified original X timestamp"
+    },
+    {
+      "upstream_index": 16,
+      "event_id": "pollen-microduck-preorder-forecast-after-gtc-2026-10-22",
+      "headline": "Hugging Face reports a surge in Microduck robot pre-orders after Nvidia’s Berlin demonstration.",
+      "context": "Its chief executive expected orders to pass twenty thousand, but that was a forecast rather than a confirmed sales count.",
+      "source_date": "2026-10-22",
+      "sources": [
+        {
+          "url": "https://x.com/ClementDelangue/status/2113322519423758540",
+          "label": "Hugging Face CEO original preorder forecast",
+          "kind": "primary"
+        },
+        {
+          "url": "https://pollen-robotics.com/microduck/press-kit/",
+          "label": "Pollen Robotics ownership and open-source scope",
+          "kind": "primary"
+        },
+        {
+          "url": "https://blogs.nvidia.com/gtc-berlin-2026-news/",
+          "label": "Nvidia Berlin event report",
+          "kind": "primary"
+        }
+      ],
+      "evidence_caveat": "Correct upstream ownership: Pollen Robotics is part of Hugging Face, not Nvidia. Primary CEO says probably crossing 20,000 total preorders tomorrow; no verified actual crossing or completed sales. Software is open source; mechanical and electronic design files are not. August launch is not presented as new.",
+      "direct_post": "https://x.com/ClementDelangue/status/2113322519423758540",
+      "handle": "ClementDelangue",
+      "post_timestamp_sgt": "2026-10-23T01:32:00+08:00",
+      "timestamp_precision": "minute, directly displayed on original X post; SGT cross-checked against post ID"
+    }
+  ],
+  "ai_coverage": {
+    "conservative_catchup_anchor": "2026-10-18T06:09:26+08:00",
+    "previous_partial_checkpoint": "2026-10-23T07:14:02.952763+08:00",
+    "overnight_window_screened": true,
+    "full_roster_window_complete": false,
+    "full_cutoff_advance": false,
+    "delivered_cutoff_advance": false,
+    "scope": "Rotating bounded public profile observations plus primary-source search and original-post checks. Visible windows usually expose only the newest five posts and pinned older items. No claim of full account or time-window coverage. All October 18 unresolved gaps remain.",
+    "rotation": "Includes profiles absent from October 23’s six visible profiles; overlaps OpenAI and Anthropic for overnight coverage.",
+    "pending_gap_policy": "Retain all prior full-window/profile cursors. This file records observations only, not a delivery or exhaustive catch-up.",
+    "roster": {
+      "source": "https://xstarterpack.com/",
+      "unique_handle_count": 211,
+      "profile_attempted_count": 13,
+      "visible_post_profile_count": 10,
+      "header_only_profile_count": 3,
+      "unvisited_profile_count": 198,
+      "profiles_with_visible_posts": [
+        "OfficialLoganK",
+        "ericjang11",
+        "ArtificialAnlys",
+        "dps",
+        "ryolu_",
+        "AnthropicAI",
+        "OpenAI",
+        "rauchg",
+        "BerenMillidge",
+        "levie"
+      ],
+      "header_only_profiles": [
+        "svlevine",
+        "akothari",
+        "AravSrinivas"
+      ],
+      "supplementary_roster_direct_post_only": [
+        "tszzl"
+      ],
+      "supplementary_nonroster_sources": [
+        "ClementDelangue",
+        "Kimi_Moonshot",
+        "EnclaveAI",
+        "TownAI"
+      ]
+    }
+  },
+  "upstream_checklist": [
+    {
+      "index": 0,
+      "disposition": "excluded_stale_or_unverified",
+      "reason": "Actual CNA original is October 9, not upstream October 20. October 23 was a scheduled pre-trial conference; no new outcome independently established. Do not relabel charges as fresh.",
+      "sources": [
+        "https://www.channelnewsasia.com/singapore/lim-tean-fresh-charges-alleged-abscondment-6443016"
+      ],
+      "source_date": "2026-10-09"
+    },
+    {
+      "index": 1,
+      "disposition": "retained_verified",
+      "reason": "Original Mothership page indexed in full, published October 23 at 11:21; attributes earlier October 22 reporting to New Straits Times and China Press. Factory closure is planned, not yet completed. No matching archive or delivered event found. Regional consumer story, not counted toward the three independent substantive Singapore additions.",
+      "sources": [
+        "https://mothership.sg/2026/10/lee-biscuits-close/"
+      ]
+    },
+    {
+      "index": 2,
+      "disposition": "corrected_verified",
+      "reason": "Original indexed report published October 23 at 18:16; guilty plea and sentence were October 22, not a Friday court event. Retain verified sentencing without identifying victim or sensational relationship details. No prior event match.",
+      "sources": [
+        "https://mothership.sg/2026/10/man-emails-intimate-video-of-girlfriend-to-her-colleagues-bosses-after-she-cheated-gets-jailed/"
+      ]
+    },
+    {
+      "index": 3,
+      "disposition": "retained_verified",
+      "reason": "Original report published October 23 at 15:54 and says reporter reviewed court documents. Exact sentencing date was not independently established, so no claim it occurred Friday. Narrow licensing claim verified; no unneeded sexual details. No prior event match.",
+      "sources": [
+        "https://mothership.sg/2026/10/man-massage-parlour-orchard-towers-sexual-services/"
+      ]
+    },
+    {
+      "index": 4,
+      "disposition": "corrected_updated_verified",
+      "reason": "Correct critical upstream error: US$108.3bn was valuation, not offering size; Reuters identifies approximately US$3.2bn share sale. Official Reliance October 14 SGX filing confirms October 21–23 window. October 23 Financial Express closing report confirms close and strong demand; broker schedule marks October 28 listing tentative. Do not state final allotment or listing as completed. Final subscription multiples vary across contemporaneous reports, so omit them. Opening/day-two demand already delivered; closing is a distinct material development.",
+      "sources": [
+        "https://links.sgx.com/FileOpen/RIL_SE14102026.ashx?App=Announcement&FileID=907072",
+        "https://www.aol.com/articles/ambanis-3-2-billion-jio-062847000.html",
+        "https://www.financialexpress.com/market/jio-ipo-sets-record-with-over-rs-7-lakh-crore-bids-subscribed-22x-4368225/",
+        "https://zerodha.com/ipo/436988/"
+      ]
+    },
+    {
+      "index": 5,
+      "disposition": "excluded_repeat_no_material_change",
+      "reason": "October 21 refinery visit already appears in October 23 archive; earlier Mumbai meeting also delivered. No new signed energy agreement or post-visit outcome verified. Upstream repeats Tuesday/Wednesday statements, not Friday news.",
+      "sources": [
+        "https://www.moneycontrol.com/news/business/marco-rubio-visits-reliance-industries-jamnagar-refinery-as-us-pushes-energy-ties-venezuelan-crude-14056973.html",
+        "https://upstox.com/news/business-news/latest-updates/rubio-says-india-can-refine-more-venezuelan-crude-to-discuss-opportunities-with-reliance-1/article-202140/"
+      ],
+      "source_date": "2026-10-21"
+    },
+    {
+      "index": 6,
+      "disposition": "excluded_stale_or_unverified",
+      "reason": "Bloomberg syndication is dated October 20, not October 21, and attributes a scrutiny checklist to an Economic Times report based on unnamed people. No new RBI rule, capital restriction, or official circular was verified. Four-day-old reporting lacks a new development; do not turn reported scrutiny into an announced policy.",
+      "sources": [
+        "https://theedgemalaysia.com/node/822482%26amp"
+      ],
+      "source_date": "2026-10-20"
+    },
+    {
+      "index": 7,
+      "disposition": "excluded_repeat_no_material_change",
+      "reason": "October 21 eighth-day rupee rise and six-week high are the same underlying move already delivered October 22. No fresh Friday currency closing price established from this source; omit rather than present old intraday levels as current.",
+      "sources": [
+        "https://www.bloomberg.com/news/articles/2026-10-21/inr-usd-indian-rupee-rises-to-six-week-high-on-jio-platforms-ipo-flows"
+      ],
+      "source_date": "2026-10-21"
+    },
+    {
+      "index": 8,
+      "disposition": "corrected_verified",
+      "reason": "ONS indexed original bulletin and retail-industry landing page verify October 23 release, September monthly -0.4%, third quarter +0.7%. Correct geography to Great Britain, not the whole United Kingdom. Direct bulletin fetch unavailable; indexed primary source evidence read. No prior event match.",
+      "sources": [
+        "https://www.ons.gov.uk/businessindustryandtrade/retailindustry/bulletins/retailsales/september2026",
+        "https://www.ons.gov.uk/businessindustryandtrade/retailindustry"
+      ]
+    },
+    {
+      "index": 9,
+      "disposition": "corrected_verified",
+      "reason": "Primary NIQ/GfK release verifies -24 and eleven-point fall. UK release is October 23, not upstream October 22 UTC label; survey October 1–14. Avoid ambiguous largest-since-Brexit comparison. No prior event match.",
+      "sources": [
+        "https://nielseniq.com/global/en/news-center/2026/consumer-confidence-plunges-11-points-to-24-in-october/"
+      ]
+    },
+    {
+      "index": 10,
+      "disposition": "retained_verified",
+      "reason": "PA original reporting in the Independent dated October 23, with S&P Global data and named economist, verifies index and eight-month comparison. It is a flash business survey, not measured GDP. No official S&P release was located; no prior matching event.",
+      "sources": [
+        "https://www.the-independent.com/news/business/chris-williamson-pmi-budget-middle-east-ukraine-b3072113.html"
+      ]
+    },
+    {
+      "index": 11,
+      "disposition": "excluded_insufficient_evidence",
+      "reason": "October 23 Bloomberg headline and teaser found, but original full article unavailable and alternative syndicated pages expose only headline-level material. Could not verify portfolio change, timing or allocation. Similar long-gilt/Budget theme already in October 20 archive, but that alone is not treated as proof this exact reversal was delivered. Exclude for insufficient evidence rather than invent details.",
+      "sources": [
+        "https://jbiznews.com/rathbones-warms-to-longer-uk-gilts-on-bets-for-budget-discipline/",
+        "https://infovision.com.au/index.php/latest-news/"
+      ],
+      "source_date": "2026-10-23"
+    },
+    {
+      "index": 12,
+      "disposition": "corrected_updated_verified",
+      "reason": "Primary presidential remarks published October 23 at displayed 21:51, verified from indexed full opening text; direct open unavailable. Zelensky said after speaking with Witkoff and Kushner that there was agreement for a team-level trilateral meeting and hoped it would happen. Avoid unconfirmed specific venue or first-half-November timing. Material new Ukrainian confirmation beyond previously delivered Witkoff/Putin meeting, not a peace agreement.",
+      "sources": [
+        "https://www.president.gov.ua/en/news/nam-potribni-tristoronni-peregovori-mizh-ukrayinoyu-amerikoy-107013"
+      ]
+    },
+    {
+      "index": 13,
+      "disposition": "corrected_verified",
+      "reason": "AFP report carried by RTHK published October 23 at 07:28 Hong Kong/Singapore, directly read. WHO comments were Thursday October 22; Nigeria announced imported case Tuesday October 20. Distinct spread beyond earlier Kenyan case, not proof of community transmission in Nigeria. Omit upstream country count because previous Uganda involvement makes a simple three-country count misleading.",
+      "sources": [
+        "https://news.rthk.hk/rthk/en/component/k2/1874985-20261023.htm?spTabChangeable=0"
+      ]
+    },
+    {
+      "index": 14,
+      "disposition": "excluded_repeat_context_no_new_event",
+      "reason": "October 23 campaign explainer on Haredi conscription provides no independently established new legislative decision or election outcome. Upcoming October 27 election and campaign divisions already covered in October 22 edition/archive. Exclude unchanged campaign context rather than count a newly dated feature as a new event.",
+      "sources": [
+        "https://www.aljazeera.com/news/2026/10/23/ultra-orthodox-conscription-debate-ignites-israels-election-battleground",
+        "https://forward.com/fast-forward/857882/why-a-new-ultra-orthodox-party-supports-drafting-haredi-men-to-the-idf/"
+      ],
+      "source_date": "2026-10-23"
+    },
+    {
+      "index": 15,
+      "disposition": "corrected_verified",
+      "reason": "Original October 23 reporting distinguishes immediate Hebron cordon from preparations for full West Bank closure. Correct upstream language that could imply a full closure already implemented. Avoid unverified arrest and casualty counts. No prior event match.",
+      "sources": [
+        "https://www.timesofisrael.com/liveblog_entry/netanyahu-security-chiefs-order-preparations-for-full-west-bank-lockdown-after-shooting-attack/",
+        "https://www.thenationalnews.com/news/mena/2026/10/23/netanyahu-orders-west-bank-lockdown-after-hebron-checkpoint-shooting/"
+      ]
+    },
+    {
+      "index": 16,
+      "disposition": "correct",
+      "reason": "Not an Nvidia-owned robot; 20,000 was a CEO forecast, not confirmed sales; only software is open source. Original post is October 23 SGT, not proof of a new October 24 milestone.",
+      "sources": [
+        "https://x.com/ClementDelangue/status/2113322519423758540",
+        "https://pollen-robotics.com/microduck/press-kit/",
+        "https://blogs.nvidia.com/gtc-berlin-2026-news/"
+      ]
+    },
+    {
+      "index": 17,
+      "disposition": "retain_with_corrections",
+      "reason": "October 21 Tesla primary update confirms California early ramp; omit unsupported general-purpose readiness and projected production targets.",
+      "sources": [
+        "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q3-2026-Update.pdf"
+      ]
+    },
+    {
+      "index": 18,
+      "disposition": "exclude",
+      "reason": "Stale original funding round: October 20. No material October 23 update verified; do not fill the briefing with a four- or five-day-old round.",
+      "sources": []
+    },
+    {
+      "index": 19,
+      "disposition": "exclude",
+      "reason": "Stale original funding round: October 19. No material October 23 update verified; do not fill the briefing with a four- or five-day-old round.",
+      "sources": []
+    },
+    {
+      "index": 20,
+      "disposition": "retained_verified_unseen_catchup",
+      "reason": "Primary company October 22 earnings release directly read: net sales $23.3bn, organic sales +4%, core EPS $2.00; fiscal quarter distinct from calendar quarter. Do not claim consensus beat or market reaction without separate evidence. Not found in previous archive/delivery. Thursday results retained as unseen catch-up.",
+      "sources": [
+        "https://us.pg.com/newsroom/news-releases/PG-Announces-Fiscal-Year-2027-First-Quarter-Results/"
+      ]
+    },
+    {
+      "index": 21,
+      "disposition": "corrected_verified",
+      "reason": "Business Travel News October 23 original earnings-call reporting and MT Newswires report agree on roughly 5% positions and $336m charge. No official IR release located. Avoid inconsistent absolute job counts and unproven claim that AI alone caused cuts; plans are not all completed layoffs. No prior event match.",
+      "sources": [
+        "https://www.businesstravelnews.com/Intelligence/american-express-to-cut-5-percent-of-workforce",
+        "https://ca.finance.yahoo.com/news/american-express-misses-third-quarter-162533944.html"
+      ]
+    },
+    {
+      "index": 22,
+      "disposition": "retained_verified",
+      "reason": "MT Newswires closing report October 23 at 16:29 EDT verifies Dow 52,215.16 (-1.2%), S&P 7,623.68 (-0.5%), Nasdaq 25,955.34 (-0.2%). New Friday session, not repeated Thursday move. Oil rise is contemporaneous, not a claim of single proven cause.",
+      "sources": [
+        "https://ca.finance.yahoo.com/news/us-equity-indexes-fall-treasury-202915276.html"
+      ]
+    },
+    {
+      "index": 23,
+      "disposition": "corrected_updated_verified",
+      "reason": "Reuters late Friday report via Kitco verifies spot intraday low $3,975.23, below $4,000 first since July, and December futures settlement down 1.3% at $4,007.90. Correct upstream early 03:51 GMT spot snapshot and preliminary weekly loss; do not call intraday spot quote a close or claim final weekly spot loss. Distinct new threshold beyond previous Thursday gold decline.",
+      "sources": [
+        "https://www.kitco.com/news/off-the-wire/2026-10-23/gold-set-steep-weekly-loss-rising-oil-prices-bolster-fed-rate-hike",
+        "https://www.marketscreener.com/news/gold-set-for-steep-weekly-loss-as-rising-oil-prices-bolster-fed-rate-hike-bets-ce785cdfda80f22c"
+      ]
+    },
+    {
+      "index": 24,
+      "disposition": "retained_verified_unseen_catchup",
+      "reason": "October 22 match, confirmed by BCCI official score and SABC's dated original report. Not found in previous archives or delivered general items. ESPNcricinfo inaccessible, but equivalent original/official evidence found.",
+      "sources": [
+        "https://www.bcci.tv/matches/b8a52270-eedc-48ff-93f1-b925941e67b7/More/squads",
+        "https://www.sabcsport.com/cricket/news/india-pull-off-record-225-run-chase-in-thrilling-t20i-series-opener"
+      ]
+    },
+    {
+      "index": 25,
+      "disposition": "corrected_updated_to_latest_fp2_merged_fp1",
+      "reason": "Upstream FP1 is correct but superseded by Friday FP2, published at 06:17 Singapore before this briefing. Retain both results in one Friday-practice-sweep item, with latest FP2 order. Original source date is October 23 UTC, October 24 Singapore.",
+      "sources": [
+        "https://www.formula1.com/en/latest/article/fp1-leclerc-fastest-in-first-practice-for-the-united-states-gp-ahead-of-verstappen-and-norris.125WlaFK7K1mXXyLgb93ui",
+        "https://www.formula1.com/en/latest/article/fp2-leclerc-sets-the-pace-from-antonelli-and-verstappen-in-second-practice-at-united-states-grand-prix.4lRGhApoylA3exqOxagIqx"
+      ]
+    },
+    {
+      "index": 26,
+      "disposition": "excluded_repeat_no_material_change",
+      "reason": "Austin title-clinching permutations recur in October 13, 17, 18, 20 and 22 archives. Original new interview is October 22 at 20:27 UTC, not an independent change to the title situation; October 23 delivered general item already covered Thursday's Antonelli/Hamilton press-conference statements. Original F1 permutations page, currently dated October 13 00:00 UTC, confirms Antonelli needs a win, Russell ninth or lower and Hamilton fifth or lower. No fresh race result or changed standings yet. Friday's new on-track development is retained under index 25.",
+      "sources": [
+        "https://www.formula1.com/en/latest/article/it-would-be-a-dream-antonelli-targets-perfect-weekend-in-austin-to-claim-maiden-f1-title.39LQkTCcrGsLcfcPGgd4ud",
+        "https://www.formula1.com/en/latest/article/points-permutations-when-is-the-earliest-antonelli-could-win-the-world-championship.24UKT2fsQl4GmC5DMrmYUy",
+        "https://api.fia.com/news/f1-2026-united-states-grand-prix-thursday-press-conference-transcript"
+      ],
+      "source_date": "2026-10-22T20:27:00Z"
+    },
+    {
+      "index": 27,
+      "disposition": "excluded_repeat_no_dated_change",
+      "reason": "WTA race page directly verifies Rybakina first, Sabalenka second, eight qualified players and Swiatek ninth, but is a live standings page with no publication date proving the upstream October 19 date or a fresh change. The official October 21 final-field release and October 23 delivered event wta-finals-muchova-final-field-20261021 already cover this same qualification/Indian Wells event. No new qualification or standings change established.",
+      "sources": [
+        "https://www.wtatennis.com/rankings/race-singles",
+        "https://www.wtatennis.com/news/4596744/karolina-muchova-secures-final-qualification-place-for-fage-wta-finals-indian-wells",
+        "https://www.wtatennis.com/news/4594854/meet-your-elite-eight-a-snapshot-of-the-wta-finals-contenders"
+      ],
+      "source_date": null
+    },
+    {
+      "index": 28,
+      "disposition": "corrected_verified_primary_source",
+      "reason": "New October 22 Scientific Reports paper and October 23 Nature Portfolio release verified. Correct absolute language: reconstructed sky may have inspired painting; completion date is not established. No matching prior archive or delivered item found.",
+      "sources": [
+        "https://www.natureasia.com/en/info/press-releases/detail/9468",
+        "https://www.nature.com/articles/s41598-026-73025-5"
+      ]
+    },
+    {
+      "index": 29,
+      "disposition": "excluded_stale_no_new_development",
+      "reason": "NASA original report is October 20, with an October 21 page update, and describes an underlying October 12 Nature Communications study. No new October 23 development was established. Although no prior matching delivered event was found, exclude under the same freshness principle applied to older science; unseen is not sufficient to make an old study current news. Primary NASA source was directly read; underlying Nature paper could not be opened because of an inaccessible cookie redirect. The model raises some end-of-century projections, not a universal doubling or an observed current acceleration.",
+      "sources": [
+        "https://science.nasa.gov/blogs/science-news/2026/10/20/nasa-refines-thwaites-glacier-projections/",
+        "https://www.nature.com/articles/s41467-026-77976-1"
+      ],
+      "source_date": "2026-10-20"
+    },
+    {
+      "index": 30,
+      "disposition": "excluded_repeat_stale",
+      "reason": "Exact event and source already present in October 18 upstream archive. Original NASA report directly confirms milestone occurred October 11 and was published October 12 at displayed 5:20 PM, timezone not exposed. No new distance record or milestone established today. Archive repetition is verified; do not claim actual previous spoken delivery of this item, which was not found in companion delivered general items.",
+      "sources": [
+        "https://science.nasa.gov/blogs/perseverance-mars-rover/2026/10/12/nasas-perseverance-sets-off-world-record-for-total-distance-driven/"
+      ],
+      "source_date": "2026-10-12"
+    },
+    {
+      "index": 31,
+      "disposition": "excluded_repeat_stale",
+      "reason": "Same article and Y-CUT event already present in October 17 upstream archive. Primary bioRxiv abstract retrieved through indexed original-source search explicitly says Posted August 04, 2026; this is an August preprint, not a fresh October experiment. Scientific American direct fetch unavailable; multiple indexed attribution records put its article on October 13, not upstream October 14, but exact original magazine date is not independently verified. Do not present conservation applications as demonstrated in other species.",
+      "sources": [
+        "https://www.biorxiv.org/content/10.64898/2026.08.03.742506v1",
+        "https://www.scientificamerican.com/article/sex-changing-mouse-clones-may-help-fight-to-save-endangered-species/"
+      ],
+      "source_date": "2026-08-04"
+    }
+  ],
+  "podcast_learning": {
+    "status": "omitted",
+    "reason": "latest_evidence_unavailable",
+    "omission_reason": "No podcast recap today. Everyday AI's current uploads are replays or beginner-series material; its latest verified original remains August 14, which is not newly released. Big Technology published a new original on October 23 at 22:12 UTC (October 24, 06:12 SGT), but no actual transcript was retrievable in the checked sources. The completed catch-up queue is unchanged, and the previously covered Pichai episode is not repeated.",
+    "report_summary": "No podcast recap today. Everyday AI's current uploads are replays or beginner-series material; its latest verified original remains August 14, which is not newly released. Big Technology published a new original on October 23 at 22:12 UTC (October 24, 06:12 SGT), but no actual transcript was retrievable in the checked sources. The completed catch-up queue is unchanged, and the previously covered Pichai episode is not repeated.",
+    "selected_episode": null,
+    "segment_references": []
+  },
+  "expert_learning": {
+    "concept_id": "specific-knowledge-through-curiosity",
+    "thinkers": [
+      "Naval Ravikant"
+    ],
+    "theme": "ai_transition",
+    "title": "Follow the questions you genuinely care about",
+    "source_url": "https://nav.al/specific-knowledge",
+    "sources": [
+      "https://nav.al/specific-knowledge"
+    ],
+    "original_date": "2019-03-25",
+    "original_date_basis": "Date displayed on original nav.al discussion with Babak Nivi",
+    "classification": "evergreen",
+    "faithful_paraphrase": "Naval connects distinctive expertise to genuine curiosity and accumulated experience rather than simply pursuing fashionable work.",
+    "editorial_application": "Identify problems colleagues repeatedly bring to you and deepen one that genuinely interests you; explore AI for routine work around that distinctive strength. This is an editorial application.",
+    "report_summary": "Evergreen March 25, 2019: Naval recommends building distinctive expertise around genuine curiosity. The operations-analyst example and AI application are editorial, not a reported case."
+  },
+  "interesting_fact": {
+    "event_id": "wood-frog-partial-freezing-cell-protection",
+    "title": "Wood frogs survive partial freezing",
+    "source_url": "https://www.nps.gov/gaar/learn/nature/wood-frog-page-2.htm",
+    "sources": [
+      "https://www.nps.gov/gaar/learn/nature/wood-frog-page-2.htm",
+      "https://www.amnh.org/exhibitions/frogs-a-chorus-of-colors/frogs-and-the-ecosystem/frog-antifreeze"
+    ],
+    "original_date": null,
+    "source_updated_date": "2022-10-06",
+    "classification": "evergreen",
+    "claim": "Wood frogs survive substantial body-water freezing. Glucose helps protect cells from freezing, and heartbeat resumes during thawing.",
+    "caveat": "Say partially frozen or much of its body water frozen, not every cell frozen solid; do not describe survival as resurrection. NPS displays an updated date, not an original publication date.",
+    "upstream_change": "The original October24 brief retains its neutron-star teaspoon fact. This companion substitutes the wood-frog fact because the same neutron-star density comparison already appeared in June19 and August23 archives. Original archive unchanged."
+  },
+  "diagnostics": [
+    "Some primary Singapore release pages could not be directly fetched. Their dated indexed original text was read, with CNA corroboration for inflation and housing. This is distinguished from direct page retrieval in each evidence caveat.",
+    "Inshorts public national page inspected, including October 23 items. Original Times Now X and News Karnataka links for two candidates could not be fetched; neither unverified candidate was included. The Modi candidate was independently followed to the official PIB transcript. No India quota was imposed.",
+    "Rathbones portfolio detail and new RBI restrictions were not established. Excluded rather than inferred from headlines or unnamed-source summaries.",
+    "Jio final subscription multiples differ across contemporaneous reports; only closing, approximate offering size and scheduled listing are used. IPO valuation is not offering proceeds.",
+    "Underlying event-level dedup checked against all available earlier archive JSON and all fourteen supplied delivery records. Prior archive inclusion is not automatically described as prior spoken delivery.",
+    "Upstream ESPNcricinfo match report returned 403. BCCI official match centre and SABC original reporting supply usable replacement evidence, so the cricket item is retained.",
+    "Scientific American original pages could not be fetched. Van Gogh item verified instead from the primary publisher's October 23 release and indexed October 22 paper. Mouse-cloning item excluded as an archived repeat; the original August 4 preprint date is independently established from bioRxiv's indexed original page, while the magazine's exact original publication date remains unverified.",
+    "Live WTA race table has no publication timestamp. No fresh change to the final field or ranking order was established, so no invented October 19 news timestamp is used.",
+    "All thirteen profile reads remain incomplete for the full catch-up window; three showed profile headers without usable posts.",
+    "Logged-out X limits profile and reply coverage; no login, follow or setting changes were made.",
+    "Some web-tool direct opens returned InternalError. Permitted public cloud-browser reads or primary search results supplied evidence where available; no access denial was bypassed.",
+    "Kimi blog direct web open failed; original company X announcement and Vercel primary availability announcement establish the retained facts.",
+    "Town, Tesla, Eka and Munich Re have primary publication dates but no verified original X post timestamps; these fields remain null.",
+    "No podcast recap today. Everyday AI's current uploads are replays or beginner-series material; its latest verified original remains August 14, which is not newly released. Big Technology published a new original on October 23 at 22:12 UTC (October 24, 06:12 SGT), but no actual transcript was retrievable in the checked sources. The completed catch-up queue is unchanged, and the previously covered Pichai episode is not repeated.",
+    "30 latest public Videos entries and public Live listing inspected through page bootstrap data; no logged-in or private data used. Full earlier paginated catalogue not exhaustively fetched.",
+    "Original Ep841 actual publisher transcript readable through web tool. Direct publisher fetch returned HTTP202 challenge, not a usable transcript; successful web retrieval is separately identified.",
+    "No matching actual transcript retrieved. Podscripts and Tapesearch/Apple web snapshots remain October20. Direct guessed Podscripts path yielded generic homepage, HTTP200 but not episode content. No transcript access claim.",
+    "Unchanged, all three previously published; no reseeding or older backfill."
+  ],
+  "ai_partial_observations": [
+    {
+      "handle": "OfficialLoganK",
+      "status": "visible_posts",
+      "observed_sgt_date": "2026-10-24",
+      "observation_precision": "session observation, no exact per-profile timestamp asserted",
+      "scope": "bounded public profile; not exhaustive",
+      "full_window_verified": false,
+      "advance_global_cutoff": false
+    },
+    {
+      "handle": "ericjang11",
+      "status": "visible_posts",
+      "observed_sgt_date": "2026-10-24",
+      "observation_precision": "session observation, no exact per-profile timestamp asserted",
+      "scope": "bounded public profile; not exhaustive",
+      "full_window_verified": false,
+      "advance_global_cutoff": false
+    },
+    {
+      "handle": "ArtificialAnlys",
+      "status": "visible_posts",
+      "observed_sgt_date": "2026-10-24",
+      "observation_precision": "session observation, no exact per-profile timestamp asserted",
+      "scope": "bounded public profile; not exhaustive",
+      "full_window_verified": false,
+      "advance_global_cutoff": false
+    },
+    {
+      "handle": "dps",
+      "status": "visible_posts",
+      "observed_sgt_date": "2026-10-24",
+      "observation_precision": "session observation, no exact per-profile timestamp asserted",
+      "scope": "bounded public profile; not exhaustive",
+      "full_window_verified": false,
+      "advance_global_cutoff": false
+    },
+    {
+      "handle": "ryolu_",
+      "status": "visible_posts",
+      "observed_sgt_date": "2026-10-24",
+      "observation_precision": "session observation, no exact per-profile timestamp asserted",
+      "scope": "bounded public profile; not exhaustive",
+      "full_window_verified": false,
+      "advance_global_cutoff": false
+    },
+    {
+      "handle": "AnthropicAI",
+      "status": "visible_posts",
+      "observed_sgt_date": "2026-10-24",
+      "observation_precision": "session observation, no exact per-profile timestamp asserted",
+      "scope": "bounded public profile; not exhaustive",
+      "full_window_verified": false,
+      "advance_global_cutoff": false
+    },
+    {
+      "handle": "OpenAI",
+      "status": "visible_posts",
+      "observed_sgt_date": "2026-10-24",
+      "observation_precision": "session observation, no exact per-profile timestamp asserted",
+      "scope": "bounded public profile; not exhaustive",
+      "full_window_verified": false,
+      "advance_global_cutoff": false
+    },
+    {
+      "handle": "rauchg",
+      "status": "visible_posts",
+      "observed_sgt_date": "2026-10-24",
+      "observation_precision": "session observation, no exact per-profile timestamp asserted",
+      "scope": "bounded public profile; not exhaustive",
+      "full_window_verified": false,
+      "advance_global_cutoff": false
+    },
+    {
+      "handle": "BerenMillidge",
+      "status": "visible_posts",
+      "observed_sgt_date": "2026-10-24",
+      "observation_precision": "session observation, no exact per-profile timestamp asserted",
+      "scope": "bounded public profile; not exhaustive",
+      "full_window_verified": false,
+      "advance_global_cutoff": false
+    },
+    {
+      "handle": "levie",
+      "status": "visible_posts",
+      "observed_sgt_date": "2026-10-24",
+      "observation_precision": "session observation, no exact per-profile timestamp asserted",
+      "scope": "bounded public profile; not exhaustive",
+      "full_window_verified": false,
+      "advance_global_cutoff": false
+    },
+    {
+      "handle": "svlevine",
+      "status": "header_only",
+      "observed_sgt_date": "2026-10-24",
+      "observation_precision": "session observation, no exact per-profile timestamp asserted",
+      "scope": "bounded public profile; not exhaustive",
+      "full_window_verified": false,
+      "advance_global_cutoff": false
+    },
+    {
+      "handle": "akothari",
+      "status": "header_only",
+      "observed_sgt_date": "2026-10-24",
+      "observation_precision": "session observation, no exact per-profile timestamp asserted",
+      "scope": "bounded public profile; not exhaustive",
+      "full_window_verified": false,
+      "advance_global_cutoff": false
+    },
+    {
+      "handle": "AravSrinivas",
+      "status": "header_only",
+      "observed_sgt_date": "2026-10-24",
+      "observation_precision": "session observation, no exact per-profile timestamp asserted",
+      "scope": "bounded public profile; not exhaustive",
+      "full_window_verified": false,
+      "advance_global_cutoff": false
+    }
+  ],
+  "ai_profile_observation_cursors": []
+}
