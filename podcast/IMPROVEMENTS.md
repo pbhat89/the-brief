@@ -116,3 +116,12 @@ Verified measures: 162 unit tests; hosted 390/1280-pixel original-reader and lay
 The headline-plus-context format covered 25 distinct verified developments and reconciled every upstream entry, including merged tennis coverage, without padding to a duration target. Actual chapter silences and separate intuitive learning examples were retained. Original and companion fact differences are explicitly disclosed when archive dedup requires substitution. These are implementation observations, not evidence of listener satisfaction.
 
 A hosted date-rollover fixture assumed a future date had no report, which daily publication invalidated. The narrow correction now derives its positive fixture from the newest report and checks the next absent date, keeping all existing UI assertions. Hosted original-reader and daily-layout browser QA, runtime checks and dependency audit passed on commit 078cb6f. No application behaviour changed.
+
+
+## Source freshness and measured pacing · 24 October 2026
+
+Completed: all-item reconciliation retained the same concise news structure while excluding old fundraising and science coverage without a new fact. Current source discovery showed that older Everyday AI transcripts are accessible, but the saved post-catch-up new-only rule still prevents backfill. New podcast originals without an accessible actual transcript remain pending; omission is preferable to inference or padding.
+
+Before publication, every selected headline was checked for exactly one news card, including science; spoken/script fields and personal-context caveats were stripped. Conditions met the normal time budget while carrying one source-backed unhealthy-air caution.
+
+A bounded narration measurement now compares written-word pace with emitted-phoneme lexical units. The latter is explicitly an estimate; source-number expansion and token segmentation can differ from a human word count. Proposed next validation is a reviewed number-heavy sample, with comprehension and naturalness as success measures, before any further pace adjustment. No listener-satisfaction or physical-device-playback conclusion follows from technical checks.

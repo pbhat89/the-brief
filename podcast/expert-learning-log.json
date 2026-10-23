@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_on": "2026-10-23",
+  "updated_on": "2026-10-24",
   "timezone": "Asia/Singapore",
   "history": {
     "complete": false,
@@ -12,7 +12,8 @@
     ],
     "gaps": [
       "Earlier public archive and private podcast history have not been fully imported into this concept log.",
-      "Candidate status means researched, not proven unseen. Check all available history before selection."
+      "Candidate status means researched, not proven unseen. Check all available history before selection.",
+      "The AI Transformation Playbook candidate has an earlier coverage reference that still needs exact lesson-level reconciliation; pending_full_history is a reuse block, not evidence that it is unused."
     ]
   },
   "entries": [
@@ -131,7 +132,7 @@
       "classification": "evergreen",
       "takeaway": "Ng sequences AI transformation through pilot projects, an internal AI team, broad training, strategy, and communication, with sustained investment.",
       "editorial_application": "Choose a bounded pilot, then identify the team skills and communication needed to turn it into repeatable capability. This is an editorial application.",
-      "caveat": "This is an evergreen 2018 roadmap, not a new announcement or a universal fixed implementation timetable.",
+      "caveat": "Do not select as unused: an earlier delivery-history record explicitly references the 2018 AI Transformation Playbook. Exact lesson-level reconciliation is pending, so this candidate is conservatively blocked from reuse. This does not newly assert a delivery date or narration state.",
       "status": "researched_candidate",
       "dedup_review": "pending_full_history",
       "last_used": null,
@@ -203,21 +204,28 @@
           ],
           "original_date": "2019-03-25",
           "original_date_basis": "Date displayed on original publisher page",
-          "checked_on": "2026-10-19",
+          "checked_on": "2026-10-24",
           "kind": "first_party",
           "verification": "direct_primary",
-          "locator": "Naval replies under specific knowledge and genuine curiosity"
+          "locator": "Original March 25 2019 discussion, sections Specific knowledge is found by pursuing your curiosity and Building specific knowledge will feel like play to you"
         }
       ],
       "classification": "evergreen",
       "takeaway": "Naval connects distinctive expertise to curiosity, experience and judgment in a domain, rather than simply pursuing whichever skill is fashionable.",
-      "editorial_application": "Pair AI tooling with a domain you understand deeply; evaluate whether the tool improves a real problem there. This is an editorial application.",
-      "caveat": "Career philosophy, not a guaranteed earnings claim. The AI application is not a quotation or original claim from the 2019 discussion.",
-      "status": "researched_candidate",
-      "dedup_review": "pending_full_history",
-      "last_used": null,
-      "last_narrated": null,
-      "uses": []
+      "editorial_application": "Identify problems colleagues repeatedly bring to you and deepen one that genuinely interests you; explore AI for routine work around that distinctive strength. This is an editorial application.",
+      "caveat": "Career philosophy, not a guaranteed earnings claim or a rejection of formal training. The AI application and operations-analyst example are editorial. All available daily and personal-topic histories were checked; the global incomplete-import caveat remains.",
+      "status": "narrated",
+      "dedup_review": "covered",
+      "last_used": "2026-10-24",
+      "last_narrated": "2026-10-24",
+      "uses": [
+        {
+          "date": "2026-10-24",
+          "channel": "podcast",
+          "public_evidence_url": "https://pbhat89.github.io/the-brief/podcast/reports/2026-10-24.html",
+          "confirmation": "The final delivered narration contains the source-backed specific-knowledge-through-curiosity lesson. The operations-analyst example and AI application are explicitly editorial. Public report revision and content hash were verified, and combined delivery was accepted; private receipt details remain outside this repository."
+        }
+      ]
     },
     {
       "concept_id": "accountability-includes-visible-failure",

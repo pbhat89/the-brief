@@ -2,7 +2,7 @@
   "version": 1,
   "timezone": "Asia/Singapore",
   "daily_limit": 1,
-  "updated_at": "2026-10-22T23:24:02.811820+00:00",
+  "updated_at": "2026-10-23T23:06:02.363254+00:00",
   "catchup": {
     "initialized_at": "2026-10-19T00:21:00Z",
     "limit": 3,
@@ -170,6 +170,69 @@
       "status": "published",
       "status_reason": null,
       "publication_id": "2026-10-23"
+    },
+    {
+      "episode_id": "big-technology:59149ba6-cf2e-11f1-823a-07bb6f417cfd",
+      "show": "big-technology",
+      "title": "Google’s Potential, AI Money Spigot Shutting?, PHP Bug & Cybersecurity’s “Black October”",
+      "published_at": "2026-10-23T22:12:00Z",
+      "source_url": "https://pdst.fm/e/tracking.swap.fm/track/t7yC0rGPUqahTF4et8YD/pscrb.fm/rss/p/traffic.megaphone.fm/AMPP9533657679.mp3",
+      "aliases": [
+        "rss:59149ba6-cf2e-11f1-823a-07bb6f417cfd"
+      ],
+      "classification": {
+        "original": true,
+        "substantive": true,
+        "replay": false,
+        "promotional": false,
+        "beginner_series": false
+      },
+      "transcript": {
+        "status": "unavailable",
+        "body_retrieved": false,
+        "checked_at": "2026-10-23T23:06:02.363254+00:00",
+        "access_note": "Fresh publisher RSS confirms the original. Checked Podscripts and Tapesearch listings still stop at October 20; the attempted matching Podscripts path returns a generic page with no episode or transcript. Public YouTube latest listing contains earlier Pichai clips, not this new original. No actual transcript retrieved; title and description are not sufficient."
+      },
+      "dedup_review": {
+        "status": "pending",
+        "story_keys": []
+      },
+      "status": "pending",
+      "status_reason": null,
+      "publication_id": null
+    },
+    {
+      "episode_id": "everyday-ai:841",
+      "show": "everyday-ai",
+      "title": "Ep 841: ChatGPT Computer History, New Gemini Model, Claude Flexes on the Browser and 7 more AI updates you should use Today",
+      "published_at": "2026-08-14T12:32:28Z",
+      "source_url": "https://www.youtube.com/watch?v=9_XAioMMtDA",
+      "aliases": [
+        "youtube:9_XAioMMtDA",
+        "https://www.youreverydayai.com/ep-841-chatgpt-computer-history-new-gemini-model-claude-flexes-on-the-browser-and-7-more-ai-updates-you-should-use-today/"
+      ],
+      "classification": {
+        "original": true,
+        "substantive": true,
+        "replay": false,
+        "promotional": false,
+        "beginner_series": false
+      },
+      "transcript": {
+        "status": "retrieved",
+        "body_retrieved": true,
+        "source_url": "https://www.youreverydayai.com/ep-841-chatgpt-computer-history-new-gemini-model-claude-flexes-on-the-browser-and-7-more-ai-updates-you-should-use-today/",
+        "provenance": "publisher-transcript",
+        "checked_at": "2026-10-23T23:06:02.363254+00:00",
+        "access_note": "Actual timestamped publisher transcript read via web extractor, including 21:07–24:41 and 33:56–34:29. Publisher original date August 14; original YouTube live-start timestamp 12:32:28Z is distinct from later upload metadata. Historical discovery only; not a newly released episode."
+      },
+      "dedup_review": {
+        "status": "pending",
+        "story_keys": []
+      },
+      "status": "deferred",
+      "status_reason": "Historical August 14 original is not newly released; do not backfill after completed catch-up. Transcript availability is not authority to select or mark it delivered.",
+      "publication_id": null
     }
   ],
   "publications": [

@@ -68,3 +68,13 @@ Naval Ravikant's evergreen 21 June 2019 accountability lesson was included in th
 ## Coverage reconciliation, 23 October 2026
 
 Andrej Karpathy's evergreen 25 April 2019 tiny-batch debugging lesson was included in the verified, accepted combined edition: [public report](https://pbhat89.github.io/the-brief/podcast/reports/2026-10-23.html). The lesson distinguishes checking pipeline wiring from proving generalization; the invented-document business application is explicitly editorial. Semantic review found this distinct from the earlier input-inspection lesson, despite sharing an original source. The concept is now narrated, not an unused candidate. All previous concepts, uses and historical coverage gaps remain preserved.
+
+
+## Research reconciliation, 24 October 2026
+
+At the initial research checkpoint, the specific-knowledge-through-curiosity candidate was checked against the available daily and personal-topic history and retained as a researched candidate, not yet narrated. The confirmed-use entry below supersedes that provisional status. The source's career-interest principle is distinct from prior accountability, long-term habits, and evaluating the reliability of expertise. The AI Transformation Playbook candidate is conservatively blocked: an earlier coverage record references that playbook, and exact lesson-level reconciliation is still pending. No new delivery status or date is asserted by this research update.
+
+
+## Confirmed use, 24 October 2026
+
+Naval Ravikant's evergreen 25 March 2019 specific-knowledge-through-curiosity lesson was included in the verified, accepted combined edition: [public report](https://pbhat89.github.io/the-brief/podcast/reports/2026-10-24.html). The lesson connects distinctive expertise with genuine curiosity; the operations-analyst example and AI application are explicitly editorial. Only this concept is now recorded as narrated. All earlier concepts, source reviews and history gaps are preserved. No podcast recap was delivered, and no podcast coverage state or fixed catch-up seed is changed by this reconciliation.
