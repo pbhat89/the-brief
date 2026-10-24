@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-08-25",
-      "topic_key": "human bones",
-      "text": "Babies are born with about 300 bones but adults have 206"
-    },
-    {
       "date": "2026-08-26",
       "topic_key": "sahara",
       "text": "The Sahara was a green savannah with lakes as recently as about 5,000 to 11,000 years ago"
@@ -264,14 +259,14 @@
       "date": "2026-10-24",
       "topic_key": "neutron star",
       "text": "A teaspoon of neutron-star material would weigh about a billion tonnes."
+    },
+    {
+      "date": "2026-10-25",
+      "topic_key": "mantis shrimp",
+      "text": "The mantis shrimp has up to 16 types of colour photoreceptor and strikes with cavitation-bubble force."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-09-24",
-      "type": "logic",
-      "title_key": "who-ate-the-cake"
-    },
     {
       "date": "2026-09-25",
       "type": "quantitative",
@@ -416,14 +411,14 @@
       "date": "2026-10-24",
       "type": "quantitative",
       "title_key": "split-the-bill"
+    },
+    {
+      "date": "2026-10-25",
+      "type": "lateral",
+      "title_key": "three-left-turns"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-09-24",
-      "type": "grouping",
-      "title_key": "four-by-four"
-    },
     {
       "date": "2026-09-25",
       "type": "ladder",
@@ -568,6 +563,11 @@
       "date": "2026-10-24",
       "type": "grouping",
       "title_key": "cross-purposes"
+    },
+    {
+      "date": "2026-10-25",
+      "type": "ladder",
+      "title_key": "love-into-hate"
     }
   ]
 }

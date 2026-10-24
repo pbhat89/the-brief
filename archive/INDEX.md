@@ -3951,3 +3951,35 @@ is empty until the first run.
 2026-10-24	NASA revises its Thwaites 'Doomsday' Glacier forecast, warning of faster sea-level rise	b867289f	nasa,thwaites glacier,sea level
 2026-10-24	NASA's Perseverance sets an off-world driving record, passing Opportunity's distance on Mars	64cfd86e	nasa,perseverance,mars,driving record
 2026-10-24	Scientists turn cloned male mouse embryos into fertile females in a first for genetics	330730e8	mouse,crispr,genetics,endangered species
+2026-10-25	NEA serves legal notices to 10 Singapore-based companies over possible transboundary haze	9ff05f94	nea,haze,singapore,transboundary haze pollution act
+2026-10-25	Indonesia to cut gas exports to Singapore, but EMA says the impact is under 2% of daily demand	50be96b7	indonesia,gas exports,singapore,ema
+2026-10-25	Singapore to import biomethane, a low-carbon gas, with wider adoption from 2028	27e516ba	singapore,biomethane,keppel,sembcorp,energy
+2026-10-25	Man jailed 14 weeks for grabbing his wife's neck in breach of a protection order	9315a37c	singapore,jail,protection order,assault
+2026-10-25	Delhi police block an opposition march to the Election Commission as voter-roll protests continue	b0e5d615	delhi,police,election commission,voter roll,gyanesh kumar
+2026-10-25	RBI governor says interest rates could be used to curb financial-stability and currency risks	be2787cc	rbi,sanjay malhotra,interest rates,rupee
+2026-10-25	Trump says a US-India trade deal is 'pretty close' as the Russian-oil tariff threat lingers	14249078	trump,india,us,trade deal,tariff
+2026-10-25	India's Nifty struggles to hold gains as bond yields climb and the rupee stays pressured	602071b1	india,nifty,markets,bond yields,rupee
+2026-10-25	Burnham's first Budget, built for the bond market, tests Labour's loyalty	e387a637	uk,andy burnham,john healey,budget,bond market
+2026-10-25	UK public debt tops £3 trillion for the first time as the deficit overshoots before the Budget	2d5308c8	uk,debt,deficit,budget
+2026-10-25	Chancellor Healey to court entrepreneurs with cuts to regulation	eab24be0	uk,healey,regulation,business
+2026-10-25	UK payrolls rose in September and unemployment fell to 4.7%, defying forecasts	c96965ec	uk,payrolls,unemployment,jobs
+2026-10-25	Iran blames the US for a failed deal and urges new talks amid fears of fresh strikes	3fe009aa	iran,us,nuclear deal,saudi arabia
+2026-10-25	Eight nations' foreign ministers meet in Istanbul to urge US-Iran diplomacy over new attacks	faab2438	istanbul,foreign ministers,us,iran,diplomacy
+2026-10-25	Update: Israel launches a major new military operation in the occupied West Bank	06a70df1	israel,west bank,military operation,hebron
+2026-10-25	Ukraine says Starlink is restored as strikes continue and November talks are set for Abu Dhabi	f0110655	ukraine,russia,starlink,abu dhabi,talks
+2026-10-25	OpenAI says it will stop training its models on the live internet, citing 'significant risks'	a34fc3fd	openai,ai,training,internet
+2026-10-25	Anthropic launches Claude Duet, an agent app for professionals built on Claude Opus 5.5	fd69c13b	anthropic,claude duet,ai agent
+2026-10-25	AI-discovered flaws in PHP knock government sites offline as the NSA urges urgent patching	80fc7f64	php,cybersecurity,nsa,vulnerability
+2026-10-25	Developer platform Railway tells all users to rotate keys after a cyberattack	b182ab9b	railway,cyberattack,security keys
+2026-10-25	Blackstone's third-quarter earnings fall 9.2% but still beat estimates	cfc92dca	blackstone,earnings,private equity
+2026-10-25	Brent crude settles above $116, a six-month high, on Houthi attacks and Iran war fears	08a0fcf2	brent,oil,wti,saudi arabia,iran
+2026-10-25	Markets see the Fed holding at its Oct 28 meeting, with a December hike near-certain	d102cafb	federal reserve,interest rates,markets
+2026-10-25	Salesforce to buy marketing platform Braze for about $5.66 billion, sending its shares up 51%	3f108792	salesforce,braze,acquisition
+2026-10-25	India beat New Zealand by four wickets in Christchurch to go 2-0 up in the T20I series	82759cc5	india,new zealand,t20i,tilak varma,cricket
+2026-10-25	Hamilton tops final practice as Ferrari and Mercedes set the pace before US GP qualifying	79366e1f	hamilton,us grand prix,f1,practice
+2026-10-25	Lindblad, Colapinto and Bortoleto handed grid penalties for the US Grand Prix	94ebb862	lindblad,colapinto,bortoleto,f1,grid penalties
+2026-10-25	Djokovic accepts a wild card for the Swiss Indoors in Basel as the ATP 500 draws open	c4208de0	djokovic,basel,swiss indoors,tennis,atp
+2026-10-25	Moderna and Merck's mRNA cancer vaccine cuts melanoma recurrence or death by 42% in a phase 3 trial	65ded053	moderna,merck,mrna vaccine,melanoma,cancer
+2026-10-25	CRISPR prime editing is used directly inside a patient's body for the first time	3ca082eb	crispr,prime editing,wilsons disease,gene editing
+2026-10-25	Physicists trap a single antimatter particle, a positron, for a month	67c89e0d	positron,antimatter,physics,northwestern
+2026-10-25	An AI estimates cancer patients' survival odds from a single photo of their face	4c93b80b	ai,cancer,face,lancet
