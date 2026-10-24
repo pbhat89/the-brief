@@ -1,5 +1,12 @@
 # Morning podcast companion
 
+## Mandatory source checklist · effective 26 October 2026
+
+Before research and scripting, follow [the agreed-source coverage contract](SOURCE_COVERAGE.md). Attempt every member of the fresh X roster and every agreed source/category; independently sweep India politics, Modi/BJP/government, opposition, policy, economics and major national developments. Account for each discovered item and every blocked, partial or unvisited source. Concise news narration does not reduce the research obligation. Full upstream reconciliation is not full source coverage.
+
+The private prepublication editorial audit must contain actual `source_coverage`; its existing CLI gate rejects missing checklists and routine-budget excuses for unattempted sources. Genuine source blocks yield explicitly partial coverage, never all-green or full-window cursor advancement. A hard platform failure needs structured evidence under the standing blocked-work rule. Retain pending work. The October25 historical audit remains partial; no recording is regenerated. No external saved prompt or schedule is changed by these repository instructions.
+
+
 This bounded companion extends The Brief without replacing the existing Claude routine, general-news archive, templates, watchdog, recipients or Gmail draft sender. No new scheduler is installed here. The external companion starts at 07:00 Asia/Singapore with a 07:30 delivery target; its saved schedule is managed and verified outside this repo. The original Claude schedule and Gmail workflow are unchanged.
 
 ## Operator sequence and deadline
@@ -17,7 +24,7 @@ At the beginning of every run, read [RUN_FEEDBACK.md](RUN_FEEDBACK.md), [IMPROVE
 ## Research and evidence
 
 - Use Inshorts for India politics, policy, economics and major national developments as a discovery source. Link and verify original publishers, preserve dates and separate facts from political opinion. Do not claim an app ranking or pad to ten stories. If unavailable, use trusted public alternatives in the same topic, record provenance and disclose gaps.
-- Refresh the roster from https://xstarterpack.com/; last observed count 211 is a reference, never proof of today's coverage. Inspect public profiles/posts within the runtime budget; record every attempted handle, timestamp, outcome and direct post URLs. Preserve actual post timestamps separately from retrieval time. Inaccessible profiles are blocked, not checked-empty. Do not bypass access controls. State attempted/accessed/blocked/total counts and the unvisited remainder.
+- Refresh the roster from https://xstarterpack.com/; last observed count 211 is a reference, never proof of today's coverage. Attempt every profile in the fresh roster where permitted; record actual attempts, outcomes and direct post URLs. A routine runtime budget cannot waive the required inventory. Preserve actual post timestamps separately from retrieval time. Inaccessible profiles are blocked, not checked-empty. Do not bypass access controls. State attempted/accessed/blocked/total counts and the unvisited remainder.
 - Check https://www.youtube.com/@EverydayAI_/videos and /streams, then publisher episode/newsletter pages at https://www.youreverydayai.com/. Summarize an actual accessible transcript with segment references, never infer the episode from a title/description. Preserve original episode date and upload date separately. Exclude Start Here, replay and re-upload material even without a replay label. Episode 841 (August 14, 2026) was the last verified original at handoff; it is a checkpoint, not a claim that nothing newer exists.
 - Use primary announcement/research/product sources to verify AI news. Add one source-backed expert learning insight from Andrej Karpathy, Andrew Ng, Yann LeCun or Naval Ravikant: recent or clearly labelled evergreen, with a concrete application and permanent concept-level dedup in the expert log. No invented quotes, no freshness-only gate and no padding.
 - Research optional insurance/reinsurance news, especially life and health, using the selective materiality and AI-evidence rules in [EDITORIAL_POLICY.md](EDITORIAL_POLICY.md). No qualifying new item means no segment, heading or “nothing new” announcement. Keep vendor claims attributed and distinguish pilots/announcements from measured outcomes.

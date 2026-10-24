@@ -1,0 +1,2798 @@
+{
+  "record_kind": "historical-post-delivery-audit",
+  "edition_date": "2026-10-25",
+  "audited_at": "2026-10-24T23:35:55.106319+00:00",
+  "overall_status": "partial",
+  "scope": "Reconstruction of work actually performed before delivery. Later investigation is not relabelled as original coverage. This record does not regenerate or alter the delivered recording.",
+  "ai": {
+    "counts": {
+      "roster": 211,
+      "attempted_roster": 13,
+      "visible_partial_roster": 13,
+      "header_only": 0,
+      "blocked": 0,
+      "unvisited": 198,
+      "full_window_verified": 0,
+      "additional_nonroster_profiles": 1,
+      "selected_news_events": 6
+    },
+    "roster_url": "https://xstarterpack.com/",
+    "roster_content_sha256": "045581900e0c354deebaa87a524cb470204bb0d39238c20252da90383bb39e45",
+    "roster_retrieval_time": null,
+    "roster_retrieval_time_limit": "Exact retrieval timestamp was not separately recorded.",
+    "profiles": [
+      {
+        "handle": "levie",
+        "profile_url": "https://x.com/levie",
+        "status": "visible_bounded_snapshot",
+        "observed_sgt": "2026-10-25T07:03:37.505000+08:00",
+        "read_limit": "Bounded logged-out public snapshot, including pinned/quoted/reposted/reply links. No pagination exhaustion or full-window review established.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "AdamMarblestone",
+        "profile_url": "https://x.com/AdamMarblestone",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "ajaymehta",
+        "profile_url": "https://x.com/ajaymehta",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "ajeya_cotra",
+        "profile_url": "https://x.com/ajeya_cotra",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "akothari",
+        "profile_url": "https://x.com/akothari",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "ARozenshtein",
+        "profile_url": "https://x.com/ARozenshtein",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "alexalbert__",
+        "profile_url": "https://x.com/alexalbert__",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "alexeheath",
+        "profile_url": "https://x.com/alexeheath",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "alexolegimas",
+        "profile_url": "https://x.com/alexolegimas",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "ATabarrok",
+        "profile_url": "https://x.com/ATabarrok",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "embirico",
+        "profile_url": "https://x.com/embirico",
+        "status": "visible_bounded_snapshot",
+        "observed_sgt": "2026-10-25T07:03:35.791000+08:00",
+        "read_limit": "Bounded logged-out public snapshot, including pinned/quoted/reposted/reply links. No pagination exhaustion or full-window review established.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "alexandr_wang",
+        "profile_url": "https://x.com/alexandr_wang",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "sonofalli",
+        "profile_url": "https://x.com/sonofalli",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "AmandaAskell",
+        "profile_url": "https://x.com/AmandaAskell",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "theamberyang",
+        "profile_url": "https://x.com/theamberyang",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "amasad",
+        "profile_url": "https://x.com/amasad",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "karpathy",
+        "profile_url": "https://x.com/karpathy",
+        "status": "visible_bounded_snapshot",
+        "observed_sgt": "2026-10-25T07:03:35.322000+08:00",
+        "read_limit": "Bounded logged-out public snapshot, including pinned/quoted/reposted/reply links. No pagination exhaustion or full-window review established.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "andrewchen",
+        "profile_url": "https://x.com/andrewchen",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "andy_matuschak",
+        "profile_url": "https://x.com/andy_matuschak",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "AnthropicAI",
+        "profile_url": "https://x.com/AnthropicAI",
+        "status": "visible_bounded_snapshot",
+        "observed_sgt": "2026-10-25T07:03:36.225000+08:00",
+        "read_limit": "Bounded logged-out public snapshot, including pinned/quoted/reposted/reply links. No pagination exhaustion or full-window review established.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "AravSrinivas",
+        "profile_url": "https://x.com/AravSrinivas",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "ArtificialAnlys",
+        "profile_url": "https://x.com/ArtificialAnlys",
+        "status": "visible_bounded_snapshot",
+        "observed_sgt": "2026-10-25T07:03:36.941000+08:00",
+        "read_limit": "Bounded logged-out public snapshot, including pinned/quoted/reposted/reply links. No pagination exhaustion or full-window review established.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "asianometry",
+        "profile_url": "https://x.com/asianometry",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "Austen",
+        "profile_url": "https://x.com/Austen",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "balajis",
+        "profile_url": "https://x.com/balajis",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "gilbert",
+        "profile_url": "https://x.com/gilbert",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "benhylak",
+        "profile_url": "https://x.com/benhylak",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "benkuhn",
+        "profile_url": "https://x.com/benkuhn",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "benspringwater",
+        "profile_url": "https://x.com/benspringwater",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "benthompson",
+        "profile_url": "https://x.com/benthompson",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "benjitaylor",
+        "profile_url": "https://x.com/benjitaylor",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "BerenMillidge",
+        "profile_url": "https://x.com/BerenMillidge",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "blakeir",
+        "profile_url": "https://x.com/blakeir",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "bcherny",
+        "profile_url": "https://x.com/bcherny",
+        "status": "visible_bounded_snapshot",
+        "observed_sgt": "2026-10-25T07:03:35.561000+08:00",
+        "read_limit": "Bounded logged-out public snapshot, including pinned/quoted/reposted/reply links. No pagination exhaustion or full-window review established.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "btaylor",
+        "profile_url": "https://x.com/btaylor",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "brian_armstrong",
+        "profile_url": "https://x.com/brian_armstrong",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "bchesky",
+        "profile_url": "https://x.com/bchesky",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "brian_lovin",
+        "profile_url": "https://x.com/brian_lovin",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "zebriez",
+        "profile_url": "https://x.com/zebriez",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "buccocapital",
+        "profile_url": "https://x.com/buccocapital",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "ByrneHobart",
+        "profile_url": "https://x.com/ByrneHobart",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "calebwatney",
+        "profile_url": "https://x.com/calebwatney",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "CJHandmer",
+        "profile_url": "https://x.com/CJHandmer",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "catehall",
+        "profile_url": "https://x.com/catehall",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "oneill_c",
+        "profile_url": "https://x.com/oneill_c",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "ch402",
+        "profile_url": "https://x.com/ch402",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "kimmonismus",
+        "profile_url": "https://x.com/kimmonismus",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "clairevo",
+        "profile_url": "https://x.com/clairevo",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "danhilltech",
+        "profile_url": "https://x.com/danhilltech",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "dwr",
+        "profile_url": "https://x.com/dwr",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "danshipper",
+        "profile_url": "https://x.com/danshipper",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "danielgross",
+        "profile_url": "https://x.com/danielgross",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "DKokotajlo",
+        "profile_url": "https://x.com/DKokotajlo",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "DarioAmodei",
+        "profile_url": "https://x.com/DarioAmodei",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "davemorin",
+        "profile_url": "https://x.com/davemorin",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "friedberg",
+        "profile_url": "https://x.com/friedberg",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "dhh",
+        "profile_url": "https://x.com/dhh",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "DavidSHolz",
+        "profile_url": "https://x.com/DavidSHolz",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "pierce",
+        "profile_url": "https://x.com/pierce",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "djrosent",
+        "profile_url": "https://x.com/djrosent",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "DavidSacks",
+        "profile_url": "https://x.com/DavidSacks",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "dps",
+        "profile_url": "https://x.com/dps",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "deanwball",
+        "profile_url": "https://x.com/deanwball",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "deepfates",
+        "profile_url": "https://x.com/deepfates",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "demishassabis",
+        "profile_url": "https://x.com/demishassabis",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "DKThomp",
+        "profile_url": "https://x.com/DKThomp",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "destraynor",
+        "profile_url": "https://x.com/destraynor",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "dwarkesh_sp",
+        "profile_url": "https://x.com/dwarkesh_sp",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "zoink",
+        "profile_url": "https://x.com/zoink",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "dylan522p",
+        "profile_url": "https://x.com/dylan522p",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "edwinarbus",
+        "profile_url": "https://x.com/edwinarbus",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "EgeErdil2",
+        "profile_url": "https://x.com/EgeErdil2",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "eladgil",
+        "profile_url": "https://x.com/eladgil",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "ESYudkowsky",
+        "profile_url": "https://x.com/ESYudkowsky",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "eliotpeper",
+        "profile_url": "https://x.com/eliotpeper",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "elonmusk",
+        "profile_url": "https://x.com/elonmusk",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "ericjang11",
+        "profile_url": "https://x.com/ericjang11",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "emollick",
+        "profile_url": "https://x.com/emollick",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "ezraklein",
+        "profile_url": "https://x.com/ezraklein",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "finmoorhouse",
+        "profile_url": "https://x.com/finmoorhouse",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "fchollet",
+        "profile_url": "https://x.com/fchollet",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "garrytan",
+        "profile_url": "https://x.com/garrytan",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "GavinSBaker",
+        "profile_url": "https://x.com/GavinSBaker",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "GoogleDeepMind",
+        "profile_url": "https://x.com/GoogleDeepMind",
+        "status": "visible_bounded_snapshot",
+        "observed_sgt": "2026-10-25T07:03:36.437000+08:00",
+        "read_limit": "Bounded logged-out public snapshot, including pinned/quoted/reposted/reply links. No pagination exhaustion or full-window review established.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "gdb",
+        "profile_url": "https://x.com/gdb",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "growing_daniel",
+        "profile_url": "https://x.com/growing_daniel",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "rauchg",
+        "profile_url": "https://x.com/rauchg",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "gustaf",
+        "profile_url": "https://x.com/gustaf",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "gwern",
+        "profile_url": "https://x.com/gwern",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "harjtaggar",
+        "profile_url": "https://x.com/harjtaggar",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "ilyasut",
+        "profile_url": "https://x.com/ilyasut",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "ivanhzhao",
+        "profile_url": "https://x.com/ivanhzhao",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "jaltma",
+        "profile_url": "https://x.com/jaltma",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "jackclarkSF",
+        "profile_url": "https://x.com/jackclarkSF",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "jack",
+        "profile_url": "https://x.com/jack",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "jacksondahl",
+        "profile_url": "https://x.com/jacksondahl",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "JacobTref",
+        "profile_url": "https://x.com/JacobTref",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "merettm",
+        "profile_url": "https://x.com/merettm",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "dyett",
+        "profile_url": "https://x.com/dyett",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "janleike",
+        "profile_url": "https://x.com/janleike",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "snowmaker",
+        "profile_url": "https://x.com/snowmaker",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "jasminewsun",
+        "profile_url": "https://x.com/jasminewsun",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "j_asminewang",
+        "profile_url": "https://x.com/j_asminewang",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "jasoncrawford",
+        "profile_url": "https://x.com/jasoncrawford",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "JeffDean",
+        "profile_url": "https://x.com/JeffDean",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "jeff_weinstein",
+        "profile_url": "https://x.com/jeff_weinstein",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "JensenHuang",
+        "profile_url": "https://x.com/JensenHuang",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "jeremygiffon",
+        "profile_url": "https://x.com/jeremygiffon",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "colossusjeremy",
+        "profile_url": "https://x.com/colossusjeremy",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "jkcarlsmith",
+        "profile_url": "https://x.com/jkcarlsmith",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "TheStalwart",
+        "profile_url": "https://x.com/TheStalwart",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "collision",
+        "profile_url": "https://x.com/collision",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "gruber",
+        "profile_url": "https://x.com/gruber",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "johnschulman2",
+        "profile_url": "https://x.com/johnschulman2",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "joshm",
+        "profile_url": "https://x.com/joshm",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "joshuakushner",
+        "profile_url": "https://x.com/joshuakushner",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "venturetwins",
+        "profile_url": "https://x.com/venturetwins",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "karrisaarinen",
+        "profile_url": "https://x.com/karrisaarinen",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "lil_dill",
+        "profile_url": "https://x.com/lil_dill",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "KelseyTuoc",
+        "profile_url": "https://x.com/KelseyTuoc",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "kevinroose",
+        "profile_url": "https://x.com/kevinroose",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "kevinweil",
+        "profile_url": "https://x.com/kevinweil",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "kieranklaassen",
+        "profile_url": "https://x.com/kieranklaassen",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "krispuckett",
+        "profile_url": "https://x.com/krispuckett",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "lachygroom",
+        "profile_url": "https://x.com/lachygroom",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "lennysan",
+        "profile_url": "https://x.com/lennysan",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "leopoldasch",
+        "profile_url": "https://x.com/leopoldasch",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "OfficialLoganK",
+        "profile_url": "https://x.com/OfficialLoganK",
+        "status": "visible_bounded_snapshot",
+        "observed_sgt": "2026-10-25T07:03:36.645000+08:00",
+        "read_limit": "Bounded logged-out public snapshot, including pinned/quoted/reposted/reply links. No pagination exhaustion or full-window review established.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "lulumeservey",
+        "profile_url": "https://x.com/lulumeservey",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "mgsiegler",
+        "profile_url": "https://x.com/mgsiegler",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "pmarca",
+        "profile_url": "https://x.com/pmarca",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "markchen90",
+        "profile_url": "https://x.com/markchen90",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "finkd",
+        "profile_url": "https://x.com/finkd",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "MKBHD",
+        "profile_url": "https://x.com/MKBHD",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "mattyglesias",
+        "profile_url": "https://x.com/mattyglesias",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "michael_nielsen",
+        "profile_url": "https://x.com/michael_nielsen",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "mwseibel",
+        "profile_url": "https://x.com/mwseibel",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "mntruell",
+        "profile_url": "https://x.com/mntruell",
+        "status": "visible_bounded_snapshot",
+        "observed_sgt": "2026-10-25T07:03:37.703000+08:00",
+        "read_limit": "Bounded logged-out public snapshot, including pinned/quoted/reposted/reply links. No pagination exhaustion or full-window review established.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "mikeyk",
+        "profile_url": "https://x.com/mikeyk",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "Miles_Brundage",
+        "profile_url": "https://x.com/Miles_Brundage",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "miramurati",
+        "profile_url": "https://x.com/miramurati",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "modestproposal1",
+        "profile_url": "https://x.com/modestproposal1",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "nabeelqu",
+        "profile_url": "https://x.com/nabeelqu",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "nayafia",
+        "profile_url": "https://x.com/nayafia",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "nanransohoff",
+        "profile_url": "https://x.com/nanransohoff",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "natfriedman",
+        "profile_url": "https://x.com/natfriedman",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "nbaschez",
+        "profile_url": "https://x.com/nbaschez",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "natolambert",
+        "profile_url": "https://x.com/natolambert",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "nlw",
+        "profile_url": "https://x.com/nlw",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "naval",
+        "profile_url": "https://x.com/naval",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "nickcammarata",
+        "profile_url": "https://x.com/nickcammarata",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "nickaturley",
+        "profile_url": "https://x.com/nickaturley",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "nikitabier",
+        "profile_url": "https://x.com/nikitabier",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "noahrshinn",
+        "profile_url": "https://x.com/noahrshinn",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "Noahpinion",
+        "profile_url": "https://x.com/Noahpinion",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "polynoamial",
+        "profile_url": "https://x.com/polynoamial",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "NoamShazeer",
+        "profile_url": "https://x.com/NoamShazeer",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "omooretweets",
+        "profile_url": "https://x.com/omooretweets",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "OpenAI",
+        "profile_url": "https://x.com/OpenAI",
+        "status": "visible_bounded_snapshot",
+        "observed_sgt": "2026-10-25T07:03:37.306000+08:00",
+        "read_limit": "Bounded logged-out public snapshot, including pinned/quoted/reposted/reply links. No pagination exhaustion or full-window review established.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "packyM",
+        "profile_url": "https://x.com/packyM",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "PalmerLuckey",
+        "profile_url": "https://x.com/PalmerLuckey",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "patrickc",
+        "profile_url": "https://x.com/patrickc",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "patrick_oshag",
+        "profile_url": "https://x.com/patrick_oshag",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "paulfchristiano",
+        "profile_url": "https://x.com/paulfchristiano",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "paulg",
+        "profile_url": "https://x.com/paulg",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "paularambles",
+        "profile_url": "https://x.com/paularambles",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "steipete",
+        "profile_url": "https://x.com/steipete",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "petergyang",
+        "profile_url": "https://x.com/petergyang",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "pawtrammell",
+        "profile_url": "https://x.com/pawtrammell",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "levelsio",
+        "profile_url": "https://x.com/levelsio",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "quintendf",
+        "profile_url": "https://x.com/quintendf",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "reinerpope",
+        "profile_url": "https://x.com/reinerpope",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "RhysSullivan",
+        "profile_url": "https://x.com/RhysSullivan",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "RichardSSutton",
+        "profile_url": "https://x.com/RichardSSutton",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "rohanpaul_ai",
+        "profile_url": "https://x.com/rohanpaul_ai",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "romainhuet",
+        "profile_url": "https://x.com/romainhuet",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "tszzl",
+        "profile_url": "https://x.com/tszzl",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "RyanGreenblatt",
+        "profile_url": "https://x.com/RyanGreenblatt",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "typesfast",
+        "profile_url": "https://x.com/typesfast",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "ryolu_",
+        "profile_url": "https://x.com/ryolu_",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "salonium",
+        "profile_url": "https://x.com/salonium",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "sama",
+        "profile_url": "https://x.com/sama",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "rSanti97",
+        "profile_url": "https://x.com/rSanti97",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "sarahdingwang",
+        "profile_url": "https://x.com/sarahdingwang",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "satyanadella",
+        "profile_url": "https://x.com/satyanadella",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "slatestarcodex",
+        "profile_url": "https://x.com/slatestarcodex",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "rasbt",
+        "profile_url": "https://x.com/rasbt",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "svlevine",
+        "profile_url": "https://x.com/svlevine",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "ShaneLegg",
+        "profile_url": "https://x.com/ShaneLegg",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "swyx",
+        "profile_url": "https://x.com/swyx",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "_sholtodouglas",
+        "profile_url": "https://x.com/_sholtodouglas",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "signulll",
+        "profile_url": "https://x.com/signulll",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "simonlast",
+        "profile_url": "https://x.com/simonlast",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "simonw",
+        "profile_url": "https://x.com/simonw",
+        "status": "visible_bounded_snapshot",
+        "observed_sgt": "2026-10-25T07:03:35.994000+08:00",
+        "read_limit": "Bounded logged-out public snapshot, including pinned/quoted/reposted/reply links. No pagination exhaustion or full-window review established.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "blader",
+        "profile_url": "https://x.com/blader",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "soleio",
+        "profile_url": "https://x.com/soleio",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "Suhail",
+        "profile_url": "https://x.com/Suhail",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "sundarpichai",
+        "profile_url": "https://x.com/sundarpichai",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "tamaybes",
+        "profile_url": "https://x.com/tamaybes",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "trq212",
+        "profile_url": "https://x.com/trq212",
+        "status": "visible_bounded_snapshot",
+        "observed_sgt": "2026-10-25T07:03:36.822000+08:00",
+        "read_limit": "Bounded logged-out public snapshot, including pinned/quoted/reposted/reply links. No pagination exhaustion or full-window review established.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "thsottiaux",
+        "profile_url": "https://x.com/thsottiaux",
+        "status": "visible_bounded_snapshot",
+        "observed_sgt": "2026-10-25T07:03:37.076000+08:00",
+        "read_limit": "Bounded logged-out public snapshot, including pinned/quoted/reposted/reply links. No pagination exhaustion or full-window review established.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "tobi",
+        "profile_url": "https://x.com/tobi",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "t_blom",
+        "profile_url": "https://x.com/t_blom",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "TrentonBricken",
+        "profile_url": "https://x.com/TrentonBricken",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "tylercowen",
+        "profile_url": "https://x.com/tylercowen",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "VitalikButerin",
+        "profile_url": "https://x.com/VitalikButerin",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "willdepue",
+        "profile_url": "https://x.com/willdepue",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "willknight",
+        "profile_url": "https://x.com/willknight",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "WillManidis",
+        "profile_url": "https://x.com/WillManidis",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "willmacaskill",
+        "profile_url": "https://x.com/willmacaskill",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      },
+      {
+        "handle": "YasminRazavi",
+        "profile_url": "https://x.com/YasminRazavi",
+        "status": "unvisited",
+        "observed_sgt": null,
+        "read_limit": "No profile visit in the original research pass. Not a blocked or empty source.",
+        "requested_catchup_anchor_sgt": "2026-10-18T06:09:26+08:00",
+        "target_window_end_sgt": "2026-10-25T07:05:37.191912+08:00",
+        "full_window_verified": false,
+        "advance_profile_cursor": false
+      }
+    ],
+    "additional_nonroster_observations": [
+      {
+        "handle": "NVIDIAAI",
+        "profile_url": "https://x.com/NVIDIAAI",
+        "observed_sgt": "2026-10-25T07:03:37.942000+08:00",
+        "roster_member": false,
+        "outcome": "visible_bounded_posts",
+        "observed_post_urls": [
+          "https://x.com/NVIDIAAI/status/2113697272475320559",
+          "https://x.com/NVIDIAAI/status/2113657112408785153",
+          "https://x.com/NVIDIAAI/status/2113252578712821780",
+          "https://x.com/NVIDIAAI/status/2113230179799548220",
+          "https://x.com/NVIDIAAI/status/2112942083778732260"
+        ],
+        "scope": "Bounded publicly rendered snapshot, not exhaustive timeline or full-window review.",
+        "full_window_covered": false,
+        "profile_cursor_advanced": false,
+        "note": null
+      }
+    ],
+    "window_caveat": "Latest partial checkpoint is not a completed coverage boundary. Visible earliest/latest posts are only linked posts in snapshots, never proof all posts between them were seen. Older gaps remain even for visited profiles."
+  },
+  "india": {
+    "edition_date": "2026-10-25",
+    "audit_basis": "Post-delivery reconstruction from retained research JSON and researcher testimony; no new research represented as prior work.",
+    "india_delivered_count": 2,
+    "political_items": 1,
+    "independent_india_additions": 0,
+    "inshorts": {
+      "pages_read": [
+        "https://inshorts.com/en/read/national"
+      ],
+      "displayed_count_researcher_recall": 8,
+      "individually_pursued_count": 2,
+      "leads": [
+        {
+          "topic": "Opposition mock-Parliament/public-impeachment plan",
+          "disposition": "selected; TimesNow original failed, Siasat/PTI/Hans India/The Week corroboration; conflicting dates omitted"
+        },
+        {
+          "topic": "Andhra Pradesh halt affecting100urban local bodies",
+          "disposition": "excluded as Oct21 underlying event despite Oct24Inshorts timestamp; ANI original failed"
+        }
+      ],
+      "remaining_item_dispositions": "Not individually retained; generic minor/unverified label is insufficient evidence of completed review.",
+      "raw_page_retained": false,
+      "exact_query_log_retained": false,
+      "politics_page_attempt_evidenced": false,
+      "business_page_attempt_evidenced": false
+    },
+    "category_sweep": {
+      "CJP": "Encountered in The Week protest article, no wider movement trajectory or responses investigated",
+      "Modi": "No completed independent sweep evidenced",
+      "BJP": "No completed independent sweep evidenced",
+      "government_policy": "No completed independent sweep evidenced",
+      "economics": "One upstream RBI remark verified; no broad independent sweep evidenced"
+    },
+    "rbi_source": "NDTV summit live text23October18:27IST; Bloomberg inaccessible",
+    "upstream_exclusions": {
+      "6": "Oct20Trump trade remarks stale, no verifiednewdevelopment",
+      "7": "Oct22Nifty/Jio newsletter stale/repeated"
+    },
+    "root_cause": "Uneven deadline-bounded research across28general indices plus weather/Singapore/sports, stopping too early after upstream reconciliation. Not a news-script quota, and not evidence that no other worthwhile India news existed.",
+    "earlier_PASS_scope": "Selected-script accuracy and item reconciliation only, not completeness of regional/source discovery.",
+    "fresh_omitted_item_verified_in_original_run": null,
+    "gap_status": "unresolved; independent additional research required"
+  },
+  "learning": {
+    "youtube": {
+      "videos": {
+        "url": "https://www.youtube.com/@EverydayAI_/videos",
+        "listing_entries_retrieved": 30,
+        "method": "web extractor first returned footer only; direct unauthenticated public HTML retrieval then parsed ytInitialData lockupViewModel entries",
+        "retrieval_interval": "Between2026-10-24T23:01:09Z and23:01:34Z; exact per-request timestamps not logged",
+        "entries": [
+          {
+            "video_id": "hO4qoN0MZVI",
+            "title": "Ep 888: NotebookLM's New Cinematic Shorts: How They work, 5 Tips and 5 Best Use Cases (Replay)",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "_8VH08lS6XM",
+            "title": "Ep 887: ChatGPT Work: What’s New, Who It’s For and How to Use It (Replay)",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "68PRq9r2w-Y",
+            "title": "Ep 886: The U.S. vs China AI Cold War Is Starting: What It Means and How It Impacts You (Replay)",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "YOcCsr9L1eA",
+            "title": "Ep 885: Inside Everyday AI: My 9 most Used AI Tools and Workflows (Replay)",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "OZUmIL42BAM",
+            "title": "Ep 884: Codex Record and Replay: How to Teach an Agent Once Your Most Time-Consuming Workflows (R...",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "zfOAaWroo-g",
+            "title": "Ep 883: How To Make Slides with AI: Hands on Comparison With the 9 Most Popular Options (Replay)",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "LNqd3iycYJA",
+            "title": "Ep 882: Rogue AI Agents: Why Breakouts are Happening More and How Companies Should Prepare (Replay)",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "fbjpT2_SnFc",
+            "title": "Ep 881: Faster AI Agents, Fewer Human Coworkers: The Overly Productive Future of Managing Agents?...",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "ghv36Q4puCo",
+            "title": "Ep 880: Gemini Notebook: 7 New Updates and What They Unlock (Replay)",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "IJjfC-fKqdA",
+            "title": "Ep 879: New: OpenAI Presence. Has The AI Customer Service Takeover Finally Arrived? (Replay)",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "Jp1B9q-PPiE",
+            "title": "Ep 878: What’s Coming Next: 5 AI Trends, Problems and Opportunities around the Corner (Replay)",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "Fr5TxWGOzw0",
+            "title": "Ep 877: ChatGPT Voice is Like Jarvis: How to use the New Feature and the 7 biggest unlocks (Replay)",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "d4Q7j300XBM",
+            "title": "Ep 876: The Most Important AI Model You’ll Probably Never Use That Just Dropped (Replay)",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "_po5QP_LSDA",
+            "title": "Ep 875: RSI Explained: When AI Starts Improving Itself and What It Means (Replay)",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "4hbnjIV1if4",
+            "title": "Ep 874: Scheduling AI: how to easily make AI work for you in Claude, Gemini and ChatGPT (Replay)",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "7ekUD6_YWG0",
+            "title": "Ep 873: The Next 12 months of AI: 19 Predictions Every Business Leader Needs to Hear (Replay)",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "ckhQytdYjTw",
+            "title": "Ep 872: AI Cost Control 101: Why Your Chatbot Bill Is Becoming a Board-Level Problem (Start Here ...",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "l0HZe33n-Ow",
+            "title": "Ep 871: Desktop Agent Lingo Simplified: Goals, Loops, Plans, Subagents and how it works in Codex ...",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "DpDJHYkj_Fo",
+            "title": "Ep 870: Open Source Surge? Does GLM-5.2 Make Open Source an Enterprise Priority? (Start Here Seri...",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "w5DQZV39fdk",
+            "title": "Ep 869: AI SuperApps: Why Every Company is Racing to Create One and What They are (Start Here Ser...",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "BuPmy04eZbs",
+            "title": "Ep 868: Tokenmaxxing is over: The New Era of Token Efficiency and how Your Company Should Adapt (...",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "BMMFRxPj1OE",
+            "title": "Ep 867: 2026 LLM Cheat Code: 10 Essential Steps To Get the Most out of Any AI Chatbot (Start Here...",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "5VJlhG0PGDg",
+            "title": "Ep 866: Build, Buy, Partner, or Wait: The 4-Layer AI Stack Decision Framework for 2026 (Start Her...",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "KmUzS08sK1U",
+            "title": "Ep 865: Open Source AI 101: Why Local Models, Cheap APIs, and AI Agents Change Everything (Start ...",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "XDKkzTuL4UY",
+            "title": "Ep 864: Headless Software: Why Companies Are Building Software for AI Agents, Not Humans and what...",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "cGXZ2UHJ_x8",
+            "title": "Ep 863: Agentic Context Carry: 3 Steps to Improve Cowork and scheduled AI Workflows (Start Here S...",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "c-u8E15Lj8s",
+            "title": "Ep 862: AI Change Management That Works: 5 Moves The Top 5% Make (Start Here Series Vol 21)",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "I4CcHbQJTzY",
+            "title": "Ep 861: The 7 Silent Sins of Doing AI Right: How to Spot and Overcome the Invisible AI Work Traps...",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "vIRhBn7W9a0",
+            "title": "Ep 860: Managing the AI Capability Gap: AI Is More than Ready. Most Companies are Not (Start Here...",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "eXRI3OfDRjU",
+            "title": "Ep 859: The Vibe Coding Boom: Why Vibe Coding isn't Going Away and How it's Both Good and Bad (St...",
+            "original_timestamp_verified_this_run": null
+          }
+        ]
+      },
+      "streams": {
+        "url": "https://www.youtube.com/@EverydayAI_/streams",
+        "listing_entries_retrieved": 30,
+        "method": "web extractor first returned footer only; direct unauthenticated public HTML retrieval then parsed ytInitialData lockupViewModel entries",
+        "retrieval_interval": "Between2026-10-24T23:01:09Z and23:01:34Z; exact per-request timestamps not logged",
+        "entries": [
+          {
+            "video_id": "9_XAioMMtDA",
+            "title": "ChatGPT Computer History, New Gemini Model, Claude Browser Updates and 7 more fresh AI releases",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "Svz_zSKpDYE",
+            "title": "The Next 12 months of AI: 19 Predictions Every Business Leader Needs to Hear",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "yXJ_9iGju5g",
+            "title": "Scheduling AI: how to easily make AI work for you in Claude, Gemini and ChatGPT",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "gn5OffO1enA",
+            "title": "Rogue AI Agents: Why Breakouts are Happening More and How Companies Should Prepare",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "uimg_keK2O8",
+            "title": "AI Agent outbreaks intensify, OpenAI upgrades free AI use and more",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "lycB6Gc0ra4",
+            "title": "Updated GPT-5.6, A new Cheap Meta Model, Qwen 3.8 release and more AI Features",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "cROLhPkm0_M",
+            "title": "Inside Everyday AI: My 9 most Used AI Tools and Workflows",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "TLulJL5LQcY",
+            "title": "Gemini Notebook: 7 New Updates and What They Unlock",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "EyEXWQAUmWU",
+            "title": "RSI Explained: When AI Starts Improving Itself and What It Means",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "Ep6IpHbyOBg",
+            "title": "OpenAI’s new Astra model, more AI agents escape sandboxes, AI leaders call for AI pacing and more.",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "jffGFB50kHc",
+            "title": "Chrome adds Some Gemini Spark, Replit Design makes impact, and more AI features",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "cIPgE_NkCpM",
+            "title": "Faster AI Agents, Fewer Human Coworkers: The Overly Productive Future of Managing Agents?",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "nJT9R77ibGg",
+            "title": "ChatGPT Voice is Like Jarvis: How to use the New Feature and the 7 biggest unlocks",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "2lq7OPamK_A",
+            "title": "Anthropic Responds: Why Claude’s CEO didn't sign the open model pact and the real reasons why.",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "Zw-Oc3SNVyM",
+            "title": "Claude Opus 5 Takes the Crown, OpenAI agent breaks sandbox, and more AI News",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "iIC29NG6dcs",
+            "title": "ChatGPT goes Jarvis Mode, Claude learns from you, Google new AI agent and more AI updates",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "_79CKaxD2VU",
+            "title": "New: OpenAI Presence. Has The AI Customer Service Takeover Finally Arrived?",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "07LpznrXgYM",
+            "title": "Claude Design: What's New, How to Use it and 5 Best Practices.",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "i-NVcZv53C4",
+            "title": "The U.S. vs China AI Cold War Is Starting: What It Means and How It Impacts You",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "FjG_Ubv5FNM",
+            "title": "Kimi K3 surprises, Gemini 3.5 Pro Delayed Again more AI News",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "IFjj-_8HMgE",
+            "title": "Claude Desktop Gets Upgrade, New Open Source Model Shock & 7 More AI Features",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "TmaG2O4lx9c",
+            "title": "The Most Important AI Model You’ll Probably Never Use That Just Dropped",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "11Krwbk6BRc",
+            "title": "ChatGPT Work: What’s New, Who It’s For and How to Use It",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "zaogVzRVZTY",
+            "title": "AI Just Went Multiplayer. Slack Is Where It All Comes Together",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "Nzku23zq7ts",
+            "title": "ChatGPT’s 5.6 Sol, Grok & Meta bounce back & OpenAI’s biggest week ever?",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "mcqvLjhReck",
+            "title": "ChatGPT Work and GPT-5.6 Sol: What’s New, 5 Overlooked Features and 1 Hot Take",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "SWWdui1N9xQ",
+            "title": "New ChatGPT Voice Model, Grok 4.5 Drops, Meta’s AI Comeback and 7 More New AI Features to Use Today",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "GBzWbg76Sy0",
+            "title": "NotebookLM's New Cinematic Shorts: How They work, 5 Tips and 5 Best Use Cases",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "SzZvgKICG7Y",
+            "title": "AI Cost Control 101: Why Your Chatbot Bill Is Becoming a Board-Level Problem",
+            "original_timestamp_verified_this_run": null
+          },
+          {
+            "video_id": "7w621z613fM",
+            "title": "Fable 5 is (kinda) Back, OpenAI Might Give Gov Equity, Microsoft’s new AI Company and more AI News",
+            "original_timestamp_verified_this_run": null
+          }
+        ]
+      }
+    },
+    "limits": [
+      "No pagination or continuation beyond first30 returned entries on each tab.",
+      "No individual watch pages, video audio or current individual YouTube transcript bodies were opened in this run.",
+      "Relative display ages are not exact original publication timestamps.",
+      "Stored listing retrieval is not equivalent to watching or summarizing all60videos.",
+      "Some long titles are truncated in returned listing metadata. A truncated label alone is not proof of replay or beginner-series classification. No claim that every one of60entries was individually dated or transcript-verified.",
+      "This audit re-inspected all stored ID/title metadata after delivery; during production, the leading entries and latest-original evidence drove selection."
+    ],
+    "publisher_surfaces": [
+      {
+        "url": "https://www.youreverydayai.com/episodes/",
+        "actual_outcome": "Opened via web extractor; visible latest original Ep841, August14 2026. No newer original shown on retrieved landing/listing page. No pagination or every linked article read."
+      },
+      {
+        "url": "https://www.youreverydayai.com/blog/",
+        "actual_outcome": "Opened via web extractor; visible latest original Ep841, August14 2026. No newer original shown on retrieved landing/listing page. No pagination or every linked article read."
+      },
+      {
+        "url": "https://www.youreverydayai.com/category/ai-news/",
+        "actual_outcome": "Opened via web extractor; visible latest original Ep841, August14 2026. No newer original shown on retrieved landing/listing page. No pagination or every linked article read."
+      },
+      {
+        "url": "https://read.youreverydayai.com/",
+        "actual_outcome": "Opened via web extractor; visible latest original Ep841, August14 2026. No newer original shown on retrieved landing/listing page. No pagination or every linked article read."
+      }
+    ],
+    "everyday_original_date_evidence": {
+      "id": "everyday-ai:841",
+      "youtube_id": "9_XAioMMtDA",
+      "original_date_confirmed_this_run": "2026-08-14 from publisher listings",
+      "exact_timestamp": "2026-08-14T12:32:28Z",
+      "exact_timestamp_basis": "Preserved previous Oct24 run ledger/live-start evidence, NOT re-extracted from watch page this run. Current Live listing only says Streamed2moago.",
+      "transcript_this_run": "Not reread; prior available publisher transcript remains historical/deferred. No new EverydayAI recap."
+    },
+    "big_technology": {
+      "rss_url": "https://feeds.megaphone.fm/LI3617121267",
+      "actual_outcome": "Web tool unsupported XML content type; direct public urllib RSS retrieval succeeded and XML parsed. First3originals inspected, latest remainsOct23.",
+      "latest_title": "Google’s Potential, AI Money Spigot Shutting?, PHP Bug & Cybersecurity’s “Black October”",
+      "guid": "59149ba6-cf2e-11f1-823a-07bb6f417cfd",
+      "rss_pubDate": "Fri, 23 Oct 2026 22:12:00 -0000",
+      "published_at_utc": "2026-10-23T22:12:00Z",
+      "published_at_sgt": "2026-10-24T06:12:00+08:00",
+      "rss_item_count_retrieved": 575,
+      "transcript_url": "https://podscripts.co/podcasts/big-technology-podcast/googles-potential-ai-money-spigot-shutting-php-bug-cybersecuritys-black-october",
+      "transcript_body_retrieved": true,
+      "transcript_provenance": "third-party-transcription",
+      "transcript_html_bytes": 542101,
+      "transcript_text_sha256": "ce5fdde185025b744deb3691eb668b5ce5fac0ebaf07fd3fdd5d3e2b9122cbd9",
+      "timestamp_segment_count": 138,
+      "first_timestamp": "00:00:00",
+      "last_timestamp": "01:05:56",
+      "reviewed_content": "Web extractor intro/product/compute section and direct text35:06–57:39; selected56:39–57:39 with context48:34–49:55. Full body retrieved does not imply every minute reviewed or original audio heard.",
+      "selected_theme": "Forgotten event sites, retained registration data, asset ownership and retirement.",
+      "supporting_primary_source": "https://www.cisecurity.org/controls/inventory-and-control-of-enterprise-assets",
+      "new_evidence": "Transcript newly accessible today; episode itself was not releasedOct25.",
+      "limits": "No new BigTechnologyYouTube listing or official caption fetch this run; RSS+Podscripts actual body sufficed. Not all feedepisode audio or transcripts read."
+    }
+  },
+  "unresolved_gaps": [
+    "198 roster profiles were unvisited, not blocked or proven empty.",
+    "None of the 211 roster timelines was verified complete for the required catch-up window.",
+    "India discovery did not include a completed independent politics, government-policy and economics sweep.",
+    "Only two Inshorts leads were individually pursued; six other displayed entries were not retained as item-level dispositions.",
+    "YouTube listing retrieval is not equivalent to watching videos, reading every transcript, or verifying every original date. Big Technology YouTube was not attempted."
+  ],
+  "cursor_policy": "Existing global and full-window profile gaps remain unchanged; this retrospective audit advances no successful-coverage cutoff."
+}

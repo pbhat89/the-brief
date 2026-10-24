@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {requireSourceCoverageForRelease, COVERAGE_EFFECTIVE_FROM} from './source-coverage-contract.mjs';
 import {validatePodcastLearningLedger, selectPodcastLearning} from './validate-podcast-learning.mjs';
 
 const nonempty = value => typeof value === 'string' && value.trim().length > 0;
@@ -10,6 +11,13 @@ export function validateEditorialPolicy(policy) {
   assert.equal(policy.version, 1);
   assert.ok(date(policy.effective_from), 'Invalid effective date');
   assert.equal(policy.scope, 'external-companion-only');
+  assert.equal(policy.source_coverage.effective_from, COVERAGE_EFFECTIVE_FROM);
+  assert.equal(policy.source_coverage.required_actual_attempts, true);
+  assert.equal(policy.source_coverage.spoken_budget_limits_research, false);
+  assert.equal(policy.source_coverage.unattempted_budget_waiver, false);
+  assert.equal(policy.source_coverage.partial_disclosure_required, true);
+  assert.equal(policy.source_coverage.full_window_cursor_requires_complete, true);
+  assert.equal(policy.source_coverage.contract, 'source-coverage-contract.mjs');
   assert.deepEqual(policy.conditions.target_seconds, [20, 30]);
   assert.equal(policy.conditions.routine_safety_announcement, false);
   assert.equal(policy.conditions.regional_psi_recital, false);
@@ -63,6 +71,11 @@ export function validateEditorialAudit(policy, audit) {
   validateEditorialPolicy(policy);
   assert.ok(date(audit.edition_date), 'Invalid edition date');
   assert.ok(nonempty(audit.source_revision), 'Record the repository revision');
+  if (audit.edition_date >= COVERAGE_EFFECTIVE_FROM) {
+    assert.ok(audit.source_coverage, 'Future editions require the actual source-coverage checklist');
+    assert.equal(audit.source_coverage.edition_date, audit.edition_date);
+    requireSourceCoverageForRelease(audit.source_coverage);
+  }
   for (const key of ['conditions_seconds', 'expert_seconds', 'ending_seconds']) assert.ok(seconds(audit[key]), `Invalid ${key}`);
   if (audit.conditions_seconds > policy.conditions.target_seconds[1]) {
     assert.equal(audit.conditions_exception?.kind, 'verified-actionable-alert');

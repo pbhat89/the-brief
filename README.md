@@ -1,5 +1,12 @@
 # The Brief
 
+## Mandatory source checklist · effective 26 October 2026
+
+Before research and scripting, follow [the agreed-source coverage contract](podcast/SOURCE_COVERAGE.md). Attempt every member of the fresh X roster and every agreed source/category; independently sweep India politics, Modi/BJP/government, opposition, policy, economics and major national developments. Account for each discovered item and every blocked, partial or unvisited source. Concise news narration does not reduce the research obligation. Full upstream reconciliation is not full source coverage.
+
+The private prepublication editorial audit must contain actual `source_coverage`; its existing CLI gate rejects missing checklists and routine-budget excuses for unattempted sources. Genuine source blocks yield explicitly partial coverage, never all-green or full-window cursor advancement. A hard platform failure needs structured evidence under the standing blocked-work rule. Retain pending work. The October25 historical audit remains partial; no recording is regenerated. No external saved prompt or schedule is changed by these repository instructions.
+
+
 ## Combined morning briefing and private podcast
 
 The companion combines the existing general-news brief with fresh AI coverage and a warm, concise private podcast. **The runtime is the external scheduled ChatGPT assistant**; this repo provides instructions, evidence formats and public UI, not a bundled autonomous collector or synthesis engine.

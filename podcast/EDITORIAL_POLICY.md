@@ -1,5 +1,12 @@
 # Companion editorial policy
 
+## Mandatory source checklist · effective 26 October 2026
+
+Before research and scripting, follow [the agreed-source coverage contract](SOURCE_COVERAGE.md). Attempt every member of the fresh X roster and every agreed source/category; independently sweep India politics, Modi/BJP/government, opposition, policy, economics and major national developments. Account for each discovered item and every blocked, partial or unvisited source. Concise news narration does not reduce the research obligation. Full upstream reconciliation is not full source coverage.
+
+The private prepublication editorial audit must contain actual `source_coverage`; its existing CLI gate rejects missing checklists and routine-budget excuses for unattempted sources. Genuine source blocks yield explicitly partial coverage, never all-green or full-window cursor advancement. A hard platform failure needs structured evidence under the standing blocked-work rule. Retain pending work. The October25 historical audit remains partial; no recording is regenerated. No external saved prompt or schedule is changed by these repository instructions.
+
+
 Effective for new editions from 20 October 2026. These companion-only rules implement the 19 October listener feedback. They do not rewrite an already published edition or change the original Claude brief, Gmail workflow, accounts, permissions, schedule or free-tier limits. Read this file and [editorial-policy.json](editorial-policy.json) at the start of each external run. Record the repository revision privately. The external task must be configured separately to load these files; a Worker redeploy alone cannot change narration.
 
 ## Conditions and substantive Singapore news

@@ -100,5 +100,14 @@
     "audible_section_transitions": true,
     "audible_section_pauses": true,
     "learning_segments_keep_intuition_examples_and_business_context": true
+  },
+  "source_coverage": {
+    "effective_from": "2026-10-26",
+    "required_actual_attempts": true,
+    "spoken_budget_limits_research": false,
+    "unattempted_budget_waiver": false,
+    "partial_disclosure_required": true,
+    "full_window_cursor_requires_complete": true,
+    "contract": "source-coverage-contract.mjs"
   }
 }

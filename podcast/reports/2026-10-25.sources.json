@@ -1200,5 +1200,108 @@
       "profile_cursor_advanced": false,
       "note": null
     }
+  ],
+  "post_delivery_addenda": [
+    {
+      "added_at": "2026-10-24T23:39:12.657142+00:00",
+      "type": "post-delivery-coverage-correction",
+      "included_in_original_audio": false,
+      "changes_original_research_cutoff": false,
+      "original_news_count": 27,
+      "additional_html_only_items": 4,
+      "original_report_sha256": "e88f0fbb41830434978a443f79fe42070a1c6e2771483281adb6c3d06cfa0c2a",
+      "original_source_audit_sha256": "b77bc5a79989ebedf5419518933528debdb5fbe38509b6dcfbd35fafa0c927a4",
+      "coverage_checklist_url": "https://pbhat89.github.io/the-brief/podcast/source-coverage/2026-10-25.html",
+      "coverage_status": "partial",
+      "disclosure": "Upstream reconciliation was complete, but agreed-source research was partial. These independently verified India developments were omitted from the original recording and are added here after delivery. Original 27 news items, source evidence, research cutoff and delivered audio remain unchanged.",
+      "dedup": {
+        "history_records_checked": 15,
+        "archive_json_files_checked": 136,
+        "companion_html_files_checked": 9,
+        "companion_source_json_files_checked": 9,
+        "method": "Read all available files; search exact names, aliases, key numbers, places and event terms, then compare candidate underlying events with matching prior headlines and summaries. Prior archive appearance is not proof of spoken delivery.",
+        "result": "No duplicate underlying event found for these four selected additions. Related prior protest and electoral-roll coverage exists, but each addition has the distinct development described below.",
+        "gaps": [
+          "No claim of access to records outside the supplied 15-record history and checked repository. Primary court order and Delhi CEO original statement were not obtained; reporting attribution retained."
+        ]
+      },
+      "items": [
+        {
+          "event_id": "cjp-address-verification-hearing-20261023",
+          "headline": "CJP leaders asked to verify addresses; next hearing set for November 17.",
+          "context": "Saurav Das and Ashutosh Ranka appeared with their sureties on Friday; this was a post-release verification hearing, not a new detention or conviction.",
+          "source_date": "2026-10-23",
+          "event_date": "2026-10-23",
+          "sources": [
+            "https://www.tribuneindia.com/news/delhi/cjp-leaders-saurav-das-ashutosh-ranka-appear-before-special-executive-magistrate-police-sources/amp/"
+          ],
+          "verification": "Tribune reporter original directly opened; updated October 23 at 18:34 IST. Hearing focused on current-address and surety verification. Do not adopt secondary October 24 event dating.",
+          "freshness_delta": "New October 23 procedural development, explicitly dated catch-up; not a repeat of the movement origin or earlier releases.",
+          "related_prior_records": [
+            "archive/2026-10-19.json: founder release on October 17",
+            "podcast/reports/2026-10-25.html: opposition mock Parliament plan and October 23 march"
+          ],
+          "reason_missed": "Absent from original retained items and source audit; independent targeted source verification found it. Original audit does not establish a candidate-specific rejection reason.",
+          "disposition": "include_post_delivery_html_only_addendum"
+        },
+        {
+          "event_id": "delhi-sir-case-disposal-update-20261023",
+          "headline": "Delhi reports nearly 90% of flagged SIR cases resolved or parked for the final roll.",
+          "context": "The CEO office put the combined total at 29.5 lakh out of roughly 33 lakh cases but did not disclose how many were rejected.",
+          "source_date": "2026-10-24",
+          "event_date": "2026-10-23",
+          "sources": [
+            "https://indianexpress.com/article/cities/delhi/delhi-sir-29-lakh-sir-cases-resolved-out-of-33-lakh-election-commission-final-roll-10934539/"
+          ],
+          "verification": "Indian Express original indexed full text read, updated October 24 07:46 IST, explicitly attributes announcement to CEO office Friday. Direct page open failed. Neither resolved alone nor reinstated is a valid substitute for resolved OR parked.",
+          "freshness_delta": "New jurisdiction-specific administrative figures; not a repeat of nationwide deletion estimates, court challenge or protests.",
+          "related_prior_records": [
+            "archive/2026-09-28.json: ECI overhaul",
+            "archive/2026-10-16.json: Supreme Court notice",
+            "archive/2026-10-22.json: repeated court-challenge context"
+          ],
+          "reason_missed": "Absent from original retained items and source audit; independent targeted source verification found it. Original audit does not establish a candidate-specific rejection reason.",
+          "disposition": "include_post_delivery_html_only_addendum"
+        },
+        {
+          "event_id": "amit-shah-delhi-police-hq-visit-20261024",
+          "headline": "Amit Shah visits Delhi Police headquarters for a law-and-order review.",
+          "context": "The Saturday visit came amid scrutiny of protest policing; reports described possible discussion topics, not confirmed decisions.",
+          "source_date": "2026-10-24",
+          "event_date": "2026-10-24",
+          "sources": [
+            "https://www.easternmirrornagaland.com/amit-shah-reaches-delhi-police-headquarters-to-take-stock-of-law-order-in-capital",
+            "https://www.abplive.com/news/india/amit-shah-visits-delhi-police-headquarters-discuss-law-and-order-in-capital-3206221"
+          ],
+          "verification": "PTI syndicated original indexed text read; October 24 19:09 IST, updated 19:43. Direct Eastern Mirror open failed. ABP has PTI October 24 meeting photograph. Actual arrival confirmed; do not claim any anticipated agenda item or policy outcome was completed.",
+          "freshness_delta": "New October 24 government meeting, distinct from earlier parliamentary debate offers or protest criticism.",
+          "related_prior_records": [
+            "archive/2026-08-07.json: Rahul Gandhi criticism of Shah",
+            "archive/2026-08-13.json: Shah parliamentary debate offer"
+          ],
+          "reason_missed": "Absent from original retained items and source audit; independent targeted source verification found it. Original audit does not establish a candidate-specific rejection reason.",
+          "disposition": "include_post_delivery_html_only_addendum"
+        },
+        {
+          "event_id": "modi-up-odisha-visit-announcement-20261024",
+          "headline": "Modi is scheduled to inaugurate RBI data-centre and cybersecurity facilities in Bhubaneswar.",
+          "context": "The October 25 programme also includes a garment-factory opening and an Air Force display in Varanasi; these were still upcoming at the morning briefing.",
+          "source_date": "2026-10-24",
+          "event_date": "2026-10-25 (scheduled; announcement October 24)",
+          "sources": [
+            "https://www.pmindia.gov.in/en/news_updates/pm-to-visit-uttar-pradesh-and-odisha-on-25-october/",
+            "https://www.prameyanews.com/pm-modi-to-visit-uttar-pradesh-odisha-on-october-25"
+          ],
+          "verification": "Primary PMO announcement indexed full text read and corroborated by Prameya October 24 16:24. Direct opens failed. Scheduled activities are not completed inaugurations.",
+          "freshness_delta": "New dated programme involving RBI facilities; not the earlier national data-centre policy or Modi NDTV speech.",
+          "related_prior_records": [
+            "archive/2026-10-23.json: national data-centre policy",
+            "podcast/reports/2026-10-24.html: Modi global institutions speech"
+          ],
+          "reason_missed": "Absent from original retained items and source audit; independent targeted source verification found it. Original audit does not establish a candidate-specific rejection reason.",
+          "disposition": "include_post_delivery_html_only_addendum"
+        }
+      ]
+    }
   ]
 }

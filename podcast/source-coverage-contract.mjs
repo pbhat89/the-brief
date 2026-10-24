@@ -1,0 +1,55 @@
+import assert from 'node:assert/strict';
+export const REQUIRED_SOURCE_IDS=['upstream','weather','air-psi','air-pm25','official-advisories','singapore-independent','world-independent','business-independent','sports-independent','science-independent','inshorts-national','inshorts-politics','inshorts-business','india-politics','india-modi-bjp-government','india-opposition','india-government-policy','india-economics','india-major-national','everyday-videos','everyday-live','everyday-episodes','everyday-blog','everyday-ai-news','everyday-newsletter','big-technology-original-feed','expert-knowledge-log','selected-expert-primary','insurance-reinsurance'];
+export const FIXED_SOURCE_TARGETS={'inshorts-national':'https://inshorts.com/en/read/national','inshorts-politics':'https://inshorts.com/en/read/politics','inshorts-business':'https://inshorts.com/en/read/business','everyday-videos':'https://www.youtube.com/@EverydayAI_/videos','everyday-live':'https://www.youtube.com/@EverydayAI_/streams','everyday-episodes':'https://www.youreverydayai.com/episodes/','everyday-blog':'https://www.youreverydayai.com/blog/','everyday-ai-news':'https://www.youreverydayai.com/category/ai-news/','everyday-newsletter':'https://read.youreverydayai.com/','big-technology-original-feed':'https://feeds.megaphone.fm/LI3617121267'};
+export const COVERAGE_EFFECTIVE_FROM='2026-10-26';
+const text=x=>typeof x==='string'&&x.trim().length>0;
+const instant=x=>text(x)&&/(Z|[+-]\d\d:\d\d)$/.test(x)&&Number.isFinite(Date.parse(x));
+const https=x=>{try{const u=new URL(x);return u.protocol==='https:'&&!u.username&&!u.password;}catch{return false;}};
+const sgtDate=x=>new Date(Date.parse(x)+8*3600000).toISOString().slice(0,10);
+const target=x=>{const u=new URL(x);return u.hostname.replace(/^www\./,'').toLowerCase()+u.pathname.replace(/\/$/,'');};
+const same=(a,b)=>JSON.stringify([...a].sort())===JSON.stringify([...b].sort());
+const timestamp=(x,why,label)=>assert.ok(instant(x)||(x===null&&text(why)),`${label}: actual timestamp or null with reason required`);
+export function validateSourceCoverage(c){
+ assert.equal(c.version,1);assert.match(c.edition_date,/^\d{4}-\d{2}-\d{2}$/);assert.equal(new Date(c.edition_date).toISOString().slice(0,10),c.edition_date);assert.ok(instant(c.recorded_at));
+ assert.ok(instant(c.window.start)&&instant(c.window.end)&&Date.parse(c.window.start)<=Date.parse(c.window.end));assert.equal(c.spoken_budget_limits_research,false);
+ assert.ok(https(c.roster.url)&&instant(c.roster.retrieved_at));assert.equal(target(c.roster.url),'xstarterpack.com','Use the agreed current roster source');assert.equal(sgtDate(c.roster.retrieved_at),c.edition_date,'Refresh the roster for this edition');assert.match(c.roster.content_sha256,/^[a-f0-9]{64}$/);assert.ok(Array.isArray(c.roster.handles)&&c.roster.handles.length);
+ const handles=c.roster.handles.map(x=>{assert.match(x,/^[A-Za-z0-9_]{1,15}$/);return x.toLowerCase();});assert.equal(new Set(handles).size,handles.length);assert.equal(c.roster.count,handles.length);
+ assert.ok(Array.isArray(c.sources)&&Array.isArray(c.items));const ids=c.sources.map(x=>x.source_id);assert.equal(new Set(ids).size,ids.length);
+ const required=[...REQUIRED_SOURCE_IDS,...handles.map(x=>'x:'+x)];assert.ok(required.every(id=>ids.includes(id)),'Every required source/category and roster handle needs a row');assert.ok(same(c.sources.filter(x=>x.roster_member).map(x=>x.source_id),handles.map(x=>'x:'+x)),'Roster rows must match saved roster');
+ const itemIds=new Set();
+ for(const i of c.items){
+  assert.ok(text(i.item_id)&&!itemIds.has(i.item_id));itemIds.add(i.item_id);assert.ok(ids.includes(i.source_id)&&https(i.canonical_url)&&instant(i.retrieved_at));
+  assert.ok(['retained','duplicate','stale','insufficiently_verified','immaterial','pending'].includes(i.decision)&&text(i.reason));assert.ok(['exact','date-only','unknown'].includes(i.timestamp_precision));if(i.timestamp_precision==='date-only'){assert.match(i.original_published_at,/^\d{4}-\d{2}-\d{2}$/);assert.equal(new Date(i.original_published_at).toISOString().slice(0,10),i.original_published_at);}else timestamp(i.original_published_at,i.original_time_unknown_reason,'Original date');assert.ok(text(i.timestamp_evidence)&&i.timestamp_evidence!=='retrieval_time');
+  if(i.timestamp_precision==='unknown')assert.equal(i.original_published_at,null);if(i.decision==='duplicate')assert.ok(text(i.previous_event_reference));if(i.material_update)assert.ok(text(i.new_fact)&&text(i.previous_event_reference));
+  if(i.kind==='episode'){
+   assert.ok(text(i.episode_id)&&['original','replay','reupload','unknown'].includes(i.originality));timestamp(i.uploaded_at,i.upload_time_unknown_reason,'Upload date');assert.ok(['retrieved','inaccessible','not_attempted'].includes(i.transcript.status));
+   if(i.transcript.status==='retrieved'){assert.ok(https(i.transcript.source_url)&&['publisher-transcript','official-channel-captions','third-party-transcription'].includes(i.transcript.provenance)&&Array.isArray(i.transcript.reviewed_segments));}
+   if(i.selected_for_recap||i.covered){assert.equal(i.originality,'original');assert.equal(i.decision,'retained');assert.equal(i.transcript.status,'retrieved');assert.ok(i.transcript.reviewed_segments.length>0);}
+  }
+ }
+ let unattempted=0,blocked=0,partial=0,full=0,pending=0;
+ for(const s of c.sources){
+  assert.ok(text(s.source_id)&&Array.isArray(s.attempts)&&Array.isArray(s.queries)&&Array.isArray(s.gaps));assert.ok(['unattempted','blocked','header_only','partial_content','accessible'].includes(s.access_status));assert.ok(['full_window','bounded_snapshot','unknown'].includes(s.coverage_scope)&&text(s.scope_note));
+  assert.ok(instant(s.prior_full_window_cursor)&&instant(s.unresolved_window.start)&&instant(s.unresolved_window.end));assert.ok(Date.parse(s.unresolved_window.start)<=Date.parse(s.prior_full_window_cursor)&&Date.parse(s.unresolved_window.end)>=Date.parse(c.window.end),'Do not reset unresolved source windows to a partial checkpoint');if(s.oldest_unresolved_gap_start!==null){assert.ok(instant(s.oldest_unresolved_gap_start));assert.ok(Date.parse(s.unresolved_window.start)<=Date.parse(s.oldest_unresolved_gap_start),'Older gaps must remain inside requested window');}
+  assert.equal(s.roster_snapshot_sha256,s.roster_member?c.roster.content_sha256:null,'Profile must reference current roster snapshot');
+  if(s.access_status==='unattempted'){unattempted++;assert.equal(s.attempts.length,0);assert.ok(s.gaps.length);}
+  else{assert.ok(s.attempts.length,'Actual attempt required');for(const a of s.attempts)assert.ok(https(a.url)&&instant(a.at)&&text(a.method)&&text(a.outcome)&&Date.parse(a.at)<=Date.parse(c.recorded_at)&&sgtDate(a.at)===c.edition_date);if(FIXED_SOURCE_TARGETS[s.source_id])assert.ok(s.attempts.some(a=>target(a.url)===target(FIXED_SOURCE_TARGETS[s.source_id])),'Attempt must target the required source surface; alternatives do not replace the original attempt');if(s.roster_member)assert.ok(s.attempts.some(a=>{const u=new URL(a.url);return ['x.com','www.x.com','twitter.com','www.twitter.com'].includes(u.hostname)&&u.pathname.split('/')[1].toLowerCase()===s.source_id.slice(2);}), 'Roster attempt must identify that actual public profile');}
+  if(['blocked','header_only'].includes(s.access_status)){blocked++;assert.ok(s.gaps.length);assert.notEqual(s.coverage_scope,'full_window');}
+  const its=c.items.filter(i=>i.source_id===s.source_id),n=its.filter(i=>i.decision==='pending').length;pending+=n;assert.deepEqual(s.counts,{discovered:its.length,reviewed:its.length-n,pending:n,retained:its.filter(i=>i.decision==='retained').length,excluded:its.filter(i=>!['pending','retained'].includes(i.decision)).length});
+  if(s.coverage_scope==='full_window'){full++;assert.equal(s.access_status,'accessible');assert.equal(n,0);assert.equal(s.gaps.length,0);const ev=s.window_completion_evidence;assert.ok(ev&&instant(ev.start)&&instant(ev.end)&&text(ev.method)&&Array.isArray(ev.source_urls)&&ev.source_urls.length&&ev.source_urls.every(https),'Full window needs actual traversal evidence');assert.equal(ev.boundary_reached,true);assert.ok(Date.parse(ev.start)<=Date.parse(s.unresolved_window.start)&&Date.parse(ev.end)>=Date.parse(s.unresolved_window.end),'Completion evidence must cover unresolved window, not just run focus');}
+  else{partial++;assert.ok(s.gaps.length);assert.equal(s.advance_full_window_cursor,false);}
+  if(s.source_id.startsWith('india-')){assert.equal(s.independent_discovery_required,true);if(s.access_status!=='unattempted'){assert.equal(s.independent_discovery,true);assert.ok(s.queries.length,'Independent India sweep needs recorded queries');}else assert.equal(s.independent_discovery,false,'Unattempted category is not a completed independent sweep');}
+ }
+ const status=unattempted||blocked||partial||pending||c.upstream.availability==='unavailable'?'partial':'complete';assert.equal(c.agreed_source_coverage_status,status);assert.equal(c.required_attempts_status,unattempted?'incomplete':'complete');assert.ok(['available','unavailable'].includes(c.upstream.availability));
+ if(c.upstream.availability==='available'){assert.equal(c.upstream_reconciliation_status,'complete');assert.equal(c.upstream.total,c.upstream.dispositions.length);assert.ok(same(c.upstream.dispositions.map(x=>x.index),Array.from({length:c.upstream.total},(_,i)=>i)));for(const x of c.upstream.dispositions)assert.ok(text(x.decision)&&text(x.reason));}
+ else{assert.equal(c.upstream_reconciliation_status,'unavailable');assert.equal(c.upstream.total,0);assert.deepEqual(c.upstream.dispositions,[]);assert.ok(text(c.upstream.reason));assert.equal(c.upstream.independent_current_news_verified,true);const up=c.sources.find(x=>x.source_id==='upstream');assert.ok(up.attempts.length);assert.notEqual(up.coverage_scope,'full_window');assert.ok(up.gaps.length);}
+ if(status==='partial'){assert.equal(c.global_full_window_cursor_advanced,false);assert.equal(c.claims_exhaustive,false);assert.ok(text(c.public_disclosure)&&Array.isArray(c.pending_work)&&c.pending_work.length);}
+ return {required_sources:required.length,roster_count:handles.length,unattempted,blocked,partial_windows:partial,complete_windows:full,pending_items:pending,status};
+}
+export function requireSourceCoverageForRelease(c){
+ const r=validateSourceCoverage(c);
+ if(r.unattempted){
+  const f=c.platform_failure;assert.ok(f,'Unattempted mandatory sources block normal release; runtime budget is not a waiver');assert.equal(f.kind,'verified-platform-failure');assert.ok(['executor_unavailable','tool_service_outage','run_terminated'].includes(f.code));assert.ok(instant(f.occurred_at)&&text(f.operation)&&text(f.error)&&text(f.evidence_reference));assert.ok(same(f.affected_source_ids,c.sources.filter(x=>x.access_status==='unattempted').map(x=>x.source_id)));assert.equal(f.standing_blocked_work_rule,true);assert.equal(c.agreed_source_coverage_status,'partial');
+ }
+ return r;
+}

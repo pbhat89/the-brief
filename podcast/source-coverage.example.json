@@ -1,0 +1,1386 @@
+{
+  "version": 1,
+  "edition_date": "2026-10-26",
+  "recorded_at": "2026-10-25T23:10:00Z",
+  "window": {
+    "start": "2026-10-24T23:00:00Z",
+    "end": "2026-10-25T23:00:00Z"
+  },
+  "spoken_budget_limits_research": false,
+  "roster": {
+    "url": "https://xstarterpack.com/",
+    "retrieved_at": "2026-10-25T23:00:00Z",
+    "content_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "count": 2,
+    "handles": [
+      "fixture0",
+      "fixture1"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "upstream",
+      "roster_member": false,
+      "roster_snapshot_sha256": null,
+      "access_status": "accessible",
+      "attempts": [
+        {
+          "url": "https://example.org/synthetic-source",
+          "at": "2026-10-25T23:01:00Z",
+          "method": "synthetic-fixture",
+          "outcome": "Synthetic completed inspection"
+        }
+      ],
+      "queries": [],
+      "independent_discovery": false,
+      "independent_discovery_required": false,
+      "coverage_scope": "full_window",
+      "scope_note": "Synthetic scope only.",
+      "prior_full_window_cursor": "2026-10-24T23:00:00Z",
+      "oldest_unresolved_gap_start": null,
+      "unresolved_window": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z"
+      },
+      "window_completion_evidence": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z",
+        "boundary_reached": true,
+        "method": "Synthetic traversal evidence only",
+        "source_urls": [
+          "https://example.org/synthetic-source"
+        ]
+      },
+      "advance_full_window_cursor": false,
+      "gaps": [],
+      "counts": {
+        "discovered": 0,
+        "reviewed": 0,
+        "pending": 0,
+        "retained": 0,
+        "excluded": 0
+      }
+    },
+    {
+      "source_id": "weather",
+      "roster_member": false,
+      "roster_snapshot_sha256": null,
+      "access_status": "accessible",
+      "attempts": [
+        {
+          "url": "https://example.org/synthetic-source",
+          "at": "2026-10-25T23:01:00Z",
+          "method": "synthetic-fixture",
+          "outcome": "Synthetic completed inspection"
+        }
+      ],
+      "queries": [],
+      "independent_discovery": false,
+      "independent_discovery_required": false,
+      "coverage_scope": "full_window",
+      "scope_note": "Synthetic scope only.",
+      "prior_full_window_cursor": "2026-10-24T23:00:00Z",
+      "oldest_unresolved_gap_start": null,
+      "unresolved_window": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z"
+      },
+      "window_completion_evidence": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z",
+        "boundary_reached": true,
+        "method": "Synthetic traversal evidence only",
+        "source_urls": [
+          "https://example.org/synthetic-source"
+        ]
+      },
+      "advance_full_window_cursor": false,
+      "gaps": [],
+      "counts": {
+        "discovered": 0,
+        "reviewed": 0,
+        "pending": 0,
+        "retained": 0,
+        "excluded": 0
+      }
+    },
+    {
+      "source_id": "air-psi",
+      "roster_member": false,
+      "roster_snapshot_sha256": null,
+      "access_status": "accessible",
+      "attempts": [
+        {
+          "url": "https://example.org/synthetic-source",
+          "at": "2026-10-25T23:01:00Z",
+          "method": "synthetic-fixture",
+          "outcome": "Synthetic completed inspection"
+        }
+      ],
+      "queries": [],
+      "independent_discovery": false,
+      "independent_discovery_required": false,
+      "coverage_scope": "full_window",
+      "scope_note": "Synthetic scope only.",
+      "prior_full_window_cursor": "2026-10-24T23:00:00Z",
+      "oldest_unresolved_gap_start": null,
+      "unresolved_window": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z"
+      },
+      "window_completion_evidence": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z",
+        "boundary_reached": true,
+        "method": "Synthetic traversal evidence only",
+        "source_urls": [
+          "https://example.org/synthetic-source"
+        ]
+      },
+      "advance_full_window_cursor": false,
+      "gaps": [],
+      "counts": {
+        "discovered": 0,
+        "reviewed": 0,
+        "pending": 0,
+        "retained": 0,
+        "excluded": 0
+      }
+    },
+    {
+      "source_id": "air-pm25",
+      "roster_member": false,
+      "roster_snapshot_sha256": null,
+      "access_status": "accessible",
+      "attempts": [
+        {
+          "url": "https://example.org/synthetic-source",
+          "at": "2026-10-25T23:01:00Z",
+          "method": "synthetic-fixture",
+          "outcome": "Synthetic completed inspection"
+        }
+      ],
+      "queries": [],
+      "independent_discovery": false,
+      "independent_discovery_required": false,
+      "coverage_scope": "full_window",
+      "scope_note": "Synthetic scope only.",
+      "prior_full_window_cursor": "2026-10-24T23:00:00Z",
+      "oldest_unresolved_gap_start": null,
+      "unresolved_window": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z"
+      },
+      "window_completion_evidence": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z",
+        "boundary_reached": true,
+        "method": "Synthetic traversal evidence only",
+        "source_urls": [
+          "https://example.org/synthetic-source"
+        ]
+      },
+      "advance_full_window_cursor": false,
+      "gaps": [],
+      "counts": {
+        "discovered": 0,
+        "reviewed": 0,
+        "pending": 0,
+        "retained": 0,
+        "excluded": 0
+      }
+    },
+    {
+      "source_id": "official-advisories",
+      "roster_member": false,
+      "roster_snapshot_sha256": null,
+      "access_status": "accessible",
+      "attempts": [
+        {
+          "url": "https://example.org/synthetic-source",
+          "at": "2026-10-25T23:01:00Z",
+          "method": "synthetic-fixture",
+          "outcome": "Synthetic completed inspection"
+        }
+      ],
+      "queries": [],
+      "independent_discovery": false,
+      "independent_discovery_required": false,
+      "coverage_scope": "full_window",
+      "scope_note": "Synthetic scope only.",
+      "prior_full_window_cursor": "2026-10-24T23:00:00Z",
+      "oldest_unresolved_gap_start": null,
+      "unresolved_window": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z"
+      },
+      "window_completion_evidence": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z",
+        "boundary_reached": true,
+        "method": "Synthetic traversal evidence only",
+        "source_urls": [
+          "https://example.org/synthetic-source"
+        ]
+      },
+      "advance_full_window_cursor": false,
+      "gaps": [],
+      "counts": {
+        "discovered": 0,
+        "reviewed": 0,
+        "pending": 0,
+        "retained": 0,
+        "excluded": 0
+      }
+    },
+    {
+      "source_id": "singapore-independent",
+      "roster_member": false,
+      "roster_snapshot_sha256": null,
+      "access_status": "accessible",
+      "attempts": [
+        {
+          "url": "https://example.org/synthetic-source",
+          "at": "2026-10-25T23:01:00Z",
+          "method": "synthetic-fixture",
+          "outcome": "Synthetic completed inspection"
+        }
+      ],
+      "queries": [],
+      "independent_discovery": false,
+      "independent_discovery_required": false,
+      "coverage_scope": "full_window",
+      "scope_note": "Synthetic scope only.",
+      "prior_full_window_cursor": "2026-10-24T23:00:00Z",
+      "oldest_unresolved_gap_start": null,
+      "unresolved_window": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z"
+      },
+      "window_completion_evidence": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z",
+        "boundary_reached": true,
+        "method": "Synthetic traversal evidence only",
+        "source_urls": [
+          "https://example.org/synthetic-source"
+        ]
+      },
+      "advance_full_window_cursor": false,
+      "gaps": [],
+      "counts": {
+        "discovered": 0,
+        "reviewed": 0,
+        "pending": 0,
+        "retained": 0,
+        "excluded": 0
+      }
+    },
+    {
+      "source_id": "world-independent",
+      "roster_member": false,
+      "roster_snapshot_sha256": null,
+      "access_status": "accessible",
+      "attempts": [
+        {
+          "url": "https://example.org/synthetic-source",
+          "at": "2026-10-25T23:01:00Z",
+          "method": "synthetic-fixture",
+          "outcome": "Synthetic completed inspection"
+        }
+      ],
+      "queries": [],
+      "independent_discovery": false,
+      "independent_discovery_required": false,
+      "coverage_scope": "full_window",
+      "scope_note": "Synthetic scope only.",
+      "prior_full_window_cursor": "2026-10-24T23:00:00Z",
+      "oldest_unresolved_gap_start": null,
+      "unresolved_window": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z"
+      },
+      "window_completion_evidence": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z",
+        "boundary_reached": true,
+        "method": "Synthetic traversal evidence only",
+        "source_urls": [
+          "https://example.org/synthetic-source"
+        ]
+      },
+      "advance_full_window_cursor": false,
+      "gaps": [],
+      "counts": {
+        "discovered": 0,
+        "reviewed": 0,
+        "pending": 0,
+        "retained": 0,
+        "excluded": 0
+      }
+    },
+    {
+      "source_id": "business-independent",
+      "roster_member": false,
+      "roster_snapshot_sha256": null,
+      "access_status": "accessible",
+      "attempts": [
+        {
+          "url": "https://example.org/synthetic-source",
+          "at": "2026-10-25T23:01:00Z",
+          "method": "synthetic-fixture",
+          "outcome": "Synthetic completed inspection"
+        }
+      ],
+      "queries": [],
+      "independent_discovery": false,
+      "independent_discovery_required": false,
+      "coverage_scope": "full_window",
+      "scope_note": "Synthetic scope only.",
+      "prior_full_window_cursor": "2026-10-24T23:00:00Z",
+      "oldest_unresolved_gap_start": null,
+      "unresolved_window": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z"
+      },
+      "window_completion_evidence": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z",
+        "boundary_reached": true,
+        "method": "Synthetic traversal evidence only",
+        "source_urls": [
+          "https://example.org/synthetic-source"
+        ]
+      },
+      "advance_full_window_cursor": false,
+      "gaps": [],
+      "counts": {
+        "discovered": 0,
+        "reviewed": 0,
+        "pending": 0,
+        "retained": 0,
+        "excluded": 0
+      }
+    },
+    {
+      "source_id": "sports-independent",
+      "roster_member": false,
+      "roster_snapshot_sha256": null,
+      "access_status": "accessible",
+      "attempts": [
+        {
+          "url": "https://example.org/synthetic-source",
+          "at": "2026-10-25T23:01:00Z",
+          "method": "synthetic-fixture",
+          "outcome": "Synthetic completed inspection"
+        }
+      ],
+      "queries": [],
+      "independent_discovery": false,
+      "independent_discovery_required": false,
+      "coverage_scope": "full_window",
+      "scope_note": "Synthetic scope only.",
+      "prior_full_window_cursor": "2026-10-24T23:00:00Z",
+      "oldest_unresolved_gap_start": null,
+      "unresolved_window": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z"
+      },
+      "window_completion_evidence": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z",
+        "boundary_reached": true,
+        "method": "Synthetic traversal evidence only",
+        "source_urls": [
+          "https://example.org/synthetic-source"
+        ]
+      },
+      "advance_full_window_cursor": false,
+      "gaps": [],
+      "counts": {
+        "discovered": 0,
+        "reviewed": 0,
+        "pending": 0,
+        "retained": 0,
+        "excluded": 0
+      }
+    },
+    {
+      "source_id": "science-independent",
+      "roster_member": false,
+      "roster_snapshot_sha256": null,
+      "access_status": "accessible",
+      "attempts": [
+        {
+          "url": "https://example.org/synthetic-source",
+          "at": "2026-10-25T23:01:00Z",
+          "method": "synthetic-fixture",
+          "outcome": "Synthetic completed inspection"
+        }
+      ],
+      "queries": [],
+      "independent_discovery": false,
+      "independent_discovery_required": false,
+      "coverage_scope": "full_window",
+      "scope_note": "Synthetic scope only.",
+      "prior_full_window_cursor": "2026-10-24T23:00:00Z",
+      "oldest_unresolved_gap_start": null,
+      "unresolved_window": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z"
+      },
+      "window_completion_evidence": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z",
+        "boundary_reached": true,
+        "method": "Synthetic traversal evidence only",
+        "source_urls": [
+          "https://example.org/synthetic-source"
+        ]
+      },
+      "advance_full_window_cursor": false,
+      "gaps": [],
+      "counts": {
+        "discovered": 0,
+        "reviewed": 0,
+        "pending": 0,
+        "retained": 0,
+        "excluded": 0
+      }
+    },
+    {
+      "source_id": "inshorts-national",
+      "roster_member": false,
+      "roster_snapshot_sha256": null,
+      "access_status": "accessible",
+      "attempts": [
+        {
+          "url": "https://inshorts.com/en/read/national",
+          "at": "2026-10-25T23:01:00Z",
+          "method": "synthetic-fixture",
+          "outcome": "Synthetic completed inspection"
+        }
+      ],
+      "queries": [],
+      "independent_discovery": false,
+      "independent_discovery_required": false,
+      "coverage_scope": "full_window",
+      "scope_note": "Synthetic scope only.",
+      "prior_full_window_cursor": "2026-10-24T23:00:00Z",
+      "oldest_unresolved_gap_start": null,
+      "unresolved_window": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z"
+      },
+      "window_completion_evidence": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z",
+        "boundary_reached": true,
+        "method": "Synthetic traversal evidence only",
+        "source_urls": [
+          "https://example.org/synthetic-source"
+        ]
+      },
+      "advance_full_window_cursor": false,
+      "gaps": [],
+      "counts": {
+        "discovered": 0,
+        "reviewed": 0,
+        "pending": 0,
+        "retained": 0,
+        "excluded": 0
+      }
+    },
+    {
+      "source_id": "inshorts-politics",
+      "roster_member": false,
+      "roster_snapshot_sha256": null,
+      "access_status": "accessible",
+      "attempts": [
+        {
+          "url": "https://inshorts.com/en/read/politics",
+          "at": "2026-10-25T23:01:00Z",
+          "method": "synthetic-fixture",
+          "outcome": "Synthetic completed inspection"
+        }
+      ],
+      "queries": [],
+      "independent_discovery": false,
+      "independent_discovery_required": false,
+      "coverage_scope": "full_window",
+      "scope_note": "Synthetic scope only.",
+      "prior_full_window_cursor": "2026-10-24T23:00:00Z",
+      "oldest_unresolved_gap_start": null,
+      "unresolved_window": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z"
+      },
+      "window_completion_evidence": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z",
+        "boundary_reached": true,
+        "method": "Synthetic traversal evidence only",
+        "source_urls": [
+          "https://example.org/synthetic-source"
+        ]
+      },
+      "advance_full_window_cursor": false,
+      "gaps": [],
+      "counts": {
+        "discovered": 0,
+        "reviewed": 0,
+        "pending": 0,
+        "retained": 0,
+        "excluded": 0
+      }
+    },
+    {
+      "source_id": "inshorts-business",
+      "roster_member": false,
+      "roster_snapshot_sha256": null,
+      "access_status": "accessible",
+      "attempts": [
+        {
+          "url": "https://inshorts.com/en/read/business",
+          "at": "2026-10-25T23:01:00Z",
+          "method": "synthetic-fixture",
+          "outcome": "Synthetic completed inspection"
+        }
+      ],
+      "queries": [],
+      "independent_discovery": false,
+      "independent_discovery_required": false,
+      "coverage_scope": "full_window",
+      "scope_note": "Synthetic scope only.",
+      "prior_full_window_cursor": "2026-10-24T23:00:00Z",
+      "oldest_unresolved_gap_start": null,
+      "unresolved_window": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z"
+      },
+      "window_completion_evidence": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z",
+        "boundary_reached": true,
+        "method": "Synthetic traversal evidence only",
+        "source_urls": [
+          "https://example.org/synthetic-source"
+        ]
+      },
+      "advance_full_window_cursor": false,
+      "gaps": [],
+      "counts": {
+        "discovered": 0,
+        "reviewed": 0,
+        "pending": 0,
+        "retained": 0,
+        "excluded": 0
+      }
+    },
+    {
+      "source_id": "india-politics",
+      "roster_member": false,
+      "roster_snapshot_sha256": null,
+      "access_status": "accessible",
+      "attempts": [
+        {
+          "url": "https://example.org/synthetic-source",
+          "at": "2026-10-25T23:01:00Z",
+          "method": "synthetic-fixture",
+          "outcome": "Synthetic completed inspection"
+        }
+      ],
+      "queries": [
+        "synthetic independent category query"
+      ],
+      "independent_discovery": true,
+      "independent_discovery_required": true,
+      "coverage_scope": "full_window",
+      "scope_note": "Synthetic scope only.",
+      "prior_full_window_cursor": "2026-10-24T23:00:00Z",
+      "oldest_unresolved_gap_start": null,
+      "unresolved_window": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z"
+      },
+      "window_completion_evidence": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z",
+        "boundary_reached": true,
+        "method": "Synthetic traversal evidence only",
+        "source_urls": [
+          "https://example.org/synthetic-source"
+        ]
+      },
+      "advance_full_window_cursor": false,
+      "gaps": [],
+      "counts": {
+        "discovered": 0,
+        "reviewed": 0,
+        "pending": 0,
+        "retained": 0,
+        "excluded": 0
+      }
+    },
+    {
+      "source_id": "india-modi-bjp-government",
+      "roster_member": false,
+      "roster_snapshot_sha256": null,
+      "access_status": "accessible",
+      "attempts": [
+        {
+          "url": "https://example.org/synthetic-source",
+          "at": "2026-10-25T23:01:00Z",
+          "method": "synthetic-fixture",
+          "outcome": "Synthetic completed inspection"
+        }
+      ],
+      "queries": [
+        "synthetic independent category query"
+      ],
+      "independent_discovery": true,
+      "independent_discovery_required": true,
+      "coverage_scope": "full_window",
+      "scope_note": "Synthetic scope only.",
+      "prior_full_window_cursor": "2026-10-24T23:00:00Z",
+      "oldest_unresolved_gap_start": null,
+      "unresolved_window": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z"
+      },
+      "window_completion_evidence": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z",
+        "boundary_reached": true,
+        "method": "Synthetic traversal evidence only",
+        "source_urls": [
+          "https://example.org/synthetic-source"
+        ]
+      },
+      "advance_full_window_cursor": false,
+      "gaps": [],
+      "counts": {
+        "discovered": 0,
+        "reviewed": 0,
+        "pending": 0,
+        "retained": 0,
+        "excluded": 0
+      }
+    },
+    {
+      "source_id": "india-opposition",
+      "roster_member": false,
+      "roster_snapshot_sha256": null,
+      "access_status": "accessible",
+      "attempts": [
+        {
+          "url": "https://example.org/synthetic-source",
+          "at": "2026-10-25T23:01:00Z",
+          "method": "synthetic-fixture",
+          "outcome": "Synthetic completed inspection"
+        }
+      ],
+      "queries": [
+        "synthetic independent category query"
+      ],
+      "independent_discovery": true,
+      "independent_discovery_required": true,
+      "coverage_scope": "full_window",
+      "scope_note": "Synthetic scope only.",
+      "prior_full_window_cursor": "2026-10-24T23:00:00Z",
+      "oldest_unresolved_gap_start": null,
+      "unresolved_window": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z"
+      },
+      "window_completion_evidence": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z",
+        "boundary_reached": true,
+        "method": "Synthetic traversal evidence only",
+        "source_urls": [
+          "https://example.org/synthetic-source"
+        ]
+      },
+      "advance_full_window_cursor": false,
+      "gaps": [],
+      "counts": {
+        "discovered": 0,
+        "reviewed": 0,
+        "pending": 0,
+        "retained": 0,
+        "excluded": 0
+      }
+    },
+    {
+      "source_id": "india-government-policy",
+      "roster_member": false,
+      "roster_snapshot_sha256": null,
+      "access_status": "accessible",
+      "attempts": [
+        {
+          "url": "https://example.org/synthetic-source",
+          "at": "2026-10-25T23:01:00Z",
+          "method": "synthetic-fixture",
+          "outcome": "Synthetic completed inspection"
+        }
+      ],
+      "queries": [
+        "synthetic independent category query"
+      ],
+      "independent_discovery": true,
+      "independent_discovery_required": true,
+      "coverage_scope": "full_window",
+      "scope_note": "Synthetic scope only.",
+      "prior_full_window_cursor": "2026-10-24T23:00:00Z",
+      "oldest_unresolved_gap_start": null,
+      "unresolved_window": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z"
+      },
+      "window_completion_evidence": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z",
+        "boundary_reached": true,
+        "method": "Synthetic traversal evidence only",
+        "source_urls": [
+          "https://example.org/synthetic-source"
+        ]
+      },
+      "advance_full_window_cursor": false,
+      "gaps": [],
+      "counts": {
+        "discovered": 0,
+        "reviewed": 0,
+        "pending": 0,
+        "retained": 0,
+        "excluded": 0
+      }
+    },
+    {
+      "source_id": "india-economics",
+      "roster_member": false,
+      "roster_snapshot_sha256": null,
+      "access_status": "accessible",
+      "attempts": [
+        {
+          "url": "https://example.org/synthetic-source",
+          "at": "2026-10-25T23:01:00Z",
+          "method": "synthetic-fixture",
+          "outcome": "Synthetic completed inspection"
+        }
+      ],
+      "queries": [
+        "synthetic independent category query"
+      ],
+      "independent_discovery": true,
+      "independent_discovery_required": true,
+      "coverage_scope": "full_window",
+      "scope_note": "Synthetic scope only.",
+      "prior_full_window_cursor": "2026-10-24T23:00:00Z",
+      "oldest_unresolved_gap_start": null,
+      "unresolved_window": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z"
+      },
+      "window_completion_evidence": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z",
+        "boundary_reached": true,
+        "method": "Synthetic traversal evidence only",
+        "source_urls": [
+          "https://example.org/synthetic-source"
+        ]
+      },
+      "advance_full_window_cursor": false,
+      "gaps": [],
+      "counts": {
+        "discovered": 0,
+        "reviewed": 0,
+        "pending": 0,
+        "retained": 0,
+        "excluded": 0
+      }
+    },
+    {
+      "source_id": "india-major-national",
+      "roster_member": false,
+      "roster_snapshot_sha256": null,
+      "access_status": "accessible",
+      "attempts": [
+        {
+          "url": "https://example.org/synthetic-source",
+          "at": "2026-10-25T23:01:00Z",
+          "method": "synthetic-fixture",
+          "outcome": "Synthetic completed inspection"
+        }
+      ],
+      "queries": [
+        "synthetic independent category query"
+      ],
+      "independent_discovery": true,
+      "independent_discovery_required": true,
+      "coverage_scope": "full_window",
+      "scope_note": "Synthetic scope only.",
+      "prior_full_window_cursor": "2026-10-24T23:00:00Z",
+      "oldest_unresolved_gap_start": null,
+      "unresolved_window": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z"
+      },
+      "window_completion_evidence": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z",
+        "boundary_reached": true,
+        "method": "Synthetic traversal evidence only",
+        "source_urls": [
+          "https://example.org/synthetic-source"
+        ]
+      },
+      "advance_full_window_cursor": false,
+      "gaps": [],
+      "counts": {
+        "discovered": 0,
+        "reviewed": 0,
+        "pending": 0,
+        "retained": 0,
+        "excluded": 0
+      }
+    },
+    {
+      "source_id": "everyday-videos",
+      "roster_member": false,
+      "roster_snapshot_sha256": null,
+      "access_status": "accessible",
+      "attempts": [
+        {
+          "url": "https://www.youtube.com/@EverydayAI_/videos",
+          "at": "2026-10-25T23:01:00Z",
+          "method": "synthetic-fixture",
+          "outcome": "Synthetic completed inspection"
+        }
+      ],
+      "queries": [],
+      "independent_discovery": false,
+      "independent_discovery_required": false,
+      "coverage_scope": "full_window",
+      "scope_note": "Synthetic scope only.",
+      "prior_full_window_cursor": "2026-10-24T23:00:00Z",
+      "oldest_unresolved_gap_start": null,
+      "unresolved_window": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z"
+      },
+      "window_completion_evidence": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z",
+        "boundary_reached": true,
+        "method": "Synthetic traversal evidence only",
+        "source_urls": [
+          "https://example.org/synthetic-source"
+        ]
+      },
+      "advance_full_window_cursor": false,
+      "gaps": [],
+      "counts": {
+        "discovered": 0,
+        "reviewed": 0,
+        "pending": 0,
+        "retained": 0,
+        "excluded": 0
+      }
+    },
+    {
+      "source_id": "everyday-live",
+      "roster_member": false,
+      "roster_snapshot_sha256": null,
+      "access_status": "accessible",
+      "attempts": [
+        {
+          "url": "https://www.youtube.com/@EverydayAI_/streams",
+          "at": "2026-10-25T23:01:00Z",
+          "method": "synthetic-fixture",
+          "outcome": "Synthetic completed inspection"
+        }
+      ],
+      "queries": [],
+      "independent_discovery": false,
+      "independent_discovery_required": false,
+      "coverage_scope": "full_window",
+      "scope_note": "Synthetic scope only.",
+      "prior_full_window_cursor": "2026-10-24T23:00:00Z",
+      "oldest_unresolved_gap_start": null,
+      "unresolved_window": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z"
+      },
+      "window_completion_evidence": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z",
+        "boundary_reached": true,
+        "method": "Synthetic traversal evidence only",
+        "source_urls": [
+          "https://example.org/synthetic-source"
+        ]
+      },
+      "advance_full_window_cursor": false,
+      "gaps": [],
+      "counts": {
+        "discovered": 0,
+        "reviewed": 0,
+        "pending": 0,
+        "retained": 0,
+        "excluded": 0
+      }
+    },
+    {
+      "source_id": "everyday-episodes",
+      "roster_member": false,
+      "roster_snapshot_sha256": null,
+      "access_status": "accessible",
+      "attempts": [
+        {
+          "url": "https://www.youreverydayai.com/episodes/",
+          "at": "2026-10-25T23:01:00Z",
+          "method": "synthetic-fixture",
+          "outcome": "Synthetic completed inspection"
+        }
+      ],
+      "queries": [],
+      "independent_discovery": false,
+      "independent_discovery_required": false,
+      "coverage_scope": "full_window",
+      "scope_note": "Synthetic scope only.",
+      "prior_full_window_cursor": "2026-10-24T23:00:00Z",
+      "oldest_unresolved_gap_start": null,
+      "unresolved_window": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z"
+      },
+      "window_completion_evidence": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z",
+        "boundary_reached": true,
+        "method": "Synthetic traversal evidence only",
+        "source_urls": [
+          "https://example.org/synthetic-source"
+        ]
+      },
+      "advance_full_window_cursor": false,
+      "gaps": [],
+      "counts": {
+        "discovered": 0,
+        "reviewed": 0,
+        "pending": 0,
+        "retained": 0,
+        "excluded": 0
+      }
+    },
+    {
+      "source_id": "everyday-blog",
+      "roster_member": false,
+      "roster_snapshot_sha256": null,
+      "access_status": "accessible",
+      "attempts": [
+        {
+          "url": "https://www.youreverydayai.com/blog/",
+          "at": "2026-10-25T23:01:00Z",
+          "method": "synthetic-fixture",
+          "outcome": "Synthetic completed inspection"
+        }
+      ],
+      "queries": [],
+      "independent_discovery": false,
+      "independent_discovery_required": false,
+      "coverage_scope": "full_window",
+      "scope_note": "Synthetic scope only.",
+      "prior_full_window_cursor": "2026-10-24T23:00:00Z",
+      "oldest_unresolved_gap_start": null,
+      "unresolved_window": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z"
+      },
+      "window_completion_evidence": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z",
+        "boundary_reached": true,
+        "method": "Synthetic traversal evidence only",
+        "source_urls": [
+          "https://example.org/synthetic-source"
+        ]
+      },
+      "advance_full_window_cursor": false,
+      "gaps": [],
+      "counts": {
+        "discovered": 0,
+        "reviewed": 0,
+        "pending": 0,
+        "retained": 0,
+        "excluded": 0
+      }
+    },
+    {
+      "source_id": "everyday-ai-news",
+      "roster_member": false,
+      "roster_snapshot_sha256": null,
+      "access_status": "accessible",
+      "attempts": [
+        {
+          "url": "https://www.youreverydayai.com/category/ai-news/",
+          "at": "2026-10-25T23:01:00Z",
+          "method": "synthetic-fixture",
+          "outcome": "Synthetic completed inspection"
+        }
+      ],
+      "queries": [],
+      "independent_discovery": false,
+      "independent_discovery_required": false,
+      "coverage_scope": "full_window",
+      "scope_note": "Synthetic scope only.",
+      "prior_full_window_cursor": "2026-10-24T23:00:00Z",
+      "oldest_unresolved_gap_start": null,
+      "unresolved_window": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z"
+      },
+      "window_completion_evidence": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z",
+        "boundary_reached": true,
+        "method": "Synthetic traversal evidence only",
+        "source_urls": [
+          "https://example.org/synthetic-source"
+        ]
+      },
+      "advance_full_window_cursor": false,
+      "gaps": [],
+      "counts": {
+        "discovered": 0,
+        "reviewed": 0,
+        "pending": 0,
+        "retained": 0,
+        "excluded": 0
+      }
+    },
+    {
+      "source_id": "everyday-newsletter",
+      "roster_member": false,
+      "roster_snapshot_sha256": null,
+      "access_status": "accessible",
+      "attempts": [
+        {
+          "url": "https://read.youreverydayai.com/",
+          "at": "2026-10-25T23:01:00Z",
+          "method": "synthetic-fixture",
+          "outcome": "Synthetic completed inspection"
+        }
+      ],
+      "queries": [],
+      "independent_discovery": false,
+      "independent_discovery_required": false,
+      "coverage_scope": "full_window",
+      "scope_note": "Synthetic scope only.",
+      "prior_full_window_cursor": "2026-10-24T23:00:00Z",
+      "oldest_unresolved_gap_start": null,
+      "unresolved_window": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z"
+      },
+      "window_completion_evidence": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z",
+        "boundary_reached": true,
+        "method": "Synthetic traversal evidence only",
+        "source_urls": [
+          "https://example.org/synthetic-source"
+        ]
+      },
+      "advance_full_window_cursor": false,
+      "gaps": [],
+      "counts": {
+        "discovered": 0,
+        "reviewed": 0,
+        "pending": 0,
+        "retained": 0,
+        "excluded": 0
+      }
+    },
+    {
+      "source_id": "big-technology-original-feed",
+      "roster_member": false,
+      "roster_snapshot_sha256": null,
+      "access_status": "accessible",
+      "attempts": [
+        {
+          "url": "https://feeds.megaphone.fm/LI3617121267",
+          "at": "2026-10-25T23:01:00Z",
+          "method": "synthetic-fixture",
+          "outcome": "Synthetic completed inspection"
+        }
+      ],
+      "queries": [],
+      "independent_discovery": false,
+      "independent_discovery_required": false,
+      "coverage_scope": "full_window",
+      "scope_note": "Synthetic scope only.",
+      "prior_full_window_cursor": "2026-10-24T23:00:00Z",
+      "oldest_unresolved_gap_start": null,
+      "unresolved_window": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z"
+      },
+      "window_completion_evidence": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z",
+        "boundary_reached": true,
+        "method": "Synthetic traversal evidence only",
+        "source_urls": [
+          "https://example.org/synthetic-source"
+        ]
+      },
+      "advance_full_window_cursor": false,
+      "gaps": [],
+      "counts": {
+        "discovered": 0,
+        "reviewed": 0,
+        "pending": 0,
+        "retained": 0,
+        "excluded": 0
+      }
+    },
+    {
+      "source_id": "expert-knowledge-log",
+      "roster_member": false,
+      "roster_snapshot_sha256": null,
+      "access_status": "accessible",
+      "attempts": [
+        {
+          "url": "https://example.org/synthetic-source",
+          "at": "2026-10-25T23:01:00Z",
+          "method": "synthetic-fixture",
+          "outcome": "Synthetic completed inspection"
+        }
+      ],
+      "queries": [],
+      "independent_discovery": false,
+      "independent_discovery_required": false,
+      "coverage_scope": "full_window",
+      "scope_note": "Synthetic scope only.",
+      "prior_full_window_cursor": "2026-10-24T23:00:00Z",
+      "oldest_unresolved_gap_start": null,
+      "unresolved_window": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z"
+      },
+      "window_completion_evidence": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z",
+        "boundary_reached": true,
+        "method": "Synthetic traversal evidence only",
+        "source_urls": [
+          "https://example.org/synthetic-source"
+        ]
+      },
+      "advance_full_window_cursor": false,
+      "gaps": [],
+      "counts": {
+        "discovered": 0,
+        "reviewed": 0,
+        "pending": 0,
+        "retained": 0,
+        "excluded": 0
+      }
+    },
+    {
+      "source_id": "selected-expert-primary",
+      "roster_member": false,
+      "roster_snapshot_sha256": null,
+      "access_status": "accessible",
+      "attempts": [
+        {
+          "url": "https://example.org/synthetic-source",
+          "at": "2026-10-25T23:01:00Z",
+          "method": "synthetic-fixture",
+          "outcome": "Synthetic completed inspection"
+        }
+      ],
+      "queries": [],
+      "independent_discovery": false,
+      "independent_discovery_required": false,
+      "coverage_scope": "full_window",
+      "scope_note": "Synthetic scope only.",
+      "prior_full_window_cursor": "2026-10-24T23:00:00Z",
+      "oldest_unresolved_gap_start": null,
+      "unresolved_window": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z"
+      },
+      "window_completion_evidence": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z",
+        "boundary_reached": true,
+        "method": "Synthetic traversal evidence only",
+        "source_urls": [
+          "https://example.org/synthetic-source"
+        ]
+      },
+      "advance_full_window_cursor": false,
+      "gaps": [],
+      "counts": {
+        "discovered": 0,
+        "reviewed": 0,
+        "pending": 0,
+        "retained": 0,
+        "excluded": 0
+      }
+    },
+    {
+      "source_id": "insurance-reinsurance",
+      "roster_member": false,
+      "roster_snapshot_sha256": null,
+      "access_status": "accessible",
+      "attempts": [
+        {
+          "url": "https://example.org/synthetic-source",
+          "at": "2026-10-25T23:01:00Z",
+          "method": "synthetic-fixture",
+          "outcome": "Synthetic completed inspection"
+        }
+      ],
+      "queries": [],
+      "independent_discovery": false,
+      "independent_discovery_required": false,
+      "coverage_scope": "full_window",
+      "scope_note": "Synthetic scope only.",
+      "prior_full_window_cursor": "2026-10-24T23:00:00Z",
+      "oldest_unresolved_gap_start": null,
+      "unresolved_window": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z"
+      },
+      "window_completion_evidence": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z",
+        "boundary_reached": true,
+        "method": "Synthetic traversal evidence only",
+        "source_urls": [
+          "https://example.org/synthetic-source"
+        ]
+      },
+      "advance_full_window_cursor": false,
+      "gaps": [],
+      "counts": {
+        "discovered": 0,
+        "reviewed": 0,
+        "pending": 0,
+        "retained": 0,
+        "excluded": 0
+      }
+    },
+    {
+      "source_id": "x:fixture0",
+      "roster_member": true,
+      "roster_snapshot_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "access_status": "accessible",
+      "attempts": [
+        {
+          "url": "https://x.com/fixture0",
+          "at": "2026-10-25T23:01:00Z",
+          "method": "synthetic-fixture",
+          "outcome": "Synthetic completed inspection"
+        }
+      ],
+      "queries": [],
+      "independent_discovery": false,
+      "independent_discovery_required": false,
+      "coverage_scope": "full_window",
+      "scope_note": "Synthetic scope only.",
+      "prior_full_window_cursor": "2026-10-24T23:00:00Z",
+      "oldest_unresolved_gap_start": null,
+      "unresolved_window": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z"
+      },
+      "window_completion_evidence": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z",
+        "boundary_reached": true,
+        "method": "Synthetic traversal evidence only",
+        "source_urls": [
+          "https://example.org/synthetic-source"
+        ]
+      },
+      "advance_full_window_cursor": false,
+      "gaps": [],
+      "counts": {
+        "discovered": 0,
+        "reviewed": 0,
+        "pending": 0,
+        "retained": 0,
+        "excluded": 0
+      }
+    },
+    {
+      "source_id": "x:fixture1",
+      "roster_member": true,
+      "roster_snapshot_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "access_status": "accessible",
+      "attempts": [
+        {
+          "url": "https://x.com/fixture1",
+          "at": "2026-10-25T23:01:00Z",
+          "method": "synthetic-fixture",
+          "outcome": "Synthetic completed inspection"
+        }
+      ],
+      "queries": [],
+      "independent_discovery": false,
+      "independent_discovery_required": false,
+      "coverage_scope": "full_window",
+      "scope_note": "Synthetic scope only.",
+      "prior_full_window_cursor": "2026-10-24T23:00:00Z",
+      "oldest_unresolved_gap_start": null,
+      "unresolved_window": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z"
+      },
+      "window_completion_evidence": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z",
+        "boundary_reached": true,
+        "method": "Synthetic traversal evidence only",
+        "source_urls": [
+          "https://example.org/synthetic-source"
+        ]
+      },
+      "advance_full_window_cursor": false,
+      "gaps": [],
+      "counts": {
+        "discovered": 0,
+        "reviewed": 0,
+        "pending": 0,
+        "retained": 0,
+        "excluded": 0
+      }
+    }
+  ],
+  "items": [],
+  "upstream": {
+    "availability": "available",
+    "total": 1,
+    "dispositions": [
+      {
+        "index": 0,
+        "decision": "excluded_stale",
+        "reason": "Synthetic old item"
+      }
+    ]
+  },
+  "upstream_reconciliation_status": "complete",
+  "required_attempts_status": "complete",
+  "agreed_source_coverage_status": "complete",
+  "global_full_window_cursor_advanced": false,
+  "claims_exhaustive": false,
+  "public_disclosure": "Synthetic fixture, not an edition.",
+  "pending_work": []
+}
