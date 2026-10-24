@@ -1,0 +1,1204 @@
+{
+  "edition": "2026-10-25",
+  "research_cutoff_sgt": "2026-10-25T07:06:33.157004+08:00",
+  "ai_partial_research_checkpoint_sgt": "2026-10-25T07:05:37.191912+08:00",
+  "upstream": {
+    "date": "2026-10-25",
+    "json_url": "https://pbhat89.github.io/the-brief/archive/2026-10-25.json",
+    "html_url": "https://pbhat89.github.io/the-brief/archive/2026-10-25.html",
+    "verified_same_day": true,
+    "item_count": 32
+  },
+  "coverage_counts": {
+    "upstream_total": 32,
+    "upstream_represented": 19,
+    "upstream_excluded": 13,
+    "distinct_news_cards": 27,
+    "sports_upstream_total": 4
+  },
+  "coverage_summary": "All 32 upstream entries reconciled: 19 retained or materially updated, 13 excluded with reasons. 27 distinct verified headlines include independent additions. All four sports entries are accounted for.",
+  "general_items": [
+    {
+      "event_id": "ema-gas-cut-assurance-20261024",
+      "section": "singapore",
+      "headline": "Singapore says energy supplies remain sufficient despite Indonesia reducing gas exports.",
+      "context": "EMA says the reduction reported by importers is less than two percent of Singapore’s daily gas demand.",
+      "source_date": "2026-10-24",
+      "sources": [
+        "https://mothership.sg/2026/10/indonesia-cut-gas-exports-sg-ema/"
+      ],
+      "evidence_caveat": "Original Mothership report, October 24 at 20:27, quotes EMA directly. Indonesia’s stated 31 BBTUD cut differs from the 17 BBTUD reported to Singapore importers; retain only EMA’s attributed less-than-two-percent assurance. No prior matching event.",
+      "upstream_index": 1,
+      "disposition": "retained_verified"
+    },
+    {
+      "event_id": "biomethane-suppliers-appointed-20261023",
+      "section": "singapore",
+      "headline": "Singapore has appointed three companies to import biomethane under a pilot programme.",
+      "context": "Keppel Energy, Sembcorp Utilities and Tuas Power are expected to bring in the first supplies by the end of 2028.",
+      "source_date": "2026-10-23",
+      "sources": [
+        "https://mothership.sg/2026/10/spore-biomethane-2028/",
+        "https://www.businesstimes.com.sg/companies-markets/energy-commodities/keppel-energy-sembcorp-utilities-and-tuas-power-supply-biomethane-pilot-project",
+        "https://a.siasset.com/news/news.html?nid=515668835&source=sg_sgxnet"
+      ],
+      "evidence_caveat": "New supplier appointments announced October 23, not a newly invented sandbox: the pilot plan dates to October 2025. The Business Times and SGXNet confirm the 15-year,300 MW sandbox. First supplies are expected by end-2028, not broad deployment already achieved. Unseen dated catch-up.",
+      "upstream_index": 2,
+      "disposition": "corrected_verified"
+    },
+    {
+      "event_id": "protection-order-sentence-20261023",
+      "section": "singapore",
+      "headline": "A man has been jailed for fourteen weeks for assaulting his wife in breach of a protection order.",
+      "context": "The sentence was handed down on Friday after he pleaded guilty to two charges.",
+      "source_date": "2026-10-24",
+      "sources": [
+        "https://mothership.sg/2026/10/man-assault-wife-14-weeks-jail/"
+      ],
+      "evidence_caveat": "Mothership published this on October 24 at 18:12, reporting the October 23 sentence via Shin Min. The upstream publication date is incorrect. Gratuitous intimate and child-health details are omitted.",
+      "upstream_index": 3,
+      "disposition": "corrected_verified"
+    },
+    {
+      "event_id": "rail-academy-qualifications-20261024",
+      "section": "singapore",
+      "headline": "Singapore’s Rail Academy is expanding training and qualification pathways.",
+      "context": "Five educational institutions will help rail workers count industry training towards diplomas and degrees.",
+      "source_date": "2026-10-24",
+      "sources": [
+        "https://www.channelnewsasia.com/singapore/singapore-rail-academy-sbs-smrt-students-career-qualifications-6488586",
+        "https://www.lta.gov.sg/content/ltagov/en/newsroom/2026/10/news-releases/developing-future-ready-technical-capabilities-and-driving-innov.html"
+      ],
+      "evidence_caveat": "CNA’s October 24 original report directly covers the minister’s announcement; the LTA release confirms the event and academy role. The revamp starts in November. No prior matching event.",
+      "upstream_index": null,
+      "disposition": "independent_verified_addition"
+    },
+    {
+      "event_id": "imda-app-store-assessment-20261024",
+      "section": "singapore",
+      "headline": "Singapore’s first app-store safety assessment found sixty-five harmful apps and twenty-four with incorrect age ratings.",
+      "context": "IMDA says the apps identified in its review of more than seven thousand have since been removed or re-rated.",
+      "source_date": "2026-10-24",
+      "sources": [
+        "https://www.channelnewsasia.com/singapore/imda-review-app-store-harmful-wrong-age-rated-6485906",
+        "https://www.asiaone.com/singapore/imda-app-store-safety-review-singapore-7000-apps-harmful-wrongly-age-rated"
+      ],
+      "evidence_caveat": "CNA and AsiaOne independently report IMDA’s October 24 assessment. The testing period was April–December 2025, not a claim of 89 newly discovered apps today. The original IMDA release was not located.",
+      "upstream_index": null,
+      "disposition": "independent_verified_addition"
+    },
+    {
+      "event_id": "india-opposition-mock-parliament-plan-20261024",
+      "section": "india",
+      "headline": "India’s opposition is planning a mock Parliament session over its dispute with the chief election commissioner.",
+      "context": "The plan follows Friday’s Delhi protest march, during which police detained more than a hundred people.",
+      "source_date": "2026-10-24",
+      "sources": [
+        "https://inshorts.com/en/read/national",
+        "https://www.siasat.com/india-bloc-to-hold-public-impeachment-of-cec-gyanesh-on-oct-30-3563839/amp/",
+        "https://www.thehansindia.com/news/cities/new-delhi/opposition-mock-parliament-to-step-up-fight-against-sir-1135418",
+        "https://www.theweek.in/news/india/2026/10/23/cjp-unclear-on-future-plans-amid-eci-protest-march-in-delhi-several-detained-will-discuss-and-decide.html"
+      ],
+      "evidence_caveat": "Inshorts discovery on October 24 was followed to its TimesNow link, which failed. Siasat/PTI and The Hans India corroborate the new plan; The Week verifies Friday’s march and detentions. Reports conflict between October 28 and 30, so narration gives no date. A mock session has no legal impeachment effect; protest allegations are not endorsed.",
+      "upstream_index": 4,
+      "disposition": "materially_updated_verified"
+    },
+    {
+      "event_id": "rbi-monetary-financial-stability-20261023",
+      "section": "india",
+      "headline": "RBI Governor Sanjay Malhotra says monetary policy could sometimes address financial-stability risks.",
+      "context": "He stressed that any such decision would be for the Monetary Policy Committee, without signalling a specific next move.",
+      "source_date": "2026-10-23",
+      "sources": [
+        "https://www.ndtv.com/world-news/ndtv-world-summit-2026-live-updates-narendra-modi-s-jaishankar-nikhil-kamath-a-world-between-orders-12218006/amp/1",
+        "https://www.bloomberg.com/news/articles/2026-10-23/india-s-rbi-governor-open-to-rate-use-to-curb-financial-risks"
+      ],
+      "evidence_caveat": "Event publisher NDTV’s live transcript at 18:27 IST on October 23 supplies the governor’s remarks. Bloomberg was inaccessible. These are conditional policy-framework remarks, not a new rate decision or repeated MPC minutes.",
+      "upstream_index": 5,
+      "disposition": "retained_verified"
+    },
+    {
+      "event_id": "uk-water-price-review-intervention-20261024",
+      "section": "world_business",
+      "headline": "Britain’s government is preparing to intervene in the next water-price review.",
+      "context": "Environment Secretary Angela Eagle says she has written to the regulator and water companies setting out her expectations.",
+      "source_date": "2026-10-24",
+      "sources": [
+        "https://www.aol.co.uk/articles/government-unprecedented-intervention-uk-water-100844000.html"
+      ],
+      "evidence_caveat": "PA reporting by David Hughes, syndicated by AOL on October 24 at 10:08 UTC, was available through indexed full text; direct open failed. The next price review is not an immediate bill cut or completed ownership change. Distinct from earlier nationalisation and standing-charge proposals.",
+      "upstream_index": null,
+      "disposition": "independent_verified_addition"
+    },
+    {
+      "event_id": "iran-interim-deal-renewed-call-20261024",
+      "section": "world_business",
+      "headline": "Iran’s president has called for a renewed attempt to conclude an interim agreement.",
+      "context": "Masoud Pezeshkian blamed Washington for the earlier failure in remarks broadcast on Saturday.",
+      "source_date": "2026-10-24",
+      "sources": [
+        "https://www.aol.com/articles/irans-pezeshkian-blames-us-interim-130310000.html",
+        "https://in.marketscreener.com/news/iran-s-pezeshkian-blames-us-for-interim-deal-failure-urges-new-try-ce785cdfde8cf124"
+      ],
+      "evidence_caveat": "Reuters reporting dated October 24, syndicated by AOL and MarketScreener, verifies the attributed remarks. The accusation remains Pezeshkian’s, not an independently established finding. No agreement or new strike is claimed.",
+      "upstream_index": 12,
+      "disposition": "retained_verified"
+    },
+    {
+      "event_id": "istanbul-eight-ministers-diplomacy-20261023",
+      "section": "world_business",
+      "headline": "Eight countries have called for diplomacy and de-escalation after talks in Istanbul.",
+      "context": "Their foreign ministers discussed the Iran conflict and the security of major shipping routes.",
+      "source_date": "2026-10-23",
+      "sources": [
+        "https://www.mfa.gov.tr/joint-press-release-on-the-r4-ministerial-meeting-with-counterparts-from-france-germany-italy-and-united-kingdom-istanbul-23-october-2026.en.mfa"
+      ],
+      "evidence_caveat": "The Turkish foreign ministry’s joint statement confirms the October 23 meeting of eight ministers and their call for dialogue and de-escalation. This follows the agreed statement rather than stronger claims about unanimous opposition to intervention. Unseen dated catch-up.",
+      "upstream_index": 13,
+      "disposition": "corrected_verified"
+    },
+    {
+      "event_id": "hebron-operation-displacement-20261024",
+      "section": "world_business",
+      "headline": "Israel’s new West Bank operation has displaced residents in Hebron.",
+      "context": "A Palestinian official told Reuters that around twelve hundred people had been forced from their homes.",
+      "source_date": "2026-10-24",
+      "sources": [
+        "https://malaysia.news.yahoo.com/around-1-200-palestinians-displaced-122210918.html",
+        "https://www.thenationalnews.com/news/mena/2026/10/24/arrests-demolitions-raids-and-displacement-israel-launches-days-long-west-bank-offensive/"
+      ],
+      "evidence_caveat": "Reuters’ October 24 indexed original and The National report the new operation and displacement after the earlier cordon. The 1200 figure is attributed to a Palestinian official, not independently counted. Direct Yahoo returned 429 and The National open failed. This is a material follow-up to the prior edition.",
+      "upstream_index": 14,
+      "disposition": "materially_updated_verified"
+    },
+    {
+      "event_id": "ukraine-starlink-restored-20261024",
+      "section": "world_business",
+      "headline": "Ukraine says Starlink and Starshield services have returned to their earlier operating speeds.",
+      "context": "President Zelensky says tests on Saturday confirmed the restoration after restrictions that affected frontline operations.",
+      "source_date": "2026-10-24",
+      "sources": [
+        "https://www.president.gov.ua/en/news/vidnovili-robotu-starlinku-starshildu-na-shvidkosti-yaka-bul-107025",
+        "https://apnews.com/article/a3a0139dfc23365550306dd66fe43daa"
+      ],
+      "evidence_caveat": "The primary presidential address on October 24 at 15:50 and AP confirm the announced restoration. Omit the separately bundled, unverified Abu Dhabi timing. Drone movement speed must not be confused with internet bandwidth.",
+      "upstream_index": 15,
+      "disposition": "corrected_verified"
+    },
+    {
+      "event_id": "blackstone-q3-2026-earnings",
+      "section": "world_business",
+      "headline": "Blackstone’s third-quarter distributable earnings fell nine point two percent.",
+      "context": "The company reported one point seven two billion US dollars in that earnings measure on Thursday.",
+      "source_date": "2026-10-22",
+      "sources": [
+        "https://commercialobserver.com/2026/10/blackstone-earnings-third-quarter/",
+        "https://www.bloomberg.com/news/articles/2026-10-22/blackstone-profit-drops-9-2-as-rates-inflation-curb-dealmaking"
+      ],
+      "evidence_caveat": "Commercial Observer’s October 22 earnings-call report directly confirms a 9.2% decline in distributable earnings toUS$1.72 billion. The 13% per-share decline is a different metric. This is explicitly unseen Thursday catch-up, not a Sunday release.",
+      "upstream_index": 20,
+      "disposition": "retained_verified_unseen_catchup"
+    },
+    {
+      "event_id": "brent-friday-settlement-20261023",
+      "section": "world_business",
+      "headline": "Brent crude finished Friday at one hundred sixteen dollars and seventy-two cents a barrel.",
+      "context": "The international benchmark gained three point one percent during the session.",
+      "source_date": "2026-10-23",
+      "sources": [
+        "https://apnews.com/article/7b47ef3b037bfba4e34f685329b9b963",
+        "https://www.kiplinger.com/investing/stocks/dow-drops-652-points-as-oil-treasury-yields-rise-stock-market-today"
+      ],
+      "evidence_caveat": "AP’s Friday closing report verifies the settlement. Conflicting historical-high comparisons are omitted. The prior briefing mentioned oil rising with stocks but did not report this benchmark settlement; this is a distinct commodity datapoint, not a new Saturday trading session.",
+      "upstream_index": 21,
+      "disposition": "corrected_verified_unseen_catchup"
+    },
+    {
+      "event_id": "india-nz-second-t20-20261024",
+      "section": "sports",
+      "headline": "India beat New Zealand by four wickets to take a two-nil lead in the Twenty20 series.",
+      "context": "Tilak Varma and Nitish Kumar Reddy’s unbeaten sixty-nine-run partnership completed the chase of one hundred eighty-one.",
+      "source_date": "2026-10-24",
+      "sources": [
+        "https://www.icc-cricket.com/news/tilak-nitish-hold-their-nerve-as-india-take-2-0-lead",
+        "https://www.cricbuzz.com/live-cricket-scores/161201/vs-new-zealand-2026-10-24-hagley-oval"
+      ],
+      "evidence_caveat": "The ICC’s October 24 original directly confirms the second T 20 I, target 181, four-wicket win and 69-run partnership. It is distinct from the October 22 first match already covered; identical victory margins do not make the matches duplicates.",
+      "upstream_index": 24,
+      "disposition": "retained_verified"
+    },
+    {
+      "event_id": "f1-us-qualifying-20261024",
+      "section": "sports",
+      "headline": "Kimi Antonelli has taken pole position for the United States Grand Prix ahead of Max Verstappen and Isack Hadjar.",
+      "context": "Lewis Hamilton had led the final practice session earlier on Saturday.",
+      "source_date": "2026-10-24",
+      "sources": [
+        "https://www.formula1.com/en/latest/article/antonelli-seizes-pole-position-ahead-of-verstappen-in-qualifying-at-the-united-states-gp.4xdH4w09GhNDOJdknowRAk",
+        "https://www.formula1.com/en/latest/article/fp3-hamilton-goes-fastest-in-final-practice-session-for-the-united-states-gp-ahead-of-verstappen-and-leclerc.1KQ5x8wUAtBETnHxKDNldC"
+      ],
+      "evidence_caveat": "Official Formula 1 qualifying report published October 24 at 22:22 UTC confirms pole ahead of Verstappen and Hadjar. The 18:53 UTC practice report confirms Hamilton fastest. The upstream practice item is preserved in context and updated with completed qualifying; the race has not happened.",
+      "upstream_index": 25,
+      "disposition": "materially_updated_verified"
+    },
+    {
+      "event_id": "f1-us-grid-penalties-20261024",
+      "section": "sports",
+      "headline": "Arvid Lindblad, Franco Colapinto and Gabriel Bortoleto face grid penalties in Austin.",
+      "context": "Bortoleto will start at the back after additional power-unit changes, while Lindblad loses five places and Colapinto ten.",
+      "source_date": "2026-10-24",
+      "sources": [
+        "https://www.formula1.com/en/latest/article/lindblad-colapinto-and-bortoleto-to-take-grid-penalties-for-united-states-grand-prix.4qjn84W4zOmwNXeELFWn0k"
+      ],
+      "evidence_caveat": "Official Formula 1 report originated October 23 at 19:08 UTC and was updated with Saturday’s additional Bortoleto changes. His cumulative 80-place penalty means a back-of-grid start; Lindblad loses five places and Colapinto ten. This is not their final starting order.",
+      "upstream_index": 26,
+      "disposition": "retained_verified"
+    },
+    {
+      "event_id": "djokovic-basel-draw-20261024",
+      "section": "sports",
+      "headline": "Novak Djokovic will face Ugo Humbert in the opening round in Basel.",
+      "context": "Saturday’s draw places the fourth seed in the top half for his first appearance at the event since 2011.",
+      "source_date": "2026-10-24",
+      "sources": [
+        "https://novakdjokovic.com/en/news/tennis/novak-to-face-humbert-in-basel-opener/",
+        "https://tennisnow.com/djokovic-accepts-wild-card-into-basel/"
+      ],
+      "evidence_caveat": "Djokovic’s official website confirms the October 24 draw and Humbert opener. The original wildcard announcement was October 16. The fresh opponent and draw lead the item, not a relabelled wildcard announcement.",
+      "upstream_index": 27,
+      "disposition": "materially_updated_verified"
+    },
+    {
+      "event_id": "interpath-phase3-melanoma-20261024",
+      "section": "science",
+      "headline": "A personalised experimental cancer vaccine has reduced melanoma recurrence or death in a large trial.",
+      "context": "Adding it to standard immunotherapy lowered that relative risk by forty-two percent compared with immunotherapy alone.",
+      "source_date": "2026-10-24",
+      "sources": [
+        "https://www.sydney.edu.au/news-opinion/news/2026/10/23/world-first-personalised-therapeutic-cancer-vaccine-cuts-risk-of.html",
+        "https://www.modernatx.com/recapping-the-phase-three-interpath-results",
+        "https://investors.modernatx.com/scientific-medical-meetings"
+      ],
+      "evidence_caveat": "Primary University of Sydney investigators and Moderna’s October 24 presentation verify the phase 3 result in 1137 high-risk patients after melanoma surgery. The 42% figure is relative risk/hazard reduction, not an absolute cure rate. The therapy is investigational. Results first released October 22 and presented October 24; primary sources replace inaccessible Nature reporting.",
+      "upstream_index": 28,
+      "disposition": "corrected_verified"
+    },
+    {
+      "event_id": "northwestern-single-positron-20261023",
+      "section": "science",
+      "headline": "Northwestern researchers have trapped a single positron for a month.",
+      "context": "Keeping the electron’s antimatter counterpart isolated enables more precise comparisons between matter and antimatter.",
+      "source_date": "2026-10-23",
+      "sources": [
+        "https://physics.northwestern.edu/about/news/2026/gabrielse-lab-traps-a-single-antimatter-particle-for-a-month.html"
+      ],
+      "evidence_caveat": "Northwestern’s October 23 institutional announcement was directly read. The underlying research was reported October 21; this is dated unseen catch-up, not a new Sunday experiment. It does not prove matter–antimatter differences or establish first-ever antimatter storage.",
+      "upstream_index": 30,
+      "disposition": "retained_verified_unseen_catchup"
+    },
+    {
+      "event_id": "alliance-medinet-cyber-incident-20261024",
+      "section": "world_business",
+      "headline": "Health-benefits administrator Alliance Medinet says data belonging to about one hundred ten thousand members was compromised.",
+      "context": "Income Insurance says one corporate account was affected, with no indication that its own systems were compromised.",
+      "source_date": "2026-10-24",
+      "sources": [
+        "https://www.income.com.sg/about-us/corporate-information/press-releases/alliance-medinet-pte-ltd-cyber-incident",
+        "https://www.channelnewsasia.com/singapore/cyber-incident-alliance-medinet-6489076"
+      ],
+      "evidence_caveat": "Income’s October 24 primary statement was reviewed by the AI researcher; CNA’s 23:04 SGT original cites the parent-company filing for 110000 members. Income identifies one corporate account involving around 70 people. Do not imply all 110000 are Income customers or that AI caused the incident. Direct opens failed in this review; indexed originals were cross-checked.",
+      "upstream_index": null,
+      "disposition": "independent_verified_addition"
+    }
+  ],
+  "conditions": {
+    "observation_time": "2026-10-25T06:00:00+08:00",
+    "psi_updated": "2026-10-25T06:45:35+08:00",
+    "psi_24h": {
+      "north": 112,
+      "south": 105,
+      "west": 142,
+      "east": 112,
+      "central": 116
+    },
+    "psi_range": [
+      105,
+      142
+    ],
+    "psi_category": "Unhealthy",
+    "pm25_updated": "2026-10-25T06:45:34+08:00",
+    "pm25_1h": {
+      "north": 68,
+      "south": 58,
+      "west": 78,
+      "east": 68,
+      "central": 70
+    },
+    "pm25_unit": "µg/m³",
+    "pm25_category": "Elevated",
+    "forecast_issued": "2026-10-25T05:35:00+08:00",
+    "forecast_updated": "2026-10-25T05:40:56+08:00",
+    "forecast_valid_start": "2026-10-25T06:00:00+08:00",
+    "forecast_valid_end": "2026-10-26T06:00:00+08:00",
+    "temperature": [
+      23,
+      33
+    ],
+    "forecast": "Thundery showers across Singapore morning and afternoon; cloudy evening/overnight.",
+    "sources": [
+      "https://api-open.data.gov.sg/v2/real-time/api/psi",
+      "https://api-open.data.gov.sg/v2/real-time/api/pm25",
+      "https://api-open.data.gov.sg/v2/real-time/api/twenty-four-hr-forecast",
+      "https://data.gov.sg/datasets/d_c2c7fa70f297cdaee13afbe53a900eb9/view",
+      "https://www.nea.gov.sg/corporate-functions/weather/regional-haze-situation"
+    ],
+    "daily_psi_forecast": [
+      80,
+      130
+    ],
+    "warning": "Unhealthy haze continues. No materially new serious escalation was verified compared with the previous day; the weather forecast does not imply that rain will clear haze.",
+    "evidence_caveat": "Official API period-display text labels October26/27 incorrectly, but the ISO start/end timestamps and record date agree on October25/26; this report uses the ISO times. Direct shell requests returned403; the public web extractor read the original JSON. Observation times remain distinct from update and retrieval times.",
+    "summary": "Thundery showers are forecast in the morning and afternoon, with temperatures of 23–33°C. At 06:00 SGT, regional 24-hour PSI was 105–142 (Unhealthy); the separate 1-hour PM2.5 readings were 58–78 µg/m³ (Elevated). The 80–130 daily PSI forecast is distinct from those observations."
+  },
+  "ai_events": [
+    {
+      "event_id": "uk-ai-biosecurity-lab-funding-2026-10-24",
+      "headline": "Britain has announced a new AI Biosecurity Lab.",
+      "context": "It is backed by one hundred million pounds of government funding and up to two hundred million pounds in model and computing support from OpenAI and Anthropic.",
+      "source_date": "2026-10-24",
+      "sources": [
+        "https://www.gov.uk/government/news/introducing-the-ai-biosecurity-lab",
+        "https://www.gov.uk/government/news/chancellor-unveils-britains-ambitious-plan-for-ai"
+      ],
+      "evidence_caveat": "Direct primary Cabinet Office and Treasury releases, both dated October24. The company commitments are mainly credits/access/support, not another £200m cash grant. The lab is planned as an independent nonprofit; this is funding and programme intent, not measured disease-prevention efficacy. Broader same-day AI security funding is grouped as one announcement rather than padded into several events. No verified original X post/time located.",
+      "upstream_index": null,
+      "disposition": "independently_verified_addition",
+      "handle": null,
+      "direct_post": null,
+      "post_timestamp_sgt": null,
+      "timestamp_precision": "Publisher date only unless a separate source_timestamp_sgt is supplied; no X time invented.",
+      "freshness": "new_since_partial_checkpoint",
+      "rank": 1
+    },
+    {
+      "event_id": "railway-replacement-key-revocations-clarification-2026-10-24",
+      "headline": "Railway says Saturday’s AI-provider key revocations do not signal a new cyberattack.",
+      "context": "Its update says a precautionary batch sent to OpenAI and Anthropic inadvertently included replacement keys created after the earlier incident.",
+      "source_date": "2026-10-24",
+      "sources": [
+        "https://status.railway.com/incident/8E4V5WLD",
+        "https://blog.railway.com/p/preliminary-report-october-security-incident"
+      ],
+      "evidence_caveat": "Direct primary status notice October24 13:57UTC, or21:57SGT. This materially updates upstreamOctober22 report: replacement-key revocations were precautionary, not evidence those new keys were compromised. Preliminary investigation describes earlierOctober21incident; do not claim final forensic completeness or a new breach. No credential operations performed.",
+      "upstream_index": 19,
+      "disposition": "materially_updated_verified",
+      "handle": null,
+      "direct_post": null,
+      "post_timestamp_sgt": null,
+      "source_timestamp_sgt": "2026-10-24T21:57:00+08:00",
+      "timestamp_precision": "Publisher date only unless a separate source_timestamp_sgt is supplied; no X time invented.",
+      "freshness": "new_since_partial_checkpoint",
+      "rank": 2
+    },
+    {
+      "event_id": "nvidia-nemotron-bolt-e4b-actual-release-2026-10-23",
+      "headline": "Nvidia has released Nemotron three-point-five Bolt E-four-B, a compact model for local AI assistants.",
+      "context": "The company says it supports conversational tool use and can fit selected workloads into about four gigabytes of memory.",
+      "source_date": "2026-10-23",
+      "sources": [
+        "https://research.nvidia.com/labs/nemotron/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB/",
+        "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB",
+        "https://x.com/NVIDIAAI/status/2113657112408785153"
+      ],
+      "evidence_caveat": "Primary research release and actual model card verified. October15 announcement previewed E4B forOctober23; this is actual weights availability, not re-reporting the separate74B24GBrelease. FourGB is workload/configuration dependent, not a universal memory guarantee. No vendor performance comparison promoted as independent efficacy. Original post directly displays23:41Oct23SGT. Unseen catch-up inside retained research gaps, not presented as posted today.",
+      "upstream_index": null,
+      "disposition": "independently_verified_addition",
+      "handle": "NVIDIAAI",
+      "direct_post": "https://x.com/NVIDIAAI/status/2113657112408785153",
+      "post_timestamp_sgt": "2026-10-23T23:41:40.105000+08:00",
+      "timestamp_precision": "Exact UTC decoded from original X post ID, converted to Asia/Singapore and cross-checked against directly displayed minute/date in cloud browser.",
+      "freshness": "verified_unseen_catchup",
+      "rank": 3
+    },
+    {
+      "event_id": "aa-muse-spark-open-serving-results-2026-10-24",
+      "headline": "Artificial Analysis has published new serving-performance tests for Meta’s Muse Spark Open.",
+      "context": "Tuned software delivered roughly one-point-six to one-point-eight times more throughput per megawatt on the same Nvidia B-three-hundred setup, but increased the wait for the first response.",
+      "source_date": "2026-10-24",
+      "sources": [
+        "https://x.com/ArtificialAnlys/status/2113772381504438420"
+      ],
+      "evidence_caveat": "Primary benchmark author original post directly read in full;07:19AMOct24SGT cross-checked by postID, after prior07:09:54partialcheckpoint. New Muse-specific configuration measurements, distinct from previous DeepSeek, laptop and VeraRubin tests. Conditional serving benchmark, not a universal hardware ranking or measured autonomous task success. Tests cited50–100tokens/second peruser; higher time-to-first-token trade-off retained. AgentPerf landingpage failed directfetch; no inaccessible page content inferred.",
+      "upstream_index": null,
+      "disposition": "independently_verified_addition",
+      "handle": "ArtificialAnlys",
+      "direct_post": "https://x.com/ArtificialAnlys/status/2113772381504438420",
+      "post_timestamp_sgt": "2026-10-24T07:19:42.399000+08:00",
+      "timestamp_precision": "Exact UTC decoded from original X post ID, converted to Asia/Singapore and cross-checked against directly displayed minute/date in cloud browser.",
+      "freshness": "new_since_partial_checkpoint",
+      "rank": 4
+    },
+    {
+      "event_id": "php-session-upload-progress-advisory-2026-10-23",
+      "headline": "PHP has clarified a remaining security risk after this week’s emergency fixes.",
+      "context": "Its October twenty-third notice says the existing mitigation addresses the unusual session-configuration issue, with a full fix planned for the regular release cycle.",
+      "source_date": "2026-10-23",
+      "sources": [
+        "https://www.php.net/archive/2026.php",
+        "https://www.php.net/"
+      ],
+      "evidence_caveat": "Primary PHP October23 informational advisory directly read. UpstreamOctober21 broad vulnerability headline is updated with a specific newer advisory; not falsely relabelled as anOctober24attack. CVE-2026-115560 only arises with unusual combination of configuration/runtimehandlerchange and enabledsessionuploadprogress. ExistingOctober21mitigation already addresses it; do not imply every patchedinstallation remains vulnerable. No verified Xpost/time; publisherdate only. No instructions to alter user systems.",
+      "upstream_index": 18,
+      "disposition": "materially_updated_verified",
+      "handle": null,
+      "direct_post": null,
+      "post_timestamp_sgt": null,
+      "timestamp_precision": "Publisher date only unless a separate source_timestamp_sgt is supplied; no X time invented.",
+      "freshness": "verified_unseen_material_update",
+      "rank": 5
+    },
+    {
+      "event_id": "grok-bot-saved-details-release-2026-10-23",
+      "headline": "Grok Bot has added the ability to remember login, payment-card and contact details.",
+      "context": "The product announcement says these details can be saved once for use in later tasks.",
+      "source_date": "2026-10-23",
+      "sources": [
+        "https://x.com/bot/status/2113717946019397910",
+        "https://x.com/mntruell/status/2113738709799665905"
+      ],
+      "evidence_caveat": "Original product announcement directly read;03:43AMOct24SGT verified, with roster amplification bymntruell. New saved-details feature distinct from earlier enterprise/proactive-assistance releases and1Passwordagentplatform. Company announcement only; security quality not independently established and no endorsement to store sensitive details. Unseen catch-up, not a freshOctober25post. No account action, data entry or setting changed.",
+      "upstream_index": null,
+      "disposition": "independently_verified_addition",
+      "handle": "bot",
+      "direct_post": "https://x.com/bot/status/2113717946019397910",
+      "post_timestamp_sgt": "2026-10-24T03:43:23.968000+08:00",
+      "timestamp_precision": "Exact UTC decoded from original X post ID, converted to Asia/Singapore and cross-checked against directly displayed minute/date in cloud browser.",
+      "freshness": "verified_unseen_catchup",
+      "rank": 6
+    }
+  ],
+  "ai_coverage": {
+    "roster_url": "https://xstarterpack.com/",
+    "roster_count": 211,
+    "attempted_roster_profiles": 13,
+    "visible_roster_profiles": 13,
+    "header_only_roster_profiles": 0,
+    "blocked_roster_profiles": 0,
+    "unvisited_roster_profiles": 198,
+    "additional_nonroster_profiles": 1,
+    "selected_events": 6,
+    "upstream_retained_or_updated": 2,
+    "upstream_excluded": 2,
+    "independent_additions": 4,
+    "full_window_covered": false,
+    "global_cursor_advanced": false,
+    "caveat": "No exhaustive coverage claim. Login prompts limit public snapshots; no login, follows, settings or private feed accessed. Unseen catch-up items explicitly dated; prior globalOctober18anchor and all profile gaps remain unchanged."
+  },
+  "upstream_checklist": [
+    {
+      "upstream_index": 0,
+      "headline": "NEA serves legal notices to 10 Singapore-based companies over possible transboundary haze",
+      "disposition": "excluded_duplicate",
+      "reason": "Same NEA notices to ten companies delivered October24; no new enforcement finding in this upstream entry.",
+      "sources": [
+        "https://pbhat89.github.io/the-brief/podcast/reports/2026-10-24.html"
+      ]
+    },
+    {
+      "upstream_index": 1,
+      "headline": "Indonesia to cut gas exports to Singapore, but EMA says the impact is under 2% of daily demand",
+      "disposition": "retained_verified",
+      "reason": "Original Mothership report, October 24 at 20:27, quotes EMA directly. Indonesia’s stated 31 BBTUD cut differs from the 17 BBTUD reported to Singapore importers; retain only EMA’s attributed less-than-two-percent assurance. No prior matching event.",
+      "sources": [
+        "https://mothership.sg/2026/10/indonesia-cut-gas-exports-sg-ema/"
+      ],
+      "event_id": "ema-gas-cut-assurance-20261024"
+    },
+    {
+      "upstream_index": 2,
+      "headline": "Singapore to import biomethane, a low-carbon gas, with wider adoption from 2028",
+      "disposition": "corrected_verified",
+      "reason": "New supplier appointments announced October 23, not a newly invented sandbox: the pilot plan dates to October 2025. The Business Times and SGXNet confirm the 15-year,300 MW sandbox. First supplies are expected by end-2028, not broad deployment already achieved. Unseen dated catch-up.",
+      "sources": [
+        "https://mothership.sg/2026/10/spore-biomethane-2028/",
+        "https://www.businesstimes.com.sg/companies-markets/energy-commodities/keppel-energy-sembcorp-utilities-and-tuas-power-supply-biomethane-pilot-project",
+        "https://a.siasset.com/news/news.html?nid=515668835&source=sg_sgxnet"
+      ],
+      "event_id": "biomethane-suppliers-appointed-20261023"
+    },
+    {
+      "upstream_index": 3,
+      "headline": "Man jailed 14 weeks for grabbing his wife's neck in breach of a protection order",
+      "disposition": "corrected_verified",
+      "reason": "Mothership published this on October 24 at 18:12, reporting the October 23 sentence via Shin Min. The upstream publication date is incorrect. Gratuitous intimate and child-health details are omitted.",
+      "sources": [
+        "https://mothership.sg/2026/10/man-assault-wife-14-weeks-jail/"
+      ],
+      "event_id": "protection-order-sentence-20261023"
+    },
+    {
+      "upstream_index": 4,
+      "headline": "Delhi police block an opposition march to the Election Commission as voter-roll protests continue",
+      "disposition": "materially_updated_verified",
+      "reason": "Inshorts discovery on October 24 was followed to its TimesNow link, which failed. Siasat/PTI and The Hans India corroborate the new plan; The Week verifies Friday’s march and detentions. Reports conflict between October 28 and 30, so narration gives no date. A mock session has no legal impeachment effect; protest allegations are not endorsed.",
+      "sources": [
+        "https://inshorts.com/en/read/national",
+        "https://www.siasat.com/india-bloc-to-hold-public-impeachment-of-cec-gyanesh-on-oct-30-3563839/amp/",
+        "https://www.thehansindia.com/news/cities/new-delhi/opposition-mock-parliament-to-step-up-fight-against-sir-1135418",
+        "https://www.theweek.in/news/india/2026/10/23/cjp-unclear-on-future-plans-amid-eci-protest-march-in-delhi-several-detained-will-discuss-and-decide.html"
+      ],
+      "event_id": "india-opposition-mock-parliament-plan-20261024"
+    },
+    {
+      "upstream_index": 5,
+      "headline": "RBI governor says interest rates could be used to curb financial-stability and currency risks",
+      "disposition": "retained_verified",
+      "reason": "Event publisher NDTV’s live transcript at 18:27 IST on October 23 supplies the governor’s remarks. Bloomberg was inaccessible. These are conditional policy-framework remarks, not a new rate decision or repeated MPC minutes.",
+      "sources": [
+        "https://www.ndtv.com/world-news/ndtv-world-summit-2026-live-updates-narendra-modi-s-jaishankar-nikhil-kamath-a-world-between-orders-12218006/amp/1",
+        "https://www.bloomberg.com/news/articles/2026-10-23/india-s-rbi-governor-open-to-rate-use-to-curb-financial-risks"
+      ],
+      "event_id": "rbi-monetary-financial-stability-20261023"
+    },
+    {
+      "upstream_index": 6,
+      "headline": "Trump says a US-India trade deal is 'pretty close' as the Russian-oil tariff threat lingers",
+      "disposition": "excluded_stale",
+      "reason": "October20 Trump trade-deal remarks, five days old; no new signed agreement or material fact in this entry.",
+      "sources": [
+        "https://www.bloomberg.com/news/articles/2026-10-20/trump-says-us-trade-deal-with-india-is-pretty-close"
+      ]
+    },
+    {
+      "upstream_index": 7,
+      "headline": "India's Nifty struggles to hold gains as bond yields climb and the rupee stays pressured",
+      "disposition": "excluded_stale",
+      "reason": "October22 newsletter describes an earlier market session and Jioopeningdemand; no new Saturday session. Prior editions covered IPO demand and subsequent close; not relabelled.",
+      "sources": [
+        "https://www.bloomberg.com/news/newsletters/2026-10-22/jio-ipo-sees-overwhelming-demand-on-day-one-even-as-nifty-struggles"
+      ]
+    },
+    {
+      "upstream_index": 8,
+      "headline": "Burnham's first Budget, built for the bond market, tests Labour's loyalty",
+      "disposition": "excluded_insufficiently_verified",
+      "reason": "October24 Budget-preview commentary lacked accessible original text beyond headlines; political loyalty framing is analysis, not a verified new Budget decision. Replaced by separately sourced water-regulation development.",
+      "sources": [
+        "https://www.bloomberg.com/news/articles/2026-10-24/andy-burnham-tests-labour-loyalty-with-budget-built-for-bond-market"
+      ]
+    },
+    {
+      "upstream_index": 9,
+      "headline": "UK public debt tops £3 trillion for the first time as the deficit overshoots before the Budget",
+      "disposition": "excluded_duplicate",
+      "reason": "September debt/borrowing figures releasedOctober21 and deliveredOctober23. No new release.",
+      "sources": [
+        "https://pbhat89.github.io/the-brief/podcast/reports/2026-10-23.html",
+        "https://www.bloomberg.com/news/articles/2026-10-21/uk-borrowing-exceeds-forecast-in-final-data-before-budget"
+      ]
+    },
+    {
+      "upstream_index": 10,
+      "headline": "Chancellor Healey to court entrepreneurs with cuts to regulation",
+      "disposition": "excluded_duplicate",
+      "reason": "Same Healey business-regulation interview already deliveredOctober23; no enacted measure.",
+      "sources": [
+        "https://pbhat89.github.io/the-brief/podcast/reports/2026-10-23.html",
+        "https://www.bloomberg.com/news/articles/2026-10-21/uk-chancellor-to-court-entrepreneurs-with-cuts-to-regulation"
+      ]
+    },
+    {
+      "upstream_index": 11,
+      "headline": "UK payrolls rose in September and unemployment fell to 4.7%, defying forecasts",
+      "disposition": "excluded_stale",
+      "reason": "October20 labour-market release is five days old, with no fresh statistic in this entry. Excluded rather than presented as Sundaynews.",
+      "sources": [
+        "https://www.bloomberg.com/news/articles/2026-10-20/uk-payrolls-bounce-back-ahead-of-chancellor-healey-s-budget"
+      ]
+    },
+    {
+      "upstream_index": 12,
+      "headline": "Iran blames the US for a failed deal and urges new talks amid fears of fresh strikes",
+      "disposition": "retained_verified",
+      "reason": "Reuters reporting dated October 24, syndicated by AOL and MarketScreener, verifies the attributed remarks. The accusation remains Pezeshkian’s, not an independently established finding. No agreement or new strike is claimed.",
+      "sources": [
+        "https://www.aol.com/articles/irans-pezeshkian-blames-us-interim-130310000.html",
+        "https://in.marketscreener.com/news/iran-s-pezeshkian-blames-us-for-interim-deal-failure-urges-new-try-ce785cdfde8cf124"
+      ],
+      "event_id": "iran-interim-deal-renewed-call-20261024"
+    },
+    {
+      "upstream_index": 13,
+      "headline": "Eight nations' foreign ministers meet in Istanbul to urge US-Iran diplomacy over new attacks",
+      "disposition": "corrected_verified",
+      "reason": "The Turkish foreign ministry’s joint statement confirms the October 23 meeting of eight ministers and their call for dialogue and de-escalation. This follows the agreed statement rather than stronger claims about unanimous opposition to intervention. Unseen dated catch-up.",
+      "sources": [
+        "https://www.mfa.gov.tr/joint-press-release-on-the-r4-ministerial-meeting-with-counterparts-from-france-germany-italy-and-united-kingdom-istanbul-23-october-2026.en.mfa"
+      ],
+      "event_id": "istanbul-eight-ministers-diplomacy-20261023"
+    },
+    {
+      "upstream_index": 14,
+      "headline": "Update: Israel launches a major new military operation in the occupied West Bank",
+      "disposition": "materially_updated_verified",
+      "reason": "Reuters’ October 24 indexed original and The National report the new operation and displacement after the earlier cordon. The 1200 figure is attributed to a Palestinian official, not independently counted. Direct Yahoo returned 429 and The National open failed. This is a material follow-up to the prior edition.",
+      "sources": [
+        "https://malaysia.news.yahoo.com/around-1-200-palestinians-displaced-122210918.html",
+        "https://www.thenationalnews.com/news/mena/2026/10/24/arrests-demolitions-raids-and-displacement-israel-launches-days-long-west-bank-offensive/"
+      ],
+      "event_id": "hebron-operation-displacement-20261024"
+    },
+    {
+      "upstream_index": 15,
+      "headline": "Ukraine says Starlink is restored as strikes continue and November talks are set for Abu Dhabi",
+      "disposition": "corrected_verified",
+      "reason": "The primary presidential address on October 24 at 15:50 and AP confirm the announced restoration. Omit the separately bundled, unverified Abu Dhabi timing. Drone movement speed must not be confused with internet bandwidth.",
+      "sources": [
+        "https://www.president.gov.ua/en/news/vidnovili-robotu-starlinku-starshildu-na-shvidkosti-yaka-bul-107025",
+        "https://apnews.com/article/a3a0139dfc23365550306dd66fe43daa"
+      ],
+      "event_id": "ukraine-starlink-restored-20261024"
+    },
+    {
+      "upstream_index": 20,
+      "headline": "Blackstone's third-quarter earnings fall 9.2% but still beat estimates",
+      "disposition": "retained_verified_unseen_catchup",
+      "reason": "Commercial Observer’s October 22 earnings-call report directly confirms a 9.2% decline in distributable earnings toUS$1.72 billion. The 13% per-share decline is a different metric. This is explicitly unseen Thursday catch-up, not a Sunday release.",
+      "sources": [
+        "https://commercialobserver.com/2026/10/blackstone-earnings-third-quarter/",
+        "https://www.bloomberg.com/news/articles/2026-10-22/blackstone-profit-drops-9-2-as-rates-inflation-curb-dealmaking"
+      ],
+      "event_id": "blackstone-q3-2026-earnings"
+    },
+    {
+      "upstream_index": 21,
+      "headline": "Brent crude settles above $116, a six-month high, on Houthi attacks and Iran war fears",
+      "disposition": "corrected_verified_unseen_catchup",
+      "reason": "AP’s Friday closing report verifies the settlement. Conflicting historical-high comparisons are omitted. The prior briefing mentioned oil rising with stocks but did not report this benchmark settlement; this is a distinct commodity datapoint, not a new Saturday trading session.",
+      "sources": [
+        "https://apnews.com/article/7b47ef3b037bfba4e34f685329b9b963",
+        "https://www.kiplinger.com/investing/stocks/dow-drops-652-points-as-oil-treasury-yields-rise-stock-market-today"
+      ],
+      "event_id": "brent-friday-settlement-20261023"
+    },
+    {
+      "upstream_index": 22,
+      "headline": "Markets see the Fed holding at its Oct 28 meeting, with a December hike near-certain",
+      "disposition": "excluded_insufficiently_verified",
+      "reason": "Market expectations before October28meeting are forecasts, not Feddecision; exact December near-certainty lacked accessible contemporaneous primary probability evidence. No padding with unverified probability.",
+      "sources": [
+        "https://www.cnbc.com/2026/10/23/next-week-brings-major-risks-for-the-stock-market-just-as-the-ai-trade-keeps-faltering.html"
+      ]
+    },
+    {
+      "upstream_index": 23,
+      "headline": "Salesforce to buy marketing platform Braze for about $5.66 billion, sending its shares up 51%",
+      "disposition": "excluded_stale",
+      "reason": "October20 acquisition agreement is five days old; no new approval/closing fact. OfficialSalesforcerelease confirmsplanneddealnotcompletion.",
+      "sources": [
+        "https://www.salesforce.com/news/press-releases/2026/10/20/salesforce-signs-definitive-agreement-to-acquire-braze/"
+      ]
+    },
+    {
+      "upstream_index": 24,
+      "headline": "India beat New Zealand by four wickets in Christchurch to go 2-0 up in the T20I series",
+      "disposition": "retained_verified",
+      "reason": "The ICC’s October 24 original directly confirms the second T 20 I, target 181, four-wicket win and 69-run partnership. It is distinct from the October 22 first match already covered; identical victory margins do not make the matches duplicates.",
+      "sources": [
+        "https://www.icc-cricket.com/news/tilak-nitish-hold-their-nerve-as-india-take-2-0-lead",
+        "https://www.cricbuzz.com/live-cricket-scores/161201/vs-new-zealand-2026-10-24-hagley-oval"
+      ],
+      "event_id": "india-nz-second-t20-20261024"
+    },
+    {
+      "upstream_index": 25,
+      "headline": "Hamilton tops final practice as Ferrari and Mercedes set the pace before US GP qualifying",
+      "disposition": "materially_updated_verified",
+      "reason": "Official Formula 1 qualifying report published October 24 at 22:22 UTC confirms pole ahead of Verstappen and Hadjar. The 18:53 UTC practice report confirms Hamilton fastest. The upstream practice item is preserved in context and updated with completed qualifying; the race has not happened.",
+      "sources": [
+        "https://www.formula1.com/en/latest/article/antonelli-seizes-pole-position-ahead-of-verstappen-in-qualifying-at-the-united-states-gp.4xdH4w09GhNDOJdknowRAk",
+        "https://www.formula1.com/en/latest/article/fp3-hamilton-goes-fastest-in-final-practice-session-for-the-united-states-gp-ahead-of-verstappen-and-leclerc.1KQ5x8wUAtBETnHxKDNldC"
+      ],
+      "event_id": "f1-us-qualifying-20261024"
+    },
+    {
+      "upstream_index": 26,
+      "headline": "Lindblad, Colapinto and Bortoleto handed grid penalties for the US Grand Prix",
+      "disposition": "retained_verified",
+      "reason": "Official Formula 1 report originated October 23 at 19:08 UTC and was updated with Saturday’s additional Bortoleto changes. His cumulative 80-place penalty means a back-of-grid start; Lindblad loses five places and Colapinto ten. This is not their final starting order.",
+      "sources": [
+        "https://www.formula1.com/en/latest/article/lindblad-colapinto-and-bortoleto-to-take-grid-penalties-for-united-states-grand-prix.4qjn84W4zOmwNXeELFWn0k"
+      ],
+      "event_id": "f1-us-grid-penalties-20261024"
+    },
+    {
+      "upstream_index": 27,
+      "headline": "Djokovic accepts a wild card for the Swiss Indoors in Basel as the ATP 500 draws open",
+      "disposition": "materially_updated_verified",
+      "reason": "Djokovic’s official website confirms the October 24 draw and Humbert opener. The original wildcard announcement was October 16. The fresh opponent and draw lead the item, not a relabelled wildcard announcement.",
+      "sources": [
+        "https://novakdjokovic.com/en/news/tennis/novak-to-face-humbert-in-basel-opener/",
+        "https://tennisnow.com/djokovic-accepts-wild-card-into-basel/"
+      ],
+      "event_id": "djokovic-basel-draw-20261024"
+    },
+    {
+      "upstream_index": 28,
+      "headline": "Moderna and Merck's mRNA cancer vaccine cuts melanoma recurrence or death by 42% in a phase 3 trial",
+      "disposition": "corrected_verified",
+      "reason": "Primary University of Sydney investigators and Moderna’s October 24 presentation verify the phase 3 result in 1137 high-risk patients after melanoma surgery. The 42% figure is relative risk/hazard reduction, not an absolute cure rate. The therapy is investigational. Results first released October 22 and presented October 24; primary sources replace inaccessible Nature reporting.",
+      "sources": [
+        "https://www.sydney.edu.au/news-opinion/news/2026/10/23/world-first-personalised-therapeutic-cancer-vaccine-cuts-risk-of.html",
+        "https://www.modernatx.com/recapping-the-phase-three-interpath-results",
+        "https://investors.modernatx.com/scientific-medical-meetings"
+      ],
+      "event_id": "interpath-phase3-melanoma-20261024"
+    },
+    {
+      "upstream_index": 29,
+      "headline": "CRISPR prime editing is used directly inside a patient's body for the first time",
+      "disposition": "excluded_stale_incorrect",
+      "reason": "LinkedarticleisMarch6,2020(reproducedNatureMarch5,2020), aboutCRISPR-Cas9injectionforinheritedblindness, not2026primeediting. Excludedfalsefreshness/technologyconflation.",
+      "sources": [
+        "https://www.scientificamerican.com/article/crispr-treatment-inserted-directly-into-the-body-for-the-first-time/"
+      ]
+    },
+    {
+      "upstream_index": 30,
+      "headline": "Physicists trap a single antimatter particle, a positron, for a month",
+      "disposition": "retained_verified_unseen_catchup",
+      "reason": "Northwestern’s October 23 institutional announcement was directly read. The underlying research was reported October 21; this is dated unseen catch-up, not a new Sunday experiment. It does not prove matter–antimatter differences or establish first-ever antimatter storage.",
+      "sources": [
+        "https://physics.northwestern.edu/about/news/2026/gabrielse-lab-traps-a-single-antimatter-particle-for-a-month.html"
+      ],
+      "event_id": "northwestern-single-positron-20261023"
+    },
+    {
+      "upstream_index": 31,
+      "headline": "An AI estimates cancer patients' survival odds from a single photo of their face",
+      "disposition": "excluded_stale",
+      "reason": "UnderlyingScientificAmericanreportOctober19andstudyreleasedthatMonday; nonewvalidationorclinicaldeploymentinupstream. Sourceheadlineoverstatesindividualprediction; excludedoldpreliminaryfindingratherthanpromotedascurrentclinicaltool.",
+      "sources": [
+        "https://www.scientificamerican.com/article/can-ai-predict-whether-youll-die-from-cancer-from-just-an-image-of-your-face/",
+        "https://www.howtechmoves.com/news/can-ai-predict-whether-youll-die-from-cancer-from-just-an-image-of-286af3"
+      ]
+    },
+    {
+      "upstream_index": 16,
+      "headline": "OpenAI says it will stop training its models on the live internet, citing 'significant risks'",
+      "disposition": "excluded_delivered_duplicate",
+      "reason": "The offline-frontier-training safeguards disclosure, including Brotli supplementary disclosure, was already deliveredOctober24. No material new fact in thisOctober23article.",
+      "event_id": null,
+      "previous_delivery_date": "2026-10-24",
+      "sources": [
+        "https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/"
+      ]
+    },
+    {
+      "upstream_index": 17,
+      "headline": "Anthropic launches Claude Duet, an agent app for professionals built on Claude Opus 5.5",
+      "disposition": "excluded_delivered_duplicate",
+      "reason": "ClaudeDuet researchpreview was deliveredOctober23; October22TechCrunchcoverage adds no verified material new product fact.",
+      "event_id": null,
+      "previous_delivery_date": "2026-10-23",
+      "sources": [
+        "https://techcrunch.com/2026/10/22/claude-duet-app-is-anthropics-bet-on-agents/"
+      ]
+    },
+    {
+      "upstream_index": 18,
+      "headline": "AI-discovered flaws in PHP knock government sites offline as the NSA urges urgent patching",
+      "disposition": "materially_updated_verified",
+      "reason": "Replace old broadOctober21PHPincident headline with the directly verifiedOctober23unusualsession-configuration advisory. Underlying older emergencypatches are not represented as new.",
+      "event_id": "php-session-upload-progress-advisory-2026-10-23",
+      "previous_delivery_date": null,
+      "sources": [
+        "https://techcrunch.com/2026/10/21/the-internet-is-having-a-very-bad-cybersecurity-day/"
+      ]
+    },
+    {
+      "upstream_index": 19,
+      "headline": "Developer platform Railway tells all users to rotate keys after a cyberattack",
+      "disposition": "materially_updated_verified",
+      "reason": "ReplaceOctober22rotationheadline withOctober24official clarification that precautionary revocations included newer replacementkeys and do not mean a newattack.",
+      "event_id": "railway-replacement-key-revocations-clarification-2026-10-24",
+      "previous_delivery_date": null,
+      "sources": [
+        "https://techcrunch.com/2026/10/22/developer-platform-railway-urges-all-users-to-revoke-secret-keys-after-cyberattack/"
+      ]
+    }
+  ],
+  "podcast_learning": {
+    "original_date": "2026-10-23",
+    "original_date_sgt": "2026-10-24T06:12:00+08:00",
+    "report_summary": "Alex Stamos explains how forgotten event websites can remain exposed after their business purpose ends. The distinct lesson is digital-asset ownership and retirement, supported by CIS asset-inventory guidance. The webinar example is an editorial application.",
+    "summary_coverage": [
+      "Forgotten event websites and retained registration data",
+      "Asset ownership, review dates and retirement as editorial business application"
+    ],
+    "segment_references": [
+      "56:39–57:39: forgotten event websites, retained data and wider attack surface",
+      "48:34–49:55: patching does not establish that earlier compromise did not occur; context only, not restated as fresh incident news"
+    ],
+    "transcript_source_url": "https://podscripts.co/podcasts/big-technology-podcast/googles-potential-ai-money-spigot-shutting-php-bug-cybersecuritys-black-october",
+    "transcript_provenance": "third-party-transcription",
+    "crosscheck_sources": [
+      "https://www.cisecurity.org/controls/inventory-and-control-of-enterprise-assets"
+    ],
+    "caveat": "Automatic third-party transcript, not publisher-approved; no verbatim quotations, unverified incident statistics, or uncertain names. Stamos’s interpretation is attributed. No technical remediation is performed or prescribed for a specific system.",
+    "show": "Big Technology Podcast",
+    "title": "Google’s Potential, AI Money Spigot Shutting?, PHP Bug & Cybersecurity’s “Black October”",
+    "episode_id": "big-technology:59149ba6-cf2e-11f1-823a-07bb6f417cfd",
+    "availability": "Original released October23UTC; previously inaccessible transcript became available for this edition. This is not an October25 original."
+  },
+  "expert_learning": {
+    "concept_id": "search-budget-across-important-settings",
+    "thinkers": [
+      "Andrej Karpathy"
+    ],
+    "theme": "technical_coding",
+    "title": "Spend experiment budgets on more distinct settings",
+    "source_url": "https://karpathy.github.io/2019/04/25/recipe/",
+    "sources": [
+      "https://karpathy.github.io/2019/04/25/recipe/",
+      "https://jmlr.org/papers/v13/bergstra12a.html"
+    ],
+    "original_date": "2019-04-25",
+    "classification": "evergreen",
+    "faithful_paraphrase": "Karpathy explains that random search can explore consequential settings more efficiently than a rigid grid when a model is sensitive to only some settings.",
+    "editorial_application": "In a bounded AI experiment, compare configurations within safe predefined ranges against the same evaluation set, instead of wasting repeated trials on settings with little effect. The nine-trial example is editorial.",
+    "report_summary": "Karpathy explains that random search can explore consequential settings more efficiently than a rigid grid when a model is sensitive to only some settings. The nine-trial example is editorial, and this is not a claim of universal superiority over adaptive search.",
+    "caveat": "This is an evergreen experimental-design intuition, not a universal claim that random search beats modern adaptive methods. Distinct from inspecting inputs or validating a tiny pipeline."
+  },
+  "interesting_fact": {
+    "event_id": "mantis-shrimp-cavitation-second-strike-force",
+    "title": "A mantis shrimp strike has a second force",
+    "source_url": "https://pateklab.biology.duke.edu/research/mechanics-of-ultrafast-movement/mechanics-of-movement-mantis-shrimp/",
+    "sources": [
+      "https://pateklab.biology.duke.edu/research/mechanics-of-ultrafast-movement/mechanics-of-movement-mantis-shrimp/",
+      "https://ib.berkeley.edu/labs/patek/shrimpMechanics/Pateketal2004Nature.pdf"
+    ],
+    "original_date": null,
+    "classification": "evergreen",
+    "claim": "Peacock mantis shrimp strikes create cavitation bubbles; their collapse delivers a separate force after the appendage strikes prey.",
+    "upstream_disposition": "Same mantis-shrimp topic retained; narrowed to directly verified strike physics. The separate eye-receptor claim and kill-on-a-miss claim are not needed and are not narrated.",
+    "caveat": "Not all mantis shrimp are smashers. Vapour bubbles, not ordinary air bubbles; no bullet-speed comparison or hotter-than-Sun embellishment."
+  },
+  "diagnostics": {
+    "general_source_errors": [
+      "Several Bloomberg, Al Jazeera, CNBC, ESPN and Nature pages were inaccessible. Primary sources or trusted original-publisher alternatives were used with per-item provenance.",
+      "Inshorts was readable. Its TimesNow X and ANI links failed. The opposition-plan item was independently corroborated; conflicting exact dates are omitted."
+    ],
+    "inshorts": {
+      "attempted": true,
+      "public_web_read": true,
+      "selected_underlying_events": 1,
+      "excluded_candidates": [
+        "Andhra100urbanlocalbodyhaltappearsOct21eventdespiteOct24Inshortspost,nonewfact;otheritemsminorornotindependentlyverified"
+      ]
+    },
+    "ai_source_gaps": [
+      "AA-AgentPerf directlandingpage fetchfailed; full original benchmarkauthorpost was accessible.",
+      "No directXpost/time verified forUKgovernmentlab orPHP; source dates retained, notsearch-index dates."
+    ],
+    "learning": {
+      "everyday_ai": {
+        "surfaces_checked": [
+          "https://www.youtube.com/@EverydayAI_/videos",
+          "https://www.youtube.com/@EverydayAI_/streams",
+          "https://www.youreverydayai.com/episodes/",
+          "https://www.youreverydayai.com/blog/",
+          "https://www.youreverydayai.com/category/ai-news/",
+          "https://read.youreverydayai.com/"
+        ],
+        "listing_access": "Web extractor returned only footer for YouTube; direct public HTML successfully parsed30Videos and30Live entries. LatestVideosEp888explicitReplay; latestoriginalLive9_XAioMMtDA and allpublisher surfaces remainAug14Ep841. No new eligible original; no historical backfill.",
+        "newest_video_id": "hO4qoN0MZVI",
+        "latest_original_id": "9_XAioMMtDA"
+      },
+      "big_technology": {
+        "rss_retrieved": true,
+        "rss_sha256": "7a913117917efbcfec07b81a4411b4dcdec2c985a46ff3686fcdc7e8b688ae3a",
+        "latest_original_id": "big-technology:59149ba6-cf2e-11f1-823a-07bb6f417cfd",
+        "new_evidence": "Previously inaccessible Oct23 transcript now retrieved; selected distinct practical section. Fixed catch-up seed unchanged."
+      },
+      "expert_sources": "Andrew Ng direct issue323 and book landing page returned403; not used. Karpathy original and linked2012 primary paper directly readable."
+    },
+    "dedup_scope": "Available archive and delivery records were compared semantically. Existing historical-import and full-window coverage gaps remain; this is not an exhaustive source review."
+  },
+  "ai_partial_observations": [
+    {
+      "handle": "karpathy",
+      "profile_url": "https://x.com/karpathy",
+      "observed_sgt": "2026-10-25T07:03:35.322000+08:00",
+      "roster_member": true,
+      "outcome": "visible_bounded_posts",
+      "observed_post_urls": [
+        "https://x.com/karpathy/status/2109361546505966046",
+        "https://x.com/karpathy/status/2042334451611693415",
+        "https://x.com/karpathy/status/2105909609487872075",
+        "https://x.com/celestepoasts/status/2103232383139057950",
+        "https://x.com/karpathy/status/2105819303471976479",
+        "https://x.com/karpathy/status/2083749667410727319",
+        "https://x.com/karpathy/status/2079610838143623371"
+      ],
+      "scope": "Bounded publicly rendered snapshot, not exhaustive timeline or full-window review.",
+      "full_window_covered": false,
+      "profile_cursor_advanced": false,
+      "note": null
+    },
+    {
+      "handle": "bcherny",
+      "profile_url": "https://x.com/bcherny",
+      "observed_sgt": "2026-10-25T07:03:35.561000+08:00",
+      "roster_member": true,
+      "outcome": "visible_bounded_posts",
+      "observed_post_urls": [
+        "https://x.com/bcherny/status/2113333859907747871",
+        "https://x.com/ClaudeDevs/status/2113328526413996100",
+        "https://x.com/bcherny/status/2111158659971699136",
+        "https://x.com/bcherny/status/2111158313463525518",
+        "https://x.com/ClaudeDevs/status/2110866210573386065",
+        "https://x.com/bcherny/status/2110791698611855624",
+        "https://x.com/GraySwanAI/status/2110746350983737460",
+        "https://x.com/bcherny/status/2108004023249088528"
+      ],
+      "scope": "Bounded publicly rendered snapshot, not exhaustive timeline or full-window review.",
+      "full_window_covered": false,
+      "profile_cursor_advanced": false,
+      "note": null
+    },
+    {
+      "handle": "embirico",
+      "profile_url": "https://x.com/embirico",
+      "observed_sgt": "2026-10-25T07:03:35.791000+08:00",
+      "roster_member": true,
+      "outcome": "visible_bounded_posts",
+      "observed_post_urls": [
+        "https://x.com/embirico/status/2111155586125471793",
+        "https://x.com/danshipper/status/2110802324939485505",
+        "https://x.com/embirico/status/2108669028441219559",
+        "https://x.com/ChatGPT/status/2108636745915052037",
+        "https://x.com/embirico/status/2108607445165637814",
+        "https://x.com/bentossell/status/2108573499606315140",
+        "https://x.com/embirico/status/2108607017833341421",
+        "https://x.com/OpenAIDevs/status/2108573188703781190",
+        "https://x.com/pavandavuluri/status/2107910939555271097",
+        "https://x.com/embirico/status/2108264558863560940"
+      ],
+      "scope": "Bounded publicly rendered snapshot, not exhaustive timeline or full-window review.",
+      "full_window_covered": false,
+      "profile_cursor_advanced": false,
+      "note": null
+    },
+    {
+      "handle": "simonw",
+      "profile_url": "https://x.com/simonw",
+      "observed_sgt": "2026-10-25T07:03:35.994000+08:00",
+      "roster_member": true,
+      "outcome": "visible_bounded_posts",
+      "observed_post_urls": [
+        "https://x.com/simonw/status/2113691493823369246",
+        "https://x.com/Kimi_Moonshot/status/2113680701770068067",
+        "https://x.com/simonw/status/2113633667583287786",
+        "https://x.com/simonw/status/2113356466770121166",
+        "https://x.com/simonw/status/2112944161670488423",
+        "https://x.com/Meffysto69/status/2112908755654365220",
+        "https://x.com/simonw/status/2112630778068881543"
+      ],
+      "scope": "Bounded publicly rendered snapshot, not exhaustive timeline or full-window review.",
+      "full_window_covered": false,
+      "profile_cursor_advanced": false,
+      "note": null
+    },
+    {
+      "handle": "AnthropicAI",
+      "profile_url": "https://x.com/AnthropicAI",
+      "observed_sgt": "2026-10-25T07:03:36.225000+08:00",
+      "roster_member": true,
+      "outcome": "visible_bounded_posts",
+      "observed_post_urls": [
+        "https://x.com/AnthropicAI/status/2113626655902126442",
+        "https://x.com/AnthropicAI/status/2113390212911083894",
+        "https://x.com/AnthropicAI/status/2112966949273801086",
+        "https://x.com/AnthropicAI/status/2112946750264676743",
+        "https://x.com/AnthropicAI/status/2112579251555721573"
+      ],
+      "scope": "Bounded publicly rendered snapshot, not exhaustive timeline or full-window review.",
+      "full_window_covered": false,
+      "profile_cursor_advanced": false,
+      "note": null
+    },
+    {
+      "handle": "GoogleDeepMind",
+      "profile_url": "https://x.com/GoogleDeepMind",
+      "observed_sgt": "2026-10-25T07:03:36.437000+08:00",
+      "roster_member": true,
+      "outcome": "visible_bounded_posts",
+      "observed_post_urls": [
+        "https://x.com/GoogleDeepMind/status/2111127991401247033",
+        "https://x.com/maxencefaldor/status/2111023397106770026",
+        "https://x.com/GoogleDeepMind/status/2113645959762575623",
+        "https://x.com/GoogleDeepMind/status/2113278710795153785",
+        "https://x.com/GoogleDeepMind/status/2112974723659247896",
+        "https://x.com/GoogleDeepMind/status/2112557925264752930"
+      ],
+      "scope": "Bounded publicly rendered snapshot, not exhaustive timeline or full-window review.",
+      "full_window_covered": false,
+      "profile_cursor_advanced": false,
+      "note": null
+    },
+    {
+      "handle": "OfficialLoganK",
+      "profile_url": "https://x.com/OfficialLoganK",
+      "observed_sgt": "2026-10-25T07:03:36.645000+08:00",
+      "roster_member": true,
+      "outcome": "visible_bounded_posts",
+      "observed_post_urls": [
+        "https://x.com/OfficialLoganK/status/2112767157746688480",
+        "https://x.com/OfficialLoganK/status/2111961115433509285",
+        "https://x.com/OfficialLoganK/status/2110810395598528788",
+        "https://x.com/OfficialLoganK/status/2110420958737813612",
+        "https://x.com/OfficialLoganK/status/2110038940841545827"
+      ],
+      "scope": "Bounded publicly rendered snapshot, not exhaustive timeline or full-window review.",
+      "full_window_covered": false,
+      "profile_cursor_advanced": false,
+      "note": null
+    },
+    {
+      "handle": "trq212",
+      "profile_url": "https://x.com/trq212",
+      "observed_sgt": "2026-10-25T07:03:36.822000+08:00",
+      "roster_member": true,
+      "outcome": "visible_bounded_posts",
+      "observed_post_urls": [
+        "https://x.com/trq212/status/2035372716820218141",
+        "https://x.com/trq212/status/2113844051938054167",
+        "https://x.com/trq212/status/2112219173288120531",
+        "https://x.com/trq212/status/2111945336537420259",
+        "https://x.com/trq212/status/2111883082953547881",
+        "https://x.com/trq212/status/2105333496768319969"
+      ],
+      "scope": "Bounded publicly rendered snapshot, not exhaustive timeline or full-window review.",
+      "full_window_covered": false,
+      "profile_cursor_advanced": false,
+      "note": null
+    },
+    {
+      "handle": "ArtificialAnlys",
+      "profile_url": "https://x.com/ArtificialAnlys",
+      "observed_sgt": "2026-10-25T07:03:36.941000+08:00",
+      "roster_member": true,
+      "outcome": "visible_bounded_posts",
+      "observed_post_urls": [
+        "https://x.com/ArtificialAnlys/status/2113772381504438420",
+        "https://x.com/ArtificialAnlys/status/2113772383261839553",
+        "https://x.com/yusufksadek/status/2113793168592261335"
+      ],
+      "scope": "Bounded publicly rendered snapshot, not exhaustive timeline or full-window review.",
+      "full_window_covered": false,
+      "profile_cursor_advanced": false,
+      "note": "Final snapshot is the selected direct post; profile itself was read before navigation."
+    },
+    {
+      "handle": "thsottiaux",
+      "profile_url": "https://x.com/thsottiaux",
+      "observed_sgt": "2026-10-25T07:03:37.076000+08:00",
+      "roster_member": true,
+      "outcome": "visible_bounded_posts",
+      "observed_post_urls": [
+        "https://x.com/thsottiaux/status/2114074885622501706",
+        "https://x.com/thsottiaux/status/2114030784625647855",
+        "https://x.com/thsottiaux/status/2113838156193894447",
+        "https://x.com/thsottiaux/status/2113770573994299544",
+        "https://x.com/thsottiaux/status/2113492187770175603"
+      ],
+      "scope": "Bounded publicly rendered snapshot, not exhaustive timeline or full-window review.",
+      "full_window_covered": false,
+      "profile_cursor_advanced": false,
+      "note": null
+    },
+    {
+      "handle": "OpenAI",
+      "profile_url": "https://x.com/OpenAI",
+      "observed_sgt": "2026-10-25T07:03:37.306000+08:00",
+      "roster_member": true,
+      "outcome": "visible_bounded_posts",
+      "observed_post_urls": [
+        "https://x.com/OpenAI/status/2107894997538525580",
+        "https://x.com/OpenAI/status/2113766354386084338",
+        "https://x.com/OpenAI/status/2113718797505036665",
+        "https://x.com/OpenAI/status/2113298833392496746",
+        "https://x.com/METR_Evals/status/2113290966933389390",
+        "https://x.com/OpenAI/status/2112988118471295323"
+      ],
+      "scope": "Bounded publicly rendered snapshot, not exhaustive timeline or full-window review.",
+      "full_window_covered": false,
+      "profile_cursor_advanced": false,
+      "note": null
+    },
+    {
+      "handle": "levie",
+      "profile_url": "https://x.com/levie",
+      "observed_sgt": "2026-10-25T07:03:37.505000+08:00",
+      "roster_member": true,
+      "outcome": "visible_bounded_posts",
+      "observed_post_urls": [
+        "https://x.com/levie/status/2113738768645808277",
+        "https://x.com/EnclaveAI/status/2113728305220239739",
+        "https://x.com/levie/status/2113499900399034689",
+        "https://x.com/DabsMalone/status/2113235487536324725",
+        "https://x.com/levie/status/2113137032633757773",
+        "https://x.com/fiveoutofnine/status/2113045722744717360",
+        "https://x.com/levie/status/2112964214818283917",
+        "https://x.com/NSACyber/status/2112903220209098897",
+        "https://x.com/levie/status/2112769686798832013"
+      ],
+      "scope": "Bounded publicly rendered snapshot, not exhaustive timeline or full-window review.",
+      "full_window_covered": false,
+      "profile_cursor_advanced": false,
+      "note": null
+    },
+    {
+      "handle": "mntruell",
+      "profile_url": "https://x.com/mntruell",
+      "observed_sgt": "2026-10-25T07:03:37.703000+08:00",
+      "roster_member": true,
+      "outcome": "visible_bounded_posts",
+      "observed_post_urls": [
+        "https://x.com/mntruell/status/2113738709799665905",
+        "https://x.com/bot/status/2113717946019397910",
+        "https://x.com/mntruell/status/2111218918362861958",
+        "https://x.com/bot/status/2111184270819803351",
+        "https://x.com/mntruell/status/2105736227613974783",
+        "https://x.com/bot/status/2105713240701538538",
+        "https://x.com/mntruell/status/2102073686970843638",
+        "https://x.com/SpaceXSI/status/2102069815225586149",
+        "https://x.com/mntruell/status/2095625771541008756",
+        "https://x.com/bot/status/2095621571335655872"
+      ],
+      "scope": "Bounded publicly rendered snapshot, not exhaustive timeline or full-window review.",
+      "full_window_covered": false,
+      "profile_cursor_advanced": false,
+      "note": null
+    },
+    {
+      "handle": "NVIDIAAI",
+      "profile_url": "https://x.com/NVIDIAAI",
+      "observed_sgt": "2026-10-25T07:03:37.942000+08:00",
+      "roster_member": false,
+      "outcome": "visible_bounded_posts",
+      "observed_post_urls": [
+        "https://x.com/NVIDIAAI/status/2113697272475320559",
+        "https://x.com/NVIDIAAI/status/2113657112408785153",
+        "https://x.com/NVIDIAAI/status/2113252578712821780",
+        "https://x.com/NVIDIAAI/status/2113230179799548220",
+        "https://x.com/NVIDIAAI/status/2112942083778732260"
+      ],
+      "scope": "Bounded publicly rendered snapshot, not exhaustive timeline or full-window review.",
+      "full_window_covered": false,
+      "profile_cursor_advanced": false,
+      "note": null
+    }
+  ]
+}

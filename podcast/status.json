@@ -1,6 +1,6 @@
 {
   "run_id": "morning-2026-10-25",
-  "updated_at": "2026-10-24T23:01:38.193401+00:00",
+  "updated_at": "2026-10-24T23:07:20.900787+00:00",
   "previous_run": {
     "run_id": "morning-2026-10-24",
     "state": "completed",
@@ -11,49 +11,49 @@
       "id": "history",
       "label": "History and operational feedback",
       "state": "completed",
-      "updated_at": "2026-10-24T23:01:38.193401+00:00",
+      "updated_at": "2026-10-24T23:07:20.900787+00:00",
       "detail": "Prior delivered history and operational feedback read; existing coverage gaps preserved."
     },
     {
       "id": "upstream",
       "label": "Same-day upstream intake",
       "state": "completed",
-      "updated_at": "2026-10-24T23:01:38.193401+00:00",
+      "updated_at": "2026-10-24T23:07:20.900787+00:00",
       "detail": "Same-day upstream HTML and JSON available with 32 entries; source verification is in progress."
     },
     {
       "id": "research",
       "label": "Source research and deduplication",
-      "state": "running",
-      "updated_at": "2026-10-24T23:01:38.193401+00:00",
-      "detail": "Parallel source verification and all-item freshness reconciliation are in progress."
+      "state": "completed",
+      "updated_at": "2026-10-24T23:07:20.900787+00:00",
+      "detail": "27 verified headlines; all 32 upstream entries reconciled, including all four sports items. Bounded source gaps retained."
     },
     {
       "id": "script",
       "label": "Narrative preparation",
-      "state": "pending",
-      "updated_at": "2026-10-24T23:01:38.193401+00:00",
-      "detail": "Awaiting this stage."
+      "state": "completed",
+      "updated_at": "2026-10-24T23:07:20.900787+00:00",
+      "detail": "Concise headline-and-context narration and separate intuitive learning segments prepared."
     },
     {
       "id": "audio",
       "label": "Private narration checks",
-      "state": "pending",
-      "updated_at": "2026-10-24T23:01:38.193401+00:00",
-      "detail": "Awaiting this stage."
+      "state": "running",
+      "updated_at": "2026-10-24T23:07:20.900787+00:00",
+      "detail": "Private narration rendering and technical checks are in progress."
     },
     {
       "id": "publication",
       "label": "Public report publication",
-      "state": "pending",
-      "updated_at": "2026-10-24T23:01:38.193401+00:00",
-      "detail": "Awaiting this stage."
+      "state": "running",
+      "updated_at": "2026-10-24T23:07:20.900787+00:00",
+      "detail": "Public report and evidence prepared; HTTPS verification precedes catalogue promotion."
     },
     {
       "id": "delivery",
       "label": "Private episode delivery",
       "state": "pending",
-      "updated_at": "2026-10-24T23:01:38.193401+00:00",
+      "updated_at": "2026-10-24T23:07:20.900787+00:00",
       "detail": "Awaiting this stage."
     }
   ]
