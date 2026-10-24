@@ -78,3 +78,8 @@ At the initial research checkpoint, the specific-knowledge-through-curiosity can
 ## Confirmed use, 24 October 2026
 
 Naval Ravikant's evergreen 25 March 2019 specific-knowledge-through-curiosity lesson was included in the verified, accepted combined edition: [public report](https://pbhat89.github.io/the-brief/podcast/reports/2026-10-24.html). The lesson connects distinctive expertise with genuine curiosity; the operations-analyst example and AI application are explicitly editorial. Only this concept is now recorded as narrated. All earlier concepts, source reviews and history gaps are preserved. No podcast recap was delivered, and no podcast coverage state or fixed catch-up seed is changed by this reconciliation.
+
+
+## Confirmed use, 25 October 2026
+
+Karpathy’s evergreen 25 April 2019 explanation of random versus grid search was included in the verified, accepted combined edition: [public report](https://pbhat89.github.io/the-brief/podcast/reports/2026-10-25.html). The lesson concerns unequal importance of model settings and a limited experiment budget, not the previously covered input-inspection or tiny-pipeline checks. The nine-trial example and business application are editorial; no universal superiority claim is made. Only this new concept gains a narrated use; prior concepts and history gaps are preserved.

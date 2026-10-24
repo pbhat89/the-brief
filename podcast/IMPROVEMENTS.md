@@ -125,3 +125,12 @@ Completed: all-item reconciliation retained the same concise news structure whil
 Before publication, every selected headline was checked for exactly one news card, including science; spoken/script fields and personal-context caveats were stripped. Conditions met the normal time budget while carrying one source-backed unhealthy-air caution.
 
 A bounded narration measurement now compares written-word pace with emitted-phoneme lexical units. The latter is explicitly an estimate; source-number expansion and token segmentation can differ from a human word count. Proposed next validation is a reviewed number-heavy sample, with comprehension and naturalness as success measures, before any further pace adjustment. No listener-satisfaction or physical-device-playback conclusion follows from technical checks.
+
+
+## Reset recovery and exact package-manager checks · 25 October 2026
+
+Observed: workspace reset removed narration assets, and newer dependency resolution produced a tokenizer incompatibility. Restoring the official previously compatible dependency version, verifying model hashes and testing initialization offline resolved it before synthesis. Preserve a verified private runtime manifest; do not infer availability from a previous run.
+
+The public development-tool audit also exposed a vulnerable transitive package. A minimal official patched override passed audit, but its first lockfile layout was incompatible with the CI package-manager version. Reproducing the clean install with CI’s exact version resolved the mismatch; all tests and hosted deployment passed. Keep audits intact, verify lockfile portability before committing, and preserve a reversible diff. This is tested maintenance, not expanded application scope.
+
+A previously unavailable current-original podcast transcript became accessible on the next run and was then summarized. Recheck pending sources without marking inaccessible episodes covered or refilling the completed catch-up queue.

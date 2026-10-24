@@ -63,3 +63,8 @@ The fixed catch-up queue's third original, published 9 October at 16:51 UTC, was
 ## Coverage reconciliation, 23 October 2026
 
 After the unchanged three-episode seed was completed, the latest-only check selected Sundar Pichai's original 20 October episode (17:18 UTC). The actual third-party transcript at 16:54–22:52 supports the recap on compute allocation, capacity lead times and demand uncertainty. The document-processing capacity example is editorial, not a Pichai claim; transcription limitations remain. Everyday AI's current qualifying original and transcript could not be established, so Big Technology was used without claiming exhaustive source coverage. The recap was included in the verified, accepted combined edition: [public report](https://pbhat89.github.io/the-brief/podcast/reports/2026-10-23.html). Earlier episodes and the fixed seed are preserved.
+
+
+## Coverage reconciliation, 25 October 2026
+
+The latest qualifying Big Technology original, published 23 October at 22:12 UTC, now had an accessible actual third-party transcript. The distinct 56:39–57:39 recap covers forgotten event websites, retained data and digital-asset lifecycle responsibility; the webinar application is editorial and CIS asset-inventory guidance independently supports the principle. No previous PHP incident statistics or Pichai compute-allocation lesson were repeated. The recap was included in the verified, accepted [combined edition](https://pbhat89.github.io/the-brief/podcast/reports/2026-10-25.html). The fixed three-episode seed, older published episodes and historical gaps remain unchanged.

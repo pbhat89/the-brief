@@ -187,6 +187,22 @@
       "catchupPreserved": true,
       "everydayAI": "Current public YouTube Videos and Live listings read. Latest Videos Ep 888 is explicitly Replay; latest original Live and publisher episodes/blog/newsletter remain August 14, Ep 841. Actual original publisher transcript read, but historical material is not newly released and was not selected.",
       "stateAuthority": "Research only. The fixed seed is unchanged. No coverage or delivery state advanced."
+    },
+    {
+      "dateSGT": "2026-10-25",
+      "checkedAt": "2026-10-24T23:04:18.183735+00:00",
+      "rssRetrieved": true,
+      "rssSha256": "7a913117917efbcfec07b81a4411b4dcdec2c985a46ff3686fcdc7e8b688ae3a",
+      "latestOriginal": {
+        "episodeId": "big-technology:59149ba6-cf2e-11f1-823a-07bb6f417cfd",
+        "title": "Google’s Potential, AI Money Spigot Shutting?, PHP Bug & Cybersecurity’s “Black October”",
+        "publishedAt": "2026-10-23T22:12:00Z",
+        "publishedAtSGT": "2026-10-24T06:12:00+08:00",
+        "transcriptStatus": "Actual third-party transcript retrieved;56:39–57:39 selected as pending research, not yet delivered."
+      },
+      "catchupPreserved": true,
+      "everydayAI": "Web extractor returned only footer for YouTube; direct public HTML successfully parsed30Videos and30Live entries. LatestVideosEp888explicitReplay; latestoriginalLive9_XAioMMtDA and allpublisher surfaces remainAug14Ep841. No new eligible original; no historical backfill.",
+      "stateAuthority": "Research only; no publication or delivery state advanced."
     }
   ]
 }

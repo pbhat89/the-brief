@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_on": "2026-10-24",
+  "updated_on": "2026-10-25",
   "timezone": "Asia/Singapore",
   "history": {
     "complete": false,
@@ -354,6 +354,49 @@
           "channel": "report",
           "public_evidence_url": "https://github.com/pbhat89/the-brief/blob/main/podcast/reports/2026-10-18-revised.sources.json",
           "confirmation": "Public report and source audit contain this concept; podcast narration not independently confirmed."
+        }
+      ]
+    },
+    {
+      "concept_id": "search-budget-across-important-settings",
+      "aliases": [
+        "random search versus rigid grids",
+        "unequal hyperparameter importance"
+      ],
+      "experts": [
+        "Andrej Karpathy"
+      ],
+      "theme": "technical_coding",
+      "title": "Spend experiment budgets on more distinct settings",
+      "sources": [
+        {
+          "title": "A Recipe for Training Neural Networks",
+          "url": "https://karpathy.github.io/2019/04/25/recipe/",
+          "authors": [
+            "Andrej Karpathy"
+          ],
+          "original_date": "2019-04-25",
+          "original_date_basis": "Date displayed on original publisher page",
+          "checked_on": "2026-10-25",
+          "kind": "first_party",
+          "verification": "direct_primary",
+          "locator": "Section5 Tune, random over grid search; linked Bergstra and Bengio2012 paper"
+        }
+      ],
+      "classification": "evergreen",
+      "takeaway": "Karpathy explains that random search can explore consequential settings more efficiently than a rigid grid when a model is sensitive to only some settings.",
+      "editorial_application": "In a bounded AI experiment, compare configurations within safe predefined ranges against the same evaluation set, instead of wasting repeated trials on settings with little effect. The nine-trial example is editorial.",
+      "caveat": "This is an evergreen experimental-design intuition, not a universal claim that random search beats modern adaptive methods. Distinct from inspecting inputs or validating a tiny pipeline.",
+      "status": "narrated",
+      "dedup_review": "covered",
+      "last_used": "2026-10-25",
+      "last_narrated": "2026-10-25",
+      "uses": [
+        {
+          "date": "2026-10-25",
+          "channel": "podcast",
+          "public_evidence_url": "https://pbhat89.github.io/the-brief/podcast/reports/2026-10-25.html",
+          "confirmation": "Final delivered narration includes the evergreen experiment-budget lesson; the nine-trial illustration and business application are explicitly editorial. Published content and accepted delivery were verified."
         }
       ]
     }

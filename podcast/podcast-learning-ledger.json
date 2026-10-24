@@ -2,7 +2,7 @@
   "version": 1,
   "timezone": "Asia/Singapore",
   "daily_limit": 1,
-  "updated_at": "2026-10-23T23:06:02.363254+00:00",
+  "updated_at": "2026-10-24T23:11:45.031340+00:00",
   "catchup": {
     "initialized_at": "2026-10-19T00:21:00Z",
     "limit": 3,
@@ -178,7 +178,9 @@
       "published_at": "2026-10-23T22:12:00Z",
       "source_url": "https://pdst.fm/e/tracking.swap.fm/track/t7yC0rGPUqahTF4et8YD/pscrb.fm/rss/p/traffic.megaphone.fm/AMPP9533657679.mp3",
       "aliases": [
-        "rss:59149ba6-cf2e-11f1-823a-07bb6f417cfd"
+        "rss:59149ba6-cf2e-11f1-823a-07bb6f417cfd",
+        "https://podscripts.co/podcasts/big-technology-podcast/googles-potential-ai-money-spigot-shutting-php-bug-cybersecuritys-black-october",
+        "https://pdst.fm/e/tracking.swap.fm/track/t7yC0rGPUqahTF4et8YD/pscrb.fm/rss/p/traffic.megaphone.fm/AMPP9533657679.mp3"
       ],
       "classification": {
         "original": true,
@@ -188,18 +190,24 @@
         "beginner_series": false
       },
       "transcript": {
-        "status": "unavailable",
-        "body_retrieved": false,
-        "checked_at": "2026-10-23T23:06:02.363254+00:00",
-        "access_note": "Fresh publisher RSS confirms the original. Checked Podscripts and Tapesearch listings still stop at October 20; the attempted matching Podscripts path returns a generic page with no episode or transcript. Public YouTube latest listing contains earlier Pichai clips, not this new original. No actual transcript retrieved; title and description are not sufficient."
+        "status": "retrieved",
+        "body_retrieved": true,
+        "source_url": "https://podscripts.co/podcasts/big-technology-podcast/googles-potential-ai-money-spigot-shutting-php-bug-cybersecuritys-black-october",
+        "provenance": "third-party-transcription",
+        "checked_at": "2026-10-24T23:04:18.183735+00:00",
+        "access_note": "Actual full timestamped Podscripts body retrieved privately through sign-off. Selected 56:39–57:39, with supporting context 48:34–49:55. Automatic third-party transcription is not publisher-approved; incident statistics and uncertain names omitted. CIS Control1 independently supports asset inventory rationale."
       },
       "dedup_review": {
-        "status": "pending",
-        "story_keys": []
+        "status": "distinct_contribution",
+        "story_keys": [
+          "bigtech-20261023-forgotten-digital-assets-lifecycle"
+        ],
+        "contribution": "Asset inventory and retirement of forgotten event websites is a distinct practical explanation, not a repeat of PHP incident statistics, previous compute allocation, or prior assistant specialization. All15 available daily records, public archives and available personal-topic ledgers reviewed; historical gaps remain.",
+        "reviewed_at": "2026-10-24T23:04:18.183735+00:00"
       },
-      "status": "pending",
+      "status": "published",
       "status_reason": null,
-      "publication_id": null
+      "publication_id": "2026-10-25"
     },
     {
       "episode_id": "everyday-ai:841",
@@ -282,6 +290,18 @@
       "verified_at": "2026-10-22T23:24:02.811820+00:00",
       "confirmation": "Live public report verified by exact content hash; the selected transcript-based learning was included in the accepted combined delivery. Private delivery evidence remains outside this repository.",
       "date_sgt": "2026-10-23",
+      "show": "big-technology"
+    },
+    {
+      "publication_id": "2026-10-25",
+      "episode_id": "big-technology:59149ba6-cf2e-11f1-823a-07bb6f417cfd",
+      "status": "verified_published",
+      "output_url": "https://pbhat89.github.io/the-brief/podcast/reports/2026-10-25.html",
+      "revision": "2f460b7abb637bbf1b2611a90f27fae3e5bc2cd8",
+      "content_sha256": "e88f0fbb41830434978a443f79fe42070a1c6e2771483281adb6c3d06cfa0c2a",
+      "verified_at": "2026-10-24T23:11:45.031340+00:00",
+      "confirmation": "Live public report returned HTTP200 with the exact recorded hash and revision; the selected transcript-based recap was included in the accepted combined delivery. Private narration and delivery evidence remain outside the repository.",
+      "date_sgt": "2026-10-25",
       "show": "big-technology"
     }
   ]
