@@ -3983,3 +3983,24 @@ is empty until the first run.
 2026-10-25	CRISPR prime editing is used directly inside a patient's body for the first time	3ca082eb	crispr,prime editing,wilsons disease,gene editing
 2026-10-25	Physicists trap a single antimatter particle, a positron, for a month	67c89e0d	positron,antimatter,physics,northwestern
 2026-10-25	An AI estimates cancer patients' survival odds from a single photo of their face	4c93b80b	ai,cancer,face,lancet
+2026-10-26	SIA steward collapses with a faint pulse on a Chengdu flight, saved by a doctor on board	e2dbcb53	singapore airlines,steward,chengdu flight,medical emergency
+2026-10-26	Singapore Airlines and Scoot put over 380,000 discounted tickets on sale	d3d44872	singapore airlines,scoot,promotion,air fares
+2026-10-26	Man, 44, jailed 80 days for shoving a seven-year-old boy twice at an indoor playground	981a93b3	court,assault,playground,child
+2026-10-26	Update: Singapore parents jailed over their eight-month-old son's abuse death	759e8840	court,child abuse,infant death,sentencing
+2026-10-26	Modi accuses Rahul Gandhi of risking 'disorder' and tarnishing India's image	0b9dc737	modi,rahul gandhi,ndtv world summit,opposition
+2026-10-26	India's youth-led 'Cockroach' protest movement hardens into Modi's main opposition	6b7e19c2	cockroach movement,voter rolls,election commission,protests
+2026-10-26	The rupee slides toward a record 100-per-dollar as foreign investors pull out	7579ea07	rupee,rbi,foreign outflows,currency
+2026-10-26	Royal London bets on long-dated gilts before Burnham's first Budget	7e54698f	gilts,burnham,healey,budget
+2026-10-26	Melania Trump brokers a narrow humanitarian ceasefire in occupied Oleshky	24ca37fc	melania trump,oleshky,russia,ukraine,ceasefire
+2026-10-26	Update: Israel raids West Bank towns and uproots 2,000 in Hebron before the election	e58b3646	israel,west bank,hebron,election,raids
+2026-10-26	Sudan's shift to drone warfare deepens its civilian catastrophe	74c8219b	sudan,rsf,drone warfare,famine
+2026-10-26	Anthropic lines up a mid-November IPO, Wall Street's biggest AI listing yet	1de50c20	anthropic,ipo,valuation,ai
+2026-10-26	Update: OpenAI's roughly US$30 billion private round is led by Coatue and UAE investors	a89aa25f	openai,funding round,coatue,uae
+2026-10-26	Markets expect the Fed to hold rates at its Oct 28 meeting, with December in play	66ae3c25	federal reserve,interest rates,kevin warsh,fomc
+2026-10-26	🏎️ Antonelli wins the US Grand Prix from pole but is denied an early title	34d68111	antonelli,us grand prix,austin,mercedes
+2026-10-26	🏎️ The Formula 1 title race heads to Mexico as Antonelli's crown is delayed	259c7e9c	antonelli,f1 championship,standings,mexico
+2026-10-26	🏏 India lead New Zealand 2-0 heading into the third T20I in Wellington	b41c4ee7	india,new zealand,t20i,wellington
+2026-10-26	🎾 Alcaraz returns to Vienna as Wawrinka bids an emotional farewell in Basel	55300ddb	alcaraz,wawrinka,vienna,basel
+2026-10-26	An implant that burns up excess blood sugar with electricity passes mouse tests	fa63eeea	diabetes,implant,eth zurich,glucose
+2026-10-26	Asteroid Bennu's samples are rewriting how the Solar System formed	30983df8	bennu,osiris-rex,solar system,jupiter
+2026-10-26	Japan's MMX mission sets off to sample Mars's moon Phobos	49f30b2f	mmx,phobos,idefix rover,mars

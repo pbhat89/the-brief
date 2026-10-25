@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-08-26",
-      "topic_key": "sahara",
-      "text": "The Sahara was a green savannah with lakes as recently as about 5,000 to 11,000 years ago"
-    },
-    {
       "date": "2026-08-27",
       "topic_key": "shark",
       "text": "Sharks are older than trees"
@@ -264,14 +259,14 @@
       "date": "2026-10-25",
       "topic_key": "mantis shrimp",
       "text": "The mantis shrimp has up to 16 types of colour photoreceptor and strikes with cavitation-bubble force."
+    },
+    {
+      "date": "2026-10-26",
+      "topic_key": "dead sea",
+      "text": "The Dead Sea is salty enough (about 34%) that swimmers float and almost nothing lives in it."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-09-25",
-      "type": "quantitative",
-      "title_key": "late-arrivals"
-    },
     {
       "date": "2026-09-26",
       "type": "lateral",
@@ -416,14 +411,14 @@
       "date": "2026-10-25",
       "type": "lateral",
       "title_key": "three-left-turns"
+    },
+    {
+      "date": "2026-10-26",
+      "type": "visual",
+      "title_key": "overlapping-squares"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-09-25",
-      "type": "ladder",
-      "title_key": "alchemist"
-    },
     {
       "date": "2026-09-26",
       "type": "anagram",
@@ -568,6 +563,11 @@
       "date": "2026-10-25",
       "type": "ladder",
       "title_key": "love-into-hate"
+    },
+    {
+      "date": "2026-10-26",
+      "type": "letterboxed",
+      "title_key": "strike-up-the-band"
     }
   ]
 }
