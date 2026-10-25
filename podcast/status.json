@@ -1,8 +1,8 @@
 {
-  "run_id": "morning-2026-10-25",
-  "updated_at": "2026-10-24T23:16:16.046094+00:00",
+  "run_id": "morning-2026-10-26",
+  "updated_at": "2026-10-25T23:07:36.392972+00:00",
   "previous_run": {
-    "run_id": "morning-2026-10-24",
+    "run_id": "morning-2026-10-25",
     "state": "completed",
     "detail": "Previous daily edition delivered; no regeneration."
   },
@@ -11,50 +11,50 @@
       "id": "history",
       "label": "History and operational feedback",
       "state": "completed",
-      "updated_at": "2026-10-24T23:16:16.046094+00:00",
-      "detail": "Prior delivered history and operational feedback read; existing coverage gaps preserved."
+      "updated_at": "2026-10-25T23:07:36.392972+00:00",
+      "detail": "Prior delivery history and current operational/source-coverage requirements read."
     },
     {
       "id": "upstream",
       "label": "Same-day upstream intake",
       "state": "completed",
-      "updated_at": "2026-10-24T23:16:16.046094+00:00",
-      "detail": "Same-day dated HTML and JSON verified; all 32 entries reconciled with evidence."
+      "updated_at": "2026-10-25T23:07:36.392972+00:00",
+      "detail": "Same-day upstream HTML and JSON verified at intake; independent verification underway."
     },
     {
       "id": "research",
       "label": "Source research and deduplication",
-      "state": "completed",
-      "updated_at": "2026-10-24T23:16:16.046094+00:00",
-      "detail": "27 verified headlines; all 32 upstream entries reconciled, including all four sports items. Bounded source gaps retained."
+      "state": "running",
+      "updated_at": "2026-10-25T23:07:36.392972+00:00",
+      "detail": "Full current roster attempts and independent agreed-source sweeps are in progress. Bounded reads do not establish full-window coverage."
     },
     {
       "id": "script",
       "label": "Narrative preparation",
-      "state": "completed",
-      "updated_at": "2026-10-24T23:16:16.046094+00:00",
-      "detail": "Concise headline-and-context narration and separate intuitive learning segments prepared."
+      "state": "pending",
+      "updated_at": "2026-10-25T23:07:36.392972+00:00",
+      "detail": "Not yet completed."
     },
     {
       "id": "audio",
       "label": "Private narration checks",
-      "state": "completed",
-      "updated_at": "2026-10-24T23:16:16.046094+00:00",
-      "detail": "Consistent private narration passed duration, full-decode, clipping and measured chapter checks."
+      "state": "pending",
+      "updated_at": "2026-10-25T23:07:36.392972+00:00",
+      "detail": "Not yet completed."
     },
     {
       "id": "publication",
       "label": "Public report publication",
-      "state": "completed",
-      "updated_at": "2026-10-24T23:16:16.046094+00:00",
-      "detail": "Public report and both generated readers verified; private publication hash, size and expiry confirmed."
+      "state": "pending",
+      "updated_at": "2026-10-25T23:07:36.392972+00:00",
+      "detail": "Not yet completed."
     },
     {
       "id": "delivery",
       "label": "Private episode delivery",
-      "state": "completed",
-      "updated_at": "2026-10-24T23:16:16.046094+00:00",
-      "detail": "Combined delivery accepted; historical coverage gaps retained."
+      "state": "pending",
+      "updated_at": "2026-10-25T23:07:36.392972+00:00",
+      "detail": "Not yet completed."
     }
   ]
 }
