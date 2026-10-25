@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_on": "2026-10-25",
+  "updated_on": "2026-10-26",
   "timezone": "Asia/Singapore",
   "history": {
     "complete": false,
@@ -399,6 +399,42 @@
           "confirmation": "Final delivered narration includes the evergreen experiment-budget lesson; the nine-trial illustration and business application are explicitly editorial. Published content and accepted delivery were verified."
         }
       ]
+    },
+    {
+      "concept_id": "agent-trace-failure-localisation",
+      "aliases": [
+        "inspect intermediate agent traces",
+        "find the failing workflow stage"
+      ],
+      "experts": [
+        "Andrew Ng"
+      ],
+      "theme": "technical_coding",
+      "title": "Find the failure inside the workflow",
+      "sources": [
+        {
+          "title": "Improve Agentic Performance with Evals and Error Analysis, Part 2",
+          "url": "https://www.deeplearning.ai/the-batch/improve-agentic-performance-with-evals-and-error-analysis-part-2/",
+          "authors": [
+            "Andrew Ng"
+          ],
+          "original_date": "2025-10-22",
+          "original_date_basis": "Published Oct22 2025 displayed in primary publisher text returned by web search extraction. Direct open403; dated primary text and full article body accessible through search extraction.",
+          "checked_on": "2026-10-26",
+          "kind": "first_party",
+          "verification": "direct_primary",
+          "locator": "Paragraphs on four-step research agent, tracing each stage, informal initial error analysis and revising task decomposition."
+        }
+      ],
+      "classification": "evergreen",
+      "takeaway": "Inspect intermediate agent results to locate the failing stage; reconsider decomposition when individual steps look adequate but the whole workflow underperforms.",
+      "editorial_application": "A document assistant retrieving the wrong page calls for fixing retrieval rather than merely rewriting the response prompt. This example and practical recommendation are editorial.",
+      "caveat": "Primary publisher text was retrieved through search extraction; direct page open403. No original audio or video heard. Distinct from generic input inspection, tiny-pipeline validation, random search and automatic-check versus human-judgment lessons.",
+      "status": "researched_candidate",
+      "dedup_review": "reviewed_no_match",
+      "last_used": null,
+      "last_narrated": null,
+      "uses": []
     }
   ]
 }

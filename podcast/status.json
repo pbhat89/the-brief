@@ -1,6 +1,6 @@
 {
   "run_id": "morning-2026-10-26",
-  "updated_at": "2026-10-25T23:07:36.392972+00:00",
+  "updated_at": "2026-10-25T23:20:04Z",
   "previous_run": {
     "run_id": "morning-2026-10-25",
     "state": "completed",
@@ -11,49 +11,49 @@
       "id": "history",
       "label": "History and operational feedback",
       "state": "completed",
-      "updated_at": "2026-10-25T23:07:36.392972+00:00",
+      "updated_at": "2026-10-25T23:20:04Z",
       "detail": "Prior delivery history and current operational/source-coverage requirements read."
     },
     {
       "id": "upstream",
       "label": "Same-day upstream intake",
       "state": "completed",
-      "updated_at": "2026-10-25T23:07:36.392972+00:00",
+      "updated_at": "2026-10-25T23:20:04Z",
       "detail": "Same-day upstream HTML and JSON verified at intake; independent verification underway."
     },
     {
       "id": "research",
       "label": "Source research and deduplication",
-      "state": "running",
-      "updated_at": "2026-10-25T23:07:36.392972+00:00",
-      "detail": "Full current roster attempts and independent agreed-source sweeps are in progress. Bounded reads do not establish full-window coverage."
+      "state": "completed",
+      "updated_at": "2026-10-25T23:20:04Z",
+      "detail": "All240 required sources attempted; captured profiles screened; all21 upstream entries reconciled. Full-window coverage remains partial with pending original-post verification."
     },
     {
       "id": "script",
       "label": "Narrative preparation",
-      "state": "pending",
-      "updated_at": "2026-10-25T23:07:36.392972+00:00",
-      "detail": "Not yet completed."
+      "state": "completed",
+      "updated_at": "2026-10-25T23:20:04Z",
+      "detail": "Concise25-headline narration with one separately sourced expert insight prepared."
     },
     {
       "id": "audio",
       "label": "Private narration checks",
-      "state": "pending",
-      "updated_at": "2026-10-25T23:07:36.392972+00:00",
-      "detail": "Not yet completed."
+      "state": "running",
+      "updated_at": "2026-10-25T23:20:04Z",
+      "detail": "Final render and validation underway."
     },
     {
       "id": "publication",
       "label": "Public report publication",
-      "state": "pending",
-      "updated_at": "2026-10-25T23:07:36.392972+00:00",
-      "detail": "Not yet completed."
+      "state": "running",
+      "updated_at": "2026-10-25T23:20:04Z",
+      "detail": "Public report publishing; private audio not yet published."
     },
     {
       "id": "delivery",
       "label": "Private episode delivery",
       "state": "pending",
-      "updated_at": "2026-10-25T23:07:36.392972+00:00",
+      "updated_at": "2026-10-25T23:20:04Z",
       "detail": "Not yet completed."
     }
   ]

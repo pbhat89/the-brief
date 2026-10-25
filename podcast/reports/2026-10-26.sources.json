@@ -1,0 +1,1026 @@
+{
+  "edition": "2026-10-26",
+  "research_cutoff_sgt": "2026-10-26T07:20:14.094563+08:00",
+  "upstream": {
+    "date": "2026-10-26",
+    "json_url": "https://pbhat89.github.io/the-brief/archive/2026-10-26.json",
+    "html_url": "https://pbhat89.github.io/the-brief/archive/2026-10-26.html",
+    "verified_same_day": true,
+    "item_count": 21,
+    "intake_verified_at": "2026-10-25T23:05:09Z"
+  },
+  "news_items": [
+    {
+      "event_id": "pap-cec-election-20261025",
+      "section": "singapore",
+      "headline": "The PAP has elected its thirty-ninth central executive committee.",
+      "context": "The twelve elected members and two initially co-opted members are returning faces; Jeffrey Siow and Jasmin Lau were nominated but not elected.",
+      "source_date": "2026-10-25",
+      "sources": [
+        "https://www.channelnewsasia.com/singapore/pap-leadership-election-cec-6489086",
+        "https://www.asiaone.com/singapore/peoples-action-part-39th-central-executive-committee"
+      ],
+      "evidence_caveat": "CNA original 12:24 SGT, updated14:00, full article read; AsiaOne corroborates. Party site current CEC still38th, not used to assert updated roster. New election not general political opinion.",
+      "upstream_index": null,
+      "disposition": "independent_verified_addition"
+    },
+    {
+      "event_id": "wong-gas-contract-response-20261025",
+      "section": "singapore",
+      "headline": "Prime Minister Lawrence Wong says Singapore expects gas-supply contracts to be honoured.",
+      "context": "Following Indonesia’s export reduction, he says the importer will act to protect its contractual rights and interests.",
+      "source_date": "2026-10-25",
+      "sources": [
+        "https://www.channelnewsasia.com/singapore/indonesia-gas-exports-singapore-gas-contracts-pm-wong-pap-convention-6489956"
+      ],
+      "evidence_caveat": "CNA original10:44 SGT updated13:09 read; actual new PM response October25, distinct from October24 EMA supply assurance delivered yesterday. Do not repeat conflicting volume estimates. Statement attributed, not a claim legal proceedings began.",
+      "upstream_index": null,
+      "disposition": "materially_updated_verified",
+      "material_update": true,
+      "new_fact": "October 25 prime-ministerial contractual-rights statement, distinct from October 24 supply-sufficiency assurance.",
+      "previous_event_reference": "ema-gas-cut-assurance-20261024"
+    },
+    {
+      "event_id": "mom-migrant-wages-investigation-20261024",
+      "section": "singapore",
+      "headline": "The Ministry of Manpower is investigating two companies over unpaid migrant-worker salaries.",
+      "context": "The Migrant Workers’ Centre is helping roughly 230 workers with salary claims, accommodation and job matching after up to two months without pay.",
+      "source_date": "2026-10-24",
+      "event_date": "2026-10-24",
+      "sources": [
+        "https://www.asiaone.com/singapore/240-singapore-migrant-workers-unpaid-wages",
+        "https://berita.mediacorp.sg/singapura/mom-siasat-dua-syarikat-berhubung-gaji-tertunggak-pekerja-hijrahan-1081356"
+      ],
+      "evidence_caveat": "AsiaOne full original read, updated October 24 10:37; MOM statement attributed directly. Berita indexed corroboration published October 24 21:08, updated 21:34; direct page inaccessible. Approximately 240 affected versus 230 met by MWC are distinct counts. No finding of legal breach yet. Unseen catch-up, not a new October 26 incident.",
+      "disposition": "added_verified"
+    },
+    {
+      "event_id": "playground-assault-sentence-20261023",
+      "section": "singapore",
+      "headline": "A man has been jailed for eighty days for shoving a seven-year-old boy at an indoor playground.",
+      "context": "He pleaded guilty on Friday to hurting a child under fourteen.",
+      "source_date": "2026-10-23",
+      "sources": [
+        "https://mothership.sg/2026/10/singaporean-man-shoved-boy-indoor-playground/"
+      ],
+      "evidence_caveat": "Original published October23 18:51 SGT read fully; sentencing October23, underlying offence2023. Not found in delivered history; dated catch-up, not Monday event.",
+      "upstream_index": 2,
+      "disposition": "retained_verified"
+    },
+    {
+      "event_id": "sia-steward-medical-assistance-report-20261025",
+      "section": "singapore",
+      "headline": "A former emergency doctor helped an unwell Singapore Airlines steward during a flight.",
+      "context": "According to her account, reported on Sunday, she stayed with him until the October seventeenth flight from Chengdu landed.",
+      "source_date": "2026-10-25",
+      "sources": [
+        "https://mothership.sg/2026/10/spore-airlines-steward-collapse-chengdu-flight/"
+      ],
+      "evidence_caveat": "Direct open failed; substantive indexed original published18:35 SGT read, relying on doctor’s October21 account of October17 flight; no independent airline confirmation. Avoid definitive saved his life or diagnosis.",
+      "upstream_index": 0,
+      "disposition": "corrected_verified"
+    },
+    {
+      "event_id": "serbia-vucic-concession-20261025",
+      "section": "world",
+      "headline": "Aleksandar Vucic has conceded defeat to Serbia’s student-backed movement in the parliamentary election.",
+      "context": "The concession followed Sunday’s vote; final official results were still outstanding in the reporting checked.",
+      "source_date": "2026-10-25",
+      "sources": [
+        "https://apnews.com/article/fdf5def8a20aebc8ae139fd719478775",
+        "https://www.axios.com/2026/10/25/serbia-election-2026-student-protests-vucic",
+        "https://www.thestar.com.my/news/world/2026/10/26/serbia039s-vucic-concedes-defeat-to-student-led-movement-in-parliamentary-election"
+      ],
+      "evidence_caveat": "Substantive AP indexed report and Reuters syndication plus Axios corroborated; direct opens failed. AP index clock predates polls, so do not use as event timestamp; source date-onlyOct25, evening concession. No certified seat tally asserted.",
+      "upstream_index": null,
+      "disposition": "independent_verified_addition"
+    },
+    {
+      "event_id": "brazil-voting-extension-20261025",
+      "section": "world",
+      "headline": "Brazil extended presidential-runoff voting by two hours.",
+      "context": "The Supreme Court intervention followed complaints about transport obstacles, delaying the release of vote totals.",
+      "source_date": "2026-10-25",
+      "sources": [
+        "https://www.afp.com/en/brazil-voting-extended-tight-race-between-lula-bolsonaro",
+        "https://www.channelnewsasia.com/world/brazil-pauses-presidential-vote-count-after-supreme-court-extends-voting-hours-6490261",
+        "https://apnews.com/article/e2c9fe8fc4aa3e3675b9a8ec15405d93"
+      ],
+      "evidence_caveat": "AFP original indexed21:51 and Reuters/CNA substantive indexed text agree extension; AP latest says counting resumed. Avoid saying paused NOW or asserting winner. No winner verified as of research.",
+      "upstream_index": null,
+      "disposition": "independent_verified_addition"
+    },
+    {
+      "event_id": "oleshky-humanitarian-ceasefire-announcement-20261023",
+      "section": "world",
+      "headline": "The White House says a local humanitarian ceasefire has been agreed for Oleshky in Ukraine.",
+      "context": "It is intended to allow aid and evacuations, although officials have given conflicting start dates.",
+      "source_date": "2026-10-23",
+      "sources": [
+        "https://www.whitehouse.gov/briefings-statements/2026/10/first-lady-melania-trump-secures-ceasefire-between-russia-and-ukraine-localized-to-oleshky/",
+        "https://www.aljazeera.com/news/2026/10/23/white-house-says-melania-trump-secured-a-ceasefire-in-ukraines-oleshky"
+      ],
+      "evidence_caveat": "White House primaryOct23 full page saysOct29; AlJazeera/AP quotes Ukrainian and Russian officialsOct27. Attribute announcement, no claim cessation already occurred. AlJazeera derivation kept minimal under its25-word budget.",
+      "upstream_index": 8,
+      "disposition": "corrected_verified"
+    },
+    {
+      "event_id": "sudan-ohchr-drone-deaths-20261023",
+      "section": "world",
+      "headline": "The UN Human Rights Office says drone strikes killed at least three hundred and six people in Sudan in three weeks.",
+      "context": "Its October twenty-third statement attributes attacks to both warring sides and warns of devastating civilian harm.",
+      "source_date": "2026-10-23",
+      "sources": [
+        "https://www.scoop.co.nz/stories/WO2610/S00177/sudan-turk-alarmed-by-surge-in-drone-attacks-killing-hundreds-in-october.htm",
+        "https://www.miragenews.com/turk-alarmed-by-surge-in-drone-attacks-in-sudan-1765725/",
+        "https://www.radiotamazuj.org/en/news/article/sudan-drone-strikes-kill-306-in-three-weeks-un-rights-body-says"
+      ],
+      "evidence_caveat": "OHCHR press release syndicated by Scoop and Mirage substantive text read via index; corroborated RadioTamazuj Oct25. Direct original OHCHR not located. Count pertains first three weeksOctober, not last24h; no independently determined perpetrator per strike.",
+      "upstream_index": 10,
+      "disposition": "materially_updated_verified"
+    },
+    {
+      "event_id": "us-grand-prix-race-20261025",
+      "section": "sports",
+      "headline": "Kimi Antonelli has won the United States Grand Prix ahead of Charles Leclerc and Max Verstappen.",
+      "context": "Hamilton finished fourth and Russell eighth, keeping Antonelli from clinching the drivers’ title in Austin.",
+      "source_date": "2026-10-25",
+      "sources": [
+        "https://www.formula1.com/en/latest/article/antonelli-surges-to-dominant-victory-in-united-states-grand-prix-ahead-of-leclerc-and-verstappen.6kmBQv9FNTW7LzkDj8S34j",
+        "https://www.formula1.com/en/racing/2026/united-states"
+      ],
+      "evidence_caveat": "F1 official race result and full report read. Race localOct25/SGOct26. Merge both upstream rows14,15. Do not repeat upstream340 points or claim title WILL be decided in Mexico.",
+      "upstream_index": 14,
+      "disposition": "corrected_verified"
+    },
+    {
+      "event_id": "new-zealand-t20-squad-update-20261025",
+      "section": "sports",
+      "headline": "New Zealand has changed its squad ahead of Tuesday’s third Twenty20 match against India.",
+      "context": "Lockie Ferguson will miss the Wellington game, with New Zealand trailing the series two-nil.",
+      "source_date": "2026-10-25",
+      "sources": [
+        "https://www.icc-cricket.com/news/new-zealand-announce-key-updates-for-t20i-squad-against-india"
+      ],
+      "evidence_caveat": "ICC original indexed substantive text dateOct25 confirms actual new absence; direct open failed. Series score already deliveredOct25; new squad change is the material follow-up.",
+      "upstream_index": 16,
+      "disposition": "materially_updated_verified",
+      "material_update": true,
+      "new_fact": "October 25 squad absence announced for the next match, not a repeat of the existing 2-0 score.",
+      "previous_event_reference": "October 25 delivered India-New Zealand series score"
+    },
+    {
+      "event_id": "basel-vienna-scouting-20261025",
+      "section": "sports",
+      "headline": "Stan Wawrinka is preparing for his farewell tournament in Basel, while Carlos Alcaraz returns to Vienna.",
+      "context": "Wawrinka opens against Jiri Lehecka, with Alcaraz making his first Vienna appearance since twenty twenty-one.",
+      "source_date": "2026-10-25",
+      "sources": [
+        "https://www.erstebank-open.com/en/news/storys/basel-vienna-2026-scouting-report",
+        "https://www.atptour.com/en/news/basel-vienna-2026-scouting-report"
+      ],
+      "evidence_caveat": "ATP StaffOct25 syndicated on official tournament site substantive indexed report read; direct original and syndication open failed. Djokovic wildcard already delivered, not repeated. Upcoming week, not an asserted match result.",
+      "upstream_index": 17,
+      "disposition": "corrected_verified"
+    },
+    {
+      "event_id": "shannon-tan-indian-open-third-20261025",
+      "section": "sports",
+      "headline": "Singapore’s Shannon Tan has finished third at the Women’s Indian Open.",
+      "context": "Thailand’s Pornanong Phatlum won, with India’s Vani Kapoor second.",
+      "source_date": "2026-10-25",
+      "sources": [
+        "https://www.channelnewsasia.com/sport/singapores-shannon-tan-finishes-third-hero-womens-indian-open-6490431"
+      ],
+      "evidence_caveat": "CNA full original read,19:43SGT updated19:51. Tournament organizer primary not located; reliable original report. Date clearlySunday.",
+      "upstream_index": null,
+      "disposition": "independent_verified_addition"
+    },
+    {
+      "event_id": "eth-electrocatalytic-glucose-implant-20261022",
+      "section": "science",
+      "headline": "An experimental electronic implant has regulated blood sugar in diabetic mice.",
+      "context": "ETH Zurich says its six-week tests were promising, but the device has not yet been tested in humans.",
+      "source_date": "2026-10-22",
+      "sources": [
+        "https://ethz.ch/en/news-and-events/eth-news/news/2026/10/tackling-diabetes-with-an-electronic-implant.html",
+        "https://doi.org/10.1126/science.ady8560"
+      ],
+      "evidence_caveat": "Primary ETH releaseOct22 read: converts glucose to gluconate using catalyst, not combustion. No treatment recommendation or clinical efficacy claim. Corrects sensational upstream burns up phrasing.",
+      "upstream_index": 18,
+      "disposition": "corrected_verified"
+    },
+    {
+      "event_id": "india-bay-cyclone-watch-20261025",
+      "section": "india",
+      "headline": "India’s weather service warns of a potentially very severe cyclone approaching Andhra Pradesh.",
+      "context": "Its October 25 bulletin forecast landfall between Bapatla and Visakhapatnam on Wednesday, with heavy rain also threatening Odisha.",
+      "source_date": "2026-10-25",
+      "event_date": "2026-10-25",
+      "sources": [
+        "https://mausam.imd.gov.in/backend/assets/cyclone_pdf/2__National_Bulletin_No_2-24Oct2026_2330IST.pdf",
+        "https://www.theweek.in/news/india/2026/10/25/imds-cyclone-alert-which-states-will-get-rainfall-on-october-26-27.html"
+      ],
+      "evidence_caveat": "Primary IMD National Bulletin 2 issued October25 02:00 IST directly read. Forecast, not completed landfall or a confirmed named storm. Later IMD index timed out and RSMC homepage returned403; no claim this is the latest bulletin. Keep forecast attribution/date; avoid present storm category or exact wind strength in narration.",
+      "disposition": "added_verified"
+    },
+    {
+      "event_id": "rbi-bhubaneswar-facilities-opened-20261025",
+      "section": "india",
+      "headline": "Narendra Modi inaugurated RBI’s new data-centre and cybersecurity-training facilities in Bhubaneswar.",
+      "context": "The facilities are intended to strengthen the central bank’s computing infrastructure and financial-sector cybersecurity training.",
+      "source_date": "2026-10-25",
+      "event_date": "2026-10-25",
+      "sources": [
+        "https://www.pmindia.gov.in/en/news_updates/pm-inaugurates-rbis-newly-established-data-centre-and-cybersecurity-training-institute-in-bhubaneswar-odisha/",
+        "https://www.pmindia.gov.in/en/news_updates/pms-address-during-inauguration-key-rbi-facilities-in-bhubaneswar/?comment=disable"
+      ],
+      "evidence_caveat": "Primary PMO report and same-day speech read through substantive indexed text; direct page open inaccessible. This is completed inauguration, not just the October24 programme. No performance claims beyond intended role.",
+      "disposition": "added_verified",
+      "material_update": true,
+      "new_fact": "October25 actual opening replaces yesterday’s scheduled-visit announcement.",
+      "previous_event_reference": "podcast/reports/2026-10-25.sources.json post_delivery_addenda: modi-up-odisha-visit-announcement-20261024"
+    },
+    {
+      "event_id": "kharge-ballot-annulment-demands-20261025",
+      "section": "india",
+      "headline": "Congress president Mallikarjun Kharge has called for ballot-paper voting and annulment of recent assembly elections.",
+      "context": "Speaking in Patna on Sunday, he also demanded a halt to the electoral-roll revision; these are opposition demands, not official decisions.",
+      "source_date": "2026-10-25",
+      "event_date": "2026-10-25",
+      "sources": [
+        "https://www.rediff.com/news/commentary/2026/oct/25/repeal-all-polls-held-in-last-2-yrs-use-ballot-papers-kharge/9653b3808ffe03b16b968100932b14b1",
+        "https://www.nationalheraldindia.com/national/kharge-demands-voting-by-ballot-papers-annulment-of-polls-for-last-2-yrs",
+        "https://www.outlookindia.com/national/lord-ram-would-punish-those-who-looted-in-his-name-kharge-on-ram-temple-donation-case-slams-bjp-for-sir"
+      ],
+      "evidence_caveat": "Substantive original/syndicated indexed text from Rediff, National Herald and Outlook confirms October25 speech. National Herald politically affiliated; independent Outlook/PTI corroboration used. Claims of vote theft remain allegations, and no legal annulment occurred. Direct National Herald open failed.",
+      "disposition": "added_verified"
+    },
+    {
+      "event_id": "bjp-protests-kharge-remark-20261026",
+      "section": "india",
+      "headline": "The BJP has announced nationwide protests for Monday over Kharge’s remarks about Modi.",
+      "context": "The BJP described the remarks as an insult to Modi’s late father, while Congress said Kharge was referring to his ideological mentors.",
+      "source_date": "2026-10-25",
+      "event_date": "2026-10-26 (scheduled; announcement October25)",
+      "sources": [
+        "https://www.tv9hindi.com/india/mallikarjun-kharge-modi-ka-baap-remark-row-bjp-nationwide-protest-october-26-amit-shah-congress-pawan-khera-3945225.html",
+        "https://thepresidency.net/bjp-to-hold-nationwide-protests-tomorrow-against-congress-chief-kharges-remarks-on-pm-modis-late-father/"
+      ],
+      "evidence_caveat": "TV9 Hindi original October25 23:10 IST and IANS syndication read via indexed full text; TV9 includes ANI statement of Congress response. Direct TV9 open failed. Announcement only, not protests already completed. Do not state either party’s interpretation as established fact.",
+      "disposition": "added_verified"
+    },
+    {
+      "event_id": "indigo-navi-mumbai-transfer-plan-20261025",
+      "section": "india",
+      "headline": "IndiGo plans to begin international operations from Navi Mumbai airport in February twenty twenty-seven.",
+      "context": "A joint announcement with Adani Airports says twelve daily international departures will shift in stages, subject to final coordination and operating approvals.",
+      "source_date": "2026-10-25",
+      "event_date": "2026-10-25",
+      "sources": [
+        "https://www.adani.com/newsroom/media-releases/indigo-and-adani-airports-announce-phased-expansion-of-international-flight-operations",
+        "https://www.tribuneindia.com/news/business/indigo-adani-airports-announce-phased-expansion-of-international-flight-operations-at-navi-mumbai-airport/amp"
+      ],
+      "evidence_caveat": "Primary Adani joint release explicitly dated Mumbai25October2026 read as substantive indexed text and ANI corroborated; direct pages inaccessible. Planned February2027 start, not completed move or all dates finalized. Inshorts business discovery followed through failed Moneycontrol click to original joint release.",
+      "disposition": "added_verified"
+    },
+    {
+      "event_id": "varanasi-arvind-garment-opening-20261025",
+      "section": "india",
+      "headline": "Modi also opened Arvind’s new garment manufacturing facility in Varanasi.",
+      "context": "The plant is expected to employ more than a thousand people, predominantly women.",
+      "source_date": "2026-10-25",
+      "event_date": "2026-10-25",
+      "sources": [
+        "https://www.pib.gov.in/ShowAlbum.aspx?albumid=231743&lang=1&reg=3",
+        "https://timesofindia.indiatimes.com/city/varanasi/womens-self-reliance-takes-centre-stage-as-pm-opens-garment-unit-in-kashi/articleshow/135196191.cms"
+      ],
+      "evidence_caveat": "Primary PIB photo album explicitly records October25 inauguration; TOI original October25 23:31IST confirms expected jobs and 300 trained women. Job figure is expected, not all already employed. Material completion update to yesterday’s announced visit.",
+      "disposition": "added_verified",
+      "material_update": true,
+      "new_fact": "Garment facility actually inaugurated October25; prior report only scheduled visit.",
+      "previous_event_reference": "podcast/reports/2026-10-25.sources.json post_delivery_addenda: modi-up-odisha-visit-announcement-20261024"
+    },
+    {
+      "event_id": "chroma-replit-agreement-20261023",
+      "section": "ai",
+      "headline": "Chroma has agreed to join Replit.",
+      "context": "Its hosted cloud service will wind down by December 22, while the open-source database continues.",
+      "source_date": "2026-10-24",
+      "sources": [
+        "https://x.com/trychroma/status/2113677289334706274",
+        "https://www.trychroma.com/blog/chroma-joins-replit",
+        "https://www.trychroma.com/cloud-wind-down"
+      ],
+      "evidence_caveat": "Signed definitive agreement, not asserted closed acquisition. Writes disabled November22, reads December22. Blog date October23; official post UI Oct24 01:01 Singapore, independently aligns with post-ID time. dated catch-up, not claimed released October26",
+      "posted_at_sgt": "2026-10-24T01:01:00+08:00"
+    },
+    {
+      "event_id": "perplexity-impeccable-skill-20261024",
+      "section": "ai",
+      "headline": "Perplexity adds the Impeccable design-review skill to Computer.",
+      "context": "The integration reviews interface layout, typography, contrast and accessibility.",
+      "source_date": "2026-10-24",
+      "sources": [
+        "https://x.com/AskPerplexity/status/2114016621631250719"
+      ],
+      "evidence_caveat": "Full official post verified in cloud browser. Integration announcement, not independent evidence of improved design or accessibility compliance. dated catch-up, not claimed released October26",
+      "posted_at_sgt": "2026-10-24T23:30:00+08:00"
+    },
+    {
+      "event_id": "perplexity-enterprise-effort-controls-20261023",
+      "section": "ai",
+      "headline": "Perplexity adds role-based effort controls for enterprise Computer users.",
+      "context": "Administrators can now set the maximum and default effort for each role.",
+      "source_date": "2026-10-24",
+      "sources": [
+        "https://x.com/AskPerplexity/status/2113680648976441353"
+      ],
+      "evidence_caveat": "Full official post verified in cloud browser. Product availability is a vendor statement; no measured productivity or cost saving claimed. dated catch-up, not claimed released October26",
+      "posted_at_sgt": "2026-10-24T01:15:00+08:00"
+    },
+    {
+      "event_id": "openai-proposed-30bn-round-coatue-uae-20261022",
+      "section": "ai",
+      "headline": "OpenAI reportedly seeks 30 billion US dollars from Coatue and UAE investors.",
+      "context": "The proposed 1.25-trillion-dollar pre-money valuation remains under negotiation.",
+      "source_date": "2026-10-22",
+      "sources": [
+        "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/",
+        "https://www.theinformation.com/briefings/openai-fundraising-round-set-close-soon-uae-investors-coatue-leading-investment"
+      ],
+      "evidence_caveat": "TechCrunch attributes CNBC sources; independently corroborated The Information reporting. Negotiations not completed funding. CNBC direct page unavailable; no OpenAI confirmation. Keep combined summary 25 words or fewer per restricted reporting source. Catch-up; Oct23 candidate previously excluded, not delivered. Earlier September valuation talks differ in investors and terms.",
+      "posted_at_sgt": "2026-10-23T06:08:00+08:00"
+    },
+    {
+      "event_id": "barron-softmax-crossentropy-numerical-fix-20261022",
+      "section": "ai",
+      "headline": "Researchers have proposed fixes for two numerical rounding problems in machine-learning calculations.",
+      "context": "The authors report better stability in their grokking and distillation experiments.",
+      "source_date": "2026-10-22",
+      "sources": [
+        "https://x.com/jon_barron/status/2113707875290042665",
+        "https://jonbarron.info/softmaxfix/",
+        "https://arxiv.org/abs/2610.31642"
+      ],
+      "evidence_caveat": "Preprint and author-reported experiments, not universal production gains or a cybersecurity vulnerability. Do not claim a newly discovered version-specific exploit or that every deployed AI is broken. One collapse phenomenon was identified previously; this paper supplies direct fixes for both errors. Dated catch-up, not new October26 announcement.",
+      "posted_at_sgt": "2026-10-24T03:03:00+08:00"
+    }
+  ],
+  "conditions": {
+    "public_summary": "For Singapore’s weather, the five-thirty forecast is cloudy, with temperatures from twenty-four to thirty-three degrees and southwesterly winds. The National Environment Agency forecasts air quality in the moderate range today, with a twenty-four-hour PSI of seventy to one hundred. Forecast issued at 05:30 Singapore. Current numeric PSI and PM2.5 observations were unavailable in the attempted official feeds; forecast values are not observations.",
+    "sources": [
+      "https://www.weather.gov.sg/weather-forecast-24hrforecast/",
+      "https://www.haze.gov.sg/"
+    ],
+    "evidence": {
+      "forecast": "Cloudy;24–33C, SW10–20km/h",
+      "issued_at_sgt": "2026-10-26T05:30:00+08:00",
+      "weather_url": "https://www.weather.gov.sg/weather-forecast-24hrforecast/",
+      "air_forecast": "NEA24-hourPSI forecast70–100,Moderate, forOctober26",
+      "air_url": "https://www.haze.gov.sg/",
+      "air_observation": null,
+      "pm25_observation": null,
+      "gap": "Official real-time APIs attempted via cloud HTTP returned403. Haze current map/readings exposed labels but no numeric observations in text. Do not state forecast as current observation.",
+      "advisory": "Heavy-rain page checked with map times to07:00SGT; no warning text surfaced, which is not independent proof no warning exists. NEA forecast explicitlyModerate; no extra routine safety alert.",
+      "spoken": "For Singapore’s weather, the five-thirty forecast is cloudy, with temperatures from twenty-four to thirty-three degrees and southwesterly winds. The National Environment Agency forecasts air quality in the moderate range today, with a twenty-four-hour PSI of seventy to one hundred."
+    }
+  },
+  "expert_learning": {
+    "concept_id": "agent-trace-failure-localisation",
+    "title": "Find the failure inside the workflow",
+    "source_date": "2025-10-22",
+    "sources": [
+      "https://www.deeplearning.ai/the-batch/improve-agentic-performance-with-evals-and-error-analysis-part-2/"
+    ],
+    "public_summary": "Andrew Ng recommends inspecting an agent’s intermediate steps to find the failure, rather than judging only its final answer. If the individual steps work but the complete output fails, reconsider the workflow design.",
+    "provenance": "Published Oct22 2025 displayed in primary publisher text returned by web search extraction. Direct open403; dated primary text and full article body accessible through search extraction."
+  },
+  "interesting_fact": {
+    "event_id": "dead-sea-salinity-ocean-comparison",
+    "headline": "The Dead Sea is roughly ten times as salty as the ocean",
+    "context": "The Dead Sea is roughly ten times as salty as ocean water, according to NASA’s comparison.",
+    "sources": [
+      "https://science.nasa.gov/blogs/earth-matters/2017/01/18/waiter-theres-salt-in-my-lake/"
+    ],
+    "source_date": "2017-01-18",
+    "dedup": "No prior Dead Sea match in available private delivered-history JSON or prior public companion reports. Same-day upstream has this fact; it is intake, not a prior delivery."
+  },
+  "podcast_learning": {
+    "selected": null,
+    "reason": "No new qualifying original found on inspected surfaces. Big Technology latest original Oct23 already delivered Oct25. Everyday AI latest live original Aug14, newest Videos replay/reupload history. No recap, no ledger delivery advancement, no reseeding.",
+    "latest_original_bigtech": "big-technology:59149ba6-cf2e-11f1-823a-07bb6f417cfd",
+    "fresh_rss_sha256": "7a913117917efbcfec07b81a4411b4dcdec2c985a46ff3686fcdc7e8b688ae3a",
+    "rss_total_items_retrieved": 575,
+    "rss_items_reviewed": 8
+  },
+  "upstream_checklist": [
+    {
+      "index": 0,
+      "upstream_headline": "SIA steward collapses with a faint pulse on a Chengdu flight, saved by a doctor on board",
+      "decision": "retained",
+      "reason": "Fresh report, actual flightOct17 disclosed; softened source-attributed medical claim.",
+      "sources": [
+        "https://mothership.sg/2026/10/spore-airlines-steward-collapse-chengdu-flight/"
+      ],
+      "verification_sources": [
+        "https://mothership.sg/2026/10/spore-airlines-steward-collapse-chengdu-flight/"
+      ]
+    },
+    {
+      "index": 1,
+      "upstream_headline": "Singapore Airlines and Scoot put over 380,000 discounted tickets on sale",
+      "decision": "stale",
+      "reason": "Source publication actuallyOct13, notOct23; sale start is not newly announced and no new fact. Also Scoot tickets one-way, not all return.",
+      "sources": [
+        "https://mothership.sg/2026/10/discounted-sia-scoot-tickets/"
+      ],
+      "verification_sources": [
+        "https://mothership.sg/2026/10/discounted-sia-scoot-tickets/"
+      ]
+    },
+    {
+      "index": 2,
+      "upstream_headline": "Man, 44, jailed 80 days for shoving a seven-year-old boy twice at an indoor playground",
+      "decision": "retained",
+      "reason": "Oct23 court sentence verified in dated original; unseen catch-up.",
+      "sources": [
+        "https://mothership.sg/2026/10/singaporean-man-shoved-boy-indoor-playground/"
+      ],
+      "verification_sources": [
+        "https://mothership.sg/2026/10/singaporean-man-shoved-boy-indoor-playground/"
+      ]
+    },
+    {
+      "index": 3,
+      "upstream_headline": "Update: Singapore parents jailed over their eight-month-old son's abuse death",
+      "decision": "duplicate",
+      "reason": "Same October21 baby sentencing carried in Oct23 archive; no later judgment/update. Earlier guilty plea not a new October26 event.",
+      "sources": [
+        "https://mothership.sg/2026/10/couple-abuse-baby-death-jailed/"
+      ],
+      "verification_sources": [
+        "https://mothership.sg/2026/10/couple-abuse-baby-death-jailed/"
+      ]
+    },
+    {
+      "index": 4,
+      "headline": "Modi accuses Rahul Gandhi of risking 'disorder' and tarnishing India's image",
+      "decision": "stale",
+      "reason": "October22 NDTV speech verified against event-publisher live transcript (21:16 IST). No new October25 fact; broader global-institutions speech already covered October24. Do not relabel the October23 Bloomberg report as a new speech.",
+      "sources": [
+        "https://www.bloomberg.com/news/articles/2026-10-23/modi-attacks-rahul-gandhi-over-disorder-risk-to-india-s-image"
+      ],
+      "evidence": [
+        "https://www.ndtv.com/world-news/ndtv-world-summit-2026-live-updates-narendra-modi-s-jaishankar-nikhil-kamath-a-world-between-orders-12218006/amp/1"
+      ]
+    },
+    {
+      "index": 5,
+      "headline": "India's youth-led 'Cockroach' protest movement hardens into Modi's main opposition",
+      "decision": "duplicate",
+      "reason": "Newsletter characterization of longstanding protest movement, without a verified new event. Original Bloomberg inaccessible; substitute new October25 opposition/BJP developments rather than repeat movement origin. Prior October25 mock-parliament story and October23 march, plus older protest coverage.",
+      "sources": [
+        "https://www.bloomberg.com/news/newsletters/2026-10-22/cockroach-party-evolves-into-indian-prime-minister-modi-s-opposition"
+      ],
+      "evidence": [
+        "podcast/reports/2026-10-25.sources.json: india-opposition-mock-parliament-plan-20261024"
+      ]
+    },
+    {
+      "index": 6,
+      "headline": "The rupee slides toward a record 100-per-dollar as foreign investors pull out",
+      "decision": "duplicate",
+      "reason": "October16 currency forecast already archived October18 as rupee seen sliding toward100. Not a new exchange-rate observation; later October21 rise was delivered October22. CNBC open cache miss.",
+      "sources": [
+        "https://www.cnbc.com/2026/10/16/india-rupee-rbi-dollar-iran-war.html"
+      ],
+      "evidence": [
+        "archive/2026-10-18.json: rupee forecast toward100",
+        "podcast/reports/2026-10-22.sources.json: general-add22fa9-20261022"
+      ]
+    },
+    {
+      "index": 7,
+      "upstream_headline": "Royal London bets on long-dated gilts before Burnham's first Budget",
+      "decision": "insufficiently_verified",
+      "reason": "Bloomberg full page inaccessible; searches found only nonmatching portfolio commentary. Cannot verify new30-year overweight trade or its timing.",
+      "sources": [
+        "https://www.bloomberg.com/news/articles/2026-10-23/uk-bonds-look-attractive-after-year-of-repricing-says-rlam"
+      ],
+      "verification_sources": [
+        "https://www.bloomberg.com/news/articles/2026-10-23/uk-bonds-look-attractive-after-year-of-repricing-says-rlam"
+      ]
+    },
+    {
+      "index": 8,
+      "upstream_headline": "Melania Trump brokers a narrow humanitarian ceasefire in occupied Oleshky",
+      "decision": "retained",
+      "reason": "Primary White House announcement verified; start-date disagreement disclosed, not asserted as active ceasefire.",
+      "sources": [
+        "https://www.aljazeera.com/news/2026/10/23/white-house-says-melania-trump-secured-a-ceasefire-in-ukraines-oleshky"
+      ],
+      "verification_sources": [
+        "https://www.aljazeera.com/news/2026/10/23/white-house-says-melania-trump-secured-a-ceasefire-in-ukraines-oleshky",
+        "https://www.whitehouse.gov/briefings-statements/2026/10/first-lady-melania-trump-secures-ceasefire-between-russia-and-ukraine-localized-to-oleshky/"
+      ]
+    },
+    {
+      "index": 9,
+      "upstream_headline": "Update: Israel raids West Bank towns and uproots 2,000 in Hebron before the election",
+      "decision": "duplicate",
+      "reason": "Oct24 Hebron operation/displacement deliveredOct25; source says200 families, not upstream2000 people; no independently verified new post-cutoff fact.",
+      "sources": [
+        "https://www.aljazeera.com/news/2026/10/24/israel-raids-towns-detains-dozens-of-palestinians-in-occupied-west-bank"
+      ],
+      "verification_sources": [
+        "https://www.aljazeera.com/news/2026/10/24/israel-raids-towns-detains-dozens-of-palestinians-in-occupied-west-bank"
+      ]
+    },
+    {
+      "index": 10,
+      "upstream_headline": "Sudan's shift to drone warfare deepens its civilian catastrophe",
+      "decision": "retained",
+      "reason": "Replaced broad feature with documented October23 OHCHR306 deaths statistic, sourced syndicated primary statement.",
+      "sources": [
+        "https://www.aljazeera.com/news/2026/10/22/how-sudans-shift-to-drone-warfare-is-fuelling-a-civilian-crisis"
+      ],
+      "verification_sources": [
+        "https://www.aljazeera.com/news/2026/10/22/how-sudans-shift-to-drone-warfare-is-fuelling-a-civilian-crisis",
+        "https://www.scoop.co.nz/stories/WO2610/S00177/sudan-turk-alarmed-by-surge-in-drone-attacks-killing-hundreds-in-october.htm"
+      ]
+    },
+    {
+      "index": 11,
+      "decision": "excluded_stale_and_insufficiently_verified",
+      "reason": "Mid-November IPO and November9 marketing timing already reported October1 by Bloomberg Law; supplied October22 investor-gains item does not independently establish a new timetable or claimed valuation. No new timing verified."
+    },
+    {
+      "index": 12,
+      "decision": "retained_corrected_catchup",
+      "reason": "October22 reported proposed $30bn round at $1.25tn pre-money, Coatue/UAE investor negotiations, corroborated by The Information; not a completed raise or October26 release. Prior private delivered event history contains no such terms."
+    },
+    {
+      "index": 13,
+      "upstream_headline": "Markets expect the Fed to hold rates at its Oct 28 meeting, with December in play",
+      "decision": "duplicate",
+      "reason": "Fed expectation repeats Oct25 archive and references Oct16 report; no material new rate decision or expectation evidence.",
+      "sources": [
+        "https://www.cnbc.com/2026/10/16/kevin-warsh-fed-october-rate-hike-interest-rates-markets.html"
+      ],
+      "verification_sources": [
+        "https://www.cnbc.com/2026/10/16/kevin-warsh-fed-october-rate-hike-interest-rates-markets.html"
+      ]
+    },
+    {
+      "index": 14,
+      "upstream_headline": "🏎️ Antonelli wins the US Grand Prix from pole but is denied an early title",
+      "decision": "retained",
+      "reason": "Official F1 race result verified; merged title implication withrow15.",
+      "sources": [
+        "https://www.formula1.com/en/racing/2026/united-states"
+      ],
+      "verification_sources": [
+        "https://www.formula1.com/en/racing/2026/united-states",
+        "https://www.formula1.com/en/latest/article/antonelli-surges-to-dominant-victory-in-united-states-grand-prix-ahead-of-leclerc-and-verstappen.6kmBQv9FNTW7LzkDj8S34j"
+      ]
+    },
+    {
+      "index": 15,
+      "upstream_headline": "🏎️ The Formula 1 title race heads to Mexico as Antonelli's crown is delayed",
+      "decision": "duplicate",
+      "reason": "Same underlying Austin race/title event asrow14; represented together, unsupported340-point and guaranteed Mexico outcome omitted.",
+      "sources": [
+        "https://www.formula1.com/en/racing/2026/united-states"
+      ],
+      "verification_sources": [
+        "https://www.formula1.com/en/racing/2026/united-states"
+      ]
+    },
+    {
+      "index": 16,
+      "upstream_headline": "🏏 India lead New Zealand 2-0 heading into the third T20I in Wellington",
+      "decision": "retained",
+      "reason": "Series score repeated, but ICCOct25 Ferguson absence is a material squad update.",
+      "sources": [
+        "https://www.espn.com/cricket/series/24469/game/1539434/new-zealand-vs-india-3rd-t20i-24469"
+      ],
+      "verification_sources": [
+        "https://www.espn.com/cricket/series/24469/game/1539434/new-zealand-vs-india-3rd-t20i-24469",
+        "https://www.icc-cricket.com/news/new-zealand-announce-key-updates-for-t20i-squad-against-india"
+      ]
+    },
+    {
+      "index": 17,
+      "upstream_headline": "🎾 Alcaraz returns to Vienna as Wawrinka bids an emotional farewell in Basel",
+      "decision": "retained",
+      "reason": "Official tournament ATP Staff preview verified via indexed substantive text; excludes repeated Djokovic wildcard.",
+      "sources": [
+        "https://www.atptour.com/en/news/basel-vienna-2026-scouting-report"
+      ],
+      "verification_sources": [
+        "https://www.atptour.com/en/news/basel-vienna-2026-scouting-report",
+        "https://www.erstebank-open.com/en/news/storys/basel-vienna-2026-scouting-report"
+      ]
+    },
+    {
+      "index": 18,
+      "upstream_headline": "An implant that burns up excess blood sugar with electricity passes mouse tests",
+      "decision": "retained",
+      "reason": "ETH primaryOct22 confirms preclinical experiment; no human testing.",
+      "sources": [
+        "https://www.scientificamerican.com/article/this-implant-burns-up-excess-blood-sugar-with-electricity/"
+      ],
+      "verification_sources": [
+        "https://www.scientificamerican.com/article/this-implant-burns-up-excess-blood-sugar-with-electricity/",
+        "https://ethz.ch/en/news-and-events/eth-news/news/2026/10/tackling-diabetes-with-an-electronic-implant.html",
+        "https://doi.org/10.1126/science.ady8560"
+      ]
+    },
+    {
+      "index": 19,
+      "upstream_headline": "Asteroid Bennu's samples are rewriting how the Solar System formed",
+      "decision": "stale",
+      "reason": "Actual ScientificAmerican page datedMarch28 2024, notOct24 2026; claimed new isotope result not supported by linked article.",
+      "sources": [
+        "https://www.scientificamerican.com/article/nasas-osiris-rex-asteroid-sample-is-already-rewriting-solar-system-history/"
+      ],
+      "verification_sources": [
+        "https://www.scientificamerican.com/article/nasas-osiris-rex-asteroid-sample-is-already-rewriting-solar-system-history/"
+      ]
+    },
+    {
+      "index": 20,
+      "upstream_headline": "Japan's MMX mission sets off to sample Mars's moon Phobos",
+      "decision": "duplicate",
+      "reason": "MMX launch already inOct20 archive. Linked ESAPageOct13 is prelaunch, not launch confirmation; CNES separately confirmsOct20 launch, no new development.",
+      "sources": [
+        "https://www.esa.int/Science_Exploration/Space_Science/Mars_moon_lander_set_to_launch_on_19_October"
+      ],
+      "verification_sources": [
+        "https://www.esa.int/Science_Exploration/Space_Science/Mars_moon_lander_set_to_launch_on_19_October",
+        "https://cnes.fr/en/projects/mmx"
+      ]
+    }
+  ],
+  "diagnostic_notes": [
+    "No new qualifying original found on inspected surfaces. Big Technology latest original Oct23 already delivered Oct25. Everyday AI latest live original Aug14, newest Videos replay/reupload history. No recap, no ledger delivery advancement, no reseeding.",
+    "Some publishers returned access failures; indexed original reporting and clearly attributed alternatives supported the retained claims. Exact source limitations are retained in the evidence file.",
+    "Current PSI and PM2.5 observations could not be read from the attempted official feeds. Only the dated official forecasts are narrated.",
+    "No new qualifying insurance or reinsurance item was retained; the Medinet breach had already been covered.",
+    "Available prior archives and delivered-event history were checked for semantic duplicates. Historical source-access gaps remain; this is not a full-window coverage claim.",
+    "A 60-profile browser batch timed out without durable output; those affected profiles were reattempted via public HTTPS documents.",
+    "Web reader returned403 for two Perplexity posts; authorized public cloud-browser pages loaded and supplied original text/time.",
+    "Block Dessa page empty in browser, unavailable via web reader; not retained."
+  ],
+  "coverage_summary": "All 21 upstream entries reconciled: 9 retained or corrected, 12 excluded or merged with explicit reasons. 25 distinct news headlines include independent additions. All four upstream sports entries are accounted for; the two Formula 1 entries are combined into one race result.",
+  "ai_events": [
+    {
+      "event_id": "chroma-replit-agreement-20261023",
+      "rank": 1,
+      "headline": "Chroma has agreed to join Replit.",
+      "context": "Its hosted cloud service will wind down by December 22, while the open-source database continues.",
+      "handle": "@trychroma",
+      "discovery_handle": "@amasad",
+      "url": "https://x.com/trychroma/status/2113677289334706274",
+      "primary_url": "https://www.trychroma.com/blog/chroma-joins-replit",
+      "sources": [
+        "https://x.com/trychroma/status/2113677289334706274",
+        "https://www.trychroma.com/blog/chroma-joins-replit",
+        "https://www.trychroma.com/cloud-wind-down"
+      ],
+      "posted_at_sgt": "2026-10-24T01:01:00+08:00",
+      "source_date": "2026-10-24",
+      "timestamp_precision": "minute",
+      "evidence": "Original official post read in cloud browser; displayed Singapore date/time to minute, aligned with ID-derived UTC conversion.",
+      "caveat": "Signed definitive agreement, not asserted closed acquisition. Writes disabled November22, reads December22. Blog date October23; official post UI Oct24 01:01 Singapore, independently aligns with post-ID time.",
+      "status": "candidate_verified_not_yet_delivered",
+      "freshness": "dated catch-up, not claimed released October26"
+    },
+    {
+      "event_id": "perplexity-impeccable-skill-20261024",
+      "rank": 2,
+      "headline": "Perplexity adds the Impeccable design-review skill to Computer.",
+      "context": "The integration reviews interface layout, typography, contrast and accessibility.",
+      "handle": "@AskPerplexity",
+      "discovery_handle": "@AravSrinivas",
+      "url": "https://x.com/AskPerplexity/status/2114016621631250719",
+      "primary_url": "https://x.com/AskPerplexity/status/2114016621631250719",
+      "sources": [
+        "https://x.com/AskPerplexity/status/2114016621631250719",
+        "https://x.com/AskPerplexity/status/2114016621631250719"
+      ],
+      "posted_at_sgt": "2026-10-24T23:30:00+08:00",
+      "source_date": "2026-10-24",
+      "timestamp_precision": "minute",
+      "evidence": "Original official post read in cloud browser; displayed Singapore date/time to minute, aligned with ID-derived UTC conversion.",
+      "caveat": "Full official post verified in cloud browser. Integration announcement, not independent evidence of improved design or accessibility compliance.",
+      "status": "candidate_verified_not_yet_delivered",
+      "freshness": "dated catch-up, not claimed released October26"
+    },
+    {
+      "event_id": "perplexity-enterprise-effort-controls-20261023",
+      "rank": 3,
+      "headline": "Perplexity adds role-based effort controls for enterprise Computer users.",
+      "context": "Administrators can now set the maximum and default effort for each role.",
+      "handle": "@AskPerplexity",
+      "discovery_handle": "@AravSrinivas",
+      "url": "https://x.com/AskPerplexity/status/2113680648976441353",
+      "primary_url": "https://x.com/AskPerplexity/status/2113680648976441353",
+      "sources": [
+        "https://x.com/AskPerplexity/status/2113680648976441353",
+        "https://x.com/AskPerplexity/status/2113680648976441353"
+      ],
+      "posted_at_sgt": "2026-10-24T01:15:00+08:00",
+      "source_date": "2026-10-24",
+      "timestamp_precision": "minute",
+      "evidence": "Original official post read in cloud browser; displayed Singapore date/time to minute, aligned with ID-derived UTC conversion.",
+      "caveat": "Full official post verified in cloud browser. Product availability is a vendor statement; no measured productivity or cost saving claimed.",
+      "status": "candidate_verified_not_yet_delivered",
+      "freshness": "dated catch-up, not claimed released October26"
+    },
+    {
+      "event_id": "openai-proposed-30bn-round-coatue-uae-20261022",
+      "rank": 4,
+      "headline": "OpenAI reportedly seeks 30 billion US dollars from Coatue and UAE investors.",
+      "context": "The proposed 1.25-trillion-dollar pre-money valuation remains under negotiation.",
+      "handle": null,
+      "url": "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/",
+      "sources": [
+        "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/",
+        "https://www.theinformation.com/briefings/openai-fundraising-round-set-close-soon-uae-investors-coatue-leading-investment"
+      ],
+      "posted_at_sgt": "2026-10-23T06:08:00+08:00",
+      "source_date": "2026-10-22",
+      "timestamp_precision": "article publication minute; not X post",
+      "caveat": "TechCrunch attributes CNBC sources; independently corroborated The Information reporting. Negotiations not completed funding. CNBC direct page unavailable; no OpenAI confirmation. Keep combined summary 25 words or fewer per restricted reporting source.",
+      "freshness": "Catch-up; Oct23 candidate previously excluded, not delivered. Earlier September valuation talks differ in investors and terms.",
+      "status": "candidate_verified_not_yet_delivered"
+    },
+    {
+      "event_id": "barron-softmax-crossentropy-numerical-fix-20261022",
+      "headline": "Researchers have proposed fixes for two numerical rounding problems in machine-learning calculations.",
+      "context": "The authors report better stability in their grokking and distillation experiments.",
+      "handle": "@ericjang11",
+      "original_handle": "@jon_barron",
+      "url": "https://x.com/jon_barron/status/2113707875290042665",
+      "primary_url": "https://jonbarron.info/softmaxfix/",
+      "sources": [
+        "https://x.com/jon_barron/status/2113707875290042665",
+        "https://jonbarron.info/softmaxfix/",
+        "https://arxiv.org/abs/2610.31642"
+      ],
+      "posted_at_sgt": "2026-10-24T03:03:00+08:00",
+      "source_date": "2026-10-22",
+      "paper_submitted_sgt": "2026-10-23T01:54:56+08:00",
+      "timestamp_precision": "post displayed to minute; paper submission to second",
+      "evidence": "Read original author X announcement and linked primary paper HTML/abstract. Collapse rounds one gradient to zero asymmetrically; cancellation loses precision near matching teacher/student outputs. Algebraically equivalent rewrites preserve small quantities.",
+      "caveat": "Preprint and author-reported experiments, not universal production gains or a cybersecurity vulnerability. Do not claim a newly discovered version-specific exploit or that every deployed AI is broken. One collapse phenomenon was identified previously; this paper supplies direct fixes for both errors.",
+      "status": "candidate_verified_not_delivered",
+      "freshness": "Dated catch-up, not new October26 announcement.",
+      "rank": 5
+    }
+  ],
+  "ai_coverage": {
+    "attempted": 211,
+    "browser": 96,
+    "public_https_document": 115,
+    "full_windows": 0,
+    "discovered": 1577,
+    "pending": 389,
+    "dispositions": {
+      "pending": 389,
+      "duplicate": 48,
+      "stale": 680,
+      "immaterial": 456,
+      "retained": 4
+    }
+  },
+  "source_coverage_summary": {
+    "required_source_rows": 240,
+    "roster": {
+      "url": "https://xstarterpack.com/",
+      "retrieved_at": "2026-10-25T23:05:57.603716+00:00",
+      "content_sha256": "045581900e0c354deebaa87a524cb470204bb0d39238c20252da90383bb39e45",
+      "count": 211,
+      "handles": [
+        "levie",
+        "AdamMarblestone",
+        "ajaymehta",
+        "ajeya_cotra",
+        "akothari",
+        "ARozenshtein",
+        "alexalbert__",
+        "alexeheath",
+        "alexolegimas",
+        "ATabarrok",
+        "embirico",
+        "alexandr_wang",
+        "sonofalli",
+        "AmandaAskell",
+        "theamberyang",
+        "amasad",
+        "karpathy",
+        "andrewchen",
+        "andy_matuschak",
+        "AnthropicAI",
+        "AravSrinivas",
+        "ArtificialAnlys",
+        "asianometry",
+        "Austen",
+        "balajis",
+        "gilbert",
+        "benhylak",
+        "benkuhn",
+        "benspringwater",
+        "benthompson",
+        "benjitaylor",
+        "BerenMillidge",
+        "blakeir",
+        "bcherny",
+        "btaylor",
+        "brian_armstrong",
+        "bchesky",
+        "brian_lovin",
+        "zebriez",
+        "buccocapital",
+        "ByrneHobart",
+        "calebwatney",
+        "CJHandmer",
+        "catehall",
+        "oneill_c",
+        "ch402",
+        "kimmonismus",
+        "clairevo",
+        "danhilltech",
+        "dwr",
+        "danshipper",
+        "danielgross",
+        "DKokotajlo",
+        "DarioAmodei",
+        "davemorin",
+        "friedberg",
+        "dhh",
+        "DavidSHolz",
+        "pierce",
+        "djrosent",
+        "DavidSacks",
+        "dps",
+        "deanwball",
+        "deepfates",
+        "demishassabis",
+        "DKThomp",
+        "destraynor",
+        "dwarkesh_sp",
+        "zoink",
+        "dylan522p",
+        "edwinarbus",
+        "EgeErdil2",
+        "eladgil",
+        "ESYudkowsky",
+        "eliotpeper",
+        "elonmusk",
+        "ericjang11",
+        "emollick",
+        "ezraklein",
+        "finmoorhouse",
+        "fchollet",
+        "garrytan",
+        "GavinSBaker",
+        "GoogleDeepMind",
+        "gdb",
+        "growing_daniel",
+        "rauchg",
+        "gustaf",
+        "gwern",
+        "harjtaggar",
+        "ilyasut",
+        "ivanhzhao",
+        "jaltma",
+        "jackclarkSF",
+        "jack",
+        "jacksondahl",
+        "JacobTref",
+        "merettm",
+        "dyett",
+        "janleike",
+        "snowmaker",
+        "jasminewsun",
+        "j_asminewang",
+        "jasoncrawford",
+        "JeffDean",
+        "jeff_weinstein",
+        "JensenHuang",
+        "jeremygiffon",
+        "colossusjeremy",
+        "jkcarlsmith",
+        "TheStalwart",
+        "collision",
+        "gruber",
+        "johnschulman2",
+        "joshm",
+        "joshuakushner",
+        "venturetwins",
+        "karrisaarinen",
+        "lil_dill",
+        "KelseyTuoc",
+        "kevinroose",
+        "kevinweil",
+        "kieranklaassen",
+        "krispuckett",
+        "lachygroom",
+        "lennysan",
+        "leopoldasch",
+        "OfficialLoganK",
+        "lulumeservey",
+        "mgsiegler",
+        "pmarca",
+        "markchen90",
+        "finkd",
+        "MKBHD",
+        "mattyglesias",
+        "michael_nielsen",
+        "mwseibel",
+        "mntruell",
+        "mikeyk",
+        "Miles_Brundage",
+        "miramurati",
+        "modestproposal1",
+        "nabeelqu",
+        "nayafia",
+        "nanransohoff",
+        "natfriedman",
+        "nbaschez",
+        "natolambert",
+        "nlw",
+        "naval",
+        "nickcammarata",
+        "nickaturley",
+        "nikitabier",
+        "noahrshinn",
+        "Noahpinion",
+        "polynoamial",
+        "NoamShazeer",
+        "omooretweets",
+        "OpenAI",
+        "packyM",
+        "PalmerLuckey",
+        "patrickc",
+        "patrick_oshag",
+        "paulfchristiano",
+        "paulg",
+        "paularambles",
+        "steipete",
+        "petergyang",
+        "pawtrammell",
+        "levelsio",
+        "quintendf",
+        "reinerpope",
+        "RhysSullivan",
+        "RichardSSutton",
+        "rohanpaul_ai",
+        "romainhuet",
+        "tszzl",
+        "RyanGreenblatt",
+        "typesfast",
+        "ryolu_",
+        "salonium",
+        "sama",
+        "rSanti97",
+        "sarahdingwang",
+        "satyanadella",
+        "slatestarcodex",
+        "rasbt",
+        "svlevine",
+        "ShaneLegg",
+        "swyx",
+        "_sholtodouglas",
+        "signulll",
+        "simonlast",
+        "simonw",
+        "blader",
+        "soleio",
+        "Suhail",
+        "sundarpichai",
+        "tamaybes",
+        "trq212",
+        "thsottiaux",
+        "tobi",
+        "t_blom",
+        "TrentonBricken",
+        "tylercowen",
+        "VitalikButerin",
+        "willdepue",
+        "willknight",
+        "WillManidis",
+        "willmacaskill",
+        "YasminRazavi"
+      ]
+    },
+    "required_attempts_status": "complete",
+    "full_window_status": "partial",
+    "pending_items": 393,
+    "public_disclosure": "All211 current-roster public profiles were attempted and their available bounded captures screened:96 cloud-browser captures and115 public profile documents. Displayed dates and current-window text were screened for stale items, repetition, commentary and substantive candidates; this was not full original-thread or complete timeline review. Pending original verification and semantic dedup remain explicitly recorded, and the October18 unresolved window is preserved. Five distinct dated catch-up developments verified; no exhaustive coverage claim or full-window cursor advance. Required non-roster categories and surfaces were also attempted. 393 discovered source-associated items remain pending; current PSI and PM2.5 observations were unavailable. Available upstream reconciliation covers all21 entries, separately from these access and review gaps.",
+    "public_checklist_url": "https://pbhat89.github.io/the-brief/podcast/source-coverage/2026-10-26.html"
+  }
+}
