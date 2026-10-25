@@ -83,3 +83,7 @@ Naval Ravikant's evergreen 25 March 2019 specific-knowledge-through-curiosity le
 ## Confirmed use, 25 October 2026
 
 Karpathy’s evergreen 25 April 2019 explanation of random versus grid search was included in the verified, accepted combined edition: [public report](https://pbhat89.github.io/the-brief/podcast/reports/2026-10-25.html). The lesson concerns unequal importance of model settings and a limited experiment budget, not the previously covered input-inspection or tiny-pipeline checks. The nine-trial example and business application are editorial; no universal superiority claim is made. Only this new concept gains a narrated use; prior concepts and history gaps are preserved.
+
+### 26 October 2026 · Confirmed use
+
+Andrew Ng’s evergreen workflow trace-localisation lesson (source dated 22 October 2025; `agent-trace-failure-localisation`) was narrated and delivered after verified publication. The document-assistant application is editorial. Direct page access failed; indexed primary publisher text supplied the evidence. The machine ledger now records confirmed use, not a pending candidate.

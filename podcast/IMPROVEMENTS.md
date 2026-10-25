@@ -141,3 +141,11 @@ Observed: workspace reset removed narration assets, and newer dependency resolut
 The public development-tool audit also exposed a vulnerable transitive package. A minimal official patched override passed audit, but its first lockfile layout was incompatible with the CI package-manager version. Reproducing the clean install with CI’s exact version resolved the mismatch; all tests and hosted deployment passed. Keep audits intact, verify lockfile portability before committing, and preserve a reversible diff. This is tested maintenance, not expanded application scope.
 
 A previously unavailable current-original podcast transcript became accessible on the next run and was then summarized. Recheck pending sources without marking inaccessible episodes covered or refilling the completed catch-up queue.
+
+## Full roster attempts with explicit review backlog · 26 October 2026
+
+Verified: all 211 refreshed roster profiles and every agreed non-roster category/surface were attempted; captured profile content was screened. This is materially broader than earlier sampled runs, but it is not exhaustive timeline coverage. Publish three independent results: upstream reconciliation, required-source attempts, and full-window source coverage. Keep pending original-post verification visible, including content that a logged-out snapshot truncates. A transport 200 alone is not a completed content review.
+
+A timed-out browser batch was recovered through ordinary public profile documents, without authentication or access-control bypass; route-specific evidence remains recorded. Next improvement is prioritized original-post verification within the retained backlog, not discarding it or moving conservative cursors. Success means source-backed dispositions and preserved historical gaps, not merely more successful requests.
+
+A final phoneme review identified acronyms being spoken as words. Correcting those explicit tokens and regenerating only affected cached chapters passed exact-text, phoneme, decode, loudness and pause checks. Continue private acronym checks before publishing; no change to the established narrator or a claim of human listening approval.
