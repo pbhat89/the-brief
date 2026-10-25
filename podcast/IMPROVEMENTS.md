@@ -149,3 +149,10 @@ Verified: all 211 refreshed roster profiles and every agreed non-roster category
 A timed-out browser batch was recovered through ordinary public profile documents, without authentication or access-control bypass; route-specific evidence remains recorded. Next improvement is prioritized original-post verification within the retained backlog, not discarding it or moving conservative cursors. Success means source-backed dispositions and preserved historical gaps, not merely more successful requests.
 
 A final phoneme review identified acronyms being spoken as words. Correcting those explicit tokens and regenerating only affected cached chapters passed exact-text, phoneme, decode, loudness and pause checks. Continue private acronym checks before publishing; no change to the established narrator or a claim of human listening approval.
+
+## 26 October 2026 · Post-delivery source-inventory correction
+
+- Observation: the original learning producer confirmed no Big Technology YouTube page attempt; only RSS was checked. The original 240 configured rows omitted this agreed surface. The October 25 feedback requested all agreed sources and YouTube pages, not merely the configured denominator. No missing attempt is relabelled blocked or fabricated.
+- Correction: require a separate `big-technology-youtube` row targeting the previously verified official channel. RSS-only, missing-row and unattempted normal-release cases now have explicit regression tests. The synthetic example and research entry-point documentation are aligned. Passing these tests validates the gate, not actual future source access.
+- Historical handling: the delivered audio, report, source evidence, research cutoffs and episode states remain unchanged. The source checklist receives a clearly dated operational addendum; its original capture is preserved. No edition is regenerated and no schedule, account, credential or upstream workflow changes.
+- Success measure: the next run records a real channel-page attempt with time and outcome, independently of RSS and any selected transcript. Current-run review backlog and older unresolved windows remain pending.

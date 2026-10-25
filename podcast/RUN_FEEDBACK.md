@@ -266,3 +266,10 @@ Keep the spoken signposts and one-second section breaks, then use direct listene
 - Next bounded work: prioritize pending current-window original posts by substantive relevance, retain complete source-associated inventory, and resolve older gaps without treating a new daily snapshot as historical completion. Attempt completeness, item-review completeness and full-window coverage must remain separate success measures.
 
 - Delivery closeout: combined delivery was accepted after verified audio publication and public report readback. The catalogue commit passed repository/player deployment checks and Pages deployment. Confirmed expert use is recorded; no inaccessible or already-seen podcast original was marked delivered. Final status and operational records are included in a separate closeout commit.
+
+## 26 October 2026 · Post-delivery source-inventory correction
+
+- Observation: the original learning producer confirmed no Big Technology YouTube page attempt; only RSS was checked. The original 240 configured rows omitted this agreed surface. The October 25 feedback requested all agreed sources and YouTube pages, not merely the configured denominator. No missing attempt is relabelled blocked or fabricated.
+- Correction: require a separate `big-technology-youtube` row targeting the previously verified official channel. RSS-only, missing-row and unattempted normal-release cases now have explicit regression tests. The synthetic example and research entry-point documentation are aligned. Passing these tests validates the gate, not actual future source access.
+- Historical handling: the delivered audio, report, source evidence, research cutoffs and episode states remain unchanged. The source checklist receives a clearly dated operational addendum; its original capture is preserved. No edition is regenerated and no schedule, account, credential or upstream workflow changes.
+- Success measure: the next run records a real channel-page attempt with time and outcome, independently of RSS and any selected transcript. Current-run review backlog and older unresolved windows remain pending.

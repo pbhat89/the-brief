@@ -1362,6 +1362,49 @@
         "retained": 0,
         "excluded": 0
       }
+    },
+    {
+      "source_id": "big-technology-youtube",
+      "roster_member": false,
+      "roster_snapshot_sha256": null,
+      "access_status": "accessible",
+      "attempts": [
+        {
+          "url": "https://www.youtube.com/@Alex.kantrowitz",
+          "at": "2026-10-25T23:01:00Z",
+          "method": "synthetic-fixture",
+          "outcome": "Synthetic completed inspection"
+        }
+      ],
+      "queries": [],
+      "independent_discovery": false,
+      "independent_discovery_required": false,
+      "coverage_scope": "full_window",
+      "scope_note": "Synthetic scope only.",
+      "prior_full_window_cursor": "2026-10-24T23:00:00Z",
+      "oldest_unresolved_gap_start": null,
+      "unresolved_window": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z"
+      },
+      "window_completion_evidence": {
+        "start": "2026-10-24T23:00:00Z",
+        "end": "2026-10-25T23:00:00Z",
+        "boundary_reached": true,
+        "method": "Synthetic traversal evidence only",
+        "source_urls": [
+          "https://example.org/synthetic-source"
+        ]
+      },
+      "advance_full_window_cursor": false,
+      "gaps": [],
+      "counts": {
+        "discovered": 0,
+        "reviewed": 0,
+        "pending": 0,
+        "retained": 0,
+        "excluded": 0
+      }
     }
   ],
   "items": [],

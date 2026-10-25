@@ -20,3 +20,25 @@ test('postdelivery addendum preserves every original source field and recording 
 test('older unresolved source gaps cannot be reset to partialcheckpoints',()=>{const c=coverageFixture(),s=c.sources.at(-1);s.oldest_unresolved_gap_start='2026-10-18T00:00:00Z';assert.throws(()=>validateSourceCoverage(c));s.unresolved_window.start=s.oldest_unresolved_gap_start;assert.throws(()=>validateSourceCoverage(c));s.window_completion_evidence.start=s.oldest_unresolved_gap_start;assert.equal(validateSourceCoverage(c).status,'complete');});
 
 test('mandatory source surfaces cannot be replaced by another page visit',()=>{for(const [id,url] of [['everyday-videos','https://www.youtube.com/@EverydayAI_/streams'],['everyday-live','https://www.youtube.com/@EverydayAI_/videos'],['inshorts-politics','https://inshorts.com/en/read/national']]){const c=coverageFixture();c.sources.find(x=>x.source_id===id).attempts[0].url=url;assert.throws(()=>validateSourceCoverage(c));}});
+
+test('Big Technology YouTube is mandatory independently of RSS and transcript selection',()=>{
+ const c=coverageFixture();
+ assert.ok(c.sources.some(s=>s.source_id==='big-technology-youtube'));
+ assert.equal(validateSourceCoverage(c).required_sources,32);
+ c.sources=c.sources.filter(s=>s.source_id!=='big-technology-youtube');
+ assert.throws(()=>validateSourceCoverage(c),/Every required source/);
+ const rssOnly=coverageFixture();
+ rssOnly.sources.find(s=>s.source_id==='big-technology-youtube').attempts[0].url='https://feeds.megaphone.fm/LI3617121267';
+ assert.throws(()=>validateSourceCoverage(rssOnly),/required source surface/);
+ const unattempted=makePartial(coverageFixture(),'big-technology-youtube',true);
+ assert.equal(validateSourceCoverage(unattempted).unattempted,1);
+ assert.throws(()=>requireSourceCoverageForRelease(unattempted),/Unattempted mandatory sources/);
+});
+
+test('October 26 operational addendum preserves original source checklist exactly',async()=>{
+ const {createHash}=await import('node:crypto');
+ const html=readFileSync(new URL('./source-coverage/2026-10-26.html',import.meta.url),'utf8');
+ assert.equal((html.match(/id="post-delivery-correction"/g)||[]).length,1);
+ const original=html.replace(/<section class="notice" id="post-delivery-correction">[\s\S]*?<\/section>/,'');
+ assert.equal(createHash('sha256').update(original).digest('hex'),'127366bc0752c2172793b637df12ef3cdd753a51881fa8ec0d3a30a9169967b4');
+});

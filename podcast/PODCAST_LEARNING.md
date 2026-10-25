@@ -68,3 +68,7 @@ After the unchanged three-episode seed was completed, the latest-only check sele
 ## Coverage reconciliation, 25 October 2026
 
 The latest qualifying Big Technology original, published 23 October at 22:12 UTC, now had an accessible actual third-party transcript. The distinct 56:39–57:39 recap covers forgotten event websites, retained data and digital-asset lifecycle responsibility; the webinar application is editorial and CIS asset-inventory guidance independently supports the principle. No previous PHP incident statistics or Pichai compute-allocation lesson were repeated. The recap was included in the verified, accepted [combined edition](https://pbhat89.github.io/the-brief/podcast/reports/2026-10-25.html). The fixed three-episode seed, older published episodes and historical gaps remain unchanged.
+
+### Required learning-source discovery surfaces
+
+Before selecting a recap, attempt both the Big Technology publisher RSS and its official YouTube page at https://www.youtube.com/@Alex.kantrowitz as separate source-checklist rows, alongside all six Everyday AI surfaces. RSS is not a substitute for the channel-page attempt. Preserve actual attempt times, access gaps, original/upload dates and transcript provenance; do not mark listing-only or inaccessible episodes covered. See `SOURCE_COVERAGE.md` for the post-delivery inventory correction.

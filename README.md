@@ -213,3 +213,7 @@ The existing Claude brief and Gmail workflow remain unchanged. The companion add
 
 The companion starts at 07:00 Singapore time, with a bounded upstream intake window and a 07:30 delivery target. The external ChatGPT companion automation is configured separately; no autonomous research collector or synthesis service is bundled in this repository. Editing a prompt does not update the saved Claude routine automatically. Public HTML is news only. Audio is delivered through the private listener or native ChatGPT attachments; transcripts remain private; no private media URLs or personal configuration belong in this repo.
 
+
+### Required learning-source discovery surfaces
+
+Before selecting a recap, attempt both the Big Technology publisher RSS and its official YouTube page at https://www.youtube.com/@Alex.kantrowitz as separate source-checklist rows, alongside all six Everyday AI surfaces. RSS is not a substitute for the channel-page attempt. Preserve actual attempt times, access gaps, original/upload dates and transcript provenance; do not mark listing-only or inaccessible episodes covered. See `podcast/SOURCE_COVERAGE.md` for the post-delivery inventory correction.
