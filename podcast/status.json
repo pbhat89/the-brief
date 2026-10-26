@@ -1,6 +1,6 @@
 {
   "run_id": "morning-2026-10-27",
-  "updated_at": "2026-10-26T23:15:28.439015+00:00",
+  "updated_at": "2026-10-26T23:22:38.079804+00:00",
   "previous_run": {
     "run_id": "morning-2026-10-26",
     "state": "completed",
@@ -11,50 +11,50 @@
       "id": "history",
       "label": "History and operational feedback",
       "state": "completed",
-      "updated_at": "2026-10-26T23:15:28.439015+00:00",
+      "updated_at": "2026-10-26T23:22:38.079804+00:00",
       "detail": "Prior delivery history and current coverage requirements read; no same-date edition delivered."
     },
     {
       "id": "upstream",
       "label": "Same-day upstream intake",
       "state": "completed",
-      "updated_at": "2026-10-26T23:15:28.439015+00:00",
+      "updated_at": "2026-10-26T23:22:38.079804+00:00",
       "detail": "All 33 same-day upstream entries reconciled with explicit dispositions."
     },
     {
       "id": "research",
       "label": "Source research and deduplication",
       "state": "completed",
-      "updated_at": "2026-10-26T23:15:28.439015+00:00",
+      "updated_at": "2026-10-26T23:22:38.079804+00:00",
       "detail": "Every required source attempted; bounded source windows and pending original-item verification remain explicitly partial."
     },
     {
       "id": "script",
       "label": "Narrative preparation",
       "state": "completed",
-      "updated_at": "2026-10-26T23:15:28.439015+00:00",
+      "updated_at": "2026-10-26T23:22:38.079804+00:00",
       "detail": "Concise 31-headline script with distinct transcript-based podcast learning and evergreen expert lesson prepared."
     },
     {
       "id": "audio",
       "label": "Private narration checks",
-      "state": "running",
-      "updated_at": "2026-10-26T23:15:28.439015+00:00",
-      "detail": "Final rendering and measured audio checks are in progress; no publication claim."
+      "state": "completed",
+      "updated_at": "2026-10-26T23:22:38.079804+00:00",
+      "detail": "Measured narration passed full decode, clipping, chapter-gap and loudness checks; no physical-device playback claim."
     },
     {
       "id": "publication",
       "label": "Public report publication",
-      "state": "running",
-      "updated_at": "2026-10-26T23:15:28.439015+00:00",
-      "detail": "Public report and reader catalogue prepared; live verification pending."
+      "state": "completed",
+      "updated_at": "2026-10-26T23:22:38.079804+00:00",
+      "detail": "Live report and source checklist matched exact local bytes; publication commit Pages and regression/Worker deployment succeeded."
     },
     {
       "id": "delivery",
       "label": "Private episode delivery",
-      "state": "pending",
-      "updated_at": "2026-10-26T23:15:28.439015+00:00",
-      "detail": "Await verified audio publication and combined delivery."
+      "state": "completed",
+      "updated_at": "2026-10-26T23:22:38.079804+00:00",
+      "detail": "Private publication and exact replay verified matching hash, size and seven-day expiry; combined conversation delivery accepted. Elapsed expiry and physical-device playback remain unobserved."
     }
   ]
 }

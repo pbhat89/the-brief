@@ -87,3 +87,7 @@ Karpathy’s evergreen 25 April 2019 explanation of random versus grid search wa
 ### 26 October 2026 · Confirmed use
 
 Andrew Ng’s evergreen workflow trace-localisation lesson (source dated 22 October 2025; `agent-trace-failure-localisation`) was narrated and delivered after verified publication. The document-assistant application is editorial. Direct page access failed; indexed primary publisher text supplied the evidence. The machine ledger now records confirmed use, not a pending candidate.
+
+## 27 October 2026 · Confirmed use
+
+Naval’s evergreen 31 March 2019 complementary building-and-communication lesson was included in the verified, accepted combined edition. The AI-prototype explanation is explicitly editorial. Only this concept gains a narrated use; all previous entries and history gaps remain preserved.

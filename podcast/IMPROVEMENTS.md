@@ -156,3 +156,11 @@ A final phoneme review identified acronyms being spoken as words. Correcting tho
 - Correction: require a separate `big-technology-youtube` row targeting the previously verified official channel. RSS-only, missing-row and unattempted normal-release cases now have explicit regression tests. The synthetic example and research entry-point documentation are aligned. Passing these tests validates the gate, not actual future source access.
 - Historical handling: the delivered audio, report, source evidence, research cutoffs and episode states remain unchanged. The source checklist receives a clearly dated operational addendum; its original capture is preserved. No edition is regenerated and no schedule, account, credential or upstream workflow changes.
 - Success measure: the next run records a real channel-page attempt with time and outcome, independently of RSS and any selected transcript. Current-run review backlog and older unresolved windows remain pending.
+
+## 27 October 2026 · Actual missing-surface check verified
+
+Observed and completed: the official Big Technology YouTube root and Videos page were actually attempted separately from RSS; the required row includes evidence and bounded scope. This satisfies the previous next-run attempt test, not full archive coverage. All 241 source rows were attempted, but 668 source-associated items remain pending and no full window is complete. Retain these separate measures in future editions.
+
+Verified production checks: canonicalizing X media/analytics aliases prevents duplicate captures from inflating item counts; upstream reconciliation accounts for all 33 entries. Restored local narration passed measured decode/loudness/pause checks, and exact upload replay preserved idempotency. These technical checks do not establish listener comfort, physical-device playback or elapsed expiry.
+
+Proposed next bounded improvement: review high-relevance pending originals before increasing capture volume, preserve per-source completion timestamps where available, and keep batch inspection times explicitly labelled. Success means fewer pending substantive items with source-backed decisions; no full-window cursor advance without actual completion. Do not pad a concise edition to reach a nominal duration.

@@ -72,3 +72,7 @@ The latest qualifying Big Technology original, published 23 October at 22:12 UTC
 ### Required learning-source discovery surfaces
 
 Before selecting a recap, attempt both the Big Technology publisher RSS and its official YouTube page at https://www.youtube.com/@Alex.kantrowitz as separate source-checklist rows, alongside all six Everyday AI surfaces. RSS is not a substitute for the channel-page attempt. Preserve actual attempt times, access gaps, original/upload dates and transcript provenance; do not mark listing-only or inaccessible episodes covered. See `SOURCE_COVERAGE.md` for the post-delivery inventory correction.
+
+## 27 October 2026 · Confirmed use
+
+The new Big Technology original of 26 October at 17:09 UTC was selected after separately attempting publisher RSS and the official YouTube page. The actual third-party transcript at 13:57–15:44 supports the distinct explanation of customer concentration versus distribution-channel dependence, not a repeat of the IPO headline. Automatic-transcription limitations remain; uncertain names and numbers were omitted. Verified publication and accepted combined delivery establish this use. All previous coverage and the completed, fixed three-episode seed remain unchanged.

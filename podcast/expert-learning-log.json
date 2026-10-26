@@ -474,11 +474,18 @@
       "takeaway": "Naval describes building and selling as broad complementary skills; selling includes communication and recruiting, not only transactions.",
       "editorial_application": "Pair an AI prototype with a plain-language explanation of its user, job and limits, and invite feedback. The example and recommendation are editorial.",
       "caveat": "Business philosophy, not a guarantee of success; no claim that every person must become a salesperson. All17 available daily records/current expert log/public reports and available personal-note searches checked; historical import gaps remain.",
-      "status": "researched_candidate",
-      "dedup_review": "reviewed_no_match",
-      "last_used": null,
-      "last_narrated": null,
-      "uses": []
+      "status": "narrated",
+      "dedup_review": "covered",
+      "last_used": "2026-10-27",
+      "last_narrated": "2026-10-27",
+      "uses": [
+        {
+          "date": "2026-10-27",
+          "channel": "podcast",
+          "public_evidence_url": "https://pbhat89.github.io/the-brief/podcast/reports/2026-10-27.html",
+          "confirmation": "Measured final narration contains the source-backed evergreen lesson; live publication and accepted combined delivery verified. The AI prototype application is editorial."
+        }
+      ]
     }
   ]
 }

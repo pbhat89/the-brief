@@ -2,7 +2,7 @@
   "version": 1,
   "timezone": "Asia/Singapore",
   "daily_limit": 1,
-  "updated_at": "2026-10-26T23:09:05.413209+00:00",
+  "updated_at": "2026-10-26T23:22:38.079804+00:00",
   "catchup": {
     "initialized_at": "2026-10-19T00:21:00Z",
     "limit": 3,
@@ -276,9 +276,9 @@
         "contribution": "Distinct business explanation of customer versus distribution-channel concentration. Does not repeat S-1 headline, financial metric definitions, compute allocation, digital-asset retirement or earlier episode recaps.17 daily records and all current learning publications checked.",
         "reviewed_at": "2026-10-26T23:09:05.413209+00:00"
       },
-      "status": "pending",
-      "status_reason": "Await verified publication and accepted delivery; do not mark used prematurely.",
-      "publication_id": null
+      "status": "published",
+      "status_reason": null,
+      "publication_id": "2026-10-27"
     }
   ],
   "publications": [
@@ -340,6 +340,18 @@
       "verified_at": "2026-10-24T23:11:45.031340+00:00",
       "confirmation": "Live public report returned HTTP200 with the exact recorded hash and revision; the selected transcript-based recap was included in the accepted combined delivery. Private narration and delivery evidence remain outside the repository.",
       "date_sgt": "2026-10-25",
+      "show": "big-technology"
+    },
+    {
+      "publication_id": "2026-10-27",
+      "episode_id": "big-technology:0dd88740-d160-11f1-a503-cf4290c1971b",
+      "status": "verified_published",
+      "output_url": "https://pbhat89.github.io/the-brief/podcast/reports/2026-10-27.html",
+      "revision": "db0817d1ae59c36a510858f4ebffdb1d8a5f8f87",
+      "content_sha256": "c02e647ee1464dd304738ec2446b368fd611e25a38083378c6716535d6f9153a",
+      "verified_at": "2026-10-26T23:22:38.079804+00:00",
+      "confirmation": "Live public report returned HTTP 200 with exact local byte hash. The selected actual-transcript recap was included in the accepted combined delivery after verified private publication. Private references remain outside this repository.",
+      "date_sgt": "2026-10-27",
       "show": "big-technology"
     }
   ]
