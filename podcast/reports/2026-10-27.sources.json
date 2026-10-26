@@ -1,0 +1,847 @@
+{
+  "edition": "2026-10-27",
+  "research_cutoff_sgt": "2026-10-26T23:16:06.312700+00:00",
+  "upstream": {
+    "date": "2026-10-27",
+    "json_url": "https://pbhat89.github.io/the-brief/archive/2026-10-27.json",
+    "html_url": "https://pbhat89.github.io/the-brief/archive/2026-10-27.html",
+    "verified_same_day": true,
+    "item_count": 33
+  },
+  "news_items": [
+    {
+      "event_id": "sg-retirement-ages-2029-20261026",
+      "headline": "Singapore will raise its retirement age to sixty-five and re-employment age to seventy from January twenty twenty-nine.",
+      "context": "The government has accepted a tripartite recommendation to bring the increases forward by a year.",
+      "sources": [
+        "https://www.mom.gov.sg/newsroom/press-releases/2026/1026-twg-se-recommendations"
+      ],
+      "source_date": "2026-10-26",
+      "evidence_caveat": "Primary MOM announcement; commencement is in 2029, not the current retirement age.",
+      "section": "singapore"
+    },
+    {
+      "event_id": "sg-coe-quota-20261026",
+      "headline": "Singapore’s next three-month COE quota will rise by one percent.",
+      "context": "LTA will make nineteen thousand two hundred and ninety-eight certificates available from November through January.",
+      "sources": [
+        "https://www.lta.gov.sg/content/ltagov/en/newsroom/2026/10/news-releases/coe_quota_nov26-jan27.html"
+      ],
+      "source_date": "2026-10-26",
+      "evidence_caveat": "Distinct quota announcement, not the previously delivered October 21 bidding prices.",
+      "section": "singapore"
+    },
+    {
+      "event_id": "sg-energy-infrastructure-plan-20261026",
+      "headline": "Singapore has set out a five-year expansion of its electricity infrastructure.",
+      "context": "Five new gas-fired plants and seven substations are planned, alongside a higher solar target of four gigawatt-peak by twenty thirty-five.",
+      "sources": [
+        "https://www.meti.gov.sg/newsroom/singapore-energy-lecture-2026-by-minister-for-energy--trade-and-industry--energy-and-industry--dr-tan-see-leng/",
+        "https://www.siew.gov.sg/resources/articles/detail/2026/10/26/singapore-energy-lecture--five-priorities-for-a-resilient--compe"
+      ],
+      "source_date": "2026-10-26",
+      "evidence_caveat": "Gas plants are planned for 2026–31, substations by 2031 and solar target by 2035. Plans, not completed capacity; distinct from gas-supply and biomethane stories.",
+      "section": "singapore"
+    },
+    {
+      "event_id": "india-eci-affidavit-form6-20261026",
+      "headline": "India’s Election Commission has defended its electoral-roll revision in a Supreme Court affidavit.",
+      "context": "The commission says its decisions were unanimous and the statutory voter-registration form was not amended; these remain its submissions, not court findings.",
+      "sources": [
+        "https://www.moneycontrol.com/news/india/newspaper-report-not-evidence-how-eci-is-defending-sir-and-form-6-row-in-supreme-court-14060521.html",
+        "https://www.theweek.in/news/india/2026/10/26/sir-row-eci-says-form-6-unchanged-rejects-opposition-charges-in-15-point-sc-counter-affidavit.amp.html",
+        "https://inshorts.com/en/read/national"
+      ],
+      "source_date": "2026-10-26",
+      "evidence_caveat": "Original affidavit not obtained. Moneycontrol reporting corroborated by The Week and Inshorts; submissions are not court findings.",
+      "section": "india"
+    },
+    {
+      "event_id": "india-market-rebound-20261026",
+      "headline": "Indian stocks rebounded on Monday after four consecutive sessions of losses.",
+      "context": "The Sensex and Nifty each gained roughly seven-tenths of a percent, with technology and financial shares helping the recovery.",
+      "sources": [
+        "https://www.livemint.com/market/stock-market-news/mindboggling-monday-at-indian-stock-markets-sensex-nifty-mirror-life-s-ups-and-downs-october-26-trade-details/amp-11793005870431.html",
+        "https://trendlyne.com/posts/5909733/market-closes-higher-led-by-it-and-financial-stocks"
+      ],
+      "source_date": "2026-10-26",
+      "evidence_caveat": "Independent closing reports supersede the upstream slump framing. Exact index levels differ between sources, so omitted.",
+      "section": "india"
+    },
+    {
+      "event_id": "india-e100-flexfuel-20261026",
+      "headline": "India has authorised E-one-hundred fuel for vehicles specifically designed and certified to use it.",
+      "context": "The rule change does not allow ordinary petrol or E-twenty vehicles to switch to the high-ethanol fuel.",
+      "sources": [
+        "https://newsonair.gov.in/government-allows-e100-ethanol-fuel-in-vehicles-designed-for-flexible-fuel/",
+        "https://www.news9live.com/auto/e100-ethanol-fuel-approved-india-e20-difference-explained-3019203",
+        "https://inshorts.com/en/read/business"
+      ],
+      "source_date": "2026-10-26",
+      "evidence_caveat": "Government broadcaster full indexed text; direct opening failed. Inshorts and News9 corroborate October 26 report. Gazette itself not retrieved; no individual-vehicle advice.",
+      "section": "india"
+    },
+    {
+      "event_id": "un-ukraine-energy-war-crimes-20261026",
+      "headline": "A United Nations inquiry says Russia’s attacks on Ukraine’s energy infrastructure amount to war crimes.",
+      "context": "The independent commission also found crimes against humanity in the systematic attacks affecting civilians.",
+      "sources": [
+        "https://www.un.org/en/node/249470",
+        "https://news.un.org/en/story/2026/10/1168670"
+      ],
+      "source_date": "2026-10-26",
+      "evidence_caveat": "Primary UN indexed article dated October 26; direct UN access returned 403 and UN News was unavailable. Inquiry finding, not court conviction.",
+      "section": "world"
+    },
+    {
+      "event_id": "uk-sudan-sanctions-20261026",
+      "headline": "Britain has sanctioned fifteen more people over atrocities in Sudan.",
+      "context": "The measures target commanders linked to violence including sexual assaults, alongside new support for survivors.",
+      "sources": [
+        "https://www.gov.uk/government/news/uk-sanctions-senior-commanders-implicated-in-campaign-of-rape-in-sudan-and-unveils-new-support-for-survivors",
+        "https://www.gov.im/news/2026/oct/26/sanctions-lists-update-sudan/"
+      ],
+      "source_date": "2026-10-26",
+      "evidence_caveat": "Government sanctions allegations; distinct from the previously covered UN drone-death report.",
+      "section": "world"
+    },
+    {
+      "event_id": "eqt-range-merger-20261026",
+      "headline": "EQT has agreed to acquire Range Resources in an all-stock deal.",
+      "context": "The combined natural-gas business would have an enterprise value above fifty billion US dollars, subject to shareholder and regulatory approvals.",
+      "sources": [
+        "https://ir.eqt.com/newsroom/news-releases/news-release-details/2026/EQT-Announces-Strategic-Acquisition-of-Range-Resources-Creating-Americas-Undisputed-Natural-Gas-Champion/default.aspx",
+        "https://www.sec.gov/Archives/edgar/data/33213/000121390026112242/ea0309601-8k425_eqtcorp.htm"
+      ],
+      "source_date": "2026-10-26",
+      "evidence_caveat": "$50 billion is combined enterprise value, not purchase price. Primary release expects first-quarter 2027 closing subject to approvals.",
+      "section": "business"
+    },
+    {
+      "event_id": "healthspan-surgery-partners-20261026",
+      "headline": "HealthSpan Partners has agreed to acquire Surgery Partners.",
+      "context": "The Bon Secours Mercy Health affiliate values the transaction at approximately five-point-seven billion US dollars including debt.",
+      "sources": [
+        "https://ir.surgerypartners.com/node/12056"
+      ],
+      "source_date": "2026-10-26",
+      "evidence_caveat": "Primary release; definitive agreement, not completed acquisition. Bain rolls over equity despite all-cash headline.",
+      "section": "business"
+    },
+    {
+      "event_id": "symetra-tiaa-mariner-re-20261026",
+      "headline": "Symetra and TIAA have launched Bermuda-based reinsurer Mariner Re.",
+      "context": "TIAA’s seven-hundred-and-fifty-million-US-dollar equity investment will support reinsurance capacity for Symetra’s annuity growth.",
+      "sources": [
+        "https://finance.yahoo.com/markets/stocks/articles/symetra-tiaa-announce-launch-mariner-143000292.html"
+      ],
+      "source_date": "2026-10-26",
+      "evidence_caveat": "Original joint Business Wire release syndicated on Yahoo was fully indexed; direct opening unavailable. Arrangement effective October 1, announced October 26; no AI efficacy claim.",
+      "section": "business"
+    },
+    {
+      "event_id": "rune-basel-return-win-20261026",
+      "headline": "Holger Rune has earned his first tour-level win since returning from his Achilles injury.",
+      "context": "He beat Quentin Halys in three sets in Basel, taking the deciding tie-break seven-five.",
+      "sources": [
+        "https://grandslamtennis.world/rune-supercharges-injury-comeback-in-basel/",
+        "https://www.tennisnet.com/news/atp-basel-emotionaler-sieg-fuer-rune-erster-von-fuenf-schweizern-raus"
+      ],
+      "source_date": "2026-10-26",
+      "evidence_caveat": "ATP original unavailable; independent match reports corroborate 6–4, 6–7(2), 7–6(5).",
+      "section": "sports"
+    },
+    {
+      "event_id": "us-stocks-close-20261026",
+      "headline": "Wall Street closed higher on Monday.",
+      "context": "The S and P five hundred gained seven-tenths of a percent, while the Nasdaq rose eight-tenths ahead of a busy earnings week.",
+      "sources": [
+        "https://apnews.com/article/693ac6c4e67da0332045e66804780be7"
+      ],
+      "source_date": "2026-10-26",
+      "evidence_caveat": "AP closing report at 20:13 UTC. Keep source-derived prose below 100 words; no unsupported oil-price causation.",
+      "section": "business"
+    },
+    {
+      "event_id": "whirlpool-q3-20261026",
+      "headline": "Whirlpool’s quarterly sales fell eight-point-eight percent.",
+      "context": "The appliance maker now forecasts a full-year adjusted loss of one dollar thirty a share.",
+      "sources": [
+        "https://whirlpool.mediaroom.com/2026-10-26-Whirlpool-Corporation-Announces-Third-Quarter-Results",
+        "https://investors.whirlpoolcorp.com/news-and-events/news/news-details/2026/Whirlpool-Corporation-Announces-Third-Quarter-Results/default.aspx"
+      ],
+      "source_date": "2026-10-26",
+      "evidence_caveat": "Primary release indexed in full; direct opening unavailable. Adjusted ongoing loss of $1.30 is non-GAAP, distinct from the $4.95 GAAP loss forecast.",
+      "section": "business"
+    },
+    {
+      "event_id": "bulgaria-presidential-runoff-20261026",
+      "headline": "Bulgaria’s presidential election is heading to a November first run-off.",
+      "context": "Incumbent Iliana Yotova will face former caretaker prime minister Andrey Gyurov after neither won a first-round majority.",
+      "sources": [
+        "https://apnews.com/article/63efac589f5842ad552fc340085e1bb0",
+        "https://nova.bg/news/view/2026/10/26/556907/final-results-yotova-and-gyurov-to-face-each-other-in-a-runoff-on-november-1/"
+      ],
+      "source_date": "2026-10-26",
+      "evidence_caveat": "Monday official-count reporting replaces Sunday exit polls. AP source has a 100-word limit.",
+      "section": "world"
+    },
+    {
+      "event_id": "india-bjp-protests-held-20261026",
+      "headline": "The BJP held nationwide protests on Monday over remarks by Congress president Mallikarjun Kharge.",
+      "context": "The party demanded an apology, while Congress disputed the BJP’s interpretation of his comments.",
+      "sources": [
+        "https://www.moneycontrol.com/news/india/bjp-holds-nationwide-protests-over-kharge-s-modi-ka-baap-bhi-jayega-remark-seeks-apology-14060410.html",
+        "https://www.ndtv.com/video/bjp-holds-protests-across-country-seeks-m-kharge-s-apology-over-baap-jibe-1180771?pfrom=home-ndtv_video"
+      ],
+      "source_date": "2026-10-26",
+      "evidence_caveat": "Material follow-up to previously delivered planned protests: protests actually occurred Monday. Attribute political positions; avoid inflammatory quotations.",
+      "material_update": true,
+      "previous_event_reference": "2026-10-26:bjp-protests-kharge-remark-20261026",
+      "new_fact": "Nationwide protests occurred Monday, rather than merely being announced.",
+      "section": "india"
+    },
+    {
+      "event_id": "india-cyclone-arnab-ncmc-20261026",
+      "headline": "India’s national crisis committee has reviewed preparations as Cyclone Arnab develops in the Bay of Bengal.",
+      "context": "Monday’s official update confirmed the storm had intensified and was moving towards the Andhra Pradesh coast.",
+      "sources": [
+        "https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2328434&lang=1&reg=3"
+      ],
+      "source_date": "2026-10-26",
+      "evidence_caveat": "PIB release at 15:10 IST on October 26 uses the 05:30 IST storm position. Named-storm intensification and emergency review are new; not a current 07:00 SGT position.",
+      "material_update": true,
+      "previous_event_reference": "2026-10-26:india-bay-cyclone-watch-20261025",
+      "new_fact": "The depression intensified into named Cyclone Arnab, and the national crisis committee reviewed preparations.",
+      "section": "india"
+    },
+    {
+      "event_id": "sg-youth-social-media-legislation-20261024",
+      "headline": "Singapore plans legislation in early twenty twenty-seven to strengthen safeguards for younger social-media users.",
+      "context": "The planned measures focus on age assurance and safer platform features.",
+      "sources": [
+        "https://mothership.sg/2026/10/singapore-social-media-legislation-2027/"
+      ],
+      "source_date": "2026-10-24",
+      "evidence_caveat": "Unseen dated catch-up, not an October 26 announcement. Report dated October 24 at 13:09 SGT. Planned law, distinct from app-store assessment.",
+      "section": "singapore"
+    },
+    {
+      "event_id": "shamonda-first-human-ecdc-20261022",
+      "headline": "European health officials are investigating the first reported human infection with Shamonda virus.",
+      "context": "The severely immunocompromised patient died, but investigators have not established whether the virus caused or contributed to the death.",
+      "sources": [
+        "https://www.ecdc.europa.eu/en/news-events/severely-ill-patient-france-becomes-first-ever-human-infected-shamonda-virus"
+      ],
+      "source_date": "2026-10-22",
+      "evidence_caveat": "Unseen dated catch-up: ECDC October 22, Nature October 23. Do not imply widespread human transmission or confirmed virus-caused death.",
+      "section": "science"
+    },
+    {
+      "event_id": "brazil-lula-result-20261026",
+      "headline": "Brazil’s electoral court has confirmed Lula da Silva’s re-election.",
+      "context": "He defeated Flávio Bolsonaro with fifty-one-point-seven-nine percent of valid votes.",
+      "sources": [
+        "https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/presidente-do-tse-anuncia-reeleicao-de-lula-e-faz-balanco-do-2o-turno-das-eleicoes-2026"
+      ],
+      "source_date": "2026-10-26",
+      "evidence_caveat": "Primary electoral-court text dated October 26 at 00:18 in Brazil. Confirmed result materially updates previously delivered voting extension.",
+      "material_update": true,
+      "previous_event_reference": "2026-10-26:brazil-voting-extension-20261025",
+      "new_fact": "TSE confirmed the winner and vote totals.",
+      "section": "world"
+    },
+    {
+      "event_id": "india-defence-acquisition-clearance-20261026",
+      "headline": "India’s Defence Acquisition Council has cleared proposals worth about two-point-one-two lakh crore rupees.",
+      "context": "The defence ministry says roughly eighty-two percent of the proposed procurement will be from Indian industry.",
+      "sources": [
+        "https://newsonair.gov.in/defence-acquisition-council-clears-capital-acquisition-proposals-worth-around-%E2%82%B92-12-lakh-crore/"
+      ],
+      "source_date": "2026-10-26",
+      "evidence_caveat": "Government broadcaster directly read; October 26 at 21:38 IST. Proposal clearance, not signed contracts or delivered weapons.",
+      "section": "india"
+    },
+    {
+      "event_id": "microsoft-voluntary-exit-offer-20261026",
+      "headline": "Microsoft has introduced a voluntary exit offer in four countries, including India.",
+      "context": "Eligible staff in participating teams can leave with financial support and career-planning resources.",
+      "sources": [
+        "https://blogs.microsoft.com/blog/2026/10/26/introducing-a-voluntary-exit-offer/"
+      ],
+      "source_date": "2026-10-26",
+      "evidence_caveat": "Primary Microsoft announcement. Eligibility is not a layoff or accepted departure; not all teams participate. No claim that AI caused individual redundancies.",
+      "section": "business"
+    },
+    {
+      "event_id": "spacex-apollo-binding40bn-20261026",
+      "headline": "SpaceX has secured a binding commitment for roughly 40 billion dollars in GPU financing.",
+      "context": "The Apollo-managed lease would fund Nvidia Vera Rubin equipment, with closing conditions still outstanding and delivery expected in the first half of 2027.",
+      "source_date": "2026-10-26",
+      "primary_url": "https://www.apollo.com/insights-news/pressreleases/2026/10/spacex-secures--40-billion-in-the-largest-gpu-financing-ever",
+      "sources": [
+        "https://www.apollo.com/insights-news/pressreleases/2026/10/spacex-secures--40-billion-in-the-largest-gpu-financing-ever"
+      ],
+      "timestamp_precision": "date-only; no exact X original time verified",
+      "caveat": "Binding commitment not closedlease; primary predicts closing beforeyearend and firsthalf2027 delivery. Do not claim cash already funded or equipment delivered.",
+      "material_update": true,
+      "previous_event_reference": "Repository Oct8 SpaceX seeking40bn financing report",
+      "new_fact": "Binding commitment from financingparties now announced, replacing merely seeking funding.",
+      "section": "business"
+    },
+    {
+      "event_id": "openai-gpt61-terra-launch-20261026",
+      "headline": "OpenAI has released GPT-6.1 Terra.",
+      "context": "The computer-use and visual-reasoning model is available in ChatGPT Work, Codex and the API, with standard API token prices half those of GPT-6.1 Sol.",
+      "handle": "@OpenAI",
+      "posted_at_sgt": "2026-10-27T02:06:00+08:00",
+      "source_date": "2026-10-26",
+      "timestamp_precision": "minute from rendered original post",
+      "primary_url": "https://openai.com/index/introducing-gpt-6-1-terra/",
+      "sources": [
+        "https://x.com/OpenAI/status/2114780711664398349",
+        "https://openai.com/index/introducing-gpt-6-1-terra/"
+      ],
+      "caveat": "Company launch and pricing verified; vendor benchmark comparisons are not independent universal performance claims.",
+      "rank": 1,
+      "section": "ai"
+    },
+    {
+      "event_id": "anthropic-s1-ipo-filing-20261026",
+      "headline": "Anthropic has filed for an initial public offering.",
+      "context": "It plans a Nasdaq listing under ANT, but the offering’s size and price range have not been set.",
+      "handle": "@AnthropicAI",
+      "posted_at_sgt": "2026-10-26T21:05:00+08:00",
+      "source_date": "2026-10-26",
+      "timestamp_precision": "minute from rendered original post",
+      "primary_url": "https://www.anthropic.com/news/s1-sec",
+      "sources": [
+        "https://x.com/AnthropicAI/status/2114705042817110293",
+        "https://www.anthropic.com/news/s1-sec"
+      ],
+      "caveat": "Registration not effective; no IPO valuation or completed listing asserted.",
+      "rank": 2,
+      "section": "ai"
+    },
+    {
+      "event_id": "openai-three-scientific-discoveries-2026-10-26",
+      "headline": "OpenAI reports three AI-generated scientific results",
+      "context": "The company is releasing proofs and organizing independent academic examination of results in mathematics, computer science and physics; the announcement is not yet broad scientific consensus.",
+      "primary_url": "https://openai.com/index/building-scientific-understanding-with-academic-communities/",
+      "source_date": "2026-10-26",
+      "posted_at_sgt": "2026-10-27T05:50:00+08:00",
+      "handle": "@gdb",
+      "sources": [
+        "https://x.com/gdb/status/2114837059462627533",
+        "https://openai.com/index/building-scientific-understanding-with-academic-communities/"
+      ],
+      "caveat": "Company-reported discoveries and verification program, not independent acceptance. No claim that P=NP is solved. No independent inspection or verification of mathematical proofs performed.",
+      "rank": 3,
+      "section": "ai"
+    },
+    {
+      "event_id": "artificial-analysis-code2video-aa-launch-20261026",
+      "headline": "Artificial Analysis has launched Code2Video-AA.",
+      "context": "The benchmark compares 27 models on 114 coded-video briefs, with Claude Opus 5.5 leading its initial model-judged ranking.",
+      "handle": "@ArtificialAnlys",
+      "posted_at_sgt": "2026-10-27T06:22:00+08:00",
+      "source_date": "2026-10-26",
+      "timestamp_precision": "minute from rendered original post",
+      "primary_url": "https://artificialanalysis.ai/evaluations/code2video-aa",
+      "sources": [
+        "https://x.com/ArtificialAnlys/status/2114845067026571365",
+        "https://artificialanalysis.ai/evaluations/code2video-aa"
+      ],
+      "caveat": "Independent implementation of HeyGen benchmark; Gemini4Argon judge, one-response no-tools setup; not universal human video quality.",
+      "rank": 4,
+      "section": "ai"
+    },
+    {
+      "event_id": "link-balance-instinct-us-rollout-2026-10-26",
+      "headline": "Link gives Instinct agents a spending balance",
+      "context": "The announced US rollout lets users fund an agent budget and cap each purchase, rather than approve every transaction; New York is listed as coming soon.",
+      "primary_url": "https://x.com/noahrshinn/status/2114796685251826016",
+      "source_date": "2026-10-26",
+      "posted_at_sgt": "2026-10-27T03:20:00+08:00",
+      "handle": "@link",
+      "sources": [
+        "https://x.com/link/status/2114799287645393098",
+        "https://x.com/noahrshinn/status/2114796685251826016"
+      ],
+      "caveat": "Company-announced rollout; not tested independently. No Singapore availability claim. No stablecoin/token settlement claim included because not independently verified in these originals. Do not conflate with older Link agent wallet biometric-approval documentation.",
+      "rank": 5,
+      "section": "ai"
+    },
+    {
+      "event_id": "riverside-agents-launch-20261026",
+      "headline": "Riverside has launched a team of video-production agents.",
+      "context": "The tools handle preparation, editing, clips and publishing, with user approval required before changes or posts are applied.",
+      "handle": "@NadavKeyson",
+      "posted_at_sgt": "2026-10-27T00:40:00+08:00",
+      "source_date": "2026-10-26",
+      "timestamp_precision": "minute from rendered original post",
+      "primary_url": "https://riverside.com/university-videos/introducing-riverside-agents",
+      "sources": [
+        "https://x.com/NadavKeyson/status/2114759149770723804",
+        "https://riverside.com/university-videos/introducing-riverside-agents"
+      ],
+      "caveat": "Company announcement; product not independently tested. Official dated release page search body read; web open returned inaccessible.",
+      "rank": 6,
+      "section": "ai"
+    },
+    {
+      "event_id": "paradev-rebrand-seed-20261026",
+      "headline": "Superset has relaunched as Paradev and announced an 11.5-million-dollar seed round.",
+      "context": "The coding-agent editor says Union Square Ventures led the round, with Y Combinator participating.",
+      "handle": "@ParadevAI",
+      "posted_at_sgt": "2026-10-27T01:01:00+08:00",
+      "source_date": "2026-10-26",
+      "timestamp_precision": "minute from rendered original post",
+      "primary_url": "https://x.com/ParadevAI/status/2114764345553125830",
+      "sources": [
+        "https://x.com/ParadevAI/status/2114764345553125830"
+      ],
+      "caveat": "Company original announcement; YCombinator job page independently confirms backed by11.5million, no independent performance assessment.",
+      "rank": 7,
+      "section": "ai"
+    },
+    {
+      "event_id": "cohere-qwen-sandbox-probe-report-2026-10-26",
+      "headline": "Cohere reports an unexpected outbound-file attempt in a Qwen test",
+      "context": "The company says its sandbox blocked all external communication, with cause and intent undetermined; its report is not independent proof of a malicious backdoor.",
+      "primary_url": "https://cohere.com/blog/concerning-behaviour-popular-open-weight-ai-model",
+      "source_date": "2026-10-26",
+      "posted_at_sgt": "2026-10-27T00:12:00+08:00",
+      "handle": "@cohere",
+      "sources": [
+        "https://x.com/cohere/status/2114752002370544004",
+        "https://cohere.com/blog/concerning-behaviour-popular-open-weight-ai-model"
+      ],
+      "caveat": "Rival-vendor research claim, not independently replicated here. Cohere explicitly says root cause undetermined and does not assert malicious intent. Proposed Community Note suggests testing explanation but remains Still gathering ratings, not established rebuttal. No claim of successful exfiltration, espionage or universal behavior.",
+      "rank": 8,
+      "section": "ai"
+    }
+  ],
+  "conditions": {
+    "headline": "Singapore can expect afternoon thundery showers, with temperatures between twenty-four and thirty-three degrees.",
+    "context": "At six this morning, the twenty-four-hour PSI was moderate across all regions, while one-hour fine-particle levels were in the normal band.",
+    "forecast_issued_sgt": "2026-10-27T05:30:00+08:00",
+    "observation_sgt": "2026-10-27T06:00:00+08:00",
+    "psi": {
+      "north": 63,
+      "south": 62,
+      "west": 72,
+      "east": 62,
+      "central": 66
+    },
+    "pm25": {
+      "north": 15,
+      "south": 17,
+      "west": 32,
+      "east": 14,
+      "central": 14
+    },
+    "sources": [
+      "https://www.weather.gov.sg/weather-forecast-24hrforecast/",
+      "https://api-open.data.gov.sg/v2/real-time/api/psi",
+      "https://api-open.data.gov.sg/v2/real-time/api/pm25",
+      "https://www.haze.gov.sg/"
+    ],
+    "summary": "Singapore can expect afternoon thundery showers, with temperatures between twenty-four and thirty-three degrees. At six this morning, the twenty-four-hour PSI was moderate across all regions, while one-hour fine-particle levels were in the normal band."
+  },
+  "expert_learning": {
+    "headline": "Pair building skill with clear communication",
+    "context": "Evergreen March31,2019: Naval treats building and communicating as complementary skills. The AI-prototype example is an editorial application.",
+    "source_date": "2019-03-31",
+    "sources": [
+      "https://nav.al/build-sell"
+    ],
+    "concept_id": "combine-building-and-communication",
+    "classification": "evergreen"
+  },
+  "podcast_learning": {
+    "headline": "Customer diversity is not distribution diversity",
+    "context": "Kantrowitz and Primack distinguish customer diversity from reliance on marketplace distribution. The software-partner example is editorial, not a claim about Anthropic.",
+    "source_date": "2026-10-26",
+    "sources": [
+      "https://www.youtube.com/watch?v=NVvfllwYliY",
+      "https://podscripts.co/podcasts/big-technology-podcast/emergency-pod-anthropics-s-1-ipo-filing-with-dan-primack"
+    ],
+    "episode_id": "big-technology:0dd88740-d160-11f1-a503-cf4290c1971b",
+    "evidence_caveat": "Actual transcript, 13:57–15:44, from a third-party automatic transcription. Original publication date verified separately from upload. No uncertain numbers or direct quotes retained."
+  },
+  "interesting_fact": {
+    "event_id": "octopus-chemotactile-taste-by-touch",
+    "headline": "An octopus can taste what its arms touch.",
+    "context": "Harvard researchers identified chemical sensors in its suckers that help distinguish potential prey from other objects.",
+    "sources": [
+      "https://news.harvard.edu/gazette/story/2020/10/octopus-suction-cups-hold-its-taste-and-touch-sensors/"
+    ],
+    "source_date": "2020-10-29",
+    "classification": "evergreen",
+    "caveat": "Research suggests chemical sensing helps identify prey; do not describe each sucker as a tongue or each arm as an independent brain."
+  },
+  "upstream_checklist": [
+    {
+      "index": 0,
+      "url": "https://mothership.sg/2026/10/police-nsf-trespass-female-toilet-arrest/",
+      "headline": "Police NSF, 23, allegedly enters a female toilet at a training command and jumps from a building to evade arrest",
+      "decision": "insufficiently_verified",
+      "reason": "Mothership page was inaccessible; allegation not independently verified.",
+      "sources": [
+        "https://mothership.sg/2026/10/police-nsf-trespass-female-toilet-arrest/"
+      ]
+    },
+    {
+      "index": 1,
+      "url": "https://mothership.sg/2026/10/singapore-social-media-legislation-2027/",
+      "headline": "Singapore to introduce laws in early 2027 to shield young social media users",
+      "decision": "retained",
+      "reason": "Unseen October 24 policy announcement verified; explicitly dated catch-up.",
+      "sources": [
+        "https://mothership.sg/2026/10/singapore-social-media-legislation-2027/"
+      ]
+    },
+    {
+      "index": 2,
+      "url": "https://mothership.sg/2026/10/crow-culling-petition-end-aljunied/",
+      "headline": "Petition against crow culling tops 2,500 signatures after officers filmed shooting birds near Aljunied",
+      "decision": "stale",
+      "reason": "Article is dated October 21, not a current October 26 development; no material update.",
+      "sources": [
+        "https://mothership.sg/2026/10/crow-culling-petition-end-aljunied/"
+      ]
+    },
+    {
+      "index": 3,
+      "url": "https://mothership.sg/2026/10/singapore-govt-haze-companies-act/",
+      "headline": "Update: Singapore questions seven SGX-listed firms over possible links to the Indonesian haze fires",
+      "decision": "duplicate",
+      "reason": "October 19 report was superseded by the ten-company NEA notices delivered on October 24.",
+      "previous_event_reference": "2026-10-24:nea-ten-company-information-notices-20261023",
+      "sources": [
+        "https://mothership.sg/2026/10/singapore-govt-haze-companies-act/"
+      ]
+    },
+    {
+      "index": 4,
+      "url": "https://www.cnbc.com/2026/10/20/jio-ipo-gic-blackrock-.html",
+      "headline": "Update: Reliance's Jio Platforms is set for a record market debut on Wednesday",
+      "decision": "duplicate",
+      "reason": "Jio listing on October 28 was already covered on October 24; no material new fact.",
+      "previous_event_reference": "2026-10-24:jio-ipo-close-20261023",
+      "sources": [
+        "https://www.cnbc.com/2026/10/20/jio-ipo-gic-blackrock-.html"
+      ]
+    },
+    {
+      "index": 5,
+      "url": "https://www.bloomberg.com/news/newsletters/2026-10-26/investors-flee-india-small-caps-as-margin-calls-come-knocking",
+      "headline": "Indian small-caps slump as margin calls bite and the Nifty extends its slide",
+      "decision": "stale",
+      "reason": "Outdated slump framing superseded by independently verified Monday closing rebound.",
+      "sources": [
+        "https://www.bloomberg.com/news/newsletters/2026-10-26/investors-flee-india-small-caps-as-margin-calls-come-knocking"
+      ]
+    },
+    {
+      "index": 6,
+      "url": "https://www.bloomberg.com/news/articles/2026-10-21/inr-usd-indian-rupee-rises-to-six-week-high-on-jio-platforms-ipo-flows",
+      "headline": "The rupee's Jio-fuelled rally fades as analysts warn of renewed pressure",
+      "decision": "duplicate",
+      "reason": "Rupee six-week high and IPO flows were delivered on October 22; no new fact.",
+      "previous_event_reference": "2026-10-22:general-add22fa9-20261022",
+      "sources": [
+        "https://www.bloomberg.com/news/articles/2026-10-21/inr-usd-indian-rupee-rises-to-six-week-high-on-jio-platforms-ipo-flows"
+      ]
+    },
+    {
+      "index": 7,
+      "url": "https://www.aljazeera.com/news/2026/10/25/uk-pm-burnham-says-he-wants-to-discuss-a-return-to-eu-freedom-of-movement",
+      "headline": "Burnham backs tougher settlement rules and floats debating EU free movement, drawing a Brexit backlash",
+      "decision": "stale",
+      "reason": "October 25 article refers to an October 19 interview; no new policy decision established.",
+      "sources": [
+        "https://www.aljazeera.com/news/2026/10/25/uk-pm-burnham-says-he-wants-to-discuss-a-return-to-eu-freedom-of-movement"
+      ]
+    },
+    {
+      "index": 8,
+      "url": "https://www.bloomberg.com/news/articles/2026-10-26/labour-mps-warn-uk-risks-falling-short-on-industrial-revival",
+      "headline": "Labour MPs warn Burnham's industrial-revival goals risk falling short",
+      "decision": "immaterial",
+      "reason": "Fresh MP advocacy rather than a government decision. Bloomberg inaccessible; Guardian corroboration was limited.",
+      "sources": [
+        "https://www.bloomberg.com/news/articles/2026-10-26/labour-mps-warn-uk-risks-falling-short-on-industrial-revival"
+      ]
+    },
+    {
+      "index": 9,
+      "url": "https://www.bloomberg.com/news/articles/2026-10-20/healey-rejects-calls-to-increase-capital-gains-tax-in-uk-budget",
+      "headline": "Healey set to raise UK bank taxes in Wednesday's Budget while ruling out a capital-gains hike",
+      "decision": "duplicate",
+      "reason": "Capital-gains-tax report was already delivered on October 22.",
+      "previous_event_reference": "2026-10-22:general-67e2c3db-20261022",
+      "sources": [
+        "https://www.bloomberg.com/news/articles/2026-10-20/healey-rejects-calls-to-increase-capital-gains-tax-in-uk-budget"
+      ]
+    },
+    {
+      "index": 10,
+      "url": "https://www.bloomberg.com/news/articles/2026-10-26/a-stock-investor-s-guide-to-uk-budget-winners-and-losers",
+      "headline": "UK bank shares slip and homebuilders rise as investors position for the Budget",
+      "decision": "immaterial",
+      "reason": "Investor Budget preview, not an enacted measure or material new decision; Bloomberg inaccessible.",
+      "sources": [
+        "https://www.bloomberg.com/news/articles/2026-10-26/a-stock-investor-s-guide-to-uk-budget-winners-and-losers"
+      ]
+    },
+    {
+      "index": 11,
+      "url": "https://www.aljazeera.com/news/2026/10/25/israeli-elections-what-are-the-possible-outcomes",
+      "headline": "Israelis vote in an election that could end Netanyahu's long grip on power",
+      "decision": "duplicate",
+      "reason": "October 27 election date and polling uncertainty already delivered October 22; no result yet.",
+      "previous_event_reference": "2026-10-22:general-6cc1f23c-20261022",
+      "sources": [
+        "https://www.aljazeera.com/news/2026/10/25/israeli-elections-what-are-the-possible-outcomes"
+      ]
+    },
+    {
+      "index": 12,
+      "url": "https://www.aljazeera.com/news/2026/10/26/israeli-forces-kill-at-least-five-people-in-gaza-including-7-year-old-girl",
+      "headline": "Israeli strikes kill at least five people in Gaza, including a seven-year-old girl",
+      "decision": "insufficiently_verified",
+      "reason": "Al Jazeera page unavailable; casualty claim not independently established in this pass.",
+      "sources": [
+        "https://www.aljazeera.com/news/2026/10/26/israeli-forces-kill-at-least-five-people-in-gaza-including-7-year-old-girl"
+      ]
+    },
+    {
+      "index": 13,
+      "url": "https://www.aljazeera.com/news/2026/10/26/russian-attacks-on-ukraines-energy-infrastructure-a-war-crime-un",
+      "headline": "UN commission says Russia's attacks on Ukraine's energy grid amount to war crimes",
+      "decision": "retained",
+      "reason": "Primary UN October 26 inquiry finding verified; not a criminal-court conviction.",
+      "sources": [
+        "https://www.aljazeera.com/news/2026/10/26/russian-attacks-on-ukraines-energy-infrastructure-a-war-crime-un"
+      ]
+    },
+    {
+      "index": 14,
+      "url": "https://www.aljazeera.com/news/2026/10/26/britain-sanctions-sudanese-commanders-over-weaponised-rape",
+      "headline": "Britain sanctions 15 Sudanese commanders over atrocities a year after el-Fasher fell",
+      "decision": "retained",
+      "reason": "Primary UK release and official sanctions list confirm fifteen new designations.",
+      "sources": [
+        "https://www.aljazeera.com/news/2026/10/26/britain-sanctions-sudanese-commanders-over-weaponised-rape"
+      ]
+    },
+    {
+      "index": 15,
+      "url": "https://www.aljazeera.com/news/2026/10/25/bulgaria-election-heads-to-a-run-off-amid-low-voter-turnout",
+      "headline": "Bulgaria's presidential election heads to a run-off amid low turnout",
+      "decision": "retained",
+      "reason": "Monday official-count reporting replaces Sunday exit polls; runoff on November 1.",
+      "sources": [
+        "https://www.aljazeera.com/news/2026/10/25/bulgaria-election-heads-to-a-run-off-amid-low-voter-turnout"
+      ]
+    },
+    {
+      "index": 16,
+      "url": "https://techcrunch.com/2026/10/26/anthropic-officially-files-for-its-public-debut/",
+      "headline": "Update: Anthropic files for a record IPO, targeting a valuation of up to US$2 trillion",
+      "decision": "retained",
+      "reason": "Anthropic S1 primary verified; merged with ranked AI item2; no unverified IPO valuation.",
+      "sources": [
+        "https://techcrunch.com/2026/10/26/anthropic-officially-files-for-its-public-debut/"
+      ]
+    },
+    {
+      "index": 17,
+      "url": "https://techcrunch.com/2026/10/26/spacex-locks-in-40b-gpu-financing-deal-with-apollo/",
+      "headline": "SpaceX locks in a US$40 billion chip-financing deal with Apollo for Nvidia's Vera Rubin GPUs",
+      "decision": "retained",
+      "reason": "New binding40bn commitment verified Apollo Oct26 primary, materially advances Oct6/7 seekingfinancing report; close remains conditional.",
+      "sources": [
+        "https://techcrunch.com/2026/10/26/spacex-locks-in-40b-gpu-financing-deal-with-apollo/"
+      ]
+    },
+    {
+      "index": 18,
+      "url": "https://techcrunch.com/2026/10/25/grok-releases-the-first-seven-minutes-of-its-ai-generated-odyssey/",
+      "headline": "Grok releases the first seven minutes of its AI-generated 'Odyssey' series",
+      "decision": "excluded_immaterial",
+      "reason": "Sevenminute AIcreative demo, originalOct23 rather than reportOct25; not a substantive new model/tool capability release; no prior delivered event match.",
+      "sources": [
+        "https://techcrunch.com/2026/10/25/grok-releases-the-first-seven-minutes-of-its-ai-generated-odyssey/"
+      ]
+    },
+    {
+      "index": 19,
+      "url": "https://techcrunch.com/2026/10/21/recursive-launches-flint-a-laptop-coding-model-it-says-was-largely-built-by-ai/",
+      "headline": "Recursive launches Flint, a laptop-sized coding model it says was largely built by AI",
+      "decision": "excluded_duplicate",
+      "reason": "Flint originalOct21 launch already successfully deliveredOct22 recursive-flint-launch-2026-10-21; no newfact.",
+      "sources": [
+        "https://techcrunch.com/2026/10/21/recursive-launches-flint-a-laptop-coding-model-it-says-was-largely-built-by-ai/"
+      ]
+    },
+    {
+      "index": 20,
+      "url": "https://www.cnbc.com/2026/10/25/stock-market-today-live-updates.html",
+      "headline": "Wall Street rebounds, led by chipmakers and Anthropic's IPO filing, as oil retreats",
+      "decision": "retained",
+      "reason": "AP Monday close verifies S&P 500 up 0.7% and Nasdaq up 0.8%; CNBC unavailable.",
+      "sources": [
+        "https://www.cnbc.com/2026/10/25/stock-market-today-live-updates.html"
+      ]
+    },
+    {
+      "index": 21,
+      "url": "https://www.cnbc.com/2026/10/26/stocks-making-the-biggest-moves-midday-lockheed-jetblue-coreweave-surgery-partners-more.html",
+      "headline": "EQT agrees to buy Range Resources in an all-stock deal valuing it above US$50 billion",
+      "decision": "retained",
+      "reason": "Primary EQT and SEC releases verify agreement. $50 billion is combined enterprise value, not purchase price.",
+      "sources": [
+        "https://www.cnbc.com/2026/10/26/stocks-making-the-biggest-moves-midday-lockheed-jetblue-coreweave-surgery-partners-more.html"
+      ]
+    },
+    {
+      "index": 22,
+      "url": "https://www.cnbc.com/2026/10/26/stocks-making-the-biggest-moves-midday-lockheed-jetblue-coreweave-surgery-partners-more.html",
+      "headline": "Bon Secours Mercy Health to buy Surgery Partners for about US$5.7 billion, sending shares up 47%",
+      "decision": "retained",
+      "reason": "Primary Surgery Partners release verifies HealthSpan agreement at $5.7 billion enterprise value.",
+      "sources": [
+        "https://www.cnbc.com/2026/10/26/stocks-making-the-biggest-moves-midday-lockheed-jetblue-coreweave-surgery-partners-more.html"
+      ]
+    },
+    {
+      "index": 23,
+      "url": "https://www.cnbc.com/2026/10/26/stocks-making-the-biggest-moves-after-hours-whr-jblu-cls.html",
+      "headline": "Whirlpool cuts its full-year revenue outlook to US$14.5 billion and misses estimates",
+      "decision": "retained",
+      "reason": "Primary Whirlpool release verifies sales decline and adjusted-loss outlook.",
+      "sources": [
+        "https://www.cnbc.com/2026/10/26/stocks-making-the-biggest-moves-after-hours-whr-jblu-cls.html"
+      ]
+    },
+    {
+      "index": 24,
+      "url": "https://www.cnbc.com/2026/10/26/stocks-making-the-biggest-moves-midday-lockheed-jetblue-coreweave-surgery-partners-more.html",
+      "headline": "JetBlue shares fall about 12% after a report its creditors hired a restructuring adviser",
+      "decision": "stale",
+      "reason": "Creditor-adviser report originated October 23; newer earnings release found but not fully reviewed. No bankruptcy asserted.",
+      "sources": [
+        "https://www.cnbc.com/2026/10/26/stocks-making-the-biggest-moves-midday-lockheed-jetblue-coreweave-surgery-partners-more.html"
+      ]
+    },
+    {
+      "index": 25,
+      "url": "https://www.formula1.com/en/latest/article/it-was-the-result-we-needed-antonelli-hoping-to-win-title-very-soon-after-perfect-us-gp.3pukItI57EWP9AtzrExMek",
+      "headline": "Antonelli can clinch his first F1 title at next weekend's Mexico City Grand Prix",
+      "decision": "duplicate",
+      "reason": "Austin victory and continuing title contest already delivered October 26; no new race event.",
+      "previous_event_reference": "2026-10-26:us-grand-prix-race-20261025",
+      "sources": [
+        "https://www.formula1.com/en/latest/article/it-was-the-result-we-needed-antonelli-hoping-to-win-title-very-soon-after-perfect-us-gp.3pukItI57EWP9AtzrExMek"
+      ]
+    },
+    {
+      "index": 26,
+      "url": "https://www.atptour.com/en/news/alcaraz-zverev-vienna-2026-practice-story",
+      "headline": "Zverev can seize the world No. 1 ranking with a deep run in Vienna",
+      "decision": "insufficiently_verified",
+      "reason": "Linked official article concerns practice photos. Independent ranking-threshold reports conflict; omit unverified condition.",
+      "sources": [
+        "https://www.atptour.com/en/news/alcaraz-zverev-vienna-2026-practice-story"
+      ]
+    },
+    {
+      "index": 27,
+      "url": "https://www.atptour.com/en/news/rune-halys-basel-2026-monday",
+      "headline": "Rune ends his injury drought in Basel, surviving 32 aces from Halys",
+      "decision": "retained",
+      "reason": "Rune’s Monday Basel victory corroborated by Grand Slam Tennis and Tennisnet; ATP page inaccessible.",
+      "sources": [
+        "https://www.atptour.com/en/news/rune-halys-basel-2026-monday"
+      ]
+    },
+    {
+      "index": 28,
+      "url": "https://www.cricinfo.com/series/india-in-new-zealand-2026-27-1539421/new-zealand-vs-india-3rd-t20i-1539434/match-preview",
+      "headline": "Update: India chase a series-sealing win in Wellington as New Zealand rest Lockie Ferguson",
+      "decision": "duplicate",
+      "reason": "Ferguson squad absence already delivered October 26; third T20 had not been played.",
+      "previous_event_reference": "2026-10-26:new-zealand-t20-squad-update-20261025",
+      "sources": [
+        "https://www.cricinfo.com/series/india-in-new-zealand-2026-27-1539421/new-zealand-vs-india-3rd-t20i-1539434/match-preview"
+      ]
+    },
+    {
+      "index": 29,
+      "url": "https://www.nature.com/articles/d41586-026-03416-1",
+      "headline": "France reports the first known human infection with the livestock-borne Shamonda virus",
+      "decision": "retained",
+      "reason": "ECDC October 22 primary report verifies first human infection; unseen catch-up, with death causation unresolved.",
+      "sources": [
+        "https://www.nature.com/articles/d41586-026-03416-1"
+      ]
+    },
+    {
+      "index": 30,
+      "url": "https://www.nature.com/articles/s41586-026-11263-3",
+      "headline": "Nearly half of reef-building coral species now face an elevated extinction risk",
+      "decision": "stale",
+      "reason": "Nature paper published October 15; no new October 26 finding.",
+      "sources": [
+        "https://www.nature.com/articles/s41586-026-11263-3"
+      ]
+    },
+    {
+      "index": 31,
+      "url": "https://www.nature.com/articles/d41586-026-03316-4",
+      "headline": "An AI trained on four million fossils suggests three 'big five' extinctions were gradual",
+      "decision": "stale",
+      "reason": "PubMed dates Nature article October 20; full underlying study inaccessible and no new October 26 finding.",
+      "sources": [
+        "https://www.nature.com/articles/d41586-026-03316-4"
+      ]
+    },
+    {
+      "index": 32,
+      "url": "https://www.nature.com/articles/d41586-026-03126-8",
+      "headline": "A spectacular feathered-dinosaur fossil shows flight evolved more than once",
+      "decision": "stale",
+      "reason": "Nature article published October 2, clarified October 7; not new October 26 research.",
+      "sources": [
+        "https://www.nature.com/articles/d41586-026-03126-8"
+      ]
+    }
+  ],
+  "diagnostic_notes": [
+    "Bounded research, not exhaustive; preserve the October 18 catch-up anchor.",
+    "Inshorts politics returned an old October 19 snapshot; alternative reporting used where original links failed.",
+    "Several CNBC, Bloomberg, Al Jazeera and ATP pages were inaccessible; no claims inferred from titles.",
+    "Nature cookie redirects failed; ECDC and PubMed used where appropriate.",
+    "One fresh sports result verified. F1 and New Zealand items were duplicates; Zverev ranking threshold was not established.",
+    "All six agreed surfaces attempted.30Videos+30Live entries retained. LatestVideosEp889explicit replay. Publisher first-page latest original remainsAugust14Ep841. No eligible new original established; no historical backfill. Web extraction readable for publisher surfaces, direct document requests403; no denial bypass.",
+    "Official channel root AND Videos actually fetched, parsed and screened. Latest RSS originalOct26EmergencyPod selected from actual transcript. Mollick YouTube original/upload identity remains pending: watch metadataOct25 23:00:10Z, no matching fresh RSS; not inferred replay or summarized. Other channel-listed candidates retained pending.",
+    "Selected primary transcript directly fetched/read; semantic dedup no matching lesson in available history.",
+    "Bounded snapshots, no full-window completion or cursor advancement. Parent must preserve previous source-specific cursors/gaps if earlier than supplied anchor.",
+    "All211 current roster profiles attempted in cloud browser and public document fallback; bounded snapshots, not exhaustive full-window coverage.",
+    "All 211 refreshed X profiles and all 30 required non-roster sources/categories were attempted, including the Big Technology YouTube page separately from RSS. Research remains partial: 668 source-associated items await further review or verification, and no complete historical source window is claimed.",
+    "Original archive birthday-paradox fact is a repeat; the verified companion uses the distinct sourced octopus taste-by-touch fact. The original archive is unchanged."
+  ],
+  "source_coverage_summary": {
+    "required_sources": 241,
+    "roster_count": 211,
+    "attempted": 241,
+    "unattempted": 0,
+    "pending_items": 668,
+    "complete_windows": 0,
+    "status": "partial",
+    "public_disclosure": "All 211 refreshed X profiles and all 30 required non-roster sources/categories were attempted, including the Big Technology YouTube page separately from RSS. Research remains partial: 668 source-associated items await further review or verification, and no complete historical source window is claimed."
+  }
+}

@@ -2,7 +2,7 @@
   "version": 1,
   "timezone": "Asia/Singapore",
   "daily_limit": 1,
-  "updated_at": "2026-10-24T23:11:45.031340+00:00",
+  "updated_at": "2026-10-26T23:09:05.413209+00:00",
   "catchup": {
     "initialized_at": "2026-10-19T00:21:00Z",
     "limit": 3,
@@ -240,6 +240,44 @@
       },
       "status": "deferred",
       "status_reason": "Historical August 14 original is not newly released; do not backfill after completed catch-up. Transcript availability is not authority to select or mark it delivered.",
+      "publication_id": null
+    },
+    {
+      "episode_id": "big-technology:0dd88740-d160-11f1-a503-cf4290c1971b",
+      "show": "big-technology",
+      "title": "Emergency Pod: Anthropic's S-1 IPO Filing — With Dan Primack",
+      "published_at": "2026-10-26T17:09:00Z",
+      "source_url": "https://www.youtube.com/watch?v=NVvfllwYliY",
+      "aliases": [
+        "rss:0dd88740-d160-11f1-a503-cf4290c1971b",
+        "youtube:NVvfllwYliY",
+        "https://podscripts.co/podcasts/big-technology-podcast/emergency-pod-anthropics-s-1-ipo-filing-with-dan-primack"
+      ],
+      "classification": {
+        "original": true,
+        "substantive": true,
+        "replay": false,
+        "promotional": false,
+        "beginner_series": false
+      },
+      "transcript": {
+        "status": "retrieved",
+        "body_retrieved": true,
+        "source_url": "https://podscripts.co/podcasts/big-technology-podcast/emergency-pod-anthropics-s-1-ipo-filing-with-dan-primack",
+        "provenance": "third-party-transcription",
+        "checked_at": "2026-10-26T23:05:24.303961+00:00",
+        "access_note": "Actual timestamped body retrieved through26:45sign-off. Selected13:57–15:44read, whole body inspected for context. Automatic transcription has obvious name and numeric errors; no uncertain numbers, channel names or direct quotes used. Original publisher RSS confirms title/GUID/date; official YouTube watch confirms guest name and matching episode, upload45seconds later."
+      },
+      "dedup_review": {
+        "status": "distinct_contribution",
+        "story_keys": [
+          "bigtech-20261026-customer-versus-distribution-concentration"
+        ],
+        "contribution": "Distinct business explanation of customer versus distribution-channel concentration. Does not repeat S-1 headline, financial metric definitions, compute allocation, digital-asset retirement or earlier episode recaps.17 daily records and all current learning publications checked.",
+        "reviewed_at": "2026-10-26T23:09:05.413209+00:00"
+      },
+      "status": "pending",
+      "status_reason": "Await verified publication and accepted delivery; do not mark used prematurely.",
       "publication_id": null
     }
   ],

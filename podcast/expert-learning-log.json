@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_on": "2026-10-26",
+  "updated_on": "2026-10-27",
   "timezone": "Asia/Singapore",
   "history": {
     "complete": false,
@@ -442,6 +442,43 @@
           "confirmation": "Measured final narration contains this evergreen trace-localisation lesson; private publication and accepted combined delivery verified. Document-assistant example is editorial."
         }
       ]
+    },
+    {
+      "concept_id": "combine-building-and-communication",
+      "aliases": [
+        "build and sell complementary skills",
+        "technical creation plus adoption communication"
+      ],
+      "experts": [
+        "Naval Ravikant"
+      ],
+      "theme": "management",
+      "title": "Pair building skill with clear communication",
+      "sources": [
+        {
+          "title": "Learn to Sell, Learn to Build",
+          "url": "https://nav.al/build-sell",
+          "authors": [
+            "Naval Ravikant",
+            "Babak Nivi"
+          ],
+          "original_date": "2019-03-31",
+          "original_date_basis": "Date displayed on original publisher transcript; corroborated original podcast listing.",
+          "checked_on": "2026-10-27",
+          "kind": "first_party",
+          "verification": "direct_primary",
+          "locator": "Opening definitions of building and selling, and discussion of writing as a communication route."
+        }
+      ],
+      "classification": "evergreen",
+      "takeaway": "Naval describes building and selling as broad complementary skills; selling includes communication and recruiting, not only transactions.",
+      "editorial_application": "Pair an AI prototype with a plain-language explanation of its user, job and limits, and invite feedback. The example and recommendation are editorial.",
+      "caveat": "Business philosophy, not a guarantee of success; no claim that every person must become a salesperson. All17 available daily records/current expert log/public reports and available personal-note searches checked; historical import gaps remain.",
+      "status": "researched_candidate",
+      "dedup_review": "reviewed_no_match",
+      "last_used": null,
+      "last_narrated": null,
+      "uses": []
     }
   ]
 }
