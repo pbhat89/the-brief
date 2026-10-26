@@ -4004,3 +4004,36 @@ is empty until the first run.
 2026-10-26	An implant that burns up excess blood sugar with electricity passes mouse tests	fa63eeea	diabetes,implant,eth zurich,glucose
 2026-10-26	Asteroid Bennu's samples are rewriting how the Solar System formed	30983df8	bennu,osiris-rex,solar system,jupiter
 2026-10-26	Japan's MMX mission sets off to sample Mars's moon Phobos	49f30b2f	mmx,phobos,idefix rover,mars
+2026-10-27	Police NSF, 23, allegedly enters a female toilet at a training command and jumps from a building to evade arrest	66c6e60a	police nsf,trespass,female toilet,singapore
+2026-10-27	Singapore to introduce laws in early 2027 to shield young social media users	68af3381	singapore,social media,legislation,young users
+2026-10-27	Petition against crow culling tops 2,500 signatures after officers filmed shooting birds near Aljunied	8a061110	crow culling,petition,nparks,aljunied
+2026-10-27	Update: Singapore questions seven SGX-listed firms over possible links to the Indonesian haze fires	19932311	shanmugam,haze,sgx,singapore
+2026-10-27	Update: Reliance's Jio Platforms is set for a record market debut on Wednesday	7c57efd1	jio platforms,reliance,ipo,market debut
+2026-10-27	Indian small-caps slump as margin calls bite and the Nifty extends its slide	f2008185	india,small-caps,margin calls,nifty
+2026-10-27	The rupee's Jio-fuelled rally fades as analysts warn of renewed pressure	82fa73ff	rupee,jio ipo,india,currency
+2026-10-27	Burnham backs tougher settlement rules and floats debating EU free movement, drawing a Brexit backlash	82753d33	burnham,immigration,mahmood,farage,brexit
+2026-10-27	Labour MPs warn Burnham's industrial-revival goals risk falling short	011e239a	labour mps,burnham,industrial revival,uk
+2026-10-27	Healey set to raise UK bank taxes in Wednesday's Budget while ruling out a capital-gains hike	465183d1	healey,bank taxes,budget,capital gains
+2026-10-27	UK bank shares slip and homebuilders rise as investors position for the Budget	5e36854b	uk,bank shares,homebuilders,budget
+2026-10-27	Israelis vote in an election that could end Netanyahu's long grip on power	0210c345	israel,election,netanyahu,eisenkot,knesset
+2026-10-27	Israeli strikes kill at least five people in Gaza, including a seven-year-old girl	e2b7d5ee	israel,gaza,khan younis,strikes
+2026-10-27	UN commission says Russia's attacks on Ukraine's energy grid amount to war crimes	22a074dd	un,russia,ukraine,energy,war crimes
+2026-10-27	Britain sanctions 15 Sudanese commanders over atrocities a year after el-Fasher fell	bd9cd63a	britain,sudan,rsf,el-fasher,sanctions
+2026-10-27	Bulgaria's presidential election heads to a run-off amid low turnout	bb623181	bulgaria,presidential election,run-off
+2026-10-27	Update: Anthropic files for a record IPO, targeting a valuation of up to US$2 trillion	df70a5be	anthropic,ipo,nasdaq,valuation
+2026-10-27	SpaceX locks in a US$40 billion chip-financing deal with Apollo for Nvidia's Vera Rubin GPUs	d00a9610	spacex,apollo,nvidia,vera rubin
+2026-10-27	Grok releases the first seven minutes of its AI-generated 'Odyssey' series	c294c93c	grok,xai,odyssey,ai video
+2026-10-27	Recursive launches Flint, a laptop-sized coding model it says was largely built by AI	70feed71	recursive,flint,coding model,ai
+2026-10-27	Wall Street rebounds, led by chipmakers and Anthropic's IPO filing, as oil retreats	a3a1f9eb	wall street,chipmakers,anthropic,oil
+2026-10-27	EQT agrees to buy Range Resources in an all-stock deal valuing it above US$50 billion	0917d3a5	eqt,range resources,acquisition,natural gas
+2026-10-27	Bon Secours Mercy Health to buy Surgery Partners for about US$5.7 billion, sending shares up 47%	06009b19	bon secours mercy health,surgery partners,acquisition
+2026-10-27	Whirlpool cuts its full-year revenue outlook to US$14.5 billion and misses estimates	9e061776	whirlpool,earnings,guidance
+2026-10-27	JetBlue shares fall about 12% after a report its creditors hired a restructuring adviser	d33a7d59	jetblue,restructuring,creditors
+2026-10-27	Antonelli can clinch his first F1 title at next weekend's Mexico City Grand Prix	c78e1cfc	antonelli,f1,mexico city grand prix,title
+2026-10-27	Zverev can seize the world No. 1 ranking with a deep run in Vienna	a02dac1f	zverev,vienna,world no 1,atp
+2026-10-27	Rune ends his injury drought in Basel, surviving 32 aces from Halys	8d42e2bc	rune,basel,halys,tennis
+2026-10-27	Update: India chase a series-sealing win in Wellington as New Zealand rest Lockie Ferguson	ba0184ac	india,new zealand,t20i,wellington,ferguson
+2026-10-27	France reports the first known human infection with the livestock-borne Shamonda virus	39e017f9	shamonda virus,france,livestock,infection
+2026-10-27	Nearly half of reef-building coral species now face an elevated extinction risk	7cda5c76	coral reefs,extinction,iucn,climate
+2026-10-27	An AI trained on four million fossils suggests three 'big five' extinctions were gradual	743505d9	ai,fossils,mass extinction,paleontology
+2026-10-27	A spectacular feathered-dinosaur fossil shows flight evolved more than once	10a929eb	feathered dinosaur,fossil,flight,china

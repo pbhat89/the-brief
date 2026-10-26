@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-08-27",
-      "topic_key": "shark",
-      "text": "Sharks are older than trees"
-    },
-    {
       "date": "2026-08-29",
       "topic_key": "unicorn",
       "text": "Scotland's national animal is the unicorn."
@@ -264,14 +259,14 @@
       "date": "2026-10-26",
       "topic_key": "dead sea",
       "text": "The Dead Sea is salty enough (about 34%) that swimmers float and almost nothing lives in it."
+    },
+    {
+      "date": "2026-10-27",
+      "topic_key": "birthday paradox",
+      "text": "In a group of 23 people, two probably share a birthday"
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-09-26",
-      "type": "lateral",
-      "title_key": "ahead-of-his-time"
-    },
     {
       "date": "2026-09-27",
       "type": "visual",
@@ -416,14 +411,14 @@
       "date": "2026-10-26",
       "type": "visual",
       "title_key": "overlapping-squares"
+    },
+    {
+      "date": "2026-10-27",
+      "type": "logic",
+      "title_key": "switch-room"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-09-26",
-      "type": "anagram",
-      "title_key": "letters-don-t-lie"
-    },
     {
       "date": "2026-09-27",
       "type": "spellingbee",
@@ -568,6 +563,11 @@
       "date": "2026-10-26",
       "type": "letterboxed",
       "title_key": "strike-up-the-band"
+    },
+    {
+      "date": "2026-10-27",
+      "type": "anagram",
+      "title_key": "say-it-another-way"
     }
   ]
 }
