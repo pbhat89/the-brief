@@ -168,3 +168,11 @@ Proposed next bounded improvement: review high-relevance pending originals befor
 ## 27 October 2026 — separate personal and daily audio retention
 
 Direct correction: automatic seven-day expiry is for daily news only; Personal Podcasts are manually deleted. Implementation under validation: explicit manual-retention contract, no native expiry on new personal bytes/index, bounded legacy migration excluding missing bytes and tombstones, unchanged daily expiry, private relay contract alignment, UI labels and regression tests. Deployment and migration completion must be verified separately; no recovery claim from a retained receipt alone.
+
+## 28 October 2026 · Distinguish source surfaces and timestamp semantics
+
+Observed: checking Big Technology YouTube separately from RSS found a new interview missing from the feed. Its advertised captions returned an empty response, so discovery did not become a transcript-based recap. Keep the source pending until original-date and actual-transcript evidence qualify it; never infer a lesson from promotional descriptions. Everyday AI's new original announces a transition rather than substantive learning, so it is excluded without spoken diagnostic filler.
+
+Verified correction: RSS dates ending `-0000` were parsed as timezone-naive by the date library. Preserve the raw feed value and convert its UTC semantics explicitly before the source audit; do not blindly append a timezone to unrelated naive timestamps. A post's edited timestamp was also separated from its original publication timestamp.
+
+Proposed next bounded experiment: prioritize substantive pending originals and compare independent episode surfaces before increasing capture volume. Success means source-backed disposition of pending items, not just a larger attempt count. Full-window cursors must remain unchanged without complete traversal evidence.

@@ -2,7 +2,7 @@
   "version": 1,
   "timezone": "Asia/Singapore",
   "daily_limit": 1,
-  "updated_at": "2026-10-26T23:22:38.079804+00:00",
+  "updated_at": "2026-10-27T23:06:25.188701+00:00",
   "catchup": {
     "initialized_at": "2026-10-19T00:21:00Z",
     "limit": 3,
@@ -142,7 +142,9 @@
       "aliases": [
         "rss:5a1b2336-cca8-11f1-9844-a3a2a08c94a2",
         "https://podscripts.co/podcasts/big-technology-podcast/google-ceo-sundar-pichai-ais-infinite-possibilities-compute-scarcity-dilemmas-future-ai-products",
-        "https://feeds.megaphone.fm/LI3617121267"
+        "https://feeds.megaphone.fm/LI3617121267",
+        "youtube:F3ItSTZNtT0",
+        "https://www.youtube.com/watch?v=F3ItSTZNtT0"
       ],
       "classification": {
         "original": true,
@@ -180,7 +182,9 @@
       "aliases": [
         "rss:59149ba6-cf2e-11f1-823a-07bb6f417cfd",
         "https://podscripts.co/podcasts/big-technology-podcast/googles-potential-ai-money-spigot-shutting-php-bug-cybersecuritys-black-october",
-        "https://pdst.fm/e/tracking.swap.fm/track/t7yC0rGPUqahTF4et8YD/pscrb.fm/rss/p/traffic.megaphone.fm/AMPP9533657679.mp3"
+        "https://pdst.fm/e/tracking.swap.fm/track/t7yC0rGPUqahTF4et8YD/pscrb.fm/rss/p/traffic.megaphone.fm/AMPP9533657679.mp3",
+        "youtube:7qT9ovAMOWY",
+        "https://www.youtube.com/watch?v=7qT9ovAMOWY"
       ],
       "classification": {
         "original": true,
@@ -279,6 +283,39 @@
       "status": "published",
       "status_reason": null,
       "publication_id": "2026-10-27"
+    },
+    {
+      "episode_id": "everyday-ai:890",
+      "show": "everyday-ai",
+      "title": "Ep 890: What’s next For Everyday AI?",
+      "published_at": "2026-10-27T15:00:09Z",
+      "source_url": "https://www.buzzsprout.com/2175779/episodes/20027757-ep-890-what-s-next-for-everyday-ai?t=0",
+      "aliases": [
+        "youtube:ndAgbVMQTRM",
+        "youtube:JxajpGRZ6Xs"
+      ],
+      "classification": {
+        "original": true,
+        "substantive": false,
+        "replay": false,
+        "promotional": false,
+        "beginner_series": false
+      },
+      "transcript": {
+        "status": "retrieved",
+        "body_retrieved": true,
+        "source_url": "https://www.buzzsprout.com/2175779/episodes/20027757-ep-890-what-s-next-for-everyday-ai?t=0",
+        "provenance": "publisher-transcript",
+        "checked_at": "2026-10-27T23:01:51Z",
+        "access_note": "Actual publisher transcript body inspected through public search extraction, opening0:01 and subsequent show-transition/pause remarks. Direct page403 and advertised YouTube English captions200 empty. Original livestream startsOct27at15:00:09Z; separate video upload16:36:55Z and live archive publication17:08:13Z. Description includes stale Tasks chapters; those are not used as transcript evidence."
+      },
+      "dedup_review": {
+        "status": "pending",
+        "story_keys": []
+      },
+      "status": "skip",
+      "status_reason": "Original show-transition announcement rather than a substantive technical/practical learning episode. Host describes new role, proposed handoff and temporary pause without fixed return date. Not summarized or delivered.",
+      "publication_id": null
     }
   ],
   "publications": [

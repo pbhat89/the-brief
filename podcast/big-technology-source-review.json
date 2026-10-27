@@ -203,6 +203,61 @@
       "catchupPreserved": true,
       "everydayAI": "Web extractor returned only footer for YouTube; direct public HTML successfully parsed30Videos and30Live entries. LatestVideosEp888explicitReplay; latestoriginalLive9_XAioMMtDA and allpublisher surfaces remainAug14Ep841. No new eligible original; no historical backfill.",
       "stateAuthority": "Research only; no publication or delivery state advanced."
+    },
+    {
+      "dateSGT": "2026-10-28",
+      "checkedAt": "2026-10-27T23:06:25.188701+00:00",
+      "rssRetrieved": true,
+      "rssSha256": "0ae47802362b3639f5e3415e362320ae6a18c143be961309fef538546aab2250",
+      "rssLatestOriginal": {
+        "episodeId": "big-technology:0dd88740-d160-11f1-a503-cf4290c1971b",
+        "publishedAt": "2026-10-26T17:09:00Z",
+        "status": "Already delivered October27; no repeat."
+      },
+      "officialYouTubeInspectedSeparately": true,
+      "officialYouTubeSource": "https://www.youtube.com/@Alex.kantrowitz/videos",
+      "pendingYouTubeCandidates": [
+        {
+          "episodeId": "big-technology:youtube:iy1PwZxFA7U",
+          "title": "How To Take Enterprise AI Pilots To Production — With Russell Jukes",
+          "videoId": "iy1PwZxFA7U",
+          "sourceUrl": "https://www.youtube.com/watch?v=iy1PwZxFA7U",
+          "uploadedAt": "2026-10-27T17:41:02Z",
+          "originalPublishedAt": null,
+          "originalDateEvidence": "Official YouTube upload verified; separate original-release date unresolved. Accompanying publisher enterprise guide dated October 27 is not an interview transcript.",
+          "sponsorship": "Official description: DXC Brand Spotlight sponsored interview.",
+          "transcriptStatus": "Advertised English captions returned HTTP 200 with zero bytes; targeted third-party/publisher search found no actual transcript.",
+          "status": "pending",
+          "covered": false,
+          "summaryCoverage": []
+        },
+        {
+          "episodeId": "big-technology:youtube:Xoj0GGu0-aw",
+          "title": "This AI Expert Argues We're Underestimating AI's Impact — With Ethan Mollick",
+          "videoId": "Xoj0GGu0-aw",
+          "sourceUrl": "https://www.youtube.com/watch?v=Xoj0GGu0-aw",
+          "uploadedAt": "2026-10-25T23:00:10Z",
+          "originalPublishedAt": null,
+          "originalDateEvidence": "Upload timestamp verified; original release distinction unresolved. Not found in current RSS.",
+          "transcriptStatus": "Advertised English captions returned HTTP 200 with zero bytes; search found descriptions/summaries but no actual transcript.",
+          "status": "pending",
+          "covered": false,
+          "summaryCoverage": []
+        }
+      ],
+      "aliasesReconciled": [
+        {
+          "videoId": "7qT9ovAMOWY",
+          "uploadedAt": "2026-10-27T15:35:08Z",
+          "canonicalEpisodeId": "big-technology:59149ba6-cf2e-11f1-823a-07bb6f417cfd",
+          "originalPublishedAt": "2026-10-23T22:12:00Z",
+          "basis": "Matching exact title and description; original RSS episode already delivered October 25."
+        }
+      ],
+      "catchupPreserved": true,
+      "selectedResearchCandidate": null,
+      "everydayAI": "All six required surfaces attempted. Current YouTube reveals original Ep 890 on October 27; actual indexed publisher transcript is a show-transition announcement and temporary pause, not substantive learning. Excluded, not delivered. Older visible publisher site/newsletter snapshots stop August 14; channel upload list is newer.",
+      "stateAuthority": "Research only. Fixed seed and publication records unchanged. New YouTube candidates remain in source review, not main episode ledger, because the latter requires independently established original publication time. Upload timestamps are not substituted. No recap selected."
     }
   ]
 }

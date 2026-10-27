@@ -1,8 +1,8 @@
 {
-  "run_id": "morning-2026-10-27",
-  "updated_at": "2026-10-26T23:22:38.079804+00:00",
+  "run_id": "morning-2026-10-28",
+  "updated_at": "2026-10-27T23:17:35.042420+00:00",
   "previous_run": {
-    "run_id": "morning-2026-10-26",
+    "run_id": "morning-2026-10-27",
     "state": "completed",
     "detail": "Previous daily edition delivered; no regeneration."
   },
@@ -11,50 +11,50 @@
       "id": "history",
       "label": "History and operational feedback",
       "state": "completed",
-      "updated_at": "2026-10-26T23:22:38.079804+00:00",
-      "detail": "Prior delivery history and current coverage requirements read; no same-date edition delivered."
+      "updated_at": "2026-10-27T23:11:37.971025+00:00",
+      "detail": "Available delivered history, archives, current operational feedback and editorial rules reviewed; no same-date duplicate."
     },
     {
       "id": "upstream",
       "label": "Same-day upstream intake",
       "state": "completed",
-      "updated_at": "2026-10-26T23:22:38.079804+00:00",
-      "detail": "All 33 same-day upstream entries reconciled with explicit dispositions."
+      "updated_at": "2026-10-27T23:11:37.971025+00:00",
+      "detail": "All 37 actual October 28 upstream entries reconciled; duplicates and retrospective items excluded."
     },
     {
       "id": "research",
       "label": "Source research and deduplication",
       "state": "completed",
-      "updated_at": "2026-10-26T23:22:38.079804+00:00",
-      "detail": "Every required source attempted; bounded source windows and pending original-item verification remain explicitly partial."
+      "updated_at": "2026-10-27T23:11:37.971025+00:00",
+      "detail": "All 241 required sources attempted; bounded snapshots remain partial with 437 pending source-instance items and no full-window cursor advance."
     },
     {
       "id": "script",
       "label": "Narrative preparation",
       "state": "completed",
-      "updated_at": "2026-10-26T23:22:38.079804+00:00",
-      "detail": "Concise 31-headline script with distinct transcript-based podcast learning and evergreen expert lesson prepared."
+      "updated_at": "2026-10-27T23:11:37.971025+00:00",
+      "detail": "31 concise news headlines, one distinct evergreen expert lesson and one sourced fact prepared. No transcript-qualified podcast recap available."
     },
     {
       "id": "audio",
       "label": "Private narration checks",
       "state": "completed",
-      "updated_at": "2026-10-26T23:22:38.079804+00:00",
-      "detail": "Measured narration passed full decode, clipping, chapter-gap and loudness checks; no physical-device playback claim."
+      "updated_at": "2026-10-27T23:17:35.042420+00:00",
+      "detail": "Final measured narration passed full decode, clipping, loudness, frozen-input and exact chapter-gap checks; no human-listening or physical-device claim."
     },
     {
       "id": "publication",
       "label": "Public report publication",
-      "state": "completed",
-      "updated_at": "2026-10-26T23:22:38.079804+00:00",
-      "detail": "Live report and source checklist matched exact local bytes; publication commit Pages and regression/Worker deployment succeeded."
+      "state": "running",
+      "updated_at": "2026-10-27T23:17:35.042420+00:00",
+      "detail": "Validated report and regenerated public catalogue prepared; live publication verification remains pending."
     },
     {
       "id": "delivery",
       "label": "Private episode delivery",
-      "state": "completed",
-      "updated_at": "2026-10-26T23:22:38.079804+00:00",
-      "detail": "Private publication and exact replay verified matching hash, size and seven-day expiry; combined conversation delivery accepted. Elapsed expiry and physical-device playback remain unobserved."
+      "state": "pending",
+      "updated_at": "2026-10-27T23:11:37.971025+00:00",
+      "detail": "No new delivery claimed. Private upload and receipt validation remain pending."
     }
   ]
 }

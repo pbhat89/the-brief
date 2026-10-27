@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_on": "2026-10-27",
+  "updated_on": "2026-10-28",
   "timezone": "Asia/Singapore",
   "history": {
     "complete": false,
@@ -486,6 +486,42 @@
           "confirmation": "Measured final narration contains the source-backed evergreen lesson; live publication and accepted combined delivery verified. The AI prototype application is editorial."
         }
       ]
+    },
+    {
+      "concept_id": "human-baseline-label-consistency",
+      "aliases": [
+        "repeat annotation to calibrate evaluation",
+        "measure human agreement before interpreting model accuracy"
+      ],
+      "experts": [
+        "Andrej Karpathy"
+      ],
+      "theme": "technical_coding",
+      "title": "Calibrate the human baseline, not just the model score",
+      "sources": [
+        {
+          "title": "A Recipe for Training Neural Networks",
+          "url": "https://karpathy.github.io/2019/04/25/recipe/",
+          "authors": [
+            "Andrej Karpathy"
+          ],
+          "original_date": "2019-04-25",
+          "original_date_basis": "Date displayed on original author page",
+          "checked_on": "2026-10-28",
+          "kind": "first_party",
+          "verification": "direct_primary",
+          "locator": "Section2, human baseline bullet"
+        }
+      ],
+      "classification": "evergreen",
+      "takeaway": "Karpathy recommends checking interpretable metrics against human accuracy; alternatively, label test examples twice and compare the annotations.",
+      "editorial_application": "Repeat a small customer-message classification task blind to previous answers, inspect inconsistent decisions, and clarify the grading rubric before comparing model versions. This is editorial application.",
+      "caveat": "Human repeatability is neither a universal performance ceiling nor an excuse for model errors. Distinct from prior raw-data inspection, tiny-batch pipeline wiring and random-search lessons. Available prior-topic records checked; incomplete-import/history caveat remains.",
+      "status": "researched_candidate",
+      "dedup_review": "reviewed_no_match",
+      "last_used": null,
+      "last_narrated": null,
+      "uses": []
     }
   ]
 }
