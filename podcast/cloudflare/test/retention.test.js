@@ -18,7 +18,7 @@ test('audio and active index expire together; private metadata has no expiry',as
 test('retained expired metadata cannot play or crowd the active list',async()=>{
  const id='aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa';let listing;
  const expired={id,expires:1,size:834};
- const env={AUTH:{idFromName:()=>1,get:()=>({fetch:async()=>new Response('{"csrf":"synthetic"}')})},EPISODES:{list:async opts=>{listing=opts;return {keys:[{name:'active:'+id}]}},get:async k=>{assert.ok(!k.startsWith('audio:'));return expired;}}};
+ const env={AUTH:{idFromName:()=>1,get:()=>({fetch:async()=>new Response('{"csrf":"synthetic"}')})},EPISODES:{list:async opts=>{listing=opts;return {keys:[{name:'active:'+id}]}},get:async k=>{if(Array.isArray(k))return new Map(k.map(key=>[key,expired]));assert.ok(!k.startsWith('audio:'));return expired;}}};
  const request=p=>new Request(origin+p,{headers:{Cookie:'__Host-brief=synthetic'}});
  const r=await worker.fetch(request('/api/episodes'),env);assert.deepEqual(await r.json(),{episodes:[]});assert.equal(listing.prefix,'active:');
  for(const path of ['/api/media/','/api/episodes/'])assert.equal((await worker.fetch(request(path+id),env)).status,404);

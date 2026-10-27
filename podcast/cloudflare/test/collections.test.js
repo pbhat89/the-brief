@@ -1,13 +1,13 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import worker from '../src/worker.js';
+import worker,{deletePersonalEpisode} from '../src/worker.js';
 import {digest,TTL} from '../src/security.js';
 const origin='https://brief.example',token='synthetic_publisher_'.repeat(3),id='aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa';
 const bytes=new Uint8Array(834);bytes.set([255,251,144,0]);bytes.set([255,251,144,0],417);
 async function setup(){
  const data=new Map(),writes=[],deletes=[];
- const env={PUBLISHER_TOKEN_HASH:await digest(token),EXPIRY_APPROVED:'true',AUTH:{idFromName:()=>1,get:()=>({fetch:async r=>{const x=await r.json();return x.token==='synthetic'?new Response('{"csrf":"csrf-value"}'):new Response('Unauthorized',{status:401})}})},EPISODES:{
-  get:async(k,type)=>{const v=data.get(k);return type==='json'&&typeof v==='string'?JSON.parse(v):v},
+ const env={PUBLISHER_TOKEN_HASH:await digest(token),EXPIRY_APPROVED:'true',AUTH:{idFromName:()=>1,get:()=>({fetch:async r=>{const x=await r.json();if(x.op==='episode:delete'&&x.token==='synthetic'&&x.csrf==='csrf-value')return deletePersonalEpisode(env,x.id);return x.token==='synthetic'?new Response('{"csrf":"csrf-value"}'):new Response('Unauthorized',{status:401})}})},EPISODES:{
+  get:async(k,type)=>{if(Array.isArray(k))return new Map(k.map(key=>[key,typeof data.get(key)==='string'?JSON.parse(data.get(key)):data.get(key)]));const v=data.get(k);return type==='json'&&typeof v==='string'?JSON.parse(v):v},
   put:async(k,v,opts)=>{writes.push([k,v,opts]);data.set(k,v)},
   delete:async k=>{deletes.push(k);data.delete(k)},
   list:async({prefix})=>({keys:[...data.keys()].filter(k=>k.startsWith(prefix)).map(name=>({name})),list_complete:true})
@@ -18,11 +18,11 @@ async function setup(){
  return {data,env,writes,deletes,request,upload,remove};
 }
 const personal={'X-Episode-Collection':'personal','X-Episode-Key':'example-topic','X-Episode-Duration':'753.25','X-Episode-Title':'Example topic','X-Episode-Chapters':'[{"title":"Start","start":0},{"title":"Context","start":30}]'};
-test('personal upload uses a separate expiring index and preserves metadata/duration',async()=>{
+test('personal upload uses a separate persistent index and preserves metadata/duration',async()=>{
  const h=await setup(),r=await h.upload(personal);assert.equal(r.status,201);const meta=await r.json();
- assert.equal(meta.collection,'personal');assert.equal(meta.episodeKey,'example-topic');assert.equal(meta.duration,753.25);assert.equal(meta.expires-meta.created,TTL);
+ assert.equal(meta.collection,'personal');assert.equal(meta.episodeKey,'example-topic');assert.equal(meta.duration,753.25);assert.equal(meta.expires,null);assert.equal(meta.retention,'manual');
  assert.ok(h.data.has('audio:'+meta.id));assert.ok(h.data.has('meta:'+meta.id));assert.ok(h.data.has('active-personal:'+meta.id));assert.ok(!h.data.has('active:'+meta.id));
- assert.equal(h.writes[0][2].expiration,meta.expires);assert.equal(h.writes[1][2],undefined);assert.equal(h.writes[2][2].expiration,meta.expires);
+ assert.equal(h.writes[0][2],undefined);assert.equal(h.writes[1][2],undefined);assert.equal(h.writes[2][2],undefined);
 });
 test('default and legacy episodes remain daily; personal uploads do not displace daily listing',async()=>{
  const h=await setup();const daily=await (await h.upload()).json();const topic=await (await h.upload(personal)).json();
@@ -68,4 +68,15 @@ test('storage is a bounded active-audio estimate, excluding expired and deleted 
 test('missing, malformed or non-finite expiry and invalid sizes cannot serve media',async()=>{
  const h=await setup();for(const expires of [undefined,null,'9999999999','invalid',NaN,Infinity,-Infinity]){h.data.set('meta:'+id,{size:834,expires});h.data.set('audio:'+id,bytes.buffer);for(const part of ['episodes','media'])assert.equal((await h.request('/api/'+part+'/'+id)).status,404);}
  for(const size of [undefined,0,-1,1.5,Infinity,8388609]){h.data.set('meta:'+id,{expires:Date.now()/1000+100,size});assert.equal((await h.request('/api/media/'+id)).status,404);}
+});
+test('manual personal audio remains playable past seven days; daily expiry still rejects',async()=>{
+ const h=await setup(),topic=await (await h.upload(personal)).json();topic.created=1;h.data.set('meta:'+topic.id,JSON.stringify(topic));
+ assert.equal((await h.request('/api/media/'+topic.id)).status,200);assert.equal((await h.request('/api/media/'+topic.id,{method:'HEAD'})).status,200);
+ const daily=await (await h.upload()).json();daily.expires=1;h.data.set('meta:'+daily.id,JSON.stringify(daily));assert.equal((await h.request('/api/media/'+daily.id)).status,404);
+});
+test('large library uses bulk metadata reads and new personal upload fails closed at safety cap',async()=>{
+ const h=await setup();for(let n=0;n<90;n++){const key=String(n).padStart(36,'0'),meta={id:key,collection:'personal',retention:'manual',expires:null,created:n,size:834};h.data.set('meta:'+key,JSON.stringify(meta));h.data.set('active-personal:'+key,JSON.stringify(meta));}
+ const get=h.env.EPISODES.get;let calls=0;h.env.EPISODES.get=async(...args)=>{calls++;return get(...args)};
+ assert.equal((await (await h.request('/api/episodes?collection=all')).json()).episodes.length,90);assert.equal(calls,1);
+ assert.equal((await h.upload(personal)).status,507);assert.equal(h.writes.length,0);
 });

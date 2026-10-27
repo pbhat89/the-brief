@@ -6,6 +6,7 @@ let currentReport=null,reportReturn='previous';
 let csrf,context,analyser,frame,epoch=0,currentEpisode=null,viewing='latest',catalog={daily:[],personal:[]},selected={daily:null,personal:null},positions=new Map(),branding={},deleting=new Set(),removed=new Set();
 const tabs=['latest','previous','personal','logbook'];
 const collectionOf=e=>e?.collection==='personal'?'personal':'daily';
+const episodeAvailable=e=>!e.deleted&&(collectionOf(e)==='personal'?e.retention==='manual'&&e.expires===null:Number.isFinite(e.expires)&&e.expires>Date.now()/1000);
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');
 function resetToLogin(message='Please unlock the player.') {
  epoch++; clearReport(); resetLogbook(); csrf=undefined; currentEpisode=null; catalog={daily:[],personal:[]}; selected={daily:null,personal:null}; positions.clear(); deleting.clear(); removed.clear(); branding={}; resetBranding(); document.body.classList.remove('unlocked'); document.body.classList.remove('reader');
@@ -83,7 +84,7 @@ function openTab(name){closeCelebration(false);if(currentReport){clearReport();d
 for(const name of tabs){$('#tab-'+name).onclick=()=>openTab(name);$('#tab-'+name).onkeydown=e=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();const next=e.key==='Home'?tabs[0]:e.key==='End'?tabs.at(-1):tabs[(tabs.indexOf(name)+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length];openTab(next);$('#tab-'+next).focus();}};}
 function card(title,meta,icon,action){const b=document.createElement('button');b.className='edition-card';const badge=document.createElement('span');badge.className='card-icon';badge.textContent=icon;badge.setAttribute('aria-hidden','true');const body=document.createElement('span');body.className='card-body';const name=document.createElement('span');name.className='card-title';name.textContent=title;const detail=document.createElement('span');detail.className='card-meta';detail.textContent=meta;const arrow=document.createElement('span');arrow.className='card-arrow';arrow.textContent='↗';arrow.setAttribute('aria-hidden','true');body.append(name);body.append(detail);b.append(badge);b.append(body);b.append(arrow);b.onclick=action;return b;}
 function chooseEpisode(e){
- if(removed.has(e.id)||!Number.isFinite(e.expires)||e.expires<=Date.now()/1000){error(Error('This recording has expired. Refresh to see available audio.'));return;}
+ if(removed.has(e.id)||!episodeAvailable(e)){error(Error('This recording has expired. Refresh to see available audio.'));return;}
  const kind=collectionOf(e);if(currentEpisode?.id===e.id){showTab(kind==='personal'?'personal':episodeDay(e)===singaporeDay()?'latest':'previous');return;}
  if(currentEpisode&&Number.isFinite(audio.currentTime))positions.set(currentEpisode.id,audio.currentTime);
  audio.pause();currentEpisode=e;selected[kind]=e;audio.src='/api/media/'+encodeURIComponent(e.id);audio.load();
@@ -131,13 +132,13 @@ $('#reader-back').onclick=()=>{clearReport();document.body.classList.remove('rea
 function renderReports(){$('#reports').replaceChildren();for(const r of REPORTS)$('#reports').append(card(r.title,date(r.published_at)+' · Read edition','≡',()=>openReport(r)));}
 function renderPersonal(){
  $('#personal-episodes').replaceChildren();
- for(const e of catalog.personal){const label=date(e.created*1000)+(e.duration?' · '+time(e.duration):'')+' · '+(e.chapters?.length||0)+' chapters · Expires '+date(e.expires*1000);$('#personal-episodes').append(personalCard(e,label));}
- if(!catalog.personal.length){const empty=document.createElement('div');empty.className='empty-state';empty.textContent='No personal podcasts available yet. Ask for a topic, and your researched recording will appear here. Hosted audio expires after seven days.';$('#personal-episodes').append(empty);}
+ for(const e of catalog.personal){const label=date(e.created*1000)+(e.duration?' · '+time(e.duration):'')+' · '+(e.chapters?.length||0)+' chapters · Kept until you delete';$('#personal-episodes').append(personalCard(e,label));}
+ if(!catalog.personal.length){const empty=document.createElement('div');empty.className='empty-state';empty.textContent='No personal podcasts available yet. Ask for a topic, and your researched recording will appear here. Personal podcasts stay until you delete them.';$('#personal-episodes').append(empty);}
 }
 async function load(personalization={}){
  const data=await api('/api/episodes?collection=all'); document.body.classList.add('unlocked'); branding=personalization;applyPersonalization(personalization); $('#login').hidden=true; $('#player').hidden=false; $('#episodes').replaceChildren();
  $('#previous-audio').replaceChildren();$('#personal-episodes').replaceChildren();renderReports();
- const active=data.episodes.filter(e=>e.expires>Date.now()/1000&&!e.deleted&&!removed.has(e.id)).sort((a,b)=>b.created-a.created);
+ const active=data.episodes.filter(e=>episodeAvailable(e)&&!removed.has(e.id)).sort((a,b)=>b.created-a.created);
  catalog={daily:active.filter(e=>collectionOf(e)==='daily').slice(0,20),personal:active.filter(e=>collectionOf(e)==='personal')};
  for(const kind of ['daily','personal'])selected[kind]=catalog[kind].find(e=>e.id===selected[kind]?.id)||catalog[kind][0]||null;
  for(const e of catalog.daily){const label=date(e.created*1000)+(e.duration?' · '+time(e.duration):'')+' · Audio available until '+date(e.expires*1000);$('#previous-audio').append(card(episodeTitle(e),label,'♪',()=>chooseEpisode(e)));}

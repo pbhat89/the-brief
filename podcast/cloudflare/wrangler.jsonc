@@ -8,5 +8,6 @@
   "durable_objects": {"bindings":[{"name":"AUTH","class_name":"Auth"}]},
   "migrations": [{"tag":"v1","new_sqlite_classes":["Auth"]}],
   "vars": {"EXPIRY_APPROVED":"false"},
+  "triggers": {"crons":["* * * * *"]},
   "observability": {"enabled":false}
 }

@@ -4,7 +4,11 @@ The protected listener has been deployed and its PIN secrets configured by the o
 
 ## Retention
 
-With audio expiry approved, new audio bytes receive native KV expiration at upload plus 604800 seconds. Private `meta:` records have no storage expiration. A disposable `active:` index expires with the audio, preventing retained history from filling the active listing. Both metadata details and media independently reject expired episodes. Public nonpersonal HTML and source evidence remain in Git. Private titles, chapters, narration, listener links and credentials must not be committed. Removing the approval flag blocks new uploads but cannot cancel an existing audio expiration. Expiration cannot erase a listener's downloaded copy.
+Daily news audio and its `active:` index receive native KV expiry at upload plus 604800 seconds. Personal Podcasts have `expires: null`, `retention: "manual"`, and no native KV expiry on audio or `active-personal:` keys; they remain until confirmed manual Delete. All metadata stays private. Daily metadata/media independently reject elapsed expiry; personal media requires the explicit manual-retention contract. Neither policy can erase downloaded copies.
+
+A bounded scheduled migration rewrites surviving legacy personal bytes without an expiry, updates metadata/index, and checkpoints six metadata records per tick in the existing AUTH Durable Object. It never creates missing audio, processes daily audio, or restores a deletion tombstone. Migration and confirmed deletion share that object's concurrency gate. Every-minute ticks become no-op status reads after completion. Private migration totals include preserved/missing/deleted counts; code deployment is not proof that every old byte survived its previous native deadline. Native KV expiration already elapsed may be unrecoverable.
+
+Personal upload admission refuses incomplete inventory, 90 active episodes, or an estimated 900 MB application audio total. This is a conservative application safeguard, not account-wide quota visibility or a billing guarantee. Free-tier account limits and metadata still apply. No paid upgrade is enabled. Keep the existing storage warning and manual Delete controls.
 
 ## CI and optional deployment
 

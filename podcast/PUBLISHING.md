@@ -215,3 +215,7 @@ pending expiry and unrelated account storage. A warning appears at 80% of the
 Read, write, list, delete and compute/request limits still apply; freeing bytes
 does not reset those counters. No paid upgrade or billing change is performed.
 See [current KV limits](https://developers.cloudflare.com/kv/platform/limits/).
+
+## Personal podcast retention correction — 27 October 2026
+
+Seven-day retention applies only to daily news briefs. New personal upload receipts require `expires: null` and `retention: "manual"`; the private relay validates this separate contract. Existing personal recordings with surviving bytes are migrated without native expiry. Confirmed manual Delete remains permanent and retains a tombstone. Historical completed relay retries return their original receipt unchanged; that receipt is historical evidence, not proof of current media availability. Do not regenerate or reupload a deleted/expired recording solely to bypass an idempotency conflict.

@@ -164,3 +164,7 @@ Observed and completed: the official Big Technology YouTube root and Videos page
 Verified production checks: canonicalizing X media/analytics aliases prevents duplicate captures from inflating item counts; upstream reconciliation accounts for all 33 entries. Restored local narration passed measured decode/loudness/pause checks, and exact upload replay preserved idempotency. These technical checks do not establish listener comfort, physical-device playback or elapsed expiry.
 
 Proposed next bounded improvement: review high-relevance pending originals before increasing capture volume, preserve per-source completion timestamps where available, and keep batch inspection times explicitly labelled. Success means fewer pending substantive items with source-backed decisions; no full-window cursor advance without actual completion. Do not pad a concise edition to reach a nominal duration.
+
+## 27 October 2026 — separate personal and daily audio retention
+
+Direct correction: automatic seven-day expiry is for daily news only; Personal Podcasts are manually deleted. Implementation under validation: explicit manual-retention contract, no native expiry on new personal bytes/index, bounded legacy migration excluding missing bytes and tombstones, unchanged daily expiry, private relay contract alignment, UI labels and regression tests. Deployment and migration completion must be verified separately; no recovery claim from a retained receipt alone.
