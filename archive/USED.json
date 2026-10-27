@@ -264,14 +264,14 @@
       "date": "2026-10-27",
       "topic_key": "birthday paradox",
       "text": "In a group of 23 people, two probably share a birthday"
+    },
+    {
+      "date": "2026-10-28",
+      "topic_key": "westray flight",
+      "text": "The world's shortest scheduled passenger flight links the Orkney islands of Westray and Papa Westray in Scotland, a hop of about 2.7 kilometres. Operated by Loganair, it is timetabled at roughly 90 se"
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-09-27",
-      "type": "visual",
-      "title_key": "off-by-one"
-    },
     {
       "date": "2026-09-28",
       "type": "logic",
@@ -416,14 +416,14 @@
       "date": "2026-10-27",
       "type": "logic",
       "title_key": "switch-room"
+    },
+    {
+      "date": "2026-10-28",
+      "type": "quantitative",
+      "title_key": "averaging-up"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-09-27",
-      "type": "spellingbee",
-      "title_key": "take-root"
-    },
     {
       "date": "2026-09-28",
       "type": "letterboxed",
@@ -568,6 +568,11 @@
       "date": "2026-10-27",
       "type": "anagram",
       "title_key": "say-it-another-way"
+    },
+    {
+      "date": "2026-10-28",
+      "type": "spellingbee",
+      "title_key": "round-and-round"
     }
   ]
 }

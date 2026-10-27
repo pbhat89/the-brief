@@ -4037,3 +4037,40 @@ is empty until the first run.
 2026-10-27	Nearly half of reef-building coral species now face an elevated extinction risk	7cda5c76	coral reefs,extinction,iucn,climate
 2026-10-27	An AI trained on four million fossils suggests three 'big five' extinctions were gradual	743505d9	ai,fossils,mass extinction,paleontology
 2026-10-27	A spectacular feathered-dinosaur fossil shows flight evolved more than once	10a929eb	feathered dinosaur,fossil,flight,china
+2026-10-28	Tan See Leng unveils energy roadmap: five new power plants by 2031	b742b644	Tan See Leng,Singapore,SIEW,power plants
+2026-10-28	PAP elects its 39th Central Executive Committee at biennial conference	c7be79c0	PAP,Central Executive Committee,Chee Hong Tat,Singapore
+2026-10-28	German Chancellor Merz visits Singapore, eyes National Service lessons for Germany	98478303	Friedrich Merz,Germany,Singapore,Lawrence Wong
+2026-10-28	Singapore and Indonesia to set up a joint haze task force	24a09e19	Singapore,Indonesia,haze,task force
+2026-10-28	Woman, 25, dies after Amoy Street drink-driving crash; driver investigated	d42c73a2	Amoy Street,Singapore,drink driving
+2026-10-28	Rahul Gandhi acquitted in 2018 defamation case over Amit Shah remarks	b74590a7	Rahul Gandhi,Amit Shah,Sultanpur,defamation
+2026-10-28	Cyclone Arnab nears landfall as Andhra Pradesh and Odisha go on red alert	02fa4cbc	Cyclone Arnab,Andhra Pradesh,Odisha,IMD
+2026-10-28	Amit Shah hails 'Operation Trident' as a Rs 100-crore hawala network is busted	759e8376	Amit Shah,Operation Trident,hawala,Assam
+2026-10-28	Centre eases GST rules for post-sale discounts, effective 1 November	bed4fdea	GST,CBIC,India,tax reform
+2026-10-28	Supreme Court orders Rs 25 lakh and CBI probe over Chhattisgarh custodial death	66bd334e	Supreme Court,Chhattisgarh,custodial death,CBI
+2026-10-28	Chris Brown given suspended prison sentence over London nightclub brawl	30d16046	Chris Brown,Southwark Crown Court,London
+2026-10-28	Two British men charged with assisting Iran over RAF Fairford incident	be04f7ff	RAF Fairford,Iran,United Kingdom,charges
+2026-10-28	UK minimum wage set for about 4% rise, with a slower increase for under-21s	70fa2ccb	minimum wage,Healey,United Kingdom,Budget
+2026-10-28	Update: Burnham to set out UK's next EU steps around Brussels summit	2f1a9816	Burnham,European Union,United Kingdom,Rayner
+2026-10-28	Update: Israeli election exit polls point to deadlock as Netanyahu's bloc shrinks	b4809f2a	Israel,election,Netanyahu,Eisenkot
+2026-10-28	Lula beats Flavio Bolsonaro in Brazil's presidential runoff	0ab84bdc	Lula,Flavio Bolsonaro,Brazil,election
+2026-10-28	Nordic leaders hold rare call with Putin as November peace talks firm up	c160ddb5	Stubb,Store,Putin,Ukraine
+2026-10-28	US Marine indicted over alleged murder of a woman in Okinawa	bb9acfe9	US Marine,Okinawa,Japan,indictment
+2026-10-28	Russia jails IT worker for 13 years for donating money to Ukraine	cb78d5c0	Russia,Ukraine,treason,court
+2026-10-28	Google DeepMind launches Genie 4 world model with audio and longer scenes	2cb05715	Google DeepMind,Genie 4,world model
+2026-10-28	Microsoft offers voluntary buyouts to about 60,000 employees to retool for AI	a1e93a21	Microsoft,buyouts,layoffs,AI
+2026-10-28	Bedrock Robotics raises $600 million for self-driving construction machines	aae692e8	Bedrock Robotics,CapitalG,funding,robotics
+2026-10-28	OpenAI and Anthropic say AI models produced proofs of a complexity conjecture	d38f3251	OpenAI,Anthropic,Exponential Time Hypothesis,AI
+2026-10-28	Japanese internet giant GMO says hackers posted stolen data and demanded a ransom	85b1174b	GMO Internet,Japan,ransomware,data breach
+2026-10-28	Boeing cuts its 2026 737 delivery target as the stock falls about 10%	b3f95959	Boeing,737,earnings,deliveries
+2026-10-28	DoorDash in advanced talks to buy Instacart parent for about $17 billion	560dc1e4	DoorDash,Instacart,Maplebear,acquisition
+2026-10-28	Coca-Cola beats third-quarter estimates and raises its full-year outlook	81e30543	Coca-Cola,earnings,revenue
+2026-10-28	PayPal misses on third-quarter revenue but lifts its full-year profit guidance	183019d5	PayPal,earnings,guidance
+2026-10-28	SoFi jumps after a third-quarter beat and raised full-year guidance	e74327f2	SoFi,earnings,guidance
+2026-10-28	🏏 India clinch the T20I series 3-0 as Abhishek Sharma hits a 35-ball century	66ef5cd3	India,New Zealand,Abhishek Sharma,T20I
+2026-10-28	🏎️ Verstappen, Leclerc and Norris are out of the 2026 F1 title race	d14c71ea	Formula 1,Antonelli,Verstappen,title race
+2026-10-28	🏎️ Mercedes can seal the Constructors' title at this weekend's Mexico City Grand Prix	1336817b	Mercedes,Ferrari,Formula 1,Mexico City Grand Prix
+2026-10-28	🎾 De Minaur fights back from a set down to win his Vienna opener	cbea91ab	de Minaur,Machac,Vienna,ATP
+2026-10-28	Fossils in China reveal the first fully marine amphibian, 237 million years old	c2e36ca2	amphibian,fossil,China,Triassic
+2026-10-28	Rubin Observatory flags a possible sixth dwarf planet beyond Neptune	40765aa9	Rubin Observatory,dwarf planet,2026 ED138,Neptune
+2026-10-28	Perseverance measures clingy Martian dust to help design safer spacesuits	a7cf5401	Perseverance,Mars,dust,spacesuits
+2026-10-28	Flickering brain signals may reveal when the brain becomes consciously aware	944ca965	consciousness,brain,Doris Tsao,neuroscience
