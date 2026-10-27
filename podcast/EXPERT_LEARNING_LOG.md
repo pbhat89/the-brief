@@ -91,3 +91,7 @@ Andrew Ng’s evergreen workflow trace-localisation lesson (source dated 22 Octo
 ## 27 October 2026 · Confirmed use
 
 Naval’s evergreen 31 March 2019 complementary building-and-communication lesson was included in the verified, accepted combined edition. The AI-prototype explanation is explicitly editorial. Only this concept gains a narrated use; all previous entries and history gaps remain preserved.
+
+## 28 October 2026 · Confirmed use
+
+Karpathy’s evergreen 25 April 2019 human-baseline and annotation-consistency lesson was included in the verified, accepted combined edition. The customer-message classification exercise is an editorial application, not a quotation or a performance ceiling. Only this concept gains a narrated use; all prior concepts and historical gaps remain preserved.

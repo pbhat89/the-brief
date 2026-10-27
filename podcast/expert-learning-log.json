@@ -517,11 +517,18 @@
       "takeaway": "Karpathy recommends checking interpretable metrics against human accuracy; alternatively, label test examples twice and compare the annotations.",
       "editorial_application": "Repeat a small customer-message classification task blind to previous answers, inspect inconsistent decisions, and clarify the grading rubric before comparing model versions. This is editorial application.",
       "caveat": "Human repeatability is neither a universal performance ceiling nor an excuse for model errors. Distinct from prior raw-data inspection, tiny-batch pipeline wiring and random-search lessons. Available prior-topic records checked; incomplete-import/history caveat remains.",
-      "status": "researched_candidate",
-      "dedup_review": "reviewed_no_match",
-      "last_used": null,
-      "last_narrated": null,
-      "uses": []
+      "status": "narrated",
+      "dedup_review": "covered",
+      "last_used": "2026-10-28",
+      "last_narrated": "2026-10-28",
+      "uses": [
+        {
+          "date": "2026-10-28",
+          "channel": "podcast",
+          "public_evidence_url": "https://pbhat89.github.io/the-brief/podcast/reports/2026-10-28.html",
+          "confirmation": "Measured final narration contains the source-backed evergreen human-baseline lesson; live publication and accepted combined delivery verified. The customer-message classification example is editorial."
+        }
+      ]
     }
   ]
 }

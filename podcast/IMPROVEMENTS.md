@@ -176,3 +176,9 @@ Observed: checking Big Technology YouTube separately from RSS found a new interv
 Verified correction: RSS dates ending `-0000` were parsed as timezone-naive by the date library. Preserve the raw feed value and convert its UTC semantics explicitly before the source audit; do not blindly append a timezone to unrelated naive timestamps. A post's edited timestamp was also separated from its original publication timestamp.
 
 Proposed next bounded experiment: prioritize substantive pending originals and compare independent episode surfaces before increasing capture volume. Success means source-backed disposition of pending items, not just a larger attempt count. Full-window cursors must remain unchanged without complete traversal evidence.
+
+### Verified production lesson · 28 October 2026
+
+A preliminary render could outlive a shell-level process check in a separate tool session. Reconcile each recorded session explicitly, then perform one isolated cached rebuild and bind the final audio to the frozen-input and pronunciation-version hashes. This was completed before publication; earlier outputs were not uploaded. Keep this as a bounded production safeguard, not a change to the requested editorial structure.
+
+Acronym inspection found that a spaced letter could be reduced to an article by the stock G2P. Explicit pronunciation entries and versioned cache keys corrected the affected tokens; measured decode and loudness checks passed afterward. Continue inspecting emitted acronyms before upload. The ending remained brief, and the episode was not padded to reach the nominal duration.
