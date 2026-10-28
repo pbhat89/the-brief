@@ -2,7 +2,7 @@
   "version": 1,
   "timezone": "Asia/Singapore",
   "daily_limit": 1,
-  "updated_at": "2026-10-27T23:06:25.188701+00:00",
+  "updated_at": "2026-10-28T23:14:26.713721+00:00",
   "catchup": {
     "initialized_at": "2026-10-19T00:21:00Z",
     "limit": 3,
@@ -315,6 +315,83 @@
       },
       "status": "skip",
       "status_reason": "Original show-transition announcement rather than a substantive technical/practical learning episode. Host describes new role, proposed handoff and temporary pause without fixed return date. Not summarized or delivered.",
+      "publication_id": null
+    },
+    {
+      "episode_id": "big-technology:youtube:iy1PwZxFA7U",
+      "show": "big-technology",
+      "title": "How To Take Enterprise AI Pilots To Production — With Russell Jukes",
+      "published_at": "2026-10-27T17:41:02Z",
+      "source_url": "https://www.youtube.com/watch?v=iy1PwZxFA7U",
+      "aliases": [
+        "youtube:iy1PwZxFA7U",
+        "https://www.youtube.com/watch?v=iy1PwZxFA7U",
+        "https://www.usetranscribe.io/yt/iy1PwZxFA7U/enterprise-ai-production"
+      ],
+      "classification": {
+        "original": true,
+        "substantive": true,
+        "replay": false,
+        "promotional": false,
+        "beginner_series": false
+      },
+      "transcript": {
+        "status": "retrieved",
+        "body_retrieved": true,
+        "source_url": "https://www.usetranscribe.io/yt/iy1PwZxFA7U/enterprise-ai-production",
+        "provenance": "third-party-transcription",
+        "checked_at": "2026-10-28T23:10:01.459585+00:00",
+        "access_note": "Sponsored Brand Spotlight interview with substantive practical learning, not a generic beginner tutorial or replay. Actual third-party transcript read at specified segments; not publisher-approved, original audio not independently listened to. Names/title checked against official channel and dated publisher article. No claimed DXC metrics, product efficacy or uncertain numerical quotations used. Reviewed23:01–27:25; supporting00:00–04:42,27:53–31:31,46:51–47:48. Original publisher guideOct27links exact video; official publication17:41:02UTC. Sponsored interview is substantive, not a product promotion recap."
+      },
+      "dedup_review": {
+        "status": "distinct_contribution",
+        "story_keys": [
+          "bigtech-20261027-fluency-not-adoption"
+        ],
+        "contribution": "No matching fluency-versus-adoption learning concept in19delivered records, all current expert/podcast ledgers, companion reports or archives. Distinct from prior pilot-capability implementation, individual productivity news and trace error-analysis.",
+        "reviewed_at": "2026-10-28T23:10:01.459585+00:00"
+      },
+      "status": "pending",
+      "status_reason": null,
+      "publication_id": null
+    },
+    {
+      "episode_id": "big-technology:d5724726-d2d4-11f1-99be-4729d228ac37",
+      "show": "big-technology",
+      "title": "This AI Expert Argues We're Underestimating AI's Productivity Impact — With Ethan Mollick",
+      "published_at": "2026-10-25T23:00:10Z",
+      "source_url": "https://www.youtube.com/watch?v=Xoj0GGu0-aw",
+      "aliases": [
+        "rss:d5724726-d2d4-11f1-99be-4729d228ac37",
+        "youtube:Xoj0GGu0-aw",
+        "https://www.youtube.com/watch?v=Xoj0GGu0-aw",
+        "https://podscripts.co/podcasts/big-technology-podcast/this-ai-expert-argues-were-underestimating-ais-productivity-impact-with-ethan-mollick"
+      ],
+      "classification": {
+        "original": true,
+        "substantive": true,
+        "replay": false,
+        "promotional": false,
+        "beginner_series": false
+      },
+      "transcript": {
+        "status": "retrieved",
+        "body_retrieved": true,
+        "source_url": "https://podscripts.co/podcasts/big-technology-podcast/this-ai-expert-argues-were-underestimating-ais-productivity-impact-with-ethan-mollick",
+        "provenance": "third-party-transcription",
+        "checked_at": "2026-10-28T23:10:01.459585+00:00",
+        "access_note": "Actual third-party transcript retrieved and selected passages read; automatic transcription has name/model/numeric errors. Guest name and episode identity cross-checked against official channel and RSS. No uncertain numeric claims, direct quotations or unverified study statistics included. Original audio not independently listened to. Sponsored Jukes candidate remains unresolved, not silently treated as fully reviewed."
+      },
+      "dedup_review": {
+        "status": "distinct_contribution",
+        "story_keys": [
+          "bigtech-20261025-individual-output-organisational-throughput"
+        ],
+        "contribution": "No prior Mollick episode or underlying organisational-throughput learning recap in19delivered history records, current episode/expert logs, public companion reports or upstream archives. Earlier compute capacity bottlenecks and coding-review news are distinct; no repeated news headline or numeric findings used.",
+        "reviewed_at": "2026-10-28T23:10:01.459585+00:00"
+      },
+      "status": "deferred",
+      "status_reason": "Actual original premiere predates already delivered Primack Oct26; later RSS distribution is not a newer original. Latest-only prohibits backfill.",
       "publication_id": null
     }
   ],

@@ -1,0 +1,916 @@
+{
+  "edition": "2026-10-29",
+  "research_cutoff_sgt": "2026-10-29T07:15:24.453016+08:00",
+  "upstream": {
+    "date": "2026-10-29",
+    "json_url": "https://pbhat89.github.io/the-brief/archive/2026-10-29.json",
+    "html_url": "https://pbhat89.github.io/the-brief/archive/2026-10-29.html",
+    "verified_same_day": true,
+    "item_count": 32
+  },
+  "news_items": [
+    {
+      "event_id": "rts-crossborder-emergency-exercise-20261027",
+      "section": "singapore",
+      "headline": "Singapore and Malaysia test emergency readiness for the RTS Link.",
+      "context": "The cross-border exercise covered firefighting, medical triage and evacuation ahead of passenger services.",
+      "sources": [
+        "https://www.mha.gov.sg/media-room/newsroom/malaysia-and-singapore-reaffirm-commitment-to-bilateral-security-cooperation-through-johor-bahru-singapore-rapid-transit-system-rts-link-joint-cross-border-emergency-response-exercise/"
+      ],
+      "source_date": "2026-10-28",
+      "evidence_caveat": null
+    },
+    {
+      "event_id": "skillsfuture-midcareer-takeup-june2026-reported1028",
+      "section": "singapore",
+      "headline": "Singapore reports stronger take-up of mid-career training support.",
+      "context": "By June, about eighty thousand people had used the mid-career credit and more than eleven thousand had received a training allowance.",
+      "sources": [
+        "https://www.mom.gov.sg/newsroom/speeches/2026/1028-skillsfuture-fellowships-and-employer-awards-2026"
+      ],
+      "source_date": "2026-10-28",
+      "evidence_caveat": "October 28 speech reports cumulative figures to June 30, not new enrolments this month."
+    },
+    {
+      "event_id": "sg-us-asean-grid-phase2-preliminary-20261028",
+      "section": "singapore",
+      "headline": "Singapore and the United States publish preliminary findings on regional power connections.",
+      "context": "The study focuses on cross-border rules and financing for an ASEAN electricity grid, with a final report due early next year.",
+      "sources": [
+        "https://www.meti.gov.sg/newsroom/singapore---united-states-6th-joint-statement-on-energy-cooperation/"
+      ],
+      "source_date": "2026-10-28",
+      "evidence_caveat": "Preliminary study findings, not a newly operating grid."
+    },
+    {
+      "event_id": "cyclone-arnab-landfall-deaths-20261028",
+      "section": "india",
+      "headline": "Cyclone Arnab makes landfall in Andhra Pradesh.",
+      "context": "Officials reported at least three deaths after the storm crossed the coast, with large-scale evacuations already carried out.",
+      "sources": [
+        "https://www.ndtv.com/india-news/cyclone-arnab-brings-heavy-rain-weather-body-warns-of-winds-up-to-140-kmph-12246086?pfrom=home-ndtv_topscroll",
+        "https://mausam.imd.gov.in/Forecast/seaarea_bulletin_new.php?id=0",
+        "https://www.aljazeera.com/news/2026/10/28/cyclone-arnab-makes-landfall-in-indias-andhra-pradesh"
+      ],
+      "source_date": "2026-10-28",
+      "evidence_caveat": "Material follow-up to landfall forecast: actual landfall and reported deaths. IMD forecast weakening must not be described as observed."
+    },
+    {
+      "event_id": "india-da-dr-increase-63-20261028",
+      "section": "india",
+      "headline": "India raises the dearness allowance for central-government staff and pensioners.",
+      "context": "The Cabinet approved a three-percentage-point increase to sixty-three percent, effective from July.",
+      "sources": [
+        "https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2329484&lang=1&reg=1"
+      ],
+      "source_date": "2026-10-28",
+      "evidence_caveat": null
+    },
+    {
+      "event_id": "india-viksit-gram-swaraj-approval-20261028",
+      "section": "india",
+      "headline": "A new village-governance programme wins Cabinet approval.",
+      "context": "The five-year Viksit Gram Swaraj scheme provides about seventy-four hundred crore rupees for local planning, training and digital accountability.",
+      "sources": [
+        "https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2329483&lang=1&reg=3"
+      ],
+      "source_date": "2026-10-28",
+      "evidence_caveat": "Approved outlay is 7395.55 crore through FY2030–31; benefits are prospective."
+    },
+    {
+      "event_id": "india-manufacturing-container-sports-20261028",
+      "section": "india",
+      "headline": "The Cabinet backs domestic container and sports-goods manufacturing.",
+      "context": "The approved schemes allocate ten thousand crore rupees to containers and about eighteen hundred and fifty-seven crore to sports equipment.",
+      "sources": [
+        "https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2329488&lang=1&reg=3",
+        "https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2329481&lang=1&reg=1"
+      ],
+      "source_date": "2026-10-28",
+      "evidence_caveat": "Distinct schemes with different time horizons; allocations, not measured manufacturing output."
+    },
+    {
+      "event_id": "modi-congress-paper-ballot-exchange-20261028",
+      "section": "india",
+      "headline": "Modi and Congress clash over paper-ballot election results.",
+      "context": "After Modi highlighted Congress losses in legislative-council contests, Congress challenged him to use paper ballots in future national and assembly elections.",
+      "sources": [
+        "https://www.narendramodi.in/batao-28-seats-4-big-states-zero-for-congress-610059",
+        "https://www.newindianexpress.com/preview/story/1oHeJcT4RkDR0mBEBj_JT66jg7cBGC_oCG2pYVb1UUHdE8XpUP-G0_mermJHVn_O"
+      ],
+      "source_date": "2026-10-28",
+      "evidence_caveat": "Attributed political claims and response; no endorsement of election-fraud allegations. Congress response verified through indexed full publisher text; direct open failed."
+    },
+    {
+      "event_id": "uk-budget-bank-surcharge-households-20261028",
+      "section": "world",
+      "headline": "Britain’s Budget raises the bank surcharge and offers household energy relief.",
+      "context": "The surcharge will rise from three to six percent for fifteen months, while eligible English households receive a hundred-pound council-tax rebate.",
+      "sources": [
+        "https://www.gov.uk/government/publications/budget-2026-document/budget-2026-html",
+        "https://www.gov.uk/government/news/what-the-autumn-budget-2026-means-for-your-energy-bills"
+      ],
+      "source_date": "2026-10-28",
+      "evidence_caveat": "Bank surcharge starts January 2027; rebate targets council-tax bands A–D. Consolidates overlapping upstream budget stories."
+    },
+    {
+      "event_id": "uk-budget-defence-ukraine-20261028",
+      "section": "world",
+      "headline": "The same Budget commits further support to defence and Ukraine.",
+      "context": "It completes funding for the fifteen-billion-pound defence plan and adds over ten billion pounds of support for Ukraine, including guarantees and export credit.",
+      "sources": [
+        "https://www.gov.uk/government/publications/budget-2026-document/budget-2026-html"
+      ],
+      "source_date": "2026-10-28",
+      "evidence_caveat": "The £15bn plan was announced in June; this Budget confirms the remaining £4.7bn funding. Ukraine support includes guarantees and export credit, not only cash aid."
+    },
+    {
+      "event_id": "israel-election-856pct-count-20261028",
+      "section": "world",
+      "headline": "Israel’s partial election count leaves both main blocs short of a majority.",
+      "context": "With more than eighty-five percent counted, Netanyahu’s bloc had fifty-three seats and Eisenkot’s forty-eight, against sixty-one needed to govern.",
+      "sources": [
+        "https://www.timesofisrael.com/liveblog_entry/with-over-85-of-votes-counted-pro-netanyahu-bloc-gets-53-seats-eisenkot-led-bloc-at-48-and-arab-parties-have-19/",
+        "https://www.afp.com/en/israel-president-urges-against-new-vote-despite-inconclusive-result"
+      ],
+      "source_date": "2026-10-28",
+      "evidence_caveat": "Partial count, not final result. New fact versus previously delivered exit polls; snapshot October28 15:07 local."
+    },
+    {
+      "event_id": "fed-rate-hold-oct2026",
+      "section": "business",
+      "headline": "The Federal Reserve holds US interest rates.",
+      "context": "The ten-to-two vote kept the target range at three-point-seven-five to four percent; both dissenters preferred a quarter-point increase.",
+      "sources": [
+        "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
+      ],
+      "source_date": "2026-10-28",
+      "evidence_caveat": "Released October28 14:00EDT = October29 02:00Singapore. No claim of a promised December hike."
+    },
+    {
+      "event_id": "microsoft-fy27q1-earnings",
+      "section": "business",
+      "headline": "Microsoft reports strong cloud growth.",
+      "context": "Quarterly revenue reached ninety-two-point-three billion dollars, with Azure revenue up forty-eight percent.",
+      "sources": [
+        "https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast"
+      ],
+      "source_date": "2026-10-28",
+      "evidence_caveat": null
+    },
+    {
+      "event_id": "alphabet-q32026-earnings",
+      "section": "business",
+      "headline": "Alphabet’s cloud revenue more than doubles.",
+      "context": "Google Cloud revenue reached thirty-point-seven billion dollars, up one hundred and three percent, although an equity-investment loss weighed on group profit.",
+      "sources": [
+        "https://www.marketscreener.com/news/alphabet-2026-q3-earnings-press-release-ce785cd3d981f42c"
+      ],
+      "source_date": "2026-10-28",
+      "evidence_caveat": "Company-issued release syndicated by Publicnow/MarketScreener; direct investor site shell did not expose the release. Corrects upstream approximately90% to103%."
+    },
+    {
+      "event_id": "ups-q32026-earnings",
+      "section": "business",
+      "headline": "UPS raises its full-year outlook.",
+      "context": "The delivery company reported twenty-two-point-nine billion dollars in quarterly revenue and lifted its revenue and adjusted-earnings guidance.",
+      "sources": [
+        "https://investors.ups.com/news-events/press-releases/detail/2172/ups-releases-3q-2026-earnings"
+      ],
+      "source_date": "2026-10-27",
+      "evidence_caveat": "Unseen catch-up item published October27, not overnight."
+    },
+    {
+      "event_id": "policyme-ai-underwriting-copilot-20261028",
+      "section": "business",
+      "headline": "PolicyMe introduces an AI copilot for complex life-insurance underwriting.",
+      "context": "The company reports a fifty-nine percent reduction in turnaround time, while underwriters retain final approval; the result has not been independently verified.",
+      "sources": [
+        "https://finance.yahoo.com/technology/ai/articles/policyme-launches-house-ai-copilot-120000118.html"
+      ],
+      "source_date": "2026-10-28",
+      "evidence_caveat": "Company-issued BusinessWire announcement, not an independent efficacy study. No published sample size/control methodology. Practical relevance: document review and draft explanations, not autonomous acceptance."
+    },
+    {
+      "event_id": "mexico-fp1-tsolov-slater-debuts-20261028",
+      "section": "sports",
+      "headline": "Formula One’s Mexico practice gives the next generation track time.",
+      "context": "Nikola Tsolov and Freddie Slater are set for their first Formula One practice outings.",
+      "sources": [
+        "https://www.formula1.com/en/latest/article/its-race-week-5-storylines-were-excited-about-ahead-of-the-2026-mexico-city-grand-prix.3qhXiCGvBjL6deUeE7qpvT"
+      ],
+      "source_date": "2026-10-28",
+      "evidence_caveat": "Upcoming practice, not a completed session; official F1 source confirms the two debuts."
+    },
+    {
+      "event_id": "vienna-alcaraz-zverev-openers-20261027",
+      "section": "sports",
+      "headline": "Alcaraz and Zverev win their Vienna openers.",
+      "context": "Zverev saved four match points against Martin Landaluce, while Alcaraz beat Karen Khachanov in straight sets.",
+      "sources": [
+        "https://www.freemalaysiatoday.com/category/sports/2026/10/28/alcaraz-and-zverev-win-vienna-openers"
+      ],
+      "source_date": "2026-10-28",
+      "evidence_caveat": "AFP original reporting syndicated by FMT. Published October28 about October27 matches; unseen catch-up, not a verified quarter-final update."
+    },
+    {
+      "event_id": "hera-first-resolves-binary-20261027",
+      "section": "science",
+      "headline": "Europe’s Hera probe resolves its two asteroid targets separately.",
+      "context": "New images distinguish Didymos from its smaller companion Dimorphos as the spacecraft approaches the system.",
+      "sources": [
+        "https://www.esa.int/Space_Safety/Hera/First_light_Hera_resolves_two_asteroids_instead_of_one"
+      ],
+      "source_date": "2026-10-27",
+      "evidence_caveat": "Unseen October27 publication; distinct from previously covered braking manoeuvre. Avoid inconsistent weekday/image-date wording in source."
+    },
+    {
+      "event_id": "cte-deceased-nfl-estimate-20261028",
+      "section": "science",
+      "headline": "New research estimates widespread CTE in a cohort of deceased NFL players.",
+      "context": "The model estimated signs in about three-quarters of former players who died from 2008 to 2023, not the risk faced by today’s players.",
+      "sources": [
+        "https://www.bu.edu/articles/2026/nfl-brain-disease-boston-study/"
+      ],
+      "source_date": "2026-10-28",
+      "evidence_caveat": "Model-based adjusted estimate74.5%, not autopsy confirmation in every member of cohort; 387 donated brains,362 positive. Do not generalize to living players."
+    },
+    {
+      "event_id": "singapore-haze-independent-assessors-20261028",
+      "section": "singapore",
+      "headline": "Singapore demands independent assessments from companies in its haze inquiry.",
+      "context": "After meeting company leaders, Grace Fu said they must engage assessors at their own expense; proposed legal amendments will go before Parliament.",
+      "sources": [
+        "https://www.mse.gov.sg/latest-news/media-doorstop-post-meeting-with-companies---ms-grace-fu/"
+      ],
+      "source_date": "2026-10-28",
+      "evidence_caveat": "Material new meeting and assessor framework, distinct from earlier notices and expert-panel announcement. Companies are potentially connected; no guilt finding. Amendments not enacted. Haze does not count toward substantive local variety."
+    },
+    {
+      "event_id": "netherlands-ukraine-aid-20261028",
+      "section": "world",
+      "headline": "The Netherlands pledges fresh military and civilian support for Ukraine.",
+      "context": "The announced packages provide five hundred million euros in military aid and one-point-two billion euros for needs including energy, water, health care and demining.",
+      "sources": [
+        "https://www.president.gov.ua/en/news/niderlandi-vidilyayut-500-miljoniv-yevro-vijskovoyi-dopomogi-107065"
+      ],
+      "source_date": "2026-10-28",
+      "evidence_caveat": "Official Ukrainian presidency account of October28 meeting. New pledges, not confirmation all funds disbursed. The same source says talks expected by November10, not confirmed November6–10 dates."
+    },
+    {
+      "event_id": "jio-listing-close-20261028",
+      "section": "india",
+      "headline": "Jio Platforms ends its stock-market debut well above its issue price.",
+      "context": "The shares closed at fourteen hundred and nineteen rupees, nearly twenty-seven percent above the IPO price and four-and-a-half percent above their opening level.",
+      "sources": [
+        "https://www.ndtvprofit.com/markets/jio-platforms-ipo-listing-live-updates-jio-share-price-debut-on-nse-bse-today-gmp-listing-gains-12245930",
+        "https://inshorts.com/en/read/business"
+      ],
+      "source_date": "2026-10-28",
+      "evidence_caveat": "Material actual first-day closing price, distinct from prior IPO opening/subscription/listing expectation. Original NDTVProfit full text retrieved directly; direct exchange closing bulletin not verified. Percentages have different denominators, not27percent intraday."
+    },
+    {
+      "event_id": "apple-touch-macbook-pro-20261028",
+      "section": "business",
+      "headline": "Apple unveils a touchscreen MacBook Pro.",
+      "context": "The new OLED-display models use M five Pro and Max chips, with preorders already open and availability from November sixth.",
+      "source_date": "2026-10-28",
+      "sources": [
+        "https://www.apple.com/newsroom/2026/10/apple-unveils-groundbreaking-macbook-pro-with-proled-xdr-display/"
+      ],
+      "evidence_caveat": "Corrects upstream pre-order date October30 to official October28; M6 refresh was separate."
+    },
+    {
+      "event_id": "simplismart-seriesb-20261027",
+      "section": "india",
+      "headline": "Nvidia joins a fourteen-million-US-dollar funding round for India’s Simplismart.",
+      "context": "Dallas Venture Capital led the Series B for the AI-inference software company, alongside Accel, Shastra and Micromax.",
+      "source_date": "2026-10-27",
+      "sources": [
+        "https://simplismart.ai/blog/nvidia-backs-our-14m-series-b"
+      ],
+      "evidence_caveat": "Company announcement; omit unverified valuation and independently untested efficiency claims."
+    },
+    {
+      "event_id": "nvidia-amd-meta-investment-20261027",
+      "section": "business",
+      "headline": "Nvidia and A M D commit four billion US dollars to Meta’s equity offering.",
+      "context": "The chipmakers announced three billion and one billion dollars respectively as they deepen AI-infrastructure partnerships with Meta.",
+      "source_date": "2026-10-27",
+      "sources": [
+        "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Meta-to-Expand-Collaboration-on-Muse-and-Muse-Family-of-Models-Amid-Robust-Growth/default.aspx",
+        "https://mfn.se/one/a/advanced-micro-devices/amd-and-meta-advance-strategic-partnership-to-power-metas-superintelligence-infrastructure-e53275de"
+      ],
+      "evidence_caveat": "Commitments, not verified completed investment. AMD company-issued GlobeNewswire release syndicated by MFN; omit upstream total capital-raise figure."
+    },
+    {
+      "event_id": "google-gemini4-carbon-20261028",
+      "rank": 1,
+      "handle": "GoogleDeepMind",
+      "post_url": "https://x.com/GoogleDeepMind/status/2115489356437651654",
+      "post_timestamp_sgt": "2026-10-29T01:02:21+08:00",
+      "timestamp_evidence": "Original created_at_ms in public X document; visible post time cross-check; not retrieval or search-index date.",
+      "headline": "Google announces Gemini four Carbon.",
+      "context": "It leads the updated Artificial Analysis intelligence index, but access initially goes to selected cyber defenders and trusted partners, not the general public.",
+      "sources": [
+        "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+        "https://x.com/ArtificialAnlys/status/2115494553780367384",
+        "https://x.com/GoogleDeepMind/status/2115489356437651654"
+      ],
+      "source_date": "2026-10-28",
+      "evidence_caveat": "Benchmark ranking is dated and not universal task superiority; Google rollout is restricted.",
+      "section": "ai"
+    },
+    {
+      "event_id": "nvidia-nemotron35-transcribe-20261028",
+      "rank": 2,
+      "handle": "kimmonismus",
+      "post_url": "https://x.com/kimmonismus/status/2115545432243982637",
+      "post_timestamp_sgt": "2026-10-29T04:45:10+08:00",
+      "timestamp_evidence": "Original created_at_ms in public X document; visible post time cross-check; not retrieval or search-index date.",
+      "headline": "Nvidia releases an open-weight speech model for forty languages.",
+      "context": "Nemotron three-point-five Transcribe handles recordings up to an hour, including transcription and speaker labels; it is for recorded audio, not live streaming.",
+      "sources": [
+        "https://research.nvidia.com/labs/nemotron/NVIDIA-Nemotron-3.5-Transcribe/",
+        "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
+        "https://x.com/kimmonismus/status/2115545432243982637"
+      ],
+      "source_date": "2026-10-28",
+      "evidence_caveat": "NVIDIA model card confirms release date and capabilities. Speaker labels do not establish real-world identity; license OpenMDW1.1.",
+      "section": "ai"
+    },
+    {
+      "event_id": "github-copilot-fusion-ga-20261028",
+      "rank": 3,
+      "handle": "satyanadella",
+      "post_url": "https://x.com/satyanadella/status/2115490856685990244",
+      "post_timestamp_sgt": "2026-10-29T01:08:18+08:00",
+      "timestamp_evidence": "Original created_at_ms in public X document; visible post time cross-check; not retrieval or search-index date.",
+      "headline": "GitHub makes Copilot Fusion generally available.",
+      "context": "It selects and combines models for each coding task, with administrator controls; its reported speed and cost gains come from specific benchmark comparisons.",
+      "sources": [
+        "https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion/",
+        "https://x.com/satyanadella/status/2115490856685990244"
+      ],
+      "source_date": "2026-10-28",
+      "evidence_caveat": "GA across supported clients; local-model routing is separately experimental. Benchmark performance not universal savings.",
+      "section": "ai"
+    },
+    {
+      "event_id": "cartesia-hnet-byte-scaling-20261028",
+      "rank": 4,
+      "handle": "willdepue",
+      "post_url": "https://x.com/willdepue/status/2115526812306719142",
+      "post_timestamp_sgt": "2026-10-29T03:31:11+08:00",
+      "timestamp_evidence": "Original created_at_ms in public X document; visible post time cross-check; not retrieval or search-index date.",
+      "headline": "Cartesia reports new results for models that learn directly from raw bytes.",
+      "context": "Its hierarchical networks learn how to group the data instead of using a fixed tokenizer, with efficiency gains in controlled experiments rather than a proven replacement for every frontier model.",
+      "sources": [
+        "https://cartesia.ai/blog/from-tokens-to-bytes-part-1",
+        "https://cartesia.ai/blog/from-tokens-to-bytes-part-2",
+        "https://x.com/_albertgu/status/2115502110578290900",
+        "https://x.com/willdepue/status/2115526812306719142"
+      ],
+      "source_date": "2026-10-28",
+      "evidence_caveat": "Original research announcement Oct28; controlled scaling and matched-baseline results, not independently replicated here. Updated architecture is planned for release, not claimed generally released.",
+      "section": "ai"
+    },
+    {
+      "event_id": "particle1-token-efficiency-20261028",
+      "rank": 5,
+      "handle": "Suhail",
+      "post_url": "https://x.com/Suhail/status/2115497949421883648",
+      "post_timestamp_sgt": "2026-10-29T01:36:29+08:00",
+      "timestamp_evidence": "Original created_at_ms in public X document; visible post time cross-check; not retrieval or search-index date.",
+      "headline": "Particle launches a coding model focused on using fewer tokens.",
+      "context": "Built on DeepSeek V four-point-one Flash, Particle one used twenty-eight to fifty-two percent fewer output tokens across four company-run benchmarks, with comparable pass rates.",
+      "sources": [
+        "https://particle.ai/blog/introducing-particle-1",
+        "https://x.com/Suhail/status/2115497949421883648"
+      ],
+      "source_date": "2026-10-28",
+      "evidence_caveat": "Company-run benchmark; pass rates within base confidence intervals. API available, no claim of released weights or universal savings.",
+      "section": "ai"
+    },
+    {
+      "event_id": "meta-muse-singapore-20261028",
+      "rank": 6,
+      "handle": "dps",
+      "post_url": "https://x.com/dps/status/2115302197609238716",
+      "post_timestamp_sgt": "2026-10-28T12:38:38+08:00",
+      "timestamp_evidence": "Original created_at_ms in public X document; visible post time cross-check; not retrieval or search-index date.",
+      "headline": "Meta brings Muse to Singapore.",
+      "context": "The company announced local availability of its personal AI assistant; this is a new regional rollout, not a new model release.",
+      "sources": [
+        "https://x.com/Muse/status/2115242955812548877",
+        "https://x.com/dps/status/2115302197609238716"
+      ],
+      "source_date": "2026-10-28",
+      "evidence_caveat": "Company announcement directly read; availability not tested with an account. Distinct from earlier model releases and sharing-security fix.",
+      "section": "ai"
+    },
+    {
+      "event_id": "perplexity-computer-voice-webmac-20261028",
+      "rank": 7,
+      "handle": "AravSrinivas",
+      "post_url": "https://x.com/AravSrinivas/status/2115476775505658135",
+      "post_timestamp_sgt": "2026-10-29T00:12:21+08:00",
+      "timestamp_evidence": "Original created_at_ms in public X document; visible post time cross-check; not retrieval or search-index date.",
+      "headline": "Perplexity rolls out a new voice mode for Computer.",
+      "context": "Its chief executive says Pro and Max users can use it on the web and Mac apps to manage parallel work streams by voice.",
+      "sources": [
+        "https://x.com/AskPerplexity/status/2115471825031610611",
+        "https://x.com/AravSrinivas/status/2115476775505658135"
+      ],
+      "source_date": "2026-10-28",
+      "evidence_caveat": "Founder/publisher announced rollout, not independently tested. Distinct from earlier local mode, model routing and design-review updates.",
+      "section": "ai"
+    },
+    {
+      "event_id": "instinct-shoppay-nonshopify-20261028",
+      "rank": 8,
+      "handle": "noahrshinn",
+      "post_url": "https://x.com/noahrshinn/status/2115521853775388931",
+      "post_timestamp_sgt": "2026-10-29T03:11:29+08:00",
+      "timestamp_evidence": "Original created_at_ms in public X document; visible post time cross-check; not retrieval or search-index date.",
+      "headline": "Instinct expands Shop Pay checkout beyond Shopify stores.",
+      "context": "The company says users approve each purchase through Shop Pay and card details remain there; those security claims have not been independently tested here.",
+      "sources": [
+        "https://x.com/noahrshinn/status/2115521853775388931"
+      ],
+      "source_date": "2026-10-28",
+      "evidence_caveat": "Material new fact: non-Shopify checkout support, distinct from Oct14 Shopify shopping skill, Oct27 Link balance and Oct28 iMessage rollout.",
+      "section": "ai"
+    },
+    {
+      "event_id": "vercel-virtual-models-20261028",
+      "rank": 9,
+      "handle": "rauchg",
+      "post_url": "https://x.com/rauchg/status/2115573969369845855",
+      "post_timestamp_sgt": "2026-10-29T06:38:34+08:00",
+      "timestamp_evidence": "Original created_at_ms in public X document; visible post time cross-check; not retrieval or search-index date.",
+      "headline": "Vercel introduces virtual model identifiers for AI Gateway.",
+      "context": "Teams can change the underlying model and centrally enforce routing or data-retention settings without changing application code.",
+      "sources": [
+        "https://vercel.com/blog/ai-gateway-virtual-models",
+        "https://x.com/vercel/status/2115571121622073355",
+        "https://x.com/rauchg/status/2115573969369845855"
+      ],
+      "source_date": "2026-10-28",
+      "evidence_caveat": "Capabilities from publisher documentation, not independently tested; model-specific options still need review when changing providers.",
+      "section": "ai"
+    },
+    {
+      "event_id": "vercel-ci-beta-20261028",
+      "rank": 10,
+      "handle": "rauchg",
+      "post_url": "https://x.com/rauchg/status/2115539426684408300",
+      "post_timestamp_sgt": "2026-10-29T04:21:18+08:00",
+      "timestamp_evidence": "Original created_at_ms in public X document; visible post time cross-check; not retrieval or search-index date.",
+      "headline": "Vercel opens its new continuous-integration service in beta.",
+      "context": "It uses Turborepo to run only affected checks, with the company reporting two-to-six-times faster completion in its own repositories.",
+      "sources": [
+        "https://vercel.com/blog/introducing-vercel-ci",
+        "https://x.com/vercel/status/2115526935636021696",
+        "https://x.com/rauchg/status/2115539426684408300"
+      ],
+      "source_date": "2026-10-28",
+      "evidence_caveat": "Beta all plans. Internal speed measurements not a general guarantee; distinct from model routing announcement.",
+      "section": "ai"
+    }
+  ],
+  "conditions": {
+    "summary": "Expect thundery showers over many areas in the late morning and afternoon, with temperatures of twenty-four to thirty-two degrees. At seven this morning, the twenty-four-hour PSI was in the Moderate range across Singapore, while one-hour fine-particle readings were in the Normal band.",
+    "time_note": "Forecast issued 2026-10-29T05:41:00+08:00; PSI and PM2.5 observed 2026-10-29T07:00:00+08:00; feeds updated 2026-10-29T07:00:35+08:00 and 2026-10-29T07:00:35+08:00. The October28 advisory is distinct from current observations.",
+    "psi": {
+      "north": 72,
+      "south": 68,
+      "west": 77,
+      "east": 72,
+      "central": 71
+    },
+    "pm25": {
+      "north": 38,
+      "south": 33,
+      "west": 37,
+      "east": 32,
+      "central": 29
+    },
+    "sources": [
+      "https://www.weather.gov.sg/weather-forecast-24hrforecast/",
+      "https://api-open.data.gov.sg/v2/real-time/api/psi",
+      "https://api-open.data.gov.sg/v2/real-time/api/pm25",
+      "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-28-october-2026"
+    ]
+  },
+  "podcast_learning": {
+    "headline": "From AI access to practical fluency",
+    "context": "In the sponsored Big Technology interview, Russell Jukes distinguishes tool adoption from useful fluency, with role-specific learning and business ownership of value. Editorial application: assess whether people can complete and evaluate an approved sample task, rather than count logins.",
+    "sources": [
+      "https://www.youtube.com/watch?v=iy1PwZxFA7U",
+      "https://www.bigtechnology.com/p/the-big-technology-guide-to-enterprise",
+      "https://www.usetranscribe.io/yt/iy1PwZxFA7U/enterprise-ai-production"
+    ],
+    "source_date": "2026-10-27",
+    "original_published_at": "2026-10-27T17:41:02Z",
+    "uploaded_at": "2026-10-27T17:41:02Z",
+    "episode_id": "big-technology:youtube:iy1PwZxFA7U",
+    "transcript_provenance": "third-party-transcription",
+    "reviewed_segments": [
+      "00:00–04:42: opening identity and production framing",
+      "23:01–27:25: fluency rather than adoption, business ownership of value, role-specific timely training",
+      "27:53–31:31: production control and continuing testing context",
+      "46:51–47:48: sign-off and series context"
+    ],
+    "evidence_caveat": "Sponsored Brand Spotlight interview with substantive practical learning, not a generic beginner tutorial or replay. Actual third-party transcript read at specified segments; not publisher-approved, original audio not independently listened to. Names/title checked against official channel and dated publisher article. No claimed DXC metrics, product efficacy or uncertain numerical quotations used."
+  },
+  "expert_learning": {
+    "headline": "As leverage grows, judgment matters more",
+    "context": "Naval argues that leverage makes the consequences of judgment more significant. Editorial application: test a small sample, clarify approvals and set stop conditions before scaling automation.",
+    "sources": [
+      "https://nav.al/judgment"
+    ],
+    "source_date": "2019-04-29",
+    "concept_id": "leverage-amplifies-decision-consequences",
+    "classification": "evergreen",
+    "evidence_caveat": "Evergreen original contribution; the AI example and safeguards are editorial, not the expert’s prescription."
+  },
+  "interesting_fact": {
+    "headline": "Titan has lakes and seas of liquid hydrocarbons",
+    "context": "Saturn's moon Titan has lakes and seas of liquid methane and ethane, rather than liquid water.",
+    "sources": [
+      "https://science.nasa.gov/saturn/moons/titan/facts/"
+    ],
+    "source_date": null,
+    "event_id": "titan-liquid-hydrocarbon-lakes-seas",
+    "classification": "evergreen",
+    "evidence_caveat": "The original page date is not asserted. The upstream hummingbird fact repeats earlier coverage; its original HTML remains unchanged."
+  },
+  "upstream_checklist": [
+    {
+      "index": 0,
+      "headline": "Update: Singapore summons bosses of 10 firms as it widens its transboundary-haze probe",
+      "decision": "retained_corrected",
+      "reason": "Primary October28 ministerial statement verifies meeting and independent-assessor requirement; no guilt finding. Current air readings are Moderate, so upstream unhealthy characterization is not reused.",
+      "sources": [
+        "https://www.mse.gov.sg/latest-news/media-doorstop-post-meeting-with-companies---ms-grace-fu/"
+      ],
+      "event_id": "singapore-haze-independent-assessors-20261028",
+      "url": "https://www.scmp.com/week-asia/health-environment/article/3372479/not-find-scapegoats-singapore-ministers-summon-bosses-10-firms-over-haze"
+    },
+    {
+      "index": 1,
+      "headline": "Singapore presses gas suppliers to honour commitments after Indonesia cuts pipeline supply",
+      "decision": "stale",
+      "reason": "October25 report; no independently verified new gas-supply development after that date. Omit rather than relabel as overnight news.",
+      "sources": [
+        "https://www.scmp.com/news/asia/southeast-asia/article/3372048/singapore-tells-suppliers-honour-commitments-amid-indonesias-gas-cut"
+      ],
+      "url": "https://www.scmp.com/news/asia/southeast-asia/article/3372048/singapore-tells-suppliers-honour-commitments-amid-indonesias-gas-cut"
+    },
+    {
+      "index": 2,
+      "headline": "Haze-hit Singapore parents push for air-conditioning in schools",
+      "decision": "stale",
+      "reason": "October23 parental calls are not a new school policy; current official air readings differ. No new verified development.",
+      "sources": [
+        "https://www.scmp.com/week-asia/health-environment/article/3371115/haze-hit-singapore-parents-call-hong-kong-style-school-air-con"
+      ],
+      "url": "https://www.scmp.com/week-asia/health-environment/article/3371115/haze-hit-singapore-parents-call-hong-kong-style-school-air-con"
+    },
+    {
+      "index": 3,
+      "headline": "Elderly Chinese couple jailed in Singapore after overstaying about 19 years",
+      "decision": "stale",
+      "reason": "October22 sentencing article; husband hearing scheduled October29 is not a verified outcome. No fresh decision established.",
+      "sources": [
+        "https://mothership.sg/2026/10/chinese-couple-stayed-illegally-singapore/"
+      ],
+      "url": "https://mothership.sg/2026/10/chinese-couple-stayed-illegally-singapore/"
+    },
+    {
+      "index": 4,
+      "headline": "Update: Cyclone Arnab makes landfall in Andhra Pradesh, killing at least three",
+      "decision": "retained_verified",
+      "reason": "Actual landfall and reported deaths materially update the prior forecast. IMD forecast weakening is not reported as completed.",
+      "sources": [
+        "https://www.ndtv.com/india-news/cyclone-arnab-brings-heavy-rain-weather-body-warns-of-winds-up-to-140-kmph-12246086?pfrom=home-ndtv_topscroll",
+        "https://mausam.imd.gov.in/Forecast/seaarea_bulletin_new.php?id=0",
+        "https://www.aljazeera.com/news/2026/10/28/cyclone-arnab-makes-landfall-in-indias-andhra-pradesh"
+      ],
+      "event_id": "cyclone-arnab-landfall-deaths-20261028",
+      "url": "https://www.aljazeera.com/news/2026/10/28/cyclone-arnab-makes-landfall-in-indias-andhra-pradesh"
+    },
+    {
+      "index": 5,
+      "headline": "India's rupee stays under pressure near record lows as the RBI steps up its defence",
+      "decision": "duplicate",
+      "reason": "October16 currency forecast already archived October17/18/26 and previously covered; not a new exchange-rate observation.",
+      "sources": [
+        "https://www.cnbc.com/2026/10/16/india-rupee-rbi-dollar-iran-war.html"
+      ],
+      "url": "https://www.cnbc.com/2026/10/16/india-rupee-rbi-dollar-iran-war.html"
+    },
+    {
+      "index": 6,
+      "headline": "Healey's Autumn Budget taxes banks and gambling, cuts energy bills and lifts defence",
+      "decision": "retained_merged",
+      "reason": "Consolidated with bank surcharge/household relief and defence/Ukraine Budget items; official Treasury text used.",
+      "sources": [
+        "https://www.gov.uk/government/publications/budget-2026-document/budget-2026-html",
+        "https://www.gov.uk/government/news/what-the-autumn-budget-2026-means-for-your-energy-bills"
+      ],
+      "event_id": "uk-budget-bank-surcharge-households-20261028",
+      "url": "https://www.cnbc.com/2026/10/28/uk-autumn-budget-cost-living-defense-ai.html"
+    },
+    {
+      "index": 7,
+      "headline": "UK bank profit surcharge raised three points to 6% as gambling and vape duties rise",
+      "decision": "retained_merged",
+      "reason": "Same Budget underlying event as index6; official surcharge3to6 percent verified, appears once.",
+      "sources": [
+        "https://www.gov.uk/government/publications/budget-2026-document/budget-2026-html",
+        "https://www.gov.uk/government/news/what-the-autumn-budget-2026-means-for-your-energy-bills"
+      ],
+      "event_id": "uk-budget-bank-surcharge-households-20261028",
+      "url": "https://www.aljazeera.com/economy/2026/10/28/five-key-takeaways-from-the-uk-autumn-budget"
+    },
+    {
+      "index": 8,
+      "headline": "Income tax on property and savings to rise two points, with no increase on wages or dividends",
+      "decision": "excluded_insufficiently_verified",
+      "reason": "Overlapping Budget detail; upstream Starter ISA description not supported by reviewed primary text. Do not repeat unverified label; verified Budget measures retained under indices6/9.",
+      "sources": [
+        "https://www.aljazeera.com/economy/2026/10/28/five-key-takeaways-from-the-uk-autumn-budget"
+      ],
+      "url": "https://www.aljazeera.com/economy/2026/10/28/five-key-takeaways-from-the-uk-autumn-budget"
+    },
+    {
+      "index": 9,
+      "headline": "UK pledges to lift defence spending to 3.5% of GDP by 2035 and sends more aid to Ukraine",
+      "decision": "retained_corrected",
+      "reason": "October28 Budget completes funding of previously announced15billion defence plan, including remaining4.7billion. Additional Ukraine support is over10billion and includes guarantees/export credit, not all cash aid.",
+      "sources": [
+        "https://www.gov.uk/government/publications/budget-2026-document/budget-2026-html"
+      ],
+      "event_id": "uk-budget-defence-ukraine-20261028",
+      "url": "https://www.aljazeera.com/economy/2026/10/28/five-key-takeaways-from-the-uk-autumn-budget"
+    },
+    {
+      "index": 10,
+      "headline": "OBR sees UK fiscal headroom cut to £15bn as gilt yields ease during Healey's speech",
+      "decision": "retained_merged",
+      "reason": "Official Budget confirms fiscal headroom15billion pounds in2029–30; consolidate Budget rather than repeat momentary gilt-yield movements.",
+      "sources": [
+        "https://www.gov.uk/government/publications/budget-2026-document/budget-2026-html",
+        "https://www.gov.uk/government/news/what-the-autumn-budget-2026-means-for-your-energy-bills"
+      ],
+      "event_id": "uk-budget-bank-surcharge-households-20261028",
+      "url": "https://www.cnbc.com/2026/10/27/uk-budget-2026-john-healey-bond-market.html"
+    },
+    {
+      "index": 11,
+      "headline": "Update: Israel's election leaves Netanyahu and Eisenkot both short of a majority",
+      "decision": "retained_updated",
+      "reason": "85.6percent partial count is new information beyond prior exit polls; explicitly not final results.",
+      "sources": [
+        "https://www.timesofisrael.com/liveblog_entry/with-over-85-of-votes-counted-pro-netanyahu-bloc-gets-53-seats-eisenkot-led-bloc-at-48-and-arab-parties-have-19/",
+        "https://www.afp.com/en/israel-president-urges-against-new-vote-despite-inconclusive-result"
+      ],
+      "event_id": "israel-election-856pct-count-20261028",
+      "url": "https://www.cnn.com/2026/10/28/world/live-news/israel-election-result-live-latest-netanyahu-eisenkot-intl"
+    },
+    {
+      "index": 12,
+      "headline": "Kremlin says Europe is excluded from next Ukraine talks as Zelenskyy sets Abu Dhabi dates",
+      "decision": "retained_corrected",
+      "reason": "Ukraine primary statement says talks expected by November10, not fixed November6–10. Verified new Dutch military/civilian aid retained as the substantive update.",
+      "sources": [
+        "https://www.president.gov.ua/en/news/niderlandi-vidilyayut-500-miljoniv-yevro-vijskovoyi-dopomogi-107065"
+      ],
+      "event_id": "netherlands-ukraine-aid-20261028",
+      "url": "https://www.aljazeera.com/news/2026/10/28/kremlin-says-european-countries-not-included-in-next-ukraine-talks"
+    },
+    {
+      "index": 13,
+      "headline": "Drone strike on Sudan's Nyala market kills at least 21 amid an escalating air campaign",
+      "decision": "stale",
+      "reason": "October27 report concerns October26 strike; no newer verified outcome found in this pass. Not presented as overnight development.",
+      "sources": [
+        "https://www.aljazeera.com/news/2026/10/27/drone-strike-kills-at-least-21-and-injures-40-in-sudans-nyala"
+      ],
+      "url": "https://www.aljazeera.com/news/2026/10/27/drone-strike-kills-at-least-21-and-injures-40-in-sudans-nyala"
+    },
+    {
+      "index": 14,
+      "headline": "UN inquiry says Israel is still committing genocide in Gaza despite the ceasefire",
+      "decision": "stale",
+      "reason": "October26 UN-report coverage is three days old; no new finding beyond that report verified in this pass. Not presented as new October29 news.",
+      "sources": [
+        "https://www.aljazeera.com/news/2026/10/26/israel-committing-crimes-against-humanity-in-occupied-west-bank-un"
+      ],
+      "url": "https://www.aljazeera.com/news/2026/10/26/israel-committing-crimes-against-humanity-in-occupied-west-bank-un"
+    },
+    {
+      "index": 15,
+      "decision": "retained_corrected",
+      "reason": "Official Apple announcement Oct28 confirms touchscreen M5Pro/Max models and preorders Oct28, not upstream Oct30; separate M6 refresh not conflated.",
+      "sources": [
+        "https://www.apple.com/newsroom/2026/10/apple-unveils-groundbreaking-macbook-pro-with-proled-xdr-display/"
+      ],
+      "event_id": "apple-touch-macbook-pro-20261028",
+      "url": "https://techcrunch.com/2026/10/28/apple-launches-its-new-touchscreen-macbook-pro",
+      "headline": "Apple unveils a touchscreen MacBook Pro alongside an M6 iMac refresh"
+    },
+    {
+      "index": 16,
+      "decision": "retained_merged",
+      "reason": "Confirmed Nvidia model card release October28,40languages,recorded audio. Appears once in ranked AI.",
+      "sources": [
+        "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B"
+      ],
+      "event_id": "nvidia-nemotron35-transcribe-20261028",
+      "url": "https://techcrunch.com/2026/10/28/voice-ai-in-vogue-nvidia-releases-new-open-transcription-model",
+      "headline": "Nvidia releases Nemotron 3.5 Transcribe, a free open speech-to-text model for 40 languages"
+    },
+    {
+      "index": 17,
+      "decision": "retained_verified",
+      "reason": "Original company announcement October27 directly verified; fresh unseen catch-up, no exact release time. Unverified valuation omitted.",
+      "sources": [
+        "https://simplismart.ai/blog/nvidia-backs-our-14m-series-b"
+      ],
+      "event_id": "simplismart-seriesb-20261027",
+      "url": "https://techcrunch.com/2026/10/27/nvidia-backs-indian-startup-helping-companies-run-ai-models-with-fewer-gpus",
+      "headline": "Nvidia backs Indian AI-inference startup Simplismart in a $14 million round"
+    },
+    {
+      "index": 18,
+      "decision": "stale",
+      "reason": "Underlying acquisition was reported October22; October25 roundup is not a new transaction or material new fact.",
+      "sources": [
+        "https://techcrunch.com/2026/10/22/rivian-buys-world-model-startup-to-accelerate-self-driving-ambitions/"
+      ],
+      "url": "https://techcrunch.com/2026/10/25/techcrunch-mobility-blue-green-is-the-color-of-autonomy/",
+      "headline": "Rivian buys UK startup Third Dimension to turn images into 3D worlds"
+    },
+    {
+      "index": 19,
+      "headline": "US Federal Reserve holds rates in a 10-2 vote, keeping a December hike in play",
+      "decision": "retained_corrected",
+      "reason": "Official Fed release verifies10–2hold3.75–4percent. December-hike speculation is omitted.",
+      "sources": [
+        "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
+      ],
+      "event_id": "fed-rate-hold-oct2026",
+      "url": "https://www.cnbc.com/2026/10/28/fed-interest-rate-decision-october-2026.html"
+    },
+    {
+      "index": 20,
+      "headline": "Microsoft beats estimates as Azure revenue jumps 48%, lifting shares after hours",
+      "decision": "retained_verified",
+      "reason": "Company earnings release confirms92.3billion revenue and48percent Azure growth; market reaction omitted.",
+      "sources": [
+        "https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast"
+      ],
+      "event_id": "microsoft-fy27q1-earnings",
+      "url": "https://www.cnbc.com/2026/10/28/microsoft-msft-q1-earnings-report-2027.html"
+    },
+    {
+      "index": 21,
+      "headline": "Alphabet's cloud revenue surges past $30 billion, but an equity loss dents its profit",
+      "decision": "retained_corrected",
+      "reason": "Company-issued release syndicated by Publicnow verifies GoogleCloud30.7billion and103percent growth, correcting approximate90percent.",
+      "sources": [
+        "https://www.marketscreener.com/news/alphabet-2026-q3-earnings-press-release-ce785cd3d981f42c"
+      ],
+      "event_id": "alphabet-q32026-earnings",
+      "url": "https://www.cnbc.com/2026/10/28/alphabet-googl-earnings-q3-2026.html"
+    },
+    {
+      "index": 22,
+      "headline": "UPS beats quarterly estimates and raises its full-year guidance again",
+      "decision": "retained_verified",
+      "reason": "UPS primary October27 release verifies22.9billion revenue and raised guidance; explicitly unseen catch-up.",
+      "sources": [
+        "https://investors.ups.com/news-events/press-releases/detail/2172/ups-releases-3q-2026-earnings"
+      ],
+      "event_id": "ups-q32026-earnings",
+      "url": "https://www.cnbc.com/2026/10/27/ups-ups-q3-2026-earnings.html"
+    },
+    {
+      "index": 23,
+      "decision": "retained_corrected",
+      "reason": "Nvidia official release and AMD company-issued release verify$3b+$1b commitments October27. Omit ambiguous totalraise, do not imply closed.",
+      "sources": [
+        "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Meta-to-Expand-Collaboration-on-Muse-and-Muse-Family-of-Models-Amid-Robust-Growth/default.aspx",
+        "https://mfn.se/one/a/advanced-micro-devices/amd-and-meta-advance-strategic-partnership-to-power-metas-superintelligence-infrastructure-e53275de"
+      ],
+      "event_id": "nvidia-amd-meta-investment-20261027",
+      "url": "https://www.cnbc.com/2026/10/27/nvidia-invest-meta.html",
+      "headline": "Nvidia and AMD to invest $4 billion in Meta as AI partnerships deepen"
+    },
+    {
+      "index": 24,
+      "headline": "🏎️ Verstappen and Norris among 10 drivers to sit out Mexico City first practice for rookies",
+      "decision": "retained_corrected",
+      "reason": "Official F1 preview verifies Tsolov and Slater first-practice debuts; no claim session already occurred.",
+      "sources": [
+        "https://www.formula1.com/en/latest/article/its-race-week-5-storylines-were-excited-about-ahead-of-the-2026-mexico-city-grand-prix.3qhXiCGvBjL6deUeE7qpvT"
+      ],
+      "event_id": "mexico-fp1-tsolov-slater-debuts-20261028",
+      "url": "https://www.skysports.com/f1/news/13604824/mexico-city-gp-max-verstappen-george-russell-lando-norris-among-nine-f1-drivers-to-miss-first-practice"
+    },
+    {
+      "index": 25,
+      "headline": "🏎️ Antonelli needs just two points in Mexico to clinch his first Formula 1 title",
+      "decision": "duplicate",
+      "reason": "Antonelli123point lead/two points needed repeats October26race and October27title-permutation coverage; no new race result.",
+      "sources": [
+        "https://www.espn.com/f1/story/_/id/50131911/kimi-antonelli-formula-1-title-race-permutations-standings-explained"
+      ],
+      "url": "https://www.espn.com/f1/story/_/id/50131911/kimi-antonelli-formula-1-title-race-permutations-standings-explained"
+    },
+    {
+      "index": 26,
+      "headline": "🏏 India, 3-0 up, eye a 4-0 lead over New Zealand in the fourth T20I at Auckland",
+      "decision": "excluded_wrong_date_source",
+      "reason": "Cited ESPN article concerns January28 Visakhapatnam match, not current Auckland fixture. Current3–0series context already covered October28; no new verified result.",
+      "sources": [
+        "https://www.espn.in/cricket/series/23694/preview/1490237/india-vs-new-zealand-4th-t20i-new-zealand-india-2025-26"
+      ],
+      "url": "https://www.espn.in/cricket/series/23694/preview/1490237/india-vs-new-zealand-4th-t20i-new-zealand-india-2025-26"
+    },
+    {
+      "index": 27,
+      "headline": "🎾 Zverev closes on world No. 1 as the indoor swing reaches the Vienna quarter-finals",
+      "decision": "retained_corrected",
+      "reason": "Accessible AFP original reporting verifies October27 Vienna opening wins; do not imply verified new quarterfinal result or ranking change.",
+      "sources": [
+        "https://www.freemalaysiatoday.com/category/sports/2026/10/28/alcaraz-and-zverev-win-vienna-openers"
+      ],
+      "event_id": "vienna-alcaraz-zverev-openers-20261027",
+      "url": "https://www.atptour.com/en/scores/current/vienna/337/results"
+    },
+    {
+      "index": 28,
+      "headline": "NASA's Swift telescope set to fall to Earth around 2 November after a failed rescue",
+      "decision": "stale",
+      "reason": "Cited Scientific American article is August19, not current; reviewed text does not substantiate a November2fall date. No verified current re-entry report.",
+      "sources": [
+        "https://www.scientificamerican.com/article/nasa-calls-off-rescue-mission-for-its-falling-swift-space-telescope/"
+      ],
+      "url": "https://www.scientificamerican.com/article/nasa-calls-off-rescue-mission-for-its-falling-swift-space-telescope/"
+    },
+    {
+      "index": 29,
+      "headline": "Europe's Hera probe resolves Didymos and Dimorphos as two asteroids for the first time",
+      "decision": "retained_verified",
+      "reason": "ESA October27 first-light images resolve both asteroids; distinct from earlier braking manoeuvre, labeled catch-up.",
+      "sources": [
+        "https://www.esa.int/Space_Safety/Hera/First_light_Hera_resolves_two_asteroids_instead_of_one"
+      ],
+      "event_id": "hera-first-resolves-binary-20261027",
+      "url": "https://www.esa.int/Space_Safety/Hera/First_light_Hera_resolves_two_asteroids_instead_of_one"
+    },
+    {
+      "index": 30,
+      "headline": "Landmark study estimates about three in four former NFL players died with CTE",
+      "decision": "retained_corrected",
+      "reason": "BostonUniversity primary account describes model estimate in deceased2008–2023NFLcohort; not living-player risk or universal autopsy confirmation.",
+      "sources": [
+        "https://www.bu.edu/articles/2026/nfl-brain-disease-boston-study/"
+      ],
+      "event_id": "cte-deceased-nfl-estimate-20261028",
+      "url": "https://www.scientificamerican.com/article/landmark-study-finds-three-in-four-nfl-players-die-with-cte/"
+    },
+    {
+      "index": 31,
+      "headline": "Physicists build a carbon nanoribbon of pentagons and heptagons that conducts like metal",
+      "decision": "excluded_insufficiently_verified",
+      "reason": "Nature Research Briefing is dated October28, but full original paper was not accessed; earlier August presentation may describe same underlying result. Held out pending original study/freshness verification.",
+      "sources": [
+        "https://www.nature.com/articles/d41586-026-03298-3"
+      ],
+      "url": "https://www.nature.com/articles/d41586-026-03298-3"
+    }
+  ],
+  "diagnostic_notes": [
+    "Required source attempts do not imply exhaustive timeline coverage. Prior full-window cursors and historical gaps remain unchanged.",
+    "Everyday AI’s current original is a show transition, not a substantive learning episode. Big Technology YouTube was checked separately from RSS; the newer sponsored Jukes original now has an accessible actual third-party transcript.",
+    "Mollick’s later RSS distribution was traced to an older YouTube original, predating a delivered episode; it was not backfilled as new. Original dates, uploads and transcript access are separate facts.",
+    "Inshorts national, politics and business pages were actually attempted, then refreshed. Fresh October28 snapshots and independent India-category searches were followed to original sources; no private-app ranking is claimed.",
+    "Source dates and caveats label unseen catch-up items, company-reported benefits and partial election counts. No research claim or announced rollout is treated as independently tested performance."
+  ],
+  "source_coverage_summary": {
+    "required_sources": 241,
+    "roster_count": 211,
+    "attempted": 241,
+    "unattempted": 0,
+    "blocked_or_header_only": 2,
+    "pending_items": 586,
+    "complete_windows": 0,
+    "status": "partial",
+    "public_disclosure": "All 211 refreshed X profiles and all 30 required non-roster sources/categories were attempted, including Big Technology YouTube separately from RSS. Research remains partial: 586 source-associated items await further review or verification, and no complete historical source window is claimed."
+  }
+}
