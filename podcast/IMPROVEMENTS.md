@@ -182,3 +182,14 @@ Proposed next bounded experiment: prioritize substantive pending originals and c
 A preliminary render could outlive a shell-level process check in a separate tool session. Reconcile each recorded session explicitly, then perform one isolated cached rebuild and bind the final audio to the frozen-input and pronunciation-version hashes. This was completed before publication; earlier outputs were not uploaded. Keep this as a bounded production safeguard, not a change to the requested editorial structure.
 
 Acronym inspection found that a spaced letter could be reduced to an article by the stock G2P. Explicit pronunciation entries and versioned cache keys corrected the affected tokens; measured decode and loudness checks passed afterward. Continue inspecting emitted acronyms before upload. The ending remained brief, and the episode was not padded to reach the nominal duration.
+
+
+## 29 October 2026 · Original chronology and publication versus notification
+
+Observed and verified: a later podcast RSS distribution referred to an older YouTube original. Original-date comparison prevented accidental latest-only backfill; a newer substantive sponsored interview was independently dated and summarized from actual transcript text with attribution. Preserve original/upload/distribution times as separate fields and do not let feed sorting override the editorial chronology.
+
+A direct Inshorts refresh returned fresher cards than the initial indexed snapshots. This was a completed bounded recovery, not proof of full pagination or every historical item. Proposed next check: compare direct-page and index dates early, retain all discovered candidates and measure how many pending original-source checks are actually resolved.
+
+Publication and conversation notification are separate outcomes. The private episode and public report were verified, but the messaging tool was unavailable. Keep notification pending and delivered-use/cutoff states unchanged; never regenerate an already published same-date edition merely to retry notification. No alternate channel or access expansion is authorized by that failure.
+
+The final isolated cached rebuild passed exact frozen-input, explicit acronym, full decode, loudness and gap checks. Preserve those runtime manifests privately for reset recovery. Technical checks do not establish listener satisfaction, physical playback or elapsed expiry.
