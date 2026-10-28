@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-08-29",
-      "topic_key": "unicorn",
-      "text": "Scotland's national animal is the unicorn."
-    },
-    {
       "date": "2026-08-30",
       "topic_key": "saturn",
       "text": "Saturn would float in water"
@@ -269,14 +264,14 @@
       "date": "2026-10-28",
       "topic_key": "westray flight",
       "text": "The world's shortest scheduled passenger flight links the Orkney islands of Westray and Papa Westray in Scotland, a hop of about 2.7 kilometres. Operated by Loganair, it is timetabled at roughly 90 se"
+    },
+    {
+      "date": "2026-10-29",
+      "topic_key": "hummingbird",
+      "text": "A hummingbird is the only bird that can fly backwards; its heart can beat past 1,200 times a minute."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-09-28",
-      "type": "logic",
-      "title_key": "last-to-know"
-    },
     {
       "date": "2026-09-29",
       "type": "quantitative",
@@ -421,14 +416,14 @@
       "date": "2026-10-28",
       "type": "quantitative",
       "title_key": "averaging-up"
+    },
+    {
+      "date": "2026-10-29",
+      "type": "lateral",
+      "title_key": "out-of-the-blue"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-09-28",
-      "type": "letterboxed",
-      "title_key": "corner-to-corner"
-    },
     {
       "date": "2026-09-29",
       "type": "grouping",
@@ -573,6 +568,11 @@
       "date": "2026-10-28",
       "type": "spellingbee",
       "title_key": "round-and-round"
+    },
+    {
+      "date": "2026-10-29",
+      "type": "grouping",
+      "title_key": "double-agents"
     }
   ]
 }

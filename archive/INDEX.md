@@ -446,7 +446,7 @@ is empty until the first run.
 2026-06-23	Modi commissions three indigenous warships in a single day at Kolkata	4ff68f55	india,modi,indian navy,warships
 2026-06-23	India beat New Zealand 2-0 to win the FIH Women's Nations Cup	78a68596	india,womens hockey,fih nations cup,new zealand
 2026-06-23	Update: Keir Starmer resigns as UK prime minister, triggering a Labour leadership contest	c7aa9efd	uk,keir starmer,labour,andy burnham
-2026-06-23	UK borrowing hit GBP23.3 billion in May, GBP5.6bn above forecast	ed45cfbf	uk,public borrowing,ons,obr
+2026-06-23	UK borrowing hit £23.3 billion in May, £5.6bn above forecast	ed45cfbf	uk,public borrowing,ons,obr
 2026-06-23	Met Office issues a rare red extreme-heat warning as the UK's June record looks set to fall	176b2d11	uk,met office,heatwave,temperature record
 2026-06-23	Two men jailed over arson attacks on properties linked to Keir Starmer	54bb6427	uk,arson,starmer,old bailey
 2026-06-23	Update: US and Iran agree a 60-day roadmap toward a final deal in Switzerland	c931c7e8	united states,iran,switzerland talks,nuclear
@@ -1409,7 +1409,7 @@ is empty until the first run.
 2026-07-23	India presses China on market access and the trade gap at ASEAN talks in Manila	f22fdd9c	Jaishankar,Wang Yi,China,ASEAN,Manila
 2026-07-23	India's largest asset manager makes a muted market debut after a $1 billion IPO	3bf72743	SBI,asset manager,IPO,market debut
 2026-07-23	UK inflation cools to a 15-month low as petrol and food prices ease	f3d3ab0a	UK inflation,CPI,Bank of England
-2026-07-23	Update: Conservatives urge HMRC to investigate Farage's GBP5 million gift	18ca2bca	Nigel Farage,HMRC,Conservatives,Reform UK,gift
+2026-07-23	Update: Conservatives urge HMRC to investigate Farage's £5 million gift	18ca2bca	Nigel Farage,HMRC,Conservatives,Reform UK,gift
 2026-07-23	Burnham stakes welfare reform on further education to cut youth unemployment	7cf7ffda	Andy Burnham,welfare,further education,unemployment
 2026-07-23	Burnham urges fiscal discipline at his first Cabinet meeting	8e86a394	Andy Burnham,fiscal discipline,Cabinet
 2026-07-23	Update: Trump vows to hit Iranian infrastructure for each Hormuz ship attack	c91b1ffc	Trump,Iran,Strait of Hormuz,strikes,Britain
@@ -2391,7 +2391,7 @@ is empty until the first run.
 2026-08-27	India pitches its growth story abroad as foreign investors pull money out	e181b8eb	India,foreign investors,equity market,outflows
 2026-08-27	India's central bank says the economy remains resilient as growth momentum holds	bdda8e3a	India,RBI,economy,rupee
 2026-08-27	India's monsoon toll passes 100 as Assam floods leave at least 87 dead	9c9f947a	India,Assam,monsoon,floods
-2026-08-27	Update: UK energy price cap to rise 4% to GBP1,723 from October as gas prices climb	9a6d8c88	UK,Ofgem,energy price cap,Andy Burnham
+2026-08-27	Update: UK energy price cap to rise 4% to £1,723 from October as gas prices climb	9a6d8c88	UK,Ofgem,energy price cap,Andy Burnham
 2026-08-27	UK households' inflation expectations jump to 3.9%, the highest since May	e7a669af	UK,inflation expectations,cost of living,CPI
 2026-08-27	Himalayan flash floods kill at least 160 across Nepal and Tibet, hundreds missing	0b7cb09a	Nepal,Tibet,flash floods,Bhote Koshi
 2026-08-27	Ukraine says it hit 16 Russian targets, striking a Lukoil refinery and torching a warehouse	edf4c2e5	Ukraine,Russia,Lukoil,Zelensky,drone strikes
@@ -2979,8 +2979,8 @@ is empty until the first run.
 2026-09-23	Tiffany Teo wins Singapore's first gold of the 2026 Asian Games in MMA	3c4b714a	singapore,tiffany-teo,asian-games,mma,gold
 2026-09-23	Man, 22, arrested for voyeurism at an NTU campus gym	0ec9c569	singapore,ntu,voyeurism,arrest
 2026-09-23	Singaporean student, 19, pleads not guilty over Johor crash that killed five	865544f1	singapore,johor,crash,dangerous-driving,goh-yin-zun
-2026-09-23	Update: UK borrowing hits GBP18.3bn in August, GBP3.5bn above the OBR forecast	a2fb1f04	uk,borrowing,ons,obr,john-healey
-2026-09-23	Ed Davey pitches the Lib Dems as election kingmakers with a GBP17bn tax cut	5bdb1d1e	uk,ed-davey,liberal-democrats,income-tax,brighton
+2026-09-23	Update: UK borrowing hits £18.3bn in August, £3.5bn above the OBR forecast	a2fb1f04	uk,borrowing,ons,obr,john-healey
+2026-09-23	Ed Davey pitches the Lib Dems as election kingmakers with a £17bn tax cut	5bdb1d1e	uk,ed-davey,liberal-democrats,income-tax,brighton
 2026-09-23	Trump tells the UN he will strike a deal or 'annihilate' Iran after the midterms	692ea2d0	trump,iran,unga,midterms,nuclear
 2026-09-23	Lula uses his UN address to warn against foreign meddling in Brazil's election	0075e2af	lula,brazil,unga,election,trump
 2026-09-23	Erdogan calls Gaza 'the most shameful concentration camp of our time' at the UN	0c3cbd02	erdogan,turkiye,israel,gaza,unga
@@ -4074,3 +4074,35 @@ is empty until the first run.
 2026-10-28	Rubin Observatory flags a possible sixth dwarf planet beyond Neptune	40765aa9	Rubin Observatory,dwarf planet,2026 ED138,Neptune
 2026-10-28	Perseverance measures clingy Martian dust to help design safer spacesuits	a7cf5401	Perseverance,Mars,dust,spacesuits
 2026-10-28	Flickering brain signals may reveal when the brain becomes consciously aware	944ca965	consciousness,brain,Doris Tsao,neuroscience
+2026-10-29	Update: Singapore summons bosses of 10 firms as it widens its transboundary-haze probe	51461c86	Singapore,Indonesia,haze,firms-summoned
+2026-10-29	Singapore presses gas suppliers to honour commitments after Indonesia cuts pipeline supply	c4f22ac7	Singapore,Indonesia,Lawrence Wong,gas
+2026-10-29	Haze-hit Singapore parents push for air-conditioning in schools	72185afc	Singapore,haze,schools,parents
+2026-10-29	Elderly Chinese couple jailed in Singapore after overstaying about 19 years	f4640a87	Singapore,overstay,court,immigration
+2026-10-29	Update: Cyclone Arnab makes landfall in Andhra Pradesh, killing at least three	06f968ba	Cyclone Arnab,Andhra Pradesh,Odisha,landfall
+2026-10-29	India's rupee stays under pressure near record lows as the RBI steps up its defence	6d224f44	India,rupee,RBI,dollar
+2026-10-29	Healey's Autumn Budget taxes banks and gambling, cuts energy bills and lifts defence	d7e6f276	United Kingdom,John Healey,Budget,banks
+2026-10-29	UK bank profit surcharge raised three points to 6% as gambling and vape duties rise	3970bdc3	United Kingdom,banks,gambling,Budget
+2026-10-29	Income tax on property and savings to rise two points, with no increase on wages or dividends	7ba61c85	United Kingdom,income tax,ISA,Budget
+2026-10-29	UK pledges to lift defence spending to 3.5% of GDP by 2035 and sends more aid to Ukraine	6c08245c	United Kingdom,defence,Ukraine,Budget
+2026-10-29	OBR sees UK fiscal headroom cut to £15bn as gilt yields ease during Healey's speech	52c7a799	United Kingdom,OBR,gilts,Budget
+2026-10-29	Update: Israel's election leaves Netanyahu and Eisenkot both short of a majority	d4787906	Israel,election,Netanyahu,Eisenkot
+2026-10-29	Kremlin says Europe is excluded from next Ukraine talks as Zelenskyy sets Abu Dhabi dates	fa7e77d4	Ukraine,Russia,Zelenskyy,Abu Dhabi
+2026-10-29	Drone strike on Sudan's Nyala market kills at least 21 amid an escalating air campaign	cb854b12	Sudan,Nyala,RSF,drone strike
+2026-10-29	UN inquiry says Israel is still committing genocide in Gaza despite the ceasefire	30f4bd5d	UN,Israel,Gaza,West Bank
+2026-10-29	Apple unveils a touchscreen MacBook Pro alongside an M6 iMac refresh	57485a81	Apple,MacBook Pro,M6,launch
+2026-10-29	Nvidia releases Nemotron 3.5 Transcribe, a free open speech-to-text model for 40 languages	c12644fd	Nvidia,Nemotron,speech-to-text,AI
+2026-10-29	Nvidia backs Indian AI-inference startup Simplismart in a $14 million round	616589af	Nvidia,Simplismart,India,funding
+2026-10-29	Rivian buys UK startup Third Dimension to turn images into 3D worlds	f1e2424d	Rivian,Third Dimension,acquisition,AI
+2026-10-29	US Federal Reserve holds rates in a 10-2 vote, keeping a December hike in play	6bfb1fd4	Federal Reserve,Kevin Warsh,rates,hold
+2026-10-29	Microsoft beats estimates as Azure revenue jumps 48%, lifting shares after hours	94112786	Microsoft,Azure,earnings,cloud
+2026-10-29	Alphabet's cloud revenue surges past $30 billion, but an equity loss dents its profit	c4a6e966	Alphabet,Google Cloud,earnings,revenue
+2026-10-29	UPS beats quarterly estimates and raises its full-year guidance again	7e42b76c	UPS,earnings,guidance,Amazon
+2026-10-29	Nvidia and AMD to invest $4 billion in Meta as AI partnerships deepen	ad62ed08	Nvidia,AMD,Meta,investment
+2026-10-29	🏎️ Verstappen and Norris among 10 drivers to sit out Mexico City first practice for rookies	0037f467	Formula 1,Mexico City Grand Prix,practice,rookies
+2026-10-29	🏎️ Antonelli needs just two points in Mexico to clinch his first Formula 1 title	56241bc4	Formula 1,Antonelli,Mexico City Grand Prix,title
+2026-10-29	🏏 India, 3-0 up, eye a 4-0 lead over New Zealand in the fourth T20I at Auckland	8ccf6c5b	India,New Zealand,T20I,Auckland
+2026-10-29	🎾 Zverev closes on world No. 1 as the indoor swing reaches the Vienna quarter-finals	ceb86af8	Zverev,Vienna,ATP,ranking
+2026-10-29	NASA's Swift telescope set to fall to Earth around 2 November after a failed rescue	8fcc748b	NASA,Swift telescope,reentry,space
+2026-10-29	Europe's Hera probe resolves Didymos and Dimorphos as two asteroids for the first time	f9f66fd5	ESA,Hera,Didymos,Dimorphos
+2026-10-29	Landmark study estimates about three in four former NFL players died with CTE	40868980	CTE,NFL,JAMA Network Open,study
+2026-10-29	Physicists build a carbon nanoribbon of pentagons and heptagons that conducts like metal	fe8bb740	carbon nanoribbon,physics,Nature,materials

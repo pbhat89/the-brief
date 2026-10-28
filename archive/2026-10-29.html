@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Thu, 29 October 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .wpuzzle-box{background:linear-gradient(135deg,#0e1a1a,#0d1620);border:1px solid #234a44;border-left:3px solid #16a085;padding:24px 28px;border-radius:2px}
+  .wptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#16a085;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .wpuzzle-box .puzzle-title{color:#cdeae3}
+  .wpuzzle-box .puzzle-how{color:#8fb8ac;background:#08140f;border-left-color:#1a6a5a}
+  .wpuzzle-box .puzzle-q{color:#dfeae6;font-family:'Source Sans 3',sans-serif}
+  .wpuzzle-box .answer{color:#bfe0d6}
+  .wpuzzle-box .answer .alabel{color:#16a085}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Thursday, 29 October 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Thursday, 29 October 2026 · 🔍 34 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eleven entries in this exact order:
+     id    : one of "sg" | "india" | "uk" | "geo" | "tech" | "biz" | "sports" | "misc" | "fun" | "puzzle" | "wpuzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 8 news tabs; fun/puzzle/wpuzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+
+   WORD_PUZZLE shape (separate, daily word game — NYT-style, static reveal):
+     type     : one of "Connections" | "Word Ladder" | "Anagram" | "Spelling Bee" | "Letter Boxed" | "Mini Crossword"
+     title    : short evocative name for the word puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle body; supports \n for line breaks (grids render as pre-formatted text)
+     answer   : the answer; supports \n for line breaks; appears inside its own toggle (id "wpans")
+============================================================================= */
+
+const SECTIONS = [
+  { id:"sg", title:"🇸🇬 Singapore", color:"#e74c3c", items:[
+    { headline:"Update: Singapore summons bosses of 10 firms as it widens its transboundary-haze probe", summary:"Singapore ministers summoned the bosses of 10 locally registered companies potentially linked to the Indonesian wildfires behind weeks of record haze, widening an earlier inquiry into seven firms. Officials said the aim was &lsquo;not to find scapegoats&rsquo; but to gather evidence as air quality lingered in the unhealthy range.", source:"SCMP", url:"https://www.scmp.com/week-asia/health-environment/article/3372479/not-find-scapegoats-singapore-ministers-summon-bosses-10-firms-over-haze", date:"Oct 28", spectrum:null, bias:null },
+    { headline:"Singapore presses gas suppliers to honour commitments after Indonesia cuts pipeline supply", summary:"Prime Minister Lawrence Wong urged gas suppliers to &lsquo;honour their commitments&rsquo; after Indonesia trimmed piped-gas exports to Singapore, a dispute now tangled with the haze row. Wong said the government would explore nuclear power and widen energy partnerships to shore up supply.", source:"SCMP", url:"https://www.scmp.com/news/asia/southeast-asia/article/3372048/singapore-tells-suppliers-honour-commitments-amid-indonesias-gas-cut", date:"Oct 25", spectrum:null, bias:null },
+    { headline:"Haze-hit Singapore parents push for air-conditioning in schools", summary:"With the Pollutant Standards Index stuck in the unhealthy range for weeks, some Singapore parents called for Hong Kong-style air-conditioning in schools as authorities handed out N95 masks to vulnerable residents. The Education Ministry said it could consider closures if forecasts turned hazardous.", source:"SCMP", url:"https://www.scmp.com/week-asia/health-environment/article/3371115/haze-hit-singapore-parents-call-hong-kong-style-school-air-con", date:"Oct 23", spectrum:null, bias:null },
+    { headline:"Elderly Chinese couple jailed in Singapore after overstaying about 19 years", summary:"A 68-year-old woman was sentenced in Singapore to six months&rsquo; jail and a S$2,000 fine in lieu of caning after overstaying for about 19 years, having turned herself in with her husband after struggling to get by. Her husband&rsquo;s case was listed for 29 October.", source:"Mothership", url:"https://mothership.sg/2026/10/chinese-couple-stayed-illegally-singapore/", date:"Oct 22", spectrum:null, bias:null },
+  ]},
+  { id:"india", title:"🇮🇳 India", color:"#e67e22", items:[
+    { headline:"Update: Cyclone Arnab makes landfall in Andhra Pradesh, killing at least three", summary:"Cyclone Arnab came ashore in Andhra Pradesh on 28 October as a very severe cyclonic storm with winds near 135km/h, killing at least three people in the worst-hit state. Chief Minister N Chandrababu Naidu reported at least 180 houses destroyed, and about 180,000 people were evacuated across Andhra Pradesh and Odisha before landfall.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/10/28/cyclone-arnab-makes-landfall-in-indias-andhra-pradesh", date:"Oct 28", spectrum:null, bias:null },
+    { headline:"India&rsquo;s rupee stays under pressure near record lows as the RBI steps up its defence", summary:"India&rsquo;s rupee has held near record lows against the US dollar in recent weeks, with strategists warning of a slide toward 100, even as the Reserve Bank of India tightened liquidity, curbed dollar demand, and raised its benchmark rate to 5.50%. Officials have pointed to the Middle East war and foreign outflows as pressures on the currency.", source:"CNBC", url:"https://www.cnbc.com/2026/10/16/india-rupee-rbi-dollar-iran-war.html", date:"Oct 16", spectrum:null, bias:null },
+  ]},
+  { id:"uk", title:"🇬🇧 UK News", color:"#3949ab", items:[
+    { headline:"Healey&rsquo;s Autumn Budget taxes banks and gambling, cuts energy bills and lifts defence", summary:"Chancellor John Healey&rsquo;s first Autumn Budget, delivered on 28 October, leaned on banks, gambling, and vape shops to fund relief for households, cut energy bills, and raise defence spending. He said the money would come &lsquo;from those who can afford to pay&rsquo;, with no rise in taxes on wages or dividends.", source:"CNBC", url:"https://www.cnbc.com/2026/10/28/uk-autumn-budget-cost-living-defense-ai.html", date:"Oct 28", spectrum:null, bias:null },
+    { headline:"UK bank profit surcharge raised three points to 6% as gambling and vape duties rise", summary:"Healey raised the bank profit surcharge by three percentage points to 6%, a temporary measure due to run for about 15 months from January, and increased gambling and gaming-machine duties. He framed the bank levy as a return of the support given after the financial crisis.", source:"Al Jazeera", url:"https://www.aljazeera.com/economy/2026/10/28/five-key-takeaways-from-the-uk-autumn-budget", date:"Oct 28", spectrum:null, bias:null },
+    { headline:"Income tax on property and savings to rise two points, with no increase on wages or dividends", summary:"Tax rates on income from property and savings will rise by a further two percentage points on top of increases already due in April 2027, while wages and dividends were spared. Healey also launched a &lsquo;Starter ISA&rsquo; for first-time investors and scrapped a planned &pound;12,000 cap on cash-ISA contributions.", source:"Al Jazeera", url:"https://www.aljazeera.com/economy/2026/10/28/five-key-takeaways-from-the-uk-autumn-budget", date:"Oct 28", spectrum:null, bias:null },
+    { headline:"UK pledges to lift defence spending to 3.5% of GDP by 2035 and sends more aid to Ukraine", summary:"Healey said he would fund a &pound;15bn Defence Investment Plan and lift defence spending to 3.5% of GDP by 2035, plugging a &pound;4.7bn gap by reprioritising other departments&rsquo; budgets. He also pledged an extra &pound;10bn in aid for Ukraine.", source:"Al Jazeera", url:"https://www.aljazeera.com/economy/2026/10/28/five-key-takeaways-from-the-uk-autumn-budget", date:"Oct 28", spectrum:null, bias:null },
+    { headline:"OBR sees UK fiscal headroom cut to &pound;15bn as gilt yields ease during Healey&rsquo;s speech", summary:"The Office for Budget Responsibility put the Chancellor&rsquo;s fiscal headroom at about &pound;15bn by 2029/30, down from &pound;23.6bn in March, with the Middle East war cited as a drag. Markets stayed calm, as 10-year gilt yields eased from around 5.36% to 5.31% as Healey spoke.", source:"CNBC", url:"https://www.cnbc.com/2026/10/27/uk-budget-2026-john-healey-bond-market.html", date:"Oct 28", spectrum:null, bias:null },
+  ]},
+  { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
+    { headline:"Update: Israel&rsquo;s election leaves Netanyahu and Eisenkot both short of a majority", summary:"With most votes counted, Israel&rsquo;s 27 October election left both main blocs short of a majority: Prime Minister Benjamin Netanyahu&rsquo;s camp fell to about 53 seats, down from 68, while Gadi Eisenkot&rsquo;s bloc held about 48 and Arab-majority parties won a record 17 to 19. Neither can reach the 61 seats needed, and President Isaac Herzog will choose who tries first to form a government.", source:"CNN", url:"https://www.cnn.com/2026/10/28/world/live-news/israel-election-result-live-latest-netanyahu-eisenkot-intl", date:"Oct 28", spectrum:null, bias:null },
+    { headline:"Kremlin says Europe is excluded from next Ukraine talks as Zelenskyy sets Abu Dhabi dates", summary:"The Kremlin said European countries would not take part in the next round of Ukraine peace talks, planned with the United States in Abu Dhabi, after a rare call with Nordic leaders. Speaking in The Hague, President Volodymyr Zelenskyy said the trilateral talks would run from 6 to 10 November and pressed for Europe to be included.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/10/28/kremlin-says-european-countries-not-included-in-next-ukraine-talks", date:"Oct 28", spectrum:null, bias:null },
+    { headline:"Drone strike on Sudan&rsquo;s Nyala market kills at least 21 amid an escalating air campaign", summary:"A drone strike on a market in Nyala, the paramilitary Rapid Support Forces&rsquo; de facto capital in Sudan&rsquo;s Darfur region, killed at least 21 people and wounded 40, according to a medical source. It was part of an escalating wave of drone attacks that has killed more than 160 people across the country in recent days.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/10/27/drone-strike-kills-at-least-21-and-injures-40-in-sudans-nyala", date:"Oct 27", spectrum:null, bias:null },
+    { headline:"UN inquiry says Israel is still committing genocide in Gaza despite the ceasefire", summary:"A UN commission of inquiry said Israel has continued to commit genocide in Gaza despite the October 2025 ceasefire, pointing to killings of civilians near the &lsquo;Yellow Line&rsquo;, and accused Israel of crimes against humanity, including extermination, in the occupied West Bank. Israel&rsquo;s mission in Geneva rejected the report and called for the commission to be dissolved.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/10/26/israel-committing-crimes-against-humanity-in-occupied-west-bank-un", date:"Oct 26", spectrum:null, bias:null },
+  ]},
+  { id:"tech", title:"💻 Tech & AI", color:"#27ae60", items:[
+    { headline:"Apple unveils a touchscreen MacBook Pro alongside an M6 iMac refresh", summary:"Apple launched a touchscreen MacBook Pro, priced from $2,899 for the 14-inch model and $3,399 for the 16-inch, with preorders opening 30 October and sales from 6 November. It followed a refresh a day earlier that put the new M6 chip in a 24-inch iMac and an entry 14-inch MacBook Pro.", source:"TechCrunch", url:"https://techcrunch.com/2026/10/28/apple-launches-its-new-touchscreen-macbook-pro", date:"Oct 28", spectrum:null, bias:null },
+    { headline:"Nvidia releases Nemotron 3.5 Transcribe, a free open speech-to-text model for 40 languages", summary:"Nvidia released Nemotron 3.5 Transcribe, a free, open speech-to-text model that handles up to 40 languages, as it expands its push into voice AI. The launch adds to a run of open-weight model releases from the chipmaker this month.", source:"TechCrunch", url:"https://techcrunch.com/2026/10/28/voice-ai-in-vogue-nvidia-releases-new-open-transcription-model", date:"Oct 28", spectrum:null, bias:null },
+    { headline:"Nvidia backs Indian AI-inference startup Simplismart in a $14 million round", summary:"Nvidia joined a $14 million Series B in Simplismart, an Indian startup whose software helps companies run AI models with fewer GPUs, valuing the four-year-old firm at about $100 million. Accel, Shastra VC, and Micromax also took part, with Dallas Venture Capital leading.", source:"TechCrunch", url:"https://techcrunch.com/2026/10/27/nvidia-backs-indian-startup-helping-companies-run-ai-models-with-fewer-gpus", date:"Oct 27", spectrum:null, bias:null },
+    { headline:"Rivian buys UK startup Third Dimension to turn images into 3D worlds", summary:"Electric-vehicle maker Rivian acquired Third Dimension, a UK startup founded by games and autonomous-vehicle veterans that uses AI to turn images and video into lifelike 3D worlds. Rivian framed the deal as support for its work on autonomy and spatial computing.", source:"TechCrunch", url:"https://techcrunch.com/2026/10/25/techcrunch-mobility-blue-green-is-the-color-of-autonomy/", date:"Oct 25", spectrum:null, bias:null },
+  ]},
+  { id:"biz", title:"📈 Business & Markets", color:"#8e44ad", items:[
+    { headline:"US Federal Reserve holds rates in a 10-2 vote, keeping a December hike in play", summary:"The US Federal Reserve held its benchmark rate in a range of 3.75% to 4% in a 10-2 vote on 28 October, with Governor Lisa Cook and Cleveland Fed President Beth Hammack dissenting in favour of a hike. Chair Kevin Warsh said he did not believe in forward guidance, and traders still priced a December increase.", source:"CNBC", url:"https://www.cnbc.com/2026/10/28/fed-interest-rate-decision-october-2026.html", date:"Oct 28", spectrum:null, bias:null },
+    { headline:"Microsoft beats estimates as Azure revenue jumps 48%, lifting shares after hours", summary:"Microsoft beat estimates for its fiscal first quarter, reporting revenue of about $92.3 billion, up 19%, as Azure revenue jumped 48%. Adjusted earnings of $4.89 a share topped forecasts, and the shares rose about 4% in extended trading.", source:"CNBC", url:"https://www.cnbc.com/2026/10/28/microsoft-msft-q1-earnings-report-2027.html", date:"Oct 28", spectrum:null, bias:null },
+    { headline:"Alphabet&rsquo;s cloud revenue surges past $30 billion, but an equity loss dents its profit", summary:"Alphabet&rsquo;s third-quarter revenue reached about $127.6 billion, with Google Cloud revenue surging roughly 90% to around $30.7 billion. Net income fell to about $26.2 billion, dragged down by an $8.7 billion loss on equity investments, a non-operating item.", source:"CNBC", url:"https://www.cnbc.com/2026/10/28/alphabet-googl-earnings-q3-2026.html", date:"Oct 28", spectrum:null, bias:null },
+    { headline:"UPS beats quarterly estimates and raises its full-year guidance again", summary:"United Parcel Service beat Wall Street expectations and again raised its full-year guidance, posting adjusted earnings of $1.69 a share on revenue of $22.9 billion. The company said it was cutting lower-margin Amazon deliveries, contributing to a 3.3% drop in US average daily volume.", source:"CNBC", url:"https://www.cnbc.com/2026/10/27/ups-ups-q3-2026-earnings.html", date:"Oct 27", spectrum:null, bias:null },
+    { headline:"Nvidia and AMD to invest $4 billion in Meta as AI partnerships deepen", summary:"Nvidia and AMD agreed to invest a combined $4 billion in Meta as part of the social-media company&rsquo;s roughly $95 billion capital raise, deepening ties between chipmakers and a major AI customer. The move extends a wave of cross-investment across the AI supply chain.", source:"CNBC", url:"https://www.cnbc.com/2026/10/27/nvidia-invest-meta.html", date:"Oct 27", spectrum:null, bias:null },
+  ]},
+  { id:"sports", title:"🎾🏏🏎️ Sports", color:"#c0392b", items:[
+    { headline:"🏎️ Verstappen and Norris among 10 drivers to sit out Mexico City first practice for rookies", summary:"Max Verstappen, Lando Norris, and George Russell were among 10 drivers set to sit out first practice at the Mexico City Grand Prix on 30 October, with teams fielding rookies to meet a mandatory young-driver requirement. Mercedes reserve Frederik Vesti was named to take Russell&rsquo;s car.", source:"Sky Sports F1", url:"https://www.skysports.com/f1/news/13604824/mexico-city-gp-max-verstappen-george-russell-lando-norris-among-nine-f1-drivers-to-miss-first-practice", date:"Oct 28", spectrum:null, bias:null },
+    { headline:"🏎️ Antonelli needs just two points in Mexico to clinch his first Formula 1 title", summary:"Kimi Antonelli can clinch his first Formula 1 drivers&rsquo; title at the Mexico City Grand Prix on 1 November, needing only a ninth-place finish, or for neither George Russell nor Lewis Hamilton to win. He leads Russell by 123 points with 125 still available, and Mercedes can also seal the constructors&rsquo; crown.", source:"ESPN", url:"https://www.espn.com/f1/story/_/id/50131911/kimi-antonelli-formula-1-title-race-permutations-standings-explained", date:"Oct 28", spectrum:null, bias:null },
+    { headline:"🏏 India, 3-0 up, eye a 4-0 lead over New Zealand in the fourth T20I at Auckland", summary:"India, already series winners at 3-0, aim to extend their lead to 4-0 against New Zealand in the fourth Twenty20 international at Eden Park, Auckland, on 30 October. Ishan Kishan remained an injury doubt after missing the previous two matches with an adductor strain.", source:"ESPNcricinfo", url:"https://www.espn.in/cricket/series/23694/preview/1490237/india-vs-new-zealand-4th-t20i-new-zealand-india-2025-26", date:"Oct 29", spectrum:null, bias:null },
+    { headline:"🎾 Zverev closes on world No. 1 as the indoor swing reaches the Vienna quarter-finals", summary:"Alexander Zverev, the top seed in Vienna, moved closer to the world No. 1 ranking as the Erste Bank Open reached the quarter-finals. Reaching the last eight would lift him above Jannik Sinner for the first time when the rankings update on 2 November.", source:"ATP Tour", url:"https://www.atptour.com/en/scores/current/vienna/337/results", date:"Oct 28", spectrum:null, bias:null },
+  ]},
+  { id:"misc", title:"🔬 Other Miscellaneous News", color:"#1abc9c", items:[
+    { headline:"NASA&rsquo;s Swift telescope set to fall to Earth around 2 November after a failed rescue", summary:"NASA&rsquo;s Swift gamma-ray space telescope is expected to re-enter Earth&rsquo;s atmosphere around 2 November after a private rescue failed, when a Katalyst spacecraft meant to boost its orbit spun out of control. NASA shut down Swift&rsquo;s science operations last week, and most of the two-decade-old observatory should burn up on re-entry.", source:"Scientific American", url:"https://www.scientificamerican.com/article/nasa-calls-off-rescue-mission-for-its-falling-swift-space-telescope/", date:"Oct 27", spectrum:null, bias:null },
+    { headline:"Europe&rsquo;s Hera probe resolves Didymos and Dimorphos as two asteroids for the first time", summary:"Europe&rsquo;s Hera spacecraft resolved Didymos and its moonlet Dimorphos as two separate objects for the first time, imaging the pair from about 1,280km away ahead of its arrival in November. Hera will survey Dimorphos, the asteroid NASA&rsquo;s DART mission struck in 2022 to test planetary defence.", source:"ESA", url:"https://www.esa.int/Space_Safety/Hera/First_light_Hera_resolves_two_asteroids_instead_of_one", date:"Oct 27", spectrum:null, bias:null },
+    { headline:"Landmark study estimates about three in four former NFL players died with CTE", summary:"A study in JAMA Network Open estimated that about three in four former NFL players who died between 2008 and 2023 likely had chronic traumatic encephalopathy, based on records of 2,362 players. Among roughly 400 who donated their brains, 93.5% were found to have the disease, which can only be diagnosed after death.", source:"Scientific American", url:"https://www.scientificamerican.com/article/landmark-study-finds-three-in-four-nfl-players-die-with-cte/", date:"Oct 28", spectrum:null, bias:null },
+    { headline:"Physicists build a carbon nanoribbon of pentagons and heptagons that conducts like metal", summary:"Physicists created a carbon nanoribbon built from alternating five- and seven-membered rings, rather than the usual hexagons, and found it conducts electricity like a metal. The structure could point toward new carbon-based electronic materials.", source:"Nature", url:"https://www.nature.com/articles/d41586-026-03298-3", date:"Oct 28", spectrum:null, bias:null },
+  ]},
+  { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
+  { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
+  { id:"wpuzzle", title:"🔤 Word Puzzles", color:"#16a085", custom:"wpuzzle" },
+];
+
+const FUN_FACT = {
+  text: "A hummingbird is the only kind of bird that can fly backwards, and even briefly upside down, thanks to a shoulder joint that lets its wings rotate almost 180 degrees and trace a figure-eight. In flight its wings can beat up to about 80 times a second, and its heart can race past 1,200 beats a minute.",
+  tag: "Category · Biology &amp; Flight"
+};
+
+const PUZZLE = {
+  type: "Lateral Thinking",
+  title: "Out of the Blue",
+  how: "Ask what the pack was for &mdash; and why it did not help him.",
+  question: "A man is found dead in the middle of a wide, empty field, far from any road.\nThere are no footprints or tyre tracks anywhere around him, no weapon, and no sign of a struggle.\nBeside him lies a small, closed pack.\nWhat happened to him?",
+  answer: "He was a parachutist (or BASE jumper).\n\nHe fell from the sky: the small closed pack beside him is his parachute, which failed to open.\n\nThat explains every clue &mdash; he arrived from above, so there are no footprints or tracks leading to the body, there is no attacker, and the only object with him is the pack that should have saved his life."
+};
+
+const WORD_PUZZLE = {
+  type: "Connections",
+  title: "Double Agents",
+  how: "Sort all 16 into four groups of four. A few words look at home in two groups &mdash; let the tightest set decide.",
+  question: "PLANE · SWING · BUNKER · CAT\nFILE · TWIST · ROUGH · SWORD\nTAP · GREEN · JELLY · HAMMER\nTEE · JIVE · STAR · DRILL\n\nFind the four hidden groups of four.",
+  answer: "___ FISH: CAT, SWORD, JELLY, STAR (catfish, swordfish, jellyfish, starfish)\nTOOLS: HAMMER, DRILL, PLANE, FILE\nDANCES: TAP, SWING, TWIST, JIVE\nPARTS OF A GOLF COURSE: ROUGH, GREEN, BUNKER, TEE\n\nThe traps: TAP is also a tool, SWING is also what you do with a golf club, PLANE is also an aircraft, and GREEN is also a colour &mdash; but only one grouping fits all sixteen words."
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function renderWordPuzzle(){
+  let h='<div class="sec-title">🔤 Word Puzzle of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#16a085,transparent)"></div>';
+  h+='<div class="wpuzzle-box"><span class="wptype">'+WORD_PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+WORD_PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+WORD_PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+WORD_PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this,\'wpans\')">Show Answer</button>';
+  h+='<div class="answer" id="wpans"><span class="alabel">Answer</span>'+WORD_PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn,ansId){var a=document.getElementById(ansId||'ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else if(sec.custom==="wpuzzle"){div.innerHTML=renderWordPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>
