@@ -325,3 +325,13 @@ The expert lesson is now recorded as narrated. No podcast recap or inaccessible 
 ### 29 October 2026 · Notification blocker resolved
 
 Messaging became available and the already-published morning edition received an accepted combined notification at 19:49 Singapore. This resolves the earlier notification-only blocker, not a new research or audio run. The existing recording, public report, original publication/expiry times, source snapshot and all unresolved coverage windows are unchanged. Expert and podcast confirmed-use ledgers now reflect the accepted delivery. No repeat notification, alternate channel or regenerated edition was used. Physical-device playback and elapsed expiry remain unobserved.
+
+
+## 30 October 2026 · Research and prepublication checks
+
+- Same-day upstream HTML and JSON were available. All 35 news entries were reconciled, including stale dates, repeated events and two items pending primary corroboration. The prepared edition contains 41 concise news items, with three substantive Singapore developments, eight India items, four sports stories and ten ranked AI signals.
+- All 211 current roster profiles and 30 required other surfaces/categories were attempted. Four X profiles were additionally inspected in the cloud browser. The retained source-instance inventory contains 1,922 items, including 884 pending. Historical windows and full-window cursors remain unchanged.
+- Direct Inshorts snapshots exposed October 29 cards despite older indexed listings. Official conditions have October 30 observations at 07:00 Singapore and a forecast issued at 05:32. Original-source failures, substitutions and future versus completed events remain explicit.
+- No new qualifying podcast original was established: the latest Big Technology original was already delivered, and its later RSS entry for another interview was an older-original alias. Everyday AI remains a transition announcement and replays. One distinct evergreen expert lesson and a new sourced fact were verified; candidate use is not yet advanced.
+- Independent review corrected a model-monitoring story to a material follow-up to the October 24 disclosure, labelled Shell’s earnings as adjusted, and clarified paid-plan limits without assuming any individual account quota. The upstream unicorn fact repeats older archives and is replaced only in the companion.
+- All 188 local repository and player unit tests passed, as did the dependency audit and dry-run build. The real local Worker test could not launch because of a network-interface syscall failure; a permitted retry failed during platform setup. Hosted runtime/browser CI remains to be checked. No tests were weakened. Narration, hosting and accepted notification are not yet complete at this checkpoint.

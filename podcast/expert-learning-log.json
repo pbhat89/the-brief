@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_on": "2026-10-29",
+  "updated_on": "2026-10-30",
   "timezone": "Asia/Singapore",
   "history": {
     "complete": false,
@@ -573,6 +573,42 @@
           "confirmation": "The verified existing morning narration contains the evergreen judgment-and-leverage lesson. Accepted combined notification was reconciled later the same Singapore date, without changing audio, source checks or editorial application."
         }
       ]
+    },
+    {
+      "concept_id": "input-independent-information-baseline",
+      "aliases": [
+        "zero-input baseline",
+        "check whether model extracts information beyond class frequencies"
+      ],
+      "experts": [
+        "Andrej Karpathy"
+      ],
+      "theme": "technical_coding",
+      "title": "Check whether the model uses its inputs",
+      "sources": [
+        {
+          "title": "A Recipe for Training Neural Networks",
+          "url": "https://karpathy.github.io/2019/04/25/recipe/",
+          "authors": [
+            "Andrej Karpathy"
+          ],
+          "original_date": "2019-04-25",
+          "original_date_basis": "Date displayed on original author page.",
+          "checked_on": "2026-10-30",
+          "kind": "first_party",
+          "verification": "direct_primary",
+          "locator": "Section 2, input-independent baseline bullet"
+        }
+      ],
+      "classification": "evergreen",
+      "takeaway": "Karpathy recommends an input-independent baseline, for example training with all inputs zeroed, to check whether real inputs provide useful predictive information.",
+      "editorial_application": "A hypothetical always-routine classifier gets 90 percent accuracy on a dataset with 90 percent routine messages. Compare against a simple reference and inspect important minority cases. This example and recommendation are editorial.",
+      "caveat": "Diagnostic check only, not proof of production readiness. Distinct from earlier lessons on human-label calibration, tiny-batch wiring, raw-input inspection and random search. Available daily delivery records and public archives reviewed; the older incomplete-import caveat remains.",
+      "status": "researched_candidate",
+      "dedup_review": "reviewed_no_match",
+      "last_used": null,
+      "last_narrated": null,
+      "uses": []
     }
   ]
 }

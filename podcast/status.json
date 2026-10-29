@@ -1,60 +1,60 @@
 {
-  "run_id": "morning-2026-10-29",
-  "updated_at": "2026-10-29T11:51:28.136Z",
+  "run_id": "morning-2026-10-30",
+  "updated_at": "2026-10-29T23:17:30.113372+00:00",
   "previous_run": {
-    "run_id": "morning-2026-10-28",
+    "run_id": "morning-2026-10-29",
     "state": "completed",
-    "detail": "Previous daily edition delivered; no regeneration."
+    "detail": "Previous morning edition delivered after notification-tool recovery; no regeneration."
   },
   "steps": [
     {
       "id": "history",
       "label": "History and operational feedback",
       "state": "completed",
-      "updated_at": "2026-10-28T23:24:13.614604+00:00",
-      "detail": "Available delivered history and all current editorial/source rules reviewed; no same-date duplicate."
+      "updated_at": "2026-10-29T23:17:30.113372+00:00",
+      "detail": "Available delivery history, current policies and operational feedback reviewed."
     },
     {
       "id": "upstream",
       "label": "Same-day upstream intake",
       "state": "completed",
-      "updated_at": "2026-10-28T23:24:13.614604+00:00",
-      "detail": "All 32 actual October29 upstream entries reconciled, including stale and mislinked sports/science exclusions."
+      "updated_at": "2026-10-29T23:17:30.113372+00:00",
+      "detail": "All 35 same-day upstream news entries reconciled with current sources and exclusion reasons."
     },
     {
       "id": "research",
       "label": "Source research and deduplication",
       "state": "completed",
-      "updated_at": "2026-10-28T23:24:13.614604+00:00",
-      "detail": "All 241 required sources attempted; bounded snapshots remain partial with 586 pending source-instance items and no full-window advancement."
+      "updated_at": "2026-10-29T23:17:30.113372+00:00",
+      "detail": "241 mandatory sources attempted, plus one fact source; bounded source windows remain partial with pending work preserved."
     },
     {
       "id": "script",
       "label": "Narrative preparation",
       "state": "completed",
-      "updated_at": "2026-10-28T23:24:13.614604+00:00",
-      "detail": "36 concise news headlines, one transcript-based recap, one distinct evergreen expert lesson and one sourced fact prepared."
+      "updated_at": "2026-10-29T23:17:30.113372+00:00",
+      "detail": "41 concise news items and one distinct expert lesson prepared. No qualifying new podcast recap; no filler added."
     },
     {
       "id": "audio",
       "label": "Private narration checks",
-      "state": "completed",
-      "updated_at": "2026-10-28T23:24:13.614604+00:00",
-      "detail": "Measured final narration passed finite decode, clipping, loudness, frozen-input and exact chapter-gap checks; no physical-device claim."
+      "state": "running",
+      "updated_at": "2026-10-29T23:17:30.113372+00:00",
+      "detail": "Private narration is rendering; duration and audio checks are not yet complete."
     },
     {
       "id": "publication",
       "label": "Public report publication",
-      "state": "completed",
-      "updated_at": "2026-10-28T23:24:13.614604+00:00",
-      "detail": "Public report and source checklist verified by HTTPS200 exact hashes; both reader catalogues regenerated and catalogue regression, Worker and Pages deployment passed. Final sanitized closeout is checked separately."
+      "state": "running",
+      "updated_at": "2026-10-29T23:17:30.113372+00:00",
+      "detail": "Public report and source checklist prepared; hosted verification pending."
     },
     {
       "id": "delivery",
       "label": "Private episode delivery",
-      "state": "completed",
-      "updated_at": "2026-10-29T11:51:28.136Z",
-      "detail": "Previously verified morning publication was delivered through an accepted late combined notification after messaging became available. No new audio, research, publication time or coverage cutoff was created; physical-device playback and elapsed expiry remain unobserved."
+      "state": "pending",
+      "updated_at": "2026-10-29T23:17:30.113372+00:00",
+      "detail": "No new publication or accepted delivery claimed yet."
     }
   ]
 }
