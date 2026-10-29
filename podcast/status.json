@@ -1,6 +1,6 @@
 {
   "run_id": "morning-2026-10-29",
-  "updated_at": "2026-10-28T23:24:13.614604+00:00",
+  "updated_at": "2026-10-29T11:51:28.136Z",
   "previous_run": {
     "run_id": "morning-2026-10-28",
     "state": "completed",
@@ -52,9 +52,9 @@
     {
       "id": "delivery",
       "label": "Private episode delivery",
-      "state": "blocked",
-      "updated_at": "2026-10-28T23:24:13.614604+00:00",
-      "detail": "Private publication and exact completed replay verified matching hash, size and daily seven-day expiry. Combined chat notification cannot be sent because the messaging tool is unavailable; accepted message delivery is not established."
+      "state": "completed",
+      "updated_at": "2026-10-29T11:51:28.136Z",
+      "detail": "Previously verified morning publication was delivered through an accepted late combined notification after messaging became available. No new audio, research, publication time or coverage cutoff was created; physical-device playback and elapsed expiry remain unobserved."
     }
   ]
 }

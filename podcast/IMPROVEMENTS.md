@@ -193,3 +193,8 @@ A direct Inshorts refresh returned fresher cards than the initial indexed snapsh
 Publication and conversation notification are separate outcomes. The private episode and public report were verified, but the messaging tool was unavailable. Keep notification pending and delivered-use/cutoff states unchanged; never regenerate an already published same-date edition merely to retry notification. No alternate channel or access expansion is authorized by that failure.
 
 The final isolated cached rebuild passed exact frozen-input, explicit acronym, full decode, loudness and gap checks. Preserve those runtime manifests privately for reset recovery. Technical checks do not establish listener satisfaction, physical playback or elapsed expiry.
+
+
+### 29 October 2026 · Verified recovery of pending notification
+
+The existing morning edition was notified after messaging became available; acceptance was verified before delivered-use records changed. This completes the notification recovery without re-rendering, re-uploading or moving source cursors. Retain the separation between publication, notification acceptance and physical playback; retry only the missing notification stage when its supported tool becomes available.

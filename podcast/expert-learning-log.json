@@ -561,11 +561,18 @@
       "takeaway": "Naval argues that leverage makes the consequences of judgment more significant.",
       "editorial_application": "Before scaling an AI automation, test a small sample, clarify approvals and define a stop condition. This is editorial application.",
       "caveat": "Evergreen business philosophy, not a measured AI-performance claim. AI example and safeguards are editorial. Semantically distinct from prior specific knowledge, accountability, long-term habits and complementary building/communication lessons. Available19daily records and public history checked; older incomplete-import caveat remains.",
-      "status": "researched_candidate",
-      "dedup_review": "reviewed_no_match",
-      "last_used": null,
-      "last_narrated": null,
-      "uses": []
+      "status": "narrated",
+      "dedup_review": "covered",
+      "last_used": "2026-10-29",
+      "last_narrated": "2026-10-29",
+      "uses": [
+        {
+          "date": "2026-10-29",
+          "channel": "podcast",
+          "public_evidence_url": "https://pbhat89.github.io/the-brief/podcast/reports/2026-10-29.html",
+          "confirmation": "The verified existing morning narration contains the evergreen judgment-and-leverage lesson. Accepted combined notification was reconciled later the same Singapore date, without changing audio, source checks or editorial application."
+        }
+      ]
     }
   ]
 }

@@ -2,7 +2,7 @@
   "version": 1,
   "timezone": "Asia/Singapore",
   "daily_limit": 1,
-  "updated_at": "2026-10-28T23:14:26.713721+00:00",
+  "updated_at": "2026-10-29T11:50:43.790866+00:00",
   "catchup": {
     "initialized_at": "2026-10-19T00:21:00Z",
     "limit": 3,
@@ -351,9 +351,9 @@
         "contribution": "No matching fluency-versus-adoption learning concept in19delivered records, all current expert/podcast ledgers, companion reports or archives. Distinct from prior pilot-capability implementation, individual productivity news and trace error-analysis.",
         "reviewed_at": "2026-10-28T23:10:01.459585+00:00"
       },
-      "status": "pending",
+      "status": "published",
       "status_reason": null,
-      "publication_id": null
+      "publication_id": "morning-2026-10-29-big-technology-jukes"
     },
     {
       "episode_id": "big-technology:d5724726-d2d4-11f1-99be-4729d228ac37",
@@ -466,6 +466,18 @@
       "verified_at": "2026-10-26T23:22:38.079804+00:00",
       "confirmation": "Live public report returned HTTP 200 with exact local byte hash. The selected actual-transcript recap was included in the accepted combined delivery after verified private publication. Private references remain outside this repository.",
       "date_sgt": "2026-10-27",
+      "show": "big-technology"
+    },
+    {
+      "publication_id": "morning-2026-10-29-big-technology-jukes",
+      "episode_id": "big-technology:youtube:iy1PwZxFA7U",
+      "status": "verified_published",
+      "output_url": "https://pbhat89.github.io/the-brief/podcast/reports/2026-10-29.html",
+      "revision": "ac3f0eed9b8263bd4b4a08f207c2528153cecb53",
+      "content_sha256": "17a912bfd3b7d5108ebdf81586689b9efdcea38760faf2b82606a341c26ab95d",
+      "verified_at": "2026-10-29T11:50:43.790866+00:00",
+      "confirmation": "Existing morning report returned HTTPS200 with exact local bytes; original measured narration and publication had already been verified. Combined late notification was accepted on the same Singapore date. No new audio or research; original source checks and transcript provenance preserved.",
+      "date_sgt": "2026-10-29",
       "show": "big-technology"
     }
   ]

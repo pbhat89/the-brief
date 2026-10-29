@@ -95,3 +95,8 @@ Naval’s evergreen 31 March 2019 complementary building-and-communication lesso
 ## 28 October 2026 · Confirmed use
 
 Karpathy’s evergreen 25 April 2019 human-baseline and annotation-consistency lesson was included in the verified, accepted combined edition. The customer-message classification exercise is an editorial application, not a quotation or a performance ceiling. Only this concept gains a narrated use; all prior concepts and historical gaps remain preserved.
+
+
+## 29 October 2026 · Confirmed use after late notification
+
+The existing verified morning edition containing Naval’s evergreen judgment-and-leverage lesson received an accepted combined notification later the same Singapore date. The concept is now narrated; the AI safeguards remain an explicitly editorial application. No audio was regenerated and no source window or earlier use was changed.

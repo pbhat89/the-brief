@@ -76,3 +76,8 @@ Before selecting a recap, attempt both the Big Technology publisher RSS and its 
 ## 27 October 2026 · Confirmed use
 
 The new Big Technology original of 26 October at 17:09 UTC was selected after separately attempting publisher RSS and the official YouTube page. The actual third-party transcript at 13:57–15:44 supports the distinct explanation of customer concentration versus distribution-channel dependence, not a repeat of the IPO headline. Automatic-transcription limitations remain; uncertain names and numbers were omitted. Verified publication and accepted combined delivery establish this use. All previous coverage and the completed, fixed three-episode seed remain unchanged.
+
+
+## 29 October 2026 · Confirmed use after late notification
+
+The existing morning edition’s sponsored Russell Jukes interview recap is now recorded as published following verified output and accepted late combined notification. Actual third-party transcript passages at 23:01–27:25 support fluency versus adoption and role-specific learning. The original October27 identity, sponsorship, transcript limitations and fixed catch-up seed are unchanged. The older Mollick original remains deferred; no new recap, audio or research was created.
