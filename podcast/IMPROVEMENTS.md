@@ -198,3 +198,12 @@ The final isolated cached rebuild passed exact frozen-input, explicit acronym, f
 ### 29 October 2026 · Verified recovery of pending notification
 
 The existing morning edition was notified after messaging became available; acceptance was verified before delivered-use records changed. This completes the notification recovery without re-rendering, re-uploading or moving source cursors. Retain the separation between publication, notification acceptance and physical playback; retry only the missing notification stage when its supported tool becomes available.
+
+
+## 30 October 2026 · Verified boundaries and next source experiment
+
+Observed: direct India cards were newer than indexed listings, while a new-looking podcast feed entry was an older-original alias. Original dates and underlying events, not index dates or upload sorting, prevented repetition. A monitoring-architecture article was a material follow-up to an already covered incident, not a new incident. These corrections were verified before narration.
+
+Completed production checks: number expansion preserved thousands separators; emitted acronym/name phonemes and frozen input were inspected. The local Worker runtime could not launch because of a platform syscall/setup failure; the existing hosted runtime and browser tests subsequently passed, without weakening tests or changing access. Publication and accepted notification remain distinct states.
+
+Proposed next bounded experiment: prioritize the highest-relevance pending source items, compare direct-page and indexed dates early, and record actual resolved dispositions. Success means fewer evidenced pending checks and retained gaps, not a larger request count or a falsely advanced full-window cursor. No change to schedules, upstream workflow, retention or credentials is proposed.

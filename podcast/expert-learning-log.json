@@ -604,11 +604,18 @@
       "takeaway": "Karpathy recommends an input-independent baseline, for example training with all inputs zeroed, to check whether real inputs provide useful predictive information.",
       "editorial_application": "A hypothetical always-routine classifier gets 90 percent accuracy on a dataset with 90 percent routine messages. Compare against a simple reference and inspect important minority cases. This example and recommendation are editorial.",
       "caveat": "Diagnostic check only, not proof of production readiness. Distinct from earlier lessons on human-label calibration, tiny-batch wiring, raw-input inspection and random search. Available daily delivery records and public archives reviewed; the older incomplete-import caveat remains.",
-      "status": "researched_candidate",
-      "dedup_review": "reviewed_no_match",
-      "last_used": null,
-      "last_narrated": null,
-      "uses": []
+      "status": "narrated",
+      "dedup_review": "covered",
+      "last_used": "2026-10-30",
+      "last_narrated": "2026-10-30",
+      "uses": [
+        {
+          "date": "2026-10-30",
+          "channel": "podcast",
+          "public_evidence_url": "https://pbhat89.github.io/the-brief/podcast/reports/2026-10-30.html",
+          "confirmation": "The source-faithful baseline lesson was included in the verified private narration and accepted combined delivery; the support-message illustration is editorial application."
+        }
+      ]
     }
   ]
 }

@@ -100,3 +100,7 @@ Karpathy’s evergreen 25 April 2019 human-baseline and annotation-consistency l
 ## 29 October 2026 · Confirmed use after late notification
 
 The existing verified morning edition containing Naval’s evergreen judgment-and-leverage lesson received an accepted combined notification later the same Singapore date. The concept is now narrated; the AI safeguards remain an explicitly editorial application. No audio was regenerated and no source window or earlier use was changed.
+
+## 30 October 2026 · Confirmed use
+
+Karpathy’s evergreen 25 April 2019 input-independent baseline lesson was included in the verified, accepted combined edition. The support-message class-imbalance example and minority-case review are editorial applications. This is distinct from previously covered human-label calibration, tiny-batch wiring and raw-input inspection. Only this confirmed concept advances; earlier coverage and history gaps remain preserved.
