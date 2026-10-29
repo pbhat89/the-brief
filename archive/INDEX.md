@@ -4106,3 +4106,38 @@ is empty until the first run.
 2026-10-29	Europe's Hera probe resolves Didymos and Dimorphos as two asteroids for the first time	f9f66fd5	ESA,Hera,Didymos,Dimorphos
 2026-10-29	Landmark study estimates about three in four former NFL players died with CTE	40868980	CTE,NFL,JAMA Network Open,study
 2026-10-29	Physicists build a carbon nanoribbon of pentagons and heptagons that conducts like metal	fe8bb740	carbon nanoribbon,physics,Nature,materials
+2026-10-30	Update: Singapore and Indonesia agree to set up joint haze task force and share data	32d03522	Singapore,Indonesia,haze,task-force
+2026-10-30	Singapore construction firm charged over unlicensed foreign-worker dormitory	2e3abdf6	Singapore,LBD Engineering,dormitory,charged
+2026-10-30	As haze chokes Singapore, runners swap the streets for shopping malls	1406ee22	Singapore,haze,runners,PSI
+2026-10-30	Temasek and GIC reject claims they engineered Indonesia's market rout	df75a560	Temasek,GIC,Indonesia,MSCI
+2026-10-30	Jamia student enters 18th day of hunger strike to revive a 20-year-suspended union	485ad212	Jamia Millia Islamia,Ebin Basil,students-union,hunger-strike
+2026-10-30	India says its forces are in multiple face-offs with China in Arunachal Pradesh	c4577a63	India,China,Arunachal Pradesh,border
+2026-10-30	Modi stays under pressure as 'cockroach' voter-roll protests and court petitions mount	28a14760	Modi,cockroach-movement,voter-rolls,Election Commission
+2026-10-30	Update: Clean-up begins in Andhra Pradesh and Odisha after deadly Cyclone Arnab	7f25d831	Cyclone Arnab,Andhra Pradesh,Odisha,clean-up
+2026-10-30	Update: Markets reward Healey's Budget as gilts rally and bank shares climb	a99fe98a	United Kingdom,Healey,Budget,gilts
+2026-10-30	Healey defends his first Budget and warns of 'tough decisions' still ahead	8964f386	United Kingdom,Healey,Budget,OBR
+2026-10-30	UK mortgage approvals fall to a 33-month low as borrowing costs bite	0cf1493c	United Kingdom,mortgage approvals,housing,Bank of England
+2026-10-30	Burnham helps Labour to its biggest poll bounce in 70 years at the 100-day mark	8db0089f	Burnham,Labour,Reform UK,poll
+2026-10-30	Obama and Trump trade blows at rival rallies days before the US midterms	97d2c8c7	Obama,Trump,US midterms,rallies
+2026-10-30	North Korea fires about 10 short-range ballistic missiles amid a landmine dispute	7514c6e0	North Korea,missiles,DMZ,South Korea
+2026-10-30	Russian strikes kill at least 19 in Ukraine, 14 at a Dnipro train station	dd949d2c	Russia,Ukraine,Dnipro,drones
+2026-10-30	Israeli strikes kill six in Gaza as officials press to reopen the Rafah crossing	9ad9de82	Israel,Gaza,Rafah,ceasefire
+2026-10-30	US military strike on an alleged drug boat kills five in the eastern Pacific	ba9c1317	United States,SOUTHCOM,drug boat,Pacific
+2026-10-30	Upwind raises $400 million after walking away from a Datadog takeover	8dc1787a	Upwind,Datadog,Bessemer,funding
+2026-10-30	Wabi, an AI agent that builds mini-apps, is now valued at $1.25 billion	1f98a881	Wabi,Eugenia Kuyda,IVP,AI agent
+2026-10-30	Google rolls out ads in AI Mode internationally as search ad growth slows	797f978c	Google,AI Mode,ads,Alphabet
+2026-10-30	SuperMe raises $20 million for a network of paid AI expert profiles	ac9dde53	SuperMe,Forerunner,Greylock,AI
+2026-10-30	Amazon jumps as AWS growth tops 39%, outpacing cloud rivals	ba3ccc15	Amazon,AWS,earnings,cloud
+2026-10-30	Samsung posts its first-ever 100-trillion-won quarterly profit, but shares slip	be8e6f35	Samsung,earnings,HBM4,chips
+2026-10-30	Shell nearly doubles quarterly profit to $10.8 billion on record refining margins	992ff93a	Shell,earnings,refining,oil
+2026-10-30	Lagarde to step down as ECB president early, triggering a succession race	5a17b5a5	Lagarde,ECB,rates,inflation
+2026-10-30	Eli Lilly jumps after a big earnings beat and raised revenue outlook	88b5dac4	Eli Lilly,earnings,guidance,pharma
+2026-10-30	🏎️ Antonelli misses Mexico City media day with a viral illness before likely title	43f79914	Formula 1,Antonelli,Mexico City Grand Prix,title
+2026-10-30	🏎️ McLaren plan fresh upgrades for Mexico after Norris and Piastri struggle in Austin	b5bdfe0e	Formula 1,McLaren,Norris,Piastri
+2026-10-30	🎾 Arthur Fils rallies past Michelsen to reach the Basel quarter-finals	857f7d9c	tennis,Arthur Fils,Basel,quarter-finals
+2026-10-30	🎾 Ben Shelton blasts 44 aces to survive a first-round scare in Basel	f9c89462	tennis,Ben Shelton,Basel,aces
+2026-10-30	Prime editing used to rewrite DNA inside the human body for the first time	bcd415f6	prime editing,Prime Medicine,Wilson's disease,gene editing
+2026-10-30	Physicists trap a single antimatter particle for a month, opening new-physics tests	7e21a87e	antimatter,positron,Gabrielse,physics
+2026-10-30	A Jurassic swimmer reveals the origin of the mammalian throat 165 million years ago	5dce2aab	Megacauda,mammaliaform,fossil,Inner Mongolia
+2026-10-30	NASA's Lucy becomes the first spacecraft to reach Jupiter's Trojan asteroids	18caa19a	NASA,Lucy,Trojan asteroids,Jupiter
+2026-10-30	NASA's Voyager 1 resolves a brief communications pause and conserves power	320ab620	NASA,Voyager 1,communications,power

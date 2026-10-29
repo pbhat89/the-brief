@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-08-30",
-      "topic_key": "saturn",
-      "text": "Saturn would float in water"
-    },
-    {
       "date": "2026-08-31",
       "topic_key": "flamingo",
       "text": "Flamingos are born grey and turn pink from their diet"
@@ -269,14 +264,14 @@
       "date": "2026-10-29",
       "topic_key": "hummingbird",
       "text": "A hummingbird is the only bird that can fly backwards; its heart can beat past 1,200 times a minute."
+    },
+    {
+      "date": "2026-10-30",
+      "topic_key": "unicorn",
+      "text": "Scotland's national animal is the mythical unicorn"
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-09-29",
-      "type": "quantitative",
-      "title_key": "trailing-zeros"
-    },
     {
       "date": "2026-09-30",
       "type": "lateral",
@@ -421,14 +416,14 @@
       "date": "2026-10-29",
       "type": "lateral",
       "title_key": "out-of-the-blue"
+    },
+    {
+      "date": "2026-10-30",
+      "type": "visual",
+      "title_key": "hole-punch"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-09-29",
-      "type": "grouping",
-      "title_key": "compound-interest"
-    },
     {
       "date": "2026-09-30",
       "type": "ladder",
@@ -573,6 +568,11 @@
       "date": "2026-10-29",
       "type": "grouping",
       "title_key": "double-agents"
+    },
+    {
+      "date": "2026-10-30",
+      "type": "ladder",
+      "title_key": "base-metal"
     }
   ]
 }
