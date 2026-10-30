@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_on": "2026-10-30",
+  "updated_on": "2026-10-31",
   "timezone": "Asia/Singapore",
   "history": {
     "complete": false,
@@ -616,6 +616,62 @@
           "confirmation": "The source-faithful baseline lesson was included in the verified private narration and accepted combined delivery; the support-message illustration is editorial application."
         }
       ]
+    },
+    {
+      "concept_id": "predict-representations-not-pixel-details",
+      "aliases": [
+        "semantic prediction targets",
+        "I-JEPA abstract representations versus pixels"
+      ],
+      "experts": [
+        "Yann LeCun"
+      ],
+      "theme": "technical_coding",
+      "title": "Choose the information the model should predict",
+      "sources": [
+        {
+          "title": "Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture",
+          "url": "https://arxiv.org/abs/2301.08243",
+          "authors": [
+            "Mahmoud Assran",
+            "Quentin Duval",
+            "Ishan Misra",
+            "Piotr Bojanowski",
+            "Pascal Vincent",
+            "Michael Rabbat",
+            "Yann LeCun",
+            "Nicolas Ballas"
+          ],
+          "original_date": "2023-01-19",
+          "original_date_basis": "Original arXiv submission January 19, 2023 at 18:59:01 UTC; later revisions separately displayed.",
+          "checked_on": "2026-10-31",
+          "kind": "first_party",
+          "verification": "direct_primary",
+          "locator": "Abstract: predicting target-block representations from a context block"
+        },
+        {
+          "title": "I-JEPA: The first AI model based on Yann LeCun’s vision for more human-like AI",
+          "url": "https://ai.meta.com/blog/yann-lecun-ai-model-i-jepa/",
+          "authors": [
+            "Meta AI"
+          ],
+          "original_date": "2023-06-13",
+          "original_date_basis": "Date displayed on original research announcement; distinct from paper submission.",
+          "checked_on": "2026-10-31",
+          "kind": "first_party",
+          "verification": "direct_primary",
+          "locator": "Capturing common-sense knowledge and A first step sections"
+        }
+      ],
+      "classification": "evergreen",
+      "takeaway": "I-JEPA predicts learned representations of target image blocks rather than exact missing pixels, aiming to learn semantic features while avoiding unnecessary low-level detail.",
+      "editorial_application": "The dog-behind-a-fence analogy and question about matching the learning objective to the downstream task are editorial applications, not an experiment or a quotation from the authors.",
+      "caveat": "Coauthored 2023 image-learning research, not proof of human-level understanding or a universal rejection of generative models. Distinct from the October 21 lesson on obtaining supervision from hidden inputs: this lesson concerns WHAT representation to predict, rather than WHERE training labels come from. All 21 available daily delivery records and repository archives checked; prior global history-import gaps remain.",
+      "status": "researched_candidate",
+      "dedup_review": "reviewed_no_match",
+      "last_used": null,
+      "last_narrated": null,
+      "uses": []
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "run_id": "morning-2026-10-31",
-  "updated_at": "2026-10-30T23:00:36.215566+00:00",
+  "updated_at": "2026-10-30T23:10:52.373368+00:00",
   "previous_run": {
     "run_id": "morning-2026-10-30",
     "state": "completed",
@@ -17,30 +17,30 @@
     {
       "id": "upstream",
       "label": "Same-day upstream intake",
-      "state": "running",
-      "updated_at": "2026-10-30T23:00:36.215566+00:00",
-      "detail": "Same-day upstream HTML and JSON are available; individual freshness and source checks in progress."
+      "state": "completed",
+      "updated_at": "2026-10-30T23:10:52.373368+00:00",
+      "detail": "All 25 same-day upstream entries reconciled, with corrected dates, explicit exclusions and verified catch-ups."
     },
     {
       "id": "research",
       "label": "Source research and deduplication",
-      "state": "running",
-      "updated_at": "2026-10-30T23:00:36.215566+00:00",
-      "detail": "Parallel public-source research and original-source checks underway. Attempts do not establish complete timeline coverage."
+      "state": "completed",
+      "updated_at": "2026-10-30T23:10:52.373368+00:00",
+      "detail": "241 required sources attempted. 210 recent X excerpts substantively read; 831 older excerpts unread. Zero complete source windows; partial gaps retained."
     },
     {
       "id": "script",
       "label": "Narrative preparation",
-      "state": "pending",
-      "updated_at": "2026-10-30T23:00:36.215566+00:00",
-      "detail": "Not yet completed for this edition."
+      "state": "completed",
+      "updated_at": "2026-10-30T23:10:52.373368+00:00",
+      "detail": "46 concise news items and one distinct expert lesson prepared. New podcast discovery lacks an actual transcript and remains pending."
     },
     {
       "id": "audio",
       "label": "Private narration checks",
-      "state": "pending",
-      "updated_at": "2026-10-30T23:00:36.215566+00:00",
-      "detail": "Not yet completed for this edition."
+      "state": "running",
+      "updated_at": "2026-10-30T23:10:52.373368+00:00",
+      "detail": "Private narration rendering. Duration and full decode not yet verified."
     },
     {
       "id": "publication",

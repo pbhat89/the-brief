@@ -258,6 +258,40 @@
       "selectedResearchCandidate": null,
       "everydayAI": "All six required surfaces attempted. Current YouTube reveals original Ep 890 on October 27; actual indexed publisher transcript is a show-transition announcement and temporary pause, not substantive learning. Excluded, not delivered. Older visible publisher site/newsletter snapshots stop August 14; channel upload list is newer.",
       "stateAuthority": "Research only. Fixed seed and publication records unchanged. New YouTube candidates remain in source review, not main episode ledger, because the latter requires independently established original publication time. Upload timestamps are not substituted. No recap selected."
+    },
+    {
+      "asOf": "2026-10-31",
+      "checkedAt": "2026-10-30T23:03:20.148497+00:00",
+      "discovery": [
+        {
+          "episodeId": "big-technology:7bf74568-d4a8-11f1-ac2b-2fcd5135f7e1",
+          "rssGuid": "7bf74568-d4a8-11f1-ac2b-2fcd5135f7e1",
+          "title": "Big Tech's Ugly Week, Getting Rich At Anthropic, AI Costs Plunge",
+          "rssPublishedAt": "2026-10-30T21:30:00Z",
+          "originalPublishedAt": null,
+          "originality": "unverified",
+          "originalityNote": "RSS labels this a full episode, not proof of first original publication. No matching official YouTube original established in current snapshot.",
+          "rssEpisodeType": "full",
+          "rssDurationSeconds": 3521,
+          "canonicalFeedUrl": "https://feeds.megaphone.fm/LI3617121267",
+          "enclosureUrl": "https://pdst.fm/e/tracking.swap.fm/track/t7yC0rGPUqahTF4et8YD/pscrb.fm/rss/p/traffic.megaphone.fm/AMPP4171243176.mp3",
+          "status": "pending_original_and_transcript_verification",
+          "covered": false,
+          "transcript": {
+            "status": "unavailable",
+            "body_retrieved": false,
+            "source_url": "https://podscripts.co/podcasts/big-technology-podcast/",
+            "provenance": "third-party-transcription",
+            "checked_at": "2026-10-30T23:03:20.148497+00:00",
+            "access_note": "Publisher RSS labels full episode and supplies October 30 distribution time; earliest original chronology not independently corroborated on YouTube. Official channel snapshot lacks this episode. Actual Podscripts index latest is October 28 Mollick; candidate title slug returned 404. Search found listing/description but no actual transcript. No episode content summarized or delivered."
+          },
+          "checkedAt": "2026-10-30T23:03:20.148497+00:00",
+          "ledgerInsertionDeferredReason": "Current ledger schema requires boolean original and an original publication timestamp. Neither can encode unknown faithfully; preserve discovery here and in coverage items, with no recap or delivered state."
+        }
+      ],
+      "summary": "Everyday AI currently shows its October 27 show-transition announcement plus replays or older originals. The four website/newsletter surfaces returned direct HTTP 403; their public search extracts show August listings. Big Technology has a new October 30 21:30 UTC full RSS episode, but its actual transcript was unavailable: the Podscripts index still ends at October 28, candidate episode page is 404, and it was absent from the official YouTube snapshot. No recap inferred from title/description; fixed seed unchanged and no old-episode backfill.",
+      "covered": false,
+      "fixedCatchupQueueChanged": false
     }
   ]
 }
