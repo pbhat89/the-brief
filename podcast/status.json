@@ -1,60 +1,60 @@
 {
-  "run_id": "morning-2026-10-30",
-  "updated_at": "2026-10-29T23:29:10.248688+00:00",
+  "run_id": "morning-2026-10-31",
+  "updated_at": "2026-10-30T23:00:36.215566+00:00",
   "previous_run": {
-    "run_id": "morning-2026-10-29",
+    "run_id": "morning-2026-10-30",
     "state": "completed",
-    "detail": "Previous morning edition delivered after notification-tool recovery; no regeneration."
+    "detail": "Previous combined morning edition published and notified; source windows remain explicitly partial."
   },
   "steps": [
     {
       "id": "history",
       "label": "History and operational feedback",
       "state": "completed",
-      "updated_at": "2026-10-29T23:17:30.113372+00:00",
-      "detail": "Available delivery history, current policies and operational feedback reviewed."
+      "updated_at": "2026-10-30T23:00:36.215566+00:00",
+      "detail": "Current feedback, policies and 21 delivered editions loaded; prior source gaps preserved."
     },
     {
       "id": "upstream",
       "label": "Same-day upstream intake",
-      "state": "completed",
-      "updated_at": "2026-10-29T23:17:30.113372+00:00",
-      "detail": "All 35 same-day upstream news entries reconciled with current sources and exclusion reasons."
+      "state": "running",
+      "updated_at": "2026-10-30T23:00:36.215566+00:00",
+      "detail": "Same-day upstream HTML and JSON are available; individual freshness and source checks in progress."
     },
     {
       "id": "research",
       "label": "Source research and deduplication",
-      "state": "completed",
-      "updated_at": "2026-10-29T23:17:30.113372+00:00",
-      "detail": "241 mandatory sources attempted, plus one fact source; bounded source windows remain partial with pending work preserved."
+      "state": "running",
+      "updated_at": "2026-10-30T23:00:36.215566+00:00",
+      "detail": "Parallel public-source research and original-source checks underway. Attempts do not establish complete timeline coverage."
     },
     {
       "id": "script",
       "label": "Narrative preparation",
-      "state": "completed",
-      "updated_at": "2026-10-29T23:17:30.113372+00:00",
-      "detail": "41 concise news items and one distinct expert lesson prepared. No qualifying new podcast recap; no filler added."
+      "state": "pending",
+      "updated_at": "2026-10-30T23:00:36.215566+00:00",
+      "detail": "Not yet completed for this edition."
     },
     {
       "id": "audio",
       "label": "Private narration checks",
-      "state": "completed",
-      "updated_at": "2026-10-29T23:29:10.248688+00:00",
-      "detail": "Full decode passed; 601.57 seconds, zero clipped/non-finite samples. Measured editorial audit passed."
+      "state": "pending",
+      "updated_at": "2026-10-30T23:00:36.215566+00:00",
+      "detail": "Not yet completed for this edition."
     },
     {
       "id": "publication",
       "label": "Public report publication",
-      "state": "completed",
-      "updated_at": "2026-10-29T23:29:10.248688+00:00",
-      "detail": "Public report, source checklist and generated catalogues are live and byte-verified; hosted regression and deployment passed."
+      "state": "pending",
+      "updated_at": "2026-10-30T23:00:36.215566+00:00",
+      "detail": "Not yet completed for this edition."
     },
     {
       "id": "delivery",
       "label": "Private episode delivery",
-      "state": "completed",
-      "updated_at": "2026-10-29T23:29:10.248688+00:00",
-      "detail": "Verified private publication and accepted combined notification."
+      "state": "pending",
+      "updated_at": "2026-10-30T23:00:36.215566+00:00",
+      "detail": "Not yet completed for this edition."
     }
   ]
 }
