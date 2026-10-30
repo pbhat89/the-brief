@@ -667,11 +667,18 @@
       "takeaway": "I-JEPA predicts learned representations of target image blocks rather than exact missing pixels, aiming to learn semantic features while avoiding unnecessary low-level detail.",
       "editorial_application": "The dog-behind-a-fence analogy and question about matching the learning objective to the downstream task are editorial applications, not an experiment or a quotation from the authors.",
       "caveat": "Coauthored 2023 image-learning research, not proof of human-level understanding or a universal rejection of generative models. Distinct from the October 21 lesson on obtaining supervision from hidden inputs: this lesson concerns WHAT representation to predict, rather than WHERE training labels come from. All 21 available daily delivery records and repository archives checked; prior global history-import gaps remain.",
-      "status": "researched_candidate",
-      "dedup_review": "reviewed_no_match",
-      "last_used": null,
-      "last_narrated": null,
-      "uses": []
+      "status": "narrated",
+      "dedup_review": "covered",
+      "last_used": "2026-10-31",
+      "last_narrated": "2026-10-31",
+      "uses": [
+        {
+          "date": "2026-10-31",
+          "channel": "podcast",
+          "public_evidence_url": "https://pbhat89.github.io/the-brief/podcast/reports/2026-10-31.html",
+          "confirmation": "The source-backed evergreen representation-target lesson was included in verified narration, with publication and accepted combined delivery confirmed. The dog analogy and downstream-task application are editorial."
+        }
+      ]
     }
   ]
 }

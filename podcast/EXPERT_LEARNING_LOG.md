@@ -104,3 +104,8 @@ The existing verified morning edition containing Naval’s evergreen judgment-an
 ## 30 October 2026 · Confirmed use
 
 Karpathy’s evergreen 25 April 2019 input-independent baseline lesson was included in the verified, accepted combined edition. The support-message class-imbalance example and minority-case review are editorial applications. This is distinct from previously covered human-label calibration, tiny-batch wiring and raw-input inspection. Only this confirmed concept advances; earlier coverage and history gaps remain preserved.
+
+
+## 31 October 2026 · Confirmed use
+
+Yann LeCun and coauthors’ evergreen 2023 I-JEPA representation-target lesson was included in the verified, accepted combined edition: [public report](https://pbhat89.github.io/the-brief/podcast/reports/2026-10-31.html). The lesson explains predicting learned image representations rather than exact pixels; the dog-behind-a-fence analogy and downstream-task question are explicitly editorial. This is distinct from the earlier lesson on where self-supervised training signals come from. Only this concept gains a narrated use. No inaccessible podcast original is marked delivered; all earlier uses and historical coverage gaps remain preserved.

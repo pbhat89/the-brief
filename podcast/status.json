@@ -1,6 +1,6 @@
 {
   "run_id": "morning-2026-10-31",
-  "updated_at": "2026-10-30T23:10:52.373368+00:00",
+  "updated_at": "2026-10-30T23:46:32.286504+00:00",
   "previous_run": {
     "run_id": "morning-2026-10-30",
     "state": "completed",
@@ -38,23 +38,23 @@
     {
       "id": "audio",
       "label": "Private narration checks",
-      "state": "running",
-      "updated_at": "2026-10-30T23:10:52.373368+00:00",
-      "detail": "Private narration rendering. Duration and full decode not yet verified."
+      "state": "completed",
+      "updated_at": "2026-10-30T23:19:46.296247+00:00",
+      "detail": "Full decode, clipping and measured editorial checks passed; approximately eleven minutes. Device playback remains unverified."
     },
     {
       "id": "publication",
       "label": "Public report publication",
-      "state": "pending",
-      "updated_at": "2026-10-30T23:00:36.215566+00:00",
-      "detail": "Not yet completed for this edition."
+      "state": "completed",
+      "updated_at": "2026-10-30T23:46:32.286504+00:00",
+      "detail": "Report and source checklist verified live; initial hosted regression and Pages passed. Reader catalogue activation and final commit checks in progress."
     },
     {
       "id": "delivery",
       "label": "Private episode delivery",
-      "state": "pending",
-      "updated_at": "2026-10-30T23:00:36.215566+00:00",
-      "detail": "Not yet completed for this edition."
+      "state": "completed",
+      "updated_at": "2026-10-30T23:32:12.213422Z",
+      "detail": "Verified private upload and exact replay matched hash, size and seven-day expiry; combined conversation notification accepted. Device playback and elapsed deletion remain unverified."
     }
   ]
 }

@@ -207,3 +207,12 @@ Observed: direct India cards were newer than indexed listings, while a new-looki
 Completed production checks: number expansion preserved thousands separators; emitted acronym/name phonemes and frozen input were inspected. The local Worker runtime could not launch because of a platform syscall/setup failure; the existing hosted runtime and browser tests subsequently passed, without weakening tests or changing access. Publication and accepted notification remain distinct states.
 
 Proposed next bounded experiment: prioritize the highest-relevance pending source items, compare direct-page and indexed dates early, and record actual resolved dispositions. Success means fewer evidenced pending checks and retained gaps, not a larger request count or a falsely advanced full-window cursor. No change to schedules, upstream workflow, retention or credentials is proposed.
+
+
+## 31 October 2026 · Publication-stage observability proposal
+
+Observed: the verified episode and live report/checklist received accepted combined delivery, while catalogue closeout and hosted CI remain pending after interruption of a long repository-tree call. That call made no ref mutation. All 188 local tests passed, but local tests do not establish hosted deployment success. Narration passed full decoding and zero-clipping checks at 659.36675 seconds and an estimated 165.02 words per minute; upload/replay receipt, hash, size and seven-day expiry interval matched.
+
+Coverage boundary retained: 210 recent X items were read, 831 older items remain unread, and zero complete historical windows are asserted. The inaccessible new podcast transcript was not summarized or marked delivered. Source attempts and item filtering are not substitutes for substantive reading.
+
+Proposed bounded experiment, not implemented or verified: separate repository publication into smaller calls, record the result of each stage, and check for a terminal remote outcome before the next mutation. Measure success by explicit publication and CI outcomes without silent long calls, not by more retries. Reconcile uncertain outcomes and preserve concurrent changes. Physical-device playback and elapsed expiry remain separate checks. This proposal does not alter credentials, permissions, schedules or retention.
