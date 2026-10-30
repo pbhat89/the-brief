@@ -216,3 +216,7 @@ Observed: the verified episode and live report/checklist received accepted combi
 Coverage boundary retained: 210 recent X items were read, 831 older items remain unread, and zero complete historical windows are asserted. The inaccessible new podcast transcript was not summarized or marked delivered. Source attempts and item filtering are not substitutes for substantive reading.
 
 Proposed bounded experiment, not implemented or verified: separate repository publication into smaller calls, record the result of each stage, and check for a terminal remote outcome before the next mutation. Measure success by explicit publication and CI outcomes without silent long calls, not by more retries. Reconcile uncertain outcomes and preserve concurrent changes. Physical-device playback and elapsed expiry remain separate checks. This proposal does not alter credentials, permissions, schedules or retention.
+
+### 31 October 2026 · Verified bounded publication recovery
+
+Completed fix for this run: generated catalogue files were uploaded as separate Git blobs, then referenced by SHA in a smaller tree. The branch update succeeded and the exact catalogue commit passed hosted regression and deployment. Early-yielding tool calls allowed progress reporting. This is a demonstrated recovery for the observed large inline-request stalls, not proof of a general service limit. Retain the earlier substantive-source-review experiment; request counts still do not establish complete coverage.
