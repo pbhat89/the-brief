@@ -4141,3 +4141,28 @@ is empty until the first run.
 2026-10-30	A Jurassic swimmer reveals the origin of the mammalian throat 165 million years ago	5dce2aab	Megacauda,mammaliaform,fossil,Inner Mongolia
 2026-10-30	NASA's Lucy becomes the first spacecraft to reach Jupiter's Trojan asteroids	18caa19a	NASA,Lucy,Trojan asteroids,Jupiter
 2026-10-30	NASA's Voyager 1 resolves a brief communications pause and conserves power	320ab620	NASA,Voyager 1,communications,power
+2026-10-31	Singapore to make Marburg, Lassa and Crimean-Congo fevers notifiable from Oct 31	66730dee	singapore,communicable diseases agency,marburg,lassa fever,crimean-congo
+2026-10-31	Singaporean man jailed 19 years and given 24 strokes for abusing six boys	8eb8aed4	singapore,court,sexual abuse,sentencing
+2026-10-31	PM Wong says the government will not cap prices despite cost-of-living strains	3daf4723	lawrence wong,singapore,cost of living,prices
+2026-10-31	Singapore leans on quiet diplomacy as haze and gas tensions with Indonesia simmer	3599c782	singapore,indonesia,haze,prabowo,gas
+2026-10-31	Indian court orders takedown of documentary alleging Modi-Adani ties	40b8bfdc	calcutta high court,narendra modi,gautam adani,documentary
+2026-10-31	Trump says a US-India trade deal is 'pretty close'	ce6d7398	india,united states,trade deal,piyush goyal,trump
+2026-10-31	UK PM Burnham says he wants to discuss a return to EU free movement	5ccd2b45	andy burnham,united kingdom,european union,free movement,farage
+2026-10-31	Burnham weighs single-market and customs-union options ahead of Brussels summit	b9e1bab0	andy burnham,united kingdom,european union,brussels summit,single market
+2026-10-31	Polls favour Democrats as Trump cancels rallies four days before US midterms	8020bc6d	united states,midterms,democrats,donald trump
+2026-10-31	UN commission says Russian strikes on Ukraine's power grid are war crimes	ca104eba	united nations,russia,ukraine,energy infrastructure,war crimes
+2026-10-31	UAE court jails eight for life over arms supplies to Sudan's army	379b88b9	united arab emirates,sudan,arms supplies,rapid support forces
+2026-10-31	OpenAI plans to buy Google's AI chips to diversify beyond Nvidia	135d7ae8	openai,google,tpu,nvidia,ai chips
+2026-10-31	Nvidia in talks to backstop billions in debt for an Nscale data centre	87c7d392	nvidia,nscale,anthropic,data center,west virginia
+2026-10-31	Wall Street sell-off deepens as AI-spending fears grip markets	a87152f8	wall street,s&p 500,nasdaq,ai spending,selloff
+2026-10-31	Intel plunges on weak outlook despite a third-quarter earnings beat	b1fdbdb9	intel,earnings,foundry,pc market
+2026-10-31	Update: Amazon shares slide as record capex overshadows 39% AWS growth	7ffa84a2	amazon,aws,earnings,capex,free cash flow
+2026-10-31	Exxon and Chevron beat estimates on strong refining profits	22aa915f	exxonmobil,chevron,earnings,refining
+2026-10-31	🏎️ Leclerc tops opening practice in Mexico City as rookies take to the track	6fb0850a	formula 1,mexico city grand prix,charles leclerc,kimi antonelli,practice
+2026-10-31	🏎️ Antonelli can clinch the 2026 F1 title in Mexico with a top-nine finish	adba678a	formula 1,kimi antonelli,title,mexico,standings
+2026-10-31	🎾 Zverev routs Fery to reach the Vienna semi-finals	8a4ba751	tennis,alexander zverev,vienna,semi-final
+2026-10-31	🏏 South Africa set Australia 288 to win the Cape Town Test	bee5ae58	cricket,south africa,australia,cape town test
+2026-10-31	One of the oldest Mars meteorites reveals a wetter early Red Planet	7ab7cc8f	nasa,mars,meteorite,teghaza 001,water
+2026-10-31	The newborn brain purges billions of mutation-riddled neurons	9b3cf399	nature,neuroscience,brain,neurons,development
+2026-10-31	'Stupendously large' black holes ruled out as the source of dark matter	a7587087	nature,black holes,dark matter,cosmic microwave background
+2026-10-31	Why dengue can come back harder in vaccinated people	25aa5ce7	nature,dengue,vaccine,challenge trial
