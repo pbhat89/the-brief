@@ -109,3 +109,8 @@ Karpathy’s evergreen 25 April 2019 input-independent baseline lesson was inclu
 ## 31 October 2026 · Confirmed use
 
 Yann LeCun and coauthors’ evergreen 2023 I-JEPA representation-target lesson was included in the verified, accepted combined edition: [public report](https://pbhat89.github.io/the-brief/podcast/reports/2026-10-31.html). The lesson explains predicting learned image representations rather than exact pixels; the dog-behind-a-fence analogy and downstream-task question are explicitly editorial. This is distinct from the earlier lesson on where self-supervised training signals come from. Only this concept gains a narrated use. No inaccessible podcast original is marked delivered; all earlier uses and historical coverage gaps remain preserved.
+
+
+## 1 November 2026 · Confirmed use
+
+Karpathy’s evergreen 25 April 2019 fixed-seed debugging lesson was included in the verified, accepted combined edition: [public report](https://pbhat89.github.io/the-brief/podcast/reports/2026-11-01.html). It concerns controlling stochastic variation in comparisons, distinct from prior baseline, tiny-batch wiring and random-search lessons. The cake analogy and experiment-record application are editorial. The qualification that a seed alone does not guarantee cross-hardware or cross-version reproducibility remains explicit. Only this concept gains a narrated use; no inaccessible podcast episode is marked delivered.

@@ -710,11 +710,18 @@
       "takeaway": "Karpathy recommends fixing the random seed during debugging to remove a factor of variation when rerunning code.",
       "editorial_application": "The cake-recipe analogy and recommendation to preserve data version, settings and seed while changing an intended factor are editorial.",
       "caveat": "A seed alone does not guarantee reproducibility across hardware, releases or all operations; PyTorch original documentation independently supports this qualification. Distinct from input-independent baseline, human agreement, tiny-batch wiring and random hyperparameter search. All 22 available delivery records and public reports/archive history checked; global incomplete-import caveat remains.",
-      "status": "researched_candidate",
-      "dedup_review": "reviewed_no_match",
-      "last_used": null,
-      "last_narrated": null,
-      "uses": []
+      "status": "narrated",
+      "dedup_review": "covered",
+      "last_used": "2026-11-01",
+      "last_narrated": "2026-11-01",
+      "uses": [
+        {
+          "date": "2026-11-01",
+          "channel": "podcast",
+          "public_evidence_url": "https://pbhat89.github.io/the-brief/podcast/reports/2026-11-01.html",
+          "confirmation": "Verified final narration included the source-backed evergreen fixed-seed debugging lesson; publication and accepted combined delivery confirmed. Analogy and experiment-record application are editorial, with cross-platform reproducibility caveat preserved."
+        }
+      ]
     }
   ]
 }

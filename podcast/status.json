@@ -1,6 +1,6 @@
 {
   "run_id": "morning-2026-11-01",
-  "updated_at": "2026-10-31T23:37:24.582415+00:00",
+  "updated_at": "2026-10-31T23:40:34.066931+00:00",
   "previous_run": {
     "run_id": "morning-2026-10-31",
     "state": "completed",
@@ -46,8 +46,8 @@
       "id": "publication",
       "label": "Public report publication",
       "state": "completed",
-      "updated_at": "2026-10-31T23:15:21.659481+00:00",
-      "detail": "Report and source checklist verified live byte-for-byte; reader catalogue activation in progress."
+      "updated_at": "2026-10-31T23:40:34.066931+00:00",
+      "detail": "Report, checklist and generated reader catalogue verified live; catalogue regression, Worker and Pages deployments succeeded. Final operational-note commit is monitored separately."
     },
     {
       "id": "delivery",

@@ -220,3 +220,16 @@ Proposed bounded experiment, not implemented or verified: separate repository pu
 ### 31 October 2026 · Verified bounded publication recovery
 
 Completed fix for this run: generated catalogue files were uploaded as separate Git blobs, then referenced by SHA in a smaller tree. The branch update succeeded and the exact catalogue commit passed hosted regression and deployment. Early-yielding tool calls allowed progress reporting. This is a demonstrated recovery for the observed large inline-request stalls, not proof of a general service limit. Retain the earlier substantive-source-review experiment; request counts still do not establish complete coverage.
+
+
+## 1 November 2026 · Verified parsing correction and bounded execution experiment
+
+Completed and checked: 578 RSS distribution timestamps were repaired from individually verified raw `-0000` offsets, which the parser had represented without timezone information. The output now carries explicit UTC instants; uncertain original dates remain unknown, and episode upload-date/transcript-enum checks passed. Keep this regression check in the production data path rather than assuming a successful parse implies an aware timestamp.
+
+Observed execution delay: a local shell read/log operation stalled 1,144 seconds before interruption. A separate yielded catalogue cell vanished without a branch mutation; the remote head remained `76bf96b`. This is not evidence that GitHub caused the entire delay. Hypothesis: overlapping long tool calls may contribute; causality is unproven. Proposed bounded experiment, not a verified fix: serialize retained tool cells, yield/report promptly, and require a recorded terminal outcome before the next publication mutation. Success means attributable stage timings and reconciled remote state without silent long-running calls, not merely more retries. Catalogue closeout remains pending despite live report/checklist, passed initial CI and accepted combined delivery.
+
+Coverage remains explicitly partial: 241 required attempts, 245 partial rows, seven blocked rows and 1,594 pending items; 162 recent X items actually read, 879 older unread and 15 fresh pending, with zero complete historical windows. No recap was inferred from an inaccessible transcript. Narration and upload QA passed, but physical playback and elapsed seven-day expiry remain separate observations.
+
+Verified operational change effective 2 November: the external automation now starts 06:30 Singapore daily and checks same-day upstream during 06:30–06:40, targeting delivery before 07:15 without guaranteeing it. Upstream Claude’s 07:00 routine and email workflow remain unchanged. This records an independently verified automation change; editing this document itself does not alter schedules, current-edition policy or validators.
+
+Verified outcome for this bounded recovery: sequential individual blob uploads and a small SHA-referenced tree activated the catalogue; exact-head regression and deployments passed, with hosted byte equality. Retain prompt yielding and explicit remote-state reconciliation. The overlapping-call causal hypothesis remains unproven; do not relabel it an established fix. Prioritize verified audio/report delivery over nonblocking catalogue closeout, while still completing the latter.
