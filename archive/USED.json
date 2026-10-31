@@ -269,14 +269,14 @@
       "date": "2026-10-31",
       "topic_key": "eiffel tower",
       "text": "The Eiffel Tower grows about 15 cm taller in summer heat"
+    },
+    {
+      "date": "2026-11-01",
+      "topic_key": "koala",
+      "text": "Koalas have fingerprints so similar to a human's that even under a microscope they can be hard to tell apart. The looping, whorled ridges evolved independently from ours — close relatives like wombats and kangaroos lack them — most likely to help the animals grip and handle eucalyptus leaves."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-10-01",
-      "type": "visual",
-      "title_key": "painted-cube"
-    },
     {
       "date": "2026-10-02",
       "type": "logic",
@@ -421,14 +421,14 @@
       "date": "2026-10-31",
       "type": "logic",
       "title_key": "three-suspects"
+    },
+    {
+      "date": "2026-11-01",
+      "type": "quantitative",
+      "title_key": "fair-exchange"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-10-01",
-      "type": "anagram",
-      "title_key": "scrambled-basket"
-    },
     {
       "date": "2026-10-02",
       "type": "spellingbee",
@@ -573,6 +573,11 @@
       "date": "2026-10-31",
       "type": "letterboxed",
       "title_key": "spellbound"
+    },
+    {
+      "date": "2026-11-01",
+      "type": "anagram",
+      "title_key": "count-on-it"
     }
   ]
 }

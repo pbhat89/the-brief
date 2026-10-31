@@ -4166,3 +4166,40 @@ is empty until the first run.
 2026-10-31	The newborn brain purges billions of mutation-riddled neurons	9b3cf399	nature,neuroscience,brain,neurons,development
 2026-10-31	'Stupendously large' black holes ruled out as the source of dark matter	a7587087	nature,black holes,dark matter,cosmic microwave background
 2026-10-31	Why dengue can come back harder in vaccinated people	25aa5ce7	nature,dengue,vaccine,challenge trial
+2026-11-01	Man, 30, charged with nine offences over fatal Tampines Avenue 12 hit-and-run	31da29f5	
+2026-11-01	HDB to redevelop Toa Payoh West with more than 6,000 new homes	b3f20366	
+2026-11-01	Singapore Airlines and Scoot put more than 380,000 discounted tickets on sale	e81ab4ef	
+2026-11-01	Delivery rider blind in one eye loses bid for monthly maintenance from ex-wife	08e4bbcc	
+2026-11-01	ISRO's GSLV-F18 launches NVS-03, restoring the NavIC navigation system	790fd384	
+2026-11-01	Helicopter returning from Badrinath crashes near Joshimath, killing all six aboard	944fffb4	
+2026-11-01	Supreme Court says intimacy in a soured relationship is not automatically rape	3b98f9e1	
+2026-11-01	Srinagar MP Aga Ruhullah Mehdi says he will quit the National Conference	5a3c556c	
+2026-11-01	RJD's Anil Jha wins a Bihar MLC seat on second preferences after trailing all 10 rounds	cf12406e	
+2026-11-01	UK gilt yields fall to a five-week low as Burnham's budget wins back bond investors	5e503d40	
+2026-11-01	UK house prices stall in October as mortgage costs bite, Nationwide says	29dac92d	
+2026-11-01	Burnham says the UK budget was not what he would want in an 'ideal world'	920d7cf7	
+2026-11-01	UK debt office tilts gilt sales toward shorter maturities amid market volatility	4dd3e2aa	
+2026-11-01	Thousands rally in Berlin as Gen Z protests spread across more than 30 German cities	e25c742e	
+2026-11-01	Ebola death toll in DR Congo passes 5,000 in the country's deadliest outbreak on record	f74f5f1c	
+2026-11-01	Iran calls US outreach a 'positive step' as a delegation holds talks in Qatar	1c5f9fbd	
+2026-11-01	G20 scraps its group photo in Atlanta as European ministers refuse to stand with Lavrov	2a2c0aa2	
+2026-11-01	Al Jazeera investigation maps Sudanese commanders linked to wartime sexual violence	6eec1834	
+2026-11-01	OpenAI cuts its funding target by $10 billion to about $20 billion as AI stocks slide	3f79f22f	
+2026-11-01	South Korea's FuriosaAI raises $620 million, quadrupling its valuation to $2.9 billion	33082dd0	
+2026-11-01	Ex-Palantir engineers launch Dream with $17 million to build AI 'world models' for construction	3a6ca6e3	
+2026-11-01	US Justice Department scrutinises Nvidia's roughly $13 billion Hugging Face deal	a3bb9e27	
+2026-11-01	Big Tech's AI capital spending diverges as nerves over the boom grow	e656d012	
+2026-11-01	Bank of Japan holds its policy rate at 1.25%, its highest since 1995	c68bf931	
+2026-11-01	Euro-zone growth slows to 0.4% in the third quarter as France unexpectedly contracts	f69c8006	
+2026-11-01	US economy grows 3.4% in the third quarter as September inflation accelerates	48d96726	
+2026-11-01	Merck beats third-quarter estimates and raises its full-year profit outlook	33439e0b	
+2026-11-01	🏎️ Verstappen and Lawson hit with grid penalties for 'unacceptable' Mexico practice clash	70200dcc	
+2026-11-01	🏎️ Norris edges title leader Antonelli by 0.001s in final Mexico practice	25e964f8	
+2026-11-01	🎾 Alcaraz beats Medvedev to reach the Vienna final against De Minaur	8548e19a	
+2026-11-01	🎾 Vacherot upsets Fritz to reach the Basel final	9767794c	
+2026-11-01	🏏 New Zealand thrash India by 87 runs as Phillips smashes a 49-ball century	48980e18	
+2026-11-01	🏏 South Africa beat Australia by 176 runs to take the series 2-1 as Harmer claims 10 wickets	fd81ab00	
+2026-11-01	Spacewalking astronauts install the final roll-out solar array on the ISS	6c490df9	
+2026-11-01	Hubble and Webb capture the ghostly Cat's Head Nebula in new images	8eebd29f	
+2026-11-01	Study finds 'charismatic' fossils like dinosaurs dominate top science journals	706e582f	
+2026-11-01	Flickering brain signals in monkeys may hold a clue to consciousness	4f6c6b9e	
