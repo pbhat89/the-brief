@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_on": "2026-10-31",
+  "updated_on": "2026-11-01",
   "timezone": "Asia/Singapore",
   "history": {
     "complete": false,
@@ -679,6 +679,42 @@
           "confirmation": "The source-backed evergreen representation-target lesson was included in verified narration, with publication and accepted combined delivery confirmed. The dog analogy and downstream-task application are editorial."
         }
       ]
+    },
+    {
+      "concept_id": "control-randomness-for-debugging-comparisons",
+      "aliases": [
+        "fixed random seed for repeatable debugging",
+        "reduce random variation when comparing experiments"
+      ],
+      "experts": [
+        "Andrej Karpathy"
+      ],
+      "theme": "technical_coding",
+      "title": "Control randomness before comparing experiments",
+      "sources": [
+        {
+          "title": "A Recipe for Training Neural Networks",
+          "url": "https://karpathy.github.io/2019/04/25/recipe/",
+          "authors": [
+            "Andrej Karpathy"
+          ],
+          "original_date": "2019-04-25",
+          "original_date_basis": "Date displayed on original author page.",
+          "checked_on": "2026-11-01",
+          "kind": "first_party",
+          "verification": "direct_primary",
+          "locator": "Section 2, fix random seed bullet"
+        }
+      ],
+      "classification": "evergreen",
+      "takeaway": "Karpathy recommends fixing the random seed during debugging to remove a factor of variation when rerunning code.",
+      "editorial_application": "The cake-recipe analogy and recommendation to preserve data version, settings and seed while changing an intended factor are editorial.",
+      "caveat": "A seed alone does not guarantee reproducibility across hardware, releases or all operations; PyTorch original documentation independently supports this qualification. Distinct from input-independent baseline, human agreement, tiny-batch wiring and random hyperparameter search. All 22 available delivery records and public reports/archive history checked; global incomplete-import caveat remains.",
+      "status": "researched_candidate",
+      "dedup_review": "reviewed_no_match",
+      "last_used": null,
+      "last_narrated": null,
+      "uses": []
     }
   ]
 }

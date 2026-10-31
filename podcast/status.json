@@ -1,6 +1,6 @@
 {
   "run_id": "morning-2026-11-01",
-  "updated_at": "2026-10-31T23:02:30.116954+00:00",
+  "updated_at": "2026-10-31T23:12:19.007032+00:00",
   "previous_run": {
     "run_id": "morning-2026-10-31",
     "state": "completed",
@@ -24,23 +24,23 @@
     {
       "id": "research",
       "label": "Source research and deduplication",
-      "state": "running",
-      "updated_at": "2026-10-31T23:02:30.116954+00:00",
-      "detail": "Independent parallel source review is underway. Attempts and substantive review are tracked separately."
+      "state": "completed",
+      "updated_at": "2026-10-31T23:12:19.007032+00:00",
+      "detail": "241 required sources attempted;162 recent X excerpts read,879 older unread. All245 source windows remain partial;1594 current source-instance items pending."
     },
     {
       "id": "script",
       "label": "Narrative preparation",
-      "state": "pending",
-      "updated_at": "2026-10-31T23:02:30.116954+00:00",
-      "detail": "Awaiting verified current content."
+      "state": "completed",
+      "updated_at": "2026-10-31T23:12:19.007032+00:00",
+      "detail": "54 concise news items and one distinct expert lesson verified. All37 upstream entries reconciled; inaccessible podcast transcript omitted."
     },
     {
       "id": "audio",
       "label": "Private narration checks",
-      "state": "pending",
-      "updated_at": "2026-10-31T23:02:30.116954+00:00",
-      "detail": "Approved stock runtime is being restored; no completed narration claimed."
+      "state": "running",
+      "updated_at": "2026-10-31T23:12:19.007032+00:00",
+      "detail": "Approved stock narration rendering from frozen input; measured duration and complete decode pending."
     },
     {
       "id": "publication",

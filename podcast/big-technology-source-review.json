@@ -292,6 +292,19 @@
       "summary": "Everyday AI currently shows its October 27 show-transition announcement plus replays or older originals. The four website/newsletter surfaces returned direct HTTP 403; their public search extracts show August listings. Big Technology has a new October 30 21:30 UTC full RSS episode, but its actual transcript was unavailable: the Podscripts index still ends at October 28, candidate episode page is 404, and it was absent from the official YouTube snapshot. No recap inferred from title/description; fixed seed unchanged and no old-episode backfill.",
       "covered": false,
       "fixedCatchupQueueChanged": false
+    },
+    {
+      "episodeId": "big-technology:7bf74568-d4a8-11f1-ac2b-2fcd5135f7e1",
+      "rssGuid": "7bf74568-d4a8-11f1-ac2b-2fcd5135f7e1",
+      "title": "Big Tech's Ugly Week, Getting Rich At Anthropic, AI Costs Plunge",
+      "rssPublishedAt": "2026-10-30T21:30:00Z",
+      "originalPublishedAt": null,
+      "originality": "unverified",
+      "status": "pending_original_and_transcript_verification",
+      "checkedAt": "2026-10-31T23:04:38.043675+00:00",
+      "covered": false,
+      "transcript": "Podscripts404 and index throughOctober28; Thestill public summary only; disclosed transcript API401. No retry/bypass.",
+      "ledgerInsertionDeferredReason": "Validated ledger requires verified original timestamp and boolean original; retain discovery in source review without asserting eligibility."
     }
   ]
 }
