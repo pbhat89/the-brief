@@ -1,0 +1,282 @@
+{
+  "date": "2026-11-02",
+  "items": [
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "US midterm campaign enters its final weekend before Tuesday's vote",
+      "summary": "Democrats lead national polling by roughly 51 to 43 percent two days out, but control of the Senate hinges on a handful of toss-ups in Michigan, Texas, Kansas, Iowa, North Carolina and Alaska. Early voting neared a record 50 million ballots as President Trump returned to in-person rallies in Iowa and Kansas.",
+      "url": "https://www.aljazeera.com/news/2026/11/1/us-midterms-2-days-to-go-what-polls-say-as-trump-el-sayed-hit-the-trail",
+      "outlet": "Al Jazeera",
+      "publish_date": "2026-11-01",
+      "short_hash": "fe8eb23f",
+      "key_entities": [
+        "us-midterms",
+        "congress",
+        "trump",
+        "democrats",
+        "senate"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "Iran says no US talks are scheduled despite a letter from Vance",
+      "summary": "Foreign Minister Abbas Araghchi told Al Jazeera that Tehran has discussed US Vice-President JD Vance's letter at senior levels but has no direct talks planned, while security chief Mohsen Rezaei said there can be no nuclear negotiations or reopening of the Strait of Hormuz until Washington meets Iran's demands.",
+      "url": "https://www.aljazeera.com/news/2026/11/1/iran-and-us-explore-diplomacy-amid-rising-threats-of-war",
+      "outlet": "Al Jazeera",
+      "publish_date": "2026-11-01",
+      "short_hash": "8cd87075",
+      "key_entities": [
+        "iran",
+        "united-states",
+        "araghchi",
+        "nuclear-talks",
+        "vance"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "Microsoft prices a $25 billion bond sale, its first since 2017, to fund AI",
+      "summary": "Microsoft priced a $25 billion investment-grade bond offering across 10 tranches maturing between 2028 and 2066, drawing orders reported at more than $100 billion. It is the company's first bond sale since 2017 and helps fund a capital-spending programme on track to approach $170 billion for calendar 2026.",
+      "url": "https://www.cnbc.com/2026/10/29/microsoft-25-billion-debt-offering.html",
+      "outlet": "CNBC",
+      "publish_date": "2026-10-29",
+      "short_hash": "8bdb69c5",
+      "key_entities": [
+        "microsoft",
+        "bond-sale",
+        "ai-data-centres",
+        "capex"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "Amazon lines up an $80 billion supplier-financing facility to fund AI hardware",
+      "summary": "A quarterly filing disclosed that Amazon has set up a supplier-financing arrangement letting it borrow up to $80 billion against hardware purchases, drawable from early 2027 through the third quarter of 2028. Its total spending commitments reached $883 billion at the end of September.",
+      "url": "https://www.theinformation.com/briefings/amazon-discloses-new-80-billion-supplier-financing-loan",
+      "outlet": "The Information",
+      "publish_date": "2026-10-30",
+      "short_hash": "7570e8d4",
+      "key_entities": [
+        "amazon",
+        "supplier-financing",
+        "ai-hardware",
+        "data-centres"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🎾 Alcaraz routs De Minaur to win the Vienna Open for his fourth title of 2026",
+      "summary": "Carlos Alcaraz beat Alex de Minaur 6-1, 6-4 in Sunday's final without dropping a set all week, claiming his first Vienna crown and the 28th title of his career. He is now 16-0 at ATP 500 level this season.",
+      "url": "https://www.espn.com/tennis/story/_/id/50348138/carlos-alcaraz-beats-alex-de-minaur-win-vienna-open",
+      "outlet": "ESPN",
+      "publish_date": "2026-11-01",
+      "short_hash": "679f07d3",
+      "key_entities": [
+        "alcaraz",
+        "de-minaur",
+        "vienna-open",
+        "tennis"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🎾 Vacherot fights back to win the Swiss Indoors Basel title",
+      "summary": "Unseeded Monegasque Valentin Vacherot came from a set down to beat Jiri Lehecka 2-6, 6-3, 6-3 in Sunday's Basel final. It is his second career title after the 2025 Shanghai Masters, making him the third man after Federer and Djokovic to win in both Shanghai and Basel.",
+      "url": "https://www.espn.com/tennis/story/_/id/50348821",
+      "outlet": "ESPN",
+      "publish_date": "2026-11-01",
+      "short_hash": "6ffbdeb4",
+      "key_entities": [
+        "vacherot",
+        "lehecka",
+        "basel",
+        "swiss-indoors",
+        "tennis"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🏎️ Hamilton takes his first Ferrari pole at the Mexico City Grand Prix",
+      "summary": "Lewis Hamilton edged George Russell by 0.009 seconds with a 1:16.514 to claim pole for the Mexico City Grand Prix - his first pole for Ferrari and his first since 2023. At 41 he became the oldest pole-sitter since Mario Andretti in 1982.",
+      "url": "https://www.skysports.com/f1/news/13606015/mexico-city-gp-qualifying-lewis-hamilton-claims-first-pole-position-for-ferrari-by-edging-out-mercedes-george-russell",
+      "outlet": "Sky Sports",
+      "publish_date": "2026-11-01",
+      "short_hash": "566773ae",
+      "key_entities": [
+        "hamilton",
+        "ferrari",
+        "mexico-city-gp",
+        "pole",
+        "f1"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🏏 New Zealand win the final T20I but India take the series 3-2",
+      "summary": "Tim Seifert's 93 off 50 balls and Glenn Phillips's unbeaten 65 powered New Zealand to 195 for 3 and a seven-wicket win over India in the fifth T20I at Hamilton. India, who led 3-0, still clinched the series 3-2; Adam Milne took 4 for 19.",
+      "url": "https://www.espncricinfo.com/series/india-in-new-zealand-2026-27-1539421/new-zealand-vs-india-5th-t20i-1539436/match-report",
+      "outlet": "ESPNcricinfo",
+      "publish_date": "2026-11-01",
+      "short_hash": "0f665057",
+      "key_entities": [
+        "new-zealand",
+        "india",
+        "t20i",
+        "series",
+        "cricket"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🏏 Noor Ahmad's five-for seals a 3-0 T20I sweep for Afghanistan over Zimbabwe",
+      "summary": "Left-arm wristspinner Noor Ahmad took a maiden T20I five-wicket haul, 5 for 13, as Afghanistan bowled Zimbabwe out for 79 and won the third T20I in Sharjah by seven wickets to complete a 3-0 series sweep.",
+      "url": "https://www.espncricinfo.com/series/afghanistan-v-zimbabwe-2026-27-1555105/afghanistan-vs-zimbabwe-3rd-t20i-1555122/match-report",
+      "outlet": "ESPNcricinfo",
+      "publish_date": "2026-11-01",
+      "short_hash": "b5ed3908",
+      "key_entities": [
+        "afghanistan",
+        "zimbabwe",
+        "noor-ahmad",
+        "t20i",
+        "sweep"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "A dead star wears two rings, hinting at hidden Pluto-sized worlds",
+      "summary": "Astronomers report in Nature Astronomy that the white dwarf WD J1328-1450 is encircled by two distinct, chemically different gas discs - the first such double disc ever seen - likely sculpted by two unseen bodies ranging from a few kilometres to Pluto-sized.",
+      "url": "https://www.nature.com/articles/s41550-026-03004-3",
+      "outlet": "Nature",
+      "publish_date": "2026-10-30",
+      "short_hash": "b2fcd6be",
+      "key_entities": [
+        "white-dwarf",
+        "debris-disc",
+        "nature-astronomy",
+        "planetary-bodies"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "NASA mates the Artemis III core stage with its boosters at Kennedy",
+      "summary": "Inside High Bay 3 of the Vehicle Assembly Building, NASA integrated the 212-foot SLS core stage with the twin solid rocket boosters for Artemis III, completing the 'short stack' ahead of a planned tanking test. The crewed Moon landing is targeted for no earlier than June 2027.",
+      "url": "https://www.nasa.gov/image-article/artemis-iii-sls-core-stage-joins-boosters-at-kennedy/",
+      "outlet": "NASA",
+      "publish_date": "2026-10-28",
+      "short_hash": "fc5e17b0",
+      "key_entities": [
+        "nasa",
+        "artemis-iii",
+        "sls",
+        "boosters",
+        "moon"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "Europe's Euclid telescope discovers its first comet by accident",
+      "summary": "While mapping the cosmos in its Deep Field North survey, ESA's Euclid space telescope spotted a previously unknown comet, C/2026 S1 (Euclid), about 1.3 billion km from Earth. The Minor Planet Center confirmed it on 8 October.",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_discovers_new_comet",
+      "outlet": "ESA",
+      "publish_date": "2026-10-19",
+      "short_hash": "74849d2b",
+      "key_entities": [
+        "esa",
+        "euclid",
+        "comet",
+        "c-2026-s1",
+        "discovery"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "Singapore coverage is unavailable in today's edition",
+      "summary": "CNA, The Straits Times, SCMP and Mothership could not be reached for verified, deep-linked in-window stories during this run.",
+      "url": "",
+      "outlet": "The Brief",
+      "publish_date": "2026-11-02",
+      "short_hash": "7a22f9a2",
+      "key_entities": [],
+      "is_update": false,
+      "placeholder": true
+    },
+    {
+      "tab": "India",
+      "headline": "India coverage is unavailable in today's edition",
+      "summary": "The Hindu, Indian Express, Hindustan Times, Times of India, NDTV, ET and the fallback tier yielded no verified, deep-linked India-domestic item this run.",
+      "url": "",
+      "outlet": "The Brief",
+      "publish_date": "2026-11-02",
+      "short_hash": "24c3d9aa",
+      "key_entities": [],
+      "is_update": false,
+      "placeholder": true
+    },
+    {
+      "tab": "UK News",
+      "headline": "UK coverage is unavailable in today's edition",
+      "summary": "BBC and Sky News (and fallback outlets) could not be reached for a verified, deep-linked UK-domestic story this run.",
+      "url": "",
+      "outlet": "The Brief",
+      "publish_date": "2026-11-02",
+      "short_hash": "259ae317",
+      "key_entities": [],
+      "is_update": false,
+      "placeholder": true
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Business & Markets runs short in today's edition",
+      "summary": "Weekend market closure plus the prior edition already carrying Friday's AI-driven sell-off left no fresh, non-duplicate allowed-source story.",
+      "url": "",
+      "outlet": "The Brief",
+      "publish_date": "2026-11-02",
+      "short_hash": "f8ccf9e4",
+      "key_entities": [],
+      "is_update": false,
+      "placeholder": true
+    }
+  ],
+  "fun_fact": {
+    "headline": "Saturn would float in water",
+    "body": "Saturn is the only planet in the Solar System less dense than water (about 0.69 g/cm3 vs 1.0), because it is made mostly of hydrogen and helium; given a large enough bathtub, it would float.",
+    "source": "NASA Saturn fact sheet; Encyclopaedia Britannica",
+    "fun_fact_id": "funfact-5445f9ed",
+    "topic": "space",
+    "topic_key": "saturn"
+  },
+  "puzzle": {
+    "type": "lateral",
+    "title": "Pushed to the Brink",
+    "title_key": "pushed-to-the-brink",
+    "body": "A man pushes his car up to a building, hands a wad of cash to the owner, and walks away saying he is bankrupt. The car is undamaged and no crime occurred. What is going on?",
+    "approach": "Don't assume the car, building or money are real objects.",
+    "answer": "He is playing Monopoly: his car token landed on a hotel property and the rent bankrupts him in the game.",
+    "puzzle_hash": "e0658da4"
+  },
+  "word_puzzle": {
+    "type": "spellingbee",
+    "title": "Reactor Core",
+    "title_key": "reactor-core",
+    "body": "Centre letter A; outer letters C E N O R T. Make words of 4+ letters using only these seven (letters may repeat); the pangram uses all seven.",
+    "approach": "Every word must contain the centre letter A.",
+    "answer": "Pangram REACTOR (also CREATOR, ENACTOR). Sample words: ACRE, ACTOR, AORTA, ARENA, CANOE, CANTOR, CARTON, CRATE, CREATE, ENACT, NACRE, OCEAN, OCTANE, ORATE, REACT, RECANT, TRACE, TRANCE, TAROT, CORNEA.",
+    "word_puzzle_hash": "e82a0395"
+  },
+  "notes": "Degraded sourcing run. The allowed primary outlets for Singapore (CNA, Straits Times), India (The Hindu, Indian Express, HT, TOI, NDTV, ET) and UK (BBC, Sky News), plus Reuters/AP/Guardian/Bloomberg, were unreachable to the search crawler this run (their article URLs never surfaced), so those sections and Business could not be filled with verified, deep-linked allowed-source items. Per FIX 6 the sections were retried across multiple query angles and fallback tiers (SCMP, Al Jazeera, CNN, Bloomberg, CNBC) before falling back to placeholders. Real stories that were confirmed but only via off-list outlets (e.g. Delhi's winter vehicle curbs from Nov 1; Singapore's Nov 2026 BTO launch and haze update; UK Reform polling) were dropped per the allowed-source rule. 12 verified items were published across Global (2), Tech (2), Sports (5) and Other/Science (3) - above the 8-item hard-stop, so the edition was published rather than skipped. F1: Lewis Hamilton's first Ferrari pole is reported; the Mexico City GP race result could not be independently confirmed from two allowed sources at publication, so it was not stated. Previous edition for 2026-11-01 exists, so no missed-run gap.",
+  "verified_item_count": 12,
+  "search_count_estimate": 46
+}

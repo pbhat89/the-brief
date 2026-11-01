@@ -4203,3 +4203,15 @@ is empty until the first run.
 2026-11-01	Hubble and Webb capture the ghostly Cat's Head Nebula in new images	8eebd29f	
 2026-11-01	Study finds 'charismatic' fossils like dinosaurs dominate top science journals	706e582f	
 2026-11-01	Flickering brain signals in monkeys may hold a clue to consciousness	4f6c6b9e	
+2026-11-02	US midterm campaign enters its final weekend before Tuesday's vote	fe8eb23f	us-midterms,congress,trump,democrats,senate
+2026-11-02	Iran says no US talks are scheduled despite a letter from Vance	8cd87075	iran,united-states,araghchi,nuclear-talks,vance
+2026-11-02	Microsoft prices a $25 billion bond sale, its first since 2017, to fund AI	8bdb69c5	microsoft,bond-sale,ai-data-centres,capex
+2026-11-02	Amazon lines up an $80 billion supplier-financing facility to fund AI hardware	7570e8d4	amazon,supplier-financing,ai-hardware,data-centres
+2026-11-02	🎾 Alcaraz routs De Minaur to win the Vienna Open for his fourth title of 2026	679f07d3	alcaraz,de-minaur,vienna-open,tennis
+2026-11-02	🎾 Vacherot fights back to win the Swiss Indoors Basel title	6ffbdeb4	vacherot,lehecka,basel,swiss-indoors,tennis
+2026-11-02	🏎️ Hamilton takes his first Ferrari pole at the Mexico City Grand Prix	566773ae	hamilton,ferrari,mexico-city-gp,pole,f1
+2026-11-02	🏏 New Zealand win the final T20I but India take the series 3-2	0f665057	new-zealand,india,t20i,series,cricket
+2026-11-02	🏏 Noor Ahmad's five-for seals a 3-0 T20I sweep for Afghanistan over Zimbabwe	b5ed3908	afghanistan,zimbabwe,noor-ahmad,t20i,sweep
+2026-11-02	A dead star wears two rings, hinting at hidden Pluto-sized worlds	b2fcd6be	white-dwarf,debris-disc,nature-astronomy,planetary-bodies
+2026-11-02	NASA mates the Artemis III core stage with its boosters at Kennedy	fc5e17b0	nasa,artemis-iii,sls,boosters,moon
+2026-11-02	Europe's Euclid telescope discovers its first comet by accident	74849d2b	esa,euclid,comet,c-2026-s1,discovery

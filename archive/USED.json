@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-09-02",
-      "topic_key": "cochineal",
-      "text": "Some red food dye (carmine/cochineal, E120) is made from crushed cochineal insects."
-    },
-    {
       "date": "2026-09-04",
       "topic_key": "computer bug",
       "text": "The first 'computer bug' was a literal moth found in Harvard's Mark II in 1947 and taped into the logbook."
@@ -274,14 +269,14 @@
       "date": "2026-11-01",
       "topic_key": "koala",
       "text": "Koalas have fingerprints so similar to a human's that even under a microscope they can be hard to tell apart. The looping, whorled ridges evolved independently from ours — close relatives like wombats and kangaroos lack them — most likely to help the animals grip and handle eucalyptus leaves."
+    },
+    {
+      "date": "2026-11-02",
+      "topic_key": "saturn",
+      "text": "Saturn is less dense than water (~0.69 g/cm3) and would float in a big enough bath."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-10-02",
-      "type": "logic",
-      "title_key": "all-labels-lie"
-    },
     {
       "date": "2026-10-03",
       "type": "quantitative",
@@ -426,14 +421,14 @@
       "date": "2026-11-01",
       "type": "quantitative",
       "title_key": "fair-exchange"
+    },
+    {
+      "date": "2026-11-02",
+      "type": "lateral",
+      "title_key": "pushed-to-the-brink"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-10-02",
-      "type": "spellingbee",
-      "title_key": "tall-order"
-    },
     {
       "date": "2026-10-03",
       "type": "letterboxed",
@@ -578,6 +573,11 @@
       "date": "2026-11-01",
       "type": "anagram",
       "title_key": "count-on-it"
+    },
+    {
+      "date": "2026-11-02",
+      "type": "spellingbee",
+      "title_key": "reactor-core"
     }
   ]
 }

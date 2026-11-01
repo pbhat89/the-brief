@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Mon, 2 November 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .wpuzzle-box{background:linear-gradient(135deg,#0e1a1a,#0d1620);border:1px solid #234a44;border-left:3px solid #16a085;padding:24px 28px;border-radius:2px}
+  .wptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#16a085;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .wpuzzle-box .puzzle-title{color:#cdeae3}
+  .wpuzzle-box .puzzle-how{color:#8fb8ac;background:#08140f;border-left-color:#1a6a5a}
+  .wpuzzle-box .puzzle-q{color:#dfeae6;font-family:'Source Sans 3',sans-serif}
+  .wpuzzle-box .answer{color:#bfe0d6}
+  .wpuzzle-box .answer .alabel{color:#16a085}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Monday, 2 November 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Monday, 2 November 2026 · 🔍 46 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eleven entries in this exact order:
+     id    : one of "sg" | "india" | "uk" | "geo" | "tech" | "biz" | "sports" | "misc" | "fun" | "puzzle" | "wpuzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 8 news tabs; fun/puzzle/wpuzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+
+   WORD_PUZZLE shape (separate, daily word game — NYT-style, static reveal):
+     type     : one of "Connections" | "Word Ladder" | "Anagram" | "Spelling Bee" | "Letter Boxed" | "Mini Crossword"
+     title    : short evocative name for the word puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle body; supports \n for line breaks (grids render as pre-formatted text)
+     answer   : the answer; supports \n for line breaks; appears inside its own toggle (id "wpans")
+============================================================================= */
+
+const SECTIONS = [
+  { id:"sg", title:"🇸🇬 Singapore", color:"#e74c3c", items:[
+    { headline:"Singapore coverage is unavailable in today's edition", summary:"The allowed Singapore outlets (CNA, The Straits Times, SCMP and Mothership) could not be reached for verified, deep-linked stories within today's 48-hour window during this run, so no item cleared the sourcing bar. The archive JSON records the retry attempts and the unreachable outlets.", source:"The Brief", url:"", date:"Nov 2", spectrum:null, bias:null },
+  ]},
+  { id:"india", title:"🇮🇳 India", color:"#e67e22", items:[
+    { headline:"India coverage is unavailable in today's edition", summary:"The allowed India outlets (The Hindu, The Indian Express, Hindustan Times, The Times of India, NDTV and The Economic Times) and the fallback tier (SCMP, Al Jazeera, CNN, Bloomberg, CNBC) did not yield a verified, deep-linked India-domestic story within today's window during this run. Real stories such as Delhi's winter pollution curbs were confirmed but only through off-list outlets, so they were dropped per the sourcing rules.", source:"The Brief", url:"", date:"Nov 2", spectrum:null, bias:null },
+  ]},
+  { id:"uk", title:"🇬🇧 UK News", color:"#3949ab", items:[
+    { headline:"UK coverage is unavailable in today's edition", summary:"The allowed UK outlets (BBC and Sky News) and the fallback tier (The Guardian, CNN, Al Jazeera, Bloomberg, CNBC) could not be reached for a verified, deep-linked UK-domestic story within today's window during this run, so no item cleared the sourcing bar.", source:"The Brief", url:"", date:"Nov 2", spectrum:null, bias:null },
+  ]},
+  { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
+    { headline:"US midterm campaign enters its final weekend before Tuesday's vote", summary:"Democrats lead national polling by roughly 51 to 43 percent two days out, but control of the Senate hinges on a handful of toss-ups in Michigan, Texas, Kansas, Iowa, North Carolina and Alaska. Early voting neared a record 50 million ballots as President Trump returned to in-person rallies in Iowa and Kansas after briefly switching to tele-rallies.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/11/1/us-midterms-2-days-to-go-what-polls-say-as-trump-el-sayed-hit-the-trail", date:"Nov 1",
+      spectrum:{ left:"Left-leaning outlets frame the vote as a referendum on Trump&rsquo;s cost-of-living record and foreground Democrats&rsquo; national lead and confidence of retaking the House.", center:"Centrist and wire coverage stresses a knife-edge Senate decided by a few toss-up states and a record near-50-million early-vote turnout.", right:"Right-leaning voices argue the polls are wrong, point to a Republican Senate firewall, and emphasise border security and the economy." },
+      bias:"Coverage splits on which chamber is in play: Democratic-leaning outlets foreground the House, conservative ones the Senate." },
+    { headline:"Iran says no US talks are scheduled despite a letter from Vance", summary:"Foreign Minister Abbas Araghchi told Al Jazeera that Tehran has discussed US Vice-President JD Vance's letter at senior levels but has no direct talks planned, while security chief Mohsen Rezaei said there can be no nuclear negotiations or reopening of the Strait of Hormuz until Washington meets Iran's demands. President Trump called the contacts &lsquo;fine&rsquo; but said Iran's leaders were not &lsquo;reliable.&rsquo;", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/11/1/iran-and-us-explore-diplomacy-amid-rising-threats-of-war", date:"Nov 1", spectrum:null, bias:null },
+  ]},
+  { id:"tech", title:"💻 Tech & AI", color:"#27ae60", items:[
+    { headline:"Microsoft prices a $25 billion bond sale, its first since 2017, to fund AI", summary:"Microsoft priced a $25 billion investment-grade bond offering across 10 tranches maturing between 2028 and 2066, drawing orders reported at more than $100 billion. It is the company's first bond sale since 2017 and helps fund a capital-spending programme on track to approach $170 billion for calendar 2026 as it builds out AI data centres.", source:"CNBC", url:"https://www.cnbc.com/2026/10/29/microsoft-25-billion-debt-offering.html", date:"Oct 29", spectrum:null, bias:null },
+    { headline:"Amazon lines up an $80 billion supplier-financing facility to fund AI hardware", summary:"A quarterly filing disclosed that Amazon has set up a supplier-financing arrangement letting it borrow up to $80 billion against hardware purchases, drawable from early 2027 through the third quarter of 2028. The move marks a shift for a company that had largely funded its AI build-out from cash flow and bonds; its total spending commitments reached $883 billion at the end of September.", source:"The Information", url:"https://www.theinformation.com/briefings/amazon-discloses-new-80-billion-supplier-financing-loan", date:"Oct 30", spectrum:null, bias:null },
+  ]},
+  { id:"biz", title:"📈 Business & Markets", color:"#8e44ad", items:[
+    { headline:"Business & Markets runs short in today's edition", summary:"US and European markets were closed over the weekend, and the week's dominant story — Friday's AI-spending-driven sell-off that drove the Nasdaq to its worst month since March 2025 — was already carried in the previous edition. No fresh, non-duplicate story cleared the allowed-source bar in today's window; Berkshire Hathaway's third-quarter report was still pending at publication.", source:"The Brief", url:"", date:"Nov 2", spectrum:null, bias:null },
+  ]},
+  { id:"sports", title:"🎾🏏🏎️ Sports", color:"#c0392b", items:[
+    { headline:"🎾 Alcaraz routs De Minaur to win the Vienna Open for his fourth title of 2026", summary:"Carlos Alcaraz beat Alex de Minaur 6-1, 6-4 in Sunday's final without dropping a set all week, claiming his first Vienna crown and the 28th title of his career. The world No. 1 is now 16-0 at ATP 500 level this season and has won all seven of his meetings with the Australian.", source:"ESPN", url:"https://www.espn.com/tennis/story/_/id/50348138/carlos-alcaraz-beats-alex-de-minaur-win-vienna-open", date:"Nov 1", spectrum:null, bias:null },
+    { headline:"🎾 Vacherot fights back to win the Swiss Indoors Basel title", summary:"Unseeded Monegasque Valentin Vacherot came from a set down to beat Jiri Lehecka 2-6, 6-3, 6-3 in Sunday's Basel final, saving all five break points he faced over the final two sets. It is his second career title after the 2025 Shanghai Masters, making him only the third man after Roger Federer and Novak Djokovic to win titles in both Shanghai and Basel.", source:"ESPN", url:"https://www.espn.com/tennis/story/_/id/50348821", date:"Nov 1", spectrum:null, bias:null },
+    { headline:"🏎️ Hamilton takes his first Ferrari pole at the Mexico City Grand Prix", summary:"Lewis Hamilton edged George Russell by 0.009 seconds with a 1:16.514 to claim pole for the Mexico City Grand Prix — his first pole for Ferrari and his first since 2023. At 41 he became the oldest pole-sitter since Mario Andretti in 1982, with title leader Kimi Antonelli lining up fourth.", source:"Sky Sports", url:"https://www.skysports.com/f1/news/13606015/mexico-city-gp-qualifying-lewis-hamilton-claims-first-pole-position-for-ferrari-by-edging-out-mercedes-george-russell", date:"Nov 1", spectrum:null, bias:null },
+    { headline:"🏏 New Zealand win the final T20I but India take the series 3-2", summary:"Tim Seifert's 93 off 50 balls and Glenn Phillips's unbeaten 65 powered New Zealand to 195 for 3 and a seven-wicket win over India in the fifth T20I at Hamilton. India, who had raced to a 3-0 lead, still clinched the five-match series 3-2; Ishan Kishan made 61 and Adam Milne took 4 for 19.", source:"ESPNcricinfo", url:"https://www.espncricinfo.com/series/india-in-new-zealand-2026-27-1539421/new-zealand-vs-india-5th-t20i-1539436/match-report", date:"Nov 1", spectrum:null, bias:null },
+    { headline:"🏏 Noor Ahmad's five-for seals a 3-0 T20I sweep for Afghanistan over Zimbabwe", summary:"Left-arm wristspinner Noor Ahmad took a maiden T20I five-wicket haul, 5 for 13, as Afghanistan bowled Zimbabwe out for 79 and won the third T20I in Sharjah by seven wickets to complete a 3-0 series sweep. Ibrahim Zadran finished unbeaten on 25 in the chase.", source:"ESPNcricinfo", url:"https://www.espncricinfo.com/series/afghanistan-v-zimbabwe-2026-27-1555105/afghanistan-vs-zimbabwe-3rd-t20i-1555122/match-report", date:"Nov 1", spectrum:null, bias:null },
+  ]},
+  { id:"misc", title:"🔬 Other Miscellaneous News", color:"#1abc9c", items:[
+    { headline:"A dead star wears two rings, hinting at hidden Pluto-sized worlds", summary:"Astronomers report in Nature Astronomy that the white dwarf WD J1328-1450 is encircled by two distinct, chemically different gas discs — the first such double disc ever seen. The team argues the rings are being sculpted by two unseen bodies ranging from a few kilometres to Pluto-sized, offering a possible glimpse of our own Solar System's distant future.", source:"Nature", url:"https://www.nature.com/articles/s41550-026-03004-3", date:"Oct 30", spectrum:null, bias:null },
+    { headline:"NASA mates the Artemis III core stage with its boosters at Kennedy", summary:"Inside High Bay 3 of the Vehicle Assembly Building, NASA integrated the 212-foot core stage of its Space Launch System rocket with the twin solid rocket boosters for Artemis III, completing the &lsquo;short stack.&rsquo; The assembly is slated to roll to Launch Pad 39B for a tanking test, with the crewed Moon-landing mission targeted for no earlier than June 2027.", source:"NASA", url:"https://www.nasa.gov/image-article/artemis-iii-sls-core-stage-joins-boosters-at-kennedy/", date:"Oct 28", spectrum:null, bias:null },
+    { headline:"Europe's Euclid telescope discovers its first comet by accident", summary:"While mapping the cosmos in its Deep Field North survey, ESA's Euclid space telescope spotted a previously unknown comet, now designated C/2026 S1 (Euclid), on an orbit that will take thousands of years to complete about 1.3 billion km from Earth. The Minor Planet Center confirmed it on 8 October, and ESA says the find shows Euclid can catch comets while they are still far from the Sun.", source:"ESA", url:"https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_discovers_new_comet", date:"Oct 19", spectrum:null, bias:null },
+  ]},
+  { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
+  { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
+  { id:"wpuzzle", title:"🔤 Word Puzzles", color:"#16a085", custom:"wpuzzle" },
+];
+
+const FUN_FACT = {
+  text: "Saturn is the only planet in the Solar System less dense than water. Its average density is about 0.69 grams per cubic centimetre, compared with 1.0 for water, because the giant is made mostly of hydrogen and helium. In other words, given a bathtub large enough, Saturn would float.",
+  tag: "Category · Space & Astronomy"
+};
+
+const PUZZLE = {
+  type: "Lateral Thinking",
+  title: "Pushed to the Brink",
+  how: "Don't assume the &lsquo;car&rsquo;, the &lsquo;building&rsquo; or the &lsquo;money&rsquo; are real objects — think about where all of these words naturally live together.",
+  question: "A man pushes his car up to a building, hands a wad of cash to the owner, and walks away muttering that he is now completely bankrupt.\n\nHe isn't upset, the car is undamaged, and no crime has taken place. What is going on?",
+  answer: "He is playing Monopoly.\n\nHis token — the little car — has landed on a property that another player owns, and it now has a hotel on it. The rent he owes wipes out his remaining cash, bankrupting him in the game. The &lsquo;car&rsquo;, the &lsquo;building&rsquo; and the &lsquo;money&rsquo; are all pieces on the board."
+};
+
+const WORD_PUZZLE = {
+  type: "Spelling Bee",
+  title: "Reactor Core",
+  how: "Every word must contain the centre letter and use only the seven given letters (letters may repeat). Find the pangram that uses all seven.",
+  question: "Centre letter:  A  (must appear in every word)\nOuter letters:  C · E · N · O · R · T\n\nMake as many words of four letters or more as you can, using only these seven letters. At least one word — the pangram — uses all seven.\n\nTarget: 15+ words, including the pangram.",
+  answer: "Pangram: REACTOR (also CREATOR, ENACTOR).\n\nA sample of valid words (all contain A, all use only C E N O R T A):\nACRE · ACNE · ACTOR · AEON · AORTA · ARENA · CANOE · CANTO · CANTOR · CARET · CARTON · CRATE · CREATE · ENACT · NACRE · OCEAN · OCTANE · ORATE · REACT · RECANT · TRACE · TRANCE · TAROT · CORNEA · CONTRA · CREATOR · REACTOR · ENACTOR\n\nThere are more — anything else that fits the two rules counts."
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function renderWordPuzzle(){
+  let h='<div class="sec-title">🔤 Word Puzzle of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#16a085,transparent)"></div>';
+  h+='<div class="wpuzzle-box"><span class="wptype">'+WORD_PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+WORD_PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+WORD_PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+WORD_PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this,\'wpans\')">Show Answer</button>';
+  h+='<div class="answer" id="wpans"><span class="alabel">Answer</span>'+WORD_PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn,ansId){var a=document.getElementById(ansId||'ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else if(sec.custom==="wpuzzle"){div.innerHTML=renderWordPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>
