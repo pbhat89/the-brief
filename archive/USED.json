@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-09-04",
-      "topic_key": "computer bug",
-      "text": "The first 'computer bug' was a literal moth found in Harvard's Mark II in 1947 and taped into the logbook."
-    },
-    {
       "date": "2026-09-06",
       "topic_key": "sun",
       "text": "The Sun holds about 99.8% of the solar system's mass."
@@ -278,11 +273,6 @@
   ],
   "puzzle_log": [
     {
-      "date": "2026-10-04",
-      "type": "lateral",
-      "title_key": "night-shift"
-    },
-    {
       "date": "2026-10-05",
       "type": "visual",
       "title_key": "folded-square"
@@ -424,11 +414,6 @@
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-10-04",
-      "type": "grouping",
-      "title_key": "blue-bloods"
-    },
     {
       "date": "2026-10-05",
       "type": "ladder",
