@@ -1,0 +1,594 @@
+{
+  "date": "2026-11-06",
+  "items": [
+    {
+      "tab": "Singapore",
+      "headline": "Singapore tops live air-pollution ranking again as haze returns and Parliament weighs tougher fines",
+      "summary": "",
+      "url": "https://www.scmp.com/news/asia/southeast-asia/article/3370563/singapore-tops-global-air-pollution-ranks-again-rolls-out-haze-subsidies",
+      "outlet": "SCMP",
+      "publish_date": "Nov 5",
+      "short_hash": "2d1eca6f",
+      "key_entities": [
+        "Singapore",
+        "IQAir",
+        "Transboundary Haze Pollution Act",
+        "Parliament"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "Parliament backs a car-tax 'feebate' as COE review nears",
+      "summary": "",
+      "url": "https://mothership.sg/2026/11/parliament-car-coe/",
+      "outlet": "Mothership",
+      "publish_date": "Nov 3",
+      "short_hash": "bf3c1bcd",
+      "key_entities": [
+        "Jeffrey Siow",
+        "COE",
+        "LTA",
+        "Parliament"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "PAP keeps its top leadership intact in new Central Executive Committee",
+      "summary": "",
+      "url": "https://mothership.sg/2026/11/pap-39th-cec-positions/",
+      "outlet": "Mothership",
+      "publish_date": "Nov 5",
+      "short_hash": "17f4609c",
+      "key_entities": [
+        "PAP",
+        "Central Executive Committee",
+        "Jeffrey Siow",
+        "Ng Chee Meng"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "Health Ministry apologises for a 9.5-hour public-healthcare IT outage",
+      "summary": "",
+      "url": "https://mothership.sg/2026/11/public-healthcare-clusters-service-disruption-parliament/",
+      "outlet": "Mothership",
+      "publish_date": "Nov 3",
+      "short_hash": "8c34496c",
+      "key_entities": [
+        "Tan Kiat How",
+        "Ministry of Health",
+        "IT outage"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "New Toa Payoh BTO anchors November HDB launch; care-apartment age lowered",
+      "summary": "",
+      "url": "https://mothership.sg/2026/11/chee-hong-tat-toa-payoh-west-second-heart/",
+      "outlet": "Mothership",
+      "publish_date": "Nov 5",
+      "short_hash": "be165e95",
+      "key_entities": [
+        "Chee Hong Tat",
+        "HDB",
+        "Toa Payoh",
+        "BTO"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "Delhi's air turns 'very poor' as winter smog returns before Diwali",
+      "summary": "",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-04/delhi-chokes-on-very-poor-air-after-cleanest-october-in-years",
+      "outlet": "Bloomberg",
+      "publish_date": "Nov 4",
+      "short_hash": "22624b81",
+      "key_entities": [
+        "Delhi",
+        "air quality",
+        "PM2.5",
+        "Diwali"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "Sitharaman weighs capital-gains tax relief as foreign investors flee Indian stocks",
+      "summary": "",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-05/india-s-49-billion-foreign-investor-exodus-fuels-a-capital-gains-tax-debate",
+      "outlet": "Bloomberg",
+      "publish_date": "Nov 5",
+      "short_hash": "0cc26395",
+      "key_entities": [
+        "Nirmala Sitharaman",
+        "capital gains tax",
+        "foreign investors",
+        "Indian stocks"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "Indian bonds and rupee rally as sliding oil eases inflation fears",
+      "summary": "",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-05/indian-bonds-rupee-rally-as-sliding-oil-eases-inflation-risks",
+      "outlet": "Bloomberg",
+      "publish_date": "Nov 5",
+      "short_hash": "41c2847d",
+      "key_entities": [
+        "India",
+        "rupee",
+        "bonds",
+        "oil"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "Union strike threat clouds Fairfax's $5.5 billion IDBI Bank takeover",
+      "summary": "",
+      "url": "https://www.cnbc.com/2026/11/02/canada-india-bank-takeover-protest-workers.html",
+      "outlet": "CNBC",
+      "publish_date": "Nov 2",
+      "short_hash": "bb3e2ed3",
+      "key_entities": [
+        "IDBI Bank",
+        "Fairfax",
+        "Nirmala Sitharaman",
+        "strike"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "Bank of England raises rates for the first time since 2023, warns inflation near 5%",
+      "summary": "",
+      "url": "https://www.cnbc.com/2026/11/05/interest-rates-inflation-uk.html",
+      "outlet": "CNBC",
+      "publish_date": "Nov 5",
+      "short_hash": "21f1f764",
+      "key_entities": [
+        "Bank of England",
+        "Andrew Bailey",
+        "interest rates",
+        "inflation"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "UK roughly doubles the wait for permanent residency, exempts care workers",
+      "summary": "",
+      "url": "https://www.aljazeera.com/news/2026/11/3/uk-to-double-wait-for-permanent-residency-with-exemptions-for-care-workers",
+      "outlet": "Al Jazeera",
+      "publish_date": "Nov 3",
+      "short_hash": "15435066",
+      "key_entities": [
+        "UK",
+        "indefinite leave to remain",
+        "Shabana Mahmood",
+        "care workers"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "Burnham denies plan to restore EU free movement after cabinet pushback",
+      "summary": "",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-03/burnham-denies-plan-for-eu-free-movement-after-cabinet-pushback",
+      "outlet": "Bloomberg",
+      "publish_date": "Nov 3",
+      "short_hash": "f28bb9ab",
+      "key_entities": [
+        "Andy Burnham",
+        "EU",
+        "free movement",
+        "cabinet"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "UK spent a record £561 million balancing the power grid in October",
+      "summary": "",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-02/uk-spent-record-561-million-to-balance-power-grid-in-october",
+      "outlet": "Bloomberg",
+      "publish_date": "Nov 2",
+      "short_hash": "4164d86c",
+      "key_entities": [
+        "UK",
+        "power grid",
+        "gas prices"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "Burnham signals his 10-year plan for Britain could slip into next year",
+      "summary": "",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-05/burnham-says-10-year-plan-for-uk-could-be-delayed-to-next-year",
+      "outlet": "Bloomberg",
+      "publish_date": "Nov 5",
+      "short_hash": "573e787f",
+      "key_entities": [
+        "Andy Burnham",
+        "10-year plan",
+        "UK"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global",
+      "headline": "Democrats sweep US midterms, taking control of both chambers",
+      "summary": "",
+      "url": "https://www.cnn.com/2026/11/05/politics/live-news/midterm-election-congress",
+      "outlet": "CNN",
+      "publish_date": "Nov 5",
+      "short_hash": "70bbb393",
+      "key_entities": [
+        "Democrats",
+        "US midterms",
+        "Congress",
+        "Trump"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global",
+      "headline": "Iran war grinds on as US adds sanctions and Tehran threatens US allies",
+      "summary": "",
+      "url": "https://www.aljazeera.com/news/liveblog/2026/11/5/iran-war-live-trump-admits-war-caused-election-loss-but-had-to-do-it",
+      "outlet": "Al Jazeera",
+      "publish_date": "Nov 5",
+      "short_hash": "3a9331cf",
+      "key_entities": [
+        "United States",
+        "Iran",
+        "Qeshm Island",
+        "sanctions"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global",
+      "headline": "US to host Ukraine-Russia talks in Abu Dhabi as Kyiv eyes the new Congress",
+      "summary": "",
+      "url": "https://www.aljazeera.com/news/2026/11/5/zelenskyy-hopes-democratic-congress-will-bring-more-us-help-for-ukraine",
+      "outlet": "Al Jazeera",
+      "publish_date": "Nov 5",
+      "short_hash": "a07f3fd0",
+      "key_entities": [
+        "Ukraine",
+        "Russia",
+        "Abu Dhabi",
+        "Zelensky",
+        "Witkoff"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global",
+      "headline": "Bomb-threat hoaxes divert European flights for the second time in a week",
+      "summary": "",
+      "url": "https://www.cnn.com/2026/11/05/world/live-news/plane-flights-bomb-threats-europe-intl",
+      "outlet": "CNN",
+      "publish_date": "Nov 5",
+      "short_hash": "c69b43e8",
+      "key_entities": [
+        "Europe",
+        "flights",
+        "bomb threat",
+        "hoax"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "Micron pauses its $4.5 billion Taiwan chip plant after a labour dispute",
+      "summary": "",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-05/micron-pauses-work-on-4-5-billion-taiwan-plant-after-labor-spat",
+      "outlet": "Bloomberg",
+      "publish_date": "Nov 5",
+      "short_hash": "c3172df4",
+      "key_entities": [
+        "Micron",
+        "Taiwan",
+        "memory chips",
+        "labour dispute"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "Goldman and Apollo shop SpaceX's $40 billion AI-chip financing deal",
+      "summary": "",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-04/goldman-apollo-in-talks-to-sell-spacex-s-40-billion-ai-deal",
+      "outlet": "Bloomberg",
+      "publish_date": "Nov 4",
+      "short_hash": "aa434e7b",
+      "key_entities": [
+        "Goldman Sachs",
+        "Apollo",
+        "SpaceX",
+        "AI financing"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "China's Moonshot AI sought Nvidia chips via Europe amid US curbs",
+      "summary": "",
+      "url": "https://www.cnbc.com/2026/11/05/moonshot-ai-nvidia-chips-europe-china.html",
+      "outlet": "CNBC",
+      "publish_date": "Nov 5",
+      "short_hash": "60e79b31",
+      "key_entities": [
+        "Moonshot AI",
+        "Nvidia",
+        "Europe",
+        "export controls"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "A YC-backed startup stakes $1 million on five unsolved materials-science problems for AI",
+      "summary": "",
+      "url": "https://techcrunch.com/2026/11/05/a-yc-startup-is-putting-1m-behind-five-unsolved-materials-science-problems-for-ai/",
+      "outlet": "TechCrunch",
+      "publish_date": "Nov 5",
+      "short_hash": "1d2ac48c",
+      "key_entities": [
+        "Y Combinator",
+        "materials science",
+        "AI",
+        "startup"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Nasdaq tumbles into correction as AI-trade fears grip Wall Street",
+      "summary": "",
+      "url": "https://www.cnbc.com/2026/11/05/qualcomm-earnings-chip-stocks-election.html",
+      "outlet": "CNBC",
+      "publish_date": "Nov 5",
+      "short_hash": "1ea7a163",
+      "key_entities": [
+        "Nasdaq",
+        "S&P 500",
+        "Wall Street",
+        "AI trade"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Oil slides about 8% on bets a Democratic Congress hastens an end to the Iran war",
+      "summary": "",
+      "url": "https://www.cnbc.com/2026/11/04/oil-price-iran-war-us-election-strait-hormuz.html",
+      "outlet": "CNBC",
+      "publish_date": "Nov 4",
+      "short_hash": "812c3819",
+      "key_entities": [
+        "oil",
+        "WTI",
+        "Brent",
+        "Iran war"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "AMD forecasts a $17 billion quarter on soaring AI-chip demand",
+      "summary": "",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-03/amd-sales-forecast-tops-estimates-on-soaring-ai-chip-demand",
+      "outlet": "Bloomberg",
+      "publish_date": "Nov 3",
+      "short_hash": "a7b93cd8",
+      "key_entities": [
+        "AMD",
+        "revenue forecast",
+        "AI chips"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Palantir beats third-quarter estimates but its shares still slip",
+      "summary": "",
+      "url": "https://www.cnbc.com/2026/11/04/stock-market-today-live-updates.html",
+      "outlet": "CNBC",
+      "publish_date": "Nov 5",
+      "short_hash": "7407ac1d",
+      "key_entities": [
+        "Palantir",
+        "earnings",
+        "shares"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🏎️ F1 reaches Interlagos, where Mercedes can seal the constructors' title",
+      "summary": "",
+      "url": "https://www.formula1.com/en/latest/article/its-race-week-5-storylines-were-excited-about-ahead-of-the-2026-sao-paulo-grand-prix.6Pvk4v10hKccs7IS4X667x",
+      "outlet": "Formula1.com",
+      "publish_date": "Nov 5",
+      "short_hash": "7d200de6",
+      "key_entities": [
+        "Formula 1",
+        "Sao Paulo Grand Prix",
+        "Mercedes",
+        "Interlagos"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🏎️ Title settled, Verstappen and Hamilton now scrap for runner-up in Brazil",
+      "summary": "",
+      "url": "https://www.skysports.com/f1/news/13607118/how-mercedes-can-win-2026-f1-constructors-championship-at-sao-paulo-grand-prix-this-sunday-with-kimi-antonelli-and-george-russell",
+      "outlet": "Sky Sports",
+      "publish_date": "Nov 5",
+      "short_hash": "e1dddc5d",
+      "key_entities": [
+        "Max Verstappen",
+        "Lewis Hamilton",
+        "Kimi Antonelli",
+        "Formula 1"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🎾 Paris Masters upsets: world No. 1 Zverev and Djokovic both crash out",
+      "summary": "",
+      "url": "https://www.skysports.com/tennis/news/13607999/atp-paris-masters-novak-djokovic-eliminated-from-atp-finals-race-as-world-no-1-alexander-zverev-also-suffers-shock-exit",
+      "outlet": "Sky Sports",
+      "publish_date": "Nov 5",
+      "short_hash": "5c159288",
+      "key_entities": [
+        "Paris Masters",
+        "Alexander Zverev",
+        "Novak Djokovic",
+        "tennis"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🏏 India open the New Zealand ODI series with a five-wicket win in Auckland",
+      "summary": "",
+      "url": "https://www.espn.com/cricket/series/24469/scorecard/1539437/new-zealand-vs-india-1st-odi-24469",
+      "outlet": "ESPNcricinfo",
+      "publish_date": "Nov 4",
+      "short_hash": "eb3c44c6",
+      "key_entities": [
+        "India",
+        "New Zealand",
+        "ODI",
+        "Auckland"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🎾 Sinner and Alcaraz headline the field as the ATP Finals near in Turin",
+      "summary": "",
+      "url": "https://www.atptour.com/en/news/alcaraz-nitto-atp-finals-2026-qualification",
+      "outlet": "ATP Tour",
+      "publish_date": "Nov 5",
+      "short_hash": "d1ca8572",
+      "key_entities": [
+        "Jannik Sinner",
+        "Carlos Alcaraz",
+        "ATP Finals",
+        "Turin"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "280 Ice Age engravings discovered deep in a Spanish cave",
+      "summary": "",
+      "url": "https://www.scientificamerican.com/article/hundreds-of-stunning-ice-age-drawings-discovered-inside-spanish-cave/",
+      "outlet": "Scientific American",
+      "publish_date": "Nov 4",
+      "short_hash": "3affb07e",
+      "key_entities": [
+        "Espluga de Francoli",
+        "Ice Age engravings",
+        "Antiquity",
+        "Spain"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "NASA's twin ESCAPADE probes swing past Earth on their way to Mars",
+      "summary": "",
+      "url": "https://science.nasa.gov/blogs/escapade/2026/11/02/nasas-twin-escapade-spacecraft-to-slingshot-past-earth-on-way-to-mars",
+      "outlet": "NASA",
+      "publish_date": "Nov 2",
+      "short_hash": "662bbfae",
+      "key_entities": [
+        "NASA",
+        "ESCAPADE",
+        "Mars",
+        "Earth flyby"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "Plants bend their roots to flee decaying neighbours, study finds",
+      "summary": "",
+      "url": "https://www.scientificamerican.com/article/plants-move-to-get-away-from-their-decaying-brethren/",
+      "outlet": "Scientific American",
+      "publish_date": "Nov 4",
+      "short_hash": "2bc28705",
+      "key_entities": [
+        "plants",
+        "saprotropism",
+        "Science journal",
+        "roots"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "Toxicology study finds Inca child-sacrifice victims were given intoxicants",
+      "summary": "",
+      "url": "https://www.scientificamerican.com/article/incan-children-were-given-hallucinogens-before-they-were-sacrificed-to-the-gods/",
+      "outlet": "Scientific American",
+      "publish_date": "Nov 3",
+      "short_hash": "29969771",
+      "key_entities": [
+        "Inca",
+        "capacocha",
+        "toxicology",
+        "mummies"
+      ],
+      "is_update": false
+    }
+  ],
+  "fun_fact": {
+    "headline": "Your body is faintly luminous",
+    "body": "Your body is faintly luminous. Human skin gives off an ultraweak glow — visible-light photons released as a by-product of metabolism — that is roughly a thousand times too dim for the naked eye to see. A 2009 Japanese study that imaged volunteers in total darkness found the emission rises and falls over the day, peaking in the late afternoon and tracing the face most brightly.",
+    "source": "Kobayashi et al. 2009 (PLoS ONE); Scientific American",
+    "fun_fact_id": "funfact-c3da8e49",
+    "topic": "biology",
+    "topic_key": "human bioluminescence"
+  },
+  "puzzle": {
+    "type": "visual",
+    "title": "Painted Cube",
+    "title_key": "painted-cube",
+    "body": "A 3x3x3 cube is built from 27 identical small cubes. Its entire outer surface is painted red, then it is taken apart into the 27 small cubes. How many have red paint on exactly two faces, and how many have no paint at all?",
+    "approach": "Sort the 27 small cubes by position — corner, edge, face, or centre — then count.",
+    "answer": "12 cubes have two painted faces (the edge cubes); 1 cube (the centre) has none. 8 corners have 3 faces, 6 face-centres have 1, 8+12+6+1=27.",
+    "puzzle_hash": "0b3c0b72"
+  },
+  "word_puzzle": {
+    "type": "grouping",
+    "title": "Birds of a Feather",
+    "title_key": "birds-of-a-feather",
+    "body": "Sort 16 words into four groups of four: SKY OAK BASE SUN / ROYAL VOLLEY ASH MOON / FOOT NAVY ELM SPOT / TEAL PINE BASKET FLASH.",
+    "approach": "Four hidden groups of four; one word fits two groups.",
+    "answer": "___+LIGHT: SPOT,SUN,MOON,FLASH | ___+BALL: BASE,BASKET,FOOT,VOLLEY | shades of blue: NAVY,ROYAL,SKY,TEAL | trees: OAK,PINE,ASH,ELM. Trap: SKY (skylight vs sky-blue).",
+    "word_puzzle_hash": "9516fbf2"
+  },
+  "notes": [
+    "Source reachability (FIX 6): the session's WebSearch crawler was blocked (HTTP 400 'not accessible to our user agent') for CNA, Straits Times, The Hindu, Indian Express, NDTV, BBC, Reuters, AP, The Guardian and NYT, and direct WebFetch to those domains failed (DNS/egress). However, WebSearch allowed_domains DID resolve real, current articles for SCMP, Mothership, CNN, Al Jazeera, Bloomberg, CNBC, TechCrunch, Formula1.com, Sky Sports, ESPN/ESPNcricinfo, ATP Tour, Scientific American and NASA. The prior three editions (Nov 3-5) were skipped on the assumption that ALL outlets were unreachable; today's run established that the fallback-tier and several global/tech/biz/sports/science outlets are reachable per-domain via WebSearch, so a full brief was publishable.",
+    "Singapore ran on SCMP + Mothership (CNA/ST/BBC/Reuters unreachable). India ran on the fallback tier (Bloomberg, CNBC, SCMP, Al Jazeera, CNN) because all India primary outlets were unreachable. UK News ran on the fallback tier (CNBC, Al Jazeera, Bloomberg) because BBC and Sky News were unreachable; all UK items are UK-domestic.",
+    "Missed-run / gap note: no edition was published for 2026-11-03, 2026-11-04 or 2026-11-05 (all deliberate skips due to the source-reachability block above); the prior runs DID fire, so there is no MISSED RUN. Today's edition is today's news only.",
+    "F1 race-currency: the Sao Paulo Grand Prix (Interlagos, race 8 Nov) was confirmed via Formula1.com as the current race weekend; the Mexico City result / Antonelli title clinch is referenced only as established championship context, not reported as a fresh race result.",
+    "Verification: 35 items across 8 news sections cleared the two-source / allowed-outlet / resolving-deep-URL bar; well above the 8-item hard-stop floor. The JWST exoplanet-imaging item was dropped for lack of a resolving deep article URL and replaced with the Inca toxicology study (Scientific American)."
+  ]
+}

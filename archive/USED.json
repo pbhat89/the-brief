@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-09-06",
-      "topic_key": "sun",
-      "text": "The Sun holds about 99.8% of the solar system's mass."
-    },
-    {
       "date": "2026-09-07",
       "topic_key": "bubble wrap",
       "text": "Bubble wrap was not invented to protect packages. In 1957, engineers Alfred Fielding and Marc Chavannes sealed two shower curtains together and first tried to sell the bubbly sheet as textured wallpaper, and then as greenhouse insulation. Only later did their company, Sealed Air, market it as protective packaging — the use that made it famous."
@@ -269,14 +264,14 @@
       "date": "2026-11-02",
       "topic_key": "saturn",
       "text": "Saturn is less dense than water (~0.69 g/cm3) and would float in a big enough bath."
+    },
+    {
+      "date": "2026-11-06",
+      "topic_key": "human bioluminescence",
+      "text": "Human skin emits an ultraweak metabolic glow, ~1000x too dim to see (2009 study)."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-10-06",
-      "type": "logic",
-      "title_key": "four-hats-and-a-wall"
-    },
     {
       "date": "2026-10-07",
       "type": "quantitative",
@@ -406,14 +401,14 @@
       "date": "2026-11-02",
       "type": "lateral",
       "title_key": "pushed-to-the-brink"
+    },
+    {
+      "date": "2026-11-06",
+      "type": "visual",
+      "title_key": "painted-cube"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-10-06",
-      "type": "anagram",
-      "title_key": "sounds-familiar"
-    },
     {
       "date": "2026-10-07",
       "type": "spellingbee",
@@ -543,6 +538,11 @@
       "date": "2026-11-02",
       "type": "spellingbee",
       "title_key": "reactor-core"
+    },
+    {
+      "date": "2026-11-06",
+      "type": "grouping",
+      "title_key": "birds-of-a-feather"
     }
   ]
 }

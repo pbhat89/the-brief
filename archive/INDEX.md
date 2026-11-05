@@ -4215,3 +4215,38 @@ is empty until the first run.
 2026-11-02	A dead star wears two rings, hinting at hidden Pluto-sized worlds	b2fcd6be	white-dwarf,debris-disc,nature-astronomy,planetary-bodies
 2026-11-02	NASA mates the Artemis III core stage with its boosters at Kennedy	fc5e17b0	nasa,artemis-iii,sls,boosters,moon
 2026-11-02	Europe's Euclid telescope discovers its first comet by accident	74849d2b	esa,euclid,comet,c-2026-s1,discovery
+2026-11-06	Singapore tops live air-pollution ranking again as haze returns and Parliament weighs tougher fines	2d1eca6f	Singapore,IQAir,Transboundary Haze Pollution Act,Parliament
+2026-11-06	Parliament backs a car-tax 'feebate' as COE review nears	bf3c1bcd	Jeffrey Siow,COE,LTA,Parliament
+2026-11-06	PAP keeps its top leadership intact in new Central Executive Committee	17f4609c	PAP,Central Executive Committee,Jeffrey Siow,Ng Chee Meng
+2026-11-06	Health Ministry apologises for a 9.5-hour public-healthcare IT outage	8c34496c	Tan Kiat How,Ministry of Health,IT outage
+2026-11-06	New Toa Payoh BTO anchors November HDB launch; care-apartment age lowered	be165e95	Chee Hong Tat,HDB,Toa Payoh,BTO
+2026-11-06	Delhi's air turns 'very poor' as winter smog returns before Diwali	22624b81	Delhi,air quality,PM2.5,Diwali
+2026-11-06	Sitharaman weighs capital-gains tax relief as foreign investors flee Indian stocks	0cc26395	Nirmala Sitharaman,capital gains tax,foreign investors,Indian stocks
+2026-11-06	Indian bonds and rupee rally as sliding oil eases inflation fears	41c2847d	India,rupee,bonds,oil
+2026-11-06	Union strike threat clouds Fairfax's $5.5 billion IDBI Bank takeover	bb3e2ed3	IDBI Bank,Fairfax,Nirmala Sitharaman,strike
+2026-11-06	Bank of England raises rates for the first time since 2023, warns inflation near 5%	21f1f764	Bank of England,Andrew Bailey,interest rates,inflation
+2026-11-06	UK roughly doubles the wait for permanent residency, exempts care workers	15435066	UK,indefinite leave to remain,Shabana Mahmood,care workers
+2026-11-06	Burnham denies plan to restore EU free movement after cabinet pushback	f28bb9ab	Andy Burnham,EU,free movement,cabinet
+2026-11-06	UK spent a record £561 million balancing the power grid in October	4164d86c	UK,power grid,gas prices
+2026-11-06	Burnham signals his 10-year plan for Britain could slip into next year	573e787f	Andy Burnham,10-year plan,UK
+2026-11-06	Democrats sweep US midterms, taking control of both chambers	70bbb393	Democrats,US midterms,Congress,Trump
+2026-11-06	Iran war grinds on as US adds sanctions and Tehran threatens US allies	3a9331cf	United States,Iran,Qeshm Island,sanctions
+2026-11-06	US to host Ukraine-Russia talks in Abu Dhabi as Kyiv eyes the new Congress	a07f3fd0	Ukraine,Russia,Abu Dhabi,Zelensky,Witkoff
+2026-11-06	Bomb-threat hoaxes divert European flights for the second time in a week	c69b43e8	Europe,flights,bomb threat,hoax
+2026-11-06	Micron pauses its $4.5 billion Taiwan chip plant after a labour dispute	c3172df4	Micron,Taiwan,memory chips,labour dispute
+2026-11-06	Goldman and Apollo shop SpaceX's $40 billion AI-chip financing deal	aa434e7b	Goldman Sachs,Apollo,SpaceX,AI financing
+2026-11-06	China's Moonshot AI sought Nvidia chips via Europe amid US curbs	60e79b31	Moonshot AI,Nvidia,Europe,export controls
+2026-11-06	A YC-backed startup stakes $1 million on five unsolved materials-science problems for AI	1d2ac48c	Y Combinator,materials science,AI,startup
+2026-11-06	Nasdaq tumbles into correction as AI-trade fears grip Wall Street	1ea7a163	Nasdaq,S&P 500,Wall Street,AI trade
+2026-11-06	Oil slides about 8% on bets a Democratic Congress hastens an end to the Iran war	812c3819	oil,WTI,Brent,Iran war
+2026-11-06	AMD forecasts a $17 billion quarter on soaring AI-chip demand	a7b93cd8	AMD,revenue forecast,AI chips
+2026-11-06	Palantir beats third-quarter estimates but its shares still slip	7407ac1d	Palantir,earnings,shares
+2026-11-06	🏎️ F1 reaches Interlagos, where Mercedes can seal the constructors' title	7d200de6	Formula 1,Sao Paulo Grand Prix,Mercedes,Interlagos
+2026-11-06	🏎️ Title settled, Verstappen and Hamilton now scrap for runner-up in Brazil	e1dddc5d	Max Verstappen,Lewis Hamilton,Kimi Antonelli,Formula 1
+2026-11-06	🎾 Paris Masters upsets: world No. 1 Zverev and Djokovic both crash out	5c159288	Paris Masters,Alexander Zverev,Novak Djokovic,tennis
+2026-11-06	🏏 India open the New Zealand ODI series with a five-wicket win in Auckland	eb3c44c6	India,New Zealand,ODI,Auckland
+2026-11-06	🎾 Sinner and Alcaraz headline the field as the ATP Finals near in Turin	d1ca8572	Jannik Sinner,Carlos Alcaraz,ATP Finals,Turin
+2026-11-06	280 Ice Age engravings discovered deep in a Spanish cave	3affb07e	Espluga de Francoli,Ice Age engravings,Antiquity,Spain
+2026-11-06	NASA's twin ESCAPADE probes swing past Earth on their way to Mars	662bbfae	NASA,ESCAPADE,Mars,Earth flyby
+2026-11-06	Plants bend their roots to flee decaying neighbours, study finds	2bc28705	plants,saprotropism,Science journal,roots
+2026-11-06	Toxicology study finds Inca child-sacrifice victims were given intoxicants	29969771	Inca,capacocha,toxicology,mummies
