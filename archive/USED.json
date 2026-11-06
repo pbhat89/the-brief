@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-09-07",
-      "topic_key": "bubble wrap",
-      "text": "Bubble wrap was not invented to protect packages. In 1957, engineers Alfred Fielding and Marc Chavannes sealed two shower curtains together and first tried to sell the bubbly sheet as textured wallpaper, and then as greenhouse insulation. Only later did their company, Sealed Air, market it as protective packaging — the use that made it famous."
-    },
-    {
       "date": "2026-09-08",
       "topic_key": "mauna kea",
       "text": "Mauna Kea is taller than Everest measured from base to peak"
@@ -269,14 +264,14 @@
       "date": "2026-11-06",
       "topic_key": "human bioluminescence",
       "text": "Human skin emits an ultraweak metabolic glow, ~1000x too dim to see (2009 study)."
+    },
+    {
+      "date": "2026-11-07",
+      "topic_key": "vantablack",
+      "text": "Vantablack, a coating of vertical carbon nanotubes, absorbs about 99.965% of visible light, so an object coated in it looks like a flat black void."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-10-07",
-      "type": "quantitative",
-      "title_key": "ages-across-the-street"
-    },
     {
       "date": "2026-10-08",
       "type": "lateral",
@@ -406,14 +401,14 @@
       "date": "2026-11-06",
       "type": "visual",
       "title_key": "painted-cube"
+    },
+    {
+      "date": "2026-11-07",
+      "type": "logic",
+      "title_key": "mislabelled-jars"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-10-07",
-      "type": "spellingbee",
-      "title_key": "center-holds"
-    },
     {
       "date": "2026-10-08",
       "type": "letterboxed",
@@ -543,6 +538,11 @@
       "date": "2026-11-06",
       "type": "grouping",
       "title_key": "birds-of-a-feather"
+    },
+    {
+      "date": "2026-11-07",
+      "type": "ladder",
+      "title_key": "head-to-tail"
     }
   ]
 }

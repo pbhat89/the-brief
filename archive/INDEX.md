@@ -4250,3 +4250,32 @@ is empty until the first run.
 2026-11-06	NASA's twin ESCAPADE probes swing past Earth on their way to Mars	662bbfae	NASA,ESCAPADE,Mars,Earth flyby
 2026-11-06	Plants bend their roots to flee decaying neighbours, study finds	2bc28705	plants,saprotropism,Science journal,roots
 2026-11-06	Toxicology study finds Inca child-sacrifice victims were given intoxicants	29969771	Inca,capacocha,toxicology,mummies
+2026-11-07	Parliament moves to raise the maximum haze fine tenfold to S$20 million	ad5f3f63	Singapore,Transboundary Haze Pollution Act,Grace Fu,NEA
+2026-11-07	Jail or reformative training to become the default for young scam offenders	4a14be63	Singapore,Parliament,scam offenders,reformative training
+2026-11-07	About 30% of eligible residents have collected free N95 masks, says Grace Fu	d2dfacca	Singapore,Grace Fu,N95 masks,haze
+2026-11-07	Shanmugam and WP's Fadli Fawzi clash in Parliament over a meeting with Israeli officials	8e640196	Singapore,Shanmugam,Fadli Fawzi,Israel
+2026-11-07	India's Diwali sweet boxes come with a bitter dose of inflation	5b5022d0	India,Diwali,inflation,sugar
+2026-11-07	Jailed scholar Sharjeel Imam's case reignites a debate over India's treatment of Muslims	9c70d4c8	India,Sharjeel Imam,Muslims,Delhi riots case
+2026-11-07	India's Nifty 50 climbs to a two-month high on hopes of equity-tax relief	c4c4f5ee	India,Nifty 50,Sitharaman,equity tax
+2026-11-07	Update: New Delhi's air turns hazardous in the days before Diwali	df7ac281	India,New Delhi,air pollution,Diwali
+2026-11-07	Update: UK markets bet on a December rate rise as gilt yields climb	b9f4ca0c	Bank of England,interest rates,gilts,pound
+2026-11-07	Trump says a Russia-Ukraine deal is near after meeting Putin's envoy	ea7582b3	Trump,Russia,Ukraine,Dmitriev,Abu Dhabi
+2026-11-07	Iran steps up back-channel diplomacy as Trump threatens further strikes	a41757fa	Iran,United States,Trump,UAE,Qatar
+2026-11-07	Israel's deadlocked election leaves rival blocs scrambling to govern	ed0d731e	Israel,Eisenkot,Netanyahu,Joint List,Raam
+2026-11-07	Sudan and Ethiopia expel each other's diplomats over RSF drone attacks	9fed21d3	Sudan,Ethiopia,RSF,drones
+2026-11-07	Microsoft moves to consolidate its 'neocloud' partners as the AI buildout strains	3055ca58	Microsoft,neocloud,AI data centres
+2026-11-07	Apple says more than 100,000 apps now run on its foldable iPhone Duo	18a698ec	Apple,iPhone Duo,apps
+2026-11-07	OpenAI overhauls how it strikes data-centre deals after local outcry	4971e4c7	OpenAI,data centres,nondisclosure agreements
+2026-11-07	After the midterms, a bigger fight over AI data centres looms	3dff6ae4	AI data centres,Congress,midterms
+2026-11-07	Update: AI and chip stocks rebound after a $2.3 trillion two-day rout	f39dc5a5	Nasdaq,Nvidia,AI stocks,Wall Street
+2026-11-07	Asian chip giants tumble as Wall Street's AI rout spreads	bec1bd66	SK Hynix,Samsung,SoftBank,TSMC,chip stocks
+2026-11-07	Airbnb jumps about 11% after beating third-quarter estimates	f65d090d	Airbnb,earnings,Cloudflare
+2026-11-07	Atlassian sinks about 14% on a weak data-centre revenue outlook	af21667b	Atlassian,data-centre revenue
+2026-11-07	🏎️ Norris leads opening practice at Interlagos in an upgraded McLaren	84257eb8	Formula 1,Sao Paulo Grand Prix,Norris,Antonelli,Interlagos
+2026-11-07	🏎️ Champion Antonelli hits back to top second practice in Brazil	56e02b28	Formula 1,Antonelli,Norris,Interlagos,McLaren
+2026-11-07	🎾 Shelton beats Paul to reach his first Paris Masters semifinal	b2d93f0a	Ben Shelton,Tommy Paul,Paris Masters,ATP Finals
+2026-11-07	🏏 India lead 1-0 as they meet New Zealand in the second Wellington ODI	4fdb7391	India,New Zealand,ODI,Wellington
+2026-11-07	Experimental gene therapy nearly eliminates seizures in drug-resistant epilepsy	2c000303	gene therapy,epilepsy,seizures,NEJM
+2026-11-07	Ancient DNA charts the spread of Celtic and Germanic languages across Europe	e4174d24	ancient DNA,Celtic languages,Germanic languages
+2026-11-07	Anthrax outbreak kills dozens of hippos in DR Congo	73338d12	anthrax,hippos,DR Congo
+2026-11-07	Hubble finds much of the oxygen missing from nearby dwarf galaxies	71643881	Hubble,dwarf galaxies,oxygen,NASA
