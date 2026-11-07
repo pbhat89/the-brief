@@ -4279,3 +4279,35 @@ is empty until the first run.
 2026-11-07	Ancient DNA charts the spread of Celtic and Germanic languages across Europe	e4174d24	ancient DNA,Celtic languages,Germanic languages
 2026-11-07	Anthrax outbreak kills dozens of hippos in DR Congo	73338d12	anthrax,hippos,DR Congo
 2026-11-07	Hubble finds much of the oxygen missing from nearby dwarf galaxies	71643881	Hubble,dwarf galaxies,oxygen,NASA
+2026-11-08	LTA tells Grab to pause self-driving shuttle tests after a Punggol near-miss with a schoolgirl	841d14b9	Singapore,LTA,Grab,autonomous vehicle,Punggol
+2026-11-08	Three firms from the 2015 haze probe are named again as a fresh haze episode hits Singapore	ee5712f8	Singapore,haze,NEA,Eileen Chong
+2026-11-08	More than 112,000 people dropped private health insurance riders in 2025 as premiums rose	6c774dea	Singapore,Integrated Shield Plan,insurance riders,premiums
+2026-11-08	High Court orders Singapura Heritage Food Hall wound up over an unpaid supplier debt	f6b75fbd	Singapore,Singapura Heritage Food Hall,High Court,Toh Thye San Farm
+2026-11-08	Update: Delhi's air is ranked the world's most polluted on the eve of Diwali	fa13432a	India,New Delhi,air pollution,Diwali,IQAir
+2026-11-08	India's gold demand gets a festive boost as prices pull back before Diwali	952ebe5c	India,gold,Diwali,Crisil
+2026-11-08	India's household borrowing jumps 36% as a debt-fuelled spending boom meets higher rates	7f58dfe2	India,household debt,consumption,RBI
+2026-11-08	Indian markets open a special Diwali session for the new Samvat trading year	333f0689	India,Muhurat trading,Diwali,Samvat
+2026-11-08	Russell Brand found guilty of rape and sexual assault at Southwark Crown Court	cf515b5f	United Kingdom,Russell Brand,Southwark Crown Court,rape
+2026-11-08	PM Burnham pledges to tighten benefit eligibility for young people to curb the welfare bill	76b7af91	United Kingdom,Andy Burnham,welfare,benefits
+2026-11-08	UK coverage runs short in today's edition	00242673	uk,placeholder
+2026-11-08	Trump confirms fresh US strikes on Iran's Qeshm Island as mediators try to avert escalation	71f54f2d	Iran,United States,Trump,Qeshm Island,Strait of Hormuz
+2026-11-08	Gunman kills six and wounds about 15 in a shooting in Poland's Krakow	da73c2f2	Poland,Krakow,shooting,far-right
+2026-11-08	Death toll from a Russian strike on a Zaporizhia aid convoy rises to at least 50	820d37c3	Ukraine,Russia,Zaporizhia,Abu Dhabi
+2026-11-08	Update: Israel's president picks Eisenkot over Netanyahu to form the next government	072ea4a2	Israel,Eisenkot,Netanyahu,Herzog
+2026-11-08	Binance's finance chief departs in the wake of a $6 billion crypto heist	9456c9fa	Binance,Kaiser Ng,crypto hack,Justin Yek
+2026-11-08	US intelligence reportedly flags a tech executive close to Nvidia's CEO as a suspected Chinese spy	f6963a34	Nvidia,Jensen Huang,China,Megaspeed,espionage
+2026-11-08	Fox completes its $22 billion acquisition of Roku	f391163f	Fox,Roku,streaming,acquisition
+2026-11-08	Tesla will wind down Cybertruck production in Texas next year, Musk says	0e48acc6	Tesla,Cybertruck,Elon Musk,Cybercab
+2026-11-08	US employers added 165,000 jobs in October, far above forecasts	56cdeacd	United States,jobs report,payrolls,Federal Reserve
+2026-11-08	Oil posts its worst week in months as traders weigh a renewed Iran war	7aad5969	oil,Brent,WTI,Iran
+2026-11-08	Earnings drive sharp swings: JFrog jumps about 35%, DraftKings sinks about 27%	e1bbbda8	JFrog,DraftKings,earnings,stocks
+2026-11-08	Lam Research climbs about 9% after approving a $25 billion share buyback	380f624d	Lam Research,share buyback,semiconductors
+2026-11-08	🏎️ Norris takes pole for the Sao Paulo Grand Prix in a rain-hit qualifying	24d8436d	Formula 1,Sao Paulo Grand Prix,Norris,Interlagos
+2026-11-08	🏎️ Verstappen tops final practice but will serve a grid penalty in Brazil	bcfc9688	Formula 1,Verstappen,grid penalty,Interlagos
+2026-11-08	🏏 India beat New Zealand by 4 runs in Wellington to lead the ODI series 2-0	0eddced5	India,New Zealand,ODI,Wellington
+2026-11-08	🎾 Alcaraz and Shelton reach the Paris Masters final to set up a US Open rematch	b3862341	Carlos Alcaraz,Ben Shelton,Paris Masters,tennis
+2026-11-08	🎾 Defending champion Rybakina withdraws from the WTA Finals in Indian Wells	7082f4e9	Elena Rybakina,WTA Finals,Indian Wells,Kostyuk
+2026-11-08	A new method images exoplanets up to 15 times fainter, below the telescope-stability limit	aed4d9cc	exoplanets,JWST,astronomy,Nature
+2026-11-08	A brain-cell change can make silver foxes behave like pet dogs, a long fox study finds	24d6da0d	silver fox,domestication,brain,dogs
+2026-11-08	Cannabis was burned in a Siberian burial ritual about 2,800 years ago, researchers find	34545e9c	cannabis,archaeology,Siberia,burial
+2026-11-08	A self-driving lab in China writes and reads data stored in DNA from a single prompt	43cc707d	DNA data storage,self-driving lab,AI,Nature

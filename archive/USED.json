@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-09-08",
-      "topic_key": "mauna kea",
-      "text": "Mauna Kea is taller than Everest measured from base to peak"
-    },
-    {
       "date": "2026-09-11",
       "topic_key": "tittle",
       "text": "The dot over i and j is called a tittle"
@@ -269,14 +264,14 @@
       "date": "2026-11-07",
       "topic_key": "vantablack",
       "text": "Vantablack, a coating of vertical carbon nanotubes, absorbs about 99.965% of visible light, so an object coated in it looks like a flat black void."
+    },
+    {
+      "date": "2026-11-08",
+      "topic_key": "lobster",
+      "text": "Lobster was so plentiful in colonial New England it was poor people's food, fed to prisoners and used as fertilizer, before becoming a delicacy in the 1800s."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-10-08",
-      "type": "lateral",
-      "title_key": "a-call-in-the-night"
-    },
     {
       "date": "2026-10-09",
       "type": "visual",
@@ -406,14 +401,14 @@
       "date": "2026-11-07",
       "type": "logic",
       "title_key": "mislabelled-jars"
+    },
+    {
+      "date": "2026-11-08",
+      "type": "quantitative",
+      "title_key": "there-and-back"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-10-08",
-      "type": "letterboxed",
-      "title_key": "four-sides-to-every-story"
-    },
     {
       "date": "2026-10-09",
       "type": "grouping",
@@ -543,6 +538,11 @@
       "date": "2026-11-07",
       "type": "ladder",
       "title_key": "head-to-tail"
+    },
+    {
+      "date": "2026-11-08",
+      "type": "anagram",
+      "title_key": "sum-of-the-parts"
     }
   ]
 }
