@@ -269,14 +269,14 @@
       "date": "2026-11-08",
       "topic_key": "lobster",
       "text": "Lobster was so plentiful in colonial New England it was poor people's food, fed to prisoners and used as fertilizer, before becoming a delicacy in the 1800s."
+    },
+    {
+      "date": "2026-11-09",
+      "topic_key": "shark",
+      "text": "Sharks are older than trees: shark-like scales date to ~450 Mya, the first true trees to ~385-370 Mya."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-10-09",
-      "type": "visual",
-      "title_key": "through-the-looking-glass"
-    },
     {
       "date": "2026-10-10",
       "type": "logic",
@@ -406,14 +406,14 @@
       "date": "2026-11-08",
       "type": "quantitative",
       "title_key": "there-and-back"
+    },
+    {
+      "date": "2026-11-09",
+      "type": "lateral",
+      "title_key": "glass-of-water"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-10-09",
-      "type": "grouping",
-      "title_key": "common-threads"
-    },
     {
       "date": "2026-10-10",
       "type": "ladder",
@@ -543,6 +543,11 @@
       "date": "2026-11-08",
       "type": "anagram",
       "title_key": "sum-of-the-parts"
+    },
+    {
+      "date": "2026-11-09",
+      "type": "spellingbee",
+      "title_key": "fresh-coat"
     }
   ]
 }

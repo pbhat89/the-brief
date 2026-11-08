@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Mon, 9 November 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .wpuzzle-box{background:linear-gradient(135deg,#0e1a1a,#0d1620);border:1px solid #234a44;border-left:3px solid #16a085;padding:24px 28px;border-radius:2px}
+  .wptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#16a085;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .wpuzzle-box .puzzle-title{color:#cdeae3}
+  .wpuzzle-box .puzzle-how{color:#8fb8ac;background:#08140f;border-left-color:#1a6a5a}
+  .wpuzzle-box .puzzle-q{color:#dfeae6;font-family:'Source Sans 3',sans-serif}
+  .wpuzzle-box .answer{color:#bfe0d6}
+  .wpuzzle-box .answer .alabel{color:#16a085}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Monday, 9 November 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Monday, 9 November 2026 · 🔍 36 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eleven entries in this exact order:
+     id    : one of "sg" | "india" | "uk" | "geo" | "tech" | "biz" | "sports" | "misc" | "fun" | "puzzle" | "wpuzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 8 news tabs; fun/puzzle/wpuzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+
+   WORD_PUZZLE shape (separate, daily word game — NYT-style, static reveal):
+     type     : one of "Connections" | "Word Ladder" | "Anagram" | "Spelling Bee" | "Letter Boxed" | "Mini Crossword"
+     title    : short evocative name for the word puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle body; supports \n for line breaks (grids render as pre-formatted text)
+     answer   : the answer; supports \n for line breaks; appears inside its own toggle (id "wpans")
+============================================================================= */
+
+const SECTIONS = [
+  {
+    "id": "sg",
+    "title": "🇸🇬 Singapore",
+    "color": "#e74c3c",
+    "items": [
+      {
+        "headline": "Gyu-Kaku to close its last Singapore outlet at Chijmes, exiting after two decades",
+        "summary": "The Japanese yakiniku chain will permanently shut its final Singapore restaurant, at Chijmes, on 15 November, ending more than 20 years in the market. The closure follows the shutting of its Waterway Point and Kinex outlets in March, The Star Vista in May and VivoCity in September; loyalty members can redeem rewards until the last day.",
+        "source": "Mothership",
+        "url": "https://mothership.sg/2026/11/gyu-kaku-close-down-singapore/",
+        "date": "Nov 6",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "At least 10 Telegram groups found fronting for vice as police move to tighten massage-shop rules",
+        "summary": "Checks by Mothership found at least 10 Telegram groups advertising ‘massage’ shops alleged to be fronts for prostitution across Singapore. The police said on 5 November that they are planning changes to the regulatory regime for massage establishments.",
+        "source": "Mothership",
+        "url": "https://mothership.sg/2026/11/telegram-groups-allegedly-massage-front-spore/",
+        "date": "Nov 5",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Singaporean woman linked to Cambodia's Prince Holding scam syndicate charged in court",
+        "summary": "A 44-year-old Singaporean woman connected to the Cambodia-based Prince Holding Group scam network was charged on 6 November with instigating the falsification of accounts and an attempt to cheat. She was ordered to remain in remand.",
+        "source": "Mothership",
+        "url": "https://mothership.sg/2026/11/woman-prince-holding-group-arrested/",
+        "date": "Nov 6",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Police investigate American man who rented three landed homes through shell firms without paying",
+        "summary": "Singapore police are investigating an American man accused of renting three landed homes using shell companies and then failing to pay rent or move out. Cheating of this kind can carry up to 10 years’ jail, a fine, or caning.",
+        "source": "Mothership",
+        "url": "https://mothership.sg/2026/11/police-investigate-rent-landed-homes-no-pay-rent/",
+        "date": "Nov 5",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "india",
+    "title": "🇮🇳 India",
+    "color": "#e67e22",
+    "items": [
+      {
+        "headline": "Update: Indian stocks break their Diwali winning streak with a first Muhurat drop since 2017",
+        "summary": "The NSE Nifty 50 slipped about 0.2% in Sunday’s one-hour ceremonial Diwali ‘Muhurat’ session, its first decline in the special trading since 2017, after reversing an early gain of as much as 0.4%. Lenders including HDFC Bank, ICICI Bank and Axis Bank weighed on the index.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-11-08/indian-stocks-rise-in-special-diwali-trading-session-on-sunday",
+        "date": "Nov 8",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "India weighs scrapping foreign investors' capital-gains tax to stem over $30 billion in outflows",
+        "summary": "Industry groups and India’s market regulator are pressing the government to abolish long-term capital-gains tax for foreign investors, who have pulled more than $30 billion from Indian equities this year. The benchmark Nifty 50 is down nearly 9% in 2026.",
+        "source": "CNBC",
+        "url": "https://www.cnbc.com/2026/11/05/india-tax-foreign-investors-nifty.html",
+        "date": "Nov 5",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Bloomberg finds Modi's $4.5 billion Ganga cleanup has failed to clear the river after a decade",
+        "summary": "A Bloomberg investigation using satellite analysis and independent water testing found the Ganges is no cleaner than a decade ago, despite a roughly $4.5 billion government programme. Sewage-treatment capacity remains about a third short of the plan’s year-end target.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/graphics/2026-ganges-water-pollution/",
+        "date": "Nov 6",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "India touts pulling 500 million out of poverty even as inequality deepens",
+        "summary": "Prime Minister Modi hailed ‘a historic fall in poverty’, citing World Bank estimates that around 500 million Indians have left extreme poverty. Economists noted the government no longer calculates its own poverty figures and warned that inequality has widened.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/11/3/how-india-pulled-500-million-people-out-of-poverty-as-inequality-deepens",
+        "date": "Nov 3",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "uk",
+    "title": "🇬🇧 UK News",
+    "color": "#3949ab",
+    "items": [
+      {
+        "headline": "UK doubles the wait for permanent residency to 10 years, exempting care workers",
+        "summary": "The British government has roughly doubled the standard wait for permanent residency to 10 years for most foreign workers, with care workers exempted and the rules applying to people already in the country. Ministers estimate up to 1.4 million people will gain settled status between 2026 and 2030.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/11/3/uk-to-double-wait-for-permanent-residency-with-exemptions-for-care-workers",
+        "date": "Nov 3",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "PM Burnham says Britain's flagship 10-year plan could slip into next year",
+        "summary": "Prime Minister Andy Burnham said the government’s promised 10-year plan for Britain may be delayed into December or January, telling The Economist he would ‘leave that open’. The slip comes weeks after Chancellor John Healey’s cautious first budget.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-11-05/burnham-says-10-year-plan-for-uk-could-be-delayed-to-next-year",
+        "date": "Nov 5",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "UK coverage runs short in today's edition",
+        "summary": "BBC and Sky News were unreachable this run, and the fallback tier (Al Jazeera, Bloomberg, CNN, CNBC) yielded only two fresh UK-domestic stories after repeated retries across varied angles.",
+        "source": "The Brief",
+        "url": "",
+        "date": "Monday, 9 November 2026",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "geo",
+    "title": "🌍 Global / Geopolitics",
+    "color": "#2980b9",
+    "items": [
+      {
+        "headline": "Update: Iran warns it will 'rain down hell' as Trump calls renewed strikes 'highly unlikely'",
+        "summary": "Iranian Foreign Minister Abbas Araghchi warned Tehran would ‘rain down hell’ if Washington resumes large-scale attacks, days after US strikes on Qeshm Island. President Trump told CNN that renewed strikes were ‘highly unlikely’ if talks on Iran’s nuclear programme and the Strait of Hormuz keep progressing.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/11/8/iran-threatens-to-rain-down-hell-if-us-escalates-war",
+        "date": "Nov 8",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Update: Zelenskyy says Russia is escalating energy-grid strikes before Abu Dhabi peace talks",
+        "summary": "President Volodymyr Zelenskyy accused Russia of intensifying attacks on Ukraine’s power network, which have left hundreds of thousands without electricity, ahead of US-brokered talks. Russian and Ukrainian delegations are expected in Abu Dhabi on 10-11 November.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/11/7/russia-launches-missile-attack-on-kyiv-injuring-residents",
+        "date": "Nov 7",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Strong earthquake strikes central Japan, injuring more than 20 people",
+        "summary": "A strong earthquake struck Shizuoka Prefecture in central Japan early on 8 November, injuring more than 20 people, authorities said. No tsunami warning was issued.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/11/8/earthquake-hits-central-japan-injuring-more-than-20-people",
+        "date": "Nov 8",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "More than 140,000 rally across France against rising costs as police fire tear gas",
+        "summary": "France’s interior ministry put turnout at about 146,000 nationwide, including 46,000 in Paris, as fresh protests over living costs swept the country on 7 November; unions claimed 250,000. Police fired tear gas in Paris and Lyon, where officers dispersed a road blockade.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/11/7/more-than-140000-rally-as-new-protests-against-rising-costs-sweep-france",
+        "date": "Nov 7",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Spain's El Hierro declares an emergency as migrant boat arrivals surge",
+        "summary": "Authorities on the Canary island of El Hierro declared an emergency after more than 3,300 people arrived by boat since the start of November, overwhelming reception capacity. The island, one of the archipelago’s smallest, sits on a perilous Atlantic migration route from West Africa.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/11/8/canary-islands-el-hierro-declares-emergency-amid-migrant-refugee-influx",
+        "date": "Nov 8",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "tech",
+    "title": "💻 Tech & AI",
+    "color": "#27ae60",
+    "items": [
+      {
+        "headline": "OpenAI raises another $11 billion at a $1.25 trillion valuation",
+        "summary": "OpenAI has raised an additional $11 billion in a funding round valuing it at about $1.25 trillion, with the round possibly reaching roughly $20 billion once it closes, according to reports. The valuation falls short of a $30 billion target floated in September.",
+        "source": "TechCrunch",
+        "url": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/",
+        "date": "Nov 6",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Google takes over Crusoe's stalled Wyoming data-centre project with a $17 billion plan",
+        "summary": "Data-centre developer Crusoe confirmed it has sold an unfinished southeastern Wyoming project to Google, which plans to invest about $17 billion in the campus. Crusoe had struggled to sign customers for the site, which was originally pitched to scale to 10 gigawatts.",
+        "source": "TechCrunch",
+        "url": "https://techcrunch.com/2026/11/06/crusoe-sells-troubled-wyoming-data-center-project-to-google/",
+        "date": "Nov 6",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Apple's first touchscreen MacBook Pro goes on sale, reversing years of resistance",
+        "summary": "Apple began selling its first touchscreen MacBook Pro, abandoning a long-held stance against touch laptops; the 14-inch model starts at $2,899. The move comes as Apple pushes new hardware, including a foldable iPhone that has faced supply constraints.",
+        "source": "CNBC",
+        "url": "https://www.cnbc.com/2026/10/28/apple-mac-touchscreen-launch.html",
+        "date": "Nov 6",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Microsoft winds down its deal to rent AI cloud capacity from Oracle",
+        "summary": "Microsoft is ending an arrangement to rent artificial-intelligence computing capacity from Oracle as it reviews outside cloud partnerships and leans on its own data centres, Bloomberg reported. The move is part of a broader pullback from so-called neocloud suppliers.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-11-06/microsoft-is-winding-down-oracle-deal-to-rent-ai-cloud-capacity",
+        "date": "Nov 6",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "biz",
+    "title": "📈 Business & Markets",
+    "color": "#8e44ad",
+    "items": [
+      {
+        "headline": "Wall Street ends its worst week since April 2025 as the Nasdaq falls into correction",
+        "summary": "The Nasdaq Composite fell 3.4% and the S&P 500 2.7% for the week, pushing the Nasdaq more than 10% below last month’s record into correction, after a sharp AI-driven selloff. Friday brought only a modest bounce, with the S&P up 0.31% to 7,376.86 and the Dow down 0.46%.",
+        "source": "CNBC",
+        "url": "https://www.cnbc.com/2026/11/05/stock-market-today-live-updates.html",
+        "date": "Nov 6",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Bond yields climb and markets lift December Fed rate-hike odds above 77% after strong jobs data",
+        "summary": "The 10-year Treasury yield rose to about 4.86% after October payrolls came in far above forecasts, firming the case for another rate increase. Futures markets priced in more than a 77% chance of a quarter-point Federal Reserve hike at the 9 December meeting.",
+        "source": "CNBC",
+        "url": "https://www.cnbc.com/2026/11/06/treasury-yields-inch-lower-as-investors-look-ahead-to-key-jobs-data-.html",
+        "date": "Nov 6",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Gold climbs to a two-week high near $4,100 an ounce after the US midterms",
+        "summary": "Gold rose nearly 2% to a two-week high, with spot bullion around $4,100 an ounce and December futures settling 1% higher at $4,113.50, as a softer dollar and easing yields lifted demand. The metal remains below its January record near $4,630.",
+        "source": "CNBC",
+        "url": "https://www.cnbc.com/2026/11/05/gold-hits-two-week-high-as-dollar-yields-ease-after-us-midterms.html",
+        "date": "Nov 5",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Moderna jumps about 7% after raising its 2026 revenue-growth forecast",
+        "summary": "Moderna shares rose about 7% after the company lifted its 2026 revenue-growth guidance to 15-25%, up from a prior forecast of up to 10%. It reported earnings of 38 cents per share against expectations for a loss of about $1.25.",
+        "source": "CNBC",
+        "url": "https://www.cnbc.com/2026/11/06/moderna-mrna-earnings-q3-2026.html",
+        "date": "Nov 6",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "sports",
+    "title": "🎾🏏🏎️ Sports",
+    "color": "#c0392b",
+    "items": [
+      {
+        "headline": "🏎️ Norris wins a rain-hit Sao Paulo Grand Prix as Verstappen charges to second from 21st",
+        "summary": "Lando Norris led from pole to win a wet-dry Interlagos race by 14.6 seconds, his third victory of the season. Max Verstappen recovered from 21st on the grid to finish second, with Red Bull’s Isack Hadjar third.",
+        "source": "Formula1.com",
+        "url": "https://www.formula1.com/en/latest/article/norris-beats-verstappen-in-wet-sao-paulo-gp-thriller-as-mercedes-win-constructors-championship.7JN7MXLZf5lk5l0C3gfKGI",
+        "date": "Nov 8",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "🏎️ Mercedes seal the 2026 Constructors' Championship, their first title since 2021",
+        "summary": "Mercedes clinched the constructors’ title with three rounds to spare, taking an unassailable lead over Ferrari as George Russell finished fourth and champion Kimi Antonelli fifth in Brazil. It is the team’s first constructors’ crown since 2021.",
+        "source": "Sky Sports",
+        "url": "https://www.skysports.com/f1/news/13609694/sao-paulo-gp-lando-norris-wins-wet-race-for-mclaren-as-mercedes-seal-2026-f1-constructors-championship-in-brazil",
+        "date": "Nov 8",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "🎾 Alcaraz beats Shelton to win his first Paris Masters title and avenge the US Open",
+        "summary": "Carlos Alcaraz beat Ben Shelton 7-6(5), 7-5 to win his first Rolex Paris Masters and ninth Masters 1000 title, avenging his US Open quarter-final loss to the American. Alcaraz next plays the ATP Finals in Turin, which begins on 15 November.",
+        "source": "Sky Sports",
+        "url": "https://www.skysports.com/tennis/news/13609753/atp-paris-masters-carlos-alcaraz-beats-ben-shelton-to-claim-fifth-title-of-2026-after-avenging-us-open-defeat",
+        "date": "Nov 8",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "🏏 India, 2-0 up, eye a series win against New Zealand in the third ODI at Hamilton",
+        "summary": "India lead the five-match one-day series 2-0 after wins in Auckland and Wellington and can move further ahead in the third ODI at Hamilton’s Seddon Park on 10 November. Unseasonal rain and an uneven pitch have clouded preparations.",
+        "source": "ESPNcricinfo",
+        "url": "https://www.espn.com/cricket/story/_/id/50417460/nz-vs-ind-3rd-odi-more-wet-weather-more-uncertainty-hamilton-pitch",
+        "date": "Nov 8",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "misc",
+    "title": "🔬 Other Miscellaneous News",
+    "color": "#1abc9c",
+    "items": [
+      {
+        "headline": "A new study ties Earth's billion-year 'Great Unconformity' rock gap to deep-mantle motion",
+        "summary": "Researchers argue in Nature that continental-scale uplift and subsidence driven by mantle convection, rather than ‘Snowball Earth’ glaciers, best explains the Great Unconformity — a gap in the rock record spanning up to a billion years. The model fits the up-and-down motion the team reconstructed across the continents.",
+        "source": "Nature",
+        "url": "https://www.nature.com/articles/s41586-026-11156-5",
+        "date": "Nov 4",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Physicists clock hard X-ray flashes lasting just 170 attoseconds",
+        "summary": "A team reported in Nature the direct measurement of hard X-ray pulses lasting about 170 attoseconds — quintillionths of a second — along with the metrology to characterise and control them. Such ultrashort flashes could track the motion of electrons inside matter.",
+        "source": "Nature",
+        "url": "https://www.nature.com/articles/s41586-026-11245-5",
+        "date": "Nov 4",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Astronomers flag a single candidate for Planet Nine in decades-old infrared surveys",
+        "summary": "Comparing infrared sky surveys taken about two decades apart, astronomers narrowed hundreds of thousands of objects to one candidate whose motion and brightness could fit a hypothesised Planet Nine, Scientific American reported. The authors caution that at least one more observation is needed to confirm anything.",
+        "source": "Scientific American",
+        "url": "https://www.scientificamerican.com/article/have-astronomers-spotted-planet-nine/",
+        "date": "Nov 5",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "A dead star is found ringed by a rare double disc of planetary debris",
+        "summary": "Astronomers describe in Nature Astronomy a white dwarf, WD J1328-1450, encircled by two nested discs of gaseous debris, probably shaped by two unseen bodies — one asteroid-sized, one Pluto-sized. The stable double disc challenges current models of how such debris discs form.",
+        "source": "Nature",
+        "url": "https://www.nature.com/articles/s41550-026-03004-3",
+        "date": "Nov 4",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "fun",
+    "title": "✦ Fun Fact",
+    "color": "#27ae60",
+    "custom": "fun"
+  },
+  {
+    "id": "puzzle",
+    "title": "🧩 Puzzle",
+    "color": "#e67e22",
+    "custom": "puzzle"
+  },
+  {
+    "id": "wpuzzle",
+    "title": "🔤 Word Puzzles",
+    "color": "#16a085",
+    "custom": "wpuzzle"
+  }
+];
+
+const FUN_FACT = {
+  "text": "Sharks are older than trees. The earliest shark-like scales in the fossil record date to about 450 million years ago, in the Late Ordovician, while the first true trees — such as Archaeopteris, which formed the earliest forests — appeared only around 385 to 370 million years ago. That means sharks had been swimming the seas for some 65 million years before anything we would call a tree took root on land.",
+  "tag": "Category · Biology & Deep Time"
+};
+
+const PUZZLE = {
+  "type": "Lateral Thinking",
+  "title": "A Glass of Water",
+  "how": "Ask what the glass of water was really for — the man never actually wanted to drink it.",
+  "question": "A man walks into a bar and asks the bartender for a glass of water. The bartender suddenly reaches under the counter, pulls out a gun and points it straight at him. The man pauses, says ‘Thank you,’ and calmly walks out. Nothing was stolen and no one was hurt.\n\nWhy was the man grateful?",
+  "answer": "The man had the hiccups.\n\nHe asked for a glass of water to cure them. The bartender realised a sudden shock would work better than water, so he pulled out the gun to startle him. It worked — the fright cured the hiccups — so the man no longer needed the water, thanked the bartender, and left."
+};
+
+const WORD_PUZZLE = {
+  "type": "Spelling Bee",
+  "title": "A Fresh Coat",
+  "how": "Every word must contain the centre letter T and use only the seven given letters; letters may repeat.",
+  "question": "Centre letter: T  (required in every word)\nAll letters:  A · E · I · N · P · R · T\n\nFind as many words of four or more letters as you can. Each must contain the centre letter T and be built only from these seven letters (letters may repeat). Exactly one common word uses all seven — that is the pangram.\n\nTarget: 12+ words, including the pangram.",
+  "answer": "Pangram: PAINTER  (also PERTAIN and REPAINT).\n\nA fuller list, each containing the centre T:\nPAINT · PAINTER · TRAIN · TERRAIN · RETAIN · RETINA · TAPIR · TRIPE · TRAP · TARP · RANT · RENT · PINT · PANT · ENTRAP · PATINA · PERTAIN · REPAINT\n\nEvery word uses only A, E, I, N, P, R, T and includes the centre letter T."
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function renderWordPuzzle(){
+  let h='<div class="sec-title">🔤 Word Puzzle of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#16a085,transparent)"></div>';
+  h+='<div class="wpuzzle-box"><span class="wptype">'+WORD_PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+WORD_PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+WORD_PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+WORD_PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this,\'wpans\')">Show Answer</button>';
+  h+='<div class="answer" id="wpans"><span class="alabel">Answer</span>'+WORD_PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn,ansId){var a=document.getElementById(ansId||'ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else if(sec.custom==="wpuzzle"){div.innerHTML=renderWordPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>

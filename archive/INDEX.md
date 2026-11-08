@@ -4311,3 +4311,35 @@ is empty until the first run.
 2026-11-08	A brain-cell change can make silver foxes behave like pet dogs, a long fox study finds	24d6da0d	silver fox,domestication,brain,dogs
 2026-11-08	Cannabis was burned in a Siberian burial ritual about 2,800 years ago, researchers find	34545e9c	cannabis,archaeology,Siberia,burial
 2026-11-08	A self-driving lab in China writes and reads data stored in DNA from a single prompt	43cc707d	DNA data storage,self-driving lab,AI,Nature
+2026-11-09	Gyu-Kaku to close its last Singapore outlet at Chijmes, exiting after two decades	6b072c5d	Singapore,Gyu-Kaku,Chijmes,closure
+2026-11-09	At least 10 Telegram groups found fronting for vice as police move to tighten massage-shop rules	1318c858	Singapore,Telegram,massage establishments,police
+2026-11-09	Singaporean woman linked to Cambodia's Prince Holding scam syndicate charged in court	bfe1c313	Singapore,Prince Holding Group,scam,court
+2026-11-09	Police investigate American man who rented three landed homes through shell firms without paying	98c83cf0	Singapore,shell companies,landed homes,police
+2026-11-09	Update: Indian stocks break their Diwali winning streak with a first Muhurat drop since 2017	d3efee63	India,Nifty 50,Muhurat trading,Diwali
+2026-11-09	India weighs scrapping foreign investors' capital-gains tax to stem over $30 billion in outflows	445288de	India,capital gains tax,foreign investors,Nifty 50
+2026-11-09	Bloomberg finds Modi's $4.5 billion Ganga cleanup has failed to clear the river after a decade	61cfef02	India,Ganga,Modi,pollution
+2026-11-09	India touts pulling 500 million out of poverty even as inequality deepens	181459d5	India,poverty,inequality,Modi
+2026-11-09	UK doubles the wait for permanent residency to 10 years, exempting care workers	4eb70bbb	United Kingdom,immigration,permanent residency
+2026-11-09	PM Burnham says Britain's flagship 10-year plan could slip into next year	137e87e7	United Kingdom,Andy Burnham,10-year plan
+2026-11-09	UK coverage runs short in today's edition	00242673	
+2026-11-09	Update: Iran warns it will 'rain down hell' as Trump calls renewed strikes 'highly unlikely'	c482dbd0	Iran,United States,Trump,Araghchi
+2026-11-09	Update: Zelenskyy says Russia is escalating energy-grid strikes before Abu Dhabi peace talks	c21016cd	Ukraine,Russia,Zelenskyy,Abu Dhabi
+2026-11-09	Strong earthquake strikes central Japan, injuring more than 20 people	cf587723	Japan,earthquake,Shizuoka
+2026-11-09	More than 140,000 rally across France against rising costs as police fire tear gas	1a9790e8	France,protests,cost of living
+2026-11-09	Spain's El Hierro declares an emergency as migrant boat arrivals surge	4e0cfef1	Spain,El Hierro,Canary Islands,migration
+2026-11-09	OpenAI raises another $11 billion at a $1.25 trillion valuation	ae76ec25	OpenAI,funding,valuation
+2026-11-09	Google takes over Crusoe's stalled Wyoming data-centre project with a $17 billion plan	ffa4fccf	Google,Crusoe,data centre,Wyoming
+2026-11-09	Apple's first touchscreen MacBook Pro goes on sale, reversing years of resistance	e2da53b9	Apple,MacBook Pro,touchscreen
+2026-11-09	Microsoft winds down its deal to rent AI cloud capacity from Oracle	78b429ab	Microsoft,Oracle,AI cloud
+2026-11-09	Wall Street ends its worst week since April 2025 as the Nasdaq falls into correction	7269d7c6	Wall Street,Nasdaq,S&P 500,correction
+2026-11-09	Bond yields climb and markets lift December Fed rate-hike odds above 77% after strong jobs data	bbebcc83	Treasury yields,Federal Reserve,rate hike
+2026-11-09	Gold climbs to a two-week high near $4,100 an ounce after the US midterms	676cd9fd	gold,commodities,dollar
+2026-11-09	Moderna jumps about 7% after raising its 2026 revenue-growth forecast	e6725e91	Moderna,earnings,guidance
+2026-11-09	🏎️ Norris wins a rain-hit Sao Paulo Grand Prix as Verstappen charges to second from 21st	259989b2	Formula 1,Sao Paulo Grand Prix,Norris,Verstappen
+2026-11-09	🏎️ Mercedes seal the 2026 Constructors' Championship, their first title since 2021	b9028b7a	Formula 1,Mercedes,constructors championship,Ferrari
+2026-11-09	🎾 Alcaraz beats Shelton to win his first Paris Masters title and avenge the US Open	12b99d40	Carlos Alcaraz,Ben Shelton,Paris Masters,tennis
+2026-11-09	🏏 India, 2-0 up, eye a series win against New Zealand in the third ODI at Hamilton	9a967157	India,New Zealand,ODI,Hamilton
+2026-11-09	A new study ties Earth's billion-year 'Great Unconformity' rock gap to deep-mantle motion	b2dbbd6b	Great Unconformity,geology,mantle
+2026-11-09	Physicists clock hard X-ray flashes lasting just 170 attoseconds	8051e0b1	attosecond,X-ray,physics
+2026-11-09	Astronomers flag a single candidate for Planet Nine in decades-old infrared surveys	a7801c73	Planet Nine,astronomy,solar system
+2026-11-09	A dead star is found ringed by a rare double disc of planetary debris	72c5652b	white dwarf,debris disc,astronomy
