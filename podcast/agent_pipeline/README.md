@@ -4,6 +4,8 @@ This is an opt-in comparison runner. It does not replace the existing morning jo
 
 ## Architecture
 
+See the [root README diagrams](../../README.md#multi-agent-revamp-workflow-and-architecture) for the seven individual agent roles, workflow, components, technology stack and implemented-versus-pending release checkpoints. The independent checker is called again for script fidelity; the LangGraph orchestrator is deterministic code.
+
 `readiness → four research roles → editor → independent checker → (bounded repair) → canonical edition → HTML + podcast script → approved audio hook → audit/export`
 
 The LangGraph coordinator is code, not another conversational worker. Research roles are India, Singapore/weather, UK-US-world, and AI/learning. The editor, checker and podcast producer are distinct model calls. Maximum research concurrency is three by default, at most four. All work uses Codex's supported ChatGPT subscription sign-in; there is no API-key or paid fallback. This does not inherit a dot's memory or connector permissions.

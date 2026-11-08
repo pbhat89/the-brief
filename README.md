@@ -1,5 +1,88 @@
 # The Brief
 
+## Multi-agent revamp: workflow and architecture
+
+**Status, 8 November 2026:** the opt-in comparison pipeline is implemented and fixture-tested; it is **not yet the production morning runtime**. The first live comparison was blocked before model execution by the managed runner's read-only Codex home. No replacement edition or audio was produced. Existing editions and the Claude/Gmail workflow remain unchanged.
+
+### 1. Workflow: which boxes are individual agents?
+
+Every box explicitly marked **AGENT** is a separate model invocation with a focused role. The orchestrator, validators, renderer, voice engine and publisher are software components, not additional reasoning agents. The checker is invoked independently again for script fidelity.
+
+```mermaid
+flowchart TD
+    Start["START: readiness, policy, history and upstream intake"] --> Orch["CODE: LangGraph orchestrator + checkpoint state"]
+    Orch --> India["AGENT 1: India researcher<br/>Inshorts discovery + original reporting"]
+    Orch --> SG["AGENT 2: Singapore researcher<br/>News + official weather and air quality"]
+    Orch --> World["AGENT 3: UK / US / world researcher<br/>Business, sport and science"]
+    Orch --> AI["AGENT 4: AI and learning researcher<br/>X, YouTube, transcripts and expert lesson"]
+    India --> Coverage{"CODE: source coverage and evidence gates"}
+    SG --> Coverage
+    World --> Coverage
+    AI --> Coverage
+    Coverage -->|pass| Editor["AGENT 5: editor / summarizer<br/>One canonical, deduplicated edition"]
+    Coverage -->|blocked| Stop["Private failure record / partial-status report<br/>No invented output or automatic publication"]
+    Editor --> Check["AGENT 6: independent news checker<br/>Claims, freshness, coverage and provenance"]
+    Check --> Decision{"Review passed?"}
+    Decision -->|repairable: max 2 repairs| Editor
+    Decision -->|fail or exhausted| Stop
+    Decision -->|pass| Locked["Canonical edition"]
+    Locked --> HTML["CODE: comparison HTML renderer"]
+    Locked --> Podcast["AGENT 7: podcast producer<br/>Weather-first spoken script + transitions"]
+    Podcast --> ScriptCheck["AGENT 6, separate invocation:<br/>script-fidelity checker"]
+    ScriptCheck --> Gates["CODE: script and existing editorial gates"]
+    Gates --> Voice["INTEGRATION PENDING:<br/>approved local voice hook + audio QA"]
+    HTML --> Compare["Private comparison artifacts + Excel audit"]
+    Voice --> Compare
+    Compare -.-> Release["FUTURE CUTOVER:<br/>verified publisher + independent readback + delivery"]
+```
+
+Research runs in parallel with **three concurrent calls by default**, capped at four. This keeps seven named agent roles rather than one agent for every outlet or headline. Transient adapter failures have bounded retries; authentication, access and quota failures are not blindly retried. Failed quality checks cannot be turned into success just to meet the delivery target.
+
+### 2. Components and technology stack
+
+```mermaid
+flowchart LR
+    Inputs["Repository inputs<br/>Editorial policies, source inventory,<br/>history, ledgers and upstream Claude HTML/JSON"] --> Graph["Python + LangGraph<br/>Deterministic coordinator"]
+    Graph --> Adapter["Codex CLI adapter<br/>ChatGPT subscription sign-in<br/>Hosted search for research/checking"]
+    Adapter --> Agents["Seven model-agent roles<br/>Structured JSON contracts"]
+    Agents --> Graph
+    Graph --> Contracts["jsonschema + Python validators<br/>Existing Node editorial validators"]
+    Graph --> Checkpoints["Private SQLite checkpoints<br/>Explicit resume + matching input hash"]
+    Graph --> Audit["Private append-only SQLite audit<br/>Linked IDs + tamper-evident hash chain"]
+    Audit --> Excel["openpyxl<br/>Nine-tab Excel metalog"]
+    Contracts --> Render["Escaped comparison HTML<br/>Canonical edition + private narration script"]
+    Render -.-> Audio["Private local approved voice runtime<br/>Voice contract, full-file QA and hashes"]
+    Audio -.-> Publish["Existing private relay / listener<br/>Receipt reconciliation + readback"]
+    Tests["GitHub Actions<br/>Python tests + existing Node/app regressions"] --> Graph
+```
+
+**Solid lines:** implemented components and data flow, tested with fixtures where external services are involved. **Dotted lines:** live audio/publication integration and production promotion still require verification. The adapter exists, but its live model run is currently blocked. LangFlow is an optional future visual editor, **not an installed runtime dependency**. No Platform API token or paid fallback is configured. Subscription usage limits still apply.
+
+### 3. Traceability and release checkpoints
+
+| Checkpoint | Recorded or checked | Current boundary |
+|---|---|---|
+| Readiness | Run ID, date, policy/input hashes, resume identity | Writable signed-in Codex runner still needed |
+| Every agent attempt | Role, attempt ID, timestamps, measured duration, outcome, error category, observed search count, usage when available | Missing usage remains unknown, never estimated as measured |
+| Research and editing | Source IDs, claims, evidence links, coverage, event dedup, review/repair outcomes | Live source-access and complete editorial audit still need verification |
+| Rendering | Script coverage/fidelity, weather-first structure, artifact paths and hashes | HTML/script success is not audio success |
+| Audio | Existing voice gate helper and hook interface | Approved asset/runtime integration, measured audio QA and listening review pending |
+| Publication | Receipt/readback helper with injected client and no blind retries | Live transport, private permissions and end-to-end delivery pending |
+| Audit/export | Run/attempt/source/claim/evidence/artifact links; measured runtimes; hash-chain checks | Excel is a view of private SQLite, not the source of truth |
+
+Audit workbook tabs: **Overview, Runs, Attempts, Sources, Claims, Evidence, Events, Artifacts, Metrics**. Private logs, scripts, media, tokens and narrator settings do not belong in this public repository.
+
+### Delivery plan versus active schedule
+
+The proposed cutover is **05:45 Singapore start → research/review → rendering and audio QA → 07:00 delivery target**. The deadline budget is a plan, not yet an enforced runtime SLA. This documentation does not change any saved automation or the original Claude/Gmail schedule. Existing historical timing and narrator descriptions below must not override the current saved task or approved private voice contract.
+
+Before production cutover: obtain a writable authorized runner, complete live research and coverage checks, wire and verify the approved private audio/publishing path, deliver a distinct same-day comparison, then verify the schedule change. Existing production output remains intact throughout.
+
+Implementation and run commands: [agent-pipeline README](podcast/agent_pipeline/README.md). Source: [pipeline](podcast/agent_pipeline/pipeline.py), [Codex adapter](podcast/agent_pipeline/codex_adapter.py), [content contracts](podcast/agent_pipeline/content.py), [audit store](podcast/agent_pipeline/audit.py), [release bridges](podcast/agent_pipeline/bridges.py).
+
+---
+
+
 ## Mandatory source checklist · effective 26 October 2026
 
 Before research and scripting, follow [the agreed-source coverage contract](podcast/SOURCE_COVERAGE.md). Attempt every member of the fresh X roster and every agreed source/category; independently sweep India politics, Modi/BJP/government, opposition, policy, economics and major national developments. Account for each discovered item and every blocked, partial or unvisited source. Concise news narration does not reduce the research obligation. Full upstream reconciliation is not full source coverage.
