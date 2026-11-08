@@ -153,12 +153,12 @@ test('server owns the Singapore calendar day across UTC midnight and Monday roll
  assert.equal((await h.put('2030-01-08')).status,400);
 });
 
-test('requested history includes its week plus today and recent saved dates without duplicates',async t=>{
+test('requested history includes its week plus the rolling 28 days without duplicates',async t=>{
  const h=await setup(t,'2029-12-31T04:00:00Z');await h.get();await h.put('2029-12-31');
  h.setTime('2030-01-07T04:00:00Z');await h.put('2030-01-07');
  h.setTime('2030-01-14T04:00:00Z');await h.put('2030-01-10');await h.put('2030-01-14');
- const history=await (await h.get('2029-12-31')).json();assert.equal(history.weekStart,'2029-12-31');assert.deepEqual(history.records.map(r=>r.date),['2029-12-31','2030-01-10','2030-01-14']);
- const current=await (await h.get()).json();assert.deepEqual(current.records.map(r=>r.date),['2030-01-10','2030-01-14']);assert.equal(new Set(current.records.map(r=>r.date)).size,current.records.length);
+ const history=await (await h.get('2029-12-31')).json();assert.equal(history.weekStart,'2029-12-31');assert.deepEqual(history.records.map(r=>r.date),['2029-12-31','2030-01-07','2030-01-10','2030-01-14']);
+ const current=await (await h.get()).json();assert.deepEqual(current.records.map(r=>r.date),['2029-12-31','2030-01-07','2030-01-10','2030-01-14']);assert.equal(new Set(current.records.map(r=>r.date)).size,current.records.length);
  assert.deepEqual(current.pendingDates,['2030-01-13','2030-01-12','2030-01-11','2030-01-09']);
 });
 

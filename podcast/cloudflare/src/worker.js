@@ -68,7 +68,8 @@ async function logbookOperation(x,storage,env,sessionKey){
   if(x.op==='logbook:get'){
    const dates=new Set();
    for(let offset=0;offset<7;offset++)dates.add(logbook.addDays(weekStart,offset));
-   for(let offset=0;offset<=5;offset++)dates.add(logbook.addDays(today,-offset));
+   // Include the rolling 28-day summary without changing entry or retention rules.
+   for(let offset=0;offset<28;offset++)dates.add(logbook.addDays(today,-offset));
    const records=[];
    for(const date of [...dates].sort()){
     if(date<config.startDate||date>today)continue;

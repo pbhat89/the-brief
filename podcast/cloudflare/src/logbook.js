@@ -4,7 +4,7 @@ let logbookState=null,logbookDate=null,logbookWeek=null,logbookRecords=new Map()
 function logNode(tag,className,text){const node=document.createElement(tag);if(className)node.className=className;if(text!==undefined)node.textContent=text;return node;}
 function logButton(text,action,className=''){const button=logNode('button',className,text);button.type='button';button.onclick=action;return button;}
 function logMessage(text){$('#logbook-message').textContent=text;}
-function resetLogbook(){closeCelebration(false);$('#celebration-detail').textContent='';logbookSequence++;logbookState=null;logbookDate=null;logbookWeek=null;logbookRecords.clear();logbookDrafts.clear();logbookAttempts.clear();logbookLoading=false;logbookSaving=false;logbookAnimations.clear();for(const id of ['logbook-days','logbook-day','logbook-history-days'])$('#'+id).replaceChildren();$('#logbook-history').open=false;$('#logbook-history').hidden=true;$('#logbook-message').textContent='';$('#logbook-load').hidden=false;$('#logbook-load').textContent='Open your Log book';$('#logbook-load').disabled=false;}
+function resetLogbook(){closeCelebration(false);$('#celebration-detail').textContent='';logbookSequence++;logbookState=null;logbookDate=null;logbookWeek=null;logbookRecords.clear();logbookDrafts.clear();logbookAttempts.clear();logbookLoading=false;logbookSaving=false;logbookAnimations.clear();for(const id of ['logbook-days','logbook-day','logbook-history-days','logbook-trends'])$('#'+id).replaceChildren();$('#logbook-trends').hidden=true;$('#logbook-history').open=false;$('#logbook-history').hidden=true;$('#logbook-message').textContent='';$('#logbook-load').hidden=false;$('#logbook-load').textContent='Open your Log book';$('#logbook-load').disabled=false;}
 function logbookDraft(date){if(!logbookDrafts.has(date))logbookDrafts.set(date,{habits:{},fitnessActivities:[]});return logbookDrafts.get(date);}
 function logbookOffered(){return logbookState?LogbookModel.offeredDates(logbookState.today,logbookState.startDate,[...logbookRecords.values()]):[];}
 function logbookBusy(){return logbookLoading||logbookSaving||logbookAnimations.size>0;}
@@ -47,6 +47,7 @@ function renderLogbook(){
   const footer=logNode('div','log-save-area');footer.append(logNode('p','log-save-hint','Unchecked habits will be saved as “Didn’t do”. Until you press Done, this day is unlogged.'));
   const save=logButton(logbookSaving?'Saving…':logbookAttempts.has(logbookDate)?'Retry Done':'Done',()=>saveLogbook(),'log-done');save.id='logbook-done';save.disabled=busy;footer.append(save);footer.append(logNode('p','log-draft-note','Selections stay in this session until saved. Locking or reloading clears unsaved selections.'));host.append(footer);
  }
+ renderLogbookTrends();
  renderLogbookHistory();
 }
 let celebrationFinish=null;
@@ -78,6 +79,17 @@ async function saveLogbook(){
  finally{if(generation===epoch&&sequence===logbookSequence){logbookSaving=false;renderLogbook();if(logbookRecords.has(targetDate)&&viewing==='logbook')$('#logbook-day-title').focus();if(LogbookModel.singaporeDate()!==logbookState.today)loadLogbook(undefined,true);}}
 }
 function renderLogbookSummary(host,record,compact=false){const summary=logNode('div',compact?'log-summary compact':'log-summary');for(const done of [true,false]){const group=logNode('div','log-summary-group');group.append(logNode('h4','',done?'Did':'Didn’t do'));const items=LogbookModel.summary(record).filter(h=>h.done===done);if(!items.length)group.append(logNode('p','log-none',done?'None recorded':'Nothing missed'));for(const habit of items){const detail=habit.activities.length?' · '+habit.activities.join(', '):'';group.append(logNode('p','',habit.label+detail));}summary.append(group);}host.append(summary);if([0,6].includes(LogbookModel.weekday(record.date)))host.append(logNode('p','log-unlogged','Public transport · Not applicable on weekends'));}
+function renderLogbookTrends(){
+ const host=$('#logbook-trends'),data=LogbookModel.rollingSummary(logbookState.today,[...logbookRecords.values()]);host.replaceChildren();host.hidden=false;
+ host.append(logNode('h3','','Weekly average'));
+ const cards=logNode('div','log-trend-cards');
+ for(const [key,label] of [['sugar','Sugar'],['smoke','Smoking'],['workout','Workouts']]){const card=logNode('div','log-trend-card');card.append(logNode('span','',label),logNode('strong','',data.weekly[key]===null?'—':data.weekly[key].toFixed(1)),logNode('small','','days / week'));cards.append(card);}host.append(cards);
+ host.append(logNode('p','log-trend-note','Rolling 28 days · '+data.loggedDays+' days logged. '+(data.loggedDays<7?'Log 7 days to see averages. ':'')+'Based on daily check-ins, not individual occurrences. Missing days are excluded.'));
+ host.append(logNode('h4','','Workout breakdown · last 28 days'));
+ if(!data.counts.workout){host.append(logNode('p','log-trend-note','No workouts logged in this period.'));return;}
+ const bars=logNode('div','log-bars'),max=Math.max(1,...Object.values(data.activities));
+ for(const [key,count] of Object.entries(data.activities)){if(key==='other'&&!count)continue;const label=key==='other'?'Other':key[0].toUpperCase()+key.slice(1),row=logNode('div','log-bar-row'),meter=document.createElement('meter');meter.min=0;meter.max=max;meter.value=count;meter.setAttribute('aria-label',label+': '+count+' logged days');row.append(logNode('span','',label),meter,logNode('span','',String(count)));bars.append(row);}host.append(bars,logNode('p','log-trend-note','Days by activity. A day can include more than one activity.'));
+}
 function renderLogbookHistory(){
  if(!logbookState)return;$('#logbook-history').hidden=false;const week=logbookWeek||LogbookModel.monday(logbookState.today),end=LogbookModel.addDays(week,6);$('#logbook-week-label').textContent=LogbookModel.label(week,{day:'numeric',month:'short'})+' – '+LogbookModel.label(end,{day:'numeric',month:'short',year:'numeric'});$('#logbook-week-back').disabled=logbookBusy()||week<=LogbookModel.monday(logbookState.startDate);$('#logbook-week-next').disabled=logbookBusy()||week>=LogbookModel.monday(logbookState.today);const host=$('#logbook-history-days');host.replaceChildren();
  for(let i=0;i<7;i++){const day=LogbookModel.addDays(week,i);if(day<logbookState.startDate||day>logbookState.today)continue;const item=logNode('div','log-history-day');item.append(logNode('h4','',LogbookModel.label(day,{weekday:'long',day:'numeric',month:'short'})));const record=logbookRecords.get(day);if(record)renderLogbookSummary(item,record,true);else item.append(logNode('p','log-unlogged','Not logged'+(logbookDrafts.has(day)?' · selections not saved':'')));host.append(item);}

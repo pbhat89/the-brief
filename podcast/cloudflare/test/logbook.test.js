@@ -99,3 +99,12 @@ test('dismissing celebration while changing tabs never steals keyboard focus',as
 test('generated browser model exactly matches the shared source before bundling',()=>{
  assert.equal(LOGBOOK_MODEL_SOURCE,createLogbookModel.toString(),'Run node scripts/build-logbook-model.mjs after changing the model.');verifyBrowserScript(JS);
 });
+
+test('rolling dashboard uses saved records on the same tab and clears on Lock',async()=>{
+ const records=Array.from({length:14},(_,i)=>({...record(model.addDays(TODAY,-i),{noSugar:i>=4,noSmoke:i>=2,fitness:i<6}),fitnessActivities:i<6?['walk']:[]}));
+ const h=await opened({payload:state({startDate:'2026-10-01',records})});
+ assert.equal(h.find('#logbook-trends').hidden,false);assert.match(h.find('#logbook-trends').textContent,/Weekly averageSugar2.0days \/ weekSmoking1.0days \/ weekWorkouts3.0days \/ week/);
+ assert.match(h.find('#logbook-trends').textContent,/14 days logged/);assert.match(h.find('#logbook-trends').textContent,/Workout breakdown/);
+ assert.equal(h.find('meter').value,6);assert.equal(h.find('meter').attributes['aria-label'],'Walk: 6 logged days');
+ h.find('#logout').onclick();await settle();assert.equal(h.find('#logbook-trends').hidden,true);assert.equal(h.find('#logbook-trends').textContent,'');
+});

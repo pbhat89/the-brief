@@ -21,7 +21,13 @@ export function createLogbookModel() {
  function savePayload(date,draft={}){const habits=Object.fromEntries(habitsFor(date).map(h=>[h.id,draft.habits?.[h.id]===true]));const fitnessActivities=habits.fitness?activityOptions.filter(activity=>draft.fitnessActivities?.includes(activity)):[];return {version:0,habits,fitnessActivities};}
  function validRecord(record){if(!record||!validDate(record.date)||record.status!=='completed'||!Number.isSafeInteger(record.version)||record.version<1||!record.habits||!Array.isArray(record.fitnessActivities))return false;const keys=habitsFor(record.date).map(h=>h.id);return Object.keys(record.habits).length===keys.length&&keys.every(key=>typeof record.habits[key]==='boolean')&&record.fitnessActivities.length<=4&&new Set(record.fitnessActivities).size===record.fitnessActivities.length&&record.fitnessActivities.every(activity=>activityOptions.includes(activity))&&(record.habits.fitness||record.fitnessActivities.length===0);}
  function readState(value){if(!value||value.schemaVersion!==1||value.timeZone!==timeZone||!validDate(value.today)||!validDate(value.startDate)||value.startDate>value.today||!validDate(value.weekStart)||monday(value.weekStart)!==value.weekStart||!Array.isArray(value.records)||value.records.length>100||!value.records.every(validRecord)||new Set(value.records.map(r=>r.date)).size!==value.records.length||value.records.some(r=>r.date<value.startDate||r.date>value.today))throw Error('Log book is temporarily unavailable. Try again.');return value;}
+ function rollingSummary(today,records=[]){
+  const start=addDays(today,-27),days=records.filter(r=>validRecord(r)&&r.date>=start&&r.date<=today),n=days.length;
+  const counts={sugar:0,smoke:0,workout:0},activities=Object.fromEntries([...activityOptions,'other'].map(a=>[a,0]));
+  for(const r of days){if(!r.habits.noSugar)counts.sugar++;if(!r.habits.noSmoke)counts.smoke++;if(r.habits.fitness){counts.workout++;if(!r.fitnessActivities.length)activities.other++;for(const a of r.fitnessActivities)activities[a]++;}}
+  return {start,end:today,loggedDays:n,counts,weekly:Object.fromEntries(Object.entries(counts).map(([k,v])=>[k,n>=7?v*7/n:null])),activities};
+ }
  function summary(record){return habitsFor(record.date).map(h=>({...h,done:record.habits[h.id],activities:h.id==='fitness'?record.fitnessActivities:[]}));}
- return {timeZone,activityOptions,definitions,validDate,singaporeDate,addDays,weekday,monday,habitsFor,label,completed,offeredDates,savePayload,validRecord,readState,summary};
+ return {timeZone,activityOptions,definitions,validDate,singaporeDate,addDays,weekday,monday,habitsFor,label,completed,offeredDates,savePayload,validRecord,readState,summary,rollingSummary};
 }
 export const LogbookModel=createLogbookModel();
