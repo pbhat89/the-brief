@@ -23,8 +23,8 @@ export function createLogbookModel() {
  function readState(value){if(!value||value.schemaVersion!==1||value.timeZone!==timeZone||!validDate(value.today)||!validDate(value.startDate)||value.startDate>value.today||!validDate(value.weekStart)||monday(value.weekStart)!==value.weekStart||!Array.isArray(value.records)||value.records.length>100||!value.records.every(validRecord)||new Set(value.records.map(r=>r.date)).size!==value.records.length||value.records.some(r=>r.date<value.startDate||r.date>value.today))throw Error('Log book is temporarily unavailable. Try again.');return value;}
  function rollingSummary(today,records=[]){
   const start=addDays(today,-27),days=records.filter(r=>validRecord(r)&&r.date>=start&&r.date<=today),n=days.length;
-  const counts={sugar:0,smoke:0,workout:0},activities=Object.fromEntries([...activityOptions,'other'].map(a=>[a,0]));
-  for(const r of days){if(!r.habits.noSugar)counts.sugar++;if(!r.habits.noSmoke)counts.smoke++;if(r.habits.fitness){counts.workout++;if(!r.fitnessActivities.length)activities.other++;for(const a of r.fitnessActivities)activities[a]++;}}
+  const counts={sugar:0,smoke:0,workout:0,meditation:0},activities=Object.fromEntries([...activityOptions,'other'].map(a=>[a,0]));
+  for(const r of days){if(r.habits.meditation)counts.meditation++;if(!r.habits.noSugar)counts.sugar++;if(!r.habits.noSmoke)counts.smoke++;if(r.habits.fitness){counts.workout++;if(!r.fitnessActivities.length)activities.other++;for(const a of r.fitnessActivities)activities[a]++;}}
   return {start,end:today,loggedDays:n,counts,weekly:Object.fromEntries(Object.entries(counts).map(([k,v])=>[k,n>=7?v*7/n:null])),activities};
  }
  function summary(record){return habitsFor(record.date).map(h=>({...h,done:record.habits[h.id],activities:h.id==='fitness'?record.fitnessActivities:[]}));}

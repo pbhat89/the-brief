@@ -83,7 +83,7 @@ function renderLogbookTrends(){
  const host=$('#logbook-trends'),data=LogbookModel.rollingSummary(logbookState.today,[...logbookRecords.values()]);host.replaceChildren();host.hidden=false;
  host.append(logNode('h3','','Weekly average'));
  const cards=logNode('div','log-trend-cards');
- for(const [key,label] of [['sugar','Sugar'],['smoke','Smoking'],['workout','Workouts']]){const card=logNode('div','log-trend-card');card.append(logNode('span','',label),logNode('strong','',data.weekly[key]===null?'—':data.weekly[key].toFixed(1)),logNode('small','','days / week'));cards.append(card);}host.append(cards);
+ for(const [key,label] of [['sugar','Sugar'],['smoke','Smoking'],['workout','Workouts'],['meditation','Meditation']]){const card=logNode('div','log-trend-card');card.append(logNode('span','',label),logNode('strong','',data.weekly[key]===null?'—':data.weekly[key].toFixed(1)),logNode('small','','days / week'));cards.append(card);}host.append(cards);
  host.append(logNode('p','log-trend-note','Rolling 28 days · '+data.loggedDays+' days logged. '+(data.loggedDays<7?'Log 7 days to see averages. ':'')+'Based on daily check-ins, not individual occurrences. Missing days are excluded.'));
  host.append(logNode('h4','','Workout breakdown · last 28 days'));
  if(!data.counts.workout){host.append(logNode('p','log-trend-note','No workouts logged in this period.'));return;}
