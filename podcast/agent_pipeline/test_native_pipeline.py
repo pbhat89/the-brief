@@ -84,6 +84,18 @@ class NativePipelineTests(unittest.TestCase):
                     self.assertEqual(resumed.bridge.db.execute('SELECT count(*) FROM jobs').fetchone()[0],4)
                 finally:resumed.bridge.close();resumed.audit.close()
 
+    def test_stage_failure_is_audited_without_exception_payload(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);repo=root/'repo';repo.mkdir();out=root/'out';out.mkdir(mode=0o700)
+            runner=NativePipeline(repo,out)
+            try:
+                with patch('podcast.agent_pipeline.native_pipeline.load_context',self.context),patch.object(runner,'research',side_effect=ValueError('SECRET_PAYLOAD')),patch.object(runner.audit,'event',wraps=runner.audit.event) as event,patch.object(runner.audit,'finish_run',wraps=runner.audit.finish_run) as finish:
+                    with self.assertRaises(ValueError):runner.run('2026-11-09','failure-test')
+                    event.assert_any_call('failure-test','pipeline_failed',error_type='ValueError')
+                    self.assertNotIn('SECRET_PAYLOAD',str(event.call_args_list))
+                    self.assertEqual(finish.call_args.args,('failure-test','failed'))
+            finally:runner.bridge.close();runner.audit.close()
+
     def test_native_evidence_not_invented(self):
         with tempfile.TemporaryDirectory() as temp:
             root=Path(temp).resolve();repo=root/'repo';repo.mkdir();out=root/'out';out.mkdir(mode=0o700)
@@ -111,3 +123,62 @@ class LineageTests(unittest.TestCase):
                 with self.assertRaises(ValueError):validate_parent_manifest(path,edition_date=date,context_hash=hash_,run_id=run)
 
 if __name__=='__main__':unittest.main()
+
+class FullNativeGraphTests(unittest.TestCase):
+    setUp=NativePipelineTests.setUp
+    def test_synthetic_full_graph_and_seed_carry_forward(self):
+        from .test_content import story,edition
+        from .native_pipeline import private_json
+        from .pipeline import context_digest,digest
+        context={'edition_date':'2026-11-08','missing_files':[],'required_source_ids':['weather'],'intake_events':[]}
+        # Synthetic test evidence only; never a claim of an actual external fetch.
+        evidence=[{'basis':'driver_observed','operation':'open','tool_ref':'synthetic-test-ref',
+            'started_at':'2026-11-08T00:00:00Z','observed_at':'2026-11-08T00:00:01Z',
+            'tool_result_sha256':'a'*64,'url':'https://example.org/story'}]
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);repo=root/'repo';repo.mkdir();out=root/'private';out.mkdir(mode=0o700)
+            with patch('podcast.agent_pipeline.native_pipeline.load_context',return_value=context):
+                runner=NativePipeline(repo,out)
+                try:
+                    state=runner.run('2026-11-08','synthetic')
+                    seen=[]
+                    with patch.object(runner.bridge,'evidence',return_value=evidence):
+                        for _ in range(8):
+                            jobs=runner.bridge.db.execute("SELECT id FROM jobs WHERE state='queued'").fetchall()
+                            if not jobs:break
+                            for row in jobs:
+                                req=runner.bridge.request(row['id']);role=req['request']['role'].rsplit('_',1)[0];seen.append(role)
+                                if role in ROLES:
+                                    data={'role':role,'stories':[story('weather')] if role=='singapore' else [],'sources':[], 'gaps':['Synthetic bounded coverage']}
+                                    if role=='singapore':data['sources']=[{'id':'weather','url':'https://example.org/story','attempted_at':None,'status':'partial','queries':[],'notes':'Synthetic test','trace_ids':[],'timestamp_basis':'unverified'}]
+                                elif role=='editor':data=edition()
+                                elif role in ('checker','script_checker'):data={'passed':True,'issues':[],'coverage_gaps':[]}
+                                elif role=='podcast':data={'sections':[{'name':'Weather','text':'Test briefing','story_ids':['one']}],'word_count':2}
+                                else:self.fail('Unexpected stage '+role)
+                                runner.bridge.claim(row['id'],req['request_hash'],'synthetic-worker')
+                                runner.bridge.complete(row['id'],req['request_hash'],'synthetic-worker',data)
+                            state=runner.run('2026-11-08','synthetic',True)
+                    self.assertEqual(state['status'],'comparison_draft_release_blocked')
+                    self.assertEqual(seen,list(ROLES)+['editor','checker','podcast','script_checker'])
+                    self.assertTrue(runner.audit.verify_chain())
+                    seed={k:state[k] for k in ('run_id','date','context_hash','research')};seed['status']='research_ready'
+                    seed_path=out/'seed.json';private_json(seed_path,seed)
+                finally:runner.bridge.close();runner.audit.close()
+                newout=root/'carry';newout.mkdir(mode=0o700)
+                carried=NativePipeline(repo,newout,parent_manifest=out/'synthetic-native-manifest.json',seed_research=seed_path)
+                try:
+                    value=carried.run('2026-11-08','new-synthetic')
+                    self.assertIn('__interrupt__',value)
+                    jobs=carried.bridge.db.execute('SELECT request FROM jobs').fetchall()
+                    self.assertEqual(len(jobs),1)
+                    self.assertEqual(json.loads(jobs[0][0])['role'],'editor_0')
+                    self.assertEqual(value['research'],state['research'])
+                    self.assertEqual(carried.manifest['research_seed']['parent_run_id'],'synthetic')
+                finally:carried.bridge.close();carried.audit.close()
+                # A seed from another date fails before any new jobs are created.
+                seed['date']='2026-11-09';bad=out/'bad-seed.json';private_json(bad,seed)
+                badout=root/'bad';badout.mkdir(mode=0o700)
+                invalid=NativePipeline(repo,badout,parent_manifest=out/'synthetic-native-manifest.json',seed_research=bad)
+                try:
+                    with self.assertRaisesRegex(ValueError,'seed identity'):invalid.run('2026-11-08','bad-synthetic')
+                finally:invalid.bridge.close();invalid.audit.close()

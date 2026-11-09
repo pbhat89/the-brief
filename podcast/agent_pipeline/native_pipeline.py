@@ -37,7 +37,7 @@ def validate_parent_manifest(path, *, edition_date, context_hash, run_id):
             'new_agent_review_required':True,'old_tool_timestamps_must_be_preserved':True}
 
 class NativePipeline(Pipeline):
-    def __init__(self,repo,output,*,attempts=None,private_inputs=None,parent_manifest=None):
+    def __init__(self,repo,output,*,attempts=None,private_inputs=None,parent_manifest=None,seed_research=None):
         # Non-callable sentinel ensures no CodexAdapter authentication/inference.
         super().__init__(repo,output,adapter=object(),hooks={})
         verify_private_path(self.output)
@@ -47,6 +47,8 @@ class NativePipeline(Pipeline):
         self.manifest=None
         self.parent_manifest=parent_manifest
         self.lineage=None
+        self.seed_research=seed_research
+        self.seed=None
 
     def _job(self,s,role,prompt,schema):
         if self.lineage and role in ROLES:
@@ -92,7 +94,7 @@ class NativePipeline(Pipeline):
             job=self.bridge.status(job['id'])
         data,traces=self._data(job,search)
         self.audit.record_attempt(state['run_id'],role,attempt_id=job['id'],status='completed',
-            provider=job['provider'],agent_id=job['agent_id'],output_hash=job['output_hash'],usage=None)
+            provider=job['provider'],worker_id=job['agent_id'],output_hash=job['output_hash'],usage=None)
         if role in ROLES:
             result,mappings=canonicalize_research_sources(reconcile_source_traces(data,traces,self.context.get('intake_events',())))
             self.audit.event(state['run_id'],'source_identity_normalization',role=role,mappings=mappings)
@@ -107,6 +109,28 @@ class NativePipeline(Pipeline):
         return {'context_hash':self.manifest['context_hash'],'repair_round':0,'status':'researching','errors':[]}
 
     def research(self,s):
+        if self.seed is not None:
+            results=[]
+            for original in self.seed['research']:
+                result,mappings=canonicalize_research_sources(original)
+                # Refresh only exact measured local input rows; retain web capture times.
+                local=reconcile_source_traces({'role':result['role'],'sources':[]},[],self.context.get('intake_events',()))
+                local_rows={row['id']:row for row in local.get('sources',[])}
+                result['sources']=[local_rows.get(row['id'],row) if row.get('source_kind')=='local_file' else row for row in result.get('sources',[])]
+                self.audit.event(s['run_id'],'carried_prior_research',role=result['role'],
+                    parent_run_id=self.seed['run_id'],seed_sha256=self.manifest['research_seed']['sha256'],
+                    new_agent_call=False,mappings=mappings)
+                for source in result.get('sources',[]):
+                    row=dict(source);sid=row.pop('id')
+                    self.audit.record_source(s['run_id'],sid,carried_from_run=self.seed['run_id'],**row)
+                for story in result.get('stories',[]):
+                    self.audit.record_claim(s['run_id'],story['id'],event_id=story['event_id'],source_ids=story['sources'],claim=story['summary'],carried_from_run=self.seed['run_id'])
+                    for index,evidence in enumerate(story.get('evidence',[])):
+                        self.audit.record_evidence(s['run_id'],story['id']+'-'+str(index),claim_id=story['id'],carried_from_run=self.seed['run_id'],**evidence)
+                results.append(result)
+            errors=verify_research(results,self.context)
+            self.audit.record_checkpoint(s['run_id'],'carried_research_coverage',status='failed' if errors else 'passed',errors=errors)
+            return {'research':results,'errors':errors,'status':'research_ready' if not errors and any(r.get('stories') for r in results) else 'research_blocked'}
         # Queue all roles before yielding. Never interrupt inside a thread pool.
         jobs=[self._job(s,r,research_prompt(r,{k:v for k,v in self.context.items() if k!='intake_events'}),RESEARCH_SCHEMA) for r in ROLES]
         pending=[j for j in jobs if j['state'] in ('queued','claimed')]
@@ -148,6 +172,21 @@ class NativePipeline(Pipeline):
             self.lineage=validate_parent_manifest(self.parent_manifest,edition_date=date,
                 context_hash=identity['context_hash'],run_id=run_id)
             identity['lineage']=self.lineage
+        if self.seed_research:
+            if not self.lineage:raise ValueError('Research seed requires explicit parent manifest')
+            seed_path=Path(self.seed_research).resolve();verify_private_path(seed_path)
+            seed_raw=seed_path.read_bytes();seed=json.loads(seed_raw)
+            if (seed.get('run_id')!=self.lineage['parent_run_id'] or seed.get('run_id')==run_id
+                or seed.get('date')!=date or seed.get('context_hash')!=identity['context_hash']
+                or seed.get('status')!='research_ready'):
+                raise ValueError('Research seed identity/status mismatch')
+            parent=json.loads(Path(self.parent_manifest).read_text(encoding='utf-8'))
+            normalized=[canonicalize_research_sources(r)[0] for r in seed.get('research',[])]
+            issues=verify_research(normalized,parent['context'])
+            if issues:raise ValueError('Research seed fails coverage: '+str(issues))
+            self.seed={**seed,'research':normalized}
+            identity['research_seed']={'path':str(seed_path),'sha256':hashlib.sha256(seed_raw).hexdigest(),
+                'parent_run_id':seed['run_id'],'mode':'carried_prior_research_not_new_inference'}
         manifest_path=self.output/(run_id+'-native-manifest.json')
         if manifest_path.exists():
             if not resume: raise ValueError('Run exists; explicit resume required')
@@ -178,20 +217,26 @@ class NativePipeline(Pipeline):
                 if pending:
                     return dict(snapshot.values, __interrupt__=snapshot.interrupts)
             argument=Command(resume=True) if resume and snapshot.interrupts else (None if resume else {'run_id':run_id,'date':date})
-            return graph.invoke(argument,config)
+            try:
+                return graph.invoke(argument,config)
+            except Exception as exc:
+                # Do not leak prompts, source payloads or private validation details.
+                self.audit.event(run_id,'pipeline_failed',error_type=type(exc).__name__)
+                self.audit.finish_run(run_id,'failed',ended_at=now())
+                raise
 
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     for name in ('repo','output','date','run-id'):p.add_argument('--'+name,required=True)
-    p.add_argument('--resume',action='store_true');p.add_argument('--attempts-json');p.add_argument('--private-inputs-json');p.add_argument('--parent-manifest')
+    p.add_argument('--resume',action='store_true');p.add_argument('--attempts-json');p.add_argument('--private-inputs-json');p.add_argument('--parent-manifest');p.add_argument('--seed-research')
     a=p.parse_args();attempts={}
     if a.attempts_json:
         path=Path(a.attempts_json);verify_private_path(path);attempts=json.loads(path.read_text(encoding='utf-8'))
     private_inputs={}
     if a.private_inputs_json:
         path=Path(a.private_inputs_json);verify_private_path(path);private_inputs=json.loads(path.read_text(encoding='utf-8'))
-    runner=NativePipeline(a.repo,a.output,attempts=attempts,private_inputs=private_inputs,parent_manifest=a.parent_manifest)
+    runner=NativePipeline(a.repo,a.output,attempts=attempts,private_inputs=private_inputs,parent_manifest=a.parent_manifest,seed_research=a.seed_research)
     try:
         result=runner.run(a.date,a.run_id,a.resume)
         print(json.dumps(result,ensure_ascii=False,default=lambda x: {'value':x.value,'id':x.id}))

@@ -150,3 +150,20 @@ that story's exact evidence URL. Raw outputs remain immutable, mappings are
 audited separately, and ambiguity fails closed. Snapshot context is recursively
 canonicalized before the first prompt, so fresh-process resume cannot alter
 request identity just by changing JSON key order.
+
+### Carried research and integrated audit workbook
+
+`--seed-research PRIVATE_RESULT.json` may accompany a parent manifest to carry
+only verified `research_ready` state into a distinct same-context run. Its file
+hash and origin run are bound in the new manifest. Carried source/claim/evidence
+rows are labelled, no new researcher calls are invented, and actual editor/checker
+turns still run. Exceptions now record error type and failed status without raw
+validation payloads. A complete synthetic graph test covers every model stage
+through the unchanged release-blocked boundary.
+
+`python -m podcast.agent_pipeline.native_report --directory PRIVATE_RUN --output PRIVATE_REPORT.xlsx`
+creates a separate nine-tab report from read-only SQLite inputs, joining pipeline
+and native-job/evidence/rejection state. Hash chains, request/output/evidence
+hashes and completed schemas are checked. Unknown token metrics remain blank;
+bridge wall time is not model inference time. Raw prompts and captured page
+content are excluded. Pending or failed runs are never labelled complete.
