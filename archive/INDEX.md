@@ -4343,3 +4343,22 @@ is empty until the first run.
 2026-11-09	Physicists clock hard X-ray flashes lasting just 170 attoseconds	8051e0b1	attosecond,X-ray,physics
 2026-11-09	Astronomers flag a single candidate for Planet Nine in decades-old infrared surveys	a7801c73	Planet Nine,astronomy,solar system
 2026-11-09	A dead star is found ringed by a rare double disc of planetary debris	72c5652b	white dwarf,debris disc,astronomy
+2026-11-10	Rena Lee becomes the first Singaporean elected a judge of the International Court of Justice	105a0278	rena lee,icj,singapore,united nations,elected
+2026-11-10	Singaporean man jailed for life for starving and beating his teenage sister to death	87f176d2	huang bocan,clementi,murder,sister,jailed
+2026-11-10	Singaporean, 29, jailed five years and nine months for killing a cyclist who stole his backpack	c66361aa	singaporean,cyclist,australia,backpack,jailed
+2026-11-10	Man, 27, posed as a woman on dating apps to lure victims into rigged mahjong games	e54f7846	man,dating apps,mahjong,scam,jailed
+2026-11-10	Cyclone Murasu kills at least eight in Andhra Pradesh and causes heavy crop damage	1bce126f	cyclone murasu,andhra pradesh,naidu,landfall,deaths
+2026-11-10	Thousands rally in Delhi demanding the resignation of India's election chief	d5934d1b	rahul gandhi,gyanesh kumar,election commission,delhi,rally
+2026-11-10	Update: Russell Brand jailed for 10 and a half years for rape and sexual assault	0eda53c3	russell brand,southwark,rape,sentenced,sexual assault
+2026-11-10	At least 34 die as a migrant boat sinks off Senegal	e6963b47	senegal,migrant boat,sinking,atlantic,deaths
+2026-11-10	Update: US and Iran negotiate quietly to avert a wider war as Trump holds off on new strikes	7902a1ee	iran,united states,trump,negotiations,strait of hormuz
+2026-11-10	Anthropic launches its Claude Fable 5.2 and Mythos 5.2 models ahead of a planned IPO	54b5ba19	anthropic,claude,fable,mythos,ipo
+2026-11-10	AI hardware startup Nominal triples its valuation to US$3 billion in eight months	e6c060ff	nominal,lightspeed,series c,valuation,ai hardware
+2026-11-10	Palo Alto Networks in talks to buy AI-agent security startup Clutch for about US$500 million	84c33e7a	palo alto networks,clutch,acquisition,ai agents,security
+2026-11-10	Meta acquires AI coding startup Conductor to run parallel agent workspaces	90bd5b26	meta,conductor,acquisition,ai coding,agents
+2026-11-10	Wall Street rebounds from its AI-driven rout as the Dow jumps more than 1,100 points	7f0fadbf	dow jones,s&p 500,nasdaq,rebound,markets
+2026-11-10	Coherent soars on blowout AI-optics earnings, leading a broad tech rally	6fc25930	coherent,earnings,optics,data centre,rally
+2026-11-10	Gold firms and oil tumbles after Trump plays down fresh strikes on Iran	11db21c0	gold,oil,iran,federal reserve,inflation
+2026-11-10	Verstappen clings to second over Russell as Formula 1 heads to Las Vegas	1f26d8a2	verstappen,russell,antonelli,f1,las vegas
+2026-11-10	Gauff beats Pegula as the season-ending WTA Finals get under way in Indian Wells	ff2c17e8	gauff,pegula,wta finals,indian wells,tennis
+2026-11-10	The Rubin Observatory may have found the solar system's sixth dwarf planet	3af28adf	rubin observatory,dwarf planet,2026 ed138,neptune,solar system

@@ -274,14 +274,14 @@
       "date": "2026-11-09",
       "topic_key": "shark",
       "text": "Sharks are older than trees: shark-like scales date to ~450 Mya, the first true trees to ~385-370 Mya."
+    },
+    {
+      "date": "2026-11-10",
+      "topic_key": "anglo-zanzibar war",
+      "text": "The shortest war in history lasted about 38 minutes"
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-10-10",
-      "type": "logic",
-      "title_key": "photo-finish"
-    },
     {
       "date": "2026-10-11",
       "type": "quantitative",
@@ -411,14 +411,14 @@
       "date": "2026-11-09",
       "type": "lateral",
       "title_key": "glass-of-water"
+    },
+    {
+      "date": "2026-11-10",
+      "type": "visual",
+      "title_key": "counting-the-squares"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-10-10",
-      "type": "ladder",
-      "title_key": "more-or-less"
-    },
     {
       "date": "2026-10-11",
       "type": "anagram",
@@ -548,6 +548,11 @@
       "date": "2026-11-09",
       "type": "spellingbee",
       "title_key": "fresh-coat"
+    },
+    {
+      "date": "2026-11-10",
+      "type": "letterboxed",
+      "title_key": "boxed-in"
     }
   ]
 }

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Tue, 10 November 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .wpuzzle-box{background:linear-gradient(135deg,#0e1a1a,#0d1620);border:1px solid #234a44;border-left:3px solid #16a085;padding:24px 28px;border-radius:2px}
+  .wptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#16a085;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .wpuzzle-box .puzzle-title{color:#cdeae3}
+  .wpuzzle-box .puzzle-how{color:#8fb8ac;background:#08140f;border-left-color:#1a6a5a}
+  .wpuzzle-box .puzzle-q{color:#dfeae6;font-family:'Source Sans 3',sans-serif}
+  .wpuzzle-box .answer{color:#bfe0d6}
+  .wpuzzle-box .answer .alabel{color:#16a085}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Tuesday, 10 November 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Tuesday, 10 November 2026 · 🔍 41 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eleven entries in this exact order:
+     id    : one of "sg" | "india" | "uk" | "geo" | "tech" | "biz" | "sports" | "misc" | "fun" | "puzzle" | "wpuzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 8 news tabs; fun/puzzle/wpuzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+
+   WORD_PUZZLE shape (separate, daily word game — NYT-style, static reveal):
+     type     : one of "Connections" | "Word Ladder" | "Anagram" | "Spelling Bee" | "Letter Boxed" | "Mini Crossword"
+     title    : short evocative name for the word puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle body; supports \n for line breaks (grids render as pre-formatted text)
+     answer   : the answer; supports \n for line breaks; appears inside its own toggle (id "wpans")
+============================================================================= */
+
+const SECTIONS = [
+  { id:"sg", title:"🇸🇬 Singapore", color:"#e74c3c", items:[
+    { headline:"Rena Lee becomes the first Singaporean elected a judge of the International Court of Justice", summary:"Ambassador-for-International-Law Rena Lee, 57, won a seat on the World Court in the first round on 3 November, taking 151 of 191 UN General Assembly votes and 13 of 15 in the Security Council. She is the first Singaporean and the first Southeast Asian woman on the court; her nine-year term runs from 2027 to 2036.", source:"Mothership", url:"https://mothership.sg/2026/11/rena-lee-icj-judge/", date:"Nov 4", spectrum:null, bias:null },
+    { headline:"Singaporean man jailed for life for starving and beating his teenage sister to death", summary:"Huang Bocan was sentenced to life imprisonment for the 2021 killing of his 19-year-old sister, Huang Baoying, whom he starved and beat over several months at their Clementi flat. His parents told the court he had seemed kind and had cared for her.", source:"Mothership", url:"https://mothership.sg/2026/11/clementi-death-brother-murder-sentenced/", date:"Nov 6", spectrum:null, bias:null },
+    { headline:"Singaporean, 29, jailed five years and nine months for killing a cyclist who stole his backpack", summary:"A 29-year-old Singaporean was sentenced to five years and nine months&rsquo; jail for running over and killing a cyclist who had snatched his backpack while he was on holiday in Australia.", source:"Mothership", url:"https://mothership.sg/2026/11/singaporean-killed-cyclist-stole-backpack-jailed/", date:"Nov 5", spectrum:null, bias:null },
+    { headline:"Man, 27, posed as a woman on dating apps to lure victims into rigged mahjong games", summary:"A 27-year-old man was jailed for two years on 5 November for posing as a woman on dating apps to lure men into rigged mahjong games, where accomplices cheated them out of their money.", source:"Mothership", url:"https://mothership.sg/2026/11/man-poses-woman-rigged-mahjong-jail/", date:"Nov 5", spectrum:null, bias:null }
+  ]},
+  { id:"india", title:"🇮🇳 India", color:"#e67e22", items:[
+    { headline:"Cyclone Murasu kills at least eight in Andhra Pradesh and causes heavy crop damage", summary:"Cyclone Murasu crossed the south Andhra Pradesh coast near Ongole early on 3 November with winds up to 120kmph, killing at least eight people. Chief Minister N. Chandrababu Naidu put the damage at about Rs 1,918 crore, with crops hit across roughly 143,000 hectares; it was the region&rsquo;s second cyclone in a week.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/11/3/cyclone-murasu-makes-landfall-on-indias-eastern-coast", date:"Nov 3", spectrum:null, bias:null },
+    { headline:"Thousands rally in Delhi demanding the resignation of India&rsquo;s election chief", summary:"Opposition supporters led by Rahul Gandhi rallied in New Delhi demanding that Chief Election Commissioner Gyanesh Kumar resign over a Special Intensive Revision of electoral rolls that they say enables voter deletions. The Election Commission denies favouring any party and has asked Gandhi to submit a signed affidavit of his claims.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/11/1/thousands-rally-in-delhi-demanding-indias-election-chief-resign", date:"Nov 1", spectrum:null, bias:null }
+  ]},
+  { id:"uk", title:"🇬🇧 UK News", color:"#3949ab", items:[
+    { headline:"Update: Russell Brand jailed for 10 and a half years for rape and sexual assault", summary:"Russell Brand was sentenced to 10 years and six months at Southwark Crown Court on 9 November, days after a jury convicted him of one rape and three sexual assaults and cleared him of three other charges. Judge Bennathan called him a sexual predator; Brand becomes eligible for release after serving about two-thirds of the term.", source:"CNN", url:"https://www.cnn.com/2026/11/05/uk/russell-brand-trial-verdict-uk-intl", date:"Nov 9", spectrum:null, bias:null },
+    { headline:"UK coverage runs short in today&rsquo;s edition", summary:"Beyond the Brand sentencing, reachable outlets surfaced little fresh, verifiable UK-domestic news in the past 48 hours; the BBC and Sky News were not reachable from the compile environment, and fallback outlets carried mostly continuations of earlier stories.", source:"The Brief", url:"", date:"Nov 10", spectrum:null, bias:null }
+  ]},
+  { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
+    { headline:"At least 34 die as a migrant boat sinks off Senegal", summary:"At least 34 people died when a small boat sank off the Senegalese coast, with one person rescued as the search continued. A Senegalese human-rights group demanded government action over the repeated Atlantic-route sinkings.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/11/9/senegal-human-rights-group-demands-government-action-after-deadly-sinking", date:"Nov 9", spectrum:null, bias:null },
+    { headline:"Update: US and Iran negotiate quietly to avert a wider war as Trump holds off on new strikes", summary:"The United States and Iran are negotiating indirectly through Qatari and Pakistani mediators to avoid a return to all-out war, as President Trump said fresh strikes were &lsquo;highly unlikely&rsquo; if talks progress on Iran&rsquo;s nuclear programme and reopening the Strait of Hormuz. Tehran says talks could resume within two days if Washington first lifts its naval blockade and sanctions.", source:"CNN", url:"https://www.cnn.com/2026/11/09/middleeast/iran-us-talks-explainer-intl", date:"Nov 9", spectrum:null, bias:null }
+  ]},
+  { id:"tech", title:"💻 Tech & AI", color:"#27ae60", items:[
+    { headline:"Anthropic launches its Claude Fable 5.2 and Mythos 5.2 models ahead of a planned IPO", summary:"Anthropic released Fable 5.2 and a restricted Mythos 5.2, cutting Fable&rsquo;s input price to about US$8 per million tokens from $10 and reserving Mythos for vetted cybersecurity and life-sciences users. The company said the launch came days before its planned IPO in the week of 16 November.", source:"CNBC", url:"https://www.cnbc.com/2026/11/09/anthropic-claude-fable-5-2-mythos-5-2.html", date:"Nov 9", spectrum:null, bias:null },
+    { headline:"AI hardware startup Nominal triples its valuation to US$3 billion in eight months", summary:"Nominal raised a $240 million Series C led by Lightspeed Venture Partners and co-led by Insight Partners, valuing the AI-hardware company at $3 billion &mdash; roughly triple its valuation from a round eight months earlier.", source:"TechCrunch", url:"https://techcrunch.com/2026/11/09/ai-hardware-startup-nominal-triples-valuation-to-3b-in-8-months/", date:"Nov 9", spectrum:null, bias:null },
+    { headline:"Palo Alto Networks in talks to buy AI-agent security startup Clutch for about US$500 million", summary:"Palo Alto Networks is negotiating to acquire Clutch, a startup that secures AI agents, for roughly $500 million &mdash; about 50 times its annual recurring revenue &mdash; amid a wave of dealmaking for agent-security firms.", source:"TechCrunch", url:"https://techcrunch.com/2026/11/05/palo-alto-networks-in-talks-to-buy-ai-agent-security-startup-clutch-for-500m/", date:"Nov 5", spectrum:null, bias:null },
+    { headline:"Meta acquires AI coding startup Conductor to run parallel agent workspaces", summary:"Meta bought Conductor, whose tool spins up software projects by deploying multiple AI agents across parallel workspaces. Conductor&rsquo;s standalone cloud service will shut down on 20 November.", source:"TechCrunch", url:"https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/", date:"Nov 4", spectrum:null, bias:null }
+  ]},
+  { id:"biz", title:"📈 Business & Markets", color:"#8e44ad", items:[
+    { headline:"Wall Street rebounds from its AI-driven rout as the Dow jumps more than 1,100 points", summary:"The Dow Jones Industrial Average surged about 1,104 points (2.15%) and the S&P 500 posted its best day since April, recovering from the prior week&rsquo;s AI-led sell-off. The Nasdaq rose 2.74% and the VIX fell about 22%, though Nvidia lagged the rally, falling around 4%.", source:"CNBC", url:"https://www.cnbc.com/2026/11/08/stock-market-today-live-updates.html", date:"Nov 9", spectrum:null, bias:null },
+    { headline:"Coherent soars on blowout AI-optics earnings, leading a broad tech rally", summary:"Coherent was among the top S&P 500 gainers, climbing double digits after reporting fiscal first-quarter revenue up about 50% to $2.37 billion on surging data-centre optics demand and raising its guidance. Bloom Energy and Flex also rose sharply.", source:"CNBC", url:"https://www.cnbc.com/2026/11/09/stock-market-movers-live-updates.html", date:"Nov 9", spectrum:null, bias:null },
+    { headline:"Gold firms and oil tumbles after Trump plays down fresh strikes on Iran", summary:"Spot gold rose about 0.7% to around US$4,094 an ounce while oil fell sharply after President Trump said renewed strikes on Iran were unlikely, easing inflation fears. Traders still price an about 81% chance of a December Federal Reserve rate increase ahead of US inflation data due this week.", source:"CNBC", url:"https://www.cnbc.com/2026/11/09/gold-gains-more-than-1percent-as-softer-oil-prices-ease-inflation-worries.html", date:"Nov 9", spectrum:null, bias:null }
+  ]},
+  { id:"sports", title:"🎾🏏🏎️ Sports", color:"#c0392b", items:[
+    { headline:"🏎️ Verstappen clings to second over Russell as Formula 1 heads to Las Vegas", summary:"With Kimi Antonelli already confirmed as 2026 world champion and Mercedes having clinched the constructors&rsquo; crown in Brazil, Max Verstappen holds second place on 279 points, 17 ahead of George Russell, with three rounds remaining. The Las Vegas Grand Prix runs on 21 November.", source:"Sky Sports", url:"https://www.skysports.com/f1/grandprix/las-vegas", date:"Nov 8", spectrum:null, bias:null },
+    { headline:"🎾 Gauff beats Pegula as the season-ending WTA Finals get under way in Indian Wells", summary:"The WTA Finals began on 8 November in Indian Wells, California &mdash; moved from Riyadh for this year &mdash; with Coco Gauff opening her round-robin campaign by beating Jessica Pegula. The semi-finals are set for 14 November and the final for 15 November.", source:"ESPN", url:"https://www.espn.com/tennis/story/_/id/50393979/wta-finals-rybakina-sabalenka-gauff-pegula-muchova-andreeva-noskova-svitolina", date:"Nov 8", spectrum:null, bias:null }
+  ]},
+  { id:"misc", title:"🔬 Other Miscellaneous News", color:"#1abc9c", items:[
+    { headline:"The Rubin Observatory may have found the solar system&rsquo;s sixth dwarf planet", summary:"Astronomers using the Vera C. Rubin Observatory reported a new dwarf-planet candidate beyond Neptune, provisionally designated 2026 ED138, with an estimated diameter between 600 and 1,500 kilometres. If confirmed, it would join the five bodies already recognised as dwarf planets.", source:"Scientific American", url:"https://www.scientificamerican.com/article/the-vera-c-rubin-observatory-may-have-just-discovered-our-solar-systems-sixth-dwarf-planet/", date:"Nov 6", spectrum:null, bias:null }
+  ]},
+  { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
+  { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
+  { id:"wpuzzle", title:"🔤 Word Puzzles", color:"#16a085", custom:"wpuzzle" },
+];
+
+const FUN_FACT = {
+  text: "The shortest war in recorded history lasted well under an hour. On 27 August 1896 the Royal Navy bombarded the sultan&rsquo;s palace in Zanzibar to force out a ruler Britain opposed, and his forces surrendered almost at once. By most accounts the fighting, from the first shell to the ceasefire, ran for only about 38 minutes.",
+  tag: "Category · History"
+};
+
+const PUZZLE = {
+  type: "Visual",
+  title: "Counting the Squares",
+  how: "Count by size, not just the little boxes &mdash; then add the sizes together.",
+  question: "Picture a large square divided into a 4&times;4 grid &mdash; 16 small equal squares, like a window with 16 panes:\n\n▢ ▢ ▢ ▢\n▢ ▢ ▢ ▢\n▢ ▢ ▢ ▢\n▢ ▢ ▢ ▢\n\nHow many squares of ANY size (1&times;1, 2&times;2, 3&times;3 or 4&times;4) can you find in the whole figure?",
+  answer: "30 squares.\n\nCount them by size:\n• 1&times;1 squares: 16\n• 2&times;2 squares: 9\n• 3&times;3 squares: 4\n• 4&times;4 square: 1\n\nTotal: 16 + 9 + 4 + 1 = 30."
+};
+
+const WORD_PUZZLE = {
+  type: "Letter Boxed",
+  title: "Boxed In",
+  how: "Chain two words that together use all 12 letters; the second word starts with the first word&rsquo;s last letter.",
+  question: "LETTER BOXED &mdash; the 12 letters sit three to a side of a square:\n\nTop:     V · I · G\nRight:   O · A · S\nBottom:  T · P · C\nLeft:    N · R · H\n\nRules: build words of three or more letters. Consecutive letters must come from DIFFERENT sides. Each new word begins with the previous word&rsquo;s last letter. Use all 12 letters. Can you clear the box in just TWO words?",
+  answer: "VOTING → GRAPHICS\n\nVOTING (V-O-T-I-N-G) ends in G, which begins GRAPHICS (G-R-A-P-H-I-C-S). Between them the two words use every one of the 12 letters, and no step ever stays on the same side of the box. (Other two-word solutions may exist &mdash; this is one clean answer.)"
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function renderWordPuzzle(){
+  let h='<div class="sec-title">🔤 Word Puzzle of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#16a085,transparent)"></div>';
+  h+='<div class="wpuzzle-box"><span class="wptype">'+WORD_PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+WORD_PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+WORD_PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+WORD_PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this,\'wpans\')">Show Answer</button>';
+  h+='<div class="answer" id="wpans"><span class="alabel">Answer</span>'+WORD_PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn,ansId){var a=document.getElementById(ansId||'ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else if(sec.custom==="wpuzzle"){div.innerHTML=renderWordPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>
