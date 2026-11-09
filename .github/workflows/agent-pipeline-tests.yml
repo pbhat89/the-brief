@@ -23,4 +23,4 @@ jobs:
           python-version: '3.11'
       - run: pip install -r podcast/agent_pipeline/requirements.txt
       - run: python -m unittest discover -s podcast/agent_pipeline/tests -v
-      - run: python -m unittest podcast.agent_pipeline.test_content podcast.agent_pipeline.test_audit podcast.agent_pipeline.test_source_intake podcast.agent_pipeline.test_source_repair -v
+      - run: python -m unittest podcast.agent_pipeline.test_content podcast.agent_pipeline.test_audit podcast.agent_pipeline.test_source_intake podcast.agent_pipeline.test_source_repair podcast.agent_pipeline.test_native_pipeline -v

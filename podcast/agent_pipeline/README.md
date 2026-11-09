@@ -115,3 +115,31 @@ tests. Raw run state and tool references remain private, not in this repository.
 The full seven-role native pipeline, automatic connector provenance, scheduled
 recovery and end-to-end audio/delivery remain unverified. No daily-runtime cutover
 has occurred.
+
+### Full native comparison runner (opt-in, live validation ongoing)
+
+`native_pipeline.py` reuses the full research/editor/checker/script/release gates.
+Four research jobs queue before a durable interrupt; the external assistant driver
+executes actual native workers, records original tool receipts with
+[`NATIVE_TOOL_CAPTURE.md`](NATIVE_TOOL_CAPTURE.md), and resumes the graph.
+Runtime, context and private baseline hashes are immutable across resume. No
+Python worker spawning, automatic retries, publication or schedule cutover occurs.
+
+Rejected schema/identity/state submissions now produce deduplicated metadata-only
+audit events. Evidence manifests retain actual wrapper timing, source references
+and original-result hashes, with a separately attributed capture-driver identity.
+Receipt validation is not cryptographic connector attestation. Declared evidence
+without captured timing/hash cannot satisfy measured-source gates.
+
+The first full native four-role comparison is in progress; no completed new
+edition or audio is claimed. Private baseline inputs remain outside GitHub.
+
+### Versioned recovery and source-attempt semantics
+
+An optional `--parent-manifest` binds an immutable prior same-edition/context
+manifest to a distinct new run. Four actual worker revalidation turns are still
+required; old tool calls keep their original times/hashes, never become new
+fetches. The original run is not silently migrated. Failed and unclear opens
+retain measured attempt provenance (`open_failed`/`open_unknown`) separately
+from readable access. Credential-bearing URLs remain rejected; exact public
+YouTube handles and ordinary news slugs are supported.
