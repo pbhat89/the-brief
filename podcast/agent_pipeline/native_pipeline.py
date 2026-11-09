@@ -137,6 +137,9 @@ class NativePipeline(Pipeline):
             if len(raw)>2000000: raise ValueError('Private comparison reference too large')
             private[label]={'sha256':hashlib.sha256(raw).hexdigest(),'text':raw.decode('utf-8')}
         if private: current['private_comparison_references']=private
+        # Match the persisted snapshot's recursive key order before creating prompts.
+        # JSON object insertion order must not change immutable job hashes on resume.
+        current=json.loads(json.dumps(current,sort_keys=True))
         identity={'run_id':run_id,'date':date,'context_hash':context_digest(current),'runtime_source_hash':self.runtime_hash}
         if self.parent_manifest:
             self.lineage=validate_parent_manifest(self.parent_manifest,edition_date=date,

@@ -58,6 +58,32 @@ class NativePipelineTests(unittest.TestCase):
                         runner.run('2026-11-09','proof',True)
                 finally:runner.bridge.close();runner.audit.close()
 
+    def test_unsorted_nested_context_survives_new_runner_resume(self):
+        context={'edition_date':'2026-11-09','policies':{'z_last':{'z':1,'a':2},'a_first':'policy'},
+                 'required_source_ids':['weather'],'missing_files':[],
+                 'private_comparison_references':{'original':{'text':'same-day baseline','sha256':'a'*64}},
+                 'intake_events':[]}
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp).resolve();repo=root/'repo';repo.mkdir();out=root/'private';out.mkdir(mode=0o700)
+            with patch('podcast.agent_pipeline.native_pipeline.load_context',return_value=context):
+                runner=NativePipeline(repo,out)
+                try:
+                    runner.run('2026-11-09','ordered-proof')
+                    for row in runner.bridge.db.execute('SELECT id FROM jobs').fetchall():
+                        request=runner.bridge.request(row['id']);role=request['request']['role'].rsplit('_',1)[0]
+                        agent='test-worker-'+role
+                        runner.bridge.claim(row['id'],request['request_hash'],agent)
+                        runner.bridge.complete(row['id'],request['request_hash'],agent,
+                            {'role':role,'stories':[],'sources':[],'gaps':['Synthetic test only']})
+                finally:runner.bridge.close();runner.audit.close()
+                resumed=NativePipeline(repo,out)
+                try:
+                    # The expected evidence gate proves job identity matched after disk reload.
+                    with self.assertRaisesRegex(RuntimeError,'measured driver'):
+                        resumed.run('2026-11-09','ordered-proof',True)
+                    self.assertEqual(resumed.bridge.db.execute('SELECT count(*) FROM jobs').fetchone()[0],4)
+                finally:resumed.bridge.close();resumed.audit.close()
+
     def test_native_evidence_not_invented(self):
         with tempfile.TemporaryDirectory() as temp:
             root=Path(temp).resolve();repo=root/'repo';repo.mkdir();out=root/'out';out.mkdir(mode=0o700)
