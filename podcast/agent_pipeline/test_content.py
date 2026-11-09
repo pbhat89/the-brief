@@ -3,6 +3,7 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 from .content import (load_context, research_prompt, verify_edition, render_html, ROLES, RESEARCH_SCHEMA, EDITION_SCHEMA)
 
 
@@ -48,7 +49,7 @@ class ContentTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp);(root/'archive').mkdir();(root/'podcast').mkdir()
             for date in ['2026-11-06','2026-11-08','2026-11-09']:
-                (root/'archive'/f'{date}.json').write_text(json.dumps({'date':date,'items':[]}))
+                (root/'archive'/f'{date}.json').write_text(json.dumps({'date':date,'items':[]}), encoding='utf-8')
             c=load_context(root,'2026-11-08')
             self.assertEqual(len(c['prior_archives']),1);self.assertEqual(c['upstream']['date'],'2026-11-08')
             self.assertTrue(c['missing_files'])
@@ -67,7 +68,6 @@ class ContentTests(unittest.TestCase):
                 for x in node:visit(x)
         visit(RESEARCH_SCHEMA);visit(EDITION_SCHEMA)
 
-if __name__=='__main__':unittest.main()
 
 class ProvenanceTests(unittest.TestCase):
     def test_editor_cannot_invent_story(self):
@@ -91,3 +91,29 @@ class ProvenanceTests(unittest.TestCase):
         self.assertEqual(verify_script({'sections':[{'name':'Weather','text':'Two words','story_ids':['one']}],'word_count':2},edition()),[])
         errors=verify_script({'sections':[{'name':'India','text':'Two words','story_ids':[]}],'word_count':7},edition())
         self.assertEqual(len(errors),3)
+
+
+class EncodingTests(unittest.TestCase):
+    def test_context_utf8_with_windows_default(self):
+        # Emulate cp1252 even on UTF-8 hosts; exercise policies and both archives.
+        original = Path.read_text
+        def windows_read(path, encoding=None, errors=None):
+            return original(path, encoding=encoding or "cp1252", errors=errors)
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "archive").mkdir()
+            (root / "podcast").mkdir()
+            sample = "\u65b0\u52a0\u5761 \u2014 \u0939\u093f\u0902\u0926\u0940 \U0001f4f0"
+            (root / "podcast" / "SOURCE_COVERAGE.md").write_text(sample, encoding="utf-8")
+            for day in ("2026-11-07", "2026-11-08"):
+                (root / "archive" / (day + ".json")).write_text(
+                    json.dumps({"date": day, "items": [], "text": sample}, ensure_ascii=False),
+                    encoding="utf-8")
+            with patch.object(Path, "read_text", windows_read):
+                context = load_context(root, "2026-11-08")
+            self.assertEqual(context["upstream"]["text"], sample)
+            self.assertIn(sample, json.dumps(context, ensure_ascii=False))
+            self.assertIn(sample, json.dumps(context["prior_archives"], ensure_ascii=False))
+
+if __name__ == "__main__":
+    unittest.main()

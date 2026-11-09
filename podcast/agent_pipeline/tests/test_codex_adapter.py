@@ -2,8 +2,9 @@ import json
 import os
 from pathlib import Path
 import tempfile
+import subprocess
 import unittest
-from unittest.mock import patch
+from unittest.mock import patch, Mock
 
 from podcast.agent_pipeline.codex_adapter import CodexAdapter, CodexAdapterError, _kind, _summary, _environment
 
@@ -157,5 +158,75 @@ class AdapterTests(unittest.TestCase):
     def test_invalid_configuration(self):
         with self.assertRaises(ValueError): CodexAdapter(max_attempts=4)
         with self.assertRaises(ValueError): CodexAdapter(timeout_seconds=0)
+
+class PortabilityTests(unittest.TestCase):
+    def test_windows_rejects_batch_shim(self):
+        from podcast.agent_pipeline.codex_adapter import _native_command
+        for executable in ('codex.cmd', 'codex.bat', None):
+            with patch('podcast.agent_pipeline.codex_adapter._WINDOWS', True), patch('podcast.agent_pipeline.codex_adapter.shutil.which', return_value=executable):
+                with self.assertRaises(CodexAdapterError):
+                    _native_command(['codex', 'exec'])
+
+    def test_native_arguments_remain_list_and_utf8(self):
+        from podcast.agent_pipeline.codex_adapter import _execute
+        proc = Mock(returncode=0)
+        proc.communicate.return_value = ('news', '')
+        command = ["C:/Users/Prateek's Pad/codex.exe", 'exec', '-']
+        with patch('podcast.agent_pipeline.codex_adapter._WINDOWS', True), patch('podcast.agent_pipeline.codex_adapter._native_command', return_value=command), patch('podcast.agent_pipeline.codex_adapter.subprocess.Popen', return_value=proc) as popen:
+            _execute(command, cwd=Path.cwd(), prompt='Unicode: \u092d\u093e\u0930\u0924')
+        args, kw = popen.call_args
+        self.assertEqual(args[0], command)
+        self.assertFalse(kw['shell'])
+        self.assertEqual(kw['encoding'], 'utf-8')
+        self.assertEqual(kw['creationflags'], 0x08000000)
+        self.assertNotIn('start_new_session', kw)
+        self.assertIn('\u092d', proc.communicate.call_args.args[0])
+
+    def test_windows_tree_cleanup_is_bounded(self):
+        from podcast.agent_pipeline.codex_adapter import _stop_process_tree
+        proc = Mock(pid=1234)
+        with patch('podcast.agent_pipeline.codex_adapter._WINDOWS', True), patch('podcast.agent_pipeline.codex_adapter.subprocess.run', return_value=Mock(returncode=0)) as run:
+            _stop_process_tree(proc)
+        args, kw = run.call_args
+        self.assertEqual(args[0][1:], ['/PID', '1234', '/T', '/F'])
+        self.assertFalse(kw['shell'])
+        self.assertEqual(kw['timeout'], 10)
+        self.assertEqual(kw['creationflags'], 0x08000000)
+        proc.communicate.assert_called_once_with(timeout=5)
+
+    def test_failed_cleanup_is_not_retryable(self):
+        from podcast.agent_pipeline.codex_adapter import _stop_process_tree
+        proc = Mock(pid=1234)
+        proc.poll.return_value = None
+        with patch('podcast.agent_pipeline.codex_adapter._WINDOWS', True), patch('podcast.agent_pipeline.codex_adapter.subprocess.run', return_value=Mock(returncode=1)):
+            with self.assertRaises(CodexAdapterError) as ctx:
+                _stop_process_tree(proc)
+        self.assertEqual(ctx.exception.kind, 'cleanup')
+
+    def test_timeout_returns_classified_error(self):
+        from podcast.agent_pipeline.codex_adapter import _execute
+        proc = Mock()
+        proc.communicate.side_effect = subprocess.TimeoutExpired('codex', 1)
+        with patch('podcast.agent_pipeline.codex_adapter._native_command', return_value=['codex']), patch('podcast.agent_pipeline.codex_adapter.subprocess.Popen', return_value=proc), patch('podcast.agent_pipeline.codex_adapter._stop_process_tree') as stop:
+            with self.assertRaises(CodexAdapterError) as ctx:
+                _execute(['codex'], cwd=Path.cwd(), timeout=1)
+        self.assertEqual(ctx.exception.kind, 'timeout')
+        stop.assert_called_once_with(proc)
+
+    def test_posix_process_group_retained(self):
+        from podcast.agent_pipeline.codex_adapter import _execute, _stop_process_tree
+        proc = Mock(returncode=0, pid=1234)
+        proc.communicate.return_value = ('ok', '')
+        with patch('podcast.agent_pipeline.codex_adapter._WINDOWS', False), patch('podcast.agent_pipeline.codex_adapter.subprocess.Popen', return_value=proc) as popen:
+            _execute(['codex'], cwd=Path.cwd())
+        self.assertTrue(popen.call_args.kwargs['start_new_session'])
+        self.assertNotIn('creationflags', popen.call_args.kwargs)
+        with patch('podcast.agent_pipeline.codex_adapter._WINDOWS', False), patch('podcast.agent_pipeline.codex_adapter.os.killpg', create=True) as kill, patch('podcast.agent_pipeline.codex_adapter.signal.SIGKILL', 9, create=True):
+            _stop_process_tree(proc)
+        kill.assert_called_once_with(1234, 9)
+
+    def test_environment_keys_are_case_insensitive(self):
+        with patch('podcast.agent_pipeline.codex_adapter.os.environ', {'OpenAi_Api_Key':'secret', 'codex_api_key':'secret', 'Safe':'yes'}):
+            self.assertEqual(_environment(), {'Safe':'yes'})
 
 if __name__ == '__main__': unittest.main()

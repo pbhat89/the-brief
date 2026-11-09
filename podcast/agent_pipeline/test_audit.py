@@ -3,17 +3,29 @@ from pathlib import Path
 import sqlite3
 import tempfile
 import unittest
+from unittest.mock import patch
 from concurrent.futures import ThreadPoolExecutor
 from openpyxl import load_workbook
 
 try:
-    from .audit import AuditStore, elapsed_seconds, file_sha256, sanitize, REDACTED
+    from . import audit as audit_module
+    from .audit import AuditStore, elapsed_seconds, file_sha256, sanitize, REDACTED, verify_private_path, validate_windows_acl, PrivacyError
 except ImportError:
-    from audit import AuditStore, elapsed_seconds, file_sha256, sanitize, REDACTED
+    import audit as audit_module
+    from audit import AuditStore, elapsed_seconds, file_sha256, sanitize, REDACTED, verify_private_path, validate_windows_acl, PrivacyError
 
 
 class AuditTests(unittest.TestCase):
     def setUp(self):
+        # Storage logic uses an explicit synthetic private ACL on Windows.
+        # Real-host privacy is an integration prerequisite, never inferred from
+        # these fixtures. validate_windows_acl itself remains active below.
+        if os.name == "nt":
+            acl = {"current_sid": "S-1-5-21-test-1001", "owner_sid": "S-1-5-21-test-1001",
+                   "dacl_present": True, "aces": [{"sid": "S-1-5-21-test-1001", "type": "Allow"}]}
+            mock = patch.object(audit_module, "inspect_windows_acl", return_value=acl)
+            mock.start()
+            self.addCleanup(mock.stop)
         self.temp = tempfile.TemporaryDirectory()
         self.path = Path(self.temp.name) / "audit.sqlite3"
         self.store = AuditStore(self.path)
@@ -66,7 +78,7 @@ class AuditTests(unittest.TestCase):
         self.assertEqual(value["nested"]["password"], REDACTED)
 
     def test_private_file_permissions(self):
-        self.assertEqual(os.stat(self.path).st_mode & 0o777, 0o600)
+        verify_private_path(self.path)
 
     def test_immutable_events(self):
         with self.assertRaises(sqlite3.IntegrityError):
@@ -102,7 +114,7 @@ class AuditTests(unittest.TestCase):
         self.assertEqual(workbook.sheetnames, ["Overview", "Runs", "Attempts", "Sources", "Claims", "Evidence", "Events", "Artifacts", "Metrics"])
         error_col = [c.value for c in workbook["Attempts"][1]].index("error") + 1
         self.assertTrue(workbook["Attempts"].cell(2, error_col).value.startswith("'="))
-        self.assertEqual(os.stat(target).st_mode & 0o777, 0o600)
+        verify_private_path(target)
         self.assertEqual(len(file_sha256(target)), 64)
         workbook.close()
 
@@ -116,6 +128,48 @@ class AuditTests(unittest.TestCase):
         with self.assertRaises(TypeError):
             self.store.event("run-1", "metric", value=object())
 
+
+class WindowsAclTests(unittest.TestCase):
+    def snapshot(self):
+        return {"current_sid": "S-1-5-21-test-1001", "owner_sid": "S-1-5-21-test-1001",
+                "dacl_present": True, "aces": [
+                    {"sid": "S-1-5-21-test-1001", "type": "Allow"},
+                    {"sid": "S-1-5-18", "type": "Allow"},
+                    {"sid": "S-1-5-32-544", "type": "Allow"}]}
+
+    def test_private_owner_system_admin_accepted(self):
+        validate_windows_acl(self.snapshot())
+
+    def test_unknown_and_application_principals_rejected(self):
+        for sid in ("S-1-1-0", "S-1-5-11", "S-1-5-21-test-1003", "S-1-5-21-unresolved-123"):
+            snapshot = self.snapshot()
+            snapshot["aces"].append({"sid": sid, "type": "Allow"})
+            with self.assertRaises(PrivacyError):
+                validate_windows_acl(snapshot)
+
+    def test_wrong_owner_and_null_dacl_rejected(self):
+        for field, value in (("owner_sid", "someone-else"), ("dacl_present", False), ("current_sid", None)):
+            snapshot = self.snapshot()
+            snapshot[field] = value
+            with self.assertRaises(PrivacyError):
+                validate_windows_acl(snapshot)
+
+    def test_unknown_ace_type_rejected(self):
+        snapshot = self.snapshot()
+        snapshot["aces"].append({"sid": snapshot["current_sid"], "type": "unexpected"})
+        with self.assertRaises(PrivacyError):
+            validate_windows_acl(snapshot)
+
+    def test_deny_does_not_authorize_unknown_allow(self):
+        snapshot = self.snapshot()
+        snapshot["aces"] += [{"sid": "S-1-1-0", "type": "Deny"}, {"sid": "S-1-1-0", "type": "Allow"}]
+        with self.assertRaises(PrivacyError):
+            validate_windows_acl(snapshot)
+
+    def test_acl_inspection_failure_blocks(self):
+        with patch.object(audit_module.subprocess, "run", side_effect=OSError("unavailable")):
+            with self.assertRaises(PrivacyError):
+                audit_module.inspect_windows_acl("test-path")
 
 if __name__ == "__main__":
     unittest.main()

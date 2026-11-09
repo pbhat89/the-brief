@@ -61,14 +61,14 @@ def load_context(repo, edition_date):
         try: fd = date.fromisoformat(f.stem)
         except ValueError: continue
         if day - timedelta(days=30) <= fd < day:
-            data = json.loads(f.read_text())
+            data = json.loads(f.read_text(encoding="utf-8"))
             if fd < day - timedelta(days=3):
                 # News dedup uses recent editions; the full 30-day fact/puzzle ledger
                 # is retained for long-window repeated curiosities.
                 data = {k:v for k,v in data.items() if k != "items"}
             histories.append({"date":str(fd),"data":data})
     upstream_file = root / "archive" / (str(day) + ".json")
-    upstream = json.loads(upstream_file.read_text()) if upstream_file.exists() else None
+    upstream = json.loads(upstream_file.read_text(encoding="utf-8")) if upstream_file.exists() else None
     hashes = {name:hashlib.sha256(value.encode()).hexdigest() for name,value in files.items()}
     return {"edition_date":str(day),"timezone":"Asia/Singapore", "policies":files,
         "policy_hashes":hashes,"missing_files":missing,"prior_archives":histories,

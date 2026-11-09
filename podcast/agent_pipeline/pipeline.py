@@ -171,8 +171,10 @@ class Pipeline:
                 raise
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--repo',required=True);p.add_argument('--output',required=True);p.add_argument('--date',required=True);p.add_argument('--run-id',required=True);p.add_argument('--resume',action='store_true');p.add_argument('--hooks',help='Private JSON mapping audio argv; never secrets')
-    a=p.parse_args(); hooks=json.loads(Path(a.hooks).read_text()) if a.hooks else {}
-    result=Pipeline(a.repo,a.output,hooks=hooks).run(a.date,a.run_id,a.resume)
+    p=argparse.ArgumentParser();p.add_argument('--repo',required=True);p.add_argument('--output',required=True);p.add_argument('--date',required=True);p.add_argument('--run-id',required=True);p.add_argument('--resume',action='store_true');p.add_argument('--hooks',help='Private JSON mapping audio argv; never secrets');p.add_argument('--codex-executable',default='codex',help='Native Codex executable; on Windows use codex.exe, not a batch shim')
+    a=p.parse_args(); hooks=json.loads(Path(a.hooks).read_text(encoding='utf-8')) if a.hooks else {}
+    pipeline=Pipeline(a.repo,a.output,adapter=CodexAdapter(executable=a.codex_executable),hooks=hooks)
+    try: result=pipeline.run(a.date,a.run_id,a.resume)
+    finally: pipeline.audit.close()
     print(json.dumps(result,ensure_ascii=False))
 if __name__=='__main__': main()

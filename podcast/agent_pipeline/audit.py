@@ -13,6 +13,7 @@ import os
 from pathlib import Path
 import re
 import sqlite3
+import subprocess
 from datetime import datetime, timezone
 from threading import RLock
 from typing import Any
@@ -75,17 +76,93 @@ def file_sha256(path: str | Path) -> str:
     return digest.hexdigest()
 
 
+class PrivacyError(PermissionError):
+    """Destination privacy cannot be established; no ACL is changed."""
+
+
+def validate_windows_acl(snapshot: dict) -> None:
+    """Conservative ACL validation. Unknown/application SIDs need review.
+
+    Names such as CodexSandboxUsers are not proof of trust. We permit only the
+    actual current user, SYSTEM, and built-in Administrators, compared by SID.
+    This is not an effective-access calculation: additional Allow ACEs fail
+    closed even if another Deny ACE might offset them.
+    """
+    current = snapshot.get("current_sid")
+    if not current or snapshot.get("owner_sid") != current:
+        raise PrivacyError("Audit destination is not owned by the current user")
+    if snapshot.get("dacl_present") is not True:
+        raise PrivacyError("Missing/null DACL does not establish private access")
+    allowed = {current, "S-1-5-18", "S-1-5-32-544"}
+    for ace in snapshot.get("aces", []):
+        if ace.get("type") == "Deny":
+            continue
+        if ace.get("type") != "Allow" or ace.get("sid") not in allowed:
+            raise PrivacyError("Unapproved audit ACL principal: " + str(ace.get("sid", "unknown")))
+
+
+def inspect_windows_acl(path: str | Path) -> dict:
+    """Read NTFS ACL via a literal path passed on stdin, never shell-expanded."""
+    script = r"""
+$ErrorActionPreference = 'Stop'
+Import-Module (Join-Path $PSHOME 'Modules\Microsoft.PowerShell.Security') -ErrorAction Stop
+$p = [Console]::In.ReadToEnd()
+$a = Get-Acl -LiteralPath $p
+$raw = New-Object System.Security.AccessControl.RawSecurityDescriptor($a.Sddl)
+$rules = @($a.GetAccessRules($true, $true, [System.Security.Principal.SecurityIdentifier]) | ForEach-Object {
+  @{sid=$_.IdentityReference.Value;type=$_.AccessControlType.ToString();rights=[int64]$_.FileSystemRights}
+})
+@{owner_sid=$a.GetOwner([System.Security.Principal.SecurityIdentifier]).Value;
+  current_sid=[System.Security.Principal.WindowsIdentity]::GetCurrent().User.Value;
+  dacl_present=($null -ne $raw.DiscretionaryAcl);aces=$rules} | ConvertTo-Json -Depth 5 -Compress
+"""
+    try:
+        result = subprocess.run(["powershell.exe", "-NoProfile", "-NonInteractive", "-Command", script],
+                                input=str(Path(path).absolute()), text=True, capture_output=True,
+                                check=True, timeout=20, creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))
+        return json.loads(result.stdout)
+    except (subprocess.SubprocessError, OSError, ValueError) as exc:
+        raise PrivacyError("Cannot inspect Windows audit ACL; no data written") from exc
+
+
+def verify_private_path(path: str | Path) -> None:
+    """Validate existing destination without modifying permissions."""
+    path = Path(path)
+    if path.is_symlink():
+        raise PrivacyError("Audit destination must not be a symlink")
+    if os.name == "nt":
+        validate_windows_acl(inspect_windows_acl(path))
+    else:
+        info = path.stat()
+        if info.st_uid != os.getuid() or info.st_mode & 0o077:
+            raise PrivacyError("Audit destination must be owned by current user without group/other access")
+
+
+def _prepare_private_parent(path: Path) -> None:
+    if os.name == "nt":
+        # Verify inherited access before creating even an empty destination.
+        ancestor = path.parent
+        while not ancestor.exists():
+            ancestor = ancestor.parent
+        verify_private_path(ancestor)
+    path.parent.mkdir(parents=True, exist_ok=True, mode=0o700)
+    verify_private_path(path.parent)
+    if path.exists():
+        verify_private_path(path)
+
 class AuditStore:
     """Private SQLite event ledger. Every mutation appends a new event."""
 
     def __init__(self, path: str | Path | None = None):
         default = Path(os.environ.get("XDG_STATE_HOME", Path.home() / ".local/state")) / "the-brief/audit.sqlite3"
         self.path = Path(path or default).expanduser().absolute()
-        self.path.parent.mkdir(parents=True, exist_ok=True, mode=0o700)
+        _prepare_private_parent(self.path)
         # Create with restrictive permissions before SQLite opens it.
         fd = os.open(self.path, os.O_CREAT | os.O_RDWR, 0o600)
         os.close(fd)
-        os.chmod(self.path, 0o600)
+        if os.name != "nt":
+            os.chmod(self.path, 0o600)
+        verify_private_path(self.path)
         self._lock = RLock()
         self._db = sqlite3.connect(self.path, timeout=30, check_same_thread=False)
         self._db.row_factory = sqlite3.Row
@@ -238,7 +315,7 @@ class AuditStore:
         path = Path(path).expanduser().absolute()
         if path == self.path:
             raise ValueError("Workbook must not overwrite audit database")
-        path.parent.mkdir(parents=True, exist_ok=True, mode=0o700)
+        _prepare_private_parent(path)
         wb = Workbook()
         overview = wb.active
         overview.title = "Overview"
@@ -289,7 +366,9 @@ class AuditStore:
             ws.sheet_view.showGridLines = False
         fd = os.open(path, os.O_CREAT | os.O_TRUNC | os.O_WRONLY, 0o600)
         os.close(fd)
-        os.chmod(path, 0o600)
+        if os.name != "nt":
+            os.chmod(path, 0o600)
+        verify_private_path(path)
         wb.save(path)
         return path
 

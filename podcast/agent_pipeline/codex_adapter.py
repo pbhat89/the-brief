@@ -7,6 +7,7 @@ import json
 import os
 from pathlib import Path
 import signal
+import shutil
 import subprocess
 import tempfile
 import time
@@ -32,22 +33,57 @@ class CodexResult:
 def _environment() -> dict[str, str]:
     # Codex owns its supported subscription login. No API-key fallback or custom endpoint.
     return {k: v for k, v in os.environ.items()
-            if not k.startswith(('OPENAI_', 'AZURE_OPENAI_', 'ANTHROPIC_'))
-            and k not in {'CODEX_API_KEY', 'CODEX_BASE_URL'}}
+            if not k.upper().startswith(('OPENAI_', 'AZURE_OPENAI_', 'ANTHROPIC_'))
+            and k.upper() not in {'CODEX_API_KEY', 'CODEX_BASE_URL'}}
+
+
+_WINDOWS = os.name == 'nt'
+
+
+def _native_command(command: list[str]) -> list[str]:
+    if not _WINDOWS:
+        return command
+    executable = shutil.which(command[0])
+    if not executable or Path(executable).suffix.lower() != '.exe':
+        raise CodexAdapterError('runtime', 'Windows requires the official native codex.exe path; batch shims are not supported.')
+    return [str(Path(executable).resolve()), *command[1:]]
+
+
+def _stop_process_tree(proc: Any) -> None:
+    try:
+        if _WINDOWS:
+            # Fixed OS executable, numeric PID only. Never compose a shell command.
+            taskkill = Path(os.environ.get('SystemRoot', r'C:\Windows')) / 'System32' / 'taskkill.exe'
+            stopped = subprocess.run([str(taskkill), '/PID', str(proc.pid), '/T', '/F'],
+                                     stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL,
+                                     stderr=subprocess.DEVNULL, shell=False, timeout=10,
+                                     creationflags=0x08000000)
+            if stopped.returncode and proc.poll() is None:
+                raise OSError('Process tree termination failed')
+        else:
+            try:
+                os.killpg(proc.pid, signal.SIGKILL)
+            except ProcessLookupError:
+                pass
+        proc.communicate(timeout=5)
+    except (OSError, subprocess.TimeoutExpired):
+        raise CodexAdapterError('cleanup', 'Codex timeout cleanup could not be verified; execution stopped.') from None
 
 
 def _execute(command: list[str], *, cwd: Path, prompt: str = '', timeout: float = 30) -> tuple[int, str, str]:
+    command = _native_command(command)
+    options = {'creationflags': 0x08000000} if _WINDOWS else {'start_new_session': True}
     try:
         proc = subprocess.Popen(command, cwd=cwd, env=_environment(), text=True,
+                                encoding='utf-8', errors='replace', shell=False,
                                 stdin=subprocess.PIPE, stdout=subprocess.PIPE,
-                                stderr=subprocess.PIPE, start_new_session=True)
+                                stderr=subprocess.PIPE, **options)
     except OSError:
         raise CodexAdapterError('runtime', 'Codex executable could not be started.') from None
     try:
         stdout, stderr = proc.communicate(prompt, timeout=timeout)
     except subprocess.TimeoutExpired:
-        os.killpg(proc.pid, signal.SIGKILL)
-        proc.communicate()
+        _stop_process_tree(proc)
         raise CodexAdapterError('timeout', 'Codex exceeded the configured deadline.') from None
     return proc.returncode, stdout, stderr
 
@@ -138,7 +174,10 @@ class CodexAdapter:
                 raise CodexAdapterError('timeout', 'Codex exceeded the configured deadline.', attempt)
             with tempfile.TemporaryDirectory(prefix='codex-call-', dir=cwd) as temp:
                 folder = Path(temp)
-                folder.chmod(0o700)
+                # Windows inherits ACLs: runner provisioning must verify owner-private cwd.
+                # chmod is a POSIX permission check, not a Windows privacy claim.
+                if not _WINDOWS:
+                    folder.chmod(0o700)
                 schema_file, output_file = folder / 'schema.json', folder / 'result.json'
                 schema_file.write_text(json.dumps(schema), encoding='utf-8')
                 command = [self.executable, '-a', 'never', 'exec', '--ephemeral', '--ignore-user-config',

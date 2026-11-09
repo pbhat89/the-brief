@@ -2,7 +2,7 @@
 
 ## Multi-agent revamp: workflow and architecture
 
-**Status, 8 November 2026:** the opt-in comparison pipeline is implemented and fixture-tested; it is **not yet the production morning runtime**. The first live comparison was blocked before model execution by the managed runner's read-only Codex home. No replacement edition or audio was produced. Existing editions and the Claude/Gmail workflow remain unchanged.
+**Status, 9 November 2026:** the opt-in comparison pipeline is implemented and fixture-tested; it is **not yet the production morning runtime**. The first managed-cloud attempt was blocked by a read-only Codex home. A connected Windows runner has now passed real ChatGPT-subscription execution and hosted-search probes; full comparison and approved audio/publication validation remain pending. Existing editions and the Claude/Gmail workflow remain unchanged.
 
 ### 1. Workflow: which boxes are individual agents?
 
@@ -56,13 +56,13 @@ flowchart LR
     Tests["GitHub Actions<br/>Python tests + existing Node/app regressions"] --> Graph
 ```
 
-**Solid lines:** implemented components and data flow, tested with fixtures where external services are involved. **Dotted lines:** live audio/publication integration and production promotion still require verification. The adapter exists, but its live model run is currently blocked. LangFlow is an optional future visual editor, **not an installed runtime dependency**. No Platform API token or paid fallback is configured. Subscription usage limits still apply.
+**Solid lines:** implemented components and data flow, tested with fixtures where external services are involved. **Dotted lines:** live audio/publication integration and production promotion still require verification. The adapter has passed live subscription and search probes; a complete edition is not yet verified. LangFlow is an optional future visual editor, **not an installed runtime dependency**. No Platform API token or paid fallback is configured. Subscription usage limits still apply.
 
 ### 3. Traceability and release checkpoints
 
 | Checkpoint | Recorded or checked | Current boundary |
 |---|---|---|
-| Readiness | Run ID, date, policy/input hashes, resume identity | Writable signed-in Codex runner still needed |
+| Readiness | Run ID, date, policy/input hashes, resume identity | Windows login/search verified; full live run pending |
 | Every agent attempt | Role, attempt ID, timestamps, measured duration, outcome, error category, observed search count, usage when available | Missing usage remains unknown, never estimated as measured |
 | Research and editing | Source IDs, claims, evidence links, coverage, event dedup, review/repair outcomes | Live source-access and complete editorial audit still need verification |
 | Rendering | Script coverage/fidelity, weather-first structure, artifact paths and hashes | HTML/script success is not audio success |
