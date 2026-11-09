@@ -12,8 +12,10 @@ from typing import TypedDict
 from concurrent.futures import ThreadPoolExecutor
 from langgraph.graph import StateGraph, START, END
 from langgraph.checkpoint.sqlite import SqliteSaver
-from .audit import AuditStore
+from .audit import AuditStore, verify_private_path
+from .checkpoint_store import CheckpointStore, CheckpointKey
 from .bridges import validate_editorial
+from .source_repair import REPAIR_SCHEMA, repair_targets, repair_prompt, merge_source_repair, validate_repair_origin
 from .codex_adapter import CodexAdapter
 from .content import (ROLES, RESEARCH_SCHEMA, EDITION_SCHEMA, CHECK_SCHEMA, PODCAST_SCHEMA,
     load_context, research_prompt, editor_prompt, checker_prompt, podcast_prompt,
@@ -40,17 +42,30 @@ class State(TypedDict, total=False):
     artifacts: dict
 
 class Pipeline:
-    def __init__(self, repo, output, adapter=None, concurrency=3, hooks=None):
+    def __init__(self, repo, output, adapter=None, concurrency=3, hooks=None, repair_from=None):
         self.repo=Path(repo).resolve(); self.output=Path(output).resolve()
         if self.output==self.repo or self.repo in self.output.parents:
             raise ValueError('Private runtime output must be outside repository')
         self.output.mkdir(parents=True,exist_ok=True,mode=0o700)
         self.adapter=adapter or CodexAdapter(); self.concurrency=min(max(concurrency,1),4)
         self.hooks=hooks or {}; self.context={}; self.audit=AuditStore(self.output/'audit.sqlite3')
-    def invoke_agent(self,state,role,prompt,schema,search=False):
+        cache=self.output/'agent-checkpoints';cache.mkdir(exist_ok=True,mode=0o700)
+        self.agent_cache=CheckpointStore(cache,privacy_verifier=lambda p:(verify_private_path(p),True)[1])
+        self.repair_previous=None;self.repair_input_hash=None
+        if repair_from is not None:
+            path=Path(repair_from).resolve();verify_private_path(path)
+            raw=path.read_bytes();self.repair_previous=json.loads(raw);self.repair_input_hash=hashlib.sha256(raw).hexdigest()
+        self.runtime_hash=digest({p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in Path(__file__).parent.glob('*.py')})
+    def invoke_agent(self,state,role,prompt,schema,search=False,with_trace=False):
         started=now(); aid=f'{state["run_id"]}:{role}:{state.get("repair_round",0)}'
         observed_ids=set()
+        key=CheckpointKey(state['run_id'],role+'_'+str(state.get('repair_round',0)),state['date'],state['context_hash'],digest(prompt),digest(schema),self.runtime_hash)
         try:
+            cached=self.agent_cache.load(key)
+            if cached is not None:
+                self.audit.record_attempt(state['run_id'],role,attempt_id=aid,status='reused',checkpoint_hash=cached['payload_hash'],input_hash=digest(prompt),usage=None)
+                if role in ROLES: return reconcile_source_traces(cached['result'],cached['tool_trace'],self.context.get('intake_events',()))
+                return (cached['result'],cached['tool_trace']) if with_trace else cached['result']
             def trace(event):
                 if event.get('event')=='tool_observation':
                     observation=event['observation']
@@ -60,6 +75,8 @@ class Pipeline:
                 self.audit.record_attempt(state['run_id'],role,attempt_id=f'{aid}:try-{event.get("attempt",0)}',**event)
                 self.audit.event(state['run_id'],'codex_attempt',agent_id=role,parent_attempt_id=aid,**event)
             result=self.adapter.run(prompt,schema,cwd=str(self.output),require_search=search,on_attempt=trace)
+            checkpoint_hash=self.agent_cache.save(key,result.data,list(getattr(result,'tool_trace',())))
+            self.audit.record_checkpoint(state['run_id'],role+'_result',status='saved',payload_hash=checkpoint_hash,runtime_source_hash=self.runtime_hash)
             self.audit.record_attempt(state['run_id'],role,attempt_id=aid,started_at=started,ended_at=now(),status='success',input_hash=digest(prompt),output_hash=digest(result.data),usage=result.usage)
             traces=getattr(result,'tool_trace',())
             for observation in traces:
@@ -67,7 +84,7 @@ class Pipeline:
                 self.audit.event(state['run_id'],'tool_observation',agent_id=role,**observation)
             if role in ROLES:
                 return reconcile_source_traces(result.data,traces,self.context.get('intake_events',()))
-            return result.data
+            return (result.data,traces) if with_trace else result.data
         except Exception as exc:
             for observation in getattr(exc,'tool_trace',()):
                 if observation.get('trace_id') in observed_ids: continue
@@ -78,16 +95,20 @@ class Pipeline:
         self.context=load_context(self.repo,s['date'])
         current=context_digest(self.context)
         if s.get('context_hash') and s['context_hash']!=current: raise ValueError('Resume inputs changed; use new run ID')
-        self.audit.start_run(s['run_id'],edition_date=s['date'],started_at=now(),mode='comparison',context_hash=current)
+        self.audit.start_run(s['run_id'],edition_date=s['date'],started_at=now(),mode='comparison',context_hash=current,runtime_source_hash=self.runtime_hash)
+        if self.repair_previous is not None:
+            validate_repair_origin(self.repair_previous,edition_date=s['date'],context_hash=current,new_run_id=s['run_id'])
+            self.audit.event(s['run_id'],'repair_origin',parent_run_id=self.repair_previous['run_id'],input_sha256=self.repair_input_hash)
         if self.context.get('missing_files'): raise ValueError('Required policy/history files missing: '+','.join(self.context['missing_files']))
         for observation in self.context.get('intake_events',()):
             self.audit.event(s['run_id'],'local_intake',**observation)
         self.audit.record_checkpoint(s['run_id'], 'readiness',status='passed',checks=['private output path','policy context loaded'])
         return {'context_hash':current,'repair_round':0,'status':'researching','errors':[]}
     def research(self,s):
+        if self.repair_previous is not None: return self.repair_research(s)
         def run(role):
             try:
-                result=self.invoke_agent(s,role,research_prompt(role,self.context),RESEARCH_SCHEMA,True)
+                result=self.invoke_agent(s,role,research_prompt(role,{k:v for k,v in self.context.items() if k!='intake_events'}),RESEARCH_SCHEMA,True)
                 for source in result.get('sources',[]):
                     data=dict(source); source_id=data.pop('id',None)
                     self.audit.record_source(s['run_id'],source_id,**data)
@@ -101,6 +122,35 @@ class Pipeline:
         issues=verify_research(results,self.context)
         self.audit.record_checkpoint(s['run_id'],'coverage',status='failed' if issues else 'passed',errors=issues)
         return {'research':results,'errors':issues,'status':'research_ready' if not issues and any(x.get('stories') for x in results) else 'research_blocked'}
+    def repair_research(self,s):
+        previous=self.repair_previous
+        targets=repair_targets(previous['research'],required_source_ids=self.context.get('required_source_ids',()))
+        owners={}
+        for role in previous['research']:
+            for row in role.get('sources',[]): owners.setdefault((row.get('id'),row.get('url')),role['role'])
+        groups={role:[t for t in targets if owners[(t['source_id'],t['url'])]==role] for role in ROLES}
+        def repair(role):
+            if not groups[role]: return {'sources':[]},[]
+            try:
+                return self.invoke_agent(s,'evidence_repair_'+role,repair_prompt(groups[role]),REPAIR_SCHEMA,True,with_trace=True)
+            except Exception as exc:
+                self.audit.event(s['run_id'],'evidence_repair_blocked',agent_id=role,error_type=type(exc).__name__)
+                return {'sources':[]},[]
+        with ThreadPoolExecutor(max_workers=self.concurrency) as pool: responses=list(pool.map(repair,ROLES))
+        update={'sources':[row for data,_ in responses for row in data['sources']]}
+        traces=[t for _,items in responses for t in items]
+        repaired=merge_source_repair(previous,update,traces,targets=targets,edition_date=s['date'],context_hash=s['context_hash'],new_run_id=s['run_id'],intake_events=self.context.get('intake_events',()))
+        results=repaired['research']
+        for role in results:
+            for source in role.get('sources',[]):
+                data=dict(source);sid=data.pop('id');self.audit.record_source(s['run_id'],sid,**data)
+            for story in role.get('stories',[]):
+                self.audit.record_claim(s['run_id'],story['id'],event_id=story['event_id'],source_ids=story['sources'],claim=story['summary'],carried_from_run=previous['run_id'])
+                for n,evidence in enumerate(story.get('evidence',[])):
+                    self.audit.record_evidence(s['run_id'],f"{story['id']}-{n}",claim_id=story['id'],carried_from_run=previous['run_id'],**evidence)
+        issues=verify_research(results,self.context)
+        self.audit.record_checkpoint(s['run_id'],'coverage_repair',status='failed' if issues else 'passed',errors=issues,**repaired['repair_evidence'])
+        return {'research':results,'errors':issues,'status':'research_ready' if not issues else 'research_blocked'}
     def edit(self,s):
         edition=self.invoke_agent(s,'editor',editor_prompt(s['research'],self.context),EDITION_SCHEMA)
         return {'edition':edition}
@@ -191,9 +241,9 @@ class Pipeline:
                 raise
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--repo',required=True);p.add_argument('--output',required=True);p.add_argument('--date',required=True);p.add_argument('--run-id',required=True);p.add_argument('--resume',action='store_true');p.add_argument('--hooks',help='Private JSON mapping audio argv; never secrets');p.add_argument('--codex-executable',default='codex',help='Native Codex executable; on Windows use codex.exe, not a batch shim')
+    p=argparse.ArgumentParser();p.add_argument('--repo',required=True);p.add_argument('--output',required=True);p.add_argument('--date',required=True);p.add_argument('--run-id',required=True);p.add_argument('--resume',action='store_true');p.add_argument('--hooks',help='Private JSON mapping audio argv; never secrets');p.add_argument('--repair-from',help='Private research_blocked result from same edition/context; requires new run ID');p.add_argument('--codex-executable',default='codex',help='Native Codex executable; on Windows use codex.exe, not a batch shim')
     a=p.parse_args(); hooks=json.loads(Path(a.hooks).read_text(encoding='utf-8')) if a.hooks else {}
-    pipeline=Pipeline(a.repo,a.output,adapter=CodexAdapter(executable=a.codex_executable),hooks=hooks)
+    pipeline=Pipeline(a.repo,a.output,adapter=CodexAdapter(executable=a.codex_executable),hooks=hooks,repair_from=a.repair_from)
     try: result=pipeline.run(a.date,a.run_id,a.resume)
     finally: pipeline.audit.close()
     print(json.dumps(result,ensure_ascii=False))

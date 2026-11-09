@@ -242,6 +242,47 @@ def _tool_observation(event, observed_at, attempt):
             'url': url, 'query_sha256': hashlib.sha256(query.encode()).hexdigest() if isinstance(query, str) else None}
 
 
+def _tool_observations(event, observed_at, attempt):
+    """Expand explicit completed open results, never promote search discoveries.
+
+    Batch results share the line's adapter-observed timestamp, not an invented
+    per-page fetch time. Titles/text are deliberately excluded from the trace.
+    """
+    primary = _tool_observation(event, observed_at, attempt)
+    if primary is None:
+        return []
+    item = event['item']
+    if (event['type'] != 'item.completed' or primary['action'] != 'open_page'
+            or primary['status'] == 'failed'):
+        return [primary]
+    results = item.get('results')
+    if not isinstance(results, list):
+        return [primary]
+    expanded, seen = [], set()
+    for result in results:
+        if not isinstance(result, dict) or result.get('type') != 'text_result':
+            continue
+        url = _public_url(result.get('url'))
+        ref_id = result.get('ref_id')
+        if (not url or not isinstance(ref_id, str) or not ref_id or len(ref_id) > 128
+                or not all(c.isalnum() or c in '_-' for c in ref_id)):
+            continue
+        identity = (url, ref_id)
+        if identity in seen:
+            continue
+        seen.add(identity)
+        observation = {**primary, 'url': url, 'ref_id': ref_id,
+                       'query_sha256': None}
+        observation['trace_id'] = hashlib.sha256(json.dumps(
+            [primary['trace_id'], 'open_result', url, ref_id]).encode()).hexdigest()
+        expanded.append(observation)
+    # The primary URL often represents only the first page in a batch. Prefer
+    # its explicit result reference instead of creating a duplicate observation.
+    if primary['url'] and not any(row['url'] == primary['url'] for row in expanded):
+        expanded.insert(0, primary)
+    return expanded or [primary]
+
+
 def _kind(message: str) -> str:
     value = message.lower()
     if any(s in value for s in ('read-only file system', 'failed to initialize', 'permission denied')):
@@ -349,8 +390,7 @@ class CodexAdapter:
                       'usage': None, 'search_count': 0})
                 try:
                     def observe(event, observed_at):
-                        observation = _tool_observation(event, observed_at, attempt)
-                        if observation is not None:
+                        for observation in _tool_observations(event, observed_at, attempt):
                             tool_trace.append(observation)
                             emit({"event":"tool_observation","attempt":attempt,"observation":observation})
                     code, stdout, stderr = _execute(command, cwd=cwd, prompt=prompt, timeout=remaining,

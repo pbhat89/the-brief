@@ -244,3 +244,75 @@ class PortabilityTests(unittest.TestCase):
             self.assertEqual(_environment(), {'Safe':'yes'})
 
 if __name__ == '__main__': unittest.main()
+
+
+class BatchObservationTests(unittest.TestCase):
+    def event(self, action='open_page'):
+        return {'type':'item.completed','item':{'id':'item_1','type':'web_search','status':'completed',
+            'action':{'type':action,'url':'https://www.nea.gov.sg/corporate-functions/weather'},
+            'results':[{'type':'text_result','url':'https://www.nea.gov.sg/corporate-functions/weather','ref_id':'turn0view0','title':'PRIVATE_NOT_LOGGED'},
+                       {'type':'text_result','url':'https://www.weather.gov.sg/home/','ref_id':'turn0view1','title':'PRIVATE_NOT_LOGGED'}]}}
+
+    def test_completed_batch_expands_two_distinct_refs(self):
+        from podcast.agent_pipeline.codex_adapter import _tool_observations
+        observed='2026-11-09T06:00:00+00:00'
+        rows=_tool_observations(self.event(),observed,1)
+        self.assertEqual(len(rows),2)
+        self.assertEqual([r['ref_id'] for r in rows],['turn0view0','turn0view1'])
+        self.assertEqual(len({r['trace_id'] for r in rows}),2)
+        self.assertTrue(all(r['observed_at']==observed and r['timestamp_basis']=='adapter_observed' for r in rows))
+        self.assertNotIn('PRIVATE_NOT_LOGGED',json.dumps(rows))
+
+    def test_search_results_are_discovery_only(self):
+        from podcast.agent_pipeline.codex_adapter import _tool_observations
+        rows=_tool_observations(self.event('search'),'time',1)
+        self.assertEqual(len(rows),1)
+        self.assertEqual(rows[0]['action'],'search')
+        self.assertIsNone(rows[0]['url'])
+
+    def test_unknown_and_started_actions_are_not_expanded(self):
+        from podcast.agent_pipeline.codex_adapter import _tool_observations
+        rows=_tool_observations(self.event('unrecognized'),'time',1)
+        self.assertEqual(len(rows),1)
+        self.assertEqual(rows[0]['action'],'unknown')
+        self.assertIsNone(rows[0]['url'])
+        event=self.event();event['type']='item.started'
+        self.assertEqual(len(_tool_observations(event,'time',1)),1)
+
+    def test_sensitive_results_and_invalid_refs_rejected(self):
+        from podcast.agent_pipeline.codex_adapter import _tool_observations
+        event=self.event()
+        for url in ['https://example.com/a?token=SECRET','http://127.0.0.1/a','https://user:SECRET@example.com/a','https://example.com/session/SECRET']:
+            event['item']['results'].append({'type':'text_result','url':url,'ref_id':'ref_2'})
+        event['item']['results'].append({'type':'text_result','url':'https://example.com/public','ref_id':'unsafe ref'})
+        rows=_tool_observations(event,'time',1)
+        self.assertEqual(len(rows),2)
+        self.assertNotIn('SECRET',json.dumps(rows))
+
+    def test_duplicate_results_and_primary_url_deduplicated(self):
+        from podcast.agent_pipeline.codex_adapter import _tool_observations
+        event=self.event();event['item']['results']*=2
+        self.assertEqual(len(_tool_observations(event,'time',1)),2)
+
+    def test_failed_open_does_not_expand(self):
+        from podcast.agent_pipeline.codex_adapter import _tool_observations
+        event=self.event();event['item']['status']='failed'
+        rows=_tool_observations(event,'time',1)
+        self.assertEqual(len(rows),1)
+        self.assertEqual(rows[0]['status'],'failed')
+
+    @patch('podcast.agent_pipeline.codex_adapter._execute')
+    def test_all_batch_observations_emitted_durably(self, execute):
+        event=self.event();events=[]
+        def fake(command, **kwargs):
+            if command[-2:]==['login','status']:
+                return 0,'Logged in using ChatGPT',''
+            kwargs['on_json_event'](event,'2026-11-09T06:00:00+00:00')
+            Path(command[command.index('--output-last-message')+1]).write_text('{"ok":true}')
+            return 0,json.dumps(event),''
+        execute.side_effect=fake
+        with tempfile.TemporaryDirectory() as folder:
+            result=CodexAdapter().run('Test',SCHEMA,folder,on_attempt=events.append)
+        emitted=[e['observation'] for e in events if e['event']=='tool_observation']
+        self.assertEqual(len(emitted),2)
+        self.assertEqual(tuple(emitted),result.tool_trace)
