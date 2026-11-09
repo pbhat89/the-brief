@@ -68,6 +68,7 @@ class NativePipelineTests(unittest.TestCase):
             finally:runner.bridge.close();runner.audit.close()
 
 class LineageTests(unittest.TestCase):
+    setUp = NativePipelineTests.setUp
     def test_parent_identity_exact_and_read_only(self):
         from .native_pipeline import validate_parent_manifest,private_json
         from .pipeline import digest,context_digest
