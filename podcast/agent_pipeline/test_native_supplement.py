@@ -6,6 +6,15 @@ from .native_supplement import load_supplement,merge_supplement
 from .test_content import story
 
 class SupplementTests(unittest.TestCase):
+    def setUp(self):
+        # Synthetic orchestration fixture only; production ACL checks stay active.
+        if os.name == 'nt':
+            from unittest.mock import patch
+            from . import audit as audit_module
+            acl={'current_sid':'test','owner_sid':'test','dacl_present':True,'aces':[{'sid':'test','type':'Allow'}]}
+            mock=patch.object(audit_module,'inspect_windows_acl',return_value=acl)
+            mock.start();self.addCleanup(mock.stop)
+
     def test_verified_receipts_review_and_rejections(self):
         with tempfile.TemporaryDirectory() as temp:
             root=Path(temp);root.chmod(0o700)
