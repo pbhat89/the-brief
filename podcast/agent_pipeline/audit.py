@@ -93,7 +93,8 @@ def validate_windows_acl(snapshot: dict) -> None:
         raise PrivacyError("Audit destination is not owned by the current user")
     if snapshot.get("dacl_present") is not True:
         raise PrivacyError("Missing/null DACL does not establish private access")
-    allowed = {current, "S-1-5-18", "S-1-5-32-544"}
+    # OWNER RIGHTS resolves to the owner, verified as current user above.
+    allowed = {current, "S-1-5-18", "S-1-5-32-544", "S-1-3-4"}
     for ace in snapshot.get("aces", []):
         if ace.get("type") == "Deny":
             continue

@@ -132,6 +132,9 @@ class SourceAssignmentTests(unittest.TestCase):
         prompt = research_prompt("world", context)
         self.assertIn("Owned mandatory source rows", prompt)
         self.assertIn("never manufacture a time", prompt)
+        self.assertIn("real open-page tool attempt at the exact reported URL", prompt)
+        self.assertIn("search-only discovery is insufficient", prompt)
+        self.assertIn("mark unattempted", prompt)
         self.assertIn("never invent an HTTPS URL", prompt)
 
 class TraceTests(unittest.TestCase):

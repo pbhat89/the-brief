@@ -173,3 +173,11 @@ class WindowsAclTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+class OwnerRightsTests(unittest.TestCase):
+    def test_owner_rights_only_for_current_owner(self):
+        from podcast.agent_pipeline.audit import validate_windows_acl, PrivacyError
+        snapshot = {'current_sid':'user', 'owner_sid':'user', 'dacl_present':True, 'aces':[{'type':'Allow','sid':'S-1-3-4'}]}
+        validate_windows_acl(snapshot)
+        snapshot['owner_sid']='other'
+        with self.assertRaises(PrivacyError): validate_windows_acl(snapshot)

@@ -352,6 +352,7 @@ class CodexAdapter:
                         observation = _tool_observation(event, observed_at, attempt)
                         if observation is not None:
                             tool_trace.append(observation)
+                            emit({"event":"tool_observation","attempt":attempt,"observation":observation})
                     code, stdout, stderr = _execute(command, cwd=cwd, prompt=prompt, timeout=remaining,
                                                     on_json_event=observe)
                     usage, searches, failed = _summary(stdout)

@@ -38,6 +38,20 @@ class AdapterTests(unittest.TestCase):
         self.assertEqual(list(Path(self.tmp.name).iterdir()), [])
 
     @patch('podcast.agent_pipeline.codex_adapter._execute')
+    def test_observation_callback_precedes_process_completion(self, execute):
+        events=[]
+        def fake(command, **kwargs):
+            if '--output-last-message' in command:
+                kwargs['on_json_event']({'type':'item.completed','item':{'type':'web_search','id':'open-1','action':{'type':'open_page','url':'https://example.org/news'}}},'2026-11-09T07:00:00+00:00')
+                self.assertTrue(any(e.get('event')=='tool_observation' for e in events))
+                self.assertFalse(any(e.get('event')=='attempt_succeeded' for e in events))
+            return self.fake(command, **kwargs)
+        execute.side_effect=fake
+        result=CodexAdapter().run('Test',SCHEMA,self.tmp.name,on_attempt=events.append)
+        self.assertEqual(len(result.tool_trace),1)
+        self.assertEqual(result.tool_trace[0]['observed_at'],'2026-11-09T07:00:00+00:00')
+
+    @patch('podcast.agent_pipeline.codex_adapter._execute')
     def test_api_login_rejected(self, execute):
         execute.return_value = (0, 'Logged in using an API key', '')
         with self.assertRaises(CodexAdapterError) as ctx:

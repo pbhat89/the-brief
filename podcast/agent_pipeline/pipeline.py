@@ -49,20 +49,28 @@ class Pipeline:
         self.hooks=hooks or {}; self.context={}; self.audit=AuditStore(self.output/'audit.sqlite3')
     def invoke_agent(self,state,role,prompt,schema,search=False):
         started=now(); aid=f'{state["run_id"]}:{role}:{state.get("repair_round",0)}'
+        observed_ids=set()
         try:
             def trace(event):
+                if event.get('event')=='tool_observation':
+                    observation=event['observation']
+                    self.audit.event(state['run_id'],'tool_observation',agent_id=role,**observation)
+                    observed_ids.add(observation['trace_id'])
+                    return
                 self.audit.record_attempt(state['run_id'],role,attempt_id=f'{aid}:try-{event.get("attempt",0)}',**event)
                 self.audit.event(state['run_id'],'codex_attempt',agent_id=role,parent_attempt_id=aid,**event)
             result=self.adapter.run(prompt,schema,cwd=str(self.output),require_search=search,on_attempt=trace)
             self.audit.record_attempt(state['run_id'],role,attempt_id=aid,started_at=started,ended_at=now(),status='success',input_hash=digest(prompt),output_hash=digest(result.data),usage=result.usage)
             traces=getattr(result,'tool_trace',())
             for observation in traces:
+                if observation.get('trace_id') in observed_ids: continue
                 self.audit.event(state['run_id'],'tool_observation',agent_id=role,**observation)
             if role in ROLES:
                 return reconcile_source_traces(result.data,traces,self.context.get('intake_events',()))
             return result.data
         except Exception as exc:
             for observation in getattr(exc,'tool_trace',()):
+                if observation.get('trace_id') in observed_ids: continue
                 self.audit.event(state['run_id'],'tool_observation',agent_id=role,**observation)
             self.audit.record_attempt(state['run_id'],role,attempt_id=aid,started_at=started,ended_at=now(),status='failed',error_type=getattr(exc,'kind',type(exc).__name__),error=str(exc)[:500])
             raise
