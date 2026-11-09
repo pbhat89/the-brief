@@ -57,3 +57,11 @@ A normal ChatGPT-subscription Codex invocation and a hosted live-search call hav
 Use the installed native `codex.exe` with `--codex-executable PATH`; npm `.cmd` shims are deliberately rejected by the Python adapter. Python text I/O is UTF-8. Windows calls run without a shell or visible console window, and timeouts terminate only the launched process tree. Audit handles are explicitly closed before cleanup. CI covers Windows and Linux with deterministic fixtures, not live login or subjective audio quality.
 
 Windows privacy is checked using NTFS owner/DACL evidence, not POSIX mode bits. The audit writer fails closed when additional principals are present or inspection fails. It does not silently change permissions or whitelist an account solely because its name resembles an application. Provision a verified owner-only output directory through an approved workflow before private audio or narrator assets are used. Synthetic test ACLs do not prove the real runner is private.
+
+### First live comparison and trace repair
+
+The 9 November research trial executed all four roles and stopped at the research-evidence gate, before editing, narration or publishing. Candidate stories are not a verified edition. Missing measured attempt timestamps and missing mandatory source-category rows were exposed; the gate was not bypassed.
+
+The adapter now timestamps streamed tool events as they arrive. These are **locally observed event times**, not claims about the remote server's exact execution time. A separate live probe verified both search and exact open-page URL capture. Only a completed, unambiguous open attempt can bind a web source to its trace; search discovery alone does not prove the page was opened or read. The model's unsupported timestamps are discarded. Local upstream and expert-ledger reads use their own measured path/hash evidence and never pretend to be web visits. Reading a file is not proof of complete editorial reconciliation.
+
+Blocked CLI results return a nonzero exit status. The original blocked trial remains immutable; repairs require a new run identity, not retroactively invented evidence. Private-output permissions and full audio/release validation remain required before promotion.

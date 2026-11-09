@@ -5,7 +5,7 @@ import unittest
 from unittest.mock import patch
 from pathlib import Path
 from types import SimpleNamespace
-from podcast.agent_pipeline.pipeline import Pipeline
+from podcast.agent_pipeline.pipeline import Pipeline, context_digest
 from podcast.agent_pipeline.content import ROLES
 from podcast.agent_pipeline.test_content import edition,story
 
@@ -32,6 +32,12 @@ class PipelineTests(unittest.TestCase):
             mock=patch('podcast.agent_pipeline.audit.inspect_windows_acl',return_value=acl)
             mock.start();self.addCleanup(mock.stop)
 
+    def test_context_identity_excludes_observation_time_only(self,*mocks):
+        a={'files':{'policy':'hash-one'},'intake_events':[{'observed_at':'one'}]}
+        b={'files':{'policy':'hash-one'},'intake_events':[{'observed_at':'two'}]}
+        self.assertEqual(context_digest(a),context_digest(b))
+        b['files']['policy']='hash-two'
+        self.assertNotEqual(context_digest(a),context_digest(b))
     def test_success_and_duplicate(self,*mocks):
         with tempfile.TemporaryDirectory() as t, ExitStack() as resources:
             repo=Path(t)/'repo';repo.mkdir();adapter=Fake();p=Pipeline(repo,Path(t)/'private',adapter)

@@ -115,5 +115,62 @@ class EncodingTests(unittest.TestCase):
             self.assertIn(sample, json.dumps(context, ensure_ascii=False))
             self.assertIn(sample, json.dumps(context["prior_archives"], ensure_ascii=False))
 
+class SourceAssignmentTests(unittest.TestCase):
+    def test_every_contract_category_has_exactly_one_owner(self):
+        from .content import ROLE_SOURCE_IDS
+        import re
+        contract = (Path(__file__).resolve().parents[1] / "source-coverage-contract.mjs").read_text(encoding="utf-8")
+        required = re.findall(r"'([^']+)'", re.search(r"REQUIRED_SOURCE_IDS=(\[.*?\]);", contract).group(1))
+        assigned = [sid for ids in ROLE_SOURCE_IDS.values() for sid in ids]
+        self.assertEqual(sorted(required), sorted(assigned))
+        self.assertEqual(len(assigned), len(set(assigned)))
+
+    def test_prompt_assigns_category_without_fabricating_attempt(self):
+        from .content import source_assignment
+        context = {"required_source_ids": ["world-independent", "weather"], "fixed_source_targets": {}}
+        self.assertEqual(source_assignment("world", context), [{"id": "world-independent", "fixed_url": None}])
+        prompt = research_prompt("world", context)
+        self.assertIn("Owned mandatory source rows", prompt)
+        self.assertIn("never manufacture a time", prompt)
+        self.assertIn("never invent an HTTPS URL", prompt)
+
+class TraceTests(unittest.TestCase):
+    def test_exact_attempt_only_and_no_mutation(self):
+        from .content import reconcile_source_traces
+        result = {"sources": [{"url": "https://example.org/a", "status": "blocked", "attempted_at": "invented"}]}
+        event = {"event": "item.completed", "action": "open_page", "url": "https://example.org/a", "timestamp_basis": "adapter_observed", "observed_at": "2026-11-09T01:02:03Z", "trace_id": "t1"}
+        row = reconcile_source_traces(result, [event])["sources"][0]
+        self.assertEqual(row["attempted_at"], event["observed_at"])
+        self.assertEqual(row["status"], "blocked")
+        self.assertEqual(result["sources"][0]["attempted_at"], "invented")
+        for changes in ({"action": "search"}, {"event": "item.started"}, {"url": "https://example.org/b"}, {"observed_at": "2026-11-09"}):
+            changed = dict(event, **changes)
+            self.assertIsNone(reconcile_source_traces(result, [changed])["sources"][0]["attempted_at"])
+        result["sources"][0]["url"] += "?id=2"
+        self.assertIsNone(reconcile_source_traces(result, [event])["sources"][0]["attempted_at"])
+
+    def test_measured_local_intake_hash(self):
+        import hashlib
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "archive").mkdir()
+            (root / "podcast").mkdir()
+            raw = b'{"items": []}'
+            (root / "archive/2026-11-09.json").write_bytes(raw)
+            (root / "podcast/expert-learning-log.json").write_bytes(raw)
+            c = load_context(root, "2026-11-09")
+            self.assertEqual(len(c["intake_events"]), 2)
+            for event in c["intake_events"]:
+                self.assertEqual(event["sha256"], hashlib.sha256(raw).hexdigest())
+                self.assertEqual(event["timestamp_basis"], "host_read")
+                self.assertNotIn("url", event)
+            from .content import reconcile_source_traces, verify_research
+            research = [reconcile_source_traces({"role": role, "sources": [], "stories": []}, [], c["intake_events"]) for role in ROLES]
+            c["required_source_ids"] = ["upstream", "expert-knowledge-log"]
+            self.assertEqual(verify_research(research, c), [])
+            forged = copy.deepcopy(research)
+            next(row for r in forged for row in r["sources"] if row["id"] == "upstream")["host_evidence"]["sha256"] = "0" * 64
+            self.assertTrue(any("host intake" in e for e in verify_research(forged, c)))
+
 if __name__ == "__main__":
     unittest.main()

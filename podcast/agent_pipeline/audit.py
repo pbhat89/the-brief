@@ -105,6 +105,8 @@ def inspect_windows_acl(path: str | Path) -> dict:
     """Read NTFS ACL via a literal path passed on stdin, never shell-expanded."""
     script = r"""
 $ErrorActionPreference = 'Stop'
+[Console]::InputEncoding = New-Object System.Text.UTF8Encoding($false)
+[Console]::OutputEncoding = New-Object System.Text.UTF8Encoding($false)
 Import-Module (Join-Path $PSHOME 'Modules\Microsoft.PowerShell.Security') -ErrorAction Stop
 $p = [Console]::In.ReadToEnd()
 $a = Get-Acl -LiteralPath $p
@@ -118,7 +120,7 @@ $rules = @($a.GetAccessRules($true, $true, [System.Security.Principal.SecurityId
 """
     try:
         result = subprocess.run(["powershell.exe", "-NoProfile", "-NonInteractive", "-Command", script],
-                                input=str(Path(path).absolute()), text=True, capture_output=True,
+                                input=str(Path(path).absolute()), text=True, encoding="utf-8", errors="strict", capture_output=True,
                                 check=True, timeout=20, creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))
         return json.loads(result.stdout)
     except (subprocess.SubprocessError, OSError, ValueError) as exc:

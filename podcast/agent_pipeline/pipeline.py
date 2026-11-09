@@ -17,11 +17,14 @@ from .bridges import validate_editorial
 from .codex_adapter import CodexAdapter
 from .content import (ROLES, RESEARCH_SCHEMA, EDITION_SCHEMA, CHECK_SCHEMA, PODCAST_SCHEMA,
     load_context, research_prompt, editor_prompt, checker_prompt, podcast_prompt,
-    render_html, verify_edition, all_stories, verify_research, verify_edition_provenance, verify_script)
+    render_html, verify_edition, all_stories, verify_research, verify_edition_provenance, verify_script, reconcile_source_traces)
 
 
 def now(): return datetime.now(timezone.utc).isoformat()
 def digest(value): return hashlib.sha256(json.dumps(value,sort_keys=True).encode()).hexdigest()
+def context_digest(value):
+    # Observation time changes on every read; source contents/hashes remain bound.
+    return digest({k:v for k,v in value.items() if k!='intake_events'})
 
 class State(TypedDict, total=False):
     run_id: str
@@ -52,16 +55,25 @@ class Pipeline:
                 self.audit.event(state['run_id'],'codex_attempt',agent_id=role,parent_attempt_id=aid,**event)
             result=self.adapter.run(prompt,schema,cwd=str(self.output),require_search=search,on_attempt=trace)
             self.audit.record_attempt(state['run_id'],role,attempt_id=aid,started_at=started,ended_at=now(),status='success',input_hash=digest(prompt),output_hash=digest(result.data),usage=result.usage)
+            traces=getattr(result,'tool_trace',())
+            for observation in traces:
+                self.audit.event(state['run_id'],'tool_observation',agent_id=role,**observation)
+            if role in ROLES:
+                return reconcile_source_traces(result.data,traces,self.context.get('intake_events',()))
             return result.data
         except Exception as exc:
+            for observation in getattr(exc,'tool_trace',()):
+                self.audit.event(state['run_id'],'tool_observation',agent_id=role,**observation)
             self.audit.record_attempt(state['run_id'],role,attempt_id=aid,started_at=started,ended_at=now(),status='failed',error_type=getattr(exc,'kind',type(exc).__name__),error=str(exc)[:500])
             raise
     def readiness(self,s):
         self.context=load_context(self.repo,s['date'])
-        current=digest(self.context)
+        current=context_digest(self.context)
         if s.get('context_hash') and s['context_hash']!=current: raise ValueError('Resume inputs changed; use new run ID')
         self.audit.start_run(s['run_id'],edition_date=s['date'],started_at=now(),mode='comparison',context_hash=current)
         if self.context.get('missing_files'): raise ValueError('Required policy/history files missing: '+','.join(self.context['missing_files']))
+        for observation in self.context.get('intake_events',()):
+            self.audit.event(s['run_id'],'local_intake',**observation)
         self.audit.record_checkpoint(s['run_id'], 'readiness',status='passed',checks=['private output path','policy context loaded'])
         return {'context_hash':current,'repair_round':0,'status':'researching','errors':[]}
     def research(self,s):
@@ -162,7 +174,7 @@ class Pipeline:
             if snapshot.values and not resume: raise ValueError('Run exists; explicitly resume or choose new run ID')
             if resume:
                 if not snapshot.values: raise ValueError('No saved run')
-                if snapshot.values.get('date')!=date or snapshot.values.get('context_hash')!=digest(self.context): raise ValueError('Resume context changed')
+                if snapshot.values.get('date')!=date or snapshot.values.get('context_hash')!=context_digest(self.context): raise ValueError('Resume context changed')
             try: return graph.invoke(None if resume else {'run_id':run_id,'date':date},config)
             except Exception as exc:
                 self.audit.event(run_id,'pipeline_failed',error_type=type(exc).__name__,error=str(exc)[:500])
@@ -177,4 +189,5 @@ def main():
     try: result=pipeline.run(a.date,a.run_id,a.resume)
     finally: pipeline.audit.close()
     print(json.dumps(result,ensure_ascii=False))
+    if result.get('status')!='comparison_ready': raise SystemExit(2)
 if __name__=='__main__': main()
