@@ -248,3 +248,28 @@ by this importer and must not be relabelled. X coverage remains a separate
 coverage artifact preserving its actual browser provenance. This format check
 is not automatic authentication of a remote tool. Every accepted or rejected
 story ID receives an explicit supplemental disposition audit event.
+
+### Updated comparison and rendering blocker
+
+The later same-day comparison completed a real receipt-bound supplemental review,
+editor, independent fact checker, script producer and one bounded script repair
+with an independent recheck. It contains 14 selected items and a 659-word body.
+No padding was added to meet the 10–12-minute target; that target is not met by
+this written comparison. Source-attempt validation passes as PARTIAL, not full
+historical-window coverage. The original edition remains available.
+
+The graph correctly retains `comparison_draft_release_blocked`. A separately
+authorized private render phase passed script/voice preflight and content
+readiness, but two renderer attempts exited with signal 9 during model startup
+before any audio chunks. The second attempt ran without concurrent ASR. Low
+available memory was observed, but no accessible OOM counter proved the cause.
+No new audio was uploaded, no approved voice setting was weakened, and final
+measured editorial/audio/publication gates remain unsatisfied. A supported cloud
+runner with sufficient available capacity is the next requirement. Existing
+schedules and the original publishing workflow are unchanged.
+
+A first supplemental-review queue attempt also failed safely because a large
+coverage artifact exceeded the bounded prompt limit. The repair passes only its
+path, hash and bounded summary to the reviewer, retaining the full private
+artifact separately. The failed run remains immutable; a distinct run completed
+the review. Realistic large-artifact regression and Windows/Linux CI pass.
