@@ -200,3 +200,17 @@ class FullNativeGraphTests(unittest.TestCase):
 
     def test_synthetic_script_repair_exhaustion(self):
         self.test_synthetic_full_graph_and_seed_carry_forward(script_failures=3)
+
+
+class NativeExitStatusTests(unittest.TestCase):
+    def test_pending_and_complete(self):
+        from .native_pipeline import exit_status
+        self.assertEqual(exit_status({'status':'researching','__interrupt__':[{'value':{'jobs':[]}}]}),0)
+        self.assertEqual(exit_status({'status':'comparison_ready','artifacts':{'audio':'private.mp3'}}),0)
+    def test_terminal_blocked_failed_unknown(self):
+        from .native_pipeline import exit_status
+        for status in ('comparison_draft_release_blocked','written_ready_audio_blocked','research_blocked','editorial_blocked','failed','written_ready','unexpected',None):
+            result={'run_id':'comparison-test','date':'2026-11-09','status':status,'artifacts':{'edition':'edition.json','html':'brief.html','script':'script.json'},'errors':[]}
+            self.assertEqual(exit_status(result),2)
+        self.assertEqual(exit_status({'__interrupt__':[]}),2)
+        self.assertEqual(exit_status(None),2)

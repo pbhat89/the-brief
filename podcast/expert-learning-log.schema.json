@@ -222,13 +222,61 @@
                 "confirmation": {
                   "type": "string",
                   "minLength": 1
+                },
+                "private_evidence": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "type",
+                    "publication_id",
+                    "receipt_sha256",
+                    "artifact_sha256"
+                  ],
+                  "properties": {
+                    "type": {
+                      "const": "private_publication_receipt"
+                    },
+                    "publication_id": {
+                      "type": "string",
+                      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,199}$"
+                    },
+                    "receipt_sha256": {
+                      "type": "string",
+                      "pattern": "^[a-f0-9]{64}$"
+                    },
+                    "artifact_sha256": {
+                      "type": "string",
+                      "pattern": "^[a-f0-9]{64}$"
+                    }
+                  }
                 }
               },
               "required": [
                 "date",
                 "channel",
-                "public_evidence_url",
                 "confirmation"
+              ],
+              "oneOf": [
+                {
+                  "required": [
+                    "public_evidence_url"
+                  ],
+                  "not": {
+                    "required": [
+                      "private_evidence"
+                    ]
+                  }
+                },
+                {
+                  "required": [
+                    "private_evidence"
+                  ],
+                  "not": {
+                    "required": [
+                      "public_evidence_url"
+                    ]
+                  }
+                }
               ]
             },
             "minItems": 0

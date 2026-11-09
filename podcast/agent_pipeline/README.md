@@ -1,6 +1,6 @@
 # The Brief: subscription-backed agent pipeline
 
-This is an opt-in comparison runner. It does not replace the existing morning job or overwrite today's edition. Never claim a live research run from fixture tests.
+This is an opt-in comparison runner. It does not replace the existing morning job or automatically overwrite today's edition. Any separately authorized promotion must still pass the existing editorial, voice, measured-audio and publication gates. Never claim a live research run from fixture tests.
 
 ## Architecture
 
@@ -8,7 +8,7 @@ See the [root README diagrams](../../README.md#multi-agent-revamp-workflow-and-a
 
 `readiness → four research roles → editor → independent checker → (bounded repair) → canonical edition → HTML + podcast script → approved audio hook → audit/export`
 
-The LangGraph coordinator is code, not another conversational worker. Research roles are India, Singapore/weather, UK-US-world, and AI/learning. The editor, checker and podcast producer are distinct model calls. Maximum research concurrency is three by default, at most four. All work uses Codex's supported ChatGPT subscription sign-in; there is no API-key or paid fallback. This does not inherit a dot's memory or connector permissions.
+The LangGraph coordinator is code, not another conversational worker. Research roles are India, Singapore/weather, UK-US-world, and AI/learning. The editor, checker and podcast producer are distinct model calls. Maximum research concurrency is three by default, at most four. The standalone adapter uses Codex's supported ChatGPT subscription sign-in; the native alternative uses an external managed assistant driver with separately attributed connector receipts. Neither has an API-key or paid fallback. Native execution does not prove Codex subscription attribution, and the standalone adapter does not inherit a dot's memory or connector permissions.
 
 ## Installation and private runner
 
@@ -131,8 +131,9 @@ and original-result hashes, with a separately attributed capture-driver identity
 Receipt validation is not cryptographic connector attestation. Declared evidence
 without captured timing/hash cannot satisfy measured-source gates.
 
-The first full native four-role comparison is in progress; no completed new
-edition or audio is claimed. Private baseline inputs remain outside GitHub.
+The full native four-role comparison completed through independently checked
+written edition and script. Audio/publication remains source-release blocked.
+Private baseline inputs and review artifacts remain outside this public repository.
 
 ### Versioned recovery and source-attempt semantics
 
@@ -173,3 +174,23 @@ identified producer/checker repair pairs, always against the same locked edition
 Failed checks do not mutate completed jobs; exhaustion records failure and emits
 no script artifact. Full native graph regressions cover success, repair success
 and exhaustion. This does not waive the independent source-release gate.
+
+
+### Native driver exit status
+
+The JSON `status` is authoritative: a draft is not a successful delivery.
+Native CLI exit 0 means either a nonempty `__interrupt__` pending an external
+worker handoff, or terminal `comparison_ready`. Drivers must distinguish those
+cases in JSON. All other terminal states, including
+`comparison_draft_release_blocked`, audio/coverage blocks, failures and unknown
+states, exit 2. A pending exit 0 never means the episode was published.
+
+### Verified comparison outcome (9 November 2026)
+
+All actual native model stages completed. The reviewed draft contains 12 selected
+items and an 11-section, 692-word spoken body; it was not padded. The source gate
+remains blocked, so no new audio or production publication occurred. A cloud
+executor interruption recovered from persisted state without repeating source
+fetches. The combined private workbook retains five versioned attempts and their
+22 native jobs, with source rebindings distinguished from new fetches. This is
+not evidence of unattended daily delivery or a production cutover.

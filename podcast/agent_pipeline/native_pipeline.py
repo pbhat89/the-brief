@@ -226,6 +226,15 @@ class NativePipeline(Pipeline):
                 raise
 
 
+def exit_status(result):
+    """Pending handoffs are normal; terminal drafts are not successful delivery."""
+    if isinstance(result,dict) and result.get('__interrupt__'):
+        return 0
+    if isinstance(result,dict) and result.get('status')=='comparison_ready':
+        return 0
+    return 2
+
+
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     for name in ('repo','output','date','run-id'):p.add_argument('--'+name,required=True)
@@ -241,5 +250,6 @@ def main():
         result=runner.run(a.date,a.run_id,a.resume)
         print(json.dumps(result,ensure_ascii=False,default=lambda x: {'value':x.value,'id':x.id}))
     finally:runner.bridge.close();runner.audit.close()
+    raise SystemExit(exit_status(result))
 
 if __name__=='__main__':main()

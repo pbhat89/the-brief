@@ -77,10 +77,20 @@ export function validateExpertLearningLog(log) {
     const useKeys = new Set();
     for (const [j, use] of uses.entries()) {
       const where = `${at} use ${j}`;
-      if (!shape(use, USE_KEYS, where)) continue;
+      const privateMode = Object.hasOwn(use ?? {}, 'private_evidence');
+      const keys = privateMode ? ['date','channel','private_evidence','confirmation'] : USE_KEYS;
+      if (!shape(use, keys, where)) continue;
       check(date(use.date) && use.date <= log.updated_on, `${where}: valid past use date required`);
       check(['report', 'podcast'].includes(use.channel), `${where}: invalid channel`);
-      check(publicUrl(use.public_evidence_url) && text(use.confirmation), `${where}: public evidence and confirmation required`);
+      check(text(use.confirmation), `${where}: confirmation required`);
+      if (privateMode) {
+        const e=use.private_evidence;
+        if (shape(e,['type','publication_id','receipt_sha256','artifact_sha256'],`${where} private evidence`)) {
+          check(e.type==='private_publication_receipt',`${where}: explicit private receipt type required`);
+          check(typeof e.publication_id==='string' && /^[A-Za-z0-9][A-Za-z0-9_.:-]{0,199}$/.test(e.publication_id),`${where}: private publication identity required`);
+          for (const key of ['receipt_sha256','artifact_sha256']) check(typeof e[key]==='string' && /^[a-f0-9]{64}$/.test(e[key]),`${where}: ${key} required`);
+        }
+      } else check(publicUrl(use.public_evidence_url), `${where}: public evidence required`);
       const key = `${use.date}:${use.channel}`;
       check(!useKeys.has(key), `${where}: duplicate use`); useKeys.add(key);
     }

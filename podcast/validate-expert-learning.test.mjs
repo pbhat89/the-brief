@@ -109,3 +109,21 @@ test('malformed nested records return errors rather than throw', () => {
   assert.ok(errorsAfter(x => { entry(x).uses = [null]; }).length > 0);
   assert.ok(errorsAfter(x => { entry(x).sources = [null]; }).length > 0);
 });
+
+test('explicit private publication receipts preserve narrated history without public URLs',()=>{
+ const log=structuredClone(fixture); const use=log.entries.find(e=>e.status==='narrated').uses[0];
+ delete use.public_evidence_url;
+ use.private_evidence={type:'private_publication_receipt',publication_id:'synthetic-receipt-1',receipt_sha256:'a'.repeat(64),artifact_sha256:'b'.repeat(64)};
+ assert.deepEqual(validateExpertLearningLog(log),[]);
+ for(const key of ['type','publication_id','receipt_sha256','artifact_sha256']) {
+  const invalid=structuredClone(log);delete invalid.entries.find(e=>e.status==='narrated').uses[0].private_evidence[key];
+  assert.ok(validateExpertLearningLog(invalid).length);
+ }
+ use.public_evidence_url='https://example.org/ambiguous';assert.ok(validateExpertLearningLog(log).length);
+});
+test('private receipt malformed identifiers and hashes fail closed',()=>{
+ for(const e of [null,{}, {type:'private_publication_receipt',publication_id:'https://private/token',receipt_sha256:'a'.repeat(64),artifact_sha256:'b'.repeat(64)}]) {
+  const log=structuredClone(fixture);const use=log.entries.find(e=>e.status==='narrated').uses[0];delete use.public_evidence_url;use.private_evidence=e;
+  assert.ok(validateExpertLearningLog(log).length);
+ }
+});
