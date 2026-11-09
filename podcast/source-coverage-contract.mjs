@@ -30,7 +30,17 @@ export function validateSourceCoverage(c){
  let unattempted=0,blocked=0,partial=0,full=0,pending=0;
  for(const s of c.sources){
   assert.ok(text(s.source_id)&&Array.isArray(s.attempts)&&Array.isArray(s.queries)&&Array.isArray(s.gaps));assert.ok(['unattempted','blocked','header_only','partial_content','accessible'].includes(s.access_status));assert.ok(['full_window','bounded_snapshot','unknown'].includes(s.coverage_scope)&&text(s.scope_note));
-  assert.ok(instant(s.prior_full_window_cursor)&&instant(s.unresolved_window.start)&&instant(s.unresolved_window.end));assert.ok(Date.parse(s.unresolved_window.start)<=Date.parse(s.prior_full_window_cursor)&&Date.parse(s.unresolved_window.end)>=Date.parse(c.window.end),'Do not reset unresolved source windows to a partial checkpoint');if(s.oldest_unresolved_gap_start!==null){assert.ok(instant(s.oldest_unresolved_gap_start));assert.ok(Date.parse(s.unresolved_window.start)<=Date.parse(s.oldest_unresolved_gap_start),'Older gaps must remain inside requested window');}
+  assert.ok(instant(s.unresolved_window.start)&&instant(s.unresolved_window.end));
+  assert.ok(Date.parse(s.unresolved_window.start)<=Date.parse(s.unresolved_window.end)&&Date.parse(s.unresolved_window.end)>=Date.parse(c.window.end),'Preserve unresolved source windows');
+  if(s.history_status==='unknown'){
+   assert.equal(s.prior_full_window_cursor,null,'Unknown history cannot invent a cursor');
+   assert.ok(text(s.history_unknown_reason)&&text(s.history_recovery_plan),'Unknown history requires reason and recovery plan');
+   assert.ok(s.gaps.length,'Unknown history remains an explicit gap');
+   assert.notEqual(s.coverage_scope,'full_window');assert.equal(s.advance_full_window_cursor,false);
+  }else{
+   assert.ok(instant(s.prior_full_window_cursor));
+   assert.ok(Date.parse(s.unresolved_window.start)<=Date.parse(s.prior_full_window_cursor),'Do not reset unresolved source windows to a partial checkpoint');
+  }if(s.oldest_unresolved_gap_start!==null){assert.ok(instant(s.oldest_unresolved_gap_start));assert.ok(Date.parse(s.unresolved_window.start)<=Date.parse(s.oldest_unresolved_gap_start),'Older gaps must remain inside requested window');}
   assert.equal(s.roster_snapshot_sha256,s.roster_member?c.roster.content_sha256:null,'Profile must reference current roster snapshot');
   if(s.access_status==='unattempted'){unattempted++;assert.equal(s.attempts.length,0);assert.ok(s.gaps.length);}
   else{assert.ok(s.attempts.length,'Actual attempt required');for(const a of s.attempts)assert.ok(https(a.url)&&instant(a.at)&&text(a.method)&&text(a.outcome)&&Date.parse(a.at)<=Date.parse(c.recorded_at)&&sgtDate(a.at)===c.edition_date);if(FIXED_SOURCE_TARGETS[s.source_id])assert.ok(s.attempts.some(a=>target(a.url)===target(FIXED_SOURCE_TARGETS[s.source_id])),'Attempt must target the required source surface; alternatives do not replace the original attempt');if(s.roster_member)assert.ok(s.attempts.some(a=>{const u=new URL(a.url);return ['x.com','www.x.com','twitter.com','www.twitter.com'].includes(u.hostname)&&u.pathname.split('/')[1].toLowerCase()===s.source_id.slice(2);}), 'Roster attempt must identify that actual public profile');}
@@ -53,3 +63,4 @@ export function requireSourceCoverageForRelease(c){
  }
  return r;
 }
+
