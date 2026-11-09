@@ -2,6 +2,7 @@ import os
 from unittest.mock import patch
 from podcast.agent_pipeline import audit as audit_module
 import tempfile
+from pathlib import Path
 import unittest
 from podcast.agent_pipeline.native_bridge import NativeBridge,NativeBridgeError
 from podcast.agent_pipeline.native_proof import advance,URL
@@ -15,6 +16,7 @@ class ProofTests(unittest.TestCase):
    mock.start();self.addCleanup(mock.stop)
  def test_real_graph_interrupt_resume_with_synthetic_outputs(self):
   with tempfile.TemporaryDirectory() as folder:
+   folder=Path(folder).resolve()
    result=advance(folder,'unit-proof')
    self.assertFalse(result['completed']);self.assertEqual(result['pending'][0]['role'],'research')
    with self.assertRaises(NativeBridgeError):advance(folder,'unit-proof')

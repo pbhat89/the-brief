@@ -17,7 +17,7 @@ class NativeTests(unittest.TestCase):
    mock=patch.object(audit_module,'inspect_windows_acl',return_value=acl)
    mock.start();self.addCleanup(mock.stop)
   self.tmp=tempfile.TemporaryDirectory();self.addCleanup(self.tmp.cleanup)
-  self.b=NativeBridge(self.tmp.name);self.addCleanup(self.b.close)
+  self.b=NativeBridge(Path(self.tmp.name).resolve());self.addCleanup(self.b.close)
   self.kw=dict(run_id='proof',role='research',prompt='PUBLIC TEST PROMPT',schema=SCHEMA,context_hash='a'*64,runtime_source_hash='b'*64)
  def queued(self):return self.b.queue(**self.kw)
  def test_roundtrip_unknown_usage(self):
@@ -52,7 +52,7 @@ class NativeTests(unittest.TestCase):
   q=self.queued()
   with self.assertRaises(NativeBridgeError):self.b.complete(q['id'],q['request_hash'],'agent1',{'ok':True})
  def test_persists_reopen(self):
-  q=self.queued();b=NativeBridge(self.tmp.name)
+  q=self.queued();b=NativeBridge(Path(self.tmp.name).resolve())
   try:self.assertEqual(b.status(q['id']),q)
   finally:b.close()
 if __name__=='__main__':unittest.main()
