@@ -194,3 +194,57 @@ executor interruption recovered from persisted state without repeating source
 fetches. The combined private workbook retains five versioned attempts and their
 22 native jobs, with source rebindings distinguished from new fetches. This is
 not evidence of unattended daily delivery or a production cutover.
+
+### Explicit supplemental research
+
+`--research-supplement PRIVATE_JSON` requires `--seed-research` and a matching
+`--parent-manifest`. The bundle contains `edition_date`, `context_hash`,
+`parent_run_id`, actual `researcher_id`, a `research` array conforming to the
+research schema, and `receipts` entries `{path, sha256, tool_ref}` pointing at
+retained native_capture receipt files. All supplement source IDs, story IDs and
+event IDs must be new. Receipt hashes, request URLs, times, references and exact
+evidence quotations are checked; declared model timestamps are not trusted.
+Raw-file and canonical bundle hashes are bound to the new run manifest.
+
+A real `supplemental_review` native job must return
+`{passed, accepted_story_ids, issues}` before any additions reach the editor.
+Unknown/duplicate accepted IDs or failed review block the run. An explicit
+accepted-ID subset records rejections by omission in the retained review output;
+accepted objects are not rewritten. This is a manual assistant-driver handoff,
+not an autonomous API. Researcher identity and tool execution remain explicit
+caller attestations, not automatically authenticated facts. Original capture
+times stay historical; no fake new research invocations are recorded.
+
+Updated coverage/gap evidence must stay separately traceable; this feature does
+not alter historical coverage cursors, replace the locked content context or
+waive the existing release gate. Existing completed runs remain immutable.
+
+Optional supplement `coverage_artifact: {path, sha256}` binds a new private
+coverage evidence JSON and copies it immutably into the new run output. It is
+visible to the supplement reviewer, but is explicitly not a release-gate pass
+or a change to the inherited content-context hash. A complete final-edition
+editorial audit is still required by `hooks['editorial_audit']` and the existing
+`validate-editorial.mjs` gate after script generation. Fresh condition readings
+may use new story/event IDs; the editor must explicitly exclude superseded
+readings rather than mutating historical candidates.
+
+For additions collected by several actual workers, each receipt may declare its
+original `researcher_id`; `research_provenance` may list the actual candidate
+file hashes and researcher identities. These are retained caller attestations,
+not fabricated bridge invocations or proof of automatic tool authentication.
+
+The present graph can finish with a written draft and
+`comparison_draft_release_blocked`. A subsequent explicit release phase may
+run approved offline narration, measured audio QA and the full final editorial
+and voice gates, then the authorized private publication driver. Such a later
+phase must have separate audit evidence; it must not rewrite the completed
+comparison status as `comparison_ready` or waive any final gate. Full graph
+release-stage decomposition remains future work.
+
+Story supplement receipt rows now require `tool_name: "chat_search_web_run"`
+and a genuine native web source extract with matching source reference and exact
+`Source: open` request URL. Browser receipts are not supported as story evidence
+by this importer and must not be relabelled. X coverage remains a separate
+coverage artifact preserving its actual browser provenance. This format check
+is not automatic authentication of a remote tool. Every accepted or rejected
+story ID receives an explicit supplemental disposition audit event.
