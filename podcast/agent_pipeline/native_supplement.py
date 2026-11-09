@@ -84,3 +84,16 @@ def merge_supplement(seed,supplement,review):
         target['stories'].extend(s for s in result['stories'] if s['id'] in accepted)
         target['sources'].extend(result['sources']);target['gaps'].extend(result['gaps'])
     return merged
+
+
+def supplement_review_view(supplement):
+    """Bound review context: full coverage stays in its independently checked artifact."""
+    view={key:supplement[key] for key in ('identity','research','receipts','source_extracts')}
+    coverage=supplement.get('coverage_evidence_only')
+    if isinstance(coverage,dict):
+        fields=('edition_date','recorded_at','agreed_source_coverage_status','required_attempts_status','upstream_reconciliation_status','global_full_window_cursor_advanced','claims_exhaustive','public_disclosure')
+        summary={key:(value[:2000] if isinstance(value,str) else value) for key in fields if isinstance((value:=coverage.get(key)),(str,int,float,bool))}
+        summary['tracked_source_rows']=len(coverage.get('sources',[])) if isinstance(coverage.get('sources'),list) else None
+        summary['scope']='Summary only; full hash-bound coverage artifact must be reviewed separately. This does not establish editorial or release approval.'
+        view['coverage_summary']=summary
+    return view

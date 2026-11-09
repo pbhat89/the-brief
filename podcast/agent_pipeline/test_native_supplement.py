@@ -74,12 +74,22 @@ class SupplementTests(unittest.TestCase):
             receipt=save_receipt(root,{'request_url':'https://example.org/story','started_at':'2026-11-08T00:00:00Z','observed_at':'2026-11-08T00:00:01Z','tool_result':{'content':[{'type':'text','text':'【turnSyntheticview0】 Source: open({"ref_id":"https://example.org/story"}); Source passage'}]}})
             f=Path(receipt['receipt_file'])
             supplement=root/'supplement.json';private_json(supplement,{'edition_date':'2026-11-08','context_hash':context_digest(context),'parent_run_id':'prior','researcher_id':'synthetic-worker','research':[{'role':'world','stories':[story('news','addition'),story('news','rejected-addition')],'sources':[{'id':'supplement-source','url':'https://example.org/story','attempted_at':None,'status':'partial','queries':[],'notes':'Synthetic','trace_ids':[],'timestamp_basis':'unverified'}],'gaps':['Not complete']}],'receipts':[{'path':str(f),'sha256':hashlib.sha256(f.read_bytes()).hexdigest(),'tool_ref':'turnSyntheticview0','tool_name':'chat_search_web_run'}]})
+            # Realistic large coverage ledger must stay out of the native prompt.
+            large=root/'large-coverage.json'
+            private_json(large,{'edition_date':'2026-11-08','agreed_source_coverage_status':'partial','sources':[{'pending_history':'DO_NOT_EMBED_RAW_COVERAGE'+('x'*1100000)}]})
+            bundle=json.loads(supplement.read_text())
+            bundle['coverage_artifact']={'path':str(large),'sha256':hashlib.sha256(large.read_bytes()).hexdigest()}
+            supplement.write_text(json.dumps(bundle))
             with patch('podcast.agent_pipeline.native_pipeline.load_context',return_value=context):
                 runner=NativePipeline(repo,out,parent_manifest=parent,seed_research=seed_path,research_supplement=supplement)
                 try:
                     state=runner.run('2026-11-08','new')
                     jobs=runner.bridge.db.execute('SELECT id FROM jobs').fetchall();self.assertEqual(len(jobs),1)
                     req=runner.bridge.request(jobs[0]['id']);self.assertEqual(req['request']['role'],'supplemental_review_0')
+                    self.assertLess(len(req['request']['prompt']),1000000)
+                    self.assertNotIn('DO_NOT_EMBED_RAW_COVERAGE',req['request']['prompt'])
+                    self.assertIn('coverage_summary',req['request']['prompt'])
+                    self.assertIn(hashlib.sha256(large.read_bytes()).hexdigest(),req['request']['prompt'])
                     runner.bridge.claim(jobs[0]['id'],req['request_hash'],'actual-synthetic-review-worker')
                     runner.bridge.complete(jobs[0]['id'],req['request_hash'],'actual-synthetic-review-worker',{'passed':True,'accepted_story_ids':['addition'],'issues':[]})
                     state=runner.run('2026-11-08','new',True)
