@@ -65,3 +65,53 @@ The 9 November research trial executed all four roles and stopped at the researc
 The adapter now timestamps streamed tool events as they arrive. These are **locally observed event times**, not claims about the remote server's exact execution time. A separate live probe verified both search and exact open-page URL capture. Only a completed, unambiguous open attempt can bind a web source to its trace; search discovery alone does not prove the page was opened or read. The model's unsupported timestamps are discarded. Local upstream and expert-ledger reads use their own measured path/hash evidence and never pretend to be web visits. Reading a file is not proof of complete editorial reconciliation.
 
 Blocked CLI results return a nonzero exit status. The original blocked trial remains immutable; repairs require a new run identity, not retroactively invented evidence. Private-output permissions and full audio/release validation remain required before promotion.
+
+## Native assistant cloud handoff proof
+
+`native_bridge.py` is a private durable job queue, not a Python API for spawning
+ChatGPT agents. `native_proof.py` owns a real LangGraph research → independent
+checker flow with SQLite checkpoints and `interrupt`/`Command(resume=...)`.
+An external assistant driver must read each queued request, actually spawn the
+worker, claim the job using the returned agent ID, submit its schema-valid JSON,
+and resume the graph. Code-owned state survives between those handoffs.
+
+```
+python -m podcast.agent_pipeline.native_proof --directory PRIVATE_DIR --run-id UNIQUE_ID
+python -m podcast.agent_pipeline.native_bridge --directory PRIVATE_DIR request --job-id JOB_ID
+python -m podcast.agent_pipeline.native_bridge --directory PRIVATE_DIR claim --job-id JOB_ID --request-hash HASH --agent-id ACTUAL_ID
+python -m podcast.agent_pipeline.native_bridge --directory PRIVATE_DIR complete --job-id JOB_ID --request-hash HASH --agent-id ACTUAL_ID --output-file RESULT.json
+python -m podcast.agent_pipeline.native_proof --directory PRIVATE_DIR --run-id UNIQUE_ID --resume
+```
+
+Create and verify a private directory first. Raw requests/results stay in its
+handoff database, separate from AuditStore's metadata-only log. Duplicate matching
+requests are idempotent; conflicting identities, invalid output, and unclaimed
+completion fail closed. Retries require an explicit failed previous attempt.
+Queued/start/completion times measure bridge events, not hidden model inference.
+Usage remains unknown (`null`). Agent IDs and tool references supplied by the
+driver require actual collaboration/tool evidence; the bridge cannot authenticate
+an arbitrary caller's claim that an agent was spawned or a page read.
+
+Provider is `native_assistant_subagent`; transport is `assistant_tool_handoff`.
+No Codex subprocess, API key, subscription attribution, or metered-token claim is
+made. This small NEA-page proof is not a briefing edition, unattended scheduler,
+production switch, or evidence of daily delivery reliability. The production
+pipeline and schedules remain unchanged. Windows unit tests use synthetic ACL
+snapshots while retaining ACL validation; they do not establish real directory
+privacy on a deployed runner.
+
+### Live proof result, 9 November 2026
+
+Two actual managed assistant workers independently opened the official NEA weather
+page while the laptop was offline. Research and checker results passed the queued
+JSON schemas and LangGraph resumed to END; the private audit chain verified. The
+checker initially returned the wrong evidence JSON shape; validation rejected it
+until corrected. The proof checks page scope, not current weather readings.
+Bridge-observed claim-to-completion durations were 55.46 s and 237.98 s; the latter
+includes driver/formatting delay. These are not model inference measurements.
+
+120 Python regression tests passed locally, including eight native bridge/proof
+tests. Raw run state and tool references remain private, not in this repository.
+The full seven-role native pipeline, automatic connector provenance, scheduled
+recovery and end-to-end audio/delivery remain unverified. No daily-runtime cutover
+has occurred.

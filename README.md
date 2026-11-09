@@ -2,7 +2,7 @@
 
 ## Multi-agent revamp: workflow and architecture
 
-**Status, 9 November 2026:** the opt-in comparison pipeline is implemented and fixture-tested; it is **not yet the production morning runtime**. The first managed-cloud attempt was blocked by a read-only Codex home. A connected Windows runner has now passed real ChatGPT-subscription execution and hosted-search probes; full comparison and approved audio/publication validation remain pending. Existing editions and the Claude/Gmail workflow remain unchanged.
+**Status, 9 November 2026:** the opt-in comparison pipeline is implemented and tested, but **not the production morning runtime**. Real Windows subscription/search trials reached research gates and correctly stopped before publication. Standalone Codex execution is blocked in this managed cloud by its socket-directory isolation; no bypass was attempted. A separate laptop-free native-assistant proof has now completed real research and independent checking through persisted LangGraph handoffs, with a valid audit hash chain. This requires the external assistant driver and is **not yet a full unattended briefing pipeline**. See [native cloud proof boundaries](podcast/agent_pipeline/README.md#native-assistant-cloud-handoff-proof). Existing editions, schedules and the Claude/Gmail workflow remain unchanged.
 
 ### 1. Workflow: which boxes are individual agents?
 
