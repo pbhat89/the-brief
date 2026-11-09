@@ -2,7 +2,7 @@
 
 ## Multi-agent revamp: workflow and architecture
 
-**Status, 9 November 2026:** the opt-in comparison pipeline is implemented and tested, but **not the production morning runtime**. Real Windows subscription/search trials reached research gates and correctly stopped before publication. Standalone Codex execution is blocked in this managed cloud by its socket-directory isolation; no bypass was attempted. A separate laptop-free native-assistant proof has now completed real research and independent checking through persisted LangGraph handoffs, with a valid audit hash chain. This requires the external assistant driver and is **not yet a full unattended briefing pipeline**. See [native cloud proof boundaries](podcast/agent_pipeline/README.md#native-assistant-cloud-handoff-proof). Existing editions, schedules and the Claude/Gmail workflow remain unchanged.
+**Status, 9 November 2026:** the opt-in comparison pipeline is implemented, but **not the production morning runtime**. Four real managed-cloud research roles have completed with captured source receipts; versioned recovery and deterministic source-ID normalization preserve blocked runs rather than rewriting their history. Editorial comparison validation is ongoing, and no new audio or unattended daily delivery is claimed. Native execution needs the external assistant driver; it is not a Python API for spawning ChatGPT agents. Standalone Codex remains blocked by this managed cloud's socket isolation, while prior Windows subscription/search probes passed. Existing editions, schedules and the Claude/Gmail workflow remain unchanged. See [native integration boundaries](podcast/agent_pipeline/README.md#full-native-comparison-runner-opt-in-live-validation-ongoing).
 
 ### 1. Workflow: which boxes are individual agents?
 
@@ -45,6 +45,8 @@ flowchart LR
     Inputs["Repository inputs<br/>Editorial policies, source inventory,<br/>history, ledgers and upstream Claude HTML/JSON"] --> Graph["Python + LangGraph<br/>Deterministic coordinator"]
     Graph --> Adapter["Codex CLI adapter<br/>ChatGPT subscription sign-in<br/>Hosted search for research/checking"]
     Adapter --> Agents["Seven model-agent roles<br/>Structured JSON contracts"]
+    Graph --> Native["Native assistant bridge<br/>External managed driver + captured tool receipts<br/>Opt-in comparison, no production switch"]
+    Native --> Agents
     Agents --> Graph
     Graph --> Contracts["jsonschema + Python validators<br/>Existing Node editorial validators"]
     Graph --> Checkpoints["Private SQLite checkpoints<br/>Explicit resume + matching input hash"]

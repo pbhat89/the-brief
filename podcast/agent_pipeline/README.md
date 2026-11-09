@@ -143,3 +143,10 @@ fetches. The original run is not silently migrated. Failed and unclear opens
 retain measured attempt provenance (`open_failed`/`open_unknown`) separately
 from readable access. Credential-bearing URLs remain rejected; exact public
 YouTube handles and ordinary news slugs are supported.
+
+Cross-stage source identity is normalized deterministically before editing: a
+research source ID must resolve to one unique HTTPS source-row URL supported by
+that story's exact evidence URL. Raw outputs remain immutable, mappings are
+audited separately, and ambiguity fails closed. Snapshot context is recursively
+canonicalized before the first prompt, so fresh-process resume cannot alter
+request identity just by changing JSON key order.

@@ -13,7 +13,7 @@ from langgraph.types import interrupt, Command
 from .pipeline import Pipeline, context_digest, digest, now
 from .native_bridge import NativeBridge, NativeBridgeError
 from .audit import verify_private_path
-from .content import ROLES, RESEARCH_SCHEMA, load_context, research_prompt, verify_research, reconcile_source_traces
+from .content import ROLES, RESEARCH_SCHEMA, load_context, research_prompt, verify_research, reconcile_source_traces, canonicalize_research_sources
 
 
 def private_json(path, value):
@@ -94,7 +94,9 @@ class NativePipeline(Pipeline):
         self.audit.record_attempt(state['run_id'],role,attempt_id=job['id'],status='completed',
             provider=job['provider'],agent_id=job['agent_id'],output_hash=job['output_hash'],usage=None)
         if role in ROLES:
-            return reconcile_source_traces(data,traces,self.context.get('intake_events',()))
+            result,mappings=canonicalize_research_sources(reconcile_source_traces(data,traces,self.context.get('intake_events',())))
+            self.audit.event(state['run_id'],'source_identity_normalization',role=role,mappings=mappings)
+            return result
         return (data,traces) if with_trace else data
 
     def readiness(self,s):
@@ -115,7 +117,8 @@ class NativePipeline(Pipeline):
         results=[]
         for job in jobs:
             data,traces=self._data(job,True)
-            result=reconcile_source_traces(data,traces,self.context.get('intake_events',()))
+            result,mappings=canonicalize_research_sources(reconcile_source_traces(data,traces,self.context.get('intake_events',())))
+            self.audit.event(s['run_id'],'source_identity_normalization',job_id=job['id'],mappings=mappings)
             results.append(result)
             for source in result.get('sources',[]):
                 row=dict(source);sid=row.pop('id');self.audit.record_source(s['run_id'],sid,**row)

@@ -269,6 +269,43 @@ def verify_research(research, context):
     return errors
 
 
+def canonicalize_research_sources(result):
+    """Resolve model source IDs without changing evidence or mutating raw output.
+
+    Return (normalized research, audit mappings). Missing/ambiguous identities or
+    unsupported source URLs fail closed before editor provenance is established.
+    """
+    import copy
+    from urllib.parse import urlsplit
+    normalized=copy.deepcopy(result)
+    rows={}
+    for row in result.get('sources', []):
+        rows.setdefault(row.get('id'), []).append(row.get('url'))
+    mappings=[]
+    for story in normalized.get('stories', []):
+        evidence_urls={e.get('url') for e in story.get('evidence', [])}
+        urls=[]
+        for source in story.get('sources', []):
+            parsed=urlsplit(source)
+            if parsed.scheme=='https' and parsed.netloc:
+                url=source
+            else:
+                choices=set(rows.get(source, []))
+                if len(choices)!=1:
+                    raise ValueError(f"{story.get('id')}: missing or ambiguous source ID {source}")
+                url=next(iter(choices))
+                parsed=urlsplit(url or '')
+                if parsed.scheme!='https' or not parsed.netloc:
+                    raise ValueError(f"{story.get('id')}: source ID has no HTTPS URL")
+            if url not in evidence_urls:
+                raise ValueError(f"{story.get('id')}: source lacks exact evidence URL")
+            if source!=url:
+                mappings.append({'story_id':story.get('id'),'source_id':source,'url':url})
+            if url not in urls:urls.append(url)
+        story['sources']=urls
+    return normalized,mappings
+
+
 def verify_edition_provenance(edition, research):
     """Prevent the editor inventing evidence/identities beyond supplied candidates.
 

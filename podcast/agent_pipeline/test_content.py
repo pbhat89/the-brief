@@ -177,3 +177,27 @@ class TraceTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class SourceIdentityTests(unittest.TestCase):
+    def test_research_id_to_edition_preserves_provenance(self):
+        from .content import canonicalize_research_sources,verify_edition_provenance
+        raw={'stories':[story('weather')],'sources':[{'id':'weather-source','url':'https://example.org/story'}],'gaps':['Partial']}
+        raw['stories'][0]['sources']=['weather-source']
+        normalized,mappings=canonicalize_research_sources(raw)
+        e=edition();e['sections'][0]['stories']=copy.deepcopy(normalized['stories'])
+        self.assertEqual(verify_edition(e,'2026-11-08'),[])
+        self.assertEqual(verify_edition_provenance(e,[normalized]),[])
+        self.assertEqual(raw['stories'][0]['sources'],['weather-source'])
+        self.assertEqual(mappings,[{'story_id':'one','source_id':'weather-source','url':'https://example.org/story'}])
+        self.assertNotIn('mappings',normalized['stories'][0])
+    def test_missing_ambiguous_and_no_evidence_fail(self):
+        from .content import canonicalize_research_sources
+        for rows in ([],[{'id':'ref','url':'https://example.org/story'},{'id':'ref','url':'https://example.org/other'}],[{'id':'ref','url':'https://example.org/other'}]):
+            raw={'stories':[story()],'sources':rows};raw['stories'][0]['sources']=['ref']
+            with self.assertRaises(ValueError):canonicalize_research_sources(raw)
+    def test_existing_url_stays_exact(self):
+        from .content import canonicalize_research_sources
+        raw={'stories':[story()],'sources':[]}
+        normalized,mappings=canonicalize_research_sources(raw)
+        self.assertEqual(normalized,raw);self.assertEqual(mappings,[])
