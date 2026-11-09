@@ -167,3 +167,9 @@ and native-job/evidence/rejection state. Hash chains, request/output/evidence
 hashes and completed schemas are checked. Unknown token metrics remain blank;
 bridge wall time is not model inference time. Raw prompts and captured page
 content are excluded. Pending or failed runs are never labelled complete.
+
+Script fidelity now has an explicit bounded repair path: at most two separately
+identified producer/checker repair pairs, always against the same locked edition.
+Failed checks do not mutate completed jobs; exhaustion records failure and emits
+no script artifact. Full native graph regressions cover success, repair success
+and exhaustion. This does not waive the independent source-release gate.

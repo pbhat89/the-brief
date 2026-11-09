@@ -44,7 +44,7 @@ class ContentTests(unittest.TestCase):
     def test_fact_learning(self):
         e=edition();e['learning']=story('learning','two');e['fact']=story('fact','three')
         self.assertEqual(verify_edition(e,'2026-11-08'),[])
-        self.assertIn('Daily fact',render_html(e));self.assertIn('Learning',render_html(e))
+        self.assertIn('<h2>Fact</h2>',render_html(e));self.assertIn('Learning',render_html(e))
     def test_context(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp);(root/'archive').mkdir();(root/'podcast').mkdir()
@@ -201,3 +201,24 @@ class SourceIdentityTests(unittest.TestCase):
         raw={'stories':[story()],'sources':[]}
         normalized,mappings=canonicalize_research_sources(raw)
         self.assertEqual(normalized,raw);self.assertEqual(mappings,[])
+
+
+class RenderSectionTests(unittest.TestCase):
+    def test_order_single_named_sections_and_all_content(self):
+        from .content import SECTION_ORDER
+        e=edition();e['learning']=story('learning','lesson');e['fact']=story('fact','fact')
+        e['learning']['headline']='Learning headline';e['fact']['headline']='Fact headline'
+        e['sections']=[{'name':'Fact','stories':[]},{'name':'Learning','stories':[copy.deepcopy(e['learning'])]},{'name':'Science','stories':[]}]+e['sections']
+        output=render_html(e)
+        for name in SECTION_ORDER:self.assertEqual(output.count('<h2>'+name+'</h2>'),1)
+        positions=[output.index('<h2>'+name+'</h2>') for name in SECTION_ORDER]
+        self.assertEqual(positions,sorted(positions))
+        for sid in ['one','lesson','fact']:self.assertEqual(output.count('data-story-id="'+sid+'"'),1)
+        self.assertIn('Learning headline',output);self.assertIn('Fact headline',output)
+        self.assertIn('No item selected for this section.',output)
+    def test_named_fields_and_ids_remain_escaped(self):
+        e=edition();e['fact']=story('fact','"><script>alert(1)</script>')
+        e['fact']['summary']='<script>alert(2)</script>';e['fact']['sources']=['javascript:alert(3)']
+        output=render_html(e)
+        self.assertNotIn('<script>',output);self.assertNotIn('javascript:',output)
+        self.assertIn('&lt;script&gt;',output)

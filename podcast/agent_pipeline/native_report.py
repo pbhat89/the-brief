@@ -6,6 +6,7 @@ import os
 from pathlib import Path
 import sqlite3
 from .audit import verify_private_path, elapsed_seconds, utc_now, sanitize, _json
+from .native_urls import public_source_url
 from .native_bridge import digest
 from jsonschema import Draft202012Validator
 
@@ -37,7 +38,7 @@ def chain(db):
         previous=expected;e['payload']=payload;rows.append(e)
     return rows
 
-def collect(directory):
+def collect(directory, *, include_public_urls=False):
     root=checked(directory);data={k:[] for k in TABS};runrows={}
     for name in ('audit.sqlite3','native-audit.sqlite3'):
         path=root/name
@@ -78,7 +79,9 @@ def collect(directory):
             for entry in m['entries']:
                 row=fields(e,('job_id','manifest_id','payload_hash','ingested_at'));row.update(fields(m,('driver_id',)))
                 row.update(fields(entry,('tool_ref','tool_name','operation','basis','started_at','observed_at','tool_result_sha256')))
-                # No source URL or response text needed for debug identity; hash is sufficient.
+                # Exact safe public URL only with explicit private-report opt-in; never redact then misattribute.
+                if include_public_urls and public_source_url(entry.get('url'))==entry.get('url') and entry.get('url') is not None:
+                    row['public_source_url']=entry['url']
                 row['url_sha256']=digest(entry.get('url'));row['source_observed_wall_seconds']=elapsed_seconds(entry.get('started_at'),entry.get('observed_at'))
                 data['ToolEvidence'].append(row)
         for record in db.execute('SELECT seq,job_id,metadata,mirrored FROM transitions ORDER BY seq'):
@@ -89,6 +92,7 @@ def collect(directory):
     finally:db.close()
     for p in sorted(root.glob('*manifest.json')):
         checked(p);data['Lineage'].append({'manifest_file':p.name,'file_sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
+    data['Limitations'].append({'limitation':'Exact syntactically public source URLs included only if safe filter accepts them; not proof of public access' if include_public_urls else 'Public source URLs excluded; hash-only source identity (default)'})
     data['Limitations'] += [{'limitation':s} for s in (
         'Private operational export. No raw prompts, tool content, source quotations or credentials.',
         'Blank metrics are unknown, not zero. Token usage and inference duration are unavailable.',
@@ -100,14 +104,26 @@ def collect(directory):
         'Manifest file hashes identify snapshot bytes; external files and raw receipt authenticity require separate validation.')]
     return data
 
-def export_report(directory,output):
+def collect_related(directory, related_directories=(), *, include_public_urls=False):
+    """Keep independent verified snapshots distinct; never combine databases."""
+    data={k:[] for k in TABS};seen=set()
+    for directory in (directory,*related_directories):
+        root=checked(directory)
+        if root in seen:continue
+        seen.add(root)
+        for tab,rows in collect(root,include_public_urls=include_public_urls).items():
+            for row in rows:
+                data[tab].append(dict(row,report_scope=root.name))
+    return data
+
+def export_report(directory,output, *, include_public_urls=False, related_directories=()):
     from openpyxl import Workbook
     from openpyxl.styles import Font
     root=checked(directory);out=Path(output).expanduser().absolute()
     if out.resolve()!=out or out.suffix.lower()!='.xlsx':raise ValueError('Canonical XLSX output required')
     checked(out.parent)
     if out.exists():raise FileExistsError('Refusing to overwrite existing artifact')
-    data=collect(root);wb=Workbook();wb.remove(wb.active)
+    data=collect_related(root,related_directories,include_public_urls=include_public_urls);wb=Workbook();wb.remove(wb.active)
     for title in TABS:
         ws=wb.create_sheet(title);rows=data[title];columns=list(dict.fromkeys(k for row in rows for k in row)) or ['status']
         ws.append(columns)
@@ -132,5 +148,5 @@ def export_report(directory,output):
     return out
 
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--directory',required=True);p.add_argument('--output',required=True);a=p.parse_args();print(export_report(a.directory,a.output))
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--directory',required=True);p.add_argument('--output',required=True);p.add_argument('--include-public-urls',action='store_true');p.add_argument('--related-directory',action='append',default=[]);a=p.parse_args();print(export_report(a.directory,a.output,include_public_urls=a.include_public_urls,related_directories=a.related_directory))
 if __name__=='__main__':main()

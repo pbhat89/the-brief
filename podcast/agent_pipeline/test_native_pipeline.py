@@ -126,7 +126,7 @@ if __name__=='__main__':unittest.main()
 
 class FullNativeGraphTests(unittest.TestCase):
     setUp=NativePipelineTests.setUp
-    def test_synthetic_full_graph_and_seed_carry_forward(self):
+    def test_synthetic_full_graph_and_seed_carry_forward(self, script_failures=0):
         from .test_content import story,edition
         from .native_pipeline import private_json
         from .pipeline import context_digest,digest
@@ -143,7 +143,7 @@ class FullNativeGraphTests(unittest.TestCase):
                     state=runner.run('2026-11-08','synthetic')
                     seen=[]
                     with patch.object(runner.bridge,'evidence',return_value=evidence):
-                        for _ in range(8):
+                        for _ in range(12):
                             jobs=runner.bridge.db.execute("SELECT id FROM jobs WHERE state='queued'").fetchall()
                             if not jobs:break
                             for row in jobs:
@@ -152,14 +152,26 @@ class FullNativeGraphTests(unittest.TestCase):
                                     data={'role':role,'stories':[story('weather')] if role=='singapore' else [],'sources':[], 'gaps':['Synthetic bounded coverage']}
                                     if role=='singapore':data['sources']=[{'id':'weather','url':'https://example.org/story','attempted_at':None,'status':'partial','queries':[],'notes':'Synthetic test','trace_ids':[],'timestamp_basis':'unverified'}]
                                 elif role=='editor':data=edition()
-                                elif role in ('checker','script_checker'):data={'passed':True,'issues':[],'coverage_gaps':[]}
-                                elif role=='podcast':data={'sections':[{'name':'Weather','text':'Test briefing','story_ids':['one']}],'word_count':2}
+                                elif role=='checker' or role.startswith('script_checker'):
+                                    failures=sum(r.startswith('script_checker') for r in seen)
+                                    failed=role.startswith('script_checker') and failures<=script_failures
+                                    data={'passed':not failed,'issues':[{'story_id':'one','reason':'Missing explicit replay label'}] if failed else [],'coverage_gaps':[]}
+                                elif role.startswith('podcast'):data={'sections':[{'name':'Weather','text':'Test briefing','story_ids':['one']}],'word_count':2}
                                 else:self.fail('Unexpected stage '+role)
                                 runner.bridge.claim(row['id'],req['request_hash'],'synthetic-worker')
                                 runner.bridge.complete(row['id'],req['request_hash'],'synthetic-worker',data)
+                            if script_failures>=3 and seen[-1]=='script_checker_repair_2':
+                                with patch.object(runner.audit,'event',wraps=runner.audit.event) as failure_event,patch.object(runner.audit,'finish_run',wraps=runner.audit.finish_run) as failure_finish:
+                                    with self.assertRaisesRegex(ValueError,'two repair attempts'):
+                                        runner.run('2026-11-08','synthetic',True)
+                                    failure_event.assert_any_call('synthetic','pipeline_failed',error_type='ValueError')
+                                    self.assertEqual(failure_finish.call_args.args,('synthetic','failed'))
+                                self.assertFalse((out/'synthetic'/'script.json').exists())
+                                self.assertTrue(runner.audit.verify_chain())
+                                return
                             state=runner.run('2026-11-08','synthetic',True)
                     self.assertEqual(state['status'],'comparison_draft_release_blocked')
-                    self.assertEqual(seen,list(ROLES)+['editor','checker','podcast','script_checker'])
+                    self.assertEqual(seen,list(ROLES)+['editor','checker','podcast','script_checker']+sum(([f'podcast_repair_{i}',f'script_checker_repair_{i}'] for i in range(1,min(script_failures,2)+1)),[]))
                     self.assertTrue(runner.audit.verify_chain())
                     seed={k:state[k] for k in ('run_id','date','context_hash','research')};seed['status']='research_ready'
                     seed_path=out/'seed.json';private_json(seed_path,seed)
@@ -182,3 +194,9 @@ class FullNativeGraphTests(unittest.TestCase):
                 try:
                     with self.assertRaisesRegex(ValueError,'seed identity'):invalid.run('2026-11-08','bad-synthetic')
                 finally:invalid.bridge.close();invalid.audit.close()
+
+    def test_synthetic_script_repair_full_graph(self):
+        self.test_synthetic_full_graph_and_seed_carry_forward(script_failures=1)
+
+    def test_synthetic_script_repair_exhaustion(self):
+        self.test_synthetic_full_graph_and_seed_carry_forward(script_failures=3)

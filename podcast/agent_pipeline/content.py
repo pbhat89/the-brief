@@ -193,19 +193,26 @@ def render_html(edition):
     """Standalone private comparison artifact, never embeds raw source HTML or scripts."""
     esc = lambda x:html.escape(str(x),quote=True)
     blocks = []
-    sections = list(edition.get("sections", []))
-    if edition.get("learning"):
-        sections.append({"name": "Learning", "stories": [edition["learning"]]})
-    for section in sections:
-        blocks.append("<section><h2>"+esc(section["name"])+"</h2>")
-        for story in section.get("stories",[]):
+    grouped = {name: [] for name in SECTION_ORDER}
+    for section in edition.get("sections", []):
+        grouped.setdefault(section["name"], []).extend(section.get("stories", []))
+    for name, key in (("Learning", "learning"), ("Fact", "fact")):
+        if edition.get(key):
+            grouped[name].append(edition[key])
+    names = list(SECTION_ORDER) + [name for name in grouped if name not in SECTION_ORDER]
+    for name in names:
+        blocks.append("<section><h2>"+esc(name)+"</h2>")
+        seen = set()
+        for story in grouped[name]:
+            identity = story.get("id") or json.dumps(story, sort_keys=True)
+            if identity in seen:
+                continue
+            seen.add(identity)
             links = " · ".join('<a rel="noreferrer" href="'+esc(u)+'">Source '+str(i+1)+'</a>' for i,u in enumerate(story.get("sources",[])) if _safe_url(u))
-            blocks.append("<article><h3>"+esc(story.get("headline",""))+"</h3><p>"+esc(story.get("summary",""))+"</p><p class=meta>"+esc(story.get("published_at") or "Date not verified")+" · "+links+"</p></article>")
+            blocks.append('<article data-story-id="'+esc(story.get("id", ""))+'"><h3>'+esc(story.get("headline",""))+"</h3><p>"+esc(story.get("summary",""))+"</p><p class=meta>"+esc(story.get("published_at") or "Date not verified")+" · "+links+"</p></article>")
+        if not seen:
+            blocks.append('<p class="meta">No item selected for this section. See coverage and limitations below.</p>')
         blocks.append("</section>")
-    fact=edition.get("fact")
-    if fact:
-        links = " · ".join('<a rel="noreferrer" href="'+esc(u)+'">Source</a>' for u in fact.get("sources",[]) if _safe_url(u))
-        blocks.append("<section><h2>Daily fact</h2><p>"+esc(fact.get("summary",""))+"</p>"+links+"</section>")
     gaps="".join("<li>"+esc(g)+"</li>" for g in edition.get("gaps",[]))
     return '<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src &#39;none&#39;; style-src &#39;unsafe-inline&#39;"><title>'+esc(edition.get("title","The Brief — comparison"))+'</title><style>body{font:17px/1.6 system-ui;max-width:850px;margin:32px auto;padding:0 20px;background:#f4f2eb;color:#17252a}h1,h2{line-height:1.2}section{background:white;padding:20px;margin:20px 0;border-radius:14px}h3{font-size:19px}.meta{font-size:13px;color:#596970}a{color:#036c72}</style><header><h1>'+esc(edition.get("title","The Brief"))+'</h1><p>'+esc(edition.get("edition_date",""))+' · Comparison edition · Coverage: '+esc(edition.get("coverage_status","unknown"))+'</p></header>'+"".join(blocks)+'<section><h2>Coverage and limitations</h2><ul>'+gaps+'</ul><p>This review artifact does not prove publication or playback. Source validity requires independent review.</p></section></html>'
 

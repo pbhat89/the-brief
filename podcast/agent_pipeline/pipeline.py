@@ -168,11 +168,23 @@ class Pipeline:
         edition=self.invoke_agent(s,'editor_repair',editor_prompt(s['research'],context),EDITION_SCHEMA)
         return {'edition':edition,'repair_round':s.get('repair_round',0)+1}
     def render(self,s):
-        script=self.invoke_agent(s,'podcast',podcast_prompt(s['edition']),PODCAST_SCHEMA)
-        script_errors=verify_script(script,s['edition'])
-        if script_errors: raise ValueError('; '.join(script_errors))
-        review=self.invoke_agent(s,'script_checker','Verify the spoken script against the locked edition. Fail for added/changed facts or omissions. '+json.dumps({'edition':s['edition'],'script':script}),CHECK_SCHEMA)
-        if not review.get('passed') or review.get('issues'): raise ValueError('Narration fidelity check failed')
+        script=None
+        issues=[]
+        for attempt in range(3):
+            role='podcast' if attempt==0 else 'podcast_repair_'+str(attempt)
+            prompt=podcast_prompt(s['edition'])
+            if attempt:
+                prompt+='\nRepair only the spoken script against the unchanged locked edition. Preserve factual identities and coverage disclosures. '+json.dumps({'prior_issues':issues,'previous_script':script})
+            script=self.invoke_agent(s,role,prompt,PODCAST_SCHEMA)
+            script_errors=verify_script(script,s['edition'])
+            check_role='script_checker' if attempt==0 else 'script_checker_repair_'+str(attempt)
+            review=self.invoke_agent(s,check_role,'Verify the spoken script against the locked edition. Fail for added/changed facts, omissions or missing same-day replay disclosures. '+json.dumps({'edition':s['edition'],'script':script}),CHECK_SCHEMA)
+            issues=script_errors+[item.get('reason','Narration fidelity issue') for item in review.get('issues',[])]
+            if not review.get('passed') and not issues:issues=['Narration fidelity check failed']
+            self.audit.record_checkpoint(s['run_id'],'script-quality-'+str(attempt),status='failed' if issues else 'passed',errors=issues)
+            if not issues:break
+        else:
+            raise ValueError('Narration fidelity check failed after two repair attempts')
         allowed={x['id'] for x in all_stories(s['edition'])}
         if any(set(section['story_ids'])-allowed for section in script['sections']): raise ValueError('Podcast references an unapproved story')
         self.audit.record_checkpoint(s['run_id'],'edition_lock',status='passed',edition_hash=digest(s['edition']))
