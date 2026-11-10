@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-09-11",
-      "topic_key": "tittle",
-      "text": "The dot over i and j is called a tittle"
-    },
-    {
       "date": "2026-09-12",
       "topic_key": "hundred years war",
       "text": "The Hundred Years' War lasted 116 years (1337-1453), not a single continuous war nor exactly a century."
@@ -279,14 +274,14 @@
       "date": "2026-11-10",
       "topic_key": "anglo-zanzibar war",
       "text": "The shortest war in history lasted about 38 minutes"
+    },
+    {
+      "date": "2026-11-11",
+      "topic_key": "sahara",
+      "text": "Until about 5,000 years ago the Sahara was green (the African Humid Period), driven by Earth's orbital precession."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-10-11",
-      "type": "quantitative",
-      "title_key": "two-candles"
-    },
     {
       "date": "2026-10-12",
       "type": "lateral",
@@ -416,14 +411,14 @@
       "date": "2026-11-10",
       "type": "visual",
       "title_key": "counting-the-squares"
+    },
+    {
+      "date": "2026-11-11",
+      "type": "logic",
+      "title_key": "knaves-among-us"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-10-11",
-      "type": "anagram",
-      "title_key": "hidden-meanings"
-    },
     {
       "date": "2026-10-12",
       "type": "spellingbee",
@@ -553,6 +548,11 @@
       "date": "2026-11-10",
       "type": "letterboxed",
       "title_key": "boxed-in"
+    },
+    {
+      "date": "2026-11-11",
+      "type": "grouping",
+      "title_key": "sorting-hat"
     }
   ]
 }

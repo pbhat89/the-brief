@@ -4362,3 +4362,17 @@ is empty until the first run.
 2026-11-10	Verstappen clings to second over Russell as Formula 1 heads to Las Vegas	1f26d8a2	verstappen,russell,antonelli,f1,las vegas
 2026-11-10	Gauff beats Pegula as the season-ending WTA Finals get under way in Indian Wells	ff2c17e8	gauff,pegula,wta finals,indian wells,tennis
 2026-11-10	The Rubin Observatory may have found the solar system's sixth dwarf planet	3af28adf	rubin observatory,dwarf planet,2026 ed138,neptune,solar system
+2026-11-11	Seized residential cruise ship Odyssey heads to Singapore after operator collapses	4c0b0281	Odyssey,Villa Vie Residences,Singapore,cruise ship
+2026-11-11	Modi speaks with Zelenskyy and Russia ahead of US-brokered peace talks	5611f4a0	Modi,Zelenskyy,India,peace talks
+2026-11-11	UK coverage is unavailable in today's edition	b61e7b4f	UK,placeholder
+2026-11-11	Russia, Ukraine and the US resume peace talks in Abu Dhabi	d9a360f6	Russia,Ukraine,United States,Abu Dhabi,peace talks
+2026-11-11	COP31 climate summit opens in Antalya as world leaders gather	5e4c84a3	COP31,Antalya,Turkey,climate summit
+2026-11-11	Nvidia's board opens an independent probe into CEO Jensen Huang	172bc756	Nvidia,Jensen Huang,board probe
+2026-11-11	Wall Street falls as a hot inflation report revives Fed rate-hike fears	ea4b042e	Wall Street,S&P 500,CPI,Nvidia
+2026-11-11	US inflation runs hot in October, lifting December rate-hike odds	da19f89a	CPI,inflation,Federal Reserve,Waller
+2026-11-11	Treasury yields climb as traders brace for another Fed hike	4fda5997	Treasury yields,Federal Reserve,bonds
+2026-11-11	Sabalenka opens her WTA Finals campaign with a win in Indian Wells	851f4e45	Sabalenka,Muchova,WTA Finals,Indian Wells
+2026-11-11	NASA's Swift observatory reenters the atmosphere after 22 years	52a9696b	NASA,Swift Observatory,reentry
+2026-11-11	Europe's Hera probe resolves the Didymos asteroid pair for the first time	a5dc7844	ESA,Hera,Didymos,Dimorphos
+2026-11-11	BepiColombo begins its arrival at Mercury after an eight-year journey	b264869c	ESA,JAXA,BepiColombo,Mercury
+2026-11-11	Mars may still be volcanically active, an ESA orbiter hints	b35a252b	ESA,ExoMars,Mars,Alba Mons
