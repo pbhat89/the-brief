@@ -16,7 +16,7 @@ class Fake:
         keys=schema['properties']
         if 'role' in keys: data={'role':'india','stories':[story()],'sources':[],'gaps':['partial']}
         elif 'edition_date' in keys: data=edition()
-        elif 'passed' in keys: data={'passed':not self.fail_check,'issues':[{'story_id':'one','reason':'unsupported'}] if self.fail_check else [],'coverage_gaps':[]}
+        elif 'passed' in keys: data={'passed':not self.fail_check,'issues':[{'story_id':'one','reason':'unsupported'}] if self.fail_check else [],'coverage_gaps':[],'editorial_reviews':[],'edition_review':{'selection_is_justified':True,'depth_is_sufficient':True,'rationale':'Synthetic conditions-only fixture; no news claims.'}}
         else: data={'sections':[{'name':'Weather','text':'Test briefing','story_ids':['one']}],'word_count':2}
         return SimpleNamespace(data=data,usage=None,attempts=1)
 

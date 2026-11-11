@@ -91,9 +91,13 @@ Observed feedback: both news and topic podcasts sounded disconnected; technical 
 The new roadmap, section transitions and ten one-second pauses were rendered and silence-checked. Intuitive explanations and explicit business examples passed an independent written editorial check. Conditions measured 19.11 seconds; the combined fact/close was 19.80 seconds. These are verified implementation outcomes, not evidence of listener satisfaction or phone playback. Retain this structure and use future direct feedback to assess comprehension. The local-engine telemetry safeguard was resolved only by replacing the denied component with a verified offline implementation; do not revive the denied path.
 
 
-## Headline-first news and complete intake reconciliation · 22 October 2026
+## Useful-context news and complete intake reconciliation · 11 November 2026
 
-Latest listener feedback supersedes deeper treatment of news items: each NEWS item gets a broad headline and at most one short factual context sentence. Do not insert assistant opinions, takes, analogies or business advice between news items. Preserve coherent section handoffs and audible pauses. Distinct podcast/expert learning segments retain intuitive explanations, simple examples and clearly separated applications.
+The 11 November request for useful depth supersedes the earlier headline-plus-one-sentence limit. Select news for materiality, freshness and evidence, then explain what concretely changed, the background needed to understand it, who is affected and how, and any material caveat. Major stories need developed, source-backed treatment; a genuinely bounded update, such as a sports result, can remain brief with an explicit editorial reason. Do not impose a sentence/word quota, stretch minor items with generic stakes, or reduce a major-news edition to headline snippets. No assistant opinions, unsupported implications, analogies or business advice between news items. Preserve coherent section handoffs and audible pauses. Distinct podcast/expert learning segments retain intuitive explanations, simple examples and clearly separated applications.
+
+Research breadth is independent of the audio budget. Read accessible original source text beyond discovery snippets, retain supporting passages and locations, and disclose partial text, inaccessible X timelines and other gaps honestly. Account for every candidate and upstream item, including exclusions; if evidence cannot support useful context, seek further authorized research or omit with a reason rather than expand from memory. Review selection and coverage across the edition, not just story count. An all-brief edition needs a specific evidence-based quiet-day justification.
+
+Before narration, independently review each selected story against source evidence for useful context, accurate stakes, attribution and preserved limitations. The spoken script must retain that reviewed meaning, not merely reference the story ID; review the final spoken sentences as well. For the opt-in agent pipeline, evidence-indexed narrative units and independent story/edition reviews enforce this contract structurally. Semantic truth and natural delivery still require source review and listening. No extra words or agents by themselves demonstrate quality.
 
 Use the same-day upstream HTML as a complete intake checklist, including every sports item. Account for every item as covered, materially updated, duplicate, stale or insufficiently verified with evidence and a reason; do not arbitrarily choose one of several sports stories. The checklist does not override factual verification, date accuracy or permanent delivered-event dedup. If upstream is absent, use only its format and independently verify current reporting. Do not regenerate delivered audio merely for this wording change.
 
@@ -233,3 +237,25 @@ Coverage remains explicitly partial: 241 required attempts, 245 partial rows, se
 Verified operational change effective 2 November: the external automation now starts 06:30 Singapore daily and checks same-day upstream during 06:30–06:40, targeting delivery before 07:15 without guaranteeing it. Upstream Claude’s 07:00 routine and email workflow remain unchanged. This records an independently verified automation change; editing this document itself does not alter schedules, current-edition policy or validators.
 
 Verified outcome for this bounded recovery: sequential individual blob uploads and a small SHA-referenced tree activated the catalogue; exact-head regression and deployments passed, with hosted byte equality. Retain prompt yielding and explicit remote-state reconciliation. The overlapping-call causal hypothesis remains unproven; do not relabel it an established fix. Prioritize verified audio/report delivery over nonblocking catalogue closeout, while still completing the latter.
+
+
+## Editorial depth regression candidate · 11 November 2026
+
+Observed: the current policy and opt-in agent prompts still imposed a headline and
+one short context sentence, while structural script checks could accept story IDs
+without their explanatory content. The current policy above now requires useful,
+evidence-backed depth, with explicitly justified brief treatment for bounded updates.
+
+Implemented as a candidate in the opt-in runner: complete candidate dispositions,
+evidence-indexed narrative units, independent story and edition judgments, and
+exactly-once, ordered retention of the reviewed news core in narration. Synthetic
+adversarial tests cover headline-only developed stories, invented evidence,
+unsupported expansion findings, legitimate briefs, missing context/caveats,
+repeated or reordered narration, and bounded repair exhaustion. Tests distinguish
+structural fidelity from semantic review; no automated truth or listening claim.
+
+Release status: source changes and local regression checks only. No production
+cutover, saved prompt/schedule update, published-edition rewrite or regeneration
+is implied. Before promotion, independently review a real-source comparison and
+listen to the approved-voice render. Retain the previous verified edition if the
+candidate fails evidence, editorial, audio or existing source-release gates.

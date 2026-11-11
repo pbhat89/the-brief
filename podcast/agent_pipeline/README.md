@@ -273,3 +273,50 @@ coverage artifact exceeded the bounded prompt limit. The repair passes only its
 path, hash and bounded summary to the reviewer, retaining the full private
 artifact separately. The failed run remains immutable; a distinct run completed
 the review. Realistic large-artifact regression and Windows/Linux CI pass.
+
+### Evidence-backed editorial depth and narration lock
+
+The research prompt no longer asks for a headline and one short sentence. Audio
+length constrains selection after research, never the breadth of mandatory source
+attempts or the evidence retained. Researchers must read beyond discovery snippets
+and retain useful background, concrete developments, affected people/mechanisms
+and limitations with exact source passages. Partial text or blocked X access stays
+explicitly partial. Another publisher cannot prove X coverage.
+
+The editor accounts for every supplied candidate in `selection`, with a reason for
+including or excluding it. Every news story has an explicit `treatment` and materiality-based
+`treatment_reason`: developed stories need distinct `narrative` units for
+development, context and stakes, plus any material caveat. Justified brief updates
+need only a complete development and any material caveat, not padded stakes. Each unit
+contains natural spoken `text` and `evidence_indexes` into the story's retained
+quotes. The summary is those units joined by spaces, so HTML cannot quietly lose
+the context. Evidence-poor stories need further research or exclusion, not padding.
+Weather, learning and fact retain their existing specialized rules and may have
+an empty narrative array. No minimum word count or number of agents proves depth.
+
+Both editorial and script checkers judge selection and edition-level depth in
+`edition_review`, with a specific rationale. All-brief editions require a justified
+quiet-day/evidence explanation; there is no numerical story or length quota. They
+must also return a specific `editorial_reviews` row
+for each news story, identifying all supported unit indexes and judging useful
+context and preservation of caveats. The editor's candidate set is visible to the
+editorial checker for selection/coverage review. Missing reviews, unsupported
+units or failed depth/caveat findings block approval even with `passed: true`.
+
+Narration preserves each locked news unit verbatim exactly once, in original
+order, in a section referencing that story. The producer can add natural transitions, not compress away the unit's
+meaning. Awkward prose requires an editor revision and a new lock, not a silent
+producer rewrite. Existing bounded repair, voice, audio and source-release gates
+remain in force. The new contract requires a distinct run with new runtime/schema
+identity; do not rewrite old completed outputs to make them appear compliant.
+
+These deterministic checks prove structure, retained evidence identity and text
+fidelity, **not** source entailment or editorial judgment. The independent checker
+must actually compare the evidence, including any omitted limitations. A dishonest
+or mistaken model can still misjudge an apparently well-formed unit. The adversarial
+fixtures explicitly exercise rejection of an unsupported expansion with a supplied
+independent finding; they do not pretend a Python gate understands the claim.
+Before promotion, run a real-source comparison through independent review and
+listen to the rendered sentences. Fixture passes are not live research, improved
+coverage, a pronunciation assessment or a delivery claim. No schedules, published
+editions or external instructions are changed by this implementation.

@@ -155,7 +155,7 @@ class FullNativeGraphTests(unittest.TestCase):
                                 elif role=='checker' or role.startswith('script_checker'):
                                     failures=sum(r.startswith('script_checker') for r in seen)
                                     failed=role.startswith('script_checker') and failures<=script_failures
-                                    data={'passed':not failed,'issues':[{'story_id':'one','reason':'Missing explicit replay label'}] if failed else [],'coverage_gaps':[]}
+                                    data={'passed':not failed,'issues':[{'story_id':'one','reason':'Missing explicit replay label'}] if failed else [],'coverage_gaps':[],'editorial_reviews':[],'edition_review':{'selection_is_justified':True,'depth_is_sufficient':True,'rationale':'Synthetic conditions-only fixture; no news claims.'}}
                                 elif role.startswith('podcast'):data={'sections':[{'name':'Weather','text':'Test briefing','story_ids':['one']}],'word_count':2}
                                 else:self.fail('Unexpected stage '+role)
                                 runner.bridge.claim(row['id'],req['request_hash'],'synthetic-worker')

@@ -87,8 +87,8 @@
     "public_personal_content": false
   },
   "news_presentation": {
-    "effective_from": "2026-10-22",
-    "format": "headline-plus-one-short-factual-context-line",
+    "effective_from": "2026-11-11",
+    "format": "evidence-backed-developed-stories-and-justified-brief-updates",
     "assistant_opinions": false,
     "complete_same_day_upstream_checklist": true,
     "include_all_verified_fresh_sports": true,
@@ -99,7 +99,18 @@
     ],
     "audible_section_transitions": true,
     "audible_section_pauses": true,
-    "learning_segments_keep_intuition_examples_and_business_context": true
+    "learning_segments_keep_intuition_examples_and_business_context": true,
+    "research_breadth_independent_of_audio_budget": true,
+    "developed_story_requirements": [
+      "concrete-development",
+      "useful-source-backed-context",
+      "proportionate-stakes",
+      "material-caveats"
+    ],
+    "brief_treatment": "bounded-update-with-explicit-editorial-reason-no-padding",
+    "selection_review": "materiality-freshness-evidence-and-coverage-not-story-count",
+    "narration_review": "preserve-reviewed-meaning-context-attribution-and-caveats",
+    "word_or_sentence_quota": false
   },
   "source_coverage": {
     "effective_from": "2026-10-26",

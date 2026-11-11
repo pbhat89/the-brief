@@ -17,7 +17,8 @@ from .checkpoint_store import CheckpointStore, CheckpointKey
 from .bridges import validate_editorial
 from .source_repair import REPAIR_SCHEMA, repair_targets, repair_prompt, merge_source_repair, validate_repair_origin
 from .codex_adapter import CodexAdapter
-from .content import (ROLES, RESEARCH_SCHEMA, EDITION_SCHEMA, CHECK_SCHEMA, PODCAST_SCHEMA,
+from .content import (ROLES, RESEARCH_SCHEMA, EDITION_SCHEMA, CHECK_SCHEMA, EDITORIAL_CHECK_SCHEMA, PODCAST_SCHEMA,
+    verify_editorial_review, script_checker_prompt,
     load_context, research_prompt, editor_prompt, checker_prompt, podcast_prompt,
     render_html, verify_edition, all_stories, verify_research, verify_edition_provenance, verify_script, reconcile_source_traces)
 
@@ -157,7 +158,8 @@ class Pipeline:
     def check(self,s):
         errors=verify_edition(s['edition'],s['date'])+verify_edition_provenance(s['edition'],s['research'])
         if not any(r.get('stories') for r in s['research']): errors.append('All research roles returned no supported stories')
-        review=self.invoke_agent(s,'checker',checker_prompt(s['edition'],self.context),CHECK_SCHEMA,True)
+        review=self.invoke_agent(s,'checker',checker_prompt(s['edition'],self.context,s['research']),EDITORIAL_CHECK_SCHEMA,True)
+        errors.extend(verify_editorial_review(review,s['edition']))
         errors.extend(i.get('reason','failed check') for i in review.get('issues',[]))
         if review.get('coverage_gaps') and s['edition'].get('coverage_status')!='partial': errors.append('Checker identified undisclosed coverage gaps')
         passed=not errors and review.get('passed') is True
@@ -178,8 +180,8 @@ class Pipeline:
             script=self.invoke_agent(s,role,prompt,PODCAST_SCHEMA)
             script_errors=verify_script(script,s['edition'])
             check_role='script_checker' if attempt==0 else 'script_checker_repair_'+str(attempt)
-            review=self.invoke_agent(s,check_role,'Verify the spoken script against the locked edition. Fail for added/changed facts, omissions or missing same-day replay disclosures. '+json.dumps({'edition':s['edition'],'script':script}),CHECK_SCHEMA)
-            issues=script_errors+[item.get('reason','Narration fidelity issue') for item in review.get('issues',[])]
+            review=self.invoke_agent(s,check_role,script_checker_prompt(s['edition'],script),EDITORIAL_CHECK_SCHEMA)
+            issues=script_errors+verify_editorial_review(review,s['edition'])+[item.get('reason','Narration fidelity issue') for item in review.get('issues',[])]
             if not review.get('passed') and not issues:issues=['Narration fidelity check failed']
             self.audit.record_checkpoint(s['run_id'],'script-quality-'+str(attempt),status='failed' if issues else 'passed',errors=issues)
             if not issues:break

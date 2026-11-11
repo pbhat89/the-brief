@@ -12,7 +12,7 @@ def story(kind='news', sid='one'):
 
 
 def edition():
-    return dict(edition_date='2026-11-08',title='Review',coverage_status='partial',gaps=['X access incomplete'],sections=[dict(name='Weather',stories=[story('weather')])],fact=None,learning=None)
+    return dict(edition_date='2026-11-08',title='Review',coverage_status='partial',gaps=['X access incomplete'],sections=[dict(name='Weather',stories=[dict(story('weather'),narrative=[],treatment='not_applicable',treatment_reason='Conditions')])],fact=None,learning=None,selection=[dict(story_id='one',decision='selected',reason='Timestamped conditions')])
 
 
 class ContentTests(unittest.TestCase):
