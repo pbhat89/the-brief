@@ -35,7 +35,7 @@ Comparison mode intentionally does not publish into the production daily index. 
 
 ## Schedule and deadlines
 
-Proposed production schedule: 05:45 Asia/Singapore readiness; research and review until 06:18; audio/HTML until 06:45; QA/upload by 06:55; delivery by 07:00. No schedule has been changed by this code. If audio is blocked, deliver verified written output by the deadline with precise status. Do not bypass quality gates to meet a target.
+Proposed production schedule: 04:00 Asia/Singapore readiness; research and review until 06:18; audio/HTML until 06:45; QA/upload by 06:55; delivery target 07:00, latest 07:15. No schedule has been changed by this code. If audio is blocked, deliver independently verified written output by 07:15 with precise status; if written quality/delivery is blocked too, report the blocker by then. Do not bypass quality gates to meet a target.
 
 ## Audit
 
@@ -320,3 +320,24 @@ Before promotion, run a real-source comparison through independent review and
 listen to the rendered sentences. Fixture passes are not live research, improved
 coverage, a pronunciation assessment or a delivery claim. No schedules, published
 editions or external instructions are changed by this implementation.
+
+
+### Retention contract (11 November update)
+
+Audio now targets around 15 minutes with no padding. The written edition may be
+richer. Specialist evidence packets survive summarization intact; the editor
+preserves selected news evidence arrays in their original order and accounts for
+every passage in `retention`. Each row has `evidence_index`, `disposition`
+(`narrated`, `written_only`, `omitted`), `unit_indexes`, and a concrete `reason`.
+Indexes point into `narrative` or `written_context` according to disposition;
+omitted rows have no unit indexes. Important caveats to a spoken claim must stay
+in the spoken narrative. `written_context` uses the same evidence-indexed unit
+format as `narrative` and is rendered after the spoken core in HTML. Non-news
+stories use empty arrays for these two fields. Independent review indexes cover
+`narrative + written_context`, in that order. Old cached editions missing these
+fields require re-editing and independent review, not fabricated migration rows.
+
+This accounts for passages, not automatically for every fact within a passage.
+The independent checker must judge all distinct facts, omissions and materiality
+against original candidate evidence. Neither a complete ledger nor a 15-minute
+recording proves quality. All research gaps remain visible in the edition.

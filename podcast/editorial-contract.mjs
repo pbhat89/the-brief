@@ -58,9 +58,14 @@ export function validateEditorialPolicy(policy) {
   assert.equal(policy.ending.optional_improvement_sentences, 1);
   assert.equal(policy.ending.recap, false);
   assert.equal(policy.ending.spoken_source_diagnostics, false);
-  assert.deepEqual(policy.delivery.target_minutes, [10, 12]);
-  assert.equal(policy.delivery.start_sgt, '07:00');
-  assert.equal(policy.delivery.target_sgt, '07:30');
+  assert.deepEqual(policy.delivery.target_minutes, [13, 17]);
+  assert.equal(policy.delivery.start_sgt, '04:00');
+  assert.equal(policy.delivery.target_sgt, '07:00');
+  assert.equal(policy.delivery.duration_effective_from, '2026-11-11');
+  assert.equal(policy.delivery.latest_sgt, '07:15');
+  assert.equal(policy.delivery.written_if_audio_blocked, true);
+  assert.equal(policy.delivery.quality_fallback, false);
+  assert.equal(policy.delivery.schedule_requires_external_configuration, true);
   assert.equal(policy.delivery.public_personal_content, false);
   return true;
 }
@@ -75,6 +80,13 @@ export function validateEditorialAudit(policy, audit) {
     assert.ok(audit.source_coverage, 'Future editions require the actual source-coverage checklist');
     assert.equal(audit.source_coverage.edition_date, audit.edition_date);
     requireSourceCoverageForRelease(audit.source_coverage);
+  }
+  if (audit.edition_date >= policy.delivery.duration_effective_from) {
+    assert.ok(Number.isFinite(audit.audio_seconds) && audit.audio_seconds > 0, 'Measure complete rendered audio duration');
+    assert.ok(audit.audio_seconds <= policy.delivery.target_minutes[1] * 60, 'Audio exceeds around-15-minute range; re-edit and review, never silently accelerate or compress');
+    if (audit.audio_seconds < policy.delivery.target_minutes[0] * 60) {
+      assert.ok(nonempty(audit.duration_shortfall_reason), 'Short audio requires a specific evidence-based explanation, not padding');
+    }
   }
   for (const key of ['conditions_seconds', 'expert_seconds', 'ending_seconds']) assert.ok(seconds(audit[key]), `Invalid ${key}`);
   if (audit.conditions_seconds > policy.conditions.target_seconds[1]) {

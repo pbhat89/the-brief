@@ -79,12 +79,17 @@
   },
   "delivery": {
     "target_minutes": [
-      10,
-      12
+      13,
+      17
     ],
-    "start_sgt": "07:00",
-    "target_sgt": "07:30",
-    "public_personal_content": false
+    "start_sgt": "04:00",
+    "target_sgt": "07:00",
+    "public_personal_content": false,
+    "latest_sgt": "07:15",
+    "written_if_audio_blocked": true,
+    "quality_fallback": false,
+    "schedule_requires_external_configuration": true,
+    "duration_effective_from": "2026-11-11"
   },
   "news_presentation": {
     "effective_from": "2026-11-11",
@@ -110,7 +115,9 @@
     "brief_treatment": "bounded-update-with-explicit-editorial-reason-no-padding",
     "selection_review": "materiality-freshness-evidence-and-coverage-not-story-count",
     "narration_review": "preserve-reviewed-meaning-context-attribution-and-caveats",
-    "word_or_sentence_quota": false
+    "word_or_sentence_quota": false,
+    "written_can_be_richer": true,
+    "evidence_retention_ledger": true
   },
   "source_coverage": {
     "effective_from": "2026-10-26",

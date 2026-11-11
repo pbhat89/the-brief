@@ -63,3 +63,25 @@ test('prepublication CLI rejects example placeholders and unknown concepts', () 
   writeFileSync(path,JSON.stringify(a));const fabricated=spawnSync(process.execPath,[cli,'--audit',path]);assert.notEqual(fabricated.status,0);assert.match(fabricated.stderr.toString(),/selection context/);
  } finally {rmSync(dir,{recursive:true,force:true});}
 });
+
+// Synthetic fixture only: these values do not assert actual source access.
+import {coverageFixture} from './test-fixtures/source-coverage.fixture.mjs';
+function durationAudit() {
+ const a=audit();a.edition_date='2026-11-11';a.audio_seconds=900;
+ a.source_coverage=JSON.parse(JSON.stringify(coverageFixture()).replaceAll('2026-10-26','2026-11-11').replaceAll('2026-10-25','2026-11-10').replaceAll('2026-10-24','2026-11-09'));
+ return a;
+}
+test('around-15-minute duration is measured with bounded exceptions, not padded',()=>{
+ for(const duration of [780,900,1020]){const a=durationAudit();a.audio_seconds=duration;assert.equal(validateEditorialAudit(policy,a),true);}
+ for(const duration of [undefined,null,0,-1,NaN,Infinity,'900',1021,1200]){const a=durationAudit();a.audio_seconds=duration;assert.throws(()=>validateEditorialAudit(policy,a));}
+ const a=durationAudit();a.audio_seconds=779;assert.throws(()=>validateEditorialAudit(policy,a));
+ a.duration_shortfall_reason='Only a bounded set of fresh evidenced developments qualified.';assert.equal(validateEditorialAudit(policy,a),true);
+ a.duration_shortfall_reason=' ';assert.throws(()=>validateEditorialAudit(policy,a));
+});
+test('new duration requirement does not weaken coverage or alter historical audits',()=>{
+ assert.equal(validateEditorialAudit(policy,audit()),true);
+ const a=durationAudit();delete a.source_coverage;assert.throws(()=>validateEditorialAudit(policy,a));
+ for(const [key,value] of [['target_minutes',[10,12]],['latest_sgt','07:30'],['quality_fallback',true],['written_if_audio_blocked',false],['schedule_requires_external_configuration',false]]){
+  const p=structuredClone(policy);p.delivery[key]=value;assert.throws(()=>validateEditorialPolicy(p));
+ }
+});

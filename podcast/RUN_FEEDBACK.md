@@ -61,8 +61,7 @@ Test outcomes were reported by the implementation operator; local security group
 ## 18 October 2026 · Publishing connection verified
 
 This dated update supersedes earlier pending-deployment/setup statements above.
-The companion's externally configured start is 07:00 Asia/Singapore; 07:30 is a
-delivery target. Record a bounded intake cutoff rather than assuming the same-day
+Historical configuration on 18 October: start 07:00 Asia/Singapore, delivery target 07:30. Superseded by the 11 November contract: prepare from 04:00, target 07:00, latest 07:15; verify the saved external schedule separately. Record a bounded intake cutoff rather than assuming the same-day
 upstream will arrive in time. No repository edit changes the upstream routine or
 either external schedule automatically.
 

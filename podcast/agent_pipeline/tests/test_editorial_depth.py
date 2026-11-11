@@ -9,7 +9,7 @@ from unittest.mock import Mock
 from podcast.agent_pipeline.content import (
     EDITION_SCHEMA, EDITORIAL_CHECK_SCHEMA, research_prompt, editor_prompt,
     podcast_prompt, verify_edition, verify_edition_provenance, verify_script,
-    verify_editorial_review, ROLES,
+    verify_editorial_review, render_html, ROLES,
 )
 from podcast.agent_pipeline.test_content import story, edition
 from podcast.agent_pipeline.pipeline import Pipeline
@@ -34,6 +34,8 @@ def grounded():
                          for i, (kind, text) in enumerate(zip(
                              ['development', 'context', 'stakes', 'caveat'], passages))]
     news['summary'] = ' '.join(passages)
+    news['written_context'] = []
+    news['retention'] = [dict(evidence_index=i, disposition='narrated', unit_indexes=[i], reason='Distinct supported fact.') for i in range(4)]
     result['sections'].append(dict(name='Singapore', stories=[news]))
     result['selection'].append(dict(story_id=news['id'], decision='selected',
                                    reason='Service change with a defined trial scope and unchanged fares.'))
@@ -42,6 +44,8 @@ def grounded():
     # Researchers supply evidence packets, not editor-owned narration.
     for item in candidates[0]['stories']:
         item.pop('narrative', None)
+        item.pop('written_context', None)
+        item.pop('retention', None)
         item.pop('treatment', None)
         item.pop('treatment_reason', None)
     script = {'sections': [dict(name='Weather', text='Conditions update.', story_ids=['one']),
@@ -69,6 +73,69 @@ class EditorialDepthTests(unittest.TestCase):
         self.assertEqual(verify_edition_provenance(e, research), [])
         self.assertEqual(verify_script(script, e), [])
         self.assertEqual(verify_editorial_review(review, e), [])
+
+    def test_written_detail_survives_without_expanding_spoken_core(self):
+        e, research, script, review = grounded()
+        news = e['sections'][1]['stories'][0]
+        detail = dict(kind='context', text='The synthetic trial will publish monthly operating reports.', evidence_indexes=[4])
+        passage = dict(url=news['sources'][0], quote=detail['text'], locator='Paragraph 5')
+        news['evidence'].append(passage)
+        research[0]['stories'][1]['evidence'].append(copy.deepcopy(passage))
+        news['written_context'] = [detail]
+        news['retention'].append(dict(evidence_index=4, disposition='written_only', unit_indexes=[0], reason='Reporting cadence useful in the written reference.'))
+        validate(e, EDITION_SCHEMA)
+        self.assertEqual(verify_edition(e, e['edition_date']), [])
+        self.assertEqual(verify_edition_provenance(e, research), [])
+        self.assertEqual(verify_script(script, e), [])
+        self.assertIn(detail['text'], render_html(e))
+        self.assertNotIn(detail['text'], script['sections'][1]['text'])
+        self.assertTrue(verify_editorial_review(review, e))
+        review['editorial_reviews'][0]['supported_unit_indexes'].append(4)
+        self.assertEqual(verify_editorial_review(review, e), [])
+
+    def test_evidence_cannot_be_dropped_reordered_or_duplicated(self):
+        for change in ('drop', 'reorder', 'duplicate'):
+            e, research, _, _ = grounded()
+            evidence = e['sections'][1]['stories'][0]['evidence']
+            if change == 'drop': evidence.pop()
+            elif change == 'reorder': evidence.reverse()
+            else: evidence.append(copy.deepcopy(evidence[0]))
+            self.assertTrue(any('complete ordered' in error for error in verify_edition_provenance(e, research)))
+
+    def test_retention_rejects_incomplete_or_false_accounting(self):
+        for change in ('missing', 'duplicate', 'unlinked', 'empty_reason', 'omitted_reference', 'invalid_disposition'):
+            with self.subTest(change=change):
+                e, _, _, _ = grounded()
+                rows = e['sections'][1]['stories'][0]['retention']
+                if change == 'missing': rows.pop()
+                elif change == 'duplicate': rows[1] = copy.deepcopy(rows[0])
+                elif change == 'unlinked': rows[0]['unit_indexes'] = [1]
+                elif change == 'empty_reason': rows[0]['reason'] = ' '
+                elif change == 'omitted_reference': rows[0].update(disposition='omitted', unit_indexes=[])
+                else: rows[0]['disposition'] = 'discarded'
+                self.assertTrue(verify_edition(e, e['edition_date']))
+
+    def test_written_only_cannot_hide_spoken_evidence_or_repeat_core(self):
+        e, _, _, _ = grounded()
+        news = e['sections'][1]['stories'][0]
+        news['written_context'] = [copy.deepcopy(news['narrative'][0])]
+        news['retention'][0].update(disposition='written_only', unit_indexes=[0])
+        errors = verify_edition(e, e['edition_date'])
+        self.assertTrue(any('written-only' in error for error in errors))
+        self.assertTrue(any('duplicates retained prose' in error for error in errors))
+
+    def test_partial_edition_cannot_silently_drop_research_gap(self):
+        e, research, _, _ = grounded()
+        e['gaps'] = ['A different limitation.']
+        self.assertIn('edition must retain every research gap', verify_edition_provenance(e, research))
+
+    def test_written_detail_is_escaped_and_requires_evidence(self):
+        e, _, _, _ = grounded()
+        news = e['sections'][1]['stories'][0]
+        news['written_context'] = [dict(kind='context', text='<script>alert(1)</script>', evidence_indexes=[99])]
+        self.assertTrue(verify_edition(e, e['edition_date']))
+        self.assertIn('&lt;script&gt;', render_html(e))
+        self.assertNotIn('<script>', render_html(e))
 
     def test_headline_only_fails_without_word_threshold(self):
         e, _, _, _ = grounded()
@@ -150,6 +217,7 @@ class EditorialDepthTests(unittest.TestCase):
         news = e['sections'][1]['stories'][0]
         news.update(treatment='brief', treatment_reason='Synthetic bounded update for a previously explained trial.')
         news['narrative'] = [news['narrative'][0], news['narrative'][3]]
+        news['retention'] = [dict(evidence_index=i, disposition='narrated' if i in (0,3) else 'omitted', unit_indexes=[0 if i==0 else 1] if i in (0,3) else [], reason='Previously explained context in a bounded update.' if i in (1,2) else 'Essential change or caveat.') for i in range(4)]
         news['summary'] = ' '.join(u['text'] for u in news['narrative'])
         self.assertEqual(verify_edition(e, e['edition_date']), [])
         review['editorial_reviews'][0]['supported_unit_indexes'] = [0, 1]

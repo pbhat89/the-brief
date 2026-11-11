@@ -13,8 +13,11 @@ The existing upstream Claude/Gmail workflow is unchanged.
 ## Daily sequence
 
 1. Load current instructions, feedback and the private delivery/event ledger. Record
-   the source revision and a bounded intake cutoff. Start at 07:00 Asia/Singapore;
-   07:30 is a delivery target, not a guaranteed SLA.
+   the source revision and a bounded intake cutoff. Prepare from 04:00 Asia/Singapore for delivery at 07:00, latest 07:15.
+   Verify this external schedule separately; repository edits do not install it.
+   If audio is blocked, deliver the independently verified written edition through
+   the authorized destination by 07:15 and disclose the audio blocker. Never bypass
+   quality/source gates, imply missing sources were checked, or claim unsent delivery.
 2. Research, verify and deduplicate the report; render the approved narration.
    Measure actual MP3 duration, decode the full file, check clipping/loudness and
    chapter positions, and compute its byte size and SHA-256.

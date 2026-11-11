@@ -12,7 +12,7 @@ def story(kind='news', sid='one'):
 
 
 def edition():
-    return dict(edition_date='2026-11-08',title='Review',coverage_status='partial',gaps=['X access incomplete'],sections=[dict(name='Weather',stories=[dict(story('weather'),narrative=[],treatment='not_applicable',treatment_reason='Conditions')])],fact=None,learning=None,selection=[dict(story_id='one',decision='selected',reason='Timestamped conditions')])
+    return dict(edition_date='2026-11-08',title='Review',coverage_status='partial',gaps=['X access incomplete'],sections=[dict(name='Weather',stories=[dict(story('weather'),narrative=[],written_context=[],retention=[],treatment='not_applicable',treatment_reason='Conditions')])],fact=None,learning=None,selection=[dict(story_id='one',decision='selected',reason='Timestamped conditions')])
 
 
 class ContentTests(unittest.TestCase):
@@ -185,7 +185,7 @@ class SourceIdentityTests(unittest.TestCase):
         raw={'stories':[story('weather')],'sources':[{'id':'weather-source','url':'https://example.org/story'}],'gaps':['Partial']}
         raw['stories'][0]['sources']=['weather-source']
         normalized,mappings=canonicalize_research_sources(raw)
-        e=edition();e['sections'][0]['stories']=copy.deepcopy(normalized['stories'])
+        e=edition();e['sections'][0]['stories']=copy.deepcopy(normalized['stories']);e['gaps']+=normalized['gaps']
         self.assertEqual(verify_edition(e,'2026-11-08'),[])
         self.assertEqual(verify_edition_provenance(e,[normalized]),[])
         self.assertEqual(raw['stories'][0]['sources'],['weather-source'])

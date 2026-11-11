@@ -151,7 +151,8 @@ class FullNativeGraphTests(unittest.TestCase):
                                 if role in ROLES:
                                     data={'role':role,'stories':[story('weather')] if role=='singapore' else [],'sources':[], 'gaps':['Synthetic bounded coverage']}
                                     if role=='singapore':data['sources']=[{'id':'weather','url':'https://example.org/story','attempted_at':None,'status':'partial','queries':[],'notes':'Synthetic test','trace_ids':[],'timestamp_basis':'unverified'}]
-                                elif role=='editor':data=edition()
+                                elif role=='editor':
+                                    data=edition();data['gaps']=['Synthetic bounded coverage']
                                 elif role=='checker' or role.startswith('script_checker'):
                                     failures=sum(r.startswith('script_checker') for r in seen)
                                     failed=role.startswith('script_checker') and failures<=script_failures
