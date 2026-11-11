@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-09-12",
-      "topic_key": "hundred years war",
-      "text": "The Hundred Years' War lasted 116 years (1337-1453), not a single continuous war nor exactly a century."
-    },
-    {
       "date": "2026-09-13",
       "topic_key": "octopus",
       "text": "An octopus has three hearts and blue (copper-based) blood; its main systemic heart stops beating whenever it swims."
@@ -279,14 +274,14 @@
       "date": "2026-11-11",
       "topic_key": "sahara",
       "text": "Until about 5,000 years ago the Sahara was green (the African Humid Period), driven by Earth's orbital precession."
+    },
+    {
+      "date": "2026-11-12",
+      "topic_key": "flamingo",
+      "text": "Flamingos hatch grey and turn pink only from carotenoid pigments in the algae and brine shrimp they eat."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-10-12",
-      "type": "lateral",
-      "title_key": "four-anglers-three-fish"
-    },
     {
       "date": "2026-10-13",
       "type": "visual",
@@ -416,14 +411,14 @@
       "date": "2026-11-11",
       "type": "logic",
       "title_key": "knaves-among-us"
+    },
+    {
+      "date": "2026-11-12",
+      "type": "quantitative",
+      "title_key": "twice-the-length"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-10-12",
-      "type": "spellingbee",
-      "title_key": "deep-end"
-    },
     {
       "date": "2026-10-13",
       "type": "letterboxed",
@@ -553,6 +548,11 @@
       "date": "2026-11-11",
       "type": "grouping",
       "title_key": "sorting-hat"
+    },
+    {
+      "date": "2026-11-12",
+      "type": "ladder",
+      "title_key": "all-that-glitters"
     }
   ]
 }

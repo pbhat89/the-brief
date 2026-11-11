@@ -4376,3 +4376,36 @@ is empty until the first run.
 2026-11-11	Europe's Hera probe resolves the Didymos asteroid pair for the first time	a5dc7844	ESA,Hera,Didymos,Dimorphos
 2026-11-11	BepiColombo begins its arrival at Mercury after an eight-year journey	b264869c	ESA,JAXA,BepiColombo,Mercury
 2026-11-11	Mars may still be volcanically active, an ESA orbiter hints	b35a252b	ESA,ExoMars,Mars,Alba Mons
+2026-11-12	About 3 million adult Singaporeans to get final Assurance Package cash payout from December	d80a0b79	Ministry of Finance,Assurance Package,Singapore
+2026-11-12	LTA orders Grab to pause some Punggol self-driving tests after near-miss with schoolgirl	f7d80d64	LTA,Grab,WeRide,Punggol
+2026-11-12	Three new MRT stations — Bedok South, Sungei Bedok and Xilin — to open on 26 December	0c5f9d23	LTA,Thomson-East Coast Line,Sungei Bedok,MRT
+2026-11-12	Singapore's car population cannot grow much further, Acting Transport Minister tells Parliament	fd6a97dc	Jeffrey Siow,Parliament,COE,Singapore
+2026-11-12	New Delhi chokes in severe post-Diwali smog as firecrackers breach court limits	a91e024d	New Delhi,Diwali,Supreme Court,air quality
+2026-11-12	India's wealthy pivot to real estate after two years of weak stock returns	e9f029a9	India,real estate,Bloomberg,investors
+2026-11-12	IIFL Finance founder bets Blackstone deal will drive 25-30% annual lending growth	34984367	IIFL Finance,Nirmal Jain,Blackstone,India
+2026-11-12	India raises specialist police commando units to patrol its disputed border with China	b2670eea	India,China,commando units,border
+2026-11-12	Adani Ports agrees €2.56 billion deal to buy European storage operator Evos	6b84274e	Adani Ports,Evos,acquisition,India
+2026-11-12	Burnham says Britain's 10-year plan will now be published before Christmas	dcf57825	Andy Burnham,10-year plan,House of Commons,UK
+2026-11-12	Bank of England raises its key rate to 4%, its first hike in three years	efa8d206	Bank of England,interest rate,inflation,UK
+2026-11-12	UK to require employers to publish salary ranges in job adverts	3576a209	UK government,salaries,job adverts,pay gap
+2026-11-12	Burnham pledges to overhaul benefit eligibility for young people	eb59f911	Andy Burnham,benefits,young people,welfare
+2026-11-12	Update: Russia and Ukraine agree a prisoner exchange as Abu Dhabi talks end without a territorial deal	06bd0a4e	Russia,Ukraine,Abu Dhabi,prisoner exchange
+2026-11-12	US Army officer arrested in England on suspicion of spying for Russia	9f8fd48a	US Army,Russia,espionage,Gloucester
+2026-11-12	At least eight Palestinians killed in Israeli strikes on Gaza despite ceasefire	fc99bc5b	Gaza,Israel,ceasefire,Palestinians
+2026-11-12	Train collision near Cairo kills seven and injures more than 100	51b5fb3f	Egypt,train collision,al-Ayyat,Cairo
+2026-11-12	Google unveils TPU 8tx and 8i Max AI chips, deepening its AMD partnership	418f5ca6	Google,TPU,AMD,AI chips
+2026-11-12	New York's frontier-AI safety law takes effect, adding oversight for OpenAI and Anthropic	4e7e3f91	New York,RAISE Act,OpenAI,Anthropic
+2026-11-12	Britain's Fractile reportedly raises about £540 million to challenge Nvidia in AI chips	284022c0	Fractile,Nvidia,Sovereign AI Fund,AI chips
+2026-11-12	Utah startup Torus raises US$500 million to pair batteries with AI computing	bfcc0212	Torus,Magnetar,AI data centre,batteries
+2026-11-12	Wall Street rebounds as CoreWeave's earnings revive the AI trade	4daefa7c	Wall Street,Nasdaq,CoreWeave,Nvidia
+2026-11-12	CoreWeave soars on a strong third quarter and raised full-year guidance	861bd5b2	CoreWeave,earnings,Michael Intrator,AI
+2026-11-12	Fox raises US$8.4 billion in bonds to refinance its Roku acquisition	9153fe07	Fox,Roku,bonds,refinancing
+2026-11-12	Vanguard raises US$4 billion in private debt to fund its Altruist deal	654b0b8a	Vanguard,Altruist,private debt,acquisition
+2026-11-12	🎾 Noskova stuns Gauff to become first into the WTA Finals semifinals	60fd1013	Linda Noskova,Coco Gauff,WTA Finals,Indian Wells
+2026-11-12	🎾 Rybakina withdraws from the WTA Finals but keeps the year-end No. 1 ranking	e6da3f11	Elena Rybakina,WTA Finals,Marta Kostyuk,ranking
+2026-11-12	🏏 Bangladesh salvage a draw but West Indies take the Test series 1-0	baa2fd4d	Bangladesh,West Indies,Towhid Hridoy,Test series
+2026-11-12	🏎️ Russell expects a Las Vegas grid penalty for a new Mercedes engine	ca4e61ae	George Russell,Mercedes,Las Vegas Grand Prix,Kimi Antonelli
+2026-11-12	Experimental brain gene therapy nearly eliminates seizures in epilepsy patients	74701e04	gene therapy,epilepsy,seizures,trial
+2026-11-12	Hundreds of 26,000-year-old engravings found hidden in a Spanish tourist cave	32e3b36c	Palaeolithic art,Cova de la Font Major,Catalonia,engravings
+2026-11-12	Independent method confirms the shadow of the M87 supermassive black hole	70a054ad	M87,black hole,Event Horizon Telescope,shadow
+2026-11-12	Study finds the first cancer-driver mutations usually arise in early adulthood	bf442455	cancer mutations,leukaemia,blood cells,sequencing
