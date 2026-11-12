@@ -4409,3 +4409,33 @@ is empty until the first run.
 2026-11-12	Hundreds of 26,000-year-old engravings found hidden in a Spanish tourist cave	32e3b36c	Palaeolithic art,Cova de la Font Major,Catalonia,engravings
 2026-11-12	Independent method confirms the shadow of the M87 supermassive black hole	70a054ad	M87,black hole,Event Horizon Telescope,shadow
 2026-11-12	Study finds the first cancer-driver mutations usually arise in early adulthood	bf442455	cancer mutations,leukaemia,blood cells,sequencing
+2026-11-13	Singaporean man, 24, jailed 17 years with caning for sexually abusing his half-sister	896bda52	singapore,sexual assault,jail,caning,courts
+2026-11-13	Father and son flew from China to Singapore to assault a Malaysian man over a failed investment	59297084	singapore,china,assault,investment,jail
+2026-11-13	Singapore courts to weigh reformative training or jail by default for young scam offenders	556b9a2d	singapore,parliament,scams,sentencing,young offenders
+2026-11-13	Singaporean man, 20, jailed seven years with caning for sex with three underage girls	c3eb7ab5	singapore,underage,jail,caning,courts
+2026-11-13	India bypassed its own 'Make in India' rules to buy Israeli phone-hacking tools	7b395704	india,amit shah,cellebrite,surveillance,procurement
+2026-11-13	Trump's midterm setback revives hopes for a US-India trade deal by year-end	d37caa97	india,united states,trade deal,trump,modi
+2026-11-13	India's asset-management industry presses New Delhi to scrap capital-gains tax on foreign investors	0d05ad55	india,capital gains tax,foreign investors,sitharaman,markets
+2026-11-13	UK economy grew 0.7% in the third quarter, its fastest pace in years	3d388f47	uk,gdp,economy,bank of england,healey
+2026-11-13	Britain refuses to adopt EU AI rules, complicating a post-Brexit reset	4bcf0b5e	uk,european union,artificial intelligence,brexit,regulation
+2026-11-13	Burnham warns of 'long nights ahead' as a UK-EU summit looms	09d56057	uk,burnham,european union,summit,negotiations
+2026-11-13	Update: US envoys Witkoff and Kushner meet Putin in Moscow and agree to keep Ukraine talks going	5f4498cb	russia,ukraine,putin,witkoff,peace talks
+2026-11-13	Trump's 'Board of Peace' rebukes Israel over its response to Gaza flooding	1822ed5f	gaza,israel,board of peace,flooding,ceasefire
+2026-11-13	UN chief says 'the climate crisis is outrunning us' as COP31 bargains in Turkey	915bd9d6	cop31,guterres,climate,antalya,fossil fuels
+2026-11-13	European leaders meet in Dublin as drone and 'hybrid' attacks dominate security talks	3dab4f65	europe,dublin,security,drones,zelenskyy
+2026-11-13	Update: Nvidia CEO Jensen Huang resigns as CFO Colette Kress takes over on an interim basis	fdd33263	nvidia,jensen huang,colette kress,resignation,ceo
+2026-11-13	OpenAI raises about US$15 billion at a US$1.25 trillion valuation	42fcd3f6	openai,funding,valuation,ipo,ai
+2026-11-13	Anthropic sets an IPO price range of US$70 to US$78, implying a US$1.4 trillion valuation	e93ce5f0	anthropic,ipo,valuation,claude,listing
+2026-11-13	Norwest raises a US$4 billion fund to push deeper into AI	95eaef37	norwest,venture capital,ai fund,startups,investment
+2026-11-13	Cisco beats estimates and says AI-infrastructure revenue will double this year	b820553a	cisco,earnings,ai infrastructure,hyperscalers,revenue
+2026-11-13	Gold slips below US$4,000 to a one-week low as bets on a December Fed hike firm	de17c03e	gold,federal reserve,rate hike,dollar,markets
+2026-11-13	Wall Street slips as Nvidia's leadership shock rattles the AI trade	458af2db	wall street,s&p 500,nvidia,nasdaq,markets
+2026-11-13	Soaring OpenAI and Anthropic valuations stir investor fears of an AI startup correction	d3e571e0	openai,anthropic,valuations,venture capital,correction
+2026-11-13	🎾 Andreeva routs Sabalenka to reach her first WTA Finals semifinal	bca8d48f	andreeva,sabalenka,wta finals,indian wells,tennis
+2026-11-13	🎾 Svitolina rallies past Muchova to stay alive at the WTA Finals	a75b5b98	svitolina,muchova,wta finals,indian wells,tennis
+2026-11-13	🏏 Pakistan press for victory over Sri Lanka in the Rawalpindi Test	402163a0	pakistan,sri lanka,rawalpindi,test,cricket
+2026-11-13	🏎️ F1's final triple-header opens in Las Vegas with the runner-up fight still live	ddf4d24d	formula 1,las vegas,antonelli,verstappen,russell
+2026-11-13	Europe's Euclid telescope releases a trove mapping more than a billion cosmic objects	c6644a1f	euclid,esa,galaxies,dark universe,data release
+2026-11-13	A burst of two genes helps mouse hearts regenerate after a heart attack	1fe2d172	heart regeneration,myc,cyclin t1,mice,gene therapy
+2026-11-13	Global wildlife trade involves about 107,000 species, more than double past estimates	c3d7b031	wildlife trade,species,biodiversity,conservation,study
+2026-11-13	A new obesity definition based on organ function outperforms BMI	a140d557	obesity,bmi,organ function,mortality,study
