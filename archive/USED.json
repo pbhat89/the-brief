@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-09-14",
-      "topic_key": "pringles",
-      "text": "The inventor of the Pringles can was buried in one"
-    },
-    {
       "date": "2026-09-15",
       "topic_key": "gallium",
       "text": "Gallium is a metal that melts in your hand (m.p. ~29.8 C) yet has one of the longest liquid ranges of any element."
@@ -279,14 +274,14 @@
       "date": "2026-11-13",
       "topic_key": "tittle",
       "text": "The dot over an i or j is called a tittle"
+    },
+    {
+      "date": "2026-11-14",
+      "topic_key": "moon",
+      "text": "The Moon is drifting away from Earth by about 3.8 centimetres a year; measured since 1969 via Apollo laser reflectors, the retreat also gradually lengthens Earth's day."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-10-14",
-      "type": "logic",
-      "title_key": "truth-in-threes"
-    },
     {
       "date": "2026-10-15",
       "type": "quantitative",
@@ -416,14 +411,14 @@
       "date": "2026-11-13",
       "type": "lateral",
       "title_key": "running-home"
+    },
+    {
+      "date": "2026-11-14",
+      "type": "visual",
+      "title_key": "through-the-looking-glass"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-10-14",
-      "type": "grouping",
-      "title_key": "royal-flush"
-    },
     {
       "date": "2026-10-15",
       "type": "ladder",
@@ -553,6 +548,11 @@
       "date": "2026-11-13",
       "type": "anagram",
       "title_key": "anagram-trio"
+    },
+    {
+      "date": "2026-11-14",
+      "type": "spellingbee",
+      "title_key": "deep-end"
     }
   ]
 }

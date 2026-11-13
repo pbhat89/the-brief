@@ -4439,3 +4439,23 @@ is empty until the first run.
 2026-11-13	A burst of two genes helps mouse hearts regenerate after a heart attack	1fe2d172	heart regeneration,myc,cyclin t1,mice,gene therapy
 2026-11-13	Global wildlife trade involves about 107,000 species, more than double past estimates	c3d7b031	wildlife trade,species,biodiversity,conservation,study
 2026-11-13	A new obesity definition based on organ function outperforms BMI	a140d557	obesity,bmi,organ function,mortality,study
+2026-11-14	Woman, 36, jailed 13 years for filming Megan Khung's abuse and helping dispose of the body	f89b8086	singapore,megan khung,nouvelle chua,courts,jail
+2026-11-14	Eight teens aged 12 to 15 arrested over a late-night prank at a Hougang flat	87b3c8ef	singapore,hougang,teens,prank,police
+2026-11-14	Woman jailed 16 weeks after 71 cats were left in a Bukit Panjang flat, nine of them dead	9e8fd95a	singapore,bukit panjang,cats,animal cruelty,jail
+2026-11-14	Brazilian superfan rallies a 500-strong crowd for a Brazil-Japan watch party at The Kallang	5148f3b6	singapore,brazil,japan,football,kallang
+2026-11-14	India cancels a Norwegian journalist's visa hours before a Hyderabad summit	ff24b118	india,helle lyng,modi,press freedom,visa
+2026-11-14	Update: Europe wins a seat at Ukraine peace talks as Putin digs in on peacekeepers	14404be1	russia,ukraine,putin,europe,peace talks
+2026-11-14	Iran and the US stay locked in a 'no war, no peace' standoff	420f2fea	iran,united states,ceasefire,strait of hormuz,qatar
+2026-11-14	Trump says 'no deal necessary' with Iran as divisions surface in his team	be7229a7	iran,trump,jd vance,united states,diplomacy
+2026-11-14	Winter storms flood Gaza's tent camps as shelter runs short	c36cf693	gaza,flooding,tents,winter,shelter
+2026-11-14	OpenAI launches ChatGPT Wallet, letting AI agents shop and check out	1e7e4521	openai,chatgpt wallet,ai agents,payments,visa
+2026-11-14	Jensen Huang agrees to testify before Congress after resigning from Nvidia	8dc354a9	nvidia,jensen huang,congress,lutnick,testimony
+2026-11-14	Wall Street slips on Friday but still posts a winning week as Nvidia's slide deepens	6be25f48	wall street,s&p 500,nvidia,nasdaq,markets
+2026-11-14	US 10-year Treasury yield climbs above 5% as bets on another Fed hike firm	8b596d28	treasury yields,federal reserve,rate hike,ppi,gold
+2026-11-14	Pegula saves a match point to beat Noskova and set up a semifinal with Andreeva	14c1edbd	pegula,noskova,andreeva,wta finals,tennis
+2026-11-14	New Zealand thrash India by 244 runs to cut the ODI series to 2-1	af5af03e	new zealand,india,odi,matt henry,cricket
+2026-11-14	Update: Pakistan and Sri Lanka draw the first Test in Rawalpindi	f027864b	pakistan,sri lanka,rawalpindi,test,cricket
+2026-11-14	Update: Hamilton closes to within a point of Russell in F1's fight for second	96748489	formula 1,hamilton,russell,verstappen,las vegas
+2026-11-14	More than a quarter of cactus species risk losing most of their range to drought	f94ab4d1	cactus,drought,climate change,extinction,study
+2026-11-14	Scientists map 26 million cells to build the most detailed brain basal-ganglia atlas yet	32839a56	basal ganglia,brain atlas,neuroscience,cells,study
+2026-11-14	Real-world data show RSV vaccines sharply cutting infant hospitalisations	7e91486f	rsv,vaccine,infants,hospitalisations,study
