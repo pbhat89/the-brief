@@ -5,12 +5,14 @@ import assert from 'node:assert/strict';
 import {chromium} from 'playwright';
 import worker from '../src/worker.js';
 import {REPORTS} from '../src/reports.js';
-// Use the newest shipped original for the positive case; the next day has no report.
+import {READER_DATES} from '../src/reader-dates.js';
+// Use the newest companion for the positive case; tomorrow may have canonical HTML only.
 const fixtureDay=REPORTS.map(r=>r.id).sort().at(-1);
 assert.match(fixtureDay,/^\d{4}-\d{2}-\d{2}$/);
 assert.ok(REPORTS.find(r=>r.id===fixtureDay)?.original, 'Newest report must provide the positive original-reader fixture');
 const fixtureInstant=fixtureDay+'T12:00:00Z';
 const previousDay=new Date(Date.parse(fixtureInstant)-86400000).toISOString().slice(0,10);
+const nextDay=new Date(Date.parse(fixtureInstant)+86400000).toISOString().slice(0,10);
 const fixtureDate=new Date(fixtureDay+'T00:00:00Z');
 const weekStart=new Date(+fixtureDate-((fixtureDate.getUTCDay()+6)%7)*86400000).toISOString().slice(0,10);
 const server=http.createServer(async(req,res)=>{const r=await worker.fetch(new Request('http://127.0.0.1:9881'+req.url),{});res.writeHead(r.status,Object.fromEntries(r.headers));res.end(Buffer.from(await r.arrayBuffer()));});
@@ -39,7 +41,8 @@ try{
   assert.equal(await page.locator('.log-completed-item>span').evaluate(e=>getComputedStyle(e).textDecorationLine),'line-through');
   await page.getByRole('button',{name:'Undo No smoke',exact:true}).click();assert.ok(await page.locator('#log-check-noSmoke').isVisible());
   await page.locator('#log-check-noSmoke').click();await page.locator('#celebration-close').click();await page.locator('#tab-latest').click();
-  const quote=await page.locator('#daily-quote').innerText();await page.clock.fastForward(4*3600000+61000);assert.notEqual(await page.locator('#daily-quote').innerText(),quote);assert.ok(await page.locator('#today-empty').isVisible());assert.ok(!(await page.locator('#today-read').isVisible()));assert.ok(!(await page.locator('#listening').isVisible()));
+  const quote=await page.locator('#daily-quote').innerText();await page.clock.fastForward(4*3600000+61000);assert.notEqual(await page.locator('#daily-quote').innerText(),quote);assert.ok(await page.locator('#today-empty').isVisible());assert.equal(await page.locator('#today-read').isVisible(),READER_DATES.includes(nextDay));assert.ok(!(await page.locator('#listening').isVisible()));
+  if(READER_DATES.includes(nextDay)){await page.locator('#today-read').click();assert.equal(await page.locator('#tab-brief').getAttribute('aria-selected'),'true');assert.equal(await page.locator('#brief-date').inputValue(),nextDay);}
   assert.equal(saves,0);await page.reload();await page.locator('#player').waitFor({state:'visible'});assert.ok(!(await page.locator('#logbook-celebration').isVisible()));await page.locator('#logout').click();await page.locator('#login').waitFor({state:'visible'});assert.equal(await page.locator('#celebration-detail').innerText(),'');assert.deepEqual(errors,[]);await page.close();
  }
  console.log('PASS: Today/Previous separation, same-day original reader/back, Singapore midnight rollover, responsive reflection, reduced-motion modal, keyboard focus/Escape, strike/undo, reload/Lock; synthetic data only.');
