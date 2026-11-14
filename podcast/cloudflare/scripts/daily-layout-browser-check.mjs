@@ -30,6 +30,13 @@ try{
   assert.equal(await page.locator('#title').innerText(),'Today fixture');assert.equal(await page.locator('#episodes button').count(),0);
   assert.ok(await page.locator('#play').isVisible());assert.ok(await page.locator('#today-read').isVisible());
   assert.ok(await page.locator('body').evaluate(e=>e.scrollWidth<=innerWidth));
+  assert.equal(await page.locator('body').evaluate(e=>getComputedStyle(e).backgroundColor),'rgb(7, 22, 19)');
+  assert.equal(await page.locator('#motion-toggle').isDisabled(),reducedMotion==='reduce');
+  await page.evaluate(()=>document.body.classList.add('playing'));
+  if(reducedMotion==='reduce')assert.equal(await page.locator('.outer-orbit').evaluate(e=>getComputedStyle(e).animationName),'none');
+  else{await page.locator('#motion-toggle').click();assert.equal(await page.locator('.outer-orbit').evaluate(e=>getComputedStyle(e).animationName),'none');await page.locator('#motion-toggle').click();assert.equal(await page.locator('.outer-orbit').evaluate(e=>getComputedStyle(e).animationName),'orbit-drift');}
+  await page.evaluate(()=>document.body.classList.remove('playing'));
+
   await page.screenshot({path:`qa-original/${width}-${reducedMotion}-today.png`,fullPage:true});
   await page.locator('#today-read').click();await page.frameLocator('#reader-original-frame').locator('.title').waitFor();await page.locator('#reader-back').click();assert.equal(await page.locator('#tab-latest').getAttribute('aria-selected'),'true');
   await page.locator('#tab-previous').click();await page.locator('#previous-audio button').filter({hasText:'Earlier fixture'}).click();assert.equal(await page.locator('#tab-previous').getAttribute('aria-selected'),'true');assert.ok(await page.locator('#listening').isVisible());
