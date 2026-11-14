@@ -89,7 +89,7 @@ test('a user action after Singapore midnight refreshes dates before toggling the
  const h=await opened();h.setDate('2026-10-19T16:01:00Z');h.setHandler(async()=>h.respond(state({today:'2026-10-20',startDate:TODAY,weekStart:TODAY})));h.find('#log-check-noSmoke').onclick();h.find('#celebration-close').onclick();await settle();assert.equal(h.run('logbookState.today'),'2026-10-20');assert.equal(h.find('#logbook-day-title').textContent,'Tuesday');assert.equal(h.run('logbookDrafts.get("2026-10-19").habits.noSmoke'),undefined);assert.equal(h.requests.filter(r=>r.options.method==='PUT').length,0);
 });
 test('no browser persistence, external analytics or habit reminder scheduler is introduced',()=>{
- assert.ok(!JS.includes('localStorage'));assert.ok(!JS.includes('sessionStorage'));assert.ok(!JS.includes('indexedDB'));assert.ok(!JS.includes('Notification'));assert.ok(!LOGBOOK_JS.includes('setInterval'));assert.equal(flat(model.savePayload(TODAY)).version,0);
+ assert.ok(!LOGBOOK_JS.includes('localStorage'));assert.deepEqual([...JS.matchAll(/localStorage\.(?:getItem|setItem)\('([^']+)'/g)].map(m=>m[1]),['brief-reader-v1','brief-reader-v1']);assert.ok(!JS.includes('sessionStorage'));assert.ok(!JS.includes('indexedDB'));assert.ok(!JS.includes('Notification'));assert.ok(!LOGBOOK_JS.includes('setInterval'));assert.equal(flat(model.savePayload(TODAY)).version,0);
 });
 
 test('dismissing celebration while changing tabs never steals keyboard focus',async()=>{

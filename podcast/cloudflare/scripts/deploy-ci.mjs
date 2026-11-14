@@ -6,6 +6,8 @@ import {spawnSync} from 'node:child_process';
 for(const k of ['CLOUDFLARE_API_TOKEN','CF_ACCOUNT_ID','CF_KV_ID','CF_WORKER_NAME'])if(!process.env[k])throw Error('Deployment configuration incomplete; no changes made.');
 if(!/^[a-f0-9]{32}$/.test(process.env.CF_ACCOUNT_ID)||!/^[a-f0-9]{32}$/.test(process.env.CF_KV_ID)||!/^[a-z0-9-]{1,63}$/.test(process.env.CF_WORKER_NAME))throw Error('Invalid deployment configuration.');
 if(process.env.AUDIO_EXPIRY_APPROVED!=='true')throw Error('Audio expiry approval must be explicitly configured.');
+const build=spawnSync(process.execPath,['scripts/build-reports.mjs'],{stdio:'inherit'});
+if(build.error||build.status!==0)throw Error('Canonical archive build failed; no changes deployed.');
 const dir=mkdtempSync(join(tmpdir(),'brief-deploy-'));
 try{
  const config={name:process.env.CF_WORKER_NAME,account_id:process.env.CF_ACCOUNT_ID,main:resolve('src/worker.js'),compatibility_date:'2026-10-18',workers_dev:true,preview_urls:false,kv_namespaces:[{binding:'EPISODES',id:process.env.CF_KV_ID}],durable_objects:{bindings:[{name:'AUTH',class_name:'Auth'}]},migrations:[{tag:'v1',new_sqlite_classes:['Auth']}],vars:{EXPIRY_APPROVED:'true'},triggers:{crons:['* * * * *']},observability:{enabled:false}};

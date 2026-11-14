@@ -1,15 +1,16 @@
+import {READER_DATES} from './reader-dates.js';
 import {REPORTS} from './reports.js';
 import {LOGBOOK_JS} from './logbook.js';
-export const JS='const REPORTS='+JSON.stringify(REPORTS)+';\n'+String.raw`
+export const JS='const READER_DATES='+JSON.stringify(READER_DATES)+';\n'+'const REPORTS='+JSON.stringify(REPORTS)+';\n'+String.raw`
 const $=s=>document.querySelector(s),audio=$('audio');
 let currentReport=null,reportReturn='previous';
 let csrf,context,analyser,frame,epoch=0,currentEpisode=null,viewing='latest',catalog={daily:[],personal:[]},selected={daily:null,personal:null},positions=new Map(),branding={},deleting=new Set(),removed=new Set();
-const tabs=['latest','previous','personal','logbook'];
+const tabs=['latest','previous','brief','personal','logbook'];
 const collectionOf=e=>e?.collection==='personal'?'personal':'daily';
 const episodeAvailable=e=>!e.deleted&&(collectionOf(e)==='personal'?e.retention==='manual'&&e.expires===null:Number.isFinite(e.expires)&&e.expires>Date.now()/1000);
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');
 function resetToLogin(message='Please unlock the player.') {
- epoch++; clearReport(); resetLogbook(); csrf=undefined; currentEpisode=null; catalog={daily:[],personal:[]}; selected={daily:null,personal:null}; positions.clear(); deleting.clear(); removed.clear(); branding={}; resetBranding(); document.body.classList.remove('unlocked'); document.body.classList.remove('reader');
+ epoch++; clearEmailBrief(); clearReport(); resetLogbook(); csrf=undefined; currentEpisode=null; catalog={daily:[],personal:[]}; selected={daily:null,personal:null}; positions.clear(); deleting.clear(); removed.clear(); branding={}; resetBranding(); document.body.classList.remove('unlocked'); document.body.classList.remove('reader');
  audio.pause(); audio.removeAttribute('src'); audio.load(); audio.playbackRate=1;
  cancelAnimationFrame(frame); document.body.classList.remove('playing');
  $('#orb').style.setProperty('--energy',1);
@@ -75,13 +76,42 @@ function resetBranding(){document.title='The Brief · Your daily perspective';$(
 function applyPersonalization(value){const p=value&&typeof value==='object'?value:{};const clean=(x,max)=>typeof x==='string'?x.replace(/[\x00-\x1f\x7f]/g,'').trim().slice(0,max):'';const brand=clean(p.brand,80);$('#brand-label').textContent=brand||'the brief';$('#brand-dot').hidden=!!brand;$('#brand-link').setAttribute('aria-label',brand?brand+' home':'The Brief home');document.title=brand?brand+' · Listen':'The Brief · Listen';renderDailyQuote();}
 function episodeDay(e){return /^\d{4}-\d{2}-\d{2}$/.test(e.edition||'')?e.edition:singaporeDay(e.created*1000);}
 function todayEpisode(){return catalog.daily.find(e=>episodeDay(e)===singaporeDay())||null;}
-function renderToday(){const report=REPORTS.find(r=>r.id===singaporeDay());$('#today-read').hidden=!report;$('#today-read-note').textContent=report?'Read today’s edition in its original design, or switch to the verified companion.':'Today’s written brief is not available yet. Earlier editions remain in Previous.';$('#today-read').onclick=()=>{if(report)openReport(report,'latest');};$('#today-empty').hidden=!!todayEpisode();}
+function renderToday(){const report=REPORTS.find(r=>r.id===singaporeDay()),canonical=READER_DATES.includes(singaporeDay());$('#today-read').hidden=!report&&!canonical;$('#today-read-note').textContent=report?'Read today’s edition in its original design, or switch to the verified companion.':canonical?'Today’s original email edition is ready in HTML Brief.':'Today’s written brief is not available yet. Earlier editions remain in Previous or HTML Brief.';$('#today-read').onclick=()=>{if(report)openReport(report,'latest');else if(canonical){emailBriefDate=singaporeDay();openTab('brief');}};$('#today-empty').hidden=!!todayEpisode();}
 // The first title segment is the editorial title. Technical annotations belong to metadata, not the heading.
 function episodeTitle(episode){return typeof episode.title==='string'&&episode.title.trim()?episode.title.split('·')[0].trim():'Daily brief';}
 function setControls(ready){for(const s of ['#play','#back','#forward','#seek','#speed'])$(s).disabled=!ready;}
-function showTab(name){viewing=name;document.body.classList[['previous','logbook'].includes(name)?'add':'remove']('archive');for(const n of tabs){$('#'+n).hidden=n!==name;$('#tab-'+n).setAttribute('aria-selected',String(n===name));$('#tab-'+n).setAttribute('tabindex',n===name?'0':'-1');}$('#listening').hidden=name==='logbook'||!!currentReport||!currentEpisode||(name==='personal'?collectionOf(currentEpisode)!=='personal':collectionOf(currentEpisode)!=='daily'||(name==='latest'&&episodeDay(currentEpisode)!==singaporeDay()));}
-function openTab(name){closeCelebration(false);if(currentReport){clearReport();document.body.classList.remove('reader');$('#viewer').hidden=true;$('#archive-list').hidden=false;}renderDailyQuote();renderToday();showTab(name);if(name==='logbook'){openLogbook();return;}if(name==='previous')return;const episode=name==='latest'?todayEpisode():selected.personal||catalog.personal[0];if(episode&&currentEpisode?.id!==episode.id)chooseEpisode(episode);}
+function showTab(name){viewing=name;document.body.classList[name==='brief'?'add':'remove']('reading-tab');document.body.classList[['previous','logbook'].includes(name)?'add':'remove']('archive');for(const n of tabs){$('#'+n).hidden=n!==name;$('#tab-'+n).setAttribute('aria-selected',String(n===name));$('#tab-'+n).setAttribute('tabindex',n===name?'0':'-1');}$('#listening').hidden=name==='brief'||name==='logbook'||!!currentReport||!currentEpisode||(name==='personal'?collectionOf(currentEpisode)!=='personal':collectionOf(currentEpisode)!=='daily'||(name==='latest'&&episodeDay(currentEpisode)!==singaporeDay()));}
+function openTab(name){closeCelebration(false);if(currentReport){clearReport();document.body.classList.remove('reader');$('#viewer').hidden=true;$('#archive-list').hidden=false;}renderDailyQuote();renderToday();showTab(name);if(name==='logbook'){openLogbook();return;}if(name==='brief'){openEmailBrief();return;}if(name==='previous')return;const episode=name==='latest'?todayEpisode():selected.personal||catalog.personal[0];if(episode&&currentEpisode?.id!==episode.id)chooseEpisode(episode);}
 for(const name of tabs){$('#tab-'+name).onclick=()=>openTab(name);$('#tab-'+name).onkeydown=e=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();const next=e.key==='Home'?tabs[0]:e.key==='End'?tabs.at(-1):tabs[(tabs.indexOf(name)+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length];openTab(next);$('#tab-'+next).focus();}};}
+
+// Only public canonical editions are read here. Local preferences contain no news or PIN.
+let emailBriefDate=null,emailBriefPrefs={mode:'original',theme:'original',scale:100};
+try{const saved=JSON.parse(localStorage.getItem('brief-reader-v1')||'null');if(saved){emailBriefPrefs.mode=saved.mode==='reader'?'reader':'original';emailBriefPrefs.theme=['light','sepia','dark'].includes(saved.theme)?saved.theme:'original';emailBriefPrefs.scale=Number.isFinite(saved.scale)?Math.min(180,Math.max(80,Math.round(saved.scale))):100;}}catch{}
+function clearEmailBrief(){$('#brief-frame').removeAttribute('src');$('#brief-frame').hidden=true;}
+function openEmailBrief(){
+ const select=$('#brief-date');select.replaceChildren();
+ const available=READER_DATES.filter(id=>id<=singaporeDay());
+ for(const id of available){const option=document.createElement('option');option.value=id;option.textContent=date(id+'T12:00:00+08:00');select.append(option);}
+ emailBriefDate=available.includes(emailBriefDate)?emailBriefDate:available[0]||null;
+ select.value=emailBriefDate||'';select.disabled=!emailBriefDate;renderEmailBrief();
+}
+function renderEmailBrief(){
+ const p=emailBriefPrefs;$('#brief-mode').value=p.mode;$('#brief-theme').value=p.theme;
+ $('#brief-size-label').textContent=p.scale+'%';$('#brief-smaller').disabled=p.scale<=80;$('#brief-larger').disabled=p.scale>=180;
+ const ready=!!emailBriefDate&&READER_DATES.includes(emailBriefDate);$('#brief-frame').hidden=!ready;$('#brief-source').hidden=!ready;
+ if(!ready){clearEmailBrief();$('#brief-note').textContent='No original HTML edition is available yet. Please check again after the daily brief arrives.';return;}
+ $('#brief-note').textContent=(emailBriefDate===singaporeDay()?'Today’s original edition. ':emailBriefDate===READER_DATES[0]?'Today’s edition is not available in the app yet. Showing the latest available: '+date(emailBriefDate+'T12:00:00+08:00')+'. ':'Original edition: '+date(emailBriefDate+'T12:00:00+08:00')+'. ')+(p.mode==='reader'?'All sections in one continuous read.':'Use the section tabs inside the brief.')+' Settings are saved on this browser.';
+ $('#brief-source').href='https://pbhat89.github.io/the-brief/archive/'+emailBriefDate+'.html';
+ $('#brief-frame').src='/originals/'+emailBriefDate+'.html?mode='+p.mode+'&theme='+p.theme+'&scale='+p.scale;
+}
+function saveEmailBriefPrefs(){try{localStorage.setItem('brief-reader-v1',JSON.stringify(emailBriefPrefs));}catch{}renderEmailBrief();}
+$('#brief-date').onchange=()=>{if(READER_DATES.includes($('#brief-date').value)){emailBriefDate=$('#brief-date').value;renderEmailBrief();}};
+$('#brief-mode').onchange=()=>{emailBriefPrefs.mode=$('#brief-mode').value==='reader'?'reader':'original';saveEmailBriefPrefs();};
+$('#brief-theme').onchange=()=>{emailBriefPrefs.theme=['light','sepia','dark'].includes($('#brief-theme').value)?$('#brief-theme').value:'original';saveEmailBriefPrefs();};
+$('#brief-smaller').onclick=()=>{emailBriefPrefs.scale=Math.max(80,emailBriefPrefs.scale-10);saveEmailBriefPrefs();};
+$('#brief-larger').onclick=()=>{emailBriefPrefs.scale=Math.min(180,emailBriefPrefs.scale+10);saveEmailBriefPrefs();};
+$('#brief-reset').onclick=()=>{emailBriefPrefs={mode:'original',theme:'original',scale:100};saveEmailBriefPrefs();};
+
 function card(title,meta,icon,action){const b=document.createElement('button');b.className='edition-card';const badge=document.createElement('span');badge.className='card-icon';badge.textContent=icon;badge.setAttribute('aria-hidden','true');const body=document.createElement('span');body.className='card-body';const name=document.createElement('span');name.className='card-title';name.textContent=title;const detail=document.createElement('span');detail.className='card-meta';detail.textContent=meta;const arrow=document.createElement('span');arrow.className='card-arrow';arrow.textContent='↗';arrow.setAttribute('aria-hidden','true');body.append(name);body.append(detail);b.append(badge);b.append(body);b.append(arrow);b.onclick=action;return b;}
 function chooseEpisode(e){
  if(removed.has(e.id)||!episodeAvailable(e)){error(Error('This recording has expired. Refresh to see available audio.'));return;}

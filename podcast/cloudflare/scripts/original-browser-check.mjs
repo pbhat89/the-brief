@@ -35,3 +35,6 @@ try{
  }
  console.log('PASS: 390px/1280px original design and local fonts, original/verified fact distinction, section selection, repeated view switching, missing original fallback, Back/Lock cleanup, no external network requests or page errors.');
 }finally{await browser?.close();await new Promise(r=>server.close(r));}
+
+// Run the standalone reader regressions after releasing the legacy preview server.
+await import('./reader-tab-browser-check.mjs');

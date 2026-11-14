@@ -7,6 +7,15 @@ import {extractReport} from './report-extractor.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
 const manifest=JSON.parse(fs.readFileSync(path.join(root,'reports.json'),'utf8'));
 const originals={};
+// Keep the standalone reader current independently of podcast companion publication.
+// Bound extra snapshots to the newest 14 issues; preserve existing companion history.
+const readerCandidates=fs.readdirSync(path.join(root,'../archive'))
+ .filter(name=>/^\d{4}-\d{2}-\d{2}\.html$/.test(name))
+ .map(name=>name.slice(0,-5)).sort().reverse().slice(0,14);
+const readerDates=[];
+for(const id of readerCandidates){try{originals[id]=extractOriginal(fs.readFileSync(path.join(root,'../archive',id+'.html'),'utf8'),id);readerDates.push(id);}catch(error){console.warn('Skipped unsupported original edition '+id+': '+error.message);}}
+fs.writeFileSync(path.join(root,'cloudflare/src/reader-dates.js'),'// Generated from canonical upstream HTML, independent of podcast reports.\nexport const READER_DATES='+JSON.stringify(readerDates)+';\n');
+
 const reports=manifest.reports.map(report=>{
  if(!/^reports\/[a-z0-9-]+\.html$/.test(report.report_url))throw Error('Unexpected public report path');
  const source='https://pbhat89.github.io/the-brief/podcast/'+report.report_url;

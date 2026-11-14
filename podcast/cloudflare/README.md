@@ -187,3 +187,26 @@ record, access, authentication, retention, or persistence migration is introduce
 `node scripts/daily-layout-browser-check.mjs` covers synthetic-only 390/1280-pixel
 views, motion preferences, focus/Escape, undo, same-day reading, Previous playback,
 and Singapore midnight rollover. It never accesses or changes owner task state.
+
+## HTML Brief reader
+
+The HTML Brief tab uses the canonical HTML linked by the original email, not the
+podcast companion. Original mode retains its design, news, source links, fact and
+puzzles with inert HTML/CSS section and answer controls. Reader mode shows all
+sections in a continuous column. Background and 80–180% text-size preferences
+are saved on this browser; no PIN, news, log-book or listening data is stored.
+
+The build includes the newest 14 archive issues independently of companions and
+preserves existing companion-original history. Unsupported standalone templates
+are skipped with a warning, never executed. Existing companion-template failures
+remain strict. Future dates are not offered before their Singapore date.
+
+The existing isolated original endpoint remains script-free, form-free and
+network-disabled. Presentation parameters are bounded numbers and fixed enums.
+No proxy, account, email or source-workflow change is introduced.
+
+The npm pretest/precheck/predev hooks and protected deploy-ci script rebuild the
+snapshot and dates from the checkout, so the normal daily archive push updates
+the tab. The existing original-browser-check also runs reader-tab-browser-check
+at 360/390/1280px with synthetic sessions. Optional BROWSER_EXECUTABLE selects
+an installed test browser. No production PIN is needed for testing.
