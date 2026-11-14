@@ -112,3 +112,12 @@ test('Previous tap plays in the gesture, reveals player, and same-card retry wor
  h.node('#tab-previous').onclick();await card.onclick();assert.equal(plays,3);
  h.audio.play=()=>Promise.reject(Error('Media unavailable'));await card.onclick();assert.match(h.node('#status').textContent,/Media unavailable/);assert.match(h.node('#error').textContent,/Media unavailable/);
 });
+
+test('Orbit preserves the tab strip and native playback while respecting reduced motion',async()=>{
+ const h=await unlocked();assert.equal(h.node('#motion-toggle').disabled,true);assert.equal(h.node('#motion-toggle').textContent,'Motion off · system preference');
+ h.run('Object.defineProperty(reduced,"matches",{value:false,configurable:true});syncMotion()');
+ assert.equal(h.node('#motion-toggle').disabled,false);assert.equal(h.node('#motion-toggle').attributes['aria-pressed'],'true');h.node('#motion-toggle').onclick();assert.equal(h.node('#motion-toggle').attributes['aria-pressed'],'false');
+ h.run('Object.defineProperty(reduced,"matches",{value:true,configurable:true});syncMotion()');assert.equal(h.node('#motion-toggle').disabled,true);
+ assert.ok(HTML.indexOf('class="toolbar"')<HTML.indexOf('id="listening"'));
+ assert.ok(HTML.includes('class="outer-orbit"'));assert.ok(!JS.includes('new AudioContext'));
+});

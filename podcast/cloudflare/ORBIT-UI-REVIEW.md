@@ -1,0 +1,7 @@
+# Orbit Tidal UI review
+
+UI-only adaptation of the approved Orbit design: the exact decorative SVG, Tidal palette, rounded surfaces and split editorial player hero. Keep the existing top tab strip in its original DOM position and keep all five labels and destinations: Today, Previous, HTML Brief, Personal Podcasts, Log book. No rail or bottom navigation, sample stories, sample forecasts, embedded demo audio or illustrative transcripts are carried into the production app.
+
+Native HTML audio playback remains unchanged from the Previous-tap fix. Motion is decorative rotation during playback, not measured speech amplitude. No microphone, AudioContext, media rerouting, media download or new analytics. The Motion button is session-local, and the OS Reduce Motion preference always wins, including when changed while the page is open. The original HTML iframe retains its own design, controls and sandbox; only surrounding app chrome is restyled.
+
+Local verification: 122 unit tests, repository privacy/contracts check, diff whitespace check and Wrangler dry-run pass (489.05 KiB gzipped). The existing daily browser test additionally checks palette, motion toggle, system reduced motion and the existing mobile playback/rollover regressions. Browser execution is blocked on the current executor by Chromium socket permissions; remote browser cannot reach this executor's localhost. Official PR browser CI must pass and its screenshots must be visually reviewed before merge. No production deployment is included or authorized by this PR.

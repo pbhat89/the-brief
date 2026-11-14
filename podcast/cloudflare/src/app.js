@@ -9,6 +9,11 @@ const tabs=['latest','previous','brief','personal','logbook'];
 const collectionOf=e=>e?.collection==='personal'?'personal':'daily';
 const episodeAvailable=e=>!e.deleted&&(collectionOf(e)==='personal'?e.retention==='manual'&&e.expires===null:Number.isFinite(e.expires)&&e.expires>Date.now()/1000);
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+let motionEnabled=true;
+function syncMotion(){const enabled=motionEnabled&&!reduced.matches;document.body.classList[enabled?'remove':'add']('motion-paused');$('#motion-toggle').setAttribute('aria-pressed',String(enabled));$('#motion-toggle').textContent=reduced.matches?'Motion off · system preference':enabled?'Motion on':'Motion off';$('#motion-toggle').disabled=reduced.matches;}
+$('#motion-toggle').onclick=()=>{motionEnabled=!motionEnabled;syncMotion();};
+reduced.addEventListener?.('change',syncMotion);syncMotion();
+
 function resetToLogin(message='Please unlock the player.') {
  epoch++; clearEmailBrief(); clearReport(); resetLogbook(); csrf=undefined; currentEpisode=null; catalog={daily:[],personal:[]}; selected={daily:null,personal:null}; positions.clear(); deleting.clear(); removed.clear(); branding={}; resetBranding(); document.body.classList.remove('unlocked'); document.body.classList.remove('reader');
  audio.pause(); audio.removeAttribute('src'); audio.load(); audio.playbackRate=1;
