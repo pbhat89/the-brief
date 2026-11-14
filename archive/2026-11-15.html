@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Sun, 15 November 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .wpuzzle-box{background:linear-gradient(135deg,#0e1a1a,#0d1620);border:1px solid #234a44;border-left:3px solid #16a085;padding:24px 28px;border-radius:2px}
+  .wptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#16a085;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .wpuzzle-box .puzzle-title{color:#cdeae3}
+  .wpuzzle-box .puzzle-how{color:#8fb8ac;background:#08140f;border-left-color:#1a6a5a}
+  .wpuzzle-box .puzzle-q{color:#dfeae6;font-family:'Source Sans 3',sans-serif}
+  .wpuzzle-box .answer{color:#bfe0d6}
+  .wpuzzle-box .answer .alabel{color:#16a085}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Sunday, 15 November 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Sunday, 15 November 2026 · 🔍 34 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eleven entries in this exact order:
+     id    : one of "sg" | "india" | "uk" | "geo" | "tech" | "biz" | "sports" | "misc" | "fun" | "puzzle" | "wpuzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 8 news tabs; fun/puzzle/wpuzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+
+   WORD_PUZZLE shape (separate, daily word game — NYT-style, static reveal):
+     type     : one of "Connections" | "Word Ladder" | "Anagram" | "Spelling Bee" | "Letter Boxed" | "Mini Crossword"
+     title    : short evocative name for the word puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle body; supports \n for line breaks (grids render as pre-formatted text)
+     answer   : the answer; supports \n for line breaks; appears inside its own toggle (id "wpans")
+============================================================================= */
+
+const SECTIONS = [
+  { id:"sg", title:"🇸🇬 Singapore", color:"#e74c3c", items:[
+    { headline:"Singapore bars ex-Megaspeed CEO Alice Huang and keeps six others under probe in the Nvidia chip saga", summary:"The Ministry of Home Affairs said on 12 November that Alice Huang was given a stern warning and barred from re-entering Singapore for giving police information she knew to be inaccurate to downplay her role at data-centre firm Megaspeed. She was not investigated for espionage, and probes into Megaspeed and six other individuals continue.", source:"SCMP", url:"https://www.scmp.com/week-asia/economics/article/3374256/megaspeed-ex-ceo-alice-huang-barred-singapore-amid-nvidia-scandal", date:"Nov 12", spectrum:null, bias:null },
+    { headline:"PM Wong joins the ASEAN summit in Manila as Trump presses the bloc on his 'Pax Silica' chip plan", summary:"Prime Minister Lawrence Wong is in Manila for the 49th ASEAN Summit from 15 November, where leaders aim to sign an ASEAN digital-economy agreement. The SCMP reports US President Donald Trump will push Southeast Asian states to join his 'Pax Silica' AI chip-supply initiative, so far signed only by Singapore and the Philippines; Singapore takes over the ASEAN chair in 2027.", source:"SCMP", url:"https://www.scmp.com/news/china/diplomacy/article/3374393/trump-press-southeast-asia-nations-join-pax-silica-asean-summit-manila", date:"Nov 14", spectrum:null, bias:null },
+    { headline:"Cyclist, 24, killed in Changi collision with a tipper truck, Singapore's second fatal cycling crash in a day", summary:"A 24-year-old male cyclist died after colliding with a tipper truck in Changi on 12 November, the second fatal cyclist accident within about 24 hours, renewing attention on road safety for cyclists.", source:"Mothership", url:"https://mothership.sg/2026/11/cyclist-tipper-truck-dies/", date:"Nov 12", spectrum:null, bias:null },
+    { headline:"Man, 32, from China charged with repeatedly trying to bribe ICA officers to enter Singapore", summary:"A 32-year-old Chinese national allegedly tried on multiple occasions to bribe Immigration and Checkpoints Authority officers and airport staff in a bid to gain entry into Singapore.", source:"Mothership", url:"https://mothership.sg/2026/11/chinese-bribe-ica-gain-entry-into-spore/", date:"Nov 13", spectrum:null, bias:null },
+  ]},
+  { id:"india", title:"🇮🇳 India", color:"#e67e22", items:[
+    { headline:"Yes Bank asks India's Supreme Court to review a ruling reviving US$893 million in written-down bonds", summary:"Yes Bank filed on 14 November for a review of the Supreme Court's 15 October judgment, which set aside the 2020 permanent write-down of its Additional Tier 1 bonds. The bank warns the ruling could cut a key capital ratio by about 2.5 percentage points.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-11-14/yes-bank-seeks-india-top-court-review-of-893-million-bond-order", date:"Nov 14", spectrum:null, bias:null },
+    { headline:"Modi ally Chandrababu Naidu warns India's growth is not keeping pace with young people's expectations", summary:"Andhra Pradesh Chief Minister N. Chandrababu Naidu, a key partner in Narendra Modi's governing coalition, told Bloomberg that growth is 'visible, but not enough' to meet rising expectations, especially among the young.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-11-12/modi-ally-chandrababu-naidu-warns-india-growth-youth-expectations", date:"Nov 12", spectrum:null, bias:null },
+    { headline:"India's US$5.4 trillion equity market rebounds, brightening the outlook for exchanges and brokerages", summary:"Indian stocks are recovering after sliding to an 18-month low earlier in the month, with Bloomberg reporting on 13 November that renewed foreign inflows are lifting the outlook for the country's exchanges and brokerages.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-11-13/india-equity-surge-brightens-outlook-for-exchanges-brokerages", date:"Nov 13", spectrum:null, bias:null },
+    { headline:"India and the US say a trade deal could be signed in December as tariff talks 'largely conclude'", summary:"CNBC reported on 12 November that India and the United States could sign a trade agreement on the sidelines of the December G20 summit, with Commerce Minister Piyush Goyal saying negotiations have largely concluded; a February deal had already cut US reciprocal tariffs on India to 18%.", source:"CNBC", url:"https://www.cnbc.com/2026/11/12/us-india-trade-tariffs-trump-modi.html", date:"Nov 12", spectrum:null, bias:null },
+  ]},
+  { id:"uk", title:"🇬🇧 UK News", color:"#3949ab", items:[
+    { headline:"UK PM Burnham plays down his own talk of rejoining the EU, insisting 'no one's talking about rejoining'", summary:"Prime Minister Andy Burnham sought on 14 November to quiet speculation stirred by his own remarks about closer EU ties, saying no one is proposing to rejoin the bloc, as a UK-EU summit in Brussels approaches on 20 November.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-11-14/burnham-tries-to-hush-down-his-own-talk-of-rejoining-the-eu", date:"Nov 14", spectrum:null, bias:null },
+    { headline:"Burnham warns of 'long nights ahead' as a UK-EU summit looms in Brussels", summary:"Ahead of the 20 November UK-EU summit, Burnham warned of difficult negotiations over a closer post-Brexit relationship, as cabinet divisions over immigration and regulatory alignment persist.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-11-12/burnham-warns-of-long-nights-ahead-as-uk-eu-summit-looms", date:"Nov 12", spectrum:null, bias:null },
+    { headline:"Burnham commits to unveiling his 10-year plan for Britain before the Christmas recess", summary:"The prime minister said his long-promised 10-year plan will now be published before Parliament's Christmas recess, after earlier hints that it could slip into the new year.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-11-11/burnham-says-his-10-year-plan-will-now-arrive-before-year-end", date:"Nov 11", spectrum:null, bias:null },
+    { headline:"At COP31, Burnham reaffirms Britain's 2050 net-zero target and backs a global electrification push", summary:"Speaking at the COP31 summit in Antalya, Burnham recommitted the UK to reaching net zero by 2050 and backed Turkey's electrification pledge, positioning Britain on climate as the United States again stayed away from the talks.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-11-12/uk-promises-climate-leadership-in-backing-electrification-at-cop", date:"Nov 12", spectrum:null, bias:null },
+  ]},
+  { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
+    { headline:"Update: Ukraine rejects a US-floated 'Donbas for NATO' trade as Abu Dhabi talks yield only a prisoner swap", summary:"Volodymyr Zelenskyy said US mediators asked during this week's Abu Dhabi talks whether Ukraine would withdraw from Donbas in exchange for NATO membership, and he refused. The sides agreed a major prisoner exchange but made no progress toward ending the war.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/11/14/three-killed-in-russia-as-ukraine-claims-us-floated-nato-membership-option", date:"Nov 14", spectrum:null, bias:null },
+    { headline:"Russia and Ukraine trade heavy overnight strikes even as the US diplomatic push continues", summary:"Russia's defence ministry said it intercepted 1,198 Ukrainian drones overnight across more than 15 regions, while a Ukrainian drone strike in Belgorod killed a mother, father and their toddler, underscoring that the fighting has not abated during the talks.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/11/13/russia-and-ukraine-report-overnight-attacks-amid-us-diplomatic-push", date:"Nov 13", spectrum:null, bias:null },
+    { headline:"Israeli strike on Gaza's Nasser Hospital kills six, including a surgeon and a 13-year-old boy", summary:"Palestinian officials said an Israeli strike on the surgical unit of Nasser Hospital in Khan Younis on 12 November killed six people and wounded about 40. Israel's military said it targeted a Hamas commander it alleged was hiding there, a claim hospital staff and patients rejected.", source:"CNN", url:"https://www.cnn.com/2026/11/12/middleeast/israeli-strike-gaza-hospital-kills-six-intl", date:"Nov 12", spectrum:null, bias:null },
+    { headline:"EU demands Israel grant 'immediate, unimpeded' aid access to Gaza as winter floods deepen the crisis", summary:"The European Union urged Israel on 14 November to reopen all Gaza crossings and let aid groups in, after heavy rain affected at least 106,000 people, according to UNICEF, and strikes continued despite a nominal ceasefire.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/11/14/eu-calls-for-immediate-humanitarian-access-to-gaza", date:"Nov 14", spectrum:null, bias:null },
+  ]},
+  { id:"tech", title:"💻 Tech & AI", color:"#27ae60", items:[
+    { headline:"Update: Nvidia's US$10 billion Anthropic share pledge comes under scrutiny as the IPO nears", summary:"An amended prospectus shows Nvidia agreed to buy about US$10 billion more of Anthropic stock immediately after the AI lab's offering. Anthropic plans to list on Nasdaq under the ticker 'ANT' around 19 November, in an IPO widely seen as a test for the AI trade.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-11-12/nvidia-s-10-billion-anthropic-ipo-pledge-in-focus-with-ceo-exit", date:"Nov 12", spectrum:null, bias:null },
+    { headline:"Two major investors urge Nvidia's board to consider bringing back Jensen Huang", summary:"Days after Huang resigned amid affair allegations, two large Nvidia shareholders wrote to the board asking it to weigh his potential return, as CFO Colette Kress serves as interim chief executive.", source:"CNBC", url:"https://www.cnbc.com/2026/11/14/nvidia-investors-jensen-huang-return-board-letter.html", date:"Nov 14", spectrum:null, bias:null },
+    { headline:"Researchers say China's top open AI models bear fingerprints of export-banned Nvidia chips", summary:"New analysis claims leading open-weight models from Chinese firms, including DeepSeek's V4 and Moonshot's Kimi K3, show signs of training on restricted Nvidia Blackwell chips. US lawmakers are separately opening an investigation into approvals of Nvidia AI-chip exports to China-linked companies.", source:"TechCrunch", url:"https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/", date:"Nov 13", spectrum:null, bias:null },
+    { headline:"Hugging Face CEO vows to keep fighting for open-source AI after Jensen Huang's exit", summary:"Clement Delangue said Hugging Face will keep championing open-source models following Huang's departure from Nvidia, which has agreed a US$12.9 billion deal to buy the platform that is now under US Justice Department antitrust review.", source:"TechCrunch", url:"https://techcrunch.com/2026/11/12/hugging-face-ceo-vows-to-keep-fighting-for-open-source-ai-after-jensen-huangs-exit/", date:"Nov 12", spectrum:null, bias:null },
+  ]},
+  { id:"biz", title:"📈 Business & Markets", color:"#8e44ad", items:[
+    { headline:"Apple's market value tops US$5.2 trillion as investors seek shelter from the AI selloff", summary:"Apple set an intraday record on 13 November, pushing its market capitalisation above US$5.2 trillion, as money rotated out of AI-exposed chipmakers; the Nasdaq still logged its best week since August.", source:"CNBC", url:"https://www.cnbc.com/2026/11/13/stocks-moving-the-most-today-live-updates.html", date:"Nov 13", spectrum:null, bias:null },
+    { headline:"Cerebras rallies after a surprise quarterly profit and a new Microsoft deal", summary:"AI-chip maker Cerebras jumped after reporting an unexpected third-quarter profit and announcing a newly signed agreement with Microsoft, a bright spot in an otherwise jittery week for semiconductor stocks.", source:"CNBC", url:"https://www.cnbc.com/2026/11/12/cerebras-systems-cbrs-q3-earnings-report-2026.html", date:"Nov 12", spectrum:null, bias:null },
+    { headline:"Modine shares jump about 25% on a report that Samsung is weighing an acquisition", summary:"Thermal-management firm Modine surged roughly 25% on 13 November after reports that Samsung Electronics is in talks to buy the company, with a deal potentially reached in the coming weeks.", source:"CNBC", url:"https://www.cnbc.com/2026/11/13/stocks-moving-the-most-today-live-updates.html", date:"Nov 13", spectrum:null, bias:null },
+    { headline:"US October producer prices rise 0.3%, cooler than expected, easing inflation worries", summary:"October's producer price index rose 0.3% month over month, below the 0.4% consensus, helping stock futures open higher and tempering fears about the pace of price increases.", source:"CNBC", url:"https://www.cnbc.com/2026/11/13/stocks-moving-the-most-today-live-updates.html", date:"Nov 13", spectrum:null, bias:null },
+  ]},
+  { id:"sports", title:"🎾🏏🏎️ Sports", color:"#c0392b", items:[
+    { headline:"🎾 ATP Finals begin in Turin without injured defending champion Jannik Sinner", summary:"The season-ending Nitto ATP Finals opened at Turin's Inalpi Arena on 15 November, with world number one Alexander Zverev facing Rafael Jodar; Carlos Alcaraz starts against Frances Tiafoe on Monday, while home favourite Sinner misses the event with a knee injury.", source:"ATP Tour", url:"https://www.atptour.com/en/news/zverev-jodar-shelton-fils-nitto-atp-finals-2026-day-1-preview", date:"Nov 15", spectrum:null, bias:null },
+    { headline:"🎾 Svitolina, Andreeva, Pegula and Noskova reach the WTA Finals semifinals in Indian Wells", summary:"Elina Svitolina stunned Aryna Sabalenka 6-3, 3-6, 6-1 to join Mirra Andreeva, Jessica Pegula and Linda Noskova in the last four at the US$10 million WTA Finals, which moved to Indian Wells this year; the title is decided this weekend.", source:"ESPN", url:"https://www.espn.com/tennis/story/_/id/50475470/elina-svitolina-beats-aryna-sabalenka-3-sets-reach-semifinals-wta-finals", date:"Nov 13", spectrum:null, bias:null },
+    { headline:"🏏 India aim to seal the ODI series against New Zealand in the Mount Maunganui decider", summary:"Leading the series 2-1, India meet New Zealand in the final ODI at Bay Oval on 15 November, days after Matt Henry's 6-27 and Will Young's century powered the hosts to a 244-run win that kept the series alive.", source:"ESPNcricinfo", url:"https://www.espncricinfo.com/series/india-in-new-zealand-2026-27-1539421/new-zealand-vs-india-5th-odi-1539441/live-cricket-score", date:"Nov 15", spectrum:null, bias:null },
+    { headline:"🏎️ With Antonelli's title sealed, Mercedes and Ferrari take their constructors' fight into F1's final triple-header", summary:"Kimi Antonelli has already wrapped up the drivers' championship as F1's youngest world champion, so the live battle heading into the Las Vegas, Qatar and Abu Dhabi rounds is the constructors' title, where Mercedes lead Ferrari.", source:"Formula 1", url:"https://www.formula1.com/en/latest/article/points-permutations-when-could-mercedes-win-the-2026-f1-teams-championship.73hdGVkJl9FHxEvDNlNZKq", date:"Nov 13", spectrum:null, bias:null },
+  ]},
+  { id:"misc", title:"🔬 Other Miscellaneous News", color:"#1abc9c", items:[
+    { headline:"Intellia's in-body CRISPR therapy nears what could be the first FDA approval for editing genes inside the body", summary:"Nature reported that Intellia's lonvo-z, which edits genes directly inside the body rather than in cells removed and reinfused, could become the first such CRISPR medicine, with an FDA decision expected by 10 March; a phase 3 trial cut disease attacks by 87% over six months.", source:"Nature", url:"https://www.nature.com/articles/d41586-026-03705-9", date:"Nov 12", spectrum:null, bias:null },
+    { headline:"Astronomers spot an invisible object that may be a rare supermassive neutron star", summary:"Scientific American reported that a red giant in a distant system appears to orbit a dark companion; after ruling out alternatives, researchers think it is most likely a neutron star heavier than theory usually allows, though its near-circular orbit leaves a black hole possible.", source:"Scientific American", url:"https://www.scientificamerican.com/article/newfound-invisible-object-in-space-could-be-a-rare-supermassive-neutron-star/", date:"Nov 11", spectrum:null, bias:null },
+    { headline:"Eli Lilly's daily weight-loss pill sharply reduces sleep-apnea severity in a trial", summary:"Scientific American reported that Eli Lilly's oral GLP-1 drug orforglipron (Foundayo) cut obstructive sleep-apnea severity by about 27.5% in overweight or obese participants; the company plans to seek FDA approval for the sleep-apnea use before year-end.", source:"Scientific American", url:"https://www.scientificamerican.com/article/eli-lilly-shows-glp-1-weight-loss-pill-foundayo-can-dramatically-improve-sleep-apnea/", date:"Nov 9", spectrum:null, bias:null },
+    { headline:"Forecasters warn the strengthening El Nino could be the strongest on record", summary:"Nature reported that the El Nino now building in the Pacific is on track to be the largest in at least 150 years, with forecasts giving a more than 90% chance it surpasses every event since records began in the 1870s, raising risks of extreme heat, drought and flooding.", source:"Nature", url:"https://www.nature.com/articles/d41586-026-02293-y", date:"Nov 2026", spectrum:null, bias:null },
+  ]},
+  { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
+  { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
+  { id:"wpuzzle", title:"🔤 Word Puzzles", color:"#16a085", custom:"wpuzzle" },
+];
+
+const FUN_FACT = {
+  text: "Most of the 'wasabi' served outside Japan — and even in many Japanese restaurants abroad — is not wasabi at all. Real wasabi (Wasabia japonica) is notoriously slow and difficult to grow, so what usually reaches the plate is a cheaper paste of horseradish, mustard and green food colouring. Genuine grated wasabi is also fleeting: its sharp aroma begins to fade within about 15 minutes.",
+  tag: "Category · Food & Botany"
+};
+
+const PUZZLE = {
+  type: "Logic",
+  title: "Photo Finish",
+  how: "Work out who must be last first, then use the 'one place behind' clue to fix the rest.",
+  question: "Four runners — Ava, Ben, Cara and Dan — finished a race in positions 1 to 4, with no ties.\n\n1. Ava finished exactly one place behind Dan.\n2. Cara finished ahead of Dan.\n3. Ben did not finish on the podium (the top three).\n\nWhat was the finishing order, 1st to 4th?",
+  answer: "1st Cara, 2nd Dan, 3rd Ava, 4th Ben.\n\nClue 3 puts Ben 4th, so positions 1-3 belong to Cara, Dan and Ava. From clue 1, Ava is one place behind Dan; from clue 2, Cara is ahead of Dan. The only arrangement that fits is Dan 2nd and Ava 3rd, which forces Cara into 1st — giving Cara, Dan, Ava, Ben."
+};
+
+const WORD_PUZZLE = {
+  type: "Letter Boxed",
+  title: "Corner to Corner",
+  how: "Link words across the square using every letter; you cannot use two letters from the same side in a row, and each new word must start with the previous word's last letter. Aim to finish in two words.",
+  question: "The square (3 letters per side, 12 letters in all):\n\nTop:    D · O · R\nLeft:   I · M · E\nRight:  P · A · K\nBottom: L · T · S\n\nFind a two-word solution that uses all 12 letters.",
+  answer: "DIPLOMAT → TREKS\n\nDIPLOMAT uses D-I-P-L-O-M-A-T; the second word must begin with T, and TREKS adds R-E-K-S, so together they use all 12 letters. No two consecutive letters in either word sit on the same side of the box."
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function renderWordPuzzle(){
+  let h='<div class="sec-title">🔤 Word Puzzle of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#16a085,transparent)"></div>';
+  h+='<div class="wpuzzle-box"><span class="wptype">'+WORD_PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+WORD_PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+WORD_PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+WORD_PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this,\'wpans\')">Show Answer</button>';
+  h+='<div class="answer" id="wpans"><span class="alabel">Answer</span>'+WORD_PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn,ansId){var a=document.getElementById(ansId||'ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else if(sec.custom==="wpuzzle"){div.innerHTML=renderWordPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>

@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-09-15",
-      "topic_key": "gallium",
-      "text": "Gallium is a metal that melts in your hand (m.p. ~29.8 C) yet has one of the longest liquid ranges of any element."
-    },
-    {
       "date": "2026-09-17",
       "topic_key": "trees",
       "text": "There are more trees on Earth (~3 trillion) than stars in the Milky Way (~100-400 billion)."
@@ -279,14 +274,14 @@
       "date": "2026-11-14",
       "topic_key": "moon",
       "text": "The Moon is drifting away from Earth by about 3.8 centimetres a year; measured since 1969 via Apollo laser reflectors, the retreat also gradually lengthens Earth's day."
+    },
+    {
+      "date": "2026-11-15",
+      "topic_key": "wasabi",
+      "text": "Most 'wasabi' served outside Japan is not wasabi but a dyed paste of horseradish and mustard; real Wasabia japonica is hard to grow and loses its pungency within ~15 minutes of grating."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-10-15",
-      "type": "quantitative",
-      "title_key": "cutting-the-chain"
-    },
     {
       "date": "2026-10-16",
       "type": "lateral",
@@ -416,14 +411,14 @@
       "date": "2026-11-14",
       "type": "visual",
       "title_key": "through-the-looking-glass"
+    },
+    {
+      "date": "2026-11-15",
+      "type": "logic",
+      "title_key": "photo-finish"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-10-15",
-      "type": "ladder",
-      "title_key": "raining-cats-and-dogs"
-    },
     {
       "date": "2026-10-16",
       "type": "anagram",
@@ -553,6 +548,11 @@
       "date": "2026-11-14",
       "type": "spellingbee",
       "title_key": "deep-end"
+    },
+    {
+      "date": "2026-11-15",
+      "type": "letterboxed",
+      "title_key": "corner-to-corner"
     }
   ]
 }

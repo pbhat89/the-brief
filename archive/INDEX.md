@@ -4459,3 +4459,35 @@ is empty until the first run.
 2026-11-14	More than a quarter of cactus species risk losing most of their range to drought	f94ab4d1	cactus,drought,climate change,extinction,study
 2026-11-14	Scientists map 26 million cells to build the most detailed brain basal-ganglia atlas yet	32839a56	basal ganglia,brain atlas,neuroscience,cells,study
 2026-11-14	Real-world data show RSV vaccines sharply cutting infant hospitalisations	7e91486f	rsv,vaccine,infants,hospitalisations,study
+2026-11-15	Singapore bars ex-Megaspeed CEO Alice Huang and keeps six others under probe in the Nvidia chip saga	44039f4c	singapore,alice huang,megaspeed,nvidia,mha
+2026-11-15	PM Wong joins the ASEAN summit in Manila as Trump presses the bloc on his 'Pax Silica' chip plan	73937936	singapore,wong,asean summit,manila,pax silica
+2026-11-15	Cyclist, 24, killed in Changi collision with a tipper truck, Singapore's second fatal cycling crash in a day	28521d33	singapore,changi,cyclist,tipper truck,death
+2026-11-15	Man, 32, from China charged with repeatedly trying to bribe ICA officers to enter Singapore	d05d71db	singapore,ica,bribe,china,entry
+2026-11-15	Yes Bank asks India's Supreme Court to review a ruling reviving US$893 million in written-down bonds	205cb006	india,yes bank,supreme court,at1 bonds,review
+2026-11-15	Modi ally Chandrababu Naidu warns India's growth is not keeping pace with young people's expectations	43728592	india,chandrababu naidu,modi,growth,youth
+2026-11-15	India's US$5.4 trillion equity market rebounds, brightening the outlook for exchanges and brokerages	472c96bc	india,equity market,exchanges,foreign inflows,rebound
+2026-11-15	India and the US say a trade deal could be signed in December as tariff talks 'largely conclude'	22f1b33a	india,united states,trade deal,goyal,tariffs
+2026-11-15	UK PM Burnham plays down his own talk of rejoining the EU, insisting 'no one's talking about rejoining'	36b33f30	uk,burnham,eu,rejoin,brexit
+2026-11-15	Burnham warns of 'long nights ahead' as a UK-EU summit looms in Brussels	83e8e87c	uk,burnham,eu summit,brussels,brexit
+2026-11-15	Burnham commits to unveiling his 10-year plan for Britain before the Christmas recess	5bd22a41	uk,burnham,10-year plan,parliament,economy
+2026-11-15	At COP31, Burnham reaffirms Britain's 2050 net-zero target and backs a global electrification push	21cc0459	uk,burnham,cop31,net zero,electrification
+2026-11-15	Update: Ukraine rejects a US-floated 'Donbas for NATO' trade as Abu Dhabi talks yield only a prisoner swap	3deaa245	ukraine,russia,donbas,nato,abu dhabi talks
+2026-11-15	Russia and Ukraine trade heavy overnight strikes even as the US diplomatic push continues	17b4b270	russia,ukraine,drones,belgorod,strikes
+2026-11-15	Israeli strike on Gaza's Nasser Hospital kills six, including a surgeon and a 13-year-old boy	cc654922	gaza,nasser hospital,israel,khan younis,strike
+2026-11-15	EU demands Israel grant 'immediate, unimpeded' aid access to Gaza as winter floods deepen the crisis	6630439b	gaza,european union,aid access,flooding,israel
+2026-11-15	Update: Nvidia's US$10 billion Anthropic share pledge comes under scrutiny as the IPO nears	ecf86b9e	nvidia,anthropic,ipo,nasdaq,investment
+2026-11-15	Two major investors urge Nvidia's board to consider bringing back Jensen Huang	492b645d	nvidia,jensen huang,investors,board,return
+2026-11-15	Researchers say China's top open AI models bear fingerprints of export-banned Nvidia chips	28dad429	nvidia,china,deepseek,blackwell,export controls
+2026-11-15	Hugging Face CEO vows to keep fighting for open-source AI after Jensen Huang's exit	48276a21	hugging face,open source,nvidia,delangue,antitrust
+2026-11-15	Apple's market value tops US$5.2 trillion as investors seek shelter from the AI selloff	5226f998	apple,market value,ai selloff,nasdaq,stocks
+2026-11-15	Cerebras rallies after a surprise quarterly profit and a new Microsoft deal	5d7e271e	cerebras,microsoft,earnings,ai chips,deal
+2026-11-15	Modine shares jump about 25% on a report that Samsung is weighing an acquisition	d09701c9	modine,samsung,acquisition,shares,deal
+2026-11-15	US October producer prices rise 0.3%, cooler than expected, easing inflation worries	d0c5ecf8	producer prices,ppi,inflation,october,economy
+2026-11-15	🎾 ATP Finals begin in Turin without injured defending champion Jannik Sinner	0ebf7921	atp finals,turin,zverev,alcaraz,sinner
+2026-11-15	🎾 Svitolina, Andreeva, Pegula and Noskova reach the WTA Finals semifinals in Indian Wells	96844568	wta finals,indian wells,svitolina,andreeva,pegula
+2026-11-15	🏏 India aim to seal the ODI series against New Zealand in the Mount Maunganui decider	2bab9192	india,new zealand,odi,mount maunganui,decider
+2026-11-15	🏎️ With Antonelli's title sealed, Mercedes and Ferrari take their constructors' fight into F1's final triple-header	49035d2e	formula 1,antonelli,mercedes,ferrari,constructors
+2026-11-15	Intellia's in-body CRISPR therapy nears what could be the first FDA approval for editing genes inside the body	7576dd56	crispr,intellia,fda,gene editing,in vivo
+2026-11-15	Astronomers spot an invisible object that may be a rare supermassive neutron star	3d39b940	neutron star,astronomy,red giant,dark companion,discovery
+2026-11-15	Eli Lilly's daily weight-loss pill sharply reduces sleep-apnea severity in a trial	d6bed17a	glp-1,orforglipron,sleep apnea,eli lilly,trial
+2026-11-15	Forecasters warn the strengthening El Nino could be the strongest on record	ddd257df	el nino,pacific,climate,record,extreme weather
