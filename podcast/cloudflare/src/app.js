@@ -122,6 +122,12 @@ function chooseEpisode(e){
  for(const c of e.chapters||[]){const b=document.createElement('button');b.textContent=time(c.start)+' · '+c.title;b.onclick=()=>audio.currentTime=c.start;$('#chapters').append(b);}
  showTab(kind==='personal'?'personal':episodeDay(e)===singaporeDay()?'latest':'previous');
 }
+function playPreviousEpisode(e){
+ chooseEpisode(e);
+ if(currentEpisode?.id!==e.id||!episodeAvailable(e))return;
+ $('#play').focus({preventScroll:true});$('#listening').scrollIntoView({block:'start',behavior:'auto'});
+ return startPlayback();
+}
 function personalCard(e,label){const row=document.createElement('div');row.className='episode-row';row.append(card(episodeTitle(e),label,'♪',()=>chooseEpisode(e)));const remove=document.createElement('button');remove.className='delete-episode';remove.textContent='Delete';remove.setAttribute('aria-label','Delete '+episodeTitle(e));remove.onclick=()=>deleteEpisode(e,remove);row.append(remove);return row;}
 async function deleteEpisode(e,button){
  if(deleting.has(e.id))return;
@@ -171,7 +177,7 @@ async function load(personalization={}){
  const active=data.episodes.filter(e=>episodeAvailable(e)&&!removed.has(e.id)).sort((a,b)=>b.created-a.created);
  catalog={daily:active.filter(e=>collectionOf(e)==='daily').slice(0,20),personal:active.filter(e=>collectionOf(e)==='personal')};
  for(const kind of ['daily','personal'])selected[kind]=catalog[kind].find(e=>e.id===selected[kind]?.id)||catalog[kind][0]||null;
- for(const e of catalog.daily){const label=date(e.created*1000)+(e.duration?' · '+time(e.duration):'')+' · Audio available until '+date(e.expires*1000);$('#previous-audio').append(card(episodeTitle(e),label,'♪',()=>chooseEpisode(e)));}
+ for(const e of catalog.daily){const label=date(e.created*1000)+(e.duration?' · '+time(e.duration):'')+' · Audio available until '+date(e.expires*1000);$('#previous-audio').append(card('Play '+episodeTitle(e),label,'▶',()=>playPreviousEpisode(e)));}
  renderPersonal();
  if(!catalog.daily.length){
   const note=document.createElement('div');note.className='empty-state';note.textContent='No recordings from the last seven days. Written editions are available below.';$('#previous-audio').append(note);
@@ -186,14 +192,18 @@ $('form').onsubmit=async e=>{e.preventDefault();try{
  $('#error').textContent='';const session=await api('/api/session');csrf=session.csrf;await load(session.personalization);
 }catch(e){error(e);}};
 function animate(){if(!analyser||audio.paused||reduced.matches)return;const bins=new Uint8Array(analyser.frequencyBinCount);analyser.getByteFrequencyData(bins);const power=bins.reduce((a,b)=>a+b,0)/bins.length/255;$('#orb').style.setProperty('--energy',1+power*.35);frame=requestAnimationFrame(animate);}
-$('#play').onclick=async()=>{try{
- if(!audio.paused){audio.pause();return;}
+async function startPlayback(){
  if(!audio.getAttribute('src'))return;
- if(!context){context=new AudioContext();analyser=context.createAnalyser();analyser.fftSize=128;context.createMediaElementSource(audio).connect(analyser);analyser.connect(context.destination);}
- // Start both calls within the user gesture; the media endpoint enforces auth.
- const resumed=context.resume(),played=audio.play();
- await Promise.all([resumed,played]);
-}catch(e){error(e);}};
+ $('#error').textContent='';
+ // Native media playback avoids suspended/unsupported Web Audio muting the recording.
+ // The decorative orb still animates through the existing playing class.
+ // Call play in the original tap gesture, before any await (Android/iOS requirement).
+ try{await audio.play();}catch(e){error(e);$('#status').textContent='Playback could not start: '+e.message;}
+}
+$('#play').onclick=async()=>{
+ if(!audio.paused){audio.pause();return;}
+ return startPlayback();
+};
 audio.onplay=()=>{document.body.classList.add('playing');$('#play').textContent='Ⅱ';$('#play').setAttribute('aria-label','Pause');$('#status').textContent='Now playing';animate();};
 audio.onpause=()=>{document.body.classList.remove('playing');cancelAnimationFrame(frame);$('#orb').style.setProperty('--energy',1);$('#play').textContent='▶';$('#play').setAttribute('aria-label','Play');$('#status').textContent='Paused';};
 audio.onended=audio.onpause;

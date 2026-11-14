@@ -18,6 +18,7 @@ function harness({episodes=[],reduced=true,instant='2026-10-21T23:00:00Z',record
   setAttribute(k,v){this.attributes[k]=String(v);if(k==='id')this.id=v;}
   getAttribute(k){return k==='src'?this.src||this.attributes.src||null:this.attributes[k]??null;}
   removeAttribute(k){delete this.attributes[k];if(k==='src')this.src='';}
+  scrollIntoView(){this.scrolled=true;}
   focus(){document.activeElement=this;}
   showModal(){this.open=true;}
   close(){this.open=false;this.onclose?.();}
@@ -26,7 +27,7 @@ function harness({episodes=[],reduced=true,instant='2026-10-21T23:00:00Z',record
  const root=convert(parse(HTML));
  const find=(target,node=root)=>{if(target[0]==='#'?node.id===target.slice(1):node.tagName===target)return node;for(const child of node.children){const match=find(target,child);if(match)return match;}return null;};
  const document={querySelector:find,createElement:tag=>new Element(tag),body:find('body'),activeElement:null,addEventListener(){}};
- const audio=find('audio');audio.paused=true;audio.pause=()=>{audio.paused=true;audio.onpause?.();};audio.load=()=>{};
+ const audio=find('audio');audio.paused=true;audio.pause=()=>{audio.paused=true;audio.onpause?.();};audio.load=()=>{};audio.play=async()=>{audio.paused=false;audio.onplay?.();};
  class MockDate extends Date{constructor(...args){super(...(args.length?args:[now]));}static now(){return now;}}
  const response=data=>({status:200,ok:true,json:async()=>data});
  const context=vm.createContext({document,Date:MockDate,Intl,URL,Uint8Array,matchMedia:()=>({matches:reduced}),cancelAnimationFrame(){},requestAnimationFrame(){},fetch:async(url,options={})=>{requests.push({url,options});if(url==='/api/session')return response({csrf:'synthetic',personalization:{}});if(url.startsWith('/api/episodes'))return response({episodes});if(url==='/api/storage')return response({activeAudioBytes:0,activeEpisodes:0,complete:true,freeStorageBytes:1e9});if(url.startsWith('/api/logbook'))return response({schemaVersion:1,timeZone:'Asia/Singapore',today:TODAY,startDate:TODAY,weekStart:model.monday(TODAY),records,pendingDates:[TODAY]});return response({ok:true});}});
