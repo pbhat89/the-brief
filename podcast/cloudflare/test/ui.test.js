@@ -77,3 +77,20 @@ test('original and verified reader views switch, fall back, and clean up on Back
 });
 
 test('written dates remain in Singapore even when the browser is in UTC',()=>{const h=harness();assert.equal(h.run("date('2026-10-21T23:00:00Z')"),'22 October 2026')});
+
+test('HTML Brief opens current canonical independently of companion, changes presentation safely and clears on Lock',async()=>{
+ const h=await unlocked();h.run("singaporeDay=()=>READER_DATES[0]; renderToday()");
+ assert.equal(h.node('#today-read').hidden,false);
+ h.node('#tab-brief').onclick();assert.equal(h.node('#brief').hidden,false);assert.equal(h.node('#listening').hidden,true);
+ assert.match(h.node('#brief-frame').src,/^\/originals\/\d{4}-\d{2}-\d{2}\.html\?mode=original&theme=original&scale=100$/);
+ h.node('#brief-mode').value='reader';h.node('#brief-mode').onchange();assert.match(h.node('#brief-frame').src,/mode=reader/);
+ h.node('#brief-theme').value='sepia';h.node('#brief-theme').onchange();assert.match(h.node('#brief-frame').src,/theme=sepia/);
+ for(let i=0;i<20;i++)h.node('#brief-larger').onclick();assert.equal(h.node('#brief-size-label').textContent,'180%');assert.equal(h.node('#brief-larger').disabled,true);
+ h.node('#brief-reset').onclick();assert.equal(h.node('#brief-size-label').textContent,'100%');
+ h.run('resetToLogin()');assert.equal(h.node('#brief-frame').getAttribute('src'),null);assert.equal(h.node('#brief-frame').hidden,true);
+});
+test('reader preferences are limited to presentation and tolerate unavailable browser storage',async()=>{
+ const h=await unlocked(),writes=[];h.context.localStorage={setItem:(k,v)=>writes.push([k,JSON.parse(v)])};h.node('#tab-brief').onclick();h.node('#brief-larger').onclick();
+ assert.equal(writes[0][0],'brief-reader-v1');assert.deepEqual(Object.keys(writes[0][1]),['mode','theme','scale']);assert.equal(writes[0][1].scale,110);
+ h.node('#brief-theme').value='</style><script>bad()</script>';h.node('#brief-theme').onchange();assert.equal(writes[1][1].theme,'original');
+});

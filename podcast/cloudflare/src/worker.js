@@ -1,4 +1,5 @@
 import {ORIGINAL_FONT_CSS} from './original-fonts.js';
+import {readerPresentation} from './reader-presentation.js';
 import {ORIGINALS} from './originals.js';
 import {TTL,MAX,digest,equal,pinHash,range,mp3} from './security.js';
 import {HTML,JS,CSS} from './ui.js';
@@ -141,7 +142,7 @@ async function handle(req,env){
  if(write&&(req.headers.get('Origin')!==u.origin||req.headers.get('Sec-Fetch-Site')==='cross-site'))return reply('Origin rejected',403);
  // Public, build-time escaped archive snapshots. No private/session data is exposed here.
  const originalId=/^\/originals\/(\d{4}-\d{2}-\d{2})\.html$/.exec(p)?.[1];
- if(originalId&&method==='GET')return Object.hasOwn(ORIGINALS,originalId)?reply(ORIGINALS[originalId].replace('</head>','<style>'+ORIGINAL_FONT_CSS+'</style></head>'),200,{'Content-Type':'text/html; charset=utf-8','Content-Security-Policy':"default-src 'none'; style-src 'unsafe-inline'; font-src data:; base-uri 'none'; form-action 'none'; frame-ancestors 'self'; sandbox allow-popups allow-popups-to-escape-sandbox"}):reply('Original edition unavailable',404);
+ if(originalId&&method==='GET')return Object.hasOwn(ORIGINALS,originalId)?reply(readerPresentation(ORIGINALS[originalId].replace('</head>','<style>'+ORIGINAL_FONT_CSS+'</style></head>'),u.searchParams),200,{'Content-Type':'text/html; charset=utf-8','Content-Security-Policy':"default-src 'none'; style-src 'unsafe-inline'; font-src data:; base-uri 'none'; form-action 'none'; frame-ancestors 'self'; sandbox allow-popups allow-popups-to-escape-sandbox"}):reply('Original edition unavailable',404);
  if(p==='/'&&method==='GET')return reply(HTML,200,{'Content-Type':'text/html; charset=utf-8'});
  if(p==='/app.js'&&method==='GET')return reply(JS,200,{'Content-Type':'text/javascript'});
  if(p==='/app.css'&&method==='GET')return reply(CSS,200,{'Content-Type':'text/css'});
