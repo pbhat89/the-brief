@@ -279,14 +279,14 @@
       "date": "2026-11-15",
       "topic_key": "wasabi",
       "text": "Most 'wasabi' served outside Japan is not wasabi but a dyed paste of horseradish and mustard; real Wasabia japonica is hard to grow and loses its pungency within ~15 minutes of grating."
+    },
+    {
+      "date": "2026-11-16",
+      "topic_key": "canary islands",
+      "text": "The Canary Islands are named after dogs (Latin Canariae Insulae), not the canary bird."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-10-16",
-      "type": "lateral",
-      "title_key": "locked-study"
-    },
     {
       "date": "2026-10-17",
       "type": "visual",
@@ -416,14 +416,14 @@
       "date": "2026-11-15",
       "type": "logic",
       "title_key": "photo-finish"
+    },
+    {
+      "date": "2026-11-16",
+      "type": "quantitative",
+      "title_key": "two-candles"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-10-16",
-      "type": "anagram",
-      "title_key": "letter-perfect"
-    },
     {
       "date": "2026-10-17",
       "type": "spellingbee",
@@ -553,6 +553,11 @@
       "date": "2026-11-15",
       "type": "letterboxed",
       "title_key": "corner-to-corner"
+    },
+    {
+      "date": "2026-11-16",
+      "type": "grouping",
+      "title_key": "false-friends"
     }
   ]
 }

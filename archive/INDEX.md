@@ -4491,3 +4491,12 @@ is empty until the first run.
 2026-11-15	Astronomers spot an invisible object that may be a rare supermassive neutron star	3d39b940	neutron star,astronomy,red giant,dark companion,discovery
 2026-11-15	Eli Lilly's daily weight-loss pill sharply reduces sleep-apnea severity in a trial	d6bed17a	glp-1,orforglipron,sleep apnea,eli lilly,trial
 2026-11-15	Forecasters warn the strengthening El Nino could be the strongest on record	ddd257df	el nino,pacific,climate,record,extreme weather
+2026-11-16	Update: ASEAN summit opens in Manila with Singapore due to take the 2027 chair	223ae022	singapore,asean summit,manila,pax silica,wong
+2026-11-16	India's October trade deficit widens to a one-year high of $39.88 billion	158685f6	india,trade deficit,gold imports,oil,october
+2026-11-16	Israeli strike kills a senior Hamas commander in Gaza despite the truce	cbc42d25	gaza,hamas,israel,abu younis,rafah brigade
+2026-11-16	Update: US floats letting Ukraine join NATO if it cedes the rest of Donbas	8c44558d	ukraine,russia,donbas,nato,witkoff
+2026-11-16	Anthropic heads for a landmark Nasdaq debut this week	bc0ec858	anthropic,ipo,nasdaq,valuation,ant
+2026-11-16	SpaceX catches a returning Starship at the launch tower for the first time	b26870d0	spacex,starship,launch tower,starbase,reusability
+2026-11-16	🏏 India beat New Zealand by 22 runs to clinch the ODI series 3-1	7cd91999	india,new zealand,odi,mount maunganui,arshdeep singh
+2026-11-16	🎾 World No. 1 Zverev opens his ATP Finals campaign with a 6-4, 6-4 win over Jodar	9a3f0738	zverev,jodar,atp finals,turin,tennis
+2026-11-16	🏎️ F1 heads to Las Vegas with Verstappen favourite and the fight for second wide open	c7652ceb	formula 1,las vegas,verstappen,hamilton,russell
