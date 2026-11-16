@@ -4500,3 +4500,32 @@ is empty until the first run.
 2026-11-16	🏏 India beat New Zealand by 22 runs to clinch the ODI series 3-1	7cd91999	india,new zealand,odi,mount maunganui,arshdeep singh
 2026-11-16	🎾 World No. 1 Zverev opens his ATP Finals campaign with a 6-4, 6-4 win over Jodar	9a3f0738	zverev,jodar,atp finals,turin,tennis
 2026-11-16	🏎️ F1 heads to Las Vegas with Verstappen favourite and the fight for second wide open	c7652ceb	formula 1,las vegas,verstappen,hamilton,russell
+2026-11-17	Indonesia’s Prabowo apologises to Singapore and Malaysia over the wildfire haze	ff45f508	singapore,indonesia,prabowo,haze,asean
+2026-11-17	Singapore raises maximum haze fines tenfold to S$20 million under a toughened pollution law	fde2bc04	singapore,haze,thpa,fines,parliament
+2026-11-17	Almost 30% of eligible Singaporeans have collected free N95 masks as the haze persists	a89cb415	singapore,haze,n95 masks,grace fu,distribution
+2026-11-17	Three firms issued haze-enforcement notices were flagged in the 2015 fires too	440dafe0	singapore,haze,enforcement,companies,2015
+2026-11-17	World Bank says India lifted nearly 500 million people out of poverty since 2011	f69034dc	india,world bank,poverty,economy
+2026-11-17	India’s October inflation hits a two-year high, raising the odds of a December rate hike	da3900b0	india,inflation,rbi,rate hike,nifty
+2026-11-17	US assures India of lower tariffs than its peers as a first-phase trade deal nears	ca9c187f	india,united states,trade deal,tariffs,goods
+2026-11-17	UK PM Burnham tells the City that Brexit ‘has not worked’ before the Brussels summit	26e8d1f7	uk,burnham,brexit,eu,city
+2026-11-17	David Cameron warns Burnham against trying to rejoin the EU a decade after Brexit	15e0bfc8	uk,cameron,burnham,eu,brexit
+2026-11-17	Australia, Canada, Italy and the UK press Israel to let aid into flooded Gaza	c36584c5	gaza,israel,aid,crossings,netanyahu
+2026-11-17	Starlink restrictions are blunting Ukraine’s defence against Russian drones, Zelensky says	2c2c70f4	ukraine,russia,starshield,drones,zelensky
+2026-11-17	Francophone summit opens in Phnom Penh amid a Rwanda-DR Congo leadership rift	5df92b9b	francophonie,phnom penh,rwanda,dr congo,macron
+2026-11-17	US skips COP31 in Antalya for a second year as leaders spar over an electrification pledge	a0adce04	cop31,antalya,turkey,climate,electrification
+2026-11-17	Nvidia’s Colette Kress faces her first earnings report since Jensen Huang’s exit	79226956	nvidia,colette kress,earnings,jensen huang,ai
+2026-11-17	California sues OpenAI over ‘rogue agent’ safety lapses	651117b6	openai,california,bonta,lawsuit,ai safety
+2026-11-17	OpenAI releases a free CSAM-detection image classifier and new ChatGPT warnings	c60040bb	openai,csam,classifier,chatgpt,safety
+2026-11-17	Update: Anthropic’s US$1.4 trillion Nasdaq debut is set to price on Nov 18	8cd1a1ca	anthropic,ipo,nasdaq,valuation,ant
+2026-11-17	Nasdaq slides for a third day as a Nvidia-led AI selloff deepens	766b30a8	nasdaq,sp 500,nvidia,ai selloff,markets
+2026-11-17	Crypto-linked stocks tumble as Bitcoin briefly slips near $62,000	40b5fb45	bitcoin,crypto,strategy,coinbase,markets
+2026-11-17	Berkshire Hathaway hits a record as a market haven; Buffett gives away $5.5 billion	57cabb90	berkshire hathaway,buffett,record,donation,haven
+2026-11-17	Nvidia draws fresh analyst price-target cuts before Tuesday’s earnings	c8efb946	nvidia,analysts,price target,mizuho,ubs
+2026-11-17	🎾 Alcaraz cruises past Tiafoe 6-2, 6-2 to open his ATP Finals campaign	37e95279	alcaraz,tiafoe,atp finals,turin,tennis
+2026-11-17	🎾 Shelton outlasts Fils in three sets for his first ATP Finals match win	ddda7377	shelton,fils,atp finals,turin,tennis
+2026-11-17	🎾 Krawietz and Puetz stun the second seeds in the ATP Finals doubles	1db8c6c4	krawietz,puetz,atp finals,doubles,turin
+2026-11-17	🏎️ Racing Bulls confirm Lawson and Lindblad as their 2027 driver line-up	579509d4	racing bulls,lawson,lindblad,formula 1,2027
+2026-11-17	Euclid telescope’s first big data release maps nearly a billion cosmic objects	d3a8c41b	euclid,esa,galaxies,data release,astronomy
+2026-11-17	The Vera Rubin Observatory flags a candidate sixth dwarf planet in the solar system	b301226b	vera rubin observatory,dwarf planet,2026 ed138,solar system,astronomy
+2026-11-17	A new study finds taste buds pre-process flavour before the brain gets the signal	7bcfd39f	taste buds,sour,serotonin,neuroscience,flavour
+2026-11-17	The Rubin Observatory spots a surprise ‘tail’ on an iconic nearby galaxy	6d42785d	rubin observatory,galaxy,stellar stream,astronomy,survey

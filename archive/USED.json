@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-09-17",
-      "topic_key": "trees",
-      "text": "There are more trees on Earth (~3 trillion) than stars in the Milky Way (~100-400 billion)."
-    },
-    {
       "date": "2026-09-18",
       "topic_key": "canada",
       "text": "Canada has more lakes than the rest of the world combined"
@@ -284,14 +279,14 @@
       "date": "2026-11-16",
       "topic_key": "canary islands",
       "text": "The Canary Islands are named after dogs (Latin Canariae Insulae), not the canary bird."
+    },
+    {
+      "date": "2026-11-17",
+      "topic_key": "equals sign",
+      "text": "The equals sign (=) was invented in 1557 by Welsh mathematician Robert Recorde, who chose two equal-length parallel lines because nothing could be more equal."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-10-17",
-      "type": "visual",
-      "title_key": "spider-and-the-fly"
-    },
     {
       "date": "2026-10-18",
       "type": "logic",
@@ -421,14 +416,14 @@
       "date": "2026-11-16",
       "type": "quantitative",
       "title_key": "two-candles"
+    },
+    {
+      "date": "2026-11-17",
+      "type": "lateral",
+      "title_key": "ruined-in-an-instant"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-10-17",
-      "type": "spellingbee",
-      "title_key": "hive-mind"
-    },
     {
       "date": "2026-10-18",
       "type": "letterboxed",
@@ -558,6 +553,11 @@
       "date": "2026-11-16",
       "type": "grouping",
       "title_key": "false-friends"
+    },
+    {
+      "date": "2026-11-17",
+      "type": "ladder",
+      "title_key": "less-is-more"
     }
   ]
 }
