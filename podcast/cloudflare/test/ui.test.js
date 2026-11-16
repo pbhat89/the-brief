@@ -121,3 +121,20 @@ test('Orbit preserves the tab strip and native playback while respecting reduced
  assert.ok(HTML.indexOf('class="toolbar"')<HTML.indexOf('id="listening"'));
  assert.ok(HTML.includes('class="outer-orbit"'));assert.ok(!JS.includes('new AudioContext'));
 });
+
+test('article link appears below chapters, changes with selected personal episode and clears on Lock',async()=>{
+ const h=await unlocked(),now=Date.now()/1000;
+ h.context.first={id:'first',title:'First',collection:'personal',created:now,retention:'manual',expires:null,sourceUrl:'https://example.com/first',chapters:[]};
+ h.context.second={...h.context.first,id:'second',sourceUrl:'https://example.org/second'};
+ h.run('chooseEpisode(first)');assert.equal(h.node('#episode-source').hidden,false);assert.equal(h.node('#episode-source-link').getAttribute('href'),'https://example.com/first');
+ h.run('chooseEpisode(second)');assert.equal(h.node('#episode-source-link').getAttribute('href'),'https://example.org/second');
+ h.run('chooseEpisode({...second,sourceUrl:"https://example.org/corrected"})');assert.equal(h.node('#episode-source-link').getAttribute('href'),'https://example.org/corrected');
+ h.run('chooseEpisode({...first,id:"old",sourceUrl:undefined})');assert.equal(h.node('#episode-source').hidden,true);assert.equal(h.node('#episode-source-link').getAttribute('href'),null);
+ h.run('chooseEpisode(first); resetToLogin()');assert.equal(h.node('#episode-source').hidden,true);assert.equal(h.node('#episode-source-link').getAttribute('href'),null);
+ assert.ok(HTML.indexOf('id="episode-source"')>HTML.indexOf('id="chapters"'));assert.match(HTML,/id="episode-source-link"[^>]+target="_blank"[^>]+rel="noopener noreferrer"[^>]+referrerpolicy="no-referrer"/);
+});
+test('article link rejects unsafe source metadata and never leaks into daily player',async()=>{
+ const h=await unlocked(),now=Date.now()/1000;h.context.base={id:'x',collection:'personal',title:'x',created:now,retention:'manual',expires:null};
+ for(const sourceUrl of ['javascript:alert(1)','data:text/html,hi','/relative','https://user:password@example.com','https://example.com/a b',' https://example.com']){h.context.bad=sourceUrl;h.run('renderEpisodeSource({...base,sourceUrl:bad})');assert.equal(h.node('#episode-source').hidden,true);assert.equal(h.node('#episode-source-link').getAttribute('href'),null);}
+ h.run('renderEpisodeSource({...base,collection:"daily",sourceUrl:"https://example.com"})');assert.equal(h.node('#episode-source').hidden,true);
+});

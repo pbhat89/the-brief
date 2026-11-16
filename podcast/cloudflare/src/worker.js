@@ -213,6 +213,11 @@ export async function deletePersonalEpisode(env,id){
  return reply({id,deleted:true});
 }
 async function bounded(req,max){const reader=req.body?.getReader();if(!reader)return null;let total=0;const chunks=[];for(;;){const {done,value}=await reader.read();if(done)break;total+=value.byteLength;if(total>max){await reader.cancel();return null;}chunks.push(value);}const out=new Uint8Array(total);let at=0;for(const c of chunks){out.set(c,at);at+=c.length;}return out;}
+// Source metadata is private and never fetched server-side. Restrict to ordinary web links.
+export function articleURL(value){
+ if(typeof value!=='string'||value.length>2048||!value||value.trim()!==value||/[\x00-\x20\x7f]/.test(value))return null;
+ try{const u=new URL(value);return ['https:','http:'].includes(u.protocol)&&u.hostname&&!u.username&&!u.password?u.href:null;}catch{return null;}
+}
 async function upload(req,env){
  if(!/^[a-f0-9]{64}$/.test(env.PUBLISHER_TOKEN_HASH||''))return reply('Publisher setup required',503);
  const bearer=/^Bearer ([A-Za-z0-9_-]{32,256})$/.exec(req.headers.get('Authorization')||'');
@@ -227,6 +232,8 @@ async function upload(req,env){
  const episodeKey=req.headers.get('X-Episode-Key');
  if(collection==='personal'&&(!episodeKey||!/^[a-z0-9][a-z0-9-]{0,79}$/.test(episodeKey)))return reply('Invalid episode key',400);
  if(collection==='daily'&&episodeKey!==null)return reply('Episode key is for personal podcasts',400);
+ const rawSource=req.headers.get('X-Episode-Source-URL'),sourceUrl=rawSource===null?undefined:articleURL(rawSource);
+ if(rawSource!==null&&(!sourceUrl||collection!=='personal'))return reply('Invalid article source',400);
  const rawDuration=req.headers.get('X-Episode-Duration'),duration=rawDuration===null?undefined:Number(rawDuration);
  if(rawDuration!==null&&(!rawDuration.trim()||!Number.isFinite(duration)||duration<=0||duration>86400))return reply('Invalid duration',400);
  const title=req.headers.get('X-Episode-Title')||(collection==='personal'?'Personal podcast':'Daily brief');if(title.length>120||/[\x00-\x1f]/.test(title))return reply('Invalid title',400);
@@ -234,7 +241,7 @@ async function upload(req,env){
  const id=crypto.randomUUID(),created=now(),expires=collection==='personal'?null:created+TTL;
  let chapters=[];try{chapters=JSON.parse(req.headers.get('X-Episode-Chapters')||'[]');}catch{return reply('Invalid chapters',400);}
  if(!Array.isArray(chapters)||chapters.length>30||chapters.some(c=>!c||typeof c.title!=='string'||c.title.length>80||!Number.isFinite(c.start)||c.start<0))return reply('Invalid chapters',400);
- const meta={id,title,collection,...(episodeKey?{episodeKey}:{}),...(duration===undefined?{}:{duration}),created,expires,...(collection==='personal'?{retention:'manual'}:{}),size:bytes.length,chapters:chapters.map(c=>({title:c.title,start:c.start})).sort((a,b)=>a.start-b.start)};
+ const meta={id,title,collection,...(sourceUrl?{sourceUrl}:{}),...(episodeKey?{episodeKey}:{}),...(duration===undefined?{}:{duration}),created,expires,...(collection==='personal'?{retention:'manual'}:{}),size:bytes.length,chapters:chapters.map(c=>({title:c.title,start:c.start})).sort((a,b)=>a.start-b.start)};
  await env.EPISODES.put('audio:'+id,bytes.buffer,expires===null?undefined:{expiration:expires});
  // Retain private playback metadata independently of expiring audio bytes.
  await env.EPISODES.put('meta:'+id,JSON.stringify(meta));

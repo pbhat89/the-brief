@@ -80,3 +80,20 @@ test('large library uses bulk metadata reads and new personal upload fails close
  assert.equal((await (await h.request('/api/episodes?collection=all')).json()).episodes.length,90);assert.equal(calls,1);
  assert.equal((await h.upload(personal)).status,507);assert.equal(h.writes.length,0);
 });
+
+test('personal upload retains a validated article URL privately without altering media',async()=>{
+ const h=await setup(),topic=await(await h.upload({...personal,'X-Episode-Source-URL':'https://example.com/article?edition=2#section'})).json();
+ assert.equal(topic.sourceUrl,'https://example.com/article?edition=2#section');
+ assert.equal((await(await h.request('/api/episodes/'+topic.id)).json()).sourceUrl,topic.sourceUrl);
+ assert.equal((await(await h.request('/api/episodes?collection=personal')).json()).episodes[0].sourceUrl,topic.sourceUrl);
+ assert.equal((await h.request('/api/episodes/'+topic.id,{headers:{Cookie:''}})).status,401);
+ assert.equal((await h.request('/api/media/'+topic.id)).status,200);
+ assert.equal(topic.retention,'manual');assert.equal(topic.expires,null);
+});
+test('invalid article URLs fail before any upload writes; old uploads remain compatible',async()=>{
+ for(const url of ['javascript:alert(1)','data:text/plain,hi','/relative','https://user:password@example.com/a','https://example.com/a b','https://example.com/'+ 'a'.repeat(2050)]){
+  const h=await setup();assert.equal((await h.upload({...personal,'X-Episode-Source-URL':url})).status,400,url);assert.equal(h.writes.length,0);
+ }
+ const h=await setup();assert.equal((await h.upload({'X-Episode-Source-URL':'https://example.com'})).status,400);
+ assert.equal((await h.upload(personal)).status,201);
+});
