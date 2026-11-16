@@ -210,3 +210,27 @@ snapshot and dates from the checkout, so the normal daily archive push updates
 the tab. The existing original-browser-check also runs reader-tab-browser-check
 at 360/390/1280px with synthetic sessions. Optional BROWSER_EXECUTABLE selects
 an installed test browser. No production PIN is needed for testing.
+
+## Original article links
+
+Personal podcast publishers should supply `X-Episode-Source-URL` containing the
+canonical original article HTTP(S) URL. The private episode metadata stores it as
+`sourceUrl`; the selected episode shows **Read the original article** below its
+chapters. Links open a new tab with no referrer/opener access. Unsafe schemes,
+credentials, whitespace/control characters and URLs over 2,048 characters are
+rejected. This field is not available on daily audio. Older episodes without a
+verified source remain playable without an invented link.
+
+For legacy episodes, the authorized publisher may backfill a verified `sourceUrl`
+in the existing private `meta:{id}` and `active-personal:{id}` records using the
+existing account's protected storage-management tools. Read and preserve every
+other field, recheck current identity/deleted state before writing, and never touch
+`audio:{id}` or retention settings. The metadata record is authoritative for the
+catalog. Verify authenticated metadata and rendered links after propagation. No
+new application mutation endpoint or credential is introduced.
+
+The private relay must explicitly forward the upload header before assuming new
+publications carry it. Until supported, apply the same authorized private metadata
+step after upload and verified receipt. Never put personal mappings, credentials,
+actual episode IDs or receipt data in this public repository. Updating this Worker
+alone does not update that separate relay.

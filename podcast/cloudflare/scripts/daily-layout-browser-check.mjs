@@ -18,14 +18,14 @@ const weekStart=new Date(+fixtureDate-((fixtureDate.getUTCDay()+6)%7)*86400000).
 const server=http.createServer(async(req,res)=>{const r=await worker.fetch(new Request('http://127.0.0.1:9881'+req.url),{});res.writeHead(r.status,Object.fromEntries(r.headers));res.end(Buffer.from(await r.arrayBuffer()));});
 await new Promise(r=>server.listen(9881,'127.0.0.1',r));let browser;
 try{
- browser=await chromium.launch({headless:true});await mkdir('qa-original',{recursive:true});
+ browser=await chromium.launch({headless:true,...(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH?{executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH}:{})});await mkdir('qa-original',{recursive:true});
  for(const width of [390,1280])for(const reducedMotion of ['no-preference','reduce']){
   const page=await browser.newPage({viewport:{width,height:844},reducedMotion}),errors=[];let saves=0;
   page.on('pageerror',e=>errors.push(String(e)));
   await page.clock.install({time:new Date(fixtureInstant)});
   await page.addInitScript(()=>{window.playCalls=[];HTMLMediaElement.prototype.play=function(){window.playCalls.push({src:this.getAttribute('src'),gesture:navigator.userActivation.isActive});return Promise.resolve()};});
   const now=Date.parse(fixtureInstant)/1000;
-  await page.route('**/api/**',route=>{const path=new URL(route.request().url()).pathname;if(route.request().method()==='PUT')saves++;return route.fulfill({json:path==='/api/session'?{csrf:'synthetic'}:path==='/api/episodes'?{episodes:[{id:'fixture-today',edition:fixtureDay,title:'Today fixture',created:now,expires:now+604800,duration:600,chapters:[]},{id:'fixture-old',edition:previousDay,title:'Earlier fixture',created:now-86400,expires:now+500000,chapters:[]}]}:path==='/api/logbook'?{schemaVersion:1,timeZone:'Asia/Singapore',today:fixtureDay,startDate:fixtureDay,weekStart:weekStart,records:[],pendingDates:[fixtureDay]}:{activeAudioBytes:0,activeEpisodes:0,freeStorageBytes:1e9,complete:true}});});
+  await page.route('**/api/**',route=>{const path=new URL(route.request().url()).pathname;if(route.request().method()==='PUT')saves++;return route.fulfill({json:path==='/api/session'?{csrf:'synthetic'}:path==='/api/episodes'?{episodes:[{id:'fixture-today',edition:fixtureDay,title:'Today fixture',created:now,expires:now+604800,duration:600,chapters:[]},{id:'fixture-old',edition:previousDay,title:'Earlier fixture',created:now-86400,expires:now+500000,chapters:[]},{id:'fixture-article',title:'Article fixture',collection:'personal',retention:'manual',created:now,expires:null,duration:300,chapters:[{title:'Opening',start:0}],sourceUrl:'https://example.com/original-article'},{id:'fixture-no-source',title:'Legacy fixture',collection:'personal',retention:'manual',created:now-1,expires:null,chapters:[]}]}:path==='/api/logbook'?{schemaVersion:1,timeZone:'Asia/Singapore',today:fixtureDay,startDate:fixtureDay,weekStart:weekStart,records:[],pendingDates:[fixtureDay]}:{activeAudioBytes:0,activeEpisodes:0,freeStorageBytes:1e9,complete:true}});});
   await page.goto('http://127.0.0.1:9881/');await page.locator('#player').waitFor({state:'visible'});
   assert.equal(await page.locator('#title').innerText(),'Today fixture');assert.equal(await page.locator('#episodes button').count(),0);
   assert.ok(await page.locator('#play').isVisible());assert.ok(await page.locator('#today-read').isVisible());
@@ -46,6 +46,15 @@ try{
   await page.locator('#previous-audio button').filter({hasText:'Earlier fixture'}).click();
   assert.equal(await page.evaluate(()=>window.playCalls.length),2);
   await page.locator('#tab-latest').click();assert.equal(await page.locator('#title').innerText(),'Today fixture');
+  await page.locator('#tab-personal').click();await page.locator('#personal-episodes .edition-card').filter({hasText:'Article fixture'}).click();
+  const source=page.locator('#episode-source-link');assert.ok(await source.isVisible());assert.equal(await source.getAttribute('href'),'https://example.com/original-article');
+  assert.ok(await source.evaluate(el=>el.getBoundingClientRect().top>=document.querySelector('#chapters').getBoundingClientRect().bottom));
+  assert.ok(await page.locator('body').evaluate(e=>e.scrollWidth<=innerWidth));
+  await page.screenshot({path:`qa-original/${width}-${reducedMotion}-article-source.png`,fullPage:true});
+  await page.context().route('https://example.com/**',route=>route.fulfill({contentType:'text/html',body:'<title>Original article fixture</title><p>Original article fixture</p>'}));
+  const popupPromise=page.waitForEvent('popup');await source.click();const popup=await popupPromise;await popup.waitForLoadState();assert.equal(popup.url(),'https://example.com/original-article');assert.equal(await popup.evaluate(()=>window.opener),null);await popup.close();
+  await page.locator('#personal-episodes .edition-card').filter({hasText:'Legacy fixture'}).click();assert.ok(!(await source.isVisible()));assert.equal(await source.getAttribute('href'),null);
+  await page.locator('#tab-latest').click();assert.ok(!(await source.isVisible()));
   await page.locator('#tab-logbook').click();await page.locator('#log-check-noSmoke').click();assert.ok(await page.locator('#logbook-celebration').isVisible());assert.equal(await page.evaluate(()=>document.activeElement.id),'celebration-close');
   await page.keyboard.press('Shift+Tab');assert.equal(await page.evaluate(()=>document.activeElement.id),'celebration-close');await page.keyboard.press('Tab');assert.equal(await page.evaluate(()=>document.activeElement.id),'celebration-close');
   if(reducedMotion==='reduce')assert.equal(await page.locator('.celebration-art').evaluate(e=>getComputedStyle(e).animationName),'none');

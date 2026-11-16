@@ -219,3 +219,15 @@ See [current KV limits](https://developers.cloudflare.com/kv/platform/limits/).
 ## Personal podcast retention correction — 27 October 2026
 
 Seven-day retention applies only to daily news briefs. New personal upload receipts require `expires: null` and `retention: "manual"`; the private relay validates this separate contract. Existing personal recordings with surviving bytes are migrated without native expiry. Confirmed manual Delete remains permanent and retains a tombstone. Historical completed relay retries return their original receipt unchanged; that receipt is historical evidence, not proof of current media availability. Do not regenerate or reupload a deleted/expired recording solely to bypass an idempotency conflict.
+
+### Article source metadata
+
+Every article-derived personal episode should retain its canonical article URL
+as private `sourceUrl` metadata. Pass `X-Episode-Source-URL` on Worker uploads
+through the authorized private relay. The selected play page places the original
+article link below its chapters. A verified existing episode may be backfilled
+without another upload using the existing protected storage-management tools, as
+documented in [the player contract](cloudflare/README.md#original-article-links).
+The relay must explicitly support forwarding; a Worker deployment alone is not
+proof of live source publication. Verify source identity, stored metadata, the
+rendered link and logged-out denial. Never commit the user's personal source list.

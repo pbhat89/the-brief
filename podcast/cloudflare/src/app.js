@@ -19,7 +19,7 @@ function resetToLogin(message='Please unlock the player.') {
  audio.pause(); audio.removeAttribute('src'); audio.load(); audio.playbackRate=1;
  cancelAnimationFrame(frame); document.body.classList.remove('playing');
  $('#orb').style.setProperty('--energy',1);
- $('#episodes').replaceChildren(); $('#chapters').replaceChildren();
+ $('#episodes').replaceChildren(); $('#chapters').replaceChildren();renderEpisodeSource(null);
  $('#personal-episodes').replaceChildren(); $('#storage').textContent=''; $('#previous-audio').replaceChildren(); $('#reports').replaceChildren(); $('#reader-content').replaceChildren();
  $('#viewer').hidden=true; $('#archive-list').hidden=false; showTab('latest');
  $('#episode-date').textContent='YOUR NEXT MOMENT OF CLARITY';
@@ -118,9 +118,15 @@ $('#brief-larger').onclick=()=>{emailBriefPrefs.scale=Math.min(180,emailBriefPre
 $('#brief-reset').onclick=()=>{emailBriefPrefs={mode:'original',theme:'original',scale:100};saveEmailBriefPrefs();};
 
 function card(title,meta,icon,action){const b=document.createElement('button');b.className='edition-card';const badge=document.createElement('span');badge.className='card-icon';badge.textContent=icon;badge.setAttribute('aria-hidden','true');const body=document.createElement('span');body.className='card-body';const name=document.createElement('span');name.className='card-title';name.textContent=title;const detail=document.createElement('span');detail.className='card-meta';detail.textContent=meta;const arrow=document.createElement('span');arrow.className='card-arrow';arrow.textContent='↗';arrow.setAttribute('aria-hidden','true');body.append(name);body.append(detail);b.append(badge);b.append(body);b.append(arrow);b.onclick=action;return b;}
+function renderEpisodeSource(e){
+ const link=$('#episode-source-link');link.removeAttribute('href');$('#episode-source').hidden=true;
+ const raw=e?.sourceUrl;if(collectionOf(e)!=='personal'||typeof raw!=='string'||raw.length>2048||raw.trim()!==raw||/[\x00-\x20\x7f]/.test(raw))return;
+ const href=safeURL(raw);if(!href)return;const u=new URL(href);if(u.username||u.password)return;
+ link.setAttribute('href',href);$('#episode-source').hidden=false;
+}
 function chooseEpisode(e){
  if(removed.has(e.id)||!episodeAvailable(e)){error(Error('This recording has expired. Refresh to see available audio.'));return;}
- const kind=collectionOf(e);if(currentEpisode?.id===e.id){showTab(kind==='personal'?'personal':episodeDay(e)===singaporeDay()?'latest':'previous');return;}
+ const kind=collectionOf(e);renderEpisodeSource(e);if(currentEpisode?.id===e.id){showTab(kind==='personal'?'personal':episodeDay(e)===singaporeDay()?'latest':'previous');return;}
  if(currentEpisode&&Number.isFinite(audio.currentTime))positions.set(currentEpisode.id,audio.currentTime);
  audio.pause();currentEpisode=e;selected[kind]=e;audio.src='/api/media/'+encodeURIComponent(e.id);audio.load();
  $('#error').textContent='';$('#title').textContent=episodeTitle(e);$('#episode-date').textContent=(kind==='personal'?'PERSONAL PODCAST · ':'')+date(e.created*1000).toUpperCase();$('#status').textContent='Ready when you are';$('#seek').value=0;$('#elapsed').textContent=time(positions.get(e.id)||0);$('#duration').textContent=time(e.duration);$('#chapters').replaceChildren();setControls(true);
@@ -141,7 +147,7 @@ async function deleteEpisode(e,button){
  try{
   await api('/api/episodes/'+encodeURIComponent(e.id),{method:'DELETE',headers:{'X-CSRF-Token':csrf,'X-Brief-Delete':e.id}});
   deleted=true;
-  if(currentEpisode?.id===e.id){audio.pause();audio.removeAttribute('src');audio.load();currentEpisode=null;$('#chapters').replaceChildren();setControls(false);}
+  if(currentEpisode?.id===e.id){audio.pause();audio.removeAttribute('src');audio.load();currentEpisode=null;renderEpisodeSource(null);$('#chapters').replaceChildren();setControls(false);}
   removed.add(e.id);selected.personal=selected.personal?.id===e.id?null:selected.personal;positions.delete(e.id);catalog.personal=catalog.personal.filter(item=>item.id!==e.id);renderPersonal();showTab('personal');
   await load(branding);openTab('personal');$('#error').textContent='Hosted audio deleted. Storage totals may take a moment to update.';
  }catch(e){if(generation===epoch)error(deleted?Error('Hosted audio was deleted, but the list could not refresh. Refresh the page to update storage totals.'):e);}finally{deleting.delete(e.id);button.disabled=false;}
@@ -187,7 +193,8 @@ async function load(personalization={}){
  if(!catalog.daily.length){
   const note=document.createElement('div');note.className='empty-state';note.textContent='No recordings from the last seven days. Written editions are available below.';$('#previous-audio').append(note);
  }
- if(currentEpisode&&!active.some(e=>e.id===currentEpisode.id)){audio.pause();audio.removeAttribute('src');audio.load();currentEpisode=null;$('#chapters').replaceChildren();}
+ if(currentEpisode&&!active.some(e=>e.id===currentEpisode.id)){audio.pause();audio.removeAttribute('src');audio.load();currentEpisode=null;renderEpisodeSource(null);$('#chapters').replaceChildren();}
+ if(currentEpisode){currentEpisode=active.find(e=>e.id===currentEpisode.id);renderEpisodeSource(currentEpisode);}
  if(!currentEpisode){setControls(false);$('#title').textContent='Ready when you are.';$('#status').textContent='Choose a recording to start listening.';$('#duration').textContent='0:00';$('#elapsed').textContent='0:00';}
  renderToday();openTab(viewing);await refreshStorage();
 }
