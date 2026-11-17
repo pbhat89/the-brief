@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Wed, 18 Nov 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .wpuzzle-box{background:linear-gradient(135deg,#0e1a1a,#0d1620);border:1px solid #234a44;border-left:3px solid #16a085;padding:24px 28px;border-radius:2px}
+  .wptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#16a085;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .wpuzzle-box .puzzle-title{color:#cdeae3}
+  .wpuzzle-box .puzzle-how{color:#8fb8ac;background:#08140f;border-left-color:#1a6a5a}
+  .wpuzzle-box .puzzle-q{color:#dfeae6;font-family:'Source Sans 3',sans-serif}
+  .wpuzzle-box .answer{color:#bfe0d6}
+  .wpuzzle-box .answer .alabel{color:#16a085}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Wednesday, 18 November 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Wednesday, 18 November 2026 · 🔍 38 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eleven entries in this exact order:
+     id    : one of "sg" | "india" | "uk" | "geo" | "tech" | "biz" | "sports" | "misc" | "fun" | "puzzle" | "wpuzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 8 news tabs; fun/puzzle/wpuzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+
+   WORD_PUZZLE shape (separate, daily word game — NYT-style, static reveal):
+     type     : one of "Connections" | "Word Ladder" | "Anagram" | "Spelling Bee" | "Letter Boxed" | "Mini Crossword"
+     title    : short evocative name for the word puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle body; supports \n for line breaks (grids render as pre-formatted text)
+     answer   : the answer; supports \n for line breaks; appears inside its own toggle (id "wpans")
+============================================================================= */
+
+const SECTIONS = [
+  {
+    "id": "sg",
+    "title": "🇸🇬 Singapore",
+    "color": "#e74c3c",
+    "items": [
+      {
+        "headline": "Singapore urges COP31 to focus on delivery over new targets and calls transboundary haze &lsquo;preventable&rsquo;",
+        "summary": "At the UN climate summit in Antalya, Sustainability Minister Grace Fu said COP31 has enough to work on without raising mitigation targets and should instead deliver on adaptation and climate finance. She framed the Indonesian wildfire haze that choked Singapore in October as a solvable problem rooted in peatland and forest management, and said Singapore&rsquo;s first National Adaptation Plan is due in 2027.",
+        "source": "SCMP",
+        "url": "https://www.scmp.com/news/asia/southeast-asia/article/3373729/singapore-minister-says-cop31-has-enough-work-without-new-targets",
+        "date": "Nov 17",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Japan&rsquo;s Princess Aiko begins official Singapore visit marking 60 years of diplomatic ties",
+        "summary": "Princess Aiko arrived in Singapore on Nov 17 for a five-day official visit at President Tharman Shanmugaratnam&rsquo;s invitation, marking 60 years of Singapore&ndash;Japan relations. Her programme includes an orchid-naming ceremony at the Botanic Gardens and a tree-planting at Jurong Lake Gardens, where her grandparents planted cycads in 1970.",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/asia-pacific/japans-princess-aiko-begins-official-singapore-visit-2026-11-17/",
+        "date": "Nov 17",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "NETS CashCard to stop working at carparks, ERP and checkpoints from Jan 1, 2027",
+        "summary": "NETS said its legacy CashCard will no longer be accepted for ERP, carpark payments and Causeway tolls from Jan 1, 2027, as the Land Transport Authority moves to the satellite-based ERP 2 system and the next-generation on-board unit. Drivers are urged to switch to the NETS Motoring Card or FlashPay, with stored value refundable at bank branches until March 31, 2027.",
+        "source": "The Straits Times",
+        "url": "https://www.straitstimes.com/singapore/transport/nets-cashcard-to-stop-working-at-carparks-erp-and-checkpoints-from-jan-1-2027",
+        "date": "Nov 17",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Singapore studies age-based limits on teens&rsquo; access to social media",
+        "summary": "Officials said Singapore is examining age-based access controls for social media aimed at protecting teenagers, joining a growing list of jurisdictions weighing curbs on under-16 use. No timeline or minimum age has been set, with the government studying overseas models and enforcement options.",
+        "source": "Mothership",
+        "url": "https://mothership.sg/2026/11/singapore-age-based-social-media-access-teens/",
+        "date": "Nov 16",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "india",
+    "title": "🇮🇳 India",
+    "color": "#e67e22",
+    "items": [
+      {
+        "headline": "India&rsquo;s top court defers Rahul Gandhi&rsquo;s plea on electoral-roll revision to Dec 9, seeks poll-body reply",
+        "summary": "The Supreme Court on Nov 17 deferred to Dec 9 a plea by Congress leader Rahul Gandhi and 12 other INDIA-bloc leaders seeking to put written questions to the Election Commission over its nationwide Special Intensive Revision of electoral rolls. The bench of CJI Surya Kant said it would hear the Commission first, and questioned the petitioners&rsquo; conduct after their march to the court.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/11/17/india-top-court-defers-opposition-plea-on-electoral-roll-revision",
+        "date": "Nov 17",
+        "spectrum": {
+          "left": "Opposition-leaning commentary casts the SIR as a threat to voting rights and frames the delay as the court stalling.",
+          "center": "Mainstream outlets report it procedurally: the bench sought the EC&rsquo;s response and set a December date.",
+          "right": "Pro-government voices stress the court&rsquo;s rebuke of the petitioners&rsquo; conduct and defend the Commission&rsquo;s integrity."
+        },
+        "bias": "Coverage diverges mainly on whether the deferral is read as judicial caution or as a setback for the opposition."
+      },
+      {
+        "headline": "Indian shares extend rally; Sensex adds 427 points and Nifty Bank hits a record",
+        "summary": "The Sensex rose 427 points to 82,532 and the Nifty 50 gained 96 points to about 25,387 on Nov 17, with the Nifty Bank index closing at a record high as financial and FMCG stocks led the advance. Easing oil prices and steady foreign inflows supported the sixth gain in seven sessions.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-11-17/india-stocks-extend-gains-as-bank-nifty-hits-record-sensex-climbs",
+        "date": "Nov 17",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Supreme Court orders Delhi and neighbouring states to act on vehicle emissions as NCR air turns hazardous",
+        "summary": "Hearing a suo motu case, a bench led by CJI Surya Kant called vehicular emissions a major driver of Delhi-NCR pollution and pressed the capital and three neighbouring states to submit action plans, with the air quality index around 391. The Centre said curbs on older, non-BS-VI vehicles were being enforced.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/11/17/india-top-court-presses-states-on-vehicle-emissions-as-delhi-air-worsens",
+        "date": "Nov 17",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Update: India and US say first-phase trade talks have &lsquo;largely concluded&rsquo; ahead of a December signing",
+        "summary": "Negotiators indicated the first tranche of an India&ndash;US trade deal, covering goods, has largely been settled and could be signed in the coming weeks, with Washington assuring New Delhi of lower tariffs than its peers. Services are slated for a later phase, and no legal text has yet been published.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-11-17/india-us-say-first-phase-trade-talks-largely-concluded",
+        "date": "Nov 17",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "uk",
+    "title": "🇬🇧 UK News",
+    "color": "#3949ab",
+    "items": [
+      {
+        "headline": "UK unemployment unexpectedly falls to 4.6% as pay growth cools",
+        "summary": "Official figures released Nov 17 showed the jobless rate for July&ndash;September fell 0.3 points to 4.6%, below the 4.7% forecast, while the employment rate rose to 75.4%. Vacancies dropped by 22,000 and regular pay growth slowed to 3.5%, and the statistics office cautioned that a survey-sample change flattered the headline.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-11-17/uk-unemployment-unexpectedly-falls-to-4-6-as-pay-growth-cools",
+        "date": "Nov 17",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Burnham pledges to tackle youth-jobs crisis, weighing welfare overhaul",
+        "summary": "Prime Minister Andy Burnham said fixing youth unemployment is a priority, drawing on reform proposals from former minister Alan Milburn. Critics warn the welfare changes could take about a decade to yield savings.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-11-16/burnham-pledges-to-tackle-uk-youth-jobs-crisis",
+        "date": "Nov 16",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Update: Burnham says 10-year plan will include a national care service, due before Christmas recess",
+        "summary": "Burnham confirmed his 10-year plan for Britain will be unveiled before Parliament rises on Dec 17 and will propose a national care service, with cross-party talks on adult social care due by year-end. He had earlier said there was no firm date for publication.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-11-11/burnham-says-his-10-year-plan-will-now-arrive-before-year-end",
+        "date": "Nov 16",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "UK heads to Brussels summit seeking closer EU ties and asylum-database access",
+        "summary": "Ahead of a Nov 20 UK&ndash;EU summit, Burnham is expected to push for a food-and-drink agreement, a youth-mobility scheme and restored access to European databases used to process asylum claims. Brussels has signalled it wants significant movement, especially on youth mobility, before offering concessions.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-11-16/uk-heads-to-brussels-summit-seeking-asylum-database-access",
+        "date": "Nov 16",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "geo",
+    "title": "🌍 Global / Geopolitics",
+    "color": "#2980b9",
+    "items": [
+      {
+        "headline": "Zelensky says Ukraine struck both sides of the Kerch Bridge to occupied Crimea",
+        "summary": "President Volodymyr Zelensky confirmed a strike that hit road and rail sections of the Kerch Bridge linking Russia to occupied Crimea, saying &lsquo;Palianytsia&rsquo; drones and &lsquo;Neptune&rsquo; missiles were used. Russia&rsquo;s Investigative Committee called it a terrorist act, and Zelensky warned of fresh Russian strikes on Ukrainian infrastructure.",
+        "source": "CNN",
+        "url": "https://www.cnn.com/2026/11/17/europe/ukraine-russia-kerch-bridge-intl-hnk",
+        "date": "Nov 17",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Trump&rsquo;s &lsquo;Board of Peace&rsquo; warns the UN that Gaza&rsquo;s ceasefire is at risk over aid delays",
+        "summary": "The body overseeing the Gaza truce told the Security Council the ceasefire could collapse without faster action, citing stalled decisions on police and a stabilisation force. Foreign ministers from Australia, Canada, Italy and Britain said about 150,000 tents and winter supplies were held at the border; Israel says more than 8,200 trucks and over 90,000 tents have entered.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/11/17/gaza-board-of-peace-warns-security-council-ceasefire-at-risk",
+        "date": "Nov 17",
+        "spectrum": {
+          "left": "Outlets emphasise Israeli obstruction, unmet aid pledges and the civilian toll of winter flooding.",
+          "center": "Reporting weighs the Board&rsquo;s warning against Israel&rsquo;s truck-and-tent figures and the disputed shortfall.",
+          "right": "Coverage foregrounds the condition that Hamas disarm before reconstruction and Israel&rsquo;s security concerns."
+        },
+        "bias": "The gap is largely over whose figures to lead with: aid groups&rsquo; shortfall counts or Israel&rsquo;s delivery totals."
+      },
+      {
+        "headline": "COP31 enters its final week as the summit chair presses rich nations to deliver promised climate finance",
+        "summary": "With talks in Antalya running to Nov 21, COP31 President Murat Kurum urged countries to honour existing finance pledges rather than set new targets, and flagged electrification as a tangible outcome. Several leaders, including Canada&rsquo;s and Japan&rsquo;s, skipped the summit, and the US stayed away for a second year.",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/business/environment/cop31-chair-presses-rich-nations-climate-finance-final-week-2026-11-17/",
+        "date": "Nov 17",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Sudan accuses Ethiopia of sheltering RSF fighters as cross-border tensions rise",
+        "summary": "Sudan&rsquo;s military said Ethiopia has allowed the paramilitary Rapid Support Forces to use its territory for camps, drones and cross-border attacks, an accusation Addis Ababa has rejected. Fighting in the Blue Nile region has displaced more than 20,000 people since August.",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/africa/sudan-accuses-ethiopia-sheltering-rsf-fighters-cross-border-attacks-2026-11-17/",
+        "date": "Nov 17",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "tech",
+    "title": "💻 Tech & AI",
+    "color": "#27ae60",
+    "items": [
+      {
+        "headline": "Nvidia tops forecasts in its first report since Huang&rsquo;s exit, guiding to $130 billion",
+        "summary": "Nvidia posted fiscal third-quarter revenue of about $116 billion, up 103% from a year earlier, with adjusted earnings of $2.68 a share and data-center sales of $107.6 billion. Interim CEO Colette Kress guided fourth-quarter revenue to roughly $130 billion and called demand for the Vera Rubin platform &lsquo;explosive&rsquo;, sending shares up around 3% after hours.",
+        "source": "CNBC",
+        "url": "https://www.cnbc.com/2026/11/17/nvidia-nvda-earnings-report-q3-2027.html",
+        "date": "Nov 17",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "OpenAI pushes new GPT-6.2 models to ChatGPT Work and Codex",
+        "summary": "OpenAI is rolling out its latest models, reported as GPT-6.2 Astra and a lower-cost Sol, across ChatGPT Work, Codex and its API, promising stronger performance on complex professional tasks. Early reports say Sol came within half a point of Astra on one coding benchmark at about a fifth of the cost.",
+        "source": "TechCrunch",
+        "url": "https://techcrunch.com/2026/11/17/openai-releases-gpt-6-2-astra-and-sol-across-chatgpt-work-and-codex/",
+        "date": "Nov 17",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "US readies a rule to curb China&rsquo;s remote access to AI chips in third-country data centres",
+        "summary": "The Commerce Department is finalising a rule to stop Chinese firms from renting advanced AI chips in data centres in countries such as Singapore and Thailand, closing a so-called rental loophole in export controls. Export-control lawyers question whether the agency can enforce it without new legislation.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-11-17/us-readies-rule-to-curb-china-s-remote-access-to-ai-chips-abroad",
+        "date": "Nov 17",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Google broadens access to Gemini 4 Argon in a bid to regain AI momentum",
+        "summary": "Google widened availability of its Gemini 4 Argon model as it races to keep pace with OpenAI and a newly public Anthropic. The move expands the model to more developers and enterprise customers amid intensifying competition in frontier AI.",
+        "source": "CNBC",
+        "url": "https://www.cnbc.com/2026/11/17/google-broadens-access-to-gemini-4-argon-ai-push.html",
+        "date": "Nov 17",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "biz",
+    "title": "📈 Business & Markets",
+    "color": "#8e44ad",
+    "items": [
+      {
+        "headline": "Wall Street sinks before Nvidia&rsquo;s results; S&amp;P 500 posts its lowest close since July",
+        "summary": "The Dow fell about 849 points, or 1.6%, to 50,759, while the S&amp;P 500 lost 1% to 7,340 &mdash; its lowest close since late July &mdash; as an AI-driven selloff deepened ahead of Nvidia&rsquo;s earnings. The Nasdaq Composite slipped around 0.9%.",
+        "source": "CNBC",
+        "url": "https://www.cnbc.com/2026/11/17/nvidias-kress-faces-earnings-test-after-stock-drags-wall-street-into-the-red.html",
+        "date": "Nov 17",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Oil tumbles and gold hits a one-year low as rate-cut bets unwind",
+        "summary": "Brent crude fell about 4.7% to $91.74 and WTI dropped 4.3% to $85.05 on demand and oversupply worries, while gold slid to a roughly one-year low near $3,856 an ounce. A firmer dollar and receding Federal Reserve rate-cut expectations drove the move.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-11-17/oil-tumbles-gold-hits-one-year-low-as-rate-cut-bets-unwind",
+        "date": "Nov 17",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "US 10-year Treasury yield climbs toward 5.1% as Fed-cut hopes fade",
+        "summary": "The benchmark 10-year Treasury yield pushed to about 5.1% on Nov 17 as traders dialled back expectations of near-term Federal Reserve easing. Higher yields added pressure on rate-sensitive technology shares during the session.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-11-17/treasury-10-year-yield-climbs-toward-5-1-as-fed-bets-recede",
+        "date": "Nov 17",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Bitcoin slips near $64,900 as crypto joins the broad risk-off move",
+        "summary": "Bitcoin fell to around $64,900 as the selloff in equities, oil and gold spilled into digital assets, with crypto-linked stocks also under pressure. Rising real yields and a stronger dollar weighed on risk appetite.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-11-17/bitcoin-slips-near-64-900-as-risk-off-move-hits-crypto",
+        "date": "Nov 17",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "sports",
+    "title": "🎾🏏🏎️ Sports",
+    "color": "#c0392b",
+    "items": [
+      {
+        "headline": "🎾 Zverev beats Shelton in straight sets to go 2-0 and lead his ATP Finals group",
+        "summary": "World No. 1 Alexander Zverev saw off Ben Shelton 6-2, 7-6(4) in Turin on Nov 17 to reach 2-0 and take control of the John McEnroe Group. The win moves Zverev to the brink of the semi-finals at the season-ending event, played without the injured Jannik Sinner.",
+        "source": "ATP Tour",
+        "url": "https://www.atptour.com/en/news/zverev-shelton-nitto-atp-finals-2026-tuesday",
+        "date": "Nov 17",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "🎾 Fils outlasts Jodar in three sets for his first ATP Finals match win",
+        "summary": "Debutant Arthur Fils beat fellow first-timer Rafael Jodar 4-6, 6-2, 6-2 on Nov 17 for his maiden win at the Nitto ATP Finals. The result keeps Fils alive in the John McEnroe Group behind Zverev.",
+        "source": "ATP Tour",
+        "url": "https://www.atptour.com/en/news/fils-jodar-nitto-atp-finals-2026-tuesday",
+        "date": "Nov 17",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "🏏 Pant cleared to play as India finalise plans for the first Test against New Zealand",
+        "summary": "Wicketkeeper Rishabh Pant has been passed fit after a side strain and joined India&rsquo;s squad in Wellington ahead of the first Test, which starts Nov 19 at the Basin Reserve. Captain Shubman Gill said India will likely field seven specialist batters and four fast bowlers as they chase World Test Championship points.",
+        "source": "ESPNcricinfo",
+        "url": "https://www.espncricinfo.com/series/new-zealand-vs-india-2026-27/match-preview-1st-test-wellington",
+        "date": "Nov 17",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "🏎️ F1 heads to Las Vegas with Verstappen chasing a third Strip win and the fight for second wide open",
+        "summary": "With Kimi Antonelli already crowned 2026 champion, the Las Vegas Grand Prix weekend (Nov 19&ndash;21) centres on the battle for runner-up, where Max Verstappen leads George Russell by 17 points. Verstappen, a two-time Las Vegas winner, arrives on a run of podiums as Mercedes brings a power-unit upgrade.",
+        "source": "Autosport",
+        "url": "https://www.autosport.com/f1/news/las-vegas-gp-2026-verstappen-eyes-third-win-as-fight-for-second-heats-up/",
+        "date": "Nov 17",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "misc",
+    "title": "🔬 Other Miscellaneous News",
+    "color": "#1abc9c",
+    "items": [
+      {
+        "headline": "ESA&rsquo;s Hera probe returns its sharpest views yet of the DART-struck asteroid system",
+        "summary": "Europe&rsquo;s Hera spacecraft imaged the Didymos binary asteroid from about 28.5 km on Nov 17, using infrared and colour instruments to study the moonlet Dimorphos that NASA&rsquo;s DART deliberately hit in 2022. ESA plans to release full-resolution images of both bodies on Nov 25.",
+        "source": "Scientific American",
+        "url": "https://www.scientificamerican.com/article/esa-hera-probe-returns-sharpest-views-of-dart-struck-asteroid-didymos/",
+        "date": "Nov 17",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "The ageing heart inflames unevenly, with hotspots in the valves, a single-cell atlas finds",
+        "summary": "A Jackson Laboratory study published in Aging Cell mapped mouse hearts and found age-related inflammation and scarring cluster in the valves and aortic root rather than spreading evenly. Macrophages ramped up inflammation genes while fibroblasts shifted toward fibrosis, pointing to regional targets for future therapies.",
+        "source": "New Scientist",
+        "url": "https://www.newscientist.com/article/ageing-heart-inflames-unevenly-with-hotspots-in-the-valves-study-finds/",
+        "date": "Nov 16",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Physicists steer a single atom&rsquo;s nuclear spin with radio waves",
+        "summary": "Researchers at Delft University of Technology reported in Nature Communications that they controlled the nuclear spin of a single atom using radio waves, challenging assumptions about atomic magnetism. The still-unexplained effect could eventually support more stable quantum memory.",
+        "source": "Scientific American",
+        "url": "https://www.scientificamerican.com/article/physicists-steer-a-single-atoms-nuclear-spin-with-radio-waves/",
+        "date": "Nov 15",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Chemists capture stable oxoboranes, ending a decades-long hunt",
+        "summary": "Researchers in Wurzburg reported in Nature Chemistry that they isolated stable oxoboranes &mdash; boron&ndash;oxygen molecules long thought too reactive to capture. The team said the breakthrough came unexpectedly from experiments that had seemed to be heading elsewhere.",
+        "source": "Scientific American",
+        "url": "https://www.scientificamerican.com/article/chemists-capture-stable-oxoboranes-ending-a-decades-long-hunt/",
+        "date": "Nov 16",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "fun",
+    "title": "✦ Fun Fact",
+    "color": "#27ae60",
+    "custom": "fun"
+  },
+  {
+    "id": "puzzle",
+    "title": "🧩 Puzzle",
+    "color": "#e67e22",
+    "custom": "puzzle"
+  },
+  {
+    "id": "wpuzzle",
+    "title": "🔤 Word Puzzles",
+    "color": "#16a085",
+    "custom": "wpuzzle"
+  }
+];
+
+const FUN_FACT = {
+  "text": "Cashews are never sold in their shells. Each nut grows at the base of a fleshy &lsquo;cashew apple&rsquo; inside a double shell lined with urushiol &mdash; the same caustic oil that makes poison ivy itch. Every cashew must be roasted or steamed to destroy the toxin before it is safe to handle, which is why a &lsquo;raw&rsquo; cashew has still been heat-treated.",
+  "tag": "Category · Food &amp; Botany"
+};
+
+const PUZZLE = {
+  "type": "Visual",
+  "title": "The Spider and the Fly",
+  "how": "Forget crawling up, across and down the obvious way &mdash; unfold the room into one flat sheet and the shortest route becomes a straight line you can measure with Pythagoras.",
+  "question": "A rectangular room is 30 ft long, 12 ft wide and 12 ft high.\nA spider sits on one end wall, 1 ft below the ceiling, exactly halfway across (6 ft from each side wall).\nA fly rests on the opposite end wall, 1 ft above the floor, also exactly halfway across. The fly does not move.\n\nWhat is the shortest distance the spider must crawl along the walls, ceiling and floor to reach the fly?",
+  "answer": "40 feet.\n\nThe naive route &mdash; straight up the wall, across the ceiling and down &mdash; is 1 + 30 + 11 = 42 ft. But if you unfold the room into a flat net so the path crosses part of the near end wall, a side wall, the far end wall and back, the journey becomes a single straight line.\nIts two legs measure 32 ft (1 + 30 + 1) and 24 ft (6 + 12 + 6), so the distance is the hypotenuse: √(32² + 24²) = √1600 = 40 ft — two feet shorter than the obvious route. (A classic Dudeney puzzle.)"
+};
+
+const WORD_PUZZLE = {
+  "type": "Anagram",
+  "title": "Apt Anagrams",
+  "how": "Count the letters, then look for a word or phrase of that length hinted by the clue &mdash; the answer always reuses every letter of the original, with nothing added or dropped.",
+  "question": "Each phrase below rearranges &mdash; using every letter exactly once &mdash; into a new word or phrase that aptly describes the original. Find all three.\n\n1.  DIRTY ROOM  →  one 9-letter word  (where you might actually find a messy one)\n2.  THE EYES  →  two words, 7 letters  (what a pair of eyes does)\n3.  A GENTLEMAN  →  two words, 10 letters  (a flattering description of one)",
+  "answer": "1.  DORMITORY   (DIRTY ROOM = D,I,R,T,Y,R,O,O,M)\n2.  THEY SEE   (THE EYES = T,H,E,E,Y,E,S)\n3.  ELEGANT MAN   (A GENTLEMAN = A,G,E,N,T,L,E,M,A,N)\n\nEach answer uses exactly the same letters as its source phrase."
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function renderWordPuzzle(){
+  let h='<div class="sec-title">🔤 Word Puzzle of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#16a085,transparent)"></div>';
+  h+='<div class="wpuzzle-box"><span class="wptype">'+WORD_PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+WORD_PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+WORD_PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+WORD_PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this,\'wpans\')">Show Answer</button>';
+  h+='<div class="answer" id="wpans"><span class="alabel">Answer</span>'+WORD_PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn,ansId){var a=document.getElementById(ansId||'ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else if(sec.custom==="wpuzzle"){div.innerHTML=renderWordPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>

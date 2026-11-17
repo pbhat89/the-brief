@@ -4529,3 +4529,35 @@ is empty until the first run.
 2026-11-17	The Vera Rubin Observatory flags a candidate sixth dwarf planet in the solar system	b301226b	vera rubin observatory,dwarf planet,2026 ed138,solar system,astronomy
 2026-11-17	A new study finds taste buds pre-process flavour before the brain gets the signal	7bcfd39f	taste buds,sour,serotonin,neuroscience,flavour
 2026-11-17	The Rubin Observatory spots a surprise ‘tail’ on an iconic nearby galaxy	6d42785d	rubin observatory,galaxy,stellar stream,astronomy,survey
+2026-11-18	Singapore urges COP31 to focus on delivery over new targets and calls transboundary haze &lsquo;preventable&rsquo;	cdb7e361	
+2026-11-18	Japan&rsquo;s Princess Aiko begins official Singapore visit marking 60 years of diplomatic ties	73c3c00d	
+2026-11-18	NETS CashCard to stop working at carparks, ERP and checkpoints from Jan 1, 2027	3827de30	
+2026-11-18	Singapore studies age-based limits on teens&rsquo; access to social media	d9b64953	
+2026-11-18	India&rsquo;s top court defers Rahul Gandhi&rsquo;s plea on electoral-roll revision to Dec 9, seeks poll-body reply	7095c5f2	
+2026-11-18	Indian shares extend rally; Sensex adds 427 points and Nifty Bank hits a record	bc644820	
+2026-11-18	Supreme Court orders Delhi and neighbouring states to act on vehicle emissions as NCR air turns hazardous	c6ab3140	
+2026-11-18	Update: India and US say first-phase trade talks have &lsquo;largely concluded&rsquo; ahead of a December signing	018d25d1	
+2026-11-18	UK unemployment unexpectedly falls to 4.6% as pay growth cools	af90f5b3	
+2026-11-18	Burnham pledges to tackle youth-jobs crisis, weighing welfare overhaul	0532fba4	
+2026-11-18	Update: Burnham says 10-year plan will include a national care service, due before Christmas recess	11b0c0ef	
+2026-11-18	UK heads to Brussels summit seeking closer EU ties and asylum-database access	f9b188b1	
+2026-11-18	Zelensky says Ukraine struck both sides of the Kerch Bridge to occupied Crimea	df7fa4e8	
+2026-11-18	Trump&rsquo;s &lsquo;Board of Peace&rsquo; warns the UN that Gaza&rsquo;s ceasefire is at risk over aid delays	3cba357f	
+2026-11-18	COP31 enters its final week as the summit chair presses rich nations to deliver promised climate finance	3d67629f	
+2026-11-18	Sudan accuses Ethiopia of sheltering RSF fighters as cross-border tensions rise	3ec95c91	
+2026-11-18	Nvidia tops forecasts in its first report since Huang&rsquo;s exit, guiding to $130 billion	4f87b777	
+2026-11-18	OpenAI pushes new GPT-6.2 models to ChatGPT Work and Codex	b991e203	
+2026-11-18	US readies a rule to curb China&rsquo;s remote access to AI chips in third-country data centres	9fb7cc16	
+2026-11-18	Google broadens access to Gemini 4 Argon in a bid to regain AI momentum	8bb54679	
+2026-11-18	Wall Street sinks before Nvidia&rsquo;s results; S&amp;P 500 posts its lowest close since July	374e8e87	
+2026-11-18	Oil tumbles and gold hits a one-year low as rate-cut bets unwind	f9f123a0	
+2026-11-18	US 10-year Treasury yield climbs toward 5.1% as Fed-cut hopes fade	5e91d6d9	
+2026-11-18	Bitcoin slips near $64,900 as crypto joins the broad risk-off move	9fc82a0f	
+2026-11-18	🎾 Zverev beats Shelton in straight sets to go 2-0 and lead his ATP Finals group	4888741c	
+2026-11-18	🎾 Fils outlasts Jodar in three sets for his first ATP Finals match win	de0e0f95	
+2026-11-18	🏏 Pant cleared to play as India finalise plans for the first Test against New Zealand	35454022	
+2026-11-18	🏎️ F1 heads to Las Vegas with Verstappen chasing a third Strip win and the fight for second wide open	54d1a60f	
+2026-11-18	ESA&rsquo;s Hera probe returns its sharpest views yet of the DART-struck asteroid system	cdebade7	
+2026-11-18	The ageing heart inflames unevenly, with hotspots in the valves, a single-cell atlas finds	ecaf90c2	
+2026-11-18	Physicists steer a single atom&rsquo;s nuclear spin with radio waves	30453b56	
+2026-11-18	Chemists capture stable oxoboranes, ending a decades-long hunt	b9862812	

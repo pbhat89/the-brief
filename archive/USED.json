@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-09-18",
-      "topic_key": "canada",
-      "text": "Canada has more lakes than the rest of the world combined"
-    },
-    {
       "date": "2026-09-19",
       "topic_key": "robot",
       "text": "The word 'robot' comes from Karel Capek's 1920 play R.U.R., from Czech 'robota' (forced labour); his brother Josef coined it."
@@ -284,14 +279,14 @@
       "date": "2026-11-17",
       "topic_key": "equals sign",
       "text": "The equals sign (=) was invented in 1557 by Welsh mathematician Robert Recorde, who chose two equal-length parallel lines because nothing could be more equal."
+    },
+    {
+      "date": "2026-11-18",
+      "topic_key": "cashew",
+      "text": "Cashews are sold shelled because their raw double shell contains urushiol, the caustic oil in poison ivy."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-10-18",
-      "type": "logic",
-      "title_key": "table-for-four"
-    },
     {
       "date": "2026-10-19",
       "type": "quantitative",
@@ -421,14 +416,14 @@
       "date": "2026-11-17",
       "type": "lateral",
       "title_key": "ruined-in-an-instant"
+    },
+    {
+      "date": "2026-11-18",
+      "type": "visual",
+      "title_key": "spider-and-the-fly"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-10-18",
-      "type": "letterboxed",
-      "title_key": "boxed-in"
-    },
     {
       "date": "2026-10-19",
       "type": "grouping",
@@ -558,6 +553,11 @@
       "date": "2026-11-17",
       "type": "ladder",
       "title_key": "less-is-more"
+    },
+    {
+      "date": "2026-11-18",
+      "type": "anagram",
+      "title_key": "apt-anagrams"
     }
   ]
 }
