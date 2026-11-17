@@ -4529,35 +4529,35 @@ is empty until the first run.
 2026-11-17	The Vera Rubin Observatory flags a candidate sixth dwarf planet in the solar system	b301226b	vera rubin observatory,dwarf planet,2026 ed138,solar system,astronomy
 2026-11-17	A new study finds taste buds pre-process flavour before the brain gets the signal	7bcfd39f	taste buds,sour,serotonin,neuroscience,flavour
 2026-11-17	The Rubin Observatory spots a surprise ‘tail’ on an iconic nearby galaxy	6d42785d	rubin observatory,galaxy,stellar stream,astronomy,survey
-2026-11-18	Singapore urges COP31 to focus on delivery over new targets and calls transboundary haze &lsquo;preventable&rsquo;	cdb7e361	
-2026-11-18	Japan&rsquo;s Princess Aiko begins official Singapore visit marking 60 years of diplomatic ties	73c3c00d	
-2026-11-18	NETS CashCard to stop working at carparks, ERP and checkpoints from Jan 1, 2027	3827de30	
-2026-11-18	Singapore studies age-based limits on teens&rsquo; access to social media	d9b64953	
-2026-11-18	India&rsquo;s top court defers Rahul Gandhi&rsquo;s plea on electoral-roll revision to Dec 9, seeks poll-body reply	7095c5f2	
-2026-11-18	Indian shares extend rally; Sensex adds 427 points and Nifty Bank hits a record	bc644820	
-2026-11-18	Supreme Court orders Delhi and neighbouring states to act on vehicle emissions as NCR air turns hazardous	c6ab3140	
-2026-11-18	Update: India and US say first-phase trade talks have &lsquo;largely concluded&rsquo; ahead of a December signing	018d25d1	
-2026-11-18	UK unemployment unexpectedly falls to 4.6% as pay growth cools	af90f5b3	
-2026-11-18	Burnham pledges to tackle youth-jobs crisis, weighing welfare overhaul	0532fba4	
-2026-11-18	Update: Burnham says 10-year plan will include a national care service, due before Christmas recess	11b0c0ef	
-2026-11-18	UK heads to Brussels summit seeking closer EU ties and asylum-database access	f9b188b1	
-2026-11-18	Zelensky says Ukraine struck both sides of the Kerch Bridge to occupied Crimea	df7fa4e8	
-2026-11-18	Trump&rsquo;s &lsquo;Board of Peace&rsquo; warns the UN that Gaza&rsquo;s ceasefire is at risk over aid delays	3cba357f	
-2026-11-18	COP31 enters its final week as the summit chair presses rich nations to deliver promised climate finance	3d67629f	
-2026-11-18	Sudan accuses Ethiopia of sheltering RSF fighters as cross-border tensions rise	3ec95c91	
-2026-11-18	Nvidia tops forecasts in its first report since Huang&rsquo;s exit, guiding to $130 billion	4f87b777	
-2026-11-18	OpenAI pushes new GPT-6.2 models to ChatGPT Work and Codex	b991e203	
-2026-11-18	US readies a rule to curb China&rsquo;s remote access to AI chips in third-country data centres	9fb7cc16	
-2026-11-18	Google broadens access to Gemini 4 Argon in a bid to regain AI momentum	8bb54679	
-2026-11-18	Wall Street sinks before Nvidia&rsquo;s results; S&amp;P 500 posts its lowest close since July	374e8e87	
-2026-11-18	Oil tumbles and gold hits a one-year low as rate-cut bets unwind	f9f123a0	
-2026-11-18	US 10-year Treasury yield climbs toward 5.1% as Fed-cut hopes fade	5e91d6d9	
-2026-11-18	Bitcoin slips near $64,900 as crypto joins the broad risk-off move	9fc82a0f	
-2026-11-18	🎾 Zverev beats Shelton in straight sets to go 2-0 and lead his ATP Finals group	4888741c	
-2026-11-18	🎾 Fils outlasts Jodar in three sets for his first ATP Finals match win	de0e0f95	
-2026-11-18	🏏 Pant cleared to play as India finalise plans for the first Test against New Zealand	35454022	
-2026-11-18	🏎️ F1 heads to Las Vegas with Verstappen chasing a third Strip win and the fight for second wide open	54d1a60f	
-2026-11-18	ESA&rsquo;s Hera probe returns its sharpest views yet of the DART-struck asteroid system	cdebade7	
-2026-11-18	The ageing heart inflames unevenly, with hotspots in the valves, a single-cell atlas finds	ecaf90c2	
-2026-11-18	Physicists steer a single atom&rsquo;s nuclear spin with radio waves	30453b56	
-2026-11-18	Chemists capture stable oxoboranes, ending a decades-long hunt	b9862812	
+2026-11-18	Singapore urges COP31 to focus on delivery over new targets and calls transboundary haze ‘preventable’	1c8a6ac3	singapore,grace fu,cop31,haze,adaptation
+2026-11-18	Japan’s Princess Aiko begins official Singapore visit marking 60 years of diplomatic ties	ce9bac2d	singapore,japan,princess aiko,visit,diplomacy
+2026-11-18	NETS CashCard to stop working at carparks, ERP and checkpoints from Jan 1, 2027	3827de30	singapore,nets cashcard,erp,carparks,phase-out
+2026-11-18	Singapore studies age-based limits on teens’ access to social media	42a749ab	singapore,social media,teenagers,age limits,regulation
+2026-11-18	India’s top court defers Rahul Gandhi’s plea on electoral-roll revision to Dec 9, seeks poll-body reply	716f24f3	india,supreme court,rahul gandhi,sir,electoral rolls
+2026-11-18	Indian shares extend rally; Sensex adds 427 points and Nifty Bank hits a record	bc644820	india,sensex,nifty,nifty bank,record
+2026-11-18	Supreme Court orders Delhi and neighbouring states to act on vehicle emissions as NCR air turns hazardous	c6ab3140	india,supreme court,delhi,vehicular emissions,pollution
+2026-11-18	Update: India and US say first-phase trade talks have ‘largely concluded’ ahead of a December signing	e37a15df	india,united states,trade deal,tariffs,goods
+2026-11-18	UK unemployment unexpectedly falls to 4.6% as pay growth cools	af90f5b3	uk,unemployment,ons,jobs,bank of england
+2026-11-18	Burnham pledges to tackle youth-jobs crisis, weighing welfare overhaul	0532fba4	uk,burnham,youth jobs,welfare,milburn
+2026-11-18	Update: Burnham says 10-year plan will include a national care service, due before Christmas recess	11b0c0ef	uk,burnham,10-year plan,national care service
+2026-11-18	UK heads to Brussels summit seeking closer EU ties and asylum-database access	f9b188b1	uk,european union,brussels summit,asylum,brexit
+2026-11-18	Zelensky says Ukraine struck both sides of the Kerch Bridge to occupied Crimea	df7fa4e8	ukraine,russia,kerch bridge,crimea,zelensky
+2026-11-18	Trump’s ‘Board of Peace’ warns the UN that Gaza’s ceasefire is at risk over aid delays	408a0e0c	gaza,israel,board of peace,ceasefire,aid
+2026-11-18	COP31 enters its final week as the summit chair presses rich nations to deliver promised climate finance	3d67629f	cop31,antalya,climate finance,kurum,summit
+2026-11-18	Sudan accuses Ethiopia of sheltering RSF fighters as cross-border tensions rise	3ec95c91	sudan,ethiopia,rsf,blue nile,conflict
+2026-11-18	Nvidia tops forecasts in its first report since Huang’s exit, guiding to $130 billion	84c72640	nvidia,earnings,kress,data center,guidance
+2026-11-18	OpenAI pushes new GPT-6.2 models to ChatGPT Work and Codex	b991e203	openai,gpt-6.2,chatgpt,codex,models
+2026-11-18	US readies a rule to curb China’s remote access to AI chips in third-country data centres	657dac46	united states,china,ai chips,export controls,commerce
+2026-11-18	Google broadens access to Gemini 4 Argon in a bid to regain AI momentum	8bb54679	google,gemini 4 argon,ai,model,release
+2026-11-18	Wall Street sinks before Nvidia’s results; S&P 500 posts its lowest close since July	2bd1c057	wall street,s&p 500,dow,nvidia,selloff
+2026-11-18	Oil tumbles and gold hits a one-year low as rate-cut bets unwind	f9f123a0	oil,gold,brent,wti,rate cuts
+2026-11-18	US 10-year Treasury yield climbs toward 5.1% as Fed-cut hopes fade	5e91d6d9	treasury,10-year yield,federal reserve,rates
+2026-11-18	Bitcoin slips near $64,900 as crypto joins the broad risk-off move	9fc82a0f	bitcoin,crypto,risk-off,markets
+2026-11-18	🎾 Zverev beats Shelton in straight sets to go 2-0 and lead his ATP Finals group	4888741c	zverev,shelton,atp finals,turin,tennis
+2026-11-18	🎾 Fils outlasts Jodar in three sets for his first ATP Finals match win	de0e0f95	fils,jodar,atp finals,turin,tennis
+2026-11-18	🏏 Pant cleared to play as India finalise plans for the first Test against New Zealand	35454022	india,new zealand,test,pant,wellington
+2026-11-18	🏎️ F1 heads to Las Vegas with Verstappen chasing a third Strip win and the fight for second wide open	54d1a60f	formula 1,las vegas,verstappen,antonelli,standings
+2026-11-18	ESA’s Hera probe returns its sharpest views yet of the DART-struck asteroid system	3226ea2a	hera,esa,didymos,dimorphos,asteroid
+2026-11-18	The ageing heart inflames unevenly, with hotspots in the valves, a single-cell atlas finds	ecaf90c2	heart,ageing,inflammation,jackson laboratory,study
+2026-11-18	Physicists steer a single atom’s nuclear spin with radio waves	b7c52637	nuclear spin,atom,delft,quantum,physics
+2026-11-18	Chemists capture stable oxoboranes, ending a decades-long hunt	b9862812	oxoboranes,boron,nature chemistry,wurzburg,chemistry

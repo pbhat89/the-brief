@@ -3,24 +3,36 @@
   "items": [
     {
       "tab": "Singapore",
-      "headline": "Singapore urges COP31 to focus on delivery over new targets and calls transboundary haze &lsquo;preventable&rsquo;",
-      "summary": "At the UN climate summit in Antalya, Sustainability Minister Grace Fu said COP31 has enough to work on without raising mitigation targets and should instead deliver on adaptation and climate finance. She framed the Indonesian wildfire haze that choked Singapore in October as a solvable problem rooted in peatland and forest management, and said Singapore&rsquo;s first National Adaptation Plan is due in 2027.",
+      "headline": "Singapore urges COP31 to focus on delivery over new targets and calls transboundary haze ‘preventable’",
+      "summary": "At the UN climate summit in Antalya, Sustainability Minister Grace Fu said COP31 has enough to work on without raising mitigation targets and should instead deliver on adaptation and climate finance. She framed the Indonesian wildfire haze that choked Singapore in October as a solvable problem rooted in peatland and forest management, and said Singapore’s first National Adaptation Plan is due in 2027.",
       "url": "https://www.scmp.com/news/asia/southeast-asia/article/3373729/singapore-minister-says-cop31-has-enough-work-without-new-targets",
       "outlet": "SCMP",
       "publish_date": "2026-11-17",
-      "short_hash": "cdb7e361",
-      "key_entities": [],
+      "short_hash": "1c8a6ac3",
+      "key_entities": [
+        "singapore",
+        "grace fu",
+        "cop31",
+        "haze",
+        "adaptation"
+      ],
       "is_update": false
     },
     {
       "tab": "Singapore",
-      "headline": "Japan&rsquo;s Princess Aiko begins official Singapore visit marking 60 years of diplomatic ties",
-      "summary": "Princess Aiko arrived in Singapore on Nov 17 for a five-day official visit at President Tharman Shanmugaratnam&rsquo;s invitation, marking 60 years of Singapore&ndash;Japan relations. Her programme includes an orchid-naming ceremony at the Botanic Gardens and a tree-planting at Jurong Lake Gardens, where her grandparents planted cycads in 1970.",
+      "headline": "Japan’s Princess Aiko begins official Singapore visit marking 60 years of diplomatic ties",
+      "summary": "Princess Aiko arrived in Singapore on Nov 17 for a five-day official visit at President Tharman Shanmugaratnam’s invitation, marking 60 years of Singapore–Japan relations. Her programme includes an orchid-naming ceremony at the Botanic Gardens and a tree-planting at Jurong Lake Gardens, where her grandparents planted cycads in 1970.",
       "url": "https://www.reuters.com/world/asia-pacific/japans-princess-aiko-begins-official-singapore-visit-2026-11-17/",
       "outlet": "Reuters",
       "publish_date": "2026-11-17",
-      "short_hash": "73c3c00d",
-      "key_entities": [],
+      "short_hash": "ce9bac2d",
+      "key_entities": [
+        "singapore",
+        "japan",
+        "princess aiko",
+        "visit",
+        "diplomacy"
+      ],
       "is_update": false
     },
     {
@@ -31,29 +43,47 @@
       "outlet": "The Straits Times",
       "publish_date": "2026-11-17",
       "short_hash": "3827de30",
-      "key_entities": [],
+      "key_entities": [
+        "singapore",
+        "nets cashcard",
+        "erp",
+        "carparks",
+        "phase-out"
+      ],
       "is_update": false
     },
     {
       "tab": "Singapore",
-      "headline": "Singapore studies age-based limits on teens&rsquo; access to social media",
+      "headline": "Singapore studies age-based limits on teens’ access to social media",
       "summary": "Officials said Singapore is examining age-based access controls for social media aimed at protecting teenagers, joining a growing list of jurisdictions weighing curbs on under-16 use. No timeline or minimum age has been set, with the government studying overseas models and enforcement options.",
       "url": "https://mothership.sg/2026/11/singapore-age-based-social-media-access-teens/",
       "outlet": "Mothership",
       "publish_date": "2026-11-16",
-      "short_hash": "d9b64953",
-      "key_entities": [],
+      "short_hash": "42a749ab",
+      "key_entities": [
+        "singapore",
+        "social media",
+        "teenagers",
+        "age limits",
+        "regulation"
+      ],
       "is_update": false
     },
     {
       "tab": "India",
-      "headline": "India&rsquo;s top court defers Rahul Gandhi&rsquo;s plea on electoral-roll revision to Dec 9, seeks poll-body reply",
-      "summary": "The Supreme Court on Nov 17 deferred to Dec 9 a plea by Congress leader Rahul Gandhi and 12 other INDIA-bloc leaders seeking to put written questions to the Election Commission over its nationwide Special Intensive Revision of electoral rolls. The bench of CJI Surya Kant said it would hear the Commission first, and questioned the petitioners&rsquo; conduct after their march to the court.",
+      "headline": "India’s top court defers Rahul Gandhi’s plea on electoral-roll revision to Dec 9, seeks poll-body reply",
+      "summary": "The Supreme Court on Nov 17 deferred to Dec 9 a plea by Congress leader Rahul Gandhi and 12 other INDIA-bloc leaders seeking to put written questions to the Election Commission over its nationwide Special Intensive Revision of electoral rolls. The bench of CJI Surya Kant said it would hear the Commission first, and questioned the petitioners’ conduct after their march to the court.",
       "url": "https://www.aljazeera.com/news/2026/11/17/india-top-court-defers-opposition-plea-on-electoral-roll-revision",
       "outlet": "Al Jazeera",
       "publish_date": "2026-11-17",
-      "short_hash": "7095c5f2",
-      "key_entities": [],
+      "short_hash": "716f24f3",
+      "key_entities": [
+        "india",
+        "supreme court",
+        "rahul gandhi",
+        "sir",
+        "electoral rolls"
+      ],
       "is_update": false
     },
     {
@@ -64,7 +94,13 @@
       "outlet": "Bloomberg",
       "publish_date": "2026-11-17",
       "short_hash": "bc644820",
-      "key_entities": [],
+      "key_entities": [
+        "india",
+        "sensex",
+        "nifty",
+        "nifty bank",
+        "record"
+      ],
       "is_update": false
     },
     {
@@ -75,29 +111,47 @@
       "outlet": "Al Jazeera",
       "publish_date": "2026-11-17",
       "short_hash": "c6ab3140",
-      "key_entities": [],
+      "key_entities": [
+        "india",
+        "supreme court",
+        "delhi",
+        "vehicular emissions",
+        "pollution"
+      ],
       "is_update": false
     },
     {
       "tab": "India",
-      "headline": "Update: India and US say first-phase trade talks have &lsquo;largely concluded&rsquo; ahead of a December signing",
-      "summary": "Negotiators indicated the first tranche of an India&ndash;US trade deal, covering goods, has largely been settled and could be signed in the coming weeks, with Washington assuring New Delhi of lower tariffs than its peers. Services are slated for a later phase, and no legal text has yet been published.",
+      "headline": "Update: India and US say first-phase trade talks have ‘largely concluded’ ahead of a December signing",
+      "summary": "Negotiators indicated the first tranche of an India–US trade deal, covering goods, has largely been settled and could be signed in the coming weeks, with Washington assuring New Delhi of lower tariffs than its peers. Services are slated for a later phase, and no legal text has yet been published.",
       "url": "https://www.bloomberg.com/news/articles/2026-11-17/india-us-say-first-phase-trade-talks-largely-concluded",
       "outlet": "Bloomberg",
       "publish_date": "2026-11-17",
-      "short_hash": "018d25d1",
-      "key_entities": [],
+      "short_hash": "e37a15df",
+      "key_entities": [
+        "india",
+        "united states",
+        "trade deal",
+        "tariffs",
+        "goods"
+      ],
       "is_update": true
     },
     {
       "tab": "UK News",
       "headline": "UK unemployment unexpectedly falls to 4.6% as pay growth cools",
-      "summary": "Official figures released Nov 17 showed the jobless rate for July&ndash;September fell 0.3 points to 4.6%, below the 4.7% forecast, while the employment rate rose to 75.4%. Vacancies dropped by 22,000 and regular pay growth slowed to 3.5%, and the statistics office cautioned that a survey-sample change flattered the headline.",
+      "summary": "Official figures released Nov 17 showed the jobless rate for July–September fell 0.3 points to 4.6%, below the 4.7% forecast, while the employment rate rose to 75.4%. Vacancies dropped by 22,000 and regular pay growth slowed to 3.5%, and the statistics office cautioned that a survey-sample change flattered the headline.",
       "url": "https://www.bloomberg.com/news/articles/2026-11-17/uk-unemployment-unexpectedly-falls-to-4-6-as-pay-growth-cools",
       "outlet": "Bloomberg",
       "publish_date": "2026-11-17",
       "short_hash": "af90f5b3",
-      "key_entities": [],
+      "key_entities": [
+        "uk",
+        "unemployment",
+        "ons",
+        "jobs",
+        "bank of england"
+      ],
       "is_update": false
     },
     {
@@ -108,7 +162,13 @@
       "outlet": "Bloomberg",
       "publish_date": "2026-11-16",
       "short_hash": "0532fba4",
-      "key_entities": [],
+      "key_entities": [
+        "uk",
+        "burnham",
+        "youth jobs",
+        "welfare",
+        "milburn"
+      ],
       "is_update": false
     },
     {
@@ -119,73 +179,114 @@
       "outlet": "Bloomberg",
       "publish_date": "2026-11-16",
       "short_hash": "11b0c0ef",
-      "key_entities": [],
+      "key_entities": [
+        "uk",
+        "burnham",
+        "10-year plan",
+        "national care service"
+      ],
       "is_update": true
     },
     {
       "tab": "UK News",
       "headline": "UK heads to Brussels summit seeking closer EU ties and asylum-database access",
-      "summary": "Ahead of a Nov 20 UK&ndash;EU summit, Burnham is expected to push for a food-and-drink agreement, a youth-mobility scheme and restored access to European databases used to process asylum claims. Brussels has signalled it wants significant movement, especially on youth mobility, before offering concessions.",
+      "summary": "Ahead of a Nov 20 UK–EU summit, Burnham is expected to push for a food-and-drink agreement, a youth-mobility scheme and restored access to European databases used to process asylum claims. Brussels has signalled it wants significant movement, especially on youth mobility, before offering concessions.",
       "url": "https://www.bloomberg.com/news/articles/2026-11-16/uk-heads-to-brussels-summit-seeking-asylum-database-access",
       "outlet": "Bloomberg",
       "publish_date": "2026-11-16",
       "short_hash": "f9b188b1",
-      "key_entities": [],
+      "key_entities": [
+        "uk",
+        "european union",
+        "brussels summit",
+        "asylum",
+        "brexit"
+      ],
       "is_update": false
     },
     {
       "tab": "Global / Geopolitics",
       "headline": "Zelensky says Ukraine struck both sides of the Kerch Bridge to occupied Crimea",
-      "summary": "President Volodymyr Zelensky confirmed a strike that hit road and rail sections of the Kerch Bridge linking Russia to occupied Crimea, saying &lsquo;Palianytsia&rsquo; drones and &lsquo;Neptune&rsquo; missiles were used. Russia&rsquo;s Investigative Committee called it a terrorist act, and Zelensky warned of fresh Russian strikes on Ukrainian infrastructure.",
+      "summary": "President Volodymyr Zelensky confirmed a strike that hit road and rail sections of the Kerch Bridge linking Russia to occupied Crimea, saying ‘Palianytsia’ drones and ‘Neptune’ missiles were used. Russia’s Investigative Committee called it a terrorist act, and Zelensky warned of fresh Russian strikes on Ukrainian infrastructure.",
       "url": "https://www.cnn.com/2026/11/17/europe/ukraine-russia-kerch-bridge-intl-hnk",
       "outlet": "CNN",
       "publish_date": "2026-11-17",
       "short_hash": "df7fa4e8",
-      "key_entities": [],
+      "key_entities": [
+        "ukraine",
+        "russia",
+        "kerch bridge",
+        "crimea",
+        "zelensky"
+      ],
       "is_update": false
     },
     {
       "tab": "Global / Geopolitics",
-      "headline": "Trump&rsquo;s &lsquo;Board of Peace&rsquo; warns the UN that Gaza&rsquo;s ceasefire is at risk over aid delays",
+      "headline": "Trump’s ‘Board of Peace’ warns the UN that Gaza’s ceasefire is at risk over aid delays",
       "summary": "The body overseeing the Gaza truce told the Security Council the ceasefire could collapse without faster action, citing stalled decisions on police and a stabilisation force. Foreign ministers from Australia, Canada, Italy and Britain said about 150,000 tents and winter supplies were held at the border; Israel says more than 8,200 trucks and over 90,000 tents have entered.",
       "url": "https://www.aljazeera.com/news/2026/11/17/gaza-board-of-peace-warns-security-council-ceasefire-at-risk",
       "outlet": "Al Jazeera",
       "publish_date": "2026-11-17",
-      "short_hash": "3cba357f",
-      "key_entities": [],
+      "short_hash": "408a0e0c",
+      "key_entities": [
+        "gaza",
+        "israel",
+        "board of peace",
+        "ceasefire",
+        "aid"
+      ],
       "is_update": false
     },
     {
       "tab": "Global / Geopolitics",
       "headline": "COP31 enters its final week as the summit chair presses rich nations to deliver promised climate finance",
-      "summary": "With talks in Antalya running to Nov 21, COP31 President Murat Kurum urged countries to honour existing finance pledges rather than set new targets, and flagged electrification as a tangible outcome. Several leaders, including Canada&rsquo;s and Japan&rsquo;s, skipped the summit, and the US stayed away for a second year.",
+      "summary": "With talks in Antalya running to Nov 21, COP31 President Murat Kurum urged countries to honour existing finance pledges rather than set new targets, and flagged electrification as a tangible outcome. Several leaders, including Canada’s and Japan’s, skipped the summit, and the US stayed away for a second year.",
       "url": "https://www.reuters.com/business/environment/cop31-chair-presses-rich-nations-climate-finance-final-week-2026-11-17/",
       "outlet": "Reuters",
       "publish_date": "2026-11-17",
       "short_hash": "3d67629f",
-      "key_entities": [],
+      "key_entities": [
+        "cop31",
+        "antalya",
+        "climate finance",
+        "kurum",
+        "summit"
+      ],
       "is_update": false
     },
     {
       "tab": "Global / Geopolitics",
       "headline": "Sudan accuses Ethiopia of sheltering RSF fighters as cross-border tensions rise",
-      "summary": "Sudan&rsquo;s military said Ethiopia has allowed the paramilitary Rapid Support Forces to use its territory for camps, drones and cross-border attacks, an accusation Addis Ababa has rejected. Fighting in the Blue Nile region has displaced more than 20,000 people since August.",
+      "summary": "Sudan’s military said Ethiopia has allowed the paramilitary Rapid Support Forces to use its territory for camps, drones and cross-border attacks, an accusation Addis Ababa has rejected. Fighting in the Blue Nile region has displaced more than 20,000 people since August.",
       "url": "https://www.reuters.com/world/africa/sudan-accuses-ethiopia-sheltering-rsf-fighters-cross-border-attacks-2026-11-17/",
       "outlet": "Reuters",
       "publish_date": "2026-11-17",
       "short_hash": "3ec95c91",
-      "key_entities": [],
+      "key_entities": [
+        "sudan",
+        "ethiopia",
+        "rsf",
+        "blue nile",
+        "conflict"
+      ],
       "is_update": false
     },
     {
       "tab": "Tech & AI",
-      "headline": "Nvidia tops forecasts in its first report since Huang&rsquo;s exit, guiding to $130 billion",
-      "summary": "Nvidia posted fiscal third-quarter revenue of about $116 billion, up 103% from a year earlier, with adjusted earnings of $2.68 a share and data-center sales of $107.6 billion. Interim CEO Colette Kress guided fourth-quarter revenue to roughly $130 billion and called demand for the Vera Rubin platform &lsquo;explosive&rsquo;, sending shares up around 3% after hours.",
+      "headline": "Nvidia tops forecasts in its first report since Huang’s exit, guiding to $130 billion",
+      "summary": "Nvidia posted fiscal third-quarter revenue of about $116 billion, up 103% from a year earlier, with adjusted earnings of $2.68 a share and data-center sales of $107.6 billion. Interim CEO Colette Kress guided fourth-quarter revenue to roughly $130 billion and called demand for the Vera Rubin platform ‘explosive’, sending shares up around 3% after hours.",
       "url": "https://www.cnbc.com/2026/11/17/nvidia-nvda-earnings-report-q3-2027.html",
       "outlet": "CNBC",
       "publish_date": "2026-11-17",
-      "short_hash": "4f87b777",
-      "key_entities": [],
+      "short_hash": "84c72640",
+      "key_entities": [
+        "nvidia",
+        "earnings",
+        "kress",
+        "data center",
+        "guidance"
+      ],
       "is_update": false
     },
     {
@@ -196,18 +297,30 @@
       "outlet": "TechCrunch",
       "publish_date": "2026-11-17",
       "short_hash": "b991e203",
-      "key_entities": [],
+      "key_entities": [
+        "openai",
+        "gpt-6.2",
+        "chatgpt",
+        "codex",
+        "models"
+      ],
       "is_update": false
     },
     {
       "tab": "Tech & AI",
-      "headline": "US readies a rule to curb China&rsquo;s remote access to AI chips in third-country data centres",
+      "headline": "US readies a rule to curb China’s remote access to AI chips in third-country data centres",
       "summary": "The Commerce Department is finalising a rule to stop Chinese firms from renting advanced AI chips in data centres in countries such as Singapore and Thailand, closing a so-called rental loophole in export controls. Export-control lawyers question whether the agency can enforce it without new legislation.",
       "url": "https://www.bloomberg.com/news/articles/2026-11-17/us-readies-rule-to-curb-china-s-remote-access-to-ai-chips-abroad",
       "outlet": "Bloomberg",
       "publish_date": "2026-11-17",
-      "short_hash": "9fb7cc16",
-      "key_entities": [],
+      "short_hash": "657dac46",
+      "key_entities": [
+        "united states",
+        "china",
+        "ai chips",
+        "export controls",
+        "commerce"
+      ],
       "is_update": false
     },
     {
@@ -218,18 +331,30 @@
       "outlet": "CNBC",
       "publish_date": "2026-11-17",
       "short_hash": "8bb54679",
-      "key_entities": [],
+      "key_entities": [
+        "google",
+        "gemini 4 argon",
+        "ai",
+        "model",
+        "release"
+      ],
       "is_update": false
     },
     {
       "tab": "Business & Markets",
-      "headline": "Wall Street sinks before Nvidia&rsquo;s results; S&amp;P 500 posts its lowest close since July",
-      "summary": "The Dow fell about 849 points, or 1.6%, to 50,759, while the S&amp;P 500 lost 1% to 7,340 &mdash; its lowest close since late July &mdash; as an AI-driven selloff deepened ahead of Nvidia&rsquo;s earnings. The Nasdaq Composite slipped around 0.9%.",
+      "headline": "Wall Street sinks before Nvidia’s results; S&P 500 posts its lowest close since July",
+      "summary": "The Dow fell about 849 points, or 1.6%, to 50,759, while the S&P 500 lost 1% to 7,340 — its lowest close since late July — as an AI-driven selloff deepened ahead of Nvidia’s earnings. The Nasdaq Composite slipped around 0.9%.",
       "url": "https://www.cnbc.com/2026/11/17/nvidias-kress-faces-earnings-test-after-stock-drags-wall-street-into-the-red.html",
       "outlet": "CNBC",
       "publish_date": "2026-11-17",
-      "short_hash": "374e8e87",
-      "key_entities": [],
+      "short_hash": "2bd1c057",
+      "key_entities": [
+        "wall street",
+        "s&p 500",
+        "dow",
+        "nvidia",
+        "selloff"
+      ],
       "is_update": false
     },
     {
@@ -240,7 +365,13 @@
       "outlet": "Bloomberg",
       "publish_date": "2026-11-17",
       "short_hash": "f9f123a0",
-      "key_entities": [],
+      "key_entities": [
+        "oil",
+        "gold",
+        "brent",
+        "wti",
+        "rate cuts"
+      ],
       "is_update": false
     },
     {
@@ -251,7 +382,12 @@
       "outlet": "Bloomberg",
       "publish_date": "2026-11-17",
       "short_hash": "5e91d6d9",
-      "key_entities": [],
+      "key_entities": [
+        "treasury",
+        "10-year yield",
+        "federal reserve",
+        "rates"
+      ],
       "is_update": false
     },
     {
@@ -262,7 +398,12 @@
       "outlet": "Bloomberg",
       "publish_date": "2026-11-17",
       "short_hash": "9fc82a0f",
-      "key_entities": [],
+      "key_entities": [
+        "bitcoin",
+        "crypto",
+        "risk-off",
+        "markets"
+      ],
       "is_update": false
     },
     {
@@ -273,7 +414,13 @@
       "outlet": "ATP Tour",
       "publish_date": "2026-11-17",
       "short_hash": "4888741c",
-      "key_entities": [],
+      "key_entities": [
+        "zverev",
+        "shelton",
+        "atp finals",
+        "turin",
+        "tennis"
+      ],
       "is_update": false
     },
     {
@@ -284,40 +431,64 @@
       "outlet": "ATP Tour",
       "publish_date": "2026-11-17",
       "short_hash": "de0e0f95",
-      "key_entities": [],
+      "key_entities": [
+        "fils",
+        "jodar",
+        "atp finals",
+        "turin",
+        "tennis"
+      ],
       "is_update": false
     },
     {
       "tab": "Sports",
       "headline": "🏏 Pant cleared to play as India finalise plans for the first Test against New Zealand",
-      "summary": "Wicketkeeper Rishabh Pant has been passed fit after a side strain and joined India&rsquo;s squad in Wellington ahead of the first Test, which starts Nov 19 at the Basin Reserve. Captain Shubman Gill said India will likely field seven specialist batters and four fast bowlers as they chase World Test Championship points.",
+      "summary": "Wicketkeeper Rishabh Pant has been passed fit after a side strain and joined India’s squad in Wellington ahead of the first Test, which starts Nov 19 at the Basin Reserve. Captain Shubman Gill said India will likely field seven specialist batters and four fast bowlers as they chase World Test Championship points.",
       "url": "https://www.espncricinfo.com/series/new-zealand-vs-india-2026-27/match-preview-1st-test-wellington",
       "outlet": "ESPNcricinfo",
       "publish_date": "2026-11-17",
       "short_hash": "35454022",
-      "key_entities": [],
+      "key_entities": [
+        "india",
+        "new zealand",
+        "test",
+        "pant",
+        "wellington"
+      ],
       "is_update": false
     },
     {
       "tab": "Sports",
       "headline": "🏎️ F1 heads to Las Vegas with Verstappen chasing a third Strip win and the fight for second wide open",
-      "summary": "With Kimi Antonelli already crowned 2026 champion, the Las Vegas Grand Prix weekend (Nov 19&ndash;21) centres on the battle for runner-up, where Max Verstappen leads George Russell by 17 points. Verstappen, a two-time Las Vegas winner, arrives on a run of podiums as Mercedes brings a power-unit upgrade.",
+      "summary": "With Kimi Antonelli already crowned 2026 champion, the Las Vegas Grand Prix weekend (Nov 19–21) centres on the battle for runner-up, where Max Verstappen leads George Russell by 17 points. Verstappen, a two-time Las Vegas winner, arrives on a run of podiums as Mercedes brings a power-unit upgrade.",
       "url": "https://www.autosport.com/f1/news/las-vegas-gp-2026-verstappen-eyes-third-win-as-fight-for-second-heats-up/",
       "outlet": "Autosport",
       "publish_date": "2026-11-17",
       "short_hash": "54d1a60f",
-      "key_entities": [],
+      "key_entities": [
+        "formula 1",
+        "las vegas",
+        "verstappen",
+        "antonelli",
+        "standings"
+      ],
       "is_update": false
     },
     {
       "tab": "Other Miscellaneous News",
-      "headline": "ESA&rsquo;s Hera probe returns its sharpest views yet of the DART-struck asteroid system",
-      "summary": "Europe&rsquo;s Hera spacecraft imaged the Didymos binary asteroid from about 28.5 km on Nov 17, using infrared and colour instruments to study the moonlet Dimorphos that NASA&rsquo;s DART deliberately hit in 2022. ESA plans to release full-resolution images of both bodies on Nov 25.",
+      "headline": "ESA’s Hera probe returns its sharpest views yet of the DART-struck asteroid system",
+      "summary": "Europe’s Hera spacecraft imaged the Didymos binary asteroid from about 28.5 km on Nov 17, using infrared and colour instruments to study the moonlet Dimorphos that NASA’s DART deliberately hit in 2022. ESA plans to release full-resolution images of both bodies on Nov 25.",
       "url": "https://www.scientificamerican.com/article/esa-hera-probe-returns-sharpest-views-of-dart-struck-asteroid-didymos/",
       "outlet": "Scientific American",
       "publish_date": "2026-11-17",
-      "short_hash": "cdebade7",
-      "key_entities": [],
+      "short_hash": "3226ea2a",
+      "key_entities": [
+        "hera",
+        "esa",
+        "didymos",
+        "dimorphos",
+        "asteroid"
+      ],
       "is_update": false
     },
     {
@@ -328,35 +499,53 @@
       "outlet": "New Scientist",
       "publish_date": "2026-11-16",
       "short_hash": "ecaf90c2",
-      "key_entities": [],
+      "key_entities": [
+        "heart",
+        "ageing",
+        "inflammation",
+        "jackson laboratory",
+        "study"
+      ],
       "is_update": false
     },
     {
       "tab": "Other Miscellaneous News",
-      "headline": "Physicists steer a single atom&rsquo;s nuclear spin with radio waves",
+      "headline": "Physicists steer a single atom’s nuclear spin with radio waves",
       "summary": "Researchers at Delft University of Technology reported in Nature Communications that they controlled the nuclear spin of a single atom using radio waves, challenging assumptions about atomic magnetism. The still-unexplained effect could eventually support more stable quantum memory.",
       "url": "https://www.scientificamerican.com/article/physicists-steer-a-single-atoms-nuclear-spin-with-radio-waves/",
       "outlet": "Scientific American",
       "publish_date": "2026-11-15",
-      "short_hash": "30453b56",
-      "key_entities": [],
+      "short_hash": "b7c52637",
+      "key_entities": [
+        "nuclear spin",
+        "atom",
+        "delft",
+        "quantum",
+        "physics"
+      ],
       "is_update": false
     },
     {
       "tab": "Other Miscellaneous News",
       "headline": "Chemists capture stable oxoboranes, ending a decades-long hunt",
-      "summary": "Researchers in Wurzburg reported in Nature Chemistry that they isolated stable oxoboranes &mdash; boron&ndash;oxygen molecules long thought too reactive to capture. The team said the breakthrough came unexpectedly from experiments that had seemed to be heading elsewhere.",
+      "summary": "Researchers in Wurzburg reported in Nature Chemistry that they isolated stable oxoboranes — boron–oxygen molecules long thought too reactive to capture. The team said the breakthrough came unexpectedly from experiments that had seemed to be heading elsewhere.",
       "url": "https://www.scientificamerican.com/article/chemists-capture-stable-oxoboranes-ending-a-decades-long-hunt/",
       "outlet": "Scientific American",
       "publish_date": "2026-11-16",
       "short_hash": "b9862812",
-      "key_entities": [],
+      "key_entities": [
+        "oxoboranes",
+        "boron",
+        "nature chemistry",
+        "wurzburg",
+        "chemistry"
+      ],
       "is_update": false
     }
   ],
   "fun_fact": {
     "headline": "Cashews and poison ivy",
-    "body": "Cashews are never sold in their shells. Each nut grows at the base of a fleshy &lsquo;cashew apple&rsquo; inside a double shell lined with urushiol &mdash; the same caustic oil that makes poison ivy itch. Every cashew must be roasted or steamed to destroy the toxin before it is safe to handle, which is why a &lsquo;raw&rsquo; cashew has still been heat-treated.",
+    "body": "Cashews are never sold in their shells. Each nut grows at the base of a fleshy ‘cashew apple’ inside a double shell lined with urushiol — the same caustic oil that makes poison ivy itch. Every cashew must be roasted or steamed to destroy the toxin before it is safe to handle, which is why a ‘raw’ cashew has still been heat-treated.",
     "source": "Encyclopaedic / botany references",
     "fun_fact_id": "funfact-160853ac",
     "topic": "food",
