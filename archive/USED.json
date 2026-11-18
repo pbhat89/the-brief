@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-09-19",
-      "topic_key": "robot",
-      "text": "The word 'robot' comes from Karel Capek's 1920 play R.U.R., from Czech 'robota' (forced labour); his brother Josef coined it."
-    },
-    {
       "date": "2026-09-20",
       "topic_key": "honey",
       "text": "Honey is one of the very few foods that essentially never spoils. Its low moisture content, high acidity, and the trace hydrogen peroxide produced by bee enzyme"
@@ -284,14 +279,14 @@
       "date": "2026-11-18",
       "topic_key": "cashew",
       "text": "Cashews are sold shelled because their raw double shell contains urushiol, the caustic oil in poison ivy."
+    },
+    {
+      "date": "2026-11-19",
+      "topic_key": "octopus",
+      "text": "An octopus has three hearts and blue blood"
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-10-19",
-      "type": "quantitative",
-      "title_key": "hands-together"
-    },
     {
       "date": "2026-10-20",
       "type": "lateral",
@@ -421,14 +416,14 @@
       "date": "2026-11-18",
       "type": "visual",
       "title_key": "spider-and-the-fly"
+    },
+    {
+      "date": "2026-11-19",
+      "type": "logic",
+      "title_key": "crossing-in-the-dark"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-10-19",
-      "type": "grouping",
-      "title_key": "snake-in-the-grass"
-    },
     {
       "date": "2026-10-20",
       "type": "ladder",
@@ -558,6 +553,11 @@
       "date": "2026-11-18",
       "type": "anagram",
       "title_key": "apt-anagrams"
+    },
+    {
+      "date": "2026-11-19",
+      "type": "spellingbee",
+      "title_key": "worth-noting"
     }
   ]
 }

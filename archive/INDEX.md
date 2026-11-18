@@ -4561,3 +4561,36 @@ is empty until the first run.
 2026-11-18	The ageing heart inflames unevenly, with hotspots in the valves, a single-cell atlas finds	ecaf90c2	heart,ageing,inflammation,jackson laboratory,study
 2026-11-18	Physicists steer a single atom’s nuclear spin with radio waves	b7c52637	nuclear spin,atom,delft,quantum,physics
 2026-11-18	Chemists capture stable oxoboranes, ending a decades-long hunt	b9862812	oxoboranes,boron,nature chemistry,wurzburg,chemistry
+2026-11-19	PM Wong says Singapore is ready to help the US verify how advanced chips are deployed here	8fe22714	singapore,lawrence wong,advanced chips,export controls,megaspeed
+2026-11-19	More Singapore residents are both married and divorced than a decade ago, an MSF report finds	f34b5511	singapore,msf,marriage,divorce,report
+2026-11-19	PM Wong to meet Xi Jinping in Shenzhen on Nov 20 after the APEC leaders' meeting	98e215d6	singapore,lawrence wong,xi jinping,apec,shenzhen
+2026-11-19	Jurong West condo residents climbed stairs for five days after the block's only working lift kept failing	69f65c7b	singapore,jurong west,floravale,lift breakdown,condominium
+2026-11-19	Singaporean man jailed 13 months for repeatedly crossing into Malaysia on his twin's passport	d23ff5ad	singapore,twin passport,woodlands checkpoint,jail,immigration
+2026-11-19	UK inflation climbs to a one-year high of 3.6% as record diesel prices bite	532d9062	uk,inflation,cpi,diesel,bank of england
+2026-11-19	UK real wages fall for the first time since the 2023 cost-of-living crisis	ee52d91f	uk,real wages,ons,pay,cost of living
+2026-11-19	UK households face a 26% jump in energy bills in January, the steepest rise since 2022	d4af54b4	uk,energy bills,january,gas prices,cost of living
+2026-11-19	Commons passes the government's Immigration and Asylum Bill by 290 votes to 94	68325c39	uk,immigration bill,commons,asylum,settlement
+2026-11-19	US and Venezuela sign a deal to restore military ties during Hegseth's visit to Caracas	facfa65f	united states,venezuela,hegseth,maduro,military deal
+2026-11-19	Israel launches its first ground operation across Gaza's 'Yellow Line' since the ceasefire	ba6e7f47	israel,gaza,yellow line,hamas,ceasefire
+2026-11-19	US strikes Iran's Qeshm Island as Kuwait and Bahrain intercept missiles and drones	d7652790	united states,iran,qeshm island,strait of hormuz,gulf
+2026-11-19	Xi tells APEC that China and Russia should lead the push to a multipolar world	621db27d	china,russia,xi jinping,putin,apec
+2026-11-19	Rwanda-DRC peace process stalls as a new round of talks is set for Geneva	1edf6afb	rwanda,drc,m23,geneva talks,washington accords
+2026-11-19	Genesis AI raises $500M Series A to build dexterous robots	b92eef5e	genesis ai,robotics,series a,khosla ventures,funding
+2026-11-19	Isomorphic Labs raises about $5B to push AI-designed drugs toward clinical trials	4418dc0e	isomorphic labs,deepmind,drug discovery,series c,funding
+2026-11-19	ByteDance nears a $500M deal to run OpenAI models on Microsoft Azure, irking OpenAI	971b04f0	bytedance,microsoft azure,openai,cloud,deal
+2026-11-19	SpaceX prepares a $40B debt sale to fund AI chip purchases	9918aa85	spacex,debt sale,ai chips,bonds,starlink
+2026-11-19	India's Humyn Labs raises $47M to supply training data for US robotics	cd940d5a	humyn labs,india,training data,accel,robotics
+2026-11-19	Update: Anthropic prices its IPO at $83 a share, above range, ahead of a Thursday Nasdaq debut	38e4a439	anthropic,ipo,nasdaq,pricing,valuation
+2026-11-19	Target beats on earnings as quarterly sales jump, and its shares rise about 7%	4ec4fae7	target,earnings,revenue,comparable sales,retail
+2026-11-19	Nvidia's post-earnings gains evaporate as the S&P 500 slips below its 200-day average	69e499dc	s&p 500,nvidia,copper,selloff,markets
+2026-11-19	US Treasury yields ease after Fed minutes and Waller's remarks temper rate-cut bets	e3a88b26	treasury yields,federal reserve,fed minutes,waller,rates
+2026-11-19	🎾 Alcaraz beats Medvedev to move to the brink of the Turin semi-finals	a6bf87a2	alcaraz,medvedev,atp finals,turin,tennis
+2026-11-19	🎾 Arevalo and Pavic upset the defending champions to reach the Turin doubles semis	3e49df76	arevalo,pavic,atp finals,doubles,turin
+2026-11-19	🏏 India open their New Zealand tour as the first Test begins in Wellington	c6139068	india,new zealand,test,wellington,gill
+2026-11-19	🏎️ Cadillac confirms Bottas alongside Perez for its 2027 Formula 1 line-up	b97f15f0	cadillac,bottas,perez,formula 1,2027
+2026-11-19	🏎️ Mercedes bring an upgraded turbo to Las Vegas as Wolff hints he may back Russell	612317af	mercedes,wolff,russell,las vegas,formula 1
+2026-11-19	Voyager 1 becomes the first spacecraft to reach one light-day from Earth	b79b32cd	voyager 1,nasa,light-day,interstellar,spacecraft
+2026-11-19	Stratospheric dust grains carry a chemical fingerprint of ancient ice beyond Neptune	ee963ca6	nasa,interplanetary dust,kuiper belt,ancient ice,neptune
+2026-11-19	A Neanderthal DNA segment is linked to lower schizophrenia risk in modern humans	46bb9b36	neanderthal,dna,schizophrenia,daam1,pnas
+2026-11-19	NASA will end its 26-year Terra Earth-observing mission	591b7e77	nasa,terra,earth observation,mission end,satellite
+2026-11-19	A new study warns SpaceX's planned orbital data centres could sharply worsen upper-atmosphere pollution	9b2e98f9	spacex,orbital data centres,atmosphere,pollution,satellites
