@@ -4594,3 +4594,24 @@ is empty until the first run.
 2026-11-19	A Neanderthal DNA segment is linked to lower schizophrenia risk in modern humans	46bb9b36	neanderthal,dna,schizophrenia,daam1,pnas
 2026-11-19	NASA will end its 26-year Terra Earth-observing mission	591b7e77	nasa,terra,earth observation,mission end,satellite
 2026-11-19	A new study warns SpaceX's planned orbital data centres could sharply worsen upper-atmosphere pollution	9b2e98f9	spacex,orbital data centres,atmosphere,pollution,satellites
+2026-11-20	Update: PM Wong joins APEC leaders in Shenzhen, set for bilateral with Xi	0898d7d5	Lawrence Wong,APEC,Xi Jinping,Shenzhen
+2026-11-20	Singapore starts taking down ERP gantries in shift to satellite road pricing	00e3d106	ERP,LTA,satellite road pricing,Singapore
+2026-11-20	Man given 12 years' preventive detention for exploiting a 14-year-old girl	00a7a7fc	preventive detention,Singapore,court
+2026-11-20	Domestic worker pleads guilty to abusing her employer's baby	3f121380	domestic worker,baby abuse,Singapore,court
+2026-11-20	Update: India says US trade deal is nearly ready but signing awaits a new tariff framework	1034329a	India,United States,trade deal,tariffs
+2026-11-20	India's Sensex rebounds 990 points as the bank index closes at a record	1bc24d60	Sensex,Nifty,Nifty Bank,India markets
+2026-11-20	India-UK ties hold firm despite Modi's 'decolonisation' rhetoric	f0dc4fd8	India,United Kingdom,Modi,Prince William
+2026-11-20	Trump, Xi and Putin hold a first-ever trilateral and issue a 'peace declaration'	7328a92a	Trump,Xi Jinping,Putin,APEC,nuclear declaration
+2026-11-20	UN's top court rules Myanmar committed genocide against the Rohingya	984e922a	ICJ,Myanmar,Rohingya,genocide
+2026-11-20	Update: Israel's push across Gaza's 'Yellow Line' deepens the enclave's aid crisis	6e5a32fc	Israel,Gaza,Yellow Line,ceasefire,aid
+2026-11-20	Nvidia halts shipments of its licensed Hopper AI chips to China	dcb1099c	Nvidia,H200,China,Colette Kress
+2026-11-20	Anthropic's record Nasdaq debut closes up 17%, enriching backers Amazon and Google	d35c5ed4	Anthropic,IPO,Nasdaq,Amazon,Google
+2026-11-20	Wall Street falls again as Anthropic's debut fails to revive the AI trade	5a7b8f4a	S&P 500,Nasdaq,Wall Street,Anthropic
+2026-11-20	Oil rebounds after a sharp selloff while gold sinks near a one-year low	1133b5dd	oil,Brent,WTI,gold
+2026-11-20	Shelton beats Jodar to reach his first ATP Finals semifinal	ee5c0ead	Ben Shelton,Rafael Jodar,ATP Finals,Turin
+2026-11-20	Update: Nicholls' unbeaten 113 lifts New Zealand to 243-5 against India	8bcba191	New Zealand,India,Henry Nicholls,Wellington Test,Bumrah
+2026-11-20	Piastri handed a 10-place Las Vegas grid penalty for a fifth engine	94a771c3	Oscar Piastri,McLaren,Las Vegas Grand Prix,grid penalty
+2026-11-20	Verstappen leads a five-way fight for runner-up as the Las Vegas GP opens	eaf89735	Max Verstappen,Las Vegas Grand Prix,championship,Antonelli
+2026-11-20	Webb data confirms a first-of-its-kind stellar merger in the Andromeda galaxy	f0498200	JWST,stellar merger,Andromeda,Bao
+2026-11-20	Fossil teeth show Homo erectus survived in southern China far later than thought	1a8b21c8	Homo erectus,China,fossil teeth,human evolution
+2026-11-20	ULA's Vulcan rocket failure could set back US national-security launches for years	03eec755	ULA,Vulcan,Amazon Leo,Space Force
