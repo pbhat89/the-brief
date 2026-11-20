@@ -4615,3 +4615,31 @@ is empty until the first run.
 2026-11-20	Webb data confirms a first-of-its-kind stellar merger in the Andromeda galaxy	f0498200	JWST,stellar merger,Andromeda,Bao
 2026-11-20	Fossil teeth show Homo erectus survived in southern China far later than thought	1a8b21c8	Homo erectus,China,fossil teeth,human evolution
 2026-11-20	ULA's Vulcan rocket failure could set back US national-security launches for years	03eec755	ULA,Vulcan,Amazon Leo,Space Force
+2026-11-21	Over 782,000 seniors to get up to S$1,500 CPF top-up by Dec 8	d2ea77d6	cpf,singapore,top-up,seniors,budget 2026
+2026-11-21	Woman, 33, arrested over repeated rubbish-chute fires at a Punggol block	24e058c0	punggol,fire,mischief by fire,singapore,arrested
+2026-11-21	Singaporean couple charged with lying about their address to enrol their daughter in a top school	287ab6f8	singapore,primary school,address fraud,court,charged
+2026-11-21	Pakistan minister visits India for the first time since the 2025 war for an SCO forum	37e8e6de	india,pakistan,musadik malik,sco forum,modi
+2026-11-21	Foreign investors pour a record US$9.6 billion into Indian stocks in November	f6b9709a	india,foreign inflows,stocks,nifty,record
+2026-11-21	India's October inflation hits a two-year high, raising the odds of a December rate rise	a6e40f66	india,inflation,reserve bank,rate rise,nifty
+2026-11-21	Burnham seals an EU-UK 'reset' deal a decade after Brexit, claiming a 0.5% GDP boost	d1475c4a	united kingdom,european union,burnham,brexit,reset deal
+2026-11-21	Health leaders warn Burnham's youth-jobs reforms could worsen NHS staffing	a654984f	united kingdom,nhs,burnham,apprenticeships,staffing
+2026-11-21	Update: Russia hits Ukraine with 110-plus missiles hours after the APEC summit, violating Polish airspace	7d31bef0	russia,ukraine,putin,poland,apec,strikes
+2026-11-21	Estonia to shut its road borders with Russia for six months over a GRU-linked arson plot	7fbdaee3	estonia,russia,gru,iron curtain,border
+2026-11-21	Saudi-led coalition strikes Yemen's Hodeidah port as Houthis threaten Jeddah and Riyadh	9d6e0750	saudi coalition,houthis,hodeidah,jeddah,riyadh
+2026-11-21	Cost-of-living protests spread across at least eight European countries	e5308171	europe,france,cost of living,protests,spread
+2026-11-21	US regulators are reportedly investigating Nvidia's accounting	235aa63c	nvidia,sec,reuters,accounting,investigates
+2026-11-21	US approved nearly 880,000 Nvidia and AMD AI chips for China, House records show	db6b560d	nvidia,amd,china,house committee,approved
+2026-11-21	Google gives its Gemini app the ability to control a Mac for you	176f8f11	google,gemini,mac,computer-use,adds
+2026-11-21	Nvidia details when it will, and won't, keep financing AI 'neocloud' buildouts	19e8d568	nvidia,openai,neoclouds,ohio,finances
+2026-11-21	Wall Street's selloff deepens as the Nasdaq turns negative for 2026	cc8df3aa	s&p 500,nasdaq,dow,wall street,selloff
+2026-11-21	Intuit cuts its FY27 outlook and sells Mailchimp to Bending Spoons for $3.68 billion	5a9b5e6f	intuit,mailchimp,bending spoons,outlook,sells
+2026-11-21	AI credit stress spreads as default-swap costs on Oracle and CoreWeave jump	e6a547f5	oracle,coreweave,credit default swaps,ai debt,widen
+2026-11-21	Treasury yields fall sharply as investors flee stocks for safe havens	5f5dcb9c	treasury yields,10-year,safe havens,federal reserve,fall
+2026-11-21	🏎️ Russell tops a wet Las Vegas practice as F1 heads into Sunday's race	76640b5a	russell,mercedes,las vegas,antonelli,practice
+2026-11-21	🏏 Update: Nicholls' 175 not out and Phillips' ton lift New Zealand to 368 against India	de19b4a8	new zealand,india,nicholls,phillips,wellington,bumrah
+2026-11-21	🎾 Medvedev beats Tiafoe to claim the last ATP Finals semifinal spot in Turin	9370b801	medvedev,tiafoe,zverev,atp finals,turin
+2026-11-21	🎾 Alcaraz downs Cobolli to top his group and reach the ATP Finals semifinals	52c0c772	alcaraz,cobolli,atp finals,turin,semifinals
+2026-11-21	NASA pauses science on its Perseverance rover and Mars Odyssey orbiter after faults	31d15b58	nasa,perseverance,odyssey,mars,fault
+2026-11-21	Researchers unveil a first-of-its-kind blood test for the brain disease CTE	e6b2b5e1	cte,blood test,jama,brain,football
+2026-11-21	A new obesity definition that goes beyond BMI outperforms the old one in a global study	2d00d3a9	obesity,bmi,waist,nature,study
+2026-11-21	Satellite data upends the idea of an evergreen Amazon, finding many trees go leafless	9111d4dc	amazon,deciduous,satellite,nature,evergreen
