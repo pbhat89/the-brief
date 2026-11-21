@@ -4643,3 +4643,33 @@ is empty until the first run.
 2026-11-21	Researchers unveil a first-of-its-kind blood test for the brain disease CTE	e6b2b5e1	cte,blood test,jama,brain,football
 2026-11-21	A new obesity definition that goes beyond BMI outperforms the old one in a global study	2d00d3a9	obesity,bmi,waist,nature,study
 2026-11-21	Satellite data upends the idea of an evergreen Amazon, finding many trees go leafless	9111d4dc	amazon,deciduous,satellite,nature,evergreen
+2026-11-22	Update: Singapore and China launch talks to upgrade their free trade pact after Wong-Xi meeting	18ae56ba	singapore,china,lawrence wong,xi jinping,free trade agreement
+2026-11-22	Pre-school teacher, 59, jailed for slapping a five-year-old girl with autism	24e278c3	singapore,pre-school teacher,jailed,special needs,court
+2026-11-22	Australian woman, 56, to be charged after allegedly shoving ICA officers at Changi Airport	884c7133	singapore,australian woman,ica officers,changi airport,charged
+2026-11-22	Father and son jailed after flying from China to assault a man over a failed S$18,000 deal	f8d2b570	singapore,father and son,assault,china,jailed
+2026-11-22	India's opposition protests outside Meta offices over Instagram account suspensions	9402b1a3	india,youth congress,meta,instagram,protests
+2026-11-22	Toxic alcohol kills at least 11 and hospitalises about 180 in Manipur	50f06d53	india,manipur,toxic alcohol,deaths,sugnu
+2026-11-22	Nikhil Gupta sentenced to 19 years in the US over plot to kill separatist Pannun	0f2f4ec1	india,nikhil gupta,pannun,us court,sentenced
+2026-11-22	Modi urges Indian companies to chase global markets as inflation and the rupee bite	d18fb7ca	india,narendra modi,global markets,inflation,rupee
+2026-11-22	UK far-right activist 'Danny Tommo' jailed for slashing a Channel migrant boat	1bb250ae	united kingdom,danny tommo,migrant boat,channel,jailed
+2026-11-22	Milburn review urges Britain to spend now on youth unemployment to save billions later	25d35075	united kingdom,alan milburn,youth unemployment,burnham,review
+2026-11-22	Russia rules out any deal letting Ukraine join NATO as the US pushes Article 5 guarantees	cd1adcbf	russia,ukraine,nato,ryabkov,kushner
+2026-11-22	Russian 'triple-tap' strike on Kryvyi Rih kills an emergency worker and a seven-year-old	58e1affb	russia,ukraine,kryvyi rih,strike,zelensky
+2026-11-22	Israeli strikes kill at least four in Gaza as the US warns the truce could collapse	bdb5311a	gaza,israel,board of peace,ceasefire,strikes
+2026-11-22	COP31 climate talks run into overtime after a draft drops all mention of fossil fuels	46f44890	cop31,antalya,fossil fuels,climate,european union
+2026-11-22	Apple is reportedly building its own AI agent to operate your Mac	bb174712	apple,ai agent,mac,macos,automation
+2026-11-22	A wave of AI agents that live inside your text messages arrives	6c91a027	ai agents,text messages,sms,fambot,startups
+2026-11-22	Operator-led VC Plural raises $1.1 billion for European 'moonshots'	624cd1b0	plural,venture capital,europe,helsing,fund
+2026-11-22	Crypto rout deepens as Bitcoin slides below $58,000	a0df1624	bitcoin,crypto,selloff,losing streak,markets
+2026-11-22	SoftBank suffers its worst day in over two years as the AI selloff hits Asia	7f9aab75	softbank,nikkei,asia,ai selloff,openai
+2026-11-22	Anthropic falls into the red on its second day of public trading	ee8d1faa	anthropic,stock,tech selloff,nasdaq,ai
+2026-11-22	Gold slumps to its lowest level since September 2025	fe376df8	gold,bullion,federal reserve,rate hike,dollar
+2026-11-22	Verstappen inherits Las Vegas pole after Antonelli's fastest lap draws a grid penalty	efc2eca4	formula 1,las vegas,verstappen,antonelli,qualifying
+2026-11-22	Russell hits out at Verstappen after a Las Vegas qualifying clash	a8fbe528	formula 1,russell,verstappen,wolff,clash
+2026-11-22	Alcaraz fights back past Shelton to reach the ATP Finals final	8e9abd5c	tennis,alcaraz,shelton,atp finals,turin
+2026-11-22	Zverev downs Medvedev in straight sets to set up an ATP Finals title clash with Alcaraz	6bcf5680	tennis,zverev,medvedev,atp finals,final
+2026-11-22	Update: India pile on 486-4 to lead New Zealand by 118 on day three in Wellington	c4d004c6	cricket,india,new zealand,wellington,rahul
+2026-11-22	Mathematicians back an AI-generated proof of the Riemann hypothesis as a rival claim emerges	6fd753a4	riemann hypothesis,mathematics,ai proof,lean mathlib,anthropic
+2026-11-22	A new study upends a 150-year-old model of how the brain produces language	5ec0d359	neuroscience,language,brain,temporal lobe,study
+2026-11-22	Viral 'vibe archaeology' claim that AI found a Maya site sparks a scientific firestorm	65046759	maya,archaeology,ai,controversy,mexico
+2026-11-22	A new AI-aided Navier-Stokes proof reignites a math-world dispute	46f7e183	navier-stokes,mathematics,ai proof,openai,fluid dynamics

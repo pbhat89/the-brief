@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-09-22",
-      "topic_key": "nintendo",
-      "text": "Nintendo was founded in 1889 as a hanafuda playing-card maker in Kyoto, decades before it made video games."
-    },
-    {
       "date": "2026-09-23",
       "topic_key": "spine",
       "text": "You are taller in the morning than at night; spinal discs compress under gravity through the day and rebound overnight."
@@ -284,14 +279,14 @@
       "date": "2026-11-21",
       "topic_key": "ketchup",
       "text": "In the 1830s US, ketchup was sold as medicine: tomato pills touted as a cure for indigestion."
+    },
+    {
+      "date": "2026-11-22",
+      "topic_key": "lightning",
+      "text": "A lightning bolt superheats air to about 30,000 K, roughly five times hotter than the Sun's surface (~5,800 K)."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-10-22",
-      "type": "visual",
-      "title_key": "roll-with-it"
-    },
     {
       "date": "2026-10-23",
       "type": "logic",
@@ -426,14 +421,14 @@
       "date": "2026-11-21",
       "type": "lateral",
       "title_key": "room-with-no-chair"
+    },
+    {
+      "date": "2026-11-22",
+      "type": "visual",
+      "title_key": "unfolded"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-10-22",
-      "type": "anagram",
-      "title_key": "mixed-messages"
-    },
     {
       "date": "2026-10-23",
       "type": "spellingbee",
@@ -568,6 +563,11 @@
       "date": "2026-11-21",
       "type": "grouping",
       "title_key": "common-ground"
+    },
+    {
+      "date": "2026-11-22",
+      "type": "ladder",
+      "title_key": "on-the-mend"
     }
   ]
 }
