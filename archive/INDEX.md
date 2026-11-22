@@ -4673,3 +4673,38 @@ is empty until the first run.
 2026-11-22	A new study upends a 150-year-old model of how the brain produces language	5ec0d359	neuroscience,language,brain,temporal lobe,study
 2026-11-22	Viral 'vibe archaeology' claim that AI found a Maya site sparks a scientific firestorm	65046759	maya,archaeology,ai,controversy,mexico
 2026-11-22	A new AI-aided Navier-Stokes proof reignites a math-world dispute	46f7e183	navier-stokes,mathematics,ai proof,openai,fluid dynamics
+
+2026-11-23	Driver who ran a red light jailed over fatal Yishun crash	0b4e3366	jiang baohui,yishun,reckless driving
+2026-11-23	Ex-police officer jailed four months for molesting intoxicated woman	e0f5ea98	mohamad joppri harpawi,singapore police force,molest
+2026-11-23	Singapore sprint queen Shanti Pereira marries former national sprinter	d20481a6	shanti pereira,tan zong yang,wedding
+2026-11-23	Man, 66, dies after shielding a child from a cyclist at Changi Beach	6ec67d63	wong wee pui,changi beach park,cyclist
+2026-11-23	Singlife to shut its flagship savings account by end-2027	b30c3304	singlife,singlife account,closure
+2026-11-23	New Delhi chokes on toxic smog as it tops world pollution rankings	f357cfd4	new delhi,air pollution,smog
+2026-11-23	RBI asks the Supreme Court to revisit its Yes Bank bond ruling	d6cf7141	reserve bank of india,yes bank,supreme court
+2026-11-23	Opposition presses the Supreme Court over India's voter-roll purge	c7d798ef	election commission,gyanesh kumar,electoral rolls
+2026-11-23	India's $4.5 billion Ganges clean-up falls short of its targets	4bfc0b7c	ganges,namami gange,pollution
+2026-11-23	Commons passes tighter immigration bill, doubling the wait to settle	9bc17f1c	house of commons,immigration bill,settlement
+2026-11-23	UK real wages fall for the first time since the 2023 cost-of-living crisis	ee52d91f	uk,real wages,inflation
+2026-11-23	UK payrolls unexpectedly fell by 34,000 in October	21c54110	uk,payrolls,labour market
+2026-11-23	Bank of England's Bailey signals more rate rises if conflict drags on	61194d2f	bank of england,andrew bailey,interest rates
+2026-11-23	Update: COP31 collapses without a deal as fossil-fuel language sinks the talks	15793e06	cop31,antalya,fossil fuels
+2026-11-23	Hegseth announces a US-Venezuela military partnership	f3936fef	pete hegseth,venezuela,military deal
+2026-11-23	Lebanon's Aoun demands an Israeli withdrawal and condemns Iran	ad2cd4f4	joseph aoun,lebanon,israel,iran
+2026-11-23	Iran weighs a nuclear-doctrine shift as IAEA inspectors stay locked out	dffd8f38	iran,araghchi,iaea,nuclear
+2026-11-23	Trump urges Nvidia to reinstate Jensen Huang amid a China spy scandal	38f918e4	donald trump,nvidia,jensen huang,china
+2026-11-23	DeepMind spin-off Isomorphic Labs raises a record $5 billion	f347abfd	isomorphic labs,demis hassabis,series c
+2026-11-23	Brain-implant maker Science Corporation valued at $3.5 billion	3f99f410	science corporation,brain-computer interface,funding
+2026-11-23	Cybersecurity startup Corma hits a $1 billion valuation in three months	7466cf7c	corma,nea,cybersecurity
+2026-11-23	Zipline and Uber launch drone delivery in a Houston suburb	08f8f345	zipline,uber,drone delivery
+2026-11-23	Nvidia posts record quarterly revenue but its shares still slide	c9848a3a	nvidia,earnings,revenue
+2026-11-23	Bill.com agrees to a $6 billion take-private led by TPG	e08d6598	bill holdings,tpg,corpay,buyout
+2026-11-23	Fed minutes show most officials expect further rate rises	d17fedc6	federal reserve,waller,rate hikes
+2026-11-23	Australia's central bank raises rates as price risks persist	3c8c89dd	reserve bank of australia,cash rate,inflation
+2026-11-23	🏎️ Verstappen wins a wild Las Vegas Grand Prix as McLaren grab a double podium	e24513f2	max verstappen,las vegas grand prix,mclaren
+2026-11-23	🏎️ Verstappen mocks Russell as 'so far below my level' after their Vegas clash	a4906e41	max verstappen,george russell,las vegas
+2026-11-23	🎾 Alcaraz beats Zverev to win his first ATP Finals title	53685840	carlos alcaraz,alexander zverev,atp finals
+2026-11-23	🏏 Update: India declare on 720/9 and pile pressure on New Zealand in Wellington	a5e49854	india,new zealand,wellington test,bumrah
+2026-11-23	Voyager 1 becomes the first craft to reach one light-day from Earth	bb66fed3	voyager 1,nasa,interstellar
+2026-11-23	Europe's BepiColombo mission reaches Mercury after an eight-year journey	c4f2670e	bepicolombo,mercury,esa,jaxa
+2026-11-23	ESA's Euclid telescope spots its first comet, far from the Sun	7a027bdd	euclid,comet,esa
+2026-11-23	MIT builds a tiny superconducting device for lower-energy computing	7be233e0	mit,superconductor,computing

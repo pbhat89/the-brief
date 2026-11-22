@@ -1,16 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-09-23",
-      "topic_key": "spine",
-      "text": "You are taller in the morning than at night; spinal discs compress under gravity through the day and rebound overnight."
-    },
-    {
-      "date": "2026-09-24",
-      "topic_key": "card shuffle",
-      "text": "There are about 8x10^67 (52!) ways to arrange a 52-card deck, so any well shuffle is almost certainly unique in history."
-    },
-    {
       "date": "2026-09-25",
       "topic_key": "antarctica",
       "text": "Antarctica is the largest desert on Earth; its interior is drier than the Sahara."
@@ -284,19 +274,14 @@
       "date": "2026-11-22",
       "topic_key": "lightning",
       "text": "A lightning bolt superheats air to about 30,000 K, roughly five times hotter than the Sun's surface (~5,800 K)."
+    },
+    {
+      "date": "2026-11-23",
+      "topic_key": "computer bug",
+      "text": "The first computer 'bug' was a literal moth found in the relay of Harvard's Mark II in 1947."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-10-23",
-      "type": "logic",
-      "title_key": "last-card"
-    },
-    {
-      "date": "2026-10-24",
-      "type": "quantitative",
-      "title_key": "split-the-bill"
-    },
     {
       "date": "2026-10-25",
       "type": "lateral",
@@ -426,19 +411,14 @@
       "date": "2026-11-22",
       "type": "visual",
       "title_key": "unfolded"
+    },
+    {
+      "date": "2026-11-23",
+      "type": "logic",
+      "title_key": "off-balance"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-10-23",
-      "type": "spellingbee",
-      "title_key": "making-waves"
-    },
-    {
-      "date": "2026-10-24",
-      "type": "grouping",
-      "title_key": "cross-purposes"
-    },
     {
       "date": "2026-10-25",
       "type": "ladder",
@@ -568,6 +548,11 @@
       "date": "2026-11-22",
       "type": "ladder",
       "title_key": "on-the-mend"
+    },
+    {
+      "date": "2026-11-23",
+      "type": "anagram",
+      "title_key": "fitting-words"
     }
   ]
 }

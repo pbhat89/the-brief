@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Mon, 23 Nov 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .wpuzzle-box{background:linear-gradient(135deg,#0e1a1a,#0d1620);border:1px solid #234a44;border-left:3px solid #16a085;padding:24px 28px;border-radius:2px}
+  .wptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#16a085;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .wpuzzle-box .puzzle-title{color:#cdeae3}
+  .wpuzzle-box .puzzle-how{color:#8fb8ac;background:#08140f;border-left-color:#1a6a5a}
+  .wpuzzle-box .puzzle-q{color:#dfeae6;font-family:'Source Sans 3',sans-serif}
+  .wpuzzle-box .answer{color:#bfe0d6}
+  .wpuzzle-box .answer .alabel{color:#16a085}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Monday, 23 November 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Monday, 23 November 2026 · 🔍 42 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+============================================================================= */
+
+const SECTIONS = [
+  { id:"sg", title:"🇸🇬 Singapore", color:"#e74c3c", items:[
+    { headline:"Driver who ran a red light jailed over fatal Yishun crash", summary:"Jiang Baohui, 47, was sentenced to two years and nine months in jail and a 10-year driving ban after admitting to causing death by reckless driving. He ran a red light at 66 to 75km/h while overtaking a stopped bus on Yishun Avenue 9, killing a 59-year-old e-bike delivery rider who had the green signal.", source:"Mothership", url:"https://mothership.sg/2026/11/man-run-red-light-hit-rider-jailed-2-years-9-months/", date:"Nov 21", spectrum:null, bias:null },
+    { headline:"Ex-police officer jailed four months for molesting intoxicated woman", summary:"Mohamad Joppri Harpawi, 44, who resigned from the Singapore Police Force in 2025, was sentenced to four months' jail for outraging the modesty of a woman in her mid-20s after a night out. A gag order protects the victim's identity, and his cousin faces separate charges still before the court.", source:"SCMP", url:"https://www.scmp.com/news/asia/southeast-asia/article/3375140/ex-singapore-police-officer-jailed-molesting-intoxicated-woman-hotel-room", date:"Nov 20", spectrum:null, bias:null },
+    { headline:"Singapore sprint queen Shanti Pereira marries former national sprinter", summary:"National 100m and 200m record-holder Shanti Pereira, 30, wed lawyer and former national sprinter Tan Zong Yang, 32, at the Church of Our Lady of Lourdes. The couple, together five years, had delayed the wedding around the Paris 2024 Olympics and the 2025 SEA Games.", source:"Mothership", url:"https://mothership.sg/2026/11/singapore-sprint-queen-shanti-pereira-weds-tan-zong-yang/", date:"Nov 21", spectrum:null, bias:null },
+    { headline:"Man, 66, dies after shielding a child from a cyclist at Changi Beach", summary:"Wong Wee Pui, a 66-year-old temple caretaker, died on Nov 14 after moving to protect a child in a cyclist's path at Changi Beach Park on Nov 8, falling and fracturing his eye socket. His family is appealing for witnesses, as the child's family has not come forward.", source:"Mothership", url:"https://mothership.sg/2026/11/singapore-man-die-cyclist-child-father-apologise/", date:"Nov 20", spectrum:null, bias:null },
+    { headline:"Singlife to shut its flagship savings account by end-2027", summary:"Singlife told customers it will close the Singlife Account, its insurance-savings product launched in 2019, by Dec 16, 2027, with PayNow payments ending a year earlier. Remaining balances and interest will be returned automatically to customers' linked bank accounts.", source:"Mothership", url:"https://mothership.sg/2026/11/singlife-account-closing/", date:"Nov 21", spectrum:null, bias:null },
+  ]},
+  { id:"india", title:"🇮🇳 India", color:"#e67e22", items:[
+    { headline:"New Delhi chokes on toxic smog as it tops world pollution rankings", summary:"India's capital has ranked as the world's most polluted city this month, its air quality index crossing 400 into the 'severe' band after Diwali fireworks and overtaking Lahore. Authorities imposed construction and vehicle curbs as students took to the streets demanding action on the hazardous winter smog.", source:"Al Jazeera", url:"https://www.aljazeera.com/video/newsfeed/2026/11/13/delhi-overtakes-lahore-as-worlds-most-polluted-city", date:"Nov 13", spectrum:null, bias:null },
+    { headline:"RBI asks the Supreme Court to revisit its Yes Bank bond ruling", summary:"The Reserve Bank of India filed a review petition asking the Supreme Court to reconsider its decision setting aside the write-off of Yes Bank's riskier Additional Tier 1 bonds during the lender's 2020 rescue. Yes Bank, now nearly a quarter owned by Japan's Sumitomo Mitsui Banking Corp, has filed a similar plea.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-11-16/india-regulator-seeks-review-of-top-court-s-yes-bank-bond-ruling", date:"Nov 16", spectrum:null, bias:null },
+    { headline:"Opposition presses the Supreme Court over India's voter-roll purge", summary:"India's opposition is challenging a nationwide revision of electoral rolls that has struck tens of millions of names from the lists, and is demanding that Chief Election Commissioner Gyanesh Kumar resign. The Election Commission says the deletions covered dead, duplicate and relocated voters, and that wrongly removed names can re-enrol.", source:"CNBC", url:"https://www.cnbc.com/2026/11/01/thousands-join-indian-protest-demanding-election-chiefs-resignation-.html", date:"Nov 1", spectrum:null, bias:null },
+    { headline:"India's $4.5 billion Ganges clean-up falls short of its targets", summary:"A Bloomberg investigation found the Ganges still heavily polluted despite the government's roughly $4.5 billion Namami Gange programme, with sewage-treatment capacity about a third below the target set for the end of this year. Several stretches in Bihar showed fecal contamination far above safe limits.", source:"Bloomberg", url:"https://www.bloomberg.com/graphics/2026-ganges-water-pollution/", date:"Nov 5", spectrum:null, bias:null },
+  ]},
+  { id:"uk", title:"🇬🇧 UK News", color:"#3949ab", items:[
+    { headline:"Commons passes tighter immigration bill, doubling the wait to settle", summary:"The House of Commons passed the government's immigration and asylum bill by 290 votes to 94, sending it to the Lords. The plan roughly doubles the standard wait for permanent settlement to 10 years, with faster routes for high earners and a concession letting care workers settle after five years.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-11-17/uk-s-house-of-commons-passes-controversial-immigration-bill", date:"Nov 17", spectrum:null, bias:null },
+    { headline:"UK real wages fall for the first time since the 2023 cost-of-living crisis", summary:"Regular pay after inflation slipped 0.2% in the year to September, the first decline since 2023, as wage growth of 3.5% failed to keep pace with energy-driven inflation now near a one-year high.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-11-17/uk-real-wages-fall-for-the-first-time-since-2023-cost-of-living-crisis", date:"Nov 17", spectrum:null, bias:null },
+    { headline:"UK payrolls unexpectedly fell by 34,000 in October", summary:"The number of workers on UK payrolls dropped by 34,000 in October, against forecasts of a 10,000 increase, pointing to a cooling labour market as firms grapple with higher costs and soft demand.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-11-17/uk-payrolls-fell-unexpectedly-in-october-ahead-of-healey-budget", date:"Nov 17", spectrum:null, bias:null },
+    { headline:"Bank of England's Bailey signals more rate rises if conflict drags on", summary:"Governor Andrew Bailey said the Bank of England may need further rate increases the longer the Middle East conflict lasts, even as he noted inflation could peak below its recent forecast of about 5%. The Bank raised its key rate to 4% earlier in November, its first hike since 2023.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-11-18/boe-s-bailey-says-more-rate-hikes-needed-if-iran-conflict-lasts", date:"Nov 18", spectrum:null, bias:null },
+  ]},
+  { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
+    { headline:"Update: COP31 collapses without a deal as fossil-fuel language sinks the talks", summary:"The UN climate summit in Antalya, Turkey, ended with no agreed text after producer states forced every mention of fossil fuels out of the draft, and the EU, Panama, the Marshall Islands and Norway rejected it. It is the first COP to close without an adopted outcome since Copenhagen in 2009; Secretary-General Antonio Guterres said he was 'deeply disappointed.'", source:"CNN", url:"https://www.cnn.com/2026/11/22/climate/cop31-summit-collapses-in-fossil-fuel-failure", date:"Nov 22", spectrum:null, bias:null },
+    { headline:"Hegseth announces a US-Venezuela military partnership", summary:"On a visit to Caracas, US Defense Secretary Pete Hegseth announced a cooperation agreement letting American and Venezuelan forces train together and share intelligence, calling Venezuela a 'compliant security partner' — a sharp turn 10 months after the US raid that removed Nicolas Maduro.", source:"CNN", url:"https://www.cnn.com/2026/11/18/americas/us-venezuela-military-deal-hegseth-latam-intl", date:"Nov 18", spectrum:null, bias:null },
+    { headline:"Lebanon's Aoun demands an Israeli withdrawal and condemns Iran", summary:"On the eve of Lebanon's independence anniversary, President Joseph Aoun called for Israel to withdraw from the south and criticised Iran's interference, insisting there be 'no weapons outside the state,' as Israeli strikes hit several southern towns the same day.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/11/21/lebanese-president-demands-israel-withdrawal-decries-irans-interference", date:"Nov 21", spectrum:null, bias:null },
+    { headline:"Iran weighs a nuclear-doctrine shift as IAEA inspectors stay locked out", summary:"Foreign Minister Abbas Araghchi said Iran's doctrine 'has not changed' even as an influential clerical body called a review of defence doctrine 'unavoidable.' A recent IAEA report says Tehran still bars inspectors from all sites except Bushehr and cannot verify about 440kg of highly enriched uranium.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/11/21/could-iran-reverse-its-stated-policy-of-a-civil-only-nuclear-programme", date:"Nov 21", spectrum:null, bias:null },
+    { headline:"Trump urges Nvidia to reinstate Jensen Huang amid a China spy scandal", summary:"President Donald Trump called on Nvidia's board to bring back Jensen Huang, who resigned as chief executive on Nov 12 after reports linking him to a woman US officials suspect of being a Chinese intelligence asset. Three House committees have summoned Huang to testify in December.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/11/21/trump-calls-for-nvidia-to-reinstate-brilliant-jensen-huang", date:"Nov 21", spectrum:null, bias:null },
+  ]},
+  { id:"tech", title:"💻 Tech & AI", color:"#27ae60", items:[
+    { headline:"DeepMind spin-off Isomorphic Labs raises a record $5 billion", summary:"Isomorphic Labs, the AI drug-discovery company led by Demis Hassabis, raised a $5 billion Series C co-led by Greenoaks and Sequoia, with Andreessen Horowitz joining — one of the largest rounds in UK tech. The money will push its AlphaFold-derived drug candidates toward clinical trials.", source:"TechCrunch", url:"https://techcrunch.com/2026/11/17/isomorphic-labs-raises-5b-as-it-looks-to-take-drug-candidates-to-clinical-trials/", date:"Nov 17", spectrum:null, bias:null },
+    { headline:"Brain-implant maker Science Corporation valued at $3.5 billion", summary:"Science Corporation, a brain-computer interface company, is now worth about $3.5 billion after a new funding round, as investors pour money into neural-implant startups racing to help paralysed and visually impaired patients.", source:"TechCrunch", url:"https://techcrunch.com/2026/11/17/science-corporations-brain-tech-is-worth-3-5-billion-after-new-funding", date:"Nov 17", spectrum:null, bias:null },
+    { headline:"Cybersecurity startup Corma hits a $1 billion valuation in three months", summary:"AI cybersecurity firm Corma raised a $125 million Series A led by NEA that values it at $1 billion, roughly three months after launching its product — a sign of how fast capital is chasing AI-driven security tools.", source:"TechCrunch", url:"https://techcrunch.com/2026/11/16/cybersecurity-ai-startup-corma-reaches-1b-valuation-in-about-3-months/", date:"Nov 16", spectrum:null, bias:null },
+    { headline:"Zipline and Uber launch drone delivery in a Houston suburb", summary:"Zipline's drone-delivery partnership with Uber went live this week in a suburb of Houston, extending autonomous package drops to a new US market as both companies push to scale the service.", source:"TechCrunch", url:"https://techcrunch.com/2026/11/22/techcrunch-mobility-a-b-testing-robots-vs-humans", date:"Nov 22", spectrum:null, bias:null },
+  ]},
+  { id:"biz", title:"📈 Business & Markets", color:"#8e44ad", items:[
+    { headline:"Nvidia posts record quarterly revenue but its shares still slide", summary:"Nvidia reported third-quarter revenue of $115.8 billion, above the $109.1 billion analysts expected, with adjusted earnings of $2.68 a share against a $2.48 forecast. Despite guiding to about $130 billion for the current quarter, the stock fell more than 6% on the day, heading toward a seventh straight losing week.", source:"CNBC", url:"https://www.cnbc.com/2026/11/17/nvidia-nvda-earnings-report-q3-2027.html", date:"Nov 17", spectrum:null, bias:null },
+    { headline:"Bill.com agrees to a $6 billion take-private led by TPG", summary:"Payments-software firm BILL Holdings agreed to be taken private by TPG, in partnership with Corpay, in an all-cash deal at $63.25 a share that values it at about $6 billion — a 31% premium to its recent average price. Corpay is investing about $1.1 billion for a roughly one-third stake, with the deal expected to close in 2027.", source:"CNBC", url:"https://www.cnbc.com/2026/11/20/stocks-moving-the-most-today-live-updates.html", date:"Nov 20", spectrum:null, bias:null },
+    { headline:"Fed minutes show most officials expect further rate rises", summary:"Minutes of the Federal Reserve's October meeting showed almost all policymakers expect more rate increases ahead, and Governor Christopher Waller said the central bank may need to 'shock people' with a half-point move to curb stubborn inflation.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-11-18/fed-minutes-show-almost-all-officials-expect-more-rate-hikes", date:"Nov 18", spectrum:null, bias:null },
+    { headline:"Australia's central bank raises rates as price risks persist", summary:"Minutes released this week showed the Reserve Bank of Australia lifted its cash rate at its last meeting because inflation risks remained to the upside, adding to a run of hawkish turns by major central banks.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-11-17/rba-raised-rates-as-price-risks-remained-to-upside-minutes-show", date:"Nov 17", spectrum:null, bias:null },
+  ]},
+  { id:"sports", title:"🎾🏏🏎️ Sports", color:"#c0392b", items:[
+    { headline:"🏎️ Verstappen wins a wild Las Vegas Grand Prix as McLaren grab a double podium", summary:"Max Verstappen converted pole into victory in a chaotic 50-lap race featuring 34 lead changes, finishing six-tenths ahead of Lando Norris, with Oscar Piastri third. George Russell crashed out of second place with three laps left, and the result all but secures the runner-up spot in the standings for Verstappen behind champion Kimi Antonelli.", source:"Sky Sports", url:"https://www.skysports.com/f1/news/13615083/las-vegas-gp-max-verstappen-wins-wild-race-as-ferraris-lewis-hamilton-and-charles-leclerc-collide-again", date:"Nov 22", spectrum:null, bias:null },
+    { headline:"🏎️ Verstappen mocks Russell as 'so far below my level' after their Vegas clash", summary:"After George Russell crashed while chasing him and the pair collided in final practice, Max Verstappen hit back in the post-race press conference, saying his rival is 'so far below my level.' Verstappen had been warned by the stewards over the practice incident.", source:"Sky Sports", url:"https://www.skysports.com/f1/news/13615084/max-verstappen-says-george-russell-so-far-below-his-level-after-poking-fun-at-rival-for-major-error-during-las-vegas-gp", date:"Nov 22", spectrum:null, bias:null },
+    { headline:"🎾 Alcaraz beats Zverev to win his first ATP Finals title", summary:"Carlos Alcaraz defeated Alexander Zverev 6-2, 7-6 in Turin to claim the Nitto ATP Finals for the first time, capping an unbeaten week. He becomes the first Spanish champion at the season-ending event since Alex Corretja in 1998.", source:"ATP Tour", url:"https://www.atptour.com/en/news/alcaraz-zverev-nitto-atp-finals-2026-sunday", date:"Nov 22", spectrum:null, bias:null },
+    { headline:"🏏 Update: India declare on 720/9 and pile pressure on New Zealand in Wellington", summary:"India declared their first innings at 720 for 9 — their highest Test total in New Zealand — to take a lead of 352 after Rishabh Pant's century. Jasprit Bumrah struck with the second ball of the reply to leave New Zealand 119 for 2 at stumps on day four, still 233 behind and fighting to save the Basin Reserve Test.", source:"ESPNcricinfo", url:"https://www.cricinfo.com/series/india-in-new-zealand-2026-27-1539421/new-zealand-vs-india-1st-test-1539442/full-scorecard", date:"Nov 22", spectrum:null, bias:null },
+  ]},
+  { id:"misc", title:"🔬 Other Miscellaneous News", color:"#1abc9c", items:[
+    { headline:"Voyager 1 becomes the first craft to reach one light-day from Earth", summary:"NASA says Voyager 1 passed one light-day from Earth — about 16.1 billion miles — at 2:16 a.m. PST on Nov 18, a first for any human-made object. A signal now takes a full day to reach the probe; engineers are still working on a fault that has halted its science data since Nov 14.", source:"NASA", url:"https://www.nasa.gov/news-release/nasas-voyager-1-makes-history-reaching-one-light-day-from-earth/", date:"Nov 18", spectrum:null, bias:null },
+    { headline:"Europe's BepiColombo mission reaches Mercury after an eight-year journey", summary:"The European-Japanese BepiColombo spacecraft began its orbit-insertion sequence at Mercury this week, firing its thrusters to be captured by the planet's gravity after a looping eight-year cruise. It carries two orbiters that will separate in December to map the solar system's smallest, least-explored planet.", source:"Scientific American", url:"https://www.scientificamerican.com/article/two-probes-are-about-to-arrive-at-mercury-for-an-up-close-look-at-this-puzzling-planet/", date:"Nov 21", spectrum:null, bias:null },
+    { headline:"ESA's Euclid telescope spots its first comet, far from the Sun", summary:"Europe's Euclid space telescope discovered a previously unknown comet, C/2026 S1 (Euclid), in its deep-field survey images, now about 1.3 billion km from Earth on a steeply inclined orbit. ESA says the early, distant detection shows Euclid could flag targets for the future Comet Interceptor mission.", source:"ESA", url:"https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_discovers_new_comet", date:"Nov 16", spectrum:null, bias:null },
+    { headline:"MIT builds a tiny superconducting device for lower-energy computing", summary:"MIT researchers unveiled a small device that layers superconducting and magnetic materials, designed for non-volatile memory and signal control. The team says it could make future computers — including quantum systems — far more energy-efficient.", source:"MIT", url:"https://news.mit.edu/2026/tiny-superconducting-sandwich-could-help-computers-use-less-energy-1120", date:"Nov 20", spectrum:null, bias:null },
+  ]},
+  { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
+  { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
+  { id:"wpuzzle", title:"🔤 Word Puzzles", color:"#16a085", custom:"wpuzzle" },
+];
+
+const FUN_FACT = {
+  text: "The word 'bug' for an engineering fault predates computers, but in 1947 operators of Harvard's Mark II found a literal one — a moth trapped in a relay. They taped it into the logbook beside the note 'First actual case of bug being found.' That page, moth still attached, now sits in the Smithsonian's National Museum of American History.",
+  tag: "Category · Technology & History"
+};
+
+const PUZZLE = {
+  type: "Logic",
+  title: "Off Balance",
+  how: "Divide to conquer — each weighing should split the suspects into three equal groups, not two.",
+  question: "You have nine identical-looking coins. Eight weigh exactly the same; one is slightly heavier. Using only a balance scale (two pans, no weights) and just two weighings, how can you be certain to identify the heavier coin?",
+  answer: "Split the nine coins into three groups of three — call them A, B and C.\n\nWeighing 1: Put group A on the left pan and group B on the right.\n• If they balance, the heavy coin is in group C.\n• If one side drops, the heavy coin is in that heavier group.\nEither way, you now know which group of three holds it.\n\nWeighing 2: From that group of three, put one coin on each pan and keep the third aside.\n• If the pans balance, the coin you set aside is the heavy one.\n• If one side drops, that coin is the heavy one.\n\nTwo weighings always find it."
+};
+
+const WORD_PUZZLE = {
+  type: "Anagram",
+  title: "Fitting Words",
+  how: "Each phrase rearranges — using every letter exactly once — into a new phrase that slyly describes the original.",
+  question: "Rearrange all the letters of each phrase into the new phrase hinted at:\n\n1.  A DECIMAL POINT  →  what it marks  (5 words)\n2.  THE MORSE CODE  →  what it sends  (3 words)\n3.  SLOT MACHINES  →  what they can do to you  (4 words)",
+  answer: "1.  A DECIMAL POINT  →  I'M A DOT IN PLACE\n2.  THE MORSE CODE  →  HERE COME DOTS\n3.  SLOT MACHINES  →  CASH LOST IN ME\n\nEach answer uses exactly the same letters as its phrase — a perfect anagram."
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function renderWordPuzzle(){
+  let h='<div class="sec-title">🔤 Word Puzzle of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#16a085,transparent)"></div>';
+  h+='<div class="wpuzzle-box"><span class="wptype">'+WORD_PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+WORD_PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+WORD_PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+WORD_PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this,\'wpans\')">Show Answer</button>';
+  h+='<div class="answer" id="wpans"><span class="alabel">Answer</span>'+WORD_PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn,ansId){var a=document.getElementById(ansId||'ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else if(sec.custom==="wpuzzle"){div.innerHTML=renderWordPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>

@@ -1,0 +1,555 @@
+{
+  "date": "2026-11-23",
+  "items": [
+    {
+      "tab": "Singapore",
+      "headline": "Driver who ran a red light jailed over fatal Yishun crash",
+      "summary": "",
+      "url": "https://mothership.sg/2026/11/man-run-red-light-hit-rider-jailed-2-years-9-months/",
+      "outlet": "Mothership",
+      "publish_date": "2026-11-21",
+      "short_hash": "0b4e3366",
+      "key_entities": [
+        "jiang baohui",
+        "yishun",
+        "reckless driving"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "Ex-police officer jailed four months for molesting intoxicated woman",
+      "summary": "",
+      "url": "https://www.scmp.com/news/asia/southeast-asia/article/3375140/ex-singapore-police-officer-jailed-molesting-intoxicated-woman-hotel-room",
+      "outlet": "SCMP",
+      "publish_date": "2026-11-20",
+      "short_hash": "e0f5ea98",
+      "key_entities": [
+        "mohamad joppri harpawi",
+        "singapore police force",
+        "molest"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "Singapore sprint queen Shanti Pereira marries former national sprinter",
+      "summary": "",
+      "url": "https://mothership.sg/2026/11/singapore-sprint-queen-shanti-pereira-weds-tan-zong-yang/",
+      "outlet": "Mothership",
+      "publish_date": "2026-11-21",
+      "short_hash": "d20481a6",
+      "key_entities": [
+        "shanti pereira",
+        "tan zong yang",
+        "wedding"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "Man, 66, dies after shielding a child from a cyclist at Changi Beach",
+      "summary": "",
+      "url": "https://mothership.sg/2026/11/singapore-man-die-cyclist-child-father-apologise/",
+      "outlet": "Mothership",
+      "publish_date": "2026-11-20",
+      "short_hash": "6ec67d63",
+      "key_entities": [
+        "wong wee pui",
+        "changi beach park",
+        "cyclist"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "Singlife to shut its flagship savings account by end-2027",
+      "summary": "",
+      "url": "https://mothership.sg/2026/11/singlife-account-closing/",
+      "outlet": "Mothership",
+      "publish_date": "2026-11-21",
+      "short_hash": "b30c3304",
+      "key_entities": [
+        "singlife",
+        "singlife account",
+        "closure"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "New Delhi chokes on toxic smog as it tops world pollution rankings",
+      "summary": "",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/11/13/delhi-overtakes-lahore-as-worlds-most-polluted-city",
+      "outlet": "Al Jazeera",
+      "publish_date": "2026-11-13",
+      "short_hash": "f357cfd4",
+      "key_entities": [
+        "new delhi",
+        "air pollution",
+        "smog"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "RBI asks the Supreme Court to revisit its Yes Bank bond ruling",
+      "summary": "",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/india-regulator-seeks-review-of-top-court-s-yes-bank-bond-ruling",
+      "outlet": "Bloomberg",
+      "publish_date": "2026-11-16",
+      "short_hash": "d6cf7141",
+      "key_entities": [
+        "reserve bank of india",
+        "yes bank",
+        "supreme court"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "Opposition presses the Supreme Court over India's voter-roll purge",
+      "summary": "",
+      "url": "https://www.cnbc.com/2026/11/01/thousands-join-indian-protest-demanding-election-chiefs-resignation-.html",
+      "outlet": "CNBC",
+      "publish_date": "2026-11-01",
+      "short_hash": "c7d798ef",
+      "key_entities": [
+        "election commission",
+        "gyanesh kumar",
+        "electoral rolls"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "India's $4.5 billion Ganges clean-up falls short of its targets",
+      "summary": "",
+      "url": "https://www.bloomberg.com/graphics/2026-ganges-water-pollution/",
+      "outlet": "Bloomberg",
+      "publish_date": "2026-11-05",
+      "short_hash": "4bfc0b7c",
+      "key_entities": [
+        "ganges",
+        "namami gange",
+        "pollution"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "Commons passes tighter immigration bill, doubling the wait to settle",
+      "summary": "",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/uk-s-house-of-commons-passes-controversial-immigration-bill",
+      "outlet": "Bloomberg",
+      "publish_date": "2026-11-17",
+      "short_hash": "9bc17f1c",
+      "key_entities": [
+        "house of commons",
+        "immigration bill",
+        "settlement"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "UK real wages fall for the first time since the 2023 cost-of-living crisis",
+      "summary": "",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/uk-real-wages-fall-for-the-first-time-since-2023-cost-of-living-crisis",
+      "outlet": "Bloomberg",
+      "publish_date": "2026-11-17",
+      "short_hash": "ee52d91f",
+      "key_entities": [
+        "uk",
+        "real wages",
+        "inflation"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "UK payrolls unexpectedly fell by 34,000 in October",
+      "summary": "",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/uk-payrolls-fell-unexpectedly-in-october-ahead-of-healey-budget",
+      "outlet": "Bloomberg",
+      "publish_date": "2026-11-17",
+      "short_hash": "21c54110",
+      "key_entities": [
+        "uk",
+        "payrolls",
+        "labour market"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "UK News",
+      "headline": "Bank of England's Bailey signals more rate rises if conflict drags on",
+      "summary": "",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/boe-s-bailey-says-more-rate-hikes-needed-if-iran-conflict-lasts",
+      "outlet": "Bloomberg",
+      "publish_date": "2026-11-18",
+      "short_hash": "61194d2f",
+      "key_entities": [
+        "bank of england",
+        "andrew bailey",
+        "interest rates"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global",
+      "headline": "Update: COP31 collapses without a deal as fossil-fuel language sinks the talks",
+      "summary": "",
+      "url": "https://www.cnn.com/2026/11/22/climate/cop31-summit-collapses-in-fossil-fuel-failure",
+      "outlet": "CNN",
+      "publish_date": "2026-11-22",
+      "short_hash": "15793e06",
+      "key_entities": [
+        "cop31",
+        "antalya",
+        "fossil fuels"
+      ],
+      "is_update": true
+    },
+    {
+      "tab": "Global",
+      "headline": "Hegseth announces a US-Venezuela military partnership",
+      "summary": "",
+      "url": "https://www.cnn.com/2026/11/18/americas/us-venezuela-military-deal-hegseth-latam-intl",
+      "outlet": "CNN",
+      "publish_date": "2026-11-18",
+      "short_hash": "f3936fef",
+      "key_entities": [
+        "pete hegseth",
+        "venezuela",
+        "military deal"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global",
+      "headline": "Lebanon's Aoun demands an Israeli withdrawal and condemns Iran",
+      "summary": "",
+      "url": "https://www.aljazeera.com/news/2026/11/21/lebanese-president-demands-israel-withdrawal-decries-irans-interference",
+      "outlet": "Al Jazeera",
+      "publish_date": "2026-11-21",
+      "short_hash": "ad2cd4f4",
+      "key_entities": [
+        "joseph aoun",
+        "lebanon",
+        "israel",
+        "iran"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global",
+      "headline": "Iran weighs a nuclear-doctrine shift as IAEA inspectors stay locked out",
+      "summary": "",
+      "url": "https://www.aljazeera.com/news/2026/11/21/could-iran-reverse-its-stated-policy-of-a-civil-only-nuclear-programme",
+      "outlet": "Al Jazeera",
+      "publish_date": "2026-11-21",
+      "short_hash": "dffd8f38",
+      "key_entities": [
+        "iran",
+        "araghchi",
+        "iaea",
+        "nuclear"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global",
+      "headline": "Trump urges Nvidia to reinstate Jensen Huang amid a China spy scandal",
+      "summary": "",
+      "url": "https://www.aljazeera.com/news/2026/11/21/trump-calls-for-nvidia-to-reinstate-brilliant-jensen-huang",
+      "outlet": "Al Jazeera",
+      "publish_date": "2026-11-21",
+      "short_hash": "38f918e4",
+      "key_entities": [
+        "donald trump",
+        "nvidia",
+        "jensen huang",
+        "china"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "DeepMind spin-off Isomorphic Labs raises a record $5 billion",
+      "summary": "",
+      "url": "https://techcrunch.com/2026/11/17/isomorphic-labs-raises-5b-as-it-looks-to-take-drug-candidates-to-clinical-trials/",
+      "outlet": "TechCrunch",
+      "publish_date": "2026-11-17",
+      "short_hash": "f347abfd",
+      "key_entities": [
+        "isomorphic labs",
+        "demis hassabis",
+        "series c"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "Brain-implant maker Science Corporation valued at $3.5 billion",
+      "summary": "",
+      "url": "https://techcrunch.com/2026/11/17/science-corporations-brain-tech-is-worth-3-5-billion-after-new-funding",
+      "outlet": "TechCrunch",
+      "publish_date": "2026-11-17",
+      "short_hash": "3f99f410",
+      "key_entities": [
+        "science corporation",
+        "brain-computer interface",
+        "funding"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "Cybersecurity startup Corma hits a $1 billion valuation in three months",
+      "summary": "",
+      "url": "https://techcrunch.com/2026/11/16/cybersecurity-ai-startup-corma-reaches-1b-valuation-in-about-3-months/",
+      "outlet": "TechCrunch",
+      "publish_date": "2026-11-16",
+      "short_hash": "7466cf7c",
+      "key_entities": [
+        "corma",
+        "nea",
+        "cybersecurity"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "Zipline and Uber launch drone delivery in a Houston suburb",
+      "summary": "",
+      "url": "https://techcrunch.com/2026/11/22/techcrunch-mobility-a-b-testing-robots-vs-humans",
+      "outlet": "TechCrunch",
+      "publish_date": "2026-11-22",
+      "short_hash": "08f8f345",
+      "key_entities": [
+        "zipline",
+        "uber",
+        "drone delivery"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Nvidia posts record quarterly revenue but its shares still slide",
+      "summary": "",
+      "url": "https://www.cnbc.com/2026/11/17/nvidia-nvda-earnings-report-q3-2027.html",
+      "outlet": "CNBC",
+      "publish_date": "2026-11-17",
+      "short_hash": "c9848a3a",
+      "key_entities": [
+        "nvidia",
+        "earnings",
+        "revenue"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Bill.com agrees to a $6 billion take-private led by TPG",
+      "summary": "",
+      "url": "https://www.cnbc.com/2026/11/20/stocks-moving-the-most-today-live-updates.html",
+      "outlet": "CNBC",
+      "publish_date": "2026-11-20",
+      "short_hash": "e08d6598",
+      "key_entities": [
+        "bill holdings",
+        "tpg",
+        "corpay",
+        "buyout"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Fed minutes show most officials expect further rate rises",
+      "summary": "",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/fed-minutes-show-almost-all-officials-expect-more-rate-hikes",
+      "outlet": "Bloomberg",
+      "publish_date": "2026-11-18",
+      "short_hash": "d17fedc6",
+      "key_entities": [
+        "federal reserve",
+        "waller",
+        "rate hikes"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Australia's central bank raises rates as price risks persist",
+      "summary": "",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/rba-raised-rates-as-price-risks-remained-to-upside-minutes-show",
+      "outlet": "Bloomberg",
+      "publish_date": "2026-11-17",
+      "short_hash": "3c8c89dd",
+      "key_entities": [
+        "reserve bank of australia",
+        "cash rate",
+        "inflation"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🏎️ Verstappen wins a wild Las Vegas Grand Prix as McLaren grab a double podium",
+      "summary": "",
+      "url": "https://www.skysports.com/f1/news/13615083/las-vegas-gp-max-verstappen-wins-wild-race-as-ferraris-lewis-hamilton-and-charles-leclerc-collide-again",
+      "outlet": "Sky Sports",
+      "publish_date": "2026-11-22",
+      "short_hash": "e24513f2",
+      "key_entities": [
+        "max verstappen",
+        "las vegas grand prix",
+        "mclaren"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🏎️ Verstappen mocks Russell as 'so far below my level' after their Vegas clash",
+      "summary": "",
+      "url": "https://www.skysports.com/f1/news/13615084/max-verstappen-says-george-russell-so-far-below-his-level-after-poking-fun-at-rival-for-major-error-during-las-vegas-gp",
+      "outlet": "Sky Sports",
+      "publish_date": "2026-11-22",
+      "short_hash": "a4906e41",
+      "key_entities": [
+        "max verstappen",
+        "george russell",
+        "las vegas"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🎾 Alcaraz beats Zverev to win his first ATP Finals title",
+      "summary": "",
+      "url": "https://www.atptour.com/en/news/alcaraz-zverev-nitto-atp-finals-2026-sunday",
+      "outlet": "ATP Tour",
+      "publish_date": "2026-11-22",
+      "short_hash": "53685840",
+      "key_entities": [
+        "carlos alcaraz",
+        "alexander zverev",
+        "atp finals"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "🏏 Update: India declare on 720/9 and pile pressure on New Zealand in Wellington",
+      "summary": "",
+      "url": "https://www.cricinfo.com/series/india-in-new-zealand-2026-27-1539421/new-zealand-vs-india-1st-test-1539442/full-scorecard",
+      "outlet": "ESPNcricinfo",
+      "publish_date": "2026-11-22",
+      "short_hash": "a5e49854",
+      "key_entities": [
+        "india",
+        "new zealand",
+        "wellington test",
+        "bumrah"
+      ],
+      "is_update": true
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "Voyager 1 becomes the first craft to reach one light-day from Earth",
+      "summary": "",
+      "url": "https://www.nasa.gov/news-release/nasas-voyager-1-makes-history-reaching-one-light-day-from-earth/",
+      "outlet": "NASA",
+      "publish_date": "2026-11-18",
+      "short_hash": "bb66fed3",
+      "key_entities": [
+        "voyager 1",
+        "nasa",
+        "interstellar"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "Europe's BepiColombo mission reaches Mercury after an eight-year journey",
+      "summary": "",
+      "url": "https://www.scientificamerican.com/article/two-probes-are-about-to-arrive-at-mercury-for-an-up-close-look-at-this-puzzling-planet/",
+      "outlet": "Scientific American",
+      "publish_date": "2026-11-21",
+      "short_hash": "c4f2670e",
+      "key_entities": [
+        "bepicolombo",
+        "mercury",
+        "esa",
+        "jaxa"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "ESA's Euclid telescope spots its first comet, far from the Sun",
+      "summary": "",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_discovers_new_comet",
+      "outlet": "ESA",
+      "publish_date": "2026-11-16",
+      "short_hash": "7a027bdd",
+      "key_entities": [
+        "euclid",
+        "comet",
+        "esa"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "MIT builds a tiny superconducting device for lower-energy computing",
+      "summary": "",
+      "url": "https://news.mit.edu/2026/tiny-superconducting-sandwich-could-help-computers-use-less-energy-1120",
+      "outlet": "MIT",
+      "publish_date": "2026-11-20",
+      "short_hash": "7be233e0",
+      "key_entities": [
+        "mit",
+        "superconductor",
+        "computing"
+      ],
+      "is_update": false
+    }
+  ],
+  "fun_fact": {
+    "headline": "The first computer 'bug' was a literal moth found in the relay of Harvard's Mark II in 1947.",
+    "body": "The word 'bug' for an engineering fault predates computers, but in 1947 operators of Harvard's Mark II found a literal one — a moth trapped in a relay. They taped it into the logbook beside the note 'First actual case of bug being found.' That page, moth still attached, now sits in the Smithsonian's National Museum of American History.",
+    "source": "Smithsonian; National Geographic",
+    "fun_fact_id": "funfact-2e2eb8a0",
+    "topic": "tech",
+    "topic_key": "computer bug"
+  },
+  "puzzle": {
+    "type": "logic",
+    "title": "Off Balance",
+    "title_key": "off-balance",
+    "body": "Nine identical coins, one slightly heavier; find it in two weighings on a balance scale.",
+    "approach": "Split into three groups of three each weighing.",
+    "answer": "Weigh group A vs B; the heavy group is the one that drops, or C if they balance. From that group of three, weigh one vs one; heavier pan, or the one set aside if they balance.",
+    "puzzle_hash": "37269b41"
+  },
+  "word_puzzle": {
+    "type": "anagram",
+    "title": "Fitting Words",
+    "title_key": "fitting-words",
+    "body": "Rearrange A DECIMAL POINT, THE MORSE CODE, SLOT MACHINES into apt phrases.",
+    "approach": "Each phrase anagrams into a new phrase describing it.",
+    "answer": "A DECIMAL POINT=I'M A DOT IN PLACE; THE MORSE CODE=HERE COME DOTS; SLOT MACHINES=CASH LOST IN ME.",
+    "word_puzzle_hash": "6f742fb0"
+  },
+  "notes": [
+    "No missed prior run: archive/2026-11-22 exists for yesterday.",
+    "Environment: WebFetch could not resolve external hosts; allowed India primaries (The Hindu, Indian Express, HT, TOI, NDTV, ET) and BBC/Sky/Guardian/Reuters/Straits Times/CNA are blocked to the search crawler. Verification done via WebSearch snippets across reachable allowed outlets.",
+    "India ran on fallback international desks (Al Jazeera, Bloomberg, CNBC) per FIX 6 — domestic primaries unreachable; fewer fresh 48-72h domestic stories available, some items are ongoing late-November stories.",
+    "UK News ran on fallback tier (Bloomberg) per FIX 6 — BBC, Sky News and the Guardian all unreachable this session.",
+    "BepiColombo item framed as the orbit-insertion sequence this week; independent post-insertion confirmation was not retrievable, so no success is asserted beyond ESA's scheduled milestone and Scientific American's arrival coverage.",
+    "F1 currency checked: Las Vegas GP is the current/just-completed round (Sky Sports, ESPN, 22 Nov); two rounds remain this season."
+  ]
+}
