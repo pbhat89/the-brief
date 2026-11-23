@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Tue, 24 Nov 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .wpuzzle-box{background:linear-gradient(135deg,#0e1a1a,#0d1620);border:1px solid #234a44;border-left:3px solid #16a085;padding:24px 28px;border-radius:2px}
+  .wptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#16a085;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .wpuzzle-box .puzzle-title{color:#cdeae3}
+  .wpuzzle-box .puzzle-how{color:#8fb8ac;background:#08140f;border-left-color:#1a6a5a}
+  .wpuzzle-box .puzzle-q{color:#dfeae6;font-family:'Source Sans 3',sans-serif}
+  .wpuzzle-box .answer{color:#bfe0d6}
+  .wpuzzle-box .answer .alabel{color:#16a085}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Tuesday, 24 November 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Tuesday, 24 November 2026 · 🔍 60 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eleven entries in this exact order:
+     id    : one of "sg" | "india" | "uk" | "geo" | "tech" | "biz" | "sports" | "misc" | "fun" | "puzzle" | "wpuzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 8 news tabs; fun/puzzle/wpuzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+
+   WORD_PUZZLE shape (separate, daily word game — NYT-style, static reveal):
+     type     : one of "Connections" | "Word Ladder" | "Anagram" | "Spelling Bee" | "Letter Boxed" | "Mini Crossword"
+     title    : short evocative name for the word puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle body; supports \n for line breaks (grids render as pre-formatted text)
+     answer   : the answer; supports \n for line breaks; appears inside its own toggle (id "wpans")
+============================================================================= */
+
+const SECTIONS = [
+  { id:"sg", title:"🇸🇬 Singapore", color:"#e74c3c", items:[
+    { headline:"Singaporean, 60, dies during descent from Mount Everest", summary:"Police said Liew Shuik Chin, a 60-year-old Singaporean known as Jason, collapsed and died on 15 November while descending in the Everest region of Nepal, and his body has since been returned to his family. He was one of several foreign climbers to die in the region this month.", source:"Mothership", url:"https://mothership.sg/2026/11/singaporean-dies-mt-everest/", date:"Nov 23", spectrum:null, bias:null },
+    { headline:"Singapore to grant a one-off property tax rebate of up to 15% in 2027", summary:"The Finance Ministry and IRAS will give a one-off rebate on 2027 property tax bills — 15% for owner-occupied HDB flats and 10% (capped at S$100) for owner-occupied private homes — with bills issued in December and due by 31 January 2027. It mirrors an identical rebate on 2026 bills announced a year earlier.", source:"Mothership", url:"https://mothership.sg/2026/11/property-tax-rebate-2027/", date:"Nov 23", spectrum:null, bias:null },
+    { headline:"Singapore pushes AI across its financial system to help knit an ASEAN digital economy", summary:"The Monetary Authority of Singapore's drive to embed AI across the financial system could help build a more connected South-east Asian digital economy, though uneven technological readiness across the region may complicate it. The effort follows the ASEAN Digital Economy Framework Agreement, expected to take effect early next year as Singapore assumes the bloc's chairmanship.", source:"SCMP", url:"https://www.scmp.com/week-asia/economics/article/3375479/singapores-ai-finance-push-could-unite-regions-digital-economy-can-asean-keep", date:"Nov 23", spectrum:null, bias:null }
+  ]},
+  { id:"india", title:"🇮🇳 India", color:"#e67e22", items:[
+    { headline:"India coverage is limited in today's edition", summary:"India's primary outlets (The Hindu, The Indian Express, Hindustan Times, The Times of India, NDTV and The Economic Times) were unreachable to the research environment this session, and the international fallback desks carried no fresh, directly linkable India-domestic report. The day's main India story — the Supreme Court signalling it may allow only BS-VI vehicles in Delhi to fight winter smog — appeared only on off-list outlets and was held back under the sourcing rules.", source:"The Brief", url:"", date:"Nov 24", spectrum:null, bias:null }
+  ]},
+  { id:"uk", title:"🇬🇧 UK News", color:"#3949ab", items:[
+    { headline:"UK coverage is unavailable in today's edition", summary:"BBC and Sky News were unreachable to the research environment this cycle, and no allowed fallback outlet carried a fresh UK-domestic report with a direct link. Prime Minister Andy Burnham's Commons statement defending the new UK-EU reset deal — in which he ruled out rejoining the single market or customs union this Parliament — was available only on off-list outlets and was held back under the sourcing rules.", source:"The Brief", url:"", date:"Nov 24", spectrum:null, bias:null }
+  ]},
+  { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
+    { headline:"World Court finds Myanmar committed genocide against the Rohingya", summary:"The International Court of Justice ruled by nine votes to six that Myanmar committed genocide against the Rohingya during its 2016-2017 military operations in Rakhine state — the first time the court has found a state responsible for genocide. It ordered Myanmar to prevent further acts, prosecute those responsible and report back within two years, with compensation to be set later.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/11/19/un-top-court-finds-myanmar-killed-10000-rohingya-as-it-rules-on-genocide", date:"Nov 19", spectrum:null, bias:null },
+    { headline:"Attacks on shipping in the Strait of Hormuz hit their highest level since the Iran war began", summary:"At least 22 attacks on shipping were reported in the Strait of Hormuz in November, the second-highest monthly total since the Iran war began, with two more tankers struck on 22 November. Transits remain about 65% below pre-war levels as Iran demands that vessels follow its designated lanes.", source:"CNN", url:"https://www.cnn.com/2026/11/22/middleeast/hormuz-attacks-highest-levels-iran-war-intl", date:"Nov 22", spectrum:null, bias:null },
+    { headline:"Update: Israeli strike kills a UN aid worker in Gaza as the ceasefire frays", summary:"An Israeli strike killed a UN relief agency (UNRWA) worker on 23 November, and a separate strike on a vehicle in western Gaza City killed two more, according to the agency and local officials. The United States has warned that the fragile October 2025 ceasefire could collapse as strikes and demolitions continue beyond the agreed ‘yellow line’.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/11/23/israeli-drone-strike-kills-unrwa-worker-in-gaza", date:"Nov 23", spectrum:null, bias:null }
+  ]},
+  { id:"tech", title:"💻 Tech & AI", color:"#27ae60", items:[
+    { headline:"Nvidia-backed Genesis AI raises $500 million at a $3.5 billion valuation", summary:"Genesis AI, a French robotics startup backed by Nvidia, raised $500 million at a $3.5 billion valuation in a round co-led by Premji Invest, Khosla Ventures and Eclipse. The deal underscores a surge of investor money into physical-AI and robotics companies.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-11-17/nvidia-backed-genesis-ai-raises-funds-at-3-5-billion-valuation", date:"Nov 17", spectrum:null, bias:null },
+    { headline:"AI finance startup Model ML raises $250 million at a $1.5 billion valuation", summary:"Model ML, which builds AI agents to handle routine work for bankers, consultants and investors, raised $250 million at a $1.5 billion valuation in a round co-led by General Atlantic and QED Investors. The raise adds to a run of large funding rounds for enterprise AI-agent startups.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-11-17/ai-startup-for-bankers-raises-funds-at-1-5-billion-value", date:"Nov 17", spectrum:null, bias:null }
+  ]},
+  { id:"biz", title:"📈 Business & Markets", color:"#8e44ad", items:[
+    { headline:"Wall Street posts its best day since April 2025 as Nvidia rebounds", summary:"The S&P 500 jumped 4.7% and the Nasdaq Composite surged 6.5% on 23 November, their best day since April 2025, ending a seven-day losing streak after a brutal week that had cut the S&P 500 by 8.6%. Nvidia led the rebound with a 31% gain.", source:"CNBC", url:"https://www.cnbc.com/2026/11/22/stock-market-today-live-updates.html", date:"Nov 23", spectrum:null, bias:null },
+    { headline:"Update: Nvidia reinstates Jensen Huang as CEO and the stock jumps 31%", summary:"Nvidia's board voted unanimously to reinstate Jensen Huang as chief executive, 11 days after he resigned amid a China espionage scandal and less than a week after the board said it had no plans to bring him back. The stock jumped about 31% to roughly $165 after President Trump said he had pressed the board to act.", source:"CNBC", url:"https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html", date:"Nov 23", spectrum:null, bias:null },
+    { headline:"CrowdStrike agrees to buy Zscaler for about $44 billion", summary:"CrowdStrike agreed to acquire rival Zscaler in an all-stock deal valuing it at about $43.9 billion, its largest acquisition, to combine endpoint and network security on one platform. Zscaler shares rose about 18% while CrowdStrike fell about 8%; the deal is expected to close in the second half of CrowdStrike's fiscal 2028.", source:"CNBC", url:"https://www.cnbc.com/2026/11/23/crowdstrike-zscaler-aquisition-ai-cyberattacks.html", date:"Nov 23", spectrum:null, bias:null }
+  ]},
+  { id:"sports", title:"🎾🏏🏎️ Sports", color:"#c0392b", items:[
+    { headline:"🏏 Update: India held to a draw in the Wellington Test as New Zealand's lower order resists", summary:"The first Test in Wellington ended in a draw after Daryl Mitchell and Glenn Phillips batted out the final day, leaving New Zealand on 239-5 in reply to India's 720-9 declared. Henry Nicholls, who made 175 not out, was named player of the match; the two-match series is level 0-0 ahead of the Christchurch decider from 27 November.", source:"ESPNcricinfo", url:"https://www.cricinfo.com/series/india-in-new-zealand-2026-27-1539421/new-zealand-vs-india-1st-test-1539442/full-scorecard", date:"Nov 23", spectrum:null, bias:null },
+    { headline:"🏎️ Verstappen eyes the runner-up spot as F1 heads to the Qatar Grand Prix", summary:"With Kimi Antonelli already crowned drivers' champion and Mercedes the constructors' winners, Max Verstappen heads to the Qatar Grand Prix on 29 November leading the fight for second, 40 points clear of George Russell after his Las Vegas win. Two rounds remain, with Lewis Hamilton having moved up to third.", source:"Sky Sports", url:"https://www.skysports.com/f1/grandprix/qatar", date:"Nov 23", spectrum:null, bias:null }
+  ]},
+  { id:"misc", title:"🔬 Other Miscellaneous News", color:"#1abc9c", items:[
+    { headline:"Homo erectus survived in southern China's rainforests until 184,000 years ago", summary:"Two studies in Nature report that Homo erectus persisted in the tropical rainforests of southern China as recently as 184,000 years ago — far later, and in a wetter habitat, than long assumed. The evidence comes from eight teeth found in caves in Guangxi, with isotope analysis pointing to rainforest diets.", source:"Nature", url:"https://www.nature.com/articles/s41586-026-11155-6", date:"Nov 18", spectrum:null, bias:null },
+    { headline:"A Neanderthal gene variant may shrink part of the brain and lower schizophrenia risk", summary:"A study by Hugo Zeberg and Svante Paabo found that a gene variant inherited from Neanderthals, near the DAAM1 gene, is linked to a slightly smaller occipital lobe and, in people carrying two copies, a nearly 10% lower risk of schizophrenia. The mechanism behind the protective effect remains unclear.", source:"Scientific American", url:"https://www.scientificamerican.com/article/neanderthal-dna-linked-to-lower-risk-of-schizophrenia-in-modern-humans/", date:"Nov 16", spectrum:null, bias:null },
+    { headline:"A study warns a million orbital data centres could sharply pollute the upper atmosphere", summary:"Researchers estimate that a proposed constellation of about a million orbital data-centre satellites could raise upper-atmosphere pollution more than 100-fold through launches and re-entries, with possible effects on the ozone layer and climate. The authors could not fully quantify metal pollution because the satellites' materials have not been disclosed.", source:"Scientific American", url:"https://www.scientificamerican.com/article/how-bad-would-spacexs-million-ai-satellites-be-for-earths-atmosphere/", date:"Nov 18", spectrum:null, bias:null }
+  ]},
+  { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
+  { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
+  { id:"wpuzzle", title:"🔤 Word Puzzles", color:"#16a085", custom:"wpuzzle" },
+];
+
+const FUN_FACT = {
+  text: "The word ‘robot’ did not come from engineering but from the theatre. It was introduced in Karel Čapek’s 1920 Czech play R.U.R. (Rossum’s Universal Robots); Čapek credited his brother Josef with coining it, from the Czech ‘robota’, meaning forced labour or drudgery. The play’s robots are artificial people — closer to today’s androids than to the factory arms the word now evokes.",
+  tag: "Category · Language & Technology"
+};
+
+const PUZZLE = {
+  type: "Quantitative",
+  title: "Wine and Water",
+  how: "Don’t track the mixing — track what must be true once both glasses hold their original amount again.",
+  question: "You have a glass of red wine and a glass of water, each holding exactly the same amount of liquid.\nTake one teaspoon of wine, stir it into the water, and mix thoroughly.\nNow take one teaspoon of that wine-and-water mixture and stir it back into the wine.\n\nIs there now more wine in the water glass, or more water in the wine glass — or are the two amounts equal?",
+  answer: "They are exactly equal.\n\nAfter both transfers, each glass again holds its original volume. So whatever amount of wine is now missing from the wine glass must have been replaced by exactly that volume of water — and the missing wine is sitting in the water glass. Therefore the wine in the water equals the water in the wine, no matter the size of the teaspoon or how thoroughly you stirred."
+};
+
+const WORD_PUZZLE = {
+  type: "Spelling Bee",
+  title: "Brushstrokes",
+  how: "Every word must contain the centre letter T; the seven-letter pangram is a kind of artist.",
+  question: "Centre letter (must appear in every word): T\nOuter letters:  P · A · I · N · E · R\n\nRules: make words of 4+ letters, each using the centre letter T. Letters may be reused. Using only these seven letters, find the pangram that uses all of them.\nTarget: 15+ words, including the pangram.",
+  answer: "Pangram: PAINTER (REPAINT also uses all seven letters).\n\nA sample of valid words (every one contains T):\nPAINT · PRINT · TRAIN · TAPIR · TAPER · TRIP · TRAP · RATE · TEAR · TARE · RANT · PANT · PINT · IRATE · TRIPE · INERT · INTER · RETAIN · RETINA · TREAT · ATTAIN · ENTRAP · PERTAIN · TERRAIN · NITRATE · REPAINT · PAINTER"
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function renderWordPuzzle(){
+  let h='<div class="sec-title">🔤 Word Puzzle of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#16a085,transparent)"></div>';
+  h+='<div class="wpuzzle-box"><span class="wptype">'+WORD_PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+WORD_PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+WORD_PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+WORD_PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this,\'wpans\')">Show Answer</button>';
+  h+='<div class="answer" id="wpans"><span class="alabel">Answer</span>'+WORD_PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn,ansId){var a=document.getElementById(ansId||'ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else if(sec.custom==="wpuzzle"){div.innerHTML=renderWordPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>

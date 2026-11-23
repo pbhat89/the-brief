@@ -4708,3 +4708,19 @@ is empty until the first run.
 2026-11-23	Europe's BepiColombo mission reaches Mercury after an eight-year journey	c4f2670e	bepicolombo,mercury,esa,jaxa
 2026-11-23	ESA's Euclid telescope spots its first comet, far from the Sun	7a027bdd	euclid,comet,esa
 2026-11-23	MIT builds a tiny superconducting device for lower-energy computing	7be233e0	mit,superconductor,computing
+2026-11-24	Singaporean, 60, dies during descent from Mount Everest	33363228	liew shuik chin,mount everest,nepal,singaporean
+2026-11-24	Singapore to grant a one-off property tax rebate of up to 15% in 2027	9ee8736e	singapore,property tax rebate,2027,iras,owner-occupied
+2026-11-24	Singapore pushes AI across its financial system to help knit an ASEAN digital economy	e00a2400	singapore,mas,artificial intelligence,finance,asean
+2026-11-24	World Court finds Myanmar committed genocide against the Rohingya	788dc576	icj,myanmar,rohingya,genocide,world court
+2026-11-24	Attacks on shipping in the Strait of Hormuz hit their highest level since the Iran war began	c86aab90	strait of hormuz,iran,tankers,shipping,attacks
+2026-11-24	Update: Israeli strike kills a UN aid worker in Gaza as the ceasefire frays	3bdb2196	gaza,israel,unrwa,ceasefire,strike
+2026-11-24	Nvidia-backed Genesis AI raises $500 million at a $3.5 billion valuation	6d58f8fa	genesis ai,nvidia,robotics,funding,valuation
+2026-11-24	AI finance startup Model ML raises $250 million at a $1.5 billion valuation	f756c1d5	model ml,ai agents,finance,funding,general atlantic
+2026-11-24	Wall Street posts its best day since April 2025 as Nvidia rebounds	1775d5cd	s&p 500,nasdaq,wall street,nvidia,rebound
+2026-11-24	Update: Nvidia reinstates Jensen Huang as CEO and the stock jumps 31%	b47693e4	nvidia,jensen huang,ceo,reinstated,trump
+2026-11-24	CrowdStrike agrees to buy Zscaler for about $44 billion	cc745b2a	crowdstrike,zscaler,acquisition,cybersecurity,deal
+2026-11-24	Update: India held to a draw in the Wellington Test as New Zealand's lower order resists	f0fe8119	india,new zealand,wellington test,draw,nicholls
+2026-11-24	Verstappen eyes the runner-up spot as F1 heads to the Qatar Grand Prix	7c1411be	formula 1,max verstappen,qatar grand prix,antonelli,standings
+2026-11-24	Homo erectus survived in southern China's rainforests until 184,000 years ago	680bf875	homo erectus,china,rainforest,nature,teeth
+2026-11-24	A Neanderthal gene variant may shrink part of the brain and lower schizophrenia risk	e7b5c7f1	neanderthal,gene variant,schizophrenia,brain,daam1
+2026-11-24	A study warns a million orbital data centres could sharply pollute the upper atmosphere	1b5950f1	orbital data centres,satellites,atmosphere,pollution,spacex

@@ -279,6 +279,11 @@
       "date": "2026-11-23",
       "topic_key": "computer bug",
       "text": "The first computer 'bug' was a literal moth found in the relay of Harvard's Mark II in 1947."
+    },
+    {
+      "date": "2026-11-24",
+      "topic_key": "robot",
+      "text": "The word 'robot' was coined for Karel Capek's 1920 Czech play R.U.R., from Czech 'robota' (forced labour)."
     }
   ],
   "puzzle_log": [
@@ -416,6 +421,11 @@
       "date": "2026-11-23",
       "type": "logic",
       "title_key": "off-balance"
+    },
+    {
+      "date": "2026-11-24",
+      "type": "quantitative",
+      "title_key": "wine-and-water"
     }
   ],
   "word_puzzle_log": [
@@ -553,6 +563,11 @@
       "date": "2026-11-23",
       "type": "anagram",
       "title_key": "fitting-words"
+    },
+    {
+      "date": "2026-11-24",
+      "type": "spellingbee",
+      "title_key": "brushstrokes"
     }
   ]
 }
