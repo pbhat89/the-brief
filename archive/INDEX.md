@@ -4724,3 +4724,28 @@ is empty until the first run.
 2026-11-24	Homo erectus survived in southern China's rainforests until 184,000 years ago	680bf875	homo erectus,china,rainforest,nature,teeth
 2026-11-24	A Neanderthal gene variant may shrink part of the brain and lower schizophrenia risk	e7b5c7f1	neanderthal,gene variant,schizophrenia,brain,daam1
 2026-11-24	A study warns a million orbital data centres could sharply pollute the upper atmosphere	1b5950f1	orbital data centres,satellites,atmosphere,pollution,spacex
+2026-11-25	StarHub to merge with M1 in a S$1.1 billion all-share deal by 2027	9d44a67e	starhub,m1,keppel,merger
+2026-11-25	Singapore and Australia widen their supply-chain pact to cover food and semiconductors	35d6714a	singapore,australia,lawrence wong,albanese,semiconductors
+2026-11-25	PM Wong says Singapore is working with the US to stop AI-chip re-routing	21a92c5a	lawrence wong,singapore,united states,ai chips
+2026-11-25	First person charged under Singapore’s tougher Kpod laws jailed over three years	dea15eeb	singapore,kpod,etomidate,sentence
+2026-11-25	Putin says Russian retaliation is ‘inevitable’ after Ukraine strikes oil refineries	7428bcf3	putin,russia,ukraine,oil refineries,trump
+2026-11-25	Ukraine says it struck a Russian warship off Libya in a drone attack	1915c67c	ukraine,russia,libya,benghazi,drone strike
+2026-11-25	Israeli air strike kills a senior Hamas security official in Gaza	7b99f364	israel,hamas,gaza,naim abu nahl,ceasefire
+2026-11-25	Israel’s Eisenkot races a December 6 deadline to form a government	84d33679	israel,eisenkot,netanyahu,coalition,yashar
+2026-11-25	Walmart teams up with Meta to sell Black Friday deals through an AI agent	da635de5	walmart,meta,muse,ai agent
+2026-11-25	EV-truck startup Harbinger lands over $100 million, backed by Palmer Luckey’s bank	2c736c8f	harbinger,palmer luckey,erebor,electric trucks
+2026-11-25	Anthropic shares fall below their IPO price days after going public	2143dc28	anthropic,ipo,nasdaq,ai valuations
+2026-11-25	Supertake raises $20 million to turn market predictions into AI-built portfolios	bd891fe1	supertake,adjacent,ai investing,seed funding
+2026-11-25	Sanofi to buy Insmed for about $41 billion in biggest pharma deal since 2023	4095d62b	sanofi,insmed,acquisition,pharma,dupixent
+2026-11-25	US readies tariff increases on China, the EU and a dozen more economies	d9410551	united states,tariffs,china,european union
+2026-11-25	US tech stocks slide as the Nvidia relief rally fades	430686fd	nasdaq,nvidia,jensen huang,ai stocks
+2026-11-25	Abercrombie jumps 21% on strong results as Analog Devices slides 18%	4deb0835	abercrombie,analog devices,earnings,stocks
+2026-11-25	US consumer confidence rises in November even as inflation worries linger	bc110c76	united states,consumer confidence,inflation,midterms
+2026-11-25	🏎 F1 reaches Qatar with Red Bull holding a nine-point edge over McLaren for third	09f2be03	formula 1,qatar grand prix,red bull,mclaren,antonelli
+2026-11-25	🏎 FIA agrees a 2030 engine framework built around a turbocharged V8	3baa0e00	fia,formula 1,2030 engines,v8
+2026-11-25	🏏 India and New Zealand head to Christchurch for the second Test	dee379c5	india,new zealand,christchurch,test,world test championship
+2026-11-25	🎾 Davis Cup Final 8 gets under way in Bologna with Italy defending	cac55c2a	davis cup,bologna,italy,tennis
+2026-11-25	Sleuth finds ‘impossible proteins’ in hundreds of research papers	28757172	research integrity,impossible proteins,cell lines,nature
+2026-11-25	Webb telescope maps the dust that reveals a dying star’s final hours	959a4f14	webb telescope,cassiopeia a,supernova,dust
+2026-11-25	Scientists map how human sweat flips a switch that draws mosquitoes	6877c8ba	mosquitoes,human sweat,ion channel,malaria
+2026-11-25	Study finds blood stem cells keep an ‘inflammatory memory’ of past infections	3bace2a1	stem cells,inflammatory memory,immune system,leukaemia

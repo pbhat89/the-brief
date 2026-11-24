@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-09-25",
-      "topic_key": "antarctica",
-      "text": "Antarctica is the largest desert on Earth; its interior is drier than the Sahara."
-    },
-    {
       "date": "2026-09-26",
       "topic_key": "sudan",
       "text": "Sudan has more pyramids than Egypt"
@@ -284,14 +279,14 @@
       "date": "2026-11-24",
       "topic_key": "robot",
       "text": "The word 'robot' was coined for Karel Capek's 1920 Czech play R.U.R., from Czech 'robota' (forced labour)."
+    },
+    {
+      "date": "2026-11-25",
+      "topic_key": "baby bones",
+      "text": "A newborn has about 300 bones but an adult has only 206; many fuse as we grow."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-10-25",
-      "type": "lateral",
-      "title_key": "three-left-turns"
-    },
     {
       "date": "2026-10-26",
       "type": "visual",
@@ -426,14 +421,14 @@
       "date": "2026-11-24",
       "type": "quantitative",
       "title_key": "wine-and-water"
+    },
+    {
+      "date": "2026-11-25",
+      "type": "lateral",
+      "title_key": "stopped-clock"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-10-25",
-      "type": "ladder",
-      "title_key": "love-into-hate"
-    },
     {
       "date": "2026-10-26",
       "type": "letterboxed",
@@ -568,6 +563,11 @@
       "date": "2026-11-24",
       "type": "spellingbee",
       "title_key": "brushstrokes"
+    },
+    {
+      "date": "2026-11-25",
+      "type": "minicross",
+      "title_key": "square-one"
     }
   ]
 }
