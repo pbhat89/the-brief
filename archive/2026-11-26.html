@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Thu, 26 November 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .wpuzzle-box{background:linear-gradient(135deg,#0e1a1a,#0d1620);border:1px solid #234a44;border-left:3px solid #16a085;padding:24px 28px;border-radius:2px}
+  .wptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#16a085;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .wpuzzle-box .puzzle-title{color:#cdeae3}
+  .wpuzzle-box .puzzle-how{color:#8fb8ac;background:#08140f;border-left-color:#1a6a5a}
+  .wpuzzle-box .puzzle-q{color:#dfeae6;font-family:'Source Sans 3',sans-serif}
+  .wpuzzle-box .answer{color:#bfe0d6}
+  .wpuzzle-box .answer .alabel{color:#16a085}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Thursday, 26 November 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Thursday, 26 November 2026 · 🔍 60 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eleven entries in this exact order:
+     id    : one of "sg" | "india" | "uk" | "geo" | "tech" | "biz" | "sports" | "misc" | "fun" | "puzzle" | "wpuzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 8 news tabs; fun/puzzle/wpuzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+
+   WORD_PUZZLE shape (separate, daily word game — NYT-style, static reveal):
+     type     : one of "Connections" | "Word Ladder" | "Anagram" | "Spelling Bee" | "Letter Boxed" | "Mini Crossword"
+     title    : short evocative name for the word puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle body; supports \n for line breaks (grids render as pre-formatted text)
+     answer   : the answer; supports \n for line breaks; appears inside its own toggle (id "wpans")
+============================================================================= */
+
+const SECTIONS = [
+  { id:"sg", title:"🇸🇬 Singapore", color:"#e74c3c", items:[
+    { headline:"Singapore starts removing ERP gantries as it switches to satellite road pricing", summary:"Singapore has begun progressively taking down its Electronic Road Pricing gantries as it moves to a satellite-based ERP 2.0 system from Jan 1, 2027, the Land Transport Authority said. The new system uses satellite positioning and an in-vehicle on-board unit to charge for distance and location; works on the remaining gantries continue into 2027.", source:"Mothership", url:"https://mothership.sg/2026/11/erp-gantries-removed-in-phases/", date:"Nov 23", spectrum:null, bias:null },
+    { headline:"Woman charged after a Punggol block's rubbish chute caught fire 13 times in 12 days", summary:"A 33-year-old woman was charged on Nov 20 with mischief by fire after a rubbish chute at a Punggol HDB block caught fire 13 times in 12 days. She had earlier been publicly praised for helping put out some of the blazes before police identified her as the alleged culprit; the charge carries up to seven years' jail.", source:"Mothership", url:"https://mothership.sg/2026/11/punggol-block-fire-repeated/", date:"Nov 20", spectrum:null, bias:null },
+    { headline:"Singaporean woman, 44, charged over alleged ties to the Prince Holding scam syndicate", summary:"A 44-year-old Singaporean woman was arrested and charged over alleged links to the Cambodia-based Prince Holding Group, the sprawling cyber-scam conglomerate whose founder has been sanctioned by the United States and Britain. The case is part of a widening crackdown on cross-border fraud networks operating through Singapore.", source:"Mothership", url:"https://mothership.sg/2026/11/woman-prince-holding-group-arrested/", date:"Nov 24", spectrum:null, bias:null },
+    { headline:"Man jailed 12 weeks for looking up a woman's skirt at an MRT station", summary:"A 31-year-old man was jailed 12 weeks for filming up a woman's skirt at Botanic Gardens MRT station. He had a similar conviction in 2024, and prosecutors had sought roughly 16 weeks for the repeat offence.", source:"Mothership", url:"https://mothership.sg/2026/11/man-smell-woman-sg-united/", date:"Nov 23", spectrum:null, bias:null },
+  ]},
+  { id:"india", title:"🇮🇳 India", color:"#e67e22", items:[
+    { headline:"India's retail inflation breaches the RBI's 6% ceiling as foreign money floods back in", summary:"India's retail inflation rose to 6.09% in October, breaching the Reserve Bank of India's 6% upper tolerance band on climbing food and transport costs, CNBC reported. The print lands as foreign investors pour a record sum — more than $10 billion in November — back into Indian equities, leaving the RBI weighing inflation risks against a resurgent market ahead of its early-December policy meeting.", source:"CNBC", url:"https://www.cnbc.com/2026/11/19/india-inflation-foreign-investor-nifty50.html", date:"Nov 19", spectrum:null, bias:null },
+  ]},
+  { id:"uk", title:"🇬🇧 UK News", color:"#3949ab", items:[
+    { headline:"UK coverage is unavailable in today's edition", summary:"BBC and Sky News were unreachable from the routine's network environment, and the fallback outlets (The Guardian, CNN, Al Jazeera, Bloomberg, CNBC) carried no fresh UK-domestic story inside the window. The most recent reachable items — the Bank of England's rate rise to 4% and October inflation at 3.6% — fell outside the 72-hour cut-off.", source:"The Brief", url:"", date:"Nov 26", spectrum:null, bias:null },
+  ]},
+  { id:"geo", title:"🌍 Global / Geopolitics", color:"#2980b9", items:[
+    { headline:"Zelensky presses for four-way peace talks as Europe pushes for a seat at the table", summary:"Ukrainian President Volodymyr Zelensky this week urged a four-way meeting of Ukraine, the United States, Russia and Europe 'as soon as possible,' while European leaders — now organised in an E5 grouping of France, Germany, the UK, Italy and Poland — press for a formal seat. A trilateral US-Ukraine-Russia round was held in Abu Dhabi on Nov 10-11, but Moscow has not agreed to European participation and no date for the next round has been set.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/11/17/ukraine-holds-peace-talks-with-us-europe-as-conflict-escalates", date:"Nov 17", spectrum:null, bias:null },
+    { headline:"Israeli strike on Gaza's al-Shati camp kills a family of four as the truce frays", summary:"An Israeli strike on a home in Gaza City's al-Shati refugee camp killed four members of one family on Nov 25 — Hamas internal-security official Muhammad Abu al-Awf, his wife and two daughters — Al Jazeera reported, about a day after another senior security officer was killed. More than 1,680 Palestinians have died since the October 2025 ceasefire took hold, according to Gaza's health authorities, and Hamas has urged the truce's guarantors to intervene.", source:"Al Jazeera", url:"https://www.aljazeera.com/video/newsfeed/2026/11/25/israeli-strike-kills-four-people-in-gaza", date:"Nov 25", spectrum:null, bias:"Casualty figures and the victims' identities come from Gaza's Hamas-run authorities, while Israel's military says it struck a Hamas target; the two accounts are not independently reconciled." },
+    { headline:"RSF drone attacks kill at least 19 in Sudan's Blue Nile state", summary:"Overnight drone attacks blamed on the paramilitary Rapid Support Forces killed at least 19 people in Sudan's Blue Nile state, striking the city of Damazin and reportedly hitting power facilities and the Roseires dam, Al Jazeera reported. The strikes follow drone attacks on Khartoum on Nov 22 that killed four and damaged a UN building; Sudan's army accuses the RSF of launching drones from Ethiopian territory, which Addis Ababa denies.", source:"Al Jazeera", url:"https://www.aljazeera.com/news/2026/11/25/overnight-rsf-drone-attacks-kill-19-in-sudan", date:"Nov 25", spectrum:null, bias:null },
+    { headline:"A year after the Tai Po fire that killed 168, Hong Kong's manslaughter case grinds on", summary:"A year after the blaze at Wang Fuk Court in Tai Po — Hong Kong's deadliest fire in decades, which killed 168 people — the criminal case is still unfolding: seven people and two firms face a total of 25 charges, including manslaughter, fraud and bribery over the estate's renovation. Rights groups say authorities have restricted memorials and detained critics around the anniversary.", source:"CNN", url:"https://www.cnn.com/2026/06/10/asia/hong-kong-manslaughter-deadly-fire-intl-hnk", date:"Nov 26", spectrum:null, bias:null },
+  ]},
+  { id:"tech", title:"💻 Tech & AI", color:"#27ae60", items:[
+    { headline:"Anthropic launches Claude Ship, letting AI agents review, fix and approve code", summary:"Anthropic launched Claude Ship, a suite of AI agents that review, fix and approve routine code changes, TechCrunch reported. Its Code Review tool is generally available, while two beta agents — PR Steward, which handles failing CI checks and merge conflicts, and Claude Approvals, which can sign off changes matching a team's policies — are rolling out to Team and Enterprise customers on GitHub-hosted repositories.", source:"TechCrunch", url:"https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/", date:"Nov 23", spectrum:null, bias:null },
+    { headline:"Britain's Fractile raises $720 million to build AI inference chips", summary:"British chip startup Fractile raised a $720 million Series C — backed by the UK's sovereign AI fund alongside Thrive Capital, Founders Fund, Lightspeed and Redpoint — at a valuation of around $7 billion, TechCrunch reported. The London- and Bristol-based firm is designing inference chips to challenge Nvidia and plans to ship its first commercial silicon in 2027.", source:"TechCrunch", url:"https://techcrunch.com/2026/11/11/with-720m-round-britains-fractile-gets-a-leg-up-in-the-race-for-ai-chips/", date:"Nov 11", spectrum:null, bias:null },
+    { headline:"AI agent startup LangChain hits a $3 billion valuation", summary:"AI-agent development platform LangChain reached a $3 billion valuation on a roughly $300 million Series C led by CapitalG, TechCrunch reported, underscoring how richly investors are valuing the tooling layer beneath the current wave of autonomous AI agents.", source:"TechCrunch", url:"https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/", date:"Nov 13", spectrum:null, bias:null },
+  ]},
+  { id:"biz", title:"📈 Business & Markets", color:"#8e44ad", items:[
+    { headline:"Wall Street's AI sell-off deepens as Nvidia is placed on S&P CreditWatch", summary:"Wall Street's AI-driven sell-off deepened on Nov 25 before paring losses: the Nasdaq fell as much as 4.6% intraday before closing down about 0.6%, and Nvidia dropped roughly 3.9% to $149.30 after S&P Global placed it on CreditWatch with negative implications over governance concerns, CNBC reported. The Dow swung more than 1,200 points to finish slightly higher.", source:"CNBC", url:"https://www.cnbc.com/2026/11/25/nvidia-ai-stock-tech-selloff.html", date:"Nov 25", spectrum:null, bias:null },
+    { headline:"Dell and HP beat earnings estimates on AI and PC demand", summary:"Dell and HP both topped quarterly earnings estimates on AI-server and PC demand, CNBC reported, with Dell's revenue roughly doubling to about $54.9 billion and HP's fiscal fourth-quarter revenue of $16.0 billion beating forecasts. Dell shares still slid after the report as investors scrutinised margins.", source:"CNBC", url:"https://www.cnbc.com/2026/11/24/stocks-moving-the-most-today-live-updates.html", date:"Nov 24", spectrum:null, bias:null },
+    { headline:"OPEC+ heads into its most consequential supply decision of the year", summary:"OPEC+ ministers meet in late November to set output policy for 2027 in what Bloomberg calls the group's most consequential supply decision of the year. The alliance is split, with the UAE having pushed back against its production limits and Iraq resisting an assessment that it can sustainably pump less than 5 million barrels a day, as oil trades near three-month lows.", source:"Bloomberg", url:"https://www.bloomberg.com/news/articles/2026-11-24/opec-faces-its-most-consequential-supply-decision-of-the-year", date:"Nov 24", spectrum:null, bias:null },
+    { headline:"Markets brace for a near-certain December Fed rate hike after hot inflation data", summary:"Markets now put the odds of a December Fed rate increase at roughly 94% after hotter-than-expected PCE inflation data, which would be the central bank's second straight hike, CNBC reported. New US tariff proposals and the AI-stock rout added to a jittery pre-holiday session.", source:"CNBC", url:"https://www.cnbc.com/2026/11/24/stock-market-today-live-updates-.html", date:"Nov 24", spectrum:null, bias:null },
+  ]},
+  { id:"sports", title:"🎾🏏🏎️ Sports", color:"#c0392b", items:[
+    { headline:"🏎️ F1's Qatar race becomes a two-stopper as Pirelli caps stints at 27 laps", summary:"Formula 1's Qatar Grand Prix at Lusail (Nov 27-29) will be a mandatory two-stopper after Pirelli capped each tyre stint at 27 laps of the 57-lap race, citing the strain the circuit's high-speed corners place on its compounds, Formula1.com reported. With the title already settled, strategy around the forced stops could shape the order.", source:"Formula1.com", url:"https://www.formula1.com/en/latest/article/what-tyres-will-the-teams-and-drivers-have-for-the-2026-qatar-grand-prix.7JllCRweDY5sW1N9LzdkLm", date:"Nov 24", spectrum:null, bias:null },
+    { headline:"🏎️ Verstappen eyes runner-up spot as F1's title fights arrive settled in Qatar", summary:"With both the drivers' and constructors' championships already sealed for Kimi Antonelli and Mercedes, Max Verstappen (304 points) reaches Qatar chasing the runner-up spot — 37 clear of Lewis Hamilton (267), with George Russell and Lando Norris level on 264, Formula1.com reported. Verstappen has won each of the last three races at Lusail.", source:"Formula1.com", url:"https://www.formula1.com/en/latest/article/its-race-week-5-storylines-were-excited-about-ahead-of-the-2026-qatar-grand-prix.1bXINUYO8R8X3K7DjINr1A", date:"Nov 25", spectrum:null, bias:null },
+    { headline:"🏏 New Zealand lose Blair Tickner to injury before the Christchurch Test", summary:"New Zealand lost seamer Blair Tickner to a hamstring injury before the second and final Test against India at Hagley Oval, Christchurch, which starts Nov 27, with Matt Fisher called into the squad, ESPNcricinfo reported. The series is level after the Wellington opener — in which India declared on 720 for 9 — ended in a draw.", source:"ESPNcricinfo", url:"https://www.espncricinfo.com/series/icc-world-test-championship-2025-2027-1472510/match-schedule-fixtures-and-results", date:"Nov 24", spectrum:null, bias:null },
+    { headline:"🎾 Czechia beat Canada to reach their first Davis Cup semi-final since 2014", summary:"Czechia reached their first Davis Cup semi-final since 2014, beating Canada 2-0 in Bologna as Tomas Machac saw off Liam Draxl and Jiri Lehecka beat Felix Auger-Aliassime, making the doubles unnecessary. They next face the winner of host Italy's quarter-final against South Korea.", source:"ATP Tour", url:"https://www.atptour.com/en/tournaments/bologna/8099/overview", date:"Nov 24", spectrum:null, bias:null },
+  ]},
+  { id:"misc", title:"🔬 Other Miscellaneous News", color:"#1abc9c", items:[
+    { headline:"Euclid and Webb spot the most distant quasar yet, 630 million years after the Big Bang", summary:"The European Space Agency's Euclid telescope, with follow-up from the James Webb Space Telescope, has identified the most distant quasar yet found — seen just 630 million years after the Big Bang and powered by a black hole of about 360 million solar masses, ESA said. Nicknamed Dun Aonghasa, the object was picked out among millions of sources in roughly 18 months of Euclid data.", source:"ESA", url:"https://www.esa.int/articles/about-us/directorates/science/euclid/euclid-breaks-own-quasar-record-by-40-million-years", date:"Nov 24", spectrum:null, bias:null },
+    { headline:"Hera's first close-ups reveal a stadium-sized crater on asteroid Dimorphos", summary:"ESA's Hera spacecraft returned its first close-up images of the asteroid Dimorphos, revealing a crater nearly as wide as the roughly 150-metre body itself — the mark left when NASA's DART probe deliberately crashed into it in 2022, CNN reported. Scientists said the impact also left Dimorphos tumbling chaotically; Hera will move closer in December to measure the asteroid's mass.", source:"CNN", url:"https://www.cnn.com/2026/11/25/science/hera-mission-dimorphos-asteroid-arrival-images", date:"Nov 25", spectrum:null, bias:null },
+    { headline:"A genome study of 1.2 million people maps 343 DNA regions behind chronic pain", summary:"A genome-wide study of more than 1.2 million people mapped 343 regions of DNA linked to chronic, multidimensional pain — 92 of them newly identified — pointing to genes involved in protein synthesis and nerve signalling, according to a study in Nature Neuroscience. The authors say the map could help guide the search for non-opioid pain treatments.", source:"Nature", url:"https://www.nature.com/articles/s41593-026-02455-1", date:"Nov 12", spectrum:null, bias:null },
+  ]},
+  { id:"fun", title:"✦ Fun Fact", color:"#27ae60", custom:"fun" },
+  { id:"puzzle", title:"🧩 Puzzle", color:"#e67e22", custom:"puzzle" },
+  { id:"wpuzzle", title:"🔤 Word Puzzles", color:"#16a085", custom:"wpuzzle" },
+];
+
+const FUN_FACT = {
+  text: "If you give a standard 52-card deck a thorough shuffle, the exact order you end up with has almost certainly never existed before in the history of the world. There are 52! (52 factorial) possible arrangements — roughly an 8 followed by 67 zeros — which utterly dwarfs the number of seconds that have passed since the Big Bang. So each properly shuffled deck is, in all likelihood, a genuine world first.",
+  tag: "Category · Mathematics"
+};
+
+const PUZZLE = {
+  type: "Visual",
+  title: "The Rolling Die",
+  how: "Track the die face by face through each roll — nothing teleports, and opposite faces always sum to 7.",
+  question: "A standard die rests on a table, with opposite faces summing to 7. It shows 1 on top, with 2 facing you (south) and 3 facing east.\n\nFirst it is tipped over its eastern edge, rolling one step to the east. Then, from that new position, it is tipped over its northern edge, rolling one step north (away from you).\n\nWhich number is now on top?",
+  answer: "2.\n\nStart: top 1, bottom 6, south 2, north 5, east 3, west 4.\n\nRoll east — the old top face swings over to the east side: top becomes the old west (4), east becomes the old top (1), bottom becomes the old east (3), west becomes the old bottom (6). North (5) and south (2) are unchanged.\n\nRoll north — the top now swings over to the north side: top becomes the old south (2), north becomes the old top (4), bottom becomes the old north (5), south becomes the old bottom (3). East (1) and west (6) are unchanged.\n\nThe top is now 2 — with 5 directly underneath it, so 2 + 5 = 7, exactly as a die requires."
+};
+
+const WORD_PUZZLE = {
+  type: "Connections",
+  title: "Set in Stone",
+  how: "Sort the 16 words into four groups of four. Three groups hide a gem-shaped trap — a word that looks precious but belongs somewhere else.",
+  question: "Sort these 16 words into 4 groups of 4:\n\nLIME · OLIVE · HEART · RUBY\nBRIM · JADE · SPADE · PEARL\nCORNER · FOREST · CLUB · OPAL\nMILE · EMERALD · DIAMOND · CORAL",
+  answer: "___ + STONE: LIME, BRIM, CORNER, MILE (limestone, brimstone, cornerstone, milestone)\n\nShades of green: OLIVE, JADE, FOREST, EMERALD\n\nCard suits: HEART, SPADE, CLUB, DIAMOND\n\nGemstones: RUBY, PEARL, OPAL, CORAL\n\nThe traps: EMERALD and JADE look like gemstones but belong with the greens; DIAMOND is a card suit, not the gem here; and LIME is part of 'limestone', not lime green. That leaves RUBY, PEARL, OPAL and CORAL as the true gemstones."
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function renderWordPuzzle(){
+  let h='<div class="sec-title">🔤 Word Puzzle of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#16a085,transparent)"></div>';
+  h+='<div class="wpuzzle-box"><span class="wptype">'+WORD_PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+WORD_PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+WORD_PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+WORD_PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this,\'wpans\')">Show Answer</button>';
+  h+='<div class="answer" id="wpans"><span class="alabel">Answer</span>'+WORD_PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn,ansId){var a=document.getElementById(ansId||'ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else if(sec.custom==="wpuzzle"){div.innerHTML=renderWordPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>

@@ -4749,3 +4749,27 @@ is empty until the first run.
 2026-11-25	Webb telescope maps the dust that reveals a dying star’s final hours	959a4f14	webb telescope,cassiopeia a,supernova,dust
 2026-11-25	Scientists map how human sweat flips a switch that draws mosquitoes	6877c8ba	mosquitoes,human sweat,ion channel,malaria
 2026-11-25	Study finds blood stem cells keep an ‘inflammatory memory’ of past infections	3bace2a1	stem cells,inflammatory memory,immune system,leukaemia
+
+2026-11-26	Singapore starts removing ERP gantries as it switches to satellite road pricing	e4fd6b8b	singapore,erp,satellite,road pricing,lta
+2026-11-26	Woman charged after a Punggol block's rubbish chute caught fire 13 times in 12 days	ec325ec6	singapore,punggol,rubbish chute,fire,charged
+2026-11-26	Singaporean woman, 44, charged over alleged ties to the Prince Holding scam syndicate	4eb49d65	singapore,prince holding,scam,charged
+2026-11-26	Man jailed 12 weeks for looking up a woman's skirt at an MRT station	8ea64b8f	singapore,mrt,upskirt,jailed
+2026-11-26	India's retail inflation breaches the RBI's 6% ceiling as foreign money floods back in	7f6b86c2	india,inflation,rbi,foreign investors
+2026-11-26	Zelensky presses for four-way peace talks as Europe pushes for a seat at the table	b757da33	ukraine,russia,zelensky,europe,peace talks
+2026-11-26	Israeli strike on Gaza's al-Shati camp kills a family of four as the truce frays	7bf572d9	israel,gaza,al-shati,hamas,strike
+2026-11-26	RSF drone attacks kill at least 19 in Sudan's Blue Nile state	ac02c70b	sudan,rsf,blue nile,drone,damazin
+2026-11-26	A year after the Tai Po fire that killed 168, Hong Kong's manslaughter case grinds on	27ddc6ee	hong kong,tai po,fire,manslaughter,anniversary
+2026-11-26	Anthropic launches Claude Ship, letting AI agents review, fix and approve code	3c603f2e	anthropic,claude ship,ai agents,code review
+2026-11-26	Britain's Fractile raises $720 million to build AI inference chips	ec2f34e2	fractile,ai chips,series c,uk
+2026-11-26	AI agent startup LangChain hits a $3 billion valuation	beb1be57	langchain,ai agents,valuation,series c
+2026-11-26	Wall Street's AI sell-off deepens as Nvidia is placed on S&P CreditWatch	6317b008	nvidia,nasdaq,sp,creditwatch,selloff
+2026-11-26	Dell and HP beat earnings estimates on AI and PC demand	8e47f9c2	dell,hp,earnings,ai
+2026-11-26	OPEC+ heads into its most consequential supply decision of the year	616309f1	opec,oil,supply,uae,iraq
+2026-11-26	Markets brace for a near-certain December Fed rate hike after hot inflation data	9ee0c0f8	federal reserve,rate hike,pce,inflation
+2026-11-26	F1's Qatar race becomes a two-stopper as Pirelli caps stints at 27 laps	6f6c1f74	formula 1,qatar grand prix,pirelli,tyres
+2026-11-26	Verstappen eyes runner-up spot as F1's title fights arrive settled in Qatar	1f8245ec	verstappen,formula 1,qatar,antonelli,standings
+2026-11-26	New Zealand lose Blair Tickner to injury before the Christchurch Test	ec998aff	new zealand,india,christchurch,tickner,test
+2026-11-26	Czechia beat Canada to reach their first Davis Cup semi-final since 2014	908a2372	czechia,canada,davis cup,bologna,tennis
+2026-11-26	Euclid and Webb spot the most distant quasar yet, 630 million years after the Big Bang	ff7ea787	euclid,webb,quasar,esa,black hole
+2026-11-26	Hera's first close-ups reveal a stadium-sized crater on asteroid Dimorphos	ee524227	hera,dimorphos,dart,asteroid,esa
+2026-11-26	A genome study of 1.2 million people maps 343 DNA regions behind chronic pain	976d8842	genome,chronic pain,nature,dna

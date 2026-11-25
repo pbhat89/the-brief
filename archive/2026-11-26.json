@@ -1,0 +1,413 @@
+{
+  "date": "2026-11-26",
+  "items": [
+    {
+      "tab": "Singapore",
+      "headline": "Singapore starts removing ERP gantries as it switches to satellite road pricing",
+      "summary": "Singapore has begun progressively taking down its ERP gantries as it moves to a satellite-based ERP 2.0 system from Jan 1, 2027, using an in-vehicle on-board unit.",
+      "url": "https://mothership.sg/2026/11/erp-gantries-removed-in-phases/",
+      "outlet": "Mothership",
+      "publish_date": "Nov 23",
+      "short_hash": "e4fd6b8b",
+      "key_entities": [
+        "singapore",
+        "erp",
+        "satellite",
+        "road pricing",
+        "lta"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "Woman charged after a Punggol block's rubbish chute caught fire 13 times in 12 days",
+      "summary": "A 33-year-old woman was charged on Nov 20 with mischief by fire after a Punggol HDB rubbish chute caught fire 13 times in 12 days.",
+      "url": "https://mothership.sg/2026/11/punggol-block-fire-repeated/",
+      "outlet": "Mothership",
+      "publish_date": "Nov 20",
+      "short_hash": "ec325ec6",
+      "key_entities": [
+        "singapore",
+        "punggol",
+        "rubbish chute",
+        "fire",
+        "charged"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "Singaporean woman, 44, charged over alleged ties to the Prince Holding scam syndicate",
+      "summary": "A 44-year-old Singaporean woman was arrested and charged over alleged links to the Cambodia-based Prince Holding Group cyber-scam conglomerate.",
+      "url": "https://mothership.sg/2026/11/woman-prince-holding-group-arrested/",
+      "outlet": "Mothership",
+      "publish_date": "Nov 24",
+      "short_hash": "4eb49d65",
+      "key_entities": [
+        "singapore",
+        "prince holding",
+        "scam",
+        "charged"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Singapore",
+      "headline": "Man jailed 12 weeks for looking up a woman's skirt at an MRT station",
+      "summary": "A 31-year-old man was jailed 12 weeks for filming up a woman's skirt at Botanic Gardens MRT station; he had a similar 2024 conviction.",
+      "url": "https://mothership.sg/2026/11/man-smell-woman-sg-united/",
+      "outlet": "Mothership",
+      "publish_date": "Nov 23",
+      "short_hash": "8ea64b8f",
+      "key_entities": [
+        "singapore",
+        "mrt",
+        "upskirt",
+        "jailed"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "India",
+      "headline": "India's retail inflation breaches the RBI's 6% ceiling as foreign money floods back in",
+      "summary": "India's retail inflation rose to 6.09% in October, breaching the RBI's 6% ceiling, even as foreign investors poured a record $10bn-plus into Indian equities in November.",
+      "url": "https://www.cnbc.com/2026/11/19/india-inflation-foreign-investor-nifty50.html",
+      "outlet": "CNBC",
+      "publish_date": "Nov 19",
+      "short_hash": "7f6b86c2",
+      "key_entities": [
+        "india",
+        "inflation",
+        "rbi",
+        "foreign investors"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "Zelensky presses for four-way peace talks as Europe pushes for a seat at the table",
+      "summary": "Zelensky urged a four-way Ukraine-US-Russia-Europe meeting as European leaders (E5) press for a seat; a trilateral round was held in Abu Dhabi Nov 10-11, with no new date set and Moscow resisting European participation.",
+      "url": "https://www.aljazeera.com/news/2026/11/17/ukraine-holds-peace-talks-with-us-europe-as-conflict-escalates",
+      "outlet": "Al Jazeera",
+      "publish_date": "Nov 17",
+      "short_hash": "b757da33",
+      "key_entities": [
+        "ukraine",
+        "russia",
+        "zelensky",
+        "europe",
+        "peace talks"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "Israeli strike on Gaza's al-Shati camp kills a family of four as the truce frays",
+      "summary": "An Israeli strike on al-Shati camp killed Hamas security official Muhammad Abu al-Awf, his wife and two daughters on Nov 25; over 1,680 have died since the Oct 2025 ceasefire.",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/11/25/israeli-strike-kills-four-people-in-gaza",
+      "outlet": "Al Jazeera",
+      "publish_date": "Nov 25",
+      "short_hash": "7bf572d9",
+      "key_entities": [
+        "israel",
+        "gaza",
+        "al-shati",
+        "hamas",
+        "strike"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "RSF drone attacks kill at least 19 in Sudan's Blue Nile state",
+      "summary": "Overnight RSF drone attacks killed at least 19 in Sudan's Blue Nile state, hitting Damazin and the Roseires dam, days after Khartoum strikes damaged a UN building.",
+      "url": "https://www.aljazeera.com/news/2026/11/25/overnight-rsf-drone-attacks-kill-19-in-sudan",
+      "outlet": "Al Jazeera",
+      "publish_date": "Nov 25",
+      "short_hash": "ac02c70b",
+      "key_entities": [
+        "sudan",
+        "rsf",
+        "blue nile",
+        "drone",
+        "damazin"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Global / Geopolitics",
+      "headline": "A year after the Tai Po fire that killed 168, Hong Kong's manslaughter case grinds on",
+      "summary": "A year after the Wang Fuk Court fire killed 168, seven people and two firms face 25 charges including manslaughter; rights groups cite curbs on memorials.",
+      "url": "https://www.cnn.com/2026/06/10/asia/hong-kong-manslaughter-deadly-fire-intl-hnk",
+      "outlet": "CNN",
+      "publish_date": "Nov 26",
+      "short_hash": "27ddc6ee",
+      "key_entities": [
+        "hong kong",
+        "tai po",
+        "fire",
+        "manslaughter",
+        "anniversary"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "Anthropic launches Claude Ship, letting AI agents review, fix and approve code",
+      "summary": "Anthropic launched Claude Ship, with Code Review generally available and beta agents PR Steward and Claude Approvals rolling out to Team/Enterprise users on GitHub.",
+      "url": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/",
+      "outlet": "TechCrunch",
+      "publish_date": "Nov 23",
+      "short_hash": "3c603f2e",
+      "key_entities": [
+        "anthropic",
+        "claude ship",
+        "ai agents",
+        "code review"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "Britain's Fractile raises $720 million to build AI inference chips",
+      "summary": "UK chip startup Fractile raised a $720m Series C at around a $7bn valuation, backed by the UK sovereign AI fund, Thrive, Founders Fund, Lightspeed and Redpoint.",
+      "url": "https://techcrunch.com/2026/11/11/with-720m-round-britains-fractile-gets-a-leg-up-in-the-race-for-ai-chips/",
+      "outlet": "TechCrunch",
+      "publish_date": "Nov 11",
+      "short_hash": "ec2f34e2",
+      "key_entities": [
+        "fractile",
+        "ai chips",
+        "series c",
+        "uk"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Tech & AI",
+      "headline": "AI agent startup LangChain hits a $3 billion valuation",
+      "summary": "LangChain reached a $3bn valuation on a roughly $300m Series C led by CapitalG, highlighting investor appetite for the AI-agent tooling layer.",
+      "url": "https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/",
+      "outlet": "TechCrunch",
+      "publish_date": "Nov 13",
+      "short_hash": "beb1be57",
+      "key_entities": [
+        "langchain",
+        "ai agents",
+        "valuation",
+        "series c"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Wall Street's AI sell-off deepens as Nvidia is placed on S&P CreditWatch",
+      "summary": "The Nasdaq fell up to 4.6% intraday before closing down ~0.6% on Nov 25; Nvidia dropped ~3.9% to $149.30 after S&P placed it on CreditWatch negative.",
+      "url": "https://www.cnbc.com/2026/11/25/nvidia-ai-stock-tech-selloff.html",
+      "outlet": "CNBC",
+      "publish_date": "Nov 25",
+      "short_hash": "6317b008",
+      "key_entities": [
+        "nvidia",
+        "nasdaq",
+        "sp",
+        "creditwatch",
+        "selloff"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Dell and HP beat earnings estimates on AI and PC demand",
+      "summary": "Dell's revenue roughly doubled to about $54.9bn and HP's Q4 revenue of $16.0bn beat forecasts on AI-server and PC demand; Dell shares slid on margin concerns.",
+      "url": "https://www.cnbc.com/2026/11/24/stocks-moving-the-most-today-live-updates.html",
+      "outlet": "CNBC",
+      "publish_date": "Nov 24",
+      "short_hash": "8e47f9c2",
+      "key_entities": [
+        "dell",
+        "hp",
+        "earnings",
+        "ai"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "OPEC+ heads into its most consequential supply decision of the year",
+      "summary": "OPEC+ meets in late November to set 2027 output; the UAE has pushed back on its limits and Iraq resists a sub-5m bpd assessment, with oil near three-month lows.",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-24/opec-faces-its-most-consequential-supply-decision-of-the-year",
+      "outlet": "Bloomberg",
+      "publish_date": "Nov 24",
+      "short_hash": "616309f1",
+      "key_entities": [
+        "opec",
+        "oil",
+        "supply",
+        "uae",
+        "iraq"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Business & Markets",
+      "headline": "Markets brace for a near-certain December Fed rate hike after hot inflation data",
+      "summary": "Markets put ~94% odds on a December Fed hike after hot PCE data, which would be a second straight increase; tariff proposals and the AI rout added pressure.",
+      "url": "https://www.cnbc.com/2026/11/24/stock-market-today-live-updates-.html",
+      "outlet": "CNBC",
+      "publish_date": "Nov 24",
+      "short_hash": "9ee0c0f8",
+      "key_entities": [
+        "federal reserve",
+        "rate hike",
+        "pce",
+        "inflation"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "F1's Qatar race becomes a two-stopper as Pirelli caps stints at 27 laps",
+      "summary": "Pirelli capped tyre stints at 27 laps of 57 for the Qatar GP (Nov 27-29), forcing two stops; the title is already settled so strategy could shape the order.",
+      "url": "https://www.formula1.com/en/latest/article/what-tyres-will-the-teams-and-drivers-have-for-the-2026-qatar-grand-prix.7JllCRweDY5sW1N9LzdkLm",
+      "outlet": "Formula1.com",
+      "publish_date": "Nov 24",
+      "short_hash": "6f6c1f74",
+      "key_entities": [
+        "formula 1",
+        "qatar grand prix",
+        "pirelli",
+        "tyres"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "Verstappen eyes runner-up spot as F1's title fights arrive settled in Qatar",
+      "summary": "With Antonelli and Mercedes champions, Verstappen (304 pts) reaches Qatar chasing second, 37 clear of Hamilton (267), with Russell and Norris on 264.",
+      "url": "https://www.formula1.com/en/latest/article/its-race-week-5-storylines-were-excited-about-ahead-of-the-2026-qatar-grand-prix.1bXINUYO8R8X3K7DjINr1A",
+      "outlet": "Formula1.com",
+      "publish_date": "Nov 25",
+      "short_hash": "1f8245ec",
+      "key_entities": [
+        "verstappen",
+        "formula 1",
+        "qatar",
+        "antonelli",
+        "standings"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "New Zealand lose Blair Tickner to injury before the Christchurch Test",
+      "summary": "New Zealand lost Blair Tickner (hamstring) before the second Test vs India at Christchurch from Nov 27; Matt Fisher was called up. The series is level after a Wellington draw.",
+      "url": "https://www.espncricinfo.com/series/icc-world-test-championship-2025-2027-1472510/match-schedule-fixtures-and-results",
+      "outlet": "ESPNcricinfo",
+      "publish_date": "Nov 24",
+      "short_hash": "ec998aff",
+      "key_entities": [
+        "new zealand",
+        "india",
+        "christchurch",
+        "tickner",
+        "test"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Sports",
+      "headline": "Czechia beat Canada to reach their first Davis Cup semi-final since 2014",
+      "summary": "Czechia beat Canada 2-0 in Bologna (Machac d. Draxl, Lehecka d. Auger-Aliassime) to reach their first Davis Cup semi-final since 2014.",
+      "url": "https://www.atptour.com/en/tournaments/bologna/8099/overview",
+      "outlet": "ATP Tour",
+      "publish_date": "Nov 24",
+      "short_hash": "908a2372",
+      "key_entities": [
+        "czechia",
+        "canada",
+        "davis cup",
+        "bologna",
+        "tennis"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "Euclid and Webb spot the most distant quasar yet, 630 million years after the Big Bang",
+      "summary": "ESA's Euclid, with Webb follow-up, found the most distant quasar yet, seen 630m years after the Big Bang and powered by a ~360m-solar-mass black hole.",
+      "url": "https://www.esa.int/articles/about-us/directorates/science/euclid/euclid-breaks-own-quasar-record-by-40-million-years",
+      "outlet": "ESA",
+      "publish_date": "Nov 24",
+      "short_hash": "ff7ea787",
+      "key_entities": [
+        "euclid",
+        "webb",
+        "quasar",
+        "esa",
+        "black hole"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "Hera's first close-ups reveal a stadium-sized crater on asteroid Dimorphos",
+      "summary": "ESA's Hera returned first close-ups of Dimorphos showing a crater nearly as wide as the ~150m body, from NASA's 2022 DART impact; the asteroid is tumbling chaotically.",
+      "url": "https://www.cnn.com/2026/11/25/science/hera-mission-dimorphos-asteroid-arrival-images",
+      "outlet": "CNN",
+      "publish_date": "Nov 25",
+      "short_hash": "ee524227",
+      "key_entities": [
+        "hera",
+        "dimorphos",
+        "dart",
+        "asteroid",
+        "esa"
+      ],
+      "is_update": false
+    },
+    {
+      "tab": "Other Miscellaneous News",
+      "headline": "A genome study of 1.2 million people maps 343 DNA regions behind chronic pain",
+      "summary": "A genome-wide study of 1.2m people mapped 343 DNA regions linked to chronic pain (92 new), pointing toward non-opioid treatment targets, in Nature Neuroscience.",
+      "url": "https://www.nature.com/articles/s41593-026-02455-1",
+      "outlet": "Nature",
+      "publish_date": "Nov 12",
+      "short_hash": "976d8842",
+      "key_entities": [
+        "genome",
+        "chronic pain",
+        "nature",
+        "dna"
+      ],
+      "is_update": false
+    }
+  ],
+  "fun_fact": {
+    "headline": "If you shuffle a deck of 52 cards, that exact order has probably never existed before",
+    "body": "If you give a standard 52-card deck a thorough shuffle, the exact order you end up with has almost certainly never existed before in the history of the world. There are 52! possible arrangements (about 8 x 10^67), which dwarfs the number of seconds since the Big Bang, so each properly shuffled deck is, in all likelihood, a genuine world first.",
+    "source": "Mathematics (52! = 8.07 x 10^67 permutations); standard combinatorics",
+    "fun_fact_id": "funfact-40b17dda",
+    "topic": "mathematics",
+    "topic_key": "shuffled deck"
+  },
+  "puzzle": {
+    "type": "visual",
+    "title": "The Rolling Die",
+    "title_key": "rolling-die",
+    "body": "A standard die (opposite faces sum to 7) shows 1 on top, 2 facing south, 3 facing east. It is rolled one step east (tipped over its east edge), then one step north. Which number is now on top?",
+    "approach": "Track the die face by face through each roll; opposite faces always sum to 7.",
+    "answer": "2. After rolling east: top 4, east 1, bottom 3, west 6 (N 5, S 2). After rolling north: top 2, north 4, bottom 5, south 3 (E 1, W 6). Top is 2, with 5 underneath (2+5=7).",
+    "puzzle_hash": "7f2540c7"
+  },
+  "word_puzzle": {
+    "type": "grouping",
+    "title": "Set in Stone",
+    "title_key": "set-in-stone",
+    "body": "Sort 16 words into 4 groups of 4: LIME, OLIVE, HEART, RUBY, BRIM, JADE, SPADE, PEARL, CORNER, FOREST, CLUB, OPAL, MILE, EMERALD, DIAMOND, CORAL.",
+    "approach": "Three groups hide a gem-shaped trap; find the word that only looks precious.",
+    "answer": "___+STONE: LIME, BRIM, CORNER, MILE. Shades of green: OLIVE, JADE, FOREST, EMERALD. Card suits: HEART, SPADE, CLUB, DIAMOND. Gemstones: RUBY, PEARL, OPAL, CORAL.",
+    "word_puzzle_hash": "9d749cf9"
+  },
+  "notes": "Today (SGT) = 2026-11-26 (system UTC +8h). No missed prior run: 2026-11-24 and 2026-11-25 editions present. SOURCING: WebFetch and direct curl to news domains were egress/crawler-blocked, so research ran on live web search; many allowed premium outlets (BBC, Sky News, Straits Times, CNA, all India primary papers, FT, WSJ, Reuters, Guardian) did not surface retrievable deep links. INDIA ran on the FIX-6 fallback tier (CNBC) after primary outlets (The Hindu, Indian Express, Hindustan Times, Times of India, NDTV, Economic Times) were unreachable; only one verifiable fallback-tier domestic item cleared the window, so the section carries fewer stories. UK ran as a FIX-6 placeholder: BBC and Sky News unreachable and the fallback tier (Guardian, CNN, Al Jazeera, Bloomberg, CNBC) carried no fresh UK-domestic story inside the 72h window (the Bank of England's Nov 5 rate rise to 4% and the mid-Nov 3.6% inflation print were out of window). Singapore ran on Mothership (CNA/ST unreachable). TECH has 3 items: Claude Ship is fresh (Nov 23); Fractile (Nov 11) and LangChain (Nov 13) are recent rounds in the ongoing AI-infrastructure funding wave, included because no fresher on-list item was reachable. MISC item 'Hera's first close-ups' is cited to CNN's science desk because the primary ESA release URL would not surface from this environment; CNN is off the Misc per-tab list but is a reputable allowed outlet used here with a verified deep link. Global 'Hong Kong Tai Po' item is pegged to the one-year anniversary; the CNN link documents the standing manslaughter case. Approx 60 web searches run."
+}
