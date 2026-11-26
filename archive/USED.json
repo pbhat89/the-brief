@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-09-27",
-      "topic_key": "tardigrade",
-      "text": "Tardigrades are the only animals known to have survived the open vacuum of space (2007 ESA FOTON-M3 experiment)."
-    },
-    {
       "date": "2026-09-28",
       "topic_key": "run island",
       "text": "Under the 1667 Treaty of Breda the Dutch kept the tiny nutmeg island of Run and handed Manhattan to England."
@@ -284,14 +279,14 @@
       "date": "2026-11-26",
       "topic_key": "shuffled deck",
       "text": "Shuffling a 52-card deck almost certainly makes an order never seen before (52! permutations)."
+    },
+    {
+      "date": "2026-11-27",
+      "topic_key": "tree",
+      "text": "There are more trees on Earth than stars in the Milky Way (2015 Nature study: ~3 trillion trees vs ~100-400 billion stars)."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-10-27",
-      "type": "logic",
-      "title_key": "switch-room"
-    },
     {
       "date": "2026-10-28",
       "type": "quantitative",
@@ -426,14 +421,14 @@
       "date": "2026-11-26",
       "type": "visual",
       "title_key": "rolling-die"
+    },
+    {
+      "date": "2026-11-27",
+      "type": "logic",
+      "title_key": "three-hats-in-a-line"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-10-27",
-      "type": "anagram",
-      "title_key": "say-it-another-way"
-    },
     {
       "date": "2026-10-28",
       "type": "spellingbee",
@@ -568,6 +563,11 @@
       "date": "2026-11-26",
       "type": "grouping",
       "title_key": "set-in-stone"
+    },
+    {
+      "date": "2026-11-27",
+      "type": "ladder",
+      "title_key": "raining-cats-and-dogs"
     }
   ]
 }

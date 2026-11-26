@@ -4773,3 +4773,16 @@ is empty until the first run.
 2026-11-26	Euclid and Webb spot the most distant quasar yet, 630 million years after the Big Bang	ff7ea787	euclid,webb,quasar,esa,black hole
 2026-11-26	Hera's first close-ups reveal a stadium-sized crater on asteroid Dimorphos	ee524227	hera,dimorphos,dart,asteroid,esa
 2026-11-26	A genome study of 1.2 million people maps 343 DNA regions behind chronic pain	976d8842	genome,chronic pain,nature,dna
+2026-11-27	Singapore disputes US findings as Washington proposes a 20% tariff on its exports	a40b2c41	singapore,united states,tariffs,ustr,trade
+2026-11-27	Singapore man jailed for making his young son ride an HDB lift naked as punishment	5a3f626e	singapore,hdb,child abuse,jailed
+2026-11-27	COP31 climate summit collapses without a deal, the first failure since 2009	3dc8149f	cop31,climate,fossil fuels,eu,antalya
+2026-11-27	Israeli strikes kill a senior Gaza education official and seven others despite the ceasefire	50c08a47	gaza,israel,ceasefire,strike
+2026-11-27	AI data centres are getting harder to build as Nvidia holds back financing	48cbfa78	nvidia,data centres,neoclouds,ai
+2026-11-27	Cybersecurity startup Corma reaches a $1 billion valuation within months	3ea5211b	corma,nea,cybersecurity,funding
+2026-11-27	Bret Taylor's AI-agent startup Sierra is in talks to raise at a $30 billion valuation	29a44e39	sierra,bret taylor,ai agents,valuation
+2026-11-27	India win the toss and bowl first in the series-deciding second Test at Christchurch	22aa54e4	india,new zealand,christchurch,test,gill
+2026-11-27	Italy reach the Davis Cup semi-finals, edging debutants South Korea in Bologna	747d3098	italy,south korea,davis cup,bologna,tennis
+2026-11-27	Great Britain beat Germany to reach the Davis Cup semi-finals in Bologna	13a0106d	great britain,germany,davis cup,tennis
+2026-11-27	Formula 1 reaches Lusail for the penultimate round, the Qatar Grand Prix	e9e9f599	formula 1,qatar grand prix,lusail
+2026-11-27	Mathematicians scrutinise rival AI and human claims of a Riemann hypothesis proof	ff8621e2	riemann hypothesis,mathematics,lean,alpoge,masullo
+2026-11-27	Blood 'fossil record' traces leukaemia back decades before diagnosis	47c14ae6	leukaemia,nature,cambridge,ucl,mutations
