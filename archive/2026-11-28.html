@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<!--
+  The Brief — canonical template (visual reference + structural spec).
+
+  The daily routine must produce HTML with:
+    * The exact <head>, <style>, and <body> shell below — do not modify CSS or layout.
+    * The same JS render structure (SECTIONS, FUN_FACT, PUZZLE) — keep the <script>.
+    * Real news content substituted into the SECTIONS items[], FUN_FACT, and PUZZLE objects.
+    * Today's date substituted into <title>, .sub (masthead), and .metrics (footer).
+
+  This file IS the design. The routine fills it; it does not redesign it.
+
+  The brief is served via GitHub Pages — JavaScript runs in the browser. Do not
+  strip the <script>, do not remove the Google Fonts link, do not "make it email-safe".
+  The email body is a plain-text teaser with the Pages URL (handled separately in Stage 4a).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brief · Sat, 28 November 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0f;color:#e8e6e0;font-family:'Georgia',serif;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 24px 60px}
+  .rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:12px 0}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,58px);font-weight:900;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:'Source Sans 3',sans-serif;font-size:12px;letter-spacing:.2em;color:#c9a84c;text-transform:uppercase;margin-top:6px;font-weight:600}
+  .livebadge{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0a0a0f;background:#27ae60;padding:3px 9px;border-radius:2px;margin-top:8px}
+  .tabs{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid #2a2a35;border-radius:2px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;transition:all .2s;background:transparent;color:#888;white-space:nowrap}
+  .tab:hover{border-color:#c9a84c;color:#c9a84c}
+  .sec{display:none}.sec.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:6px}
+  .item{padding:20px 0;border-bottom:1px solid #1a1a22}.item:last-child{border-bottom:none}
+  .headline{font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:#f0ede5;line-height:1.4;margin-bottom:6px}
+  .summary{font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;color:#bdb9b0}
+  .source{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#777;margin-top:10px;letter-spacing:.03em}
+  .source a{color:#c9a84c;font-weight:600;text-decoration:none;border-bottom:1px dotted #c9a84c66;transition:all .2s}
+  .source a:hover{color:#e8c66a;border-bottom-color:#e8c66a}
+  .source .arrow{font-size:10px;opacity:.7;margin-left:3px}
+  .spectrum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+  .spec-cell{padding:10px 12px;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12px;line-height:1.5}
+  .spec-label{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;display:block}
+  .spec-left{background:#0e1620;border-left:2px solid #4a90d9}.spec-left .spec-label{color:#6ba8e8}
+  .spec-center{background:#16160e;border-left:2px solid #b0b0b0}.spec-center .spec-label{color:#cfcfcf}
+  .spec-right{background:#1a0e0e;border-left:2px solid #d96a4a}.spec-right .spec-label{color:#e8896b}
+  .spec-cell .txt{color:#cbc8c0}
+  .bias-note{margin-top:12px;padding:10px 14px;background:#14101c;border-left:2px solid #9b59b6;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:12.5px;line-height:1.6;color:#c0b3d0}
+  .bias-note b{color:#b07cd0;font-weight:700;letter-spacing:.12em;font-size:9px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .btn{padding:10px 24px;background:transparent;border:1px solid #c9a84c;color:#c9a84c;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+  .btn:hover{background:#c9a84c;color:#0a0a0f}
+  .fun-box{background:linear-gradient(135deg,#0e1a14,#14140e);border:1px solid #2a4a3a;border-left:3px solid #27ae60;padding:24px 28px;border-radius:2px}
+  .fun-text{font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.75;color:#c8d4ca}
+  .fun-tag{font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#27ae60;font-weight:700;margin-top:14px}
+  .puzzle-box{background:linear-gradient(135deg,#1a140e,#140e1a);border:1px solid #4a3a2a;border-left:3px solid #e67e22;padding:24px 28px;border-radius:2px}
+  .ptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#e67e22;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .puzzle-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#f0ddc8;margin-bottom:10px}
+  .puzzle-how{font-family:'Source Sans 3',sans-serif;font-size:12.5px;font-style:italic;color:#b09878;margin-bottom:16px;line-height:1.55;padding:10px 14px;background:#140e08;border-radius:2px;border-left:2px solid #8a6a3a}
+  .puzzle-q{font-family:'Source Sans 3',sans-serif;font-size:15.5px;line-height:1.75;color:#e8dcc8;margin-bottom:20px;white-space:pre-line}
+  .answer{margin-top:18px;padding:16px 20px;background:#0e0e08;border:1px solid #3a3a2a;border-radius:2px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.7;color:#d4cfa8;display:none;white-space:pre-line}
+  .answer.show{display:block;animation:fade .3s ease}
+  .answer .alabel{color:#e67e22;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .wpuzzle-box{background:linear-gradient(135deg,#0e1a1a,#0d1620);border:1px solid #234a44;border-left:3px solid #16a085;padding:24px 28px;border-radius:2px}
+  .wptype{display:inline-block;font-family:'Source Sans 3',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0f;background:#16a085;font-weight:700;padding:3px 10px;border-radius:2px;margin-bottom:14px}
+  .wpuzzle-box .puzzle-title{color:#cdeae3}
+  .wpuzzle-box .puzzle-how{color:#8fb8ac;background:#08140f;border-left-color:#1a6a5a}
+  .wpuzzle-box .puzzle-q{color:#dfeae6;font-family:'Source Sans 3',sans-serif}
+  .wpuzzle-box .answer{color:#bfe0d6}
+  .wpuzzle-box .answer .alabel{color:#16a085}
+  .metrics{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#888;text-align:center;letter-spacing:.05em;margin-top:14px}
+  .foot{font-family:'Source Sans 3',sans-serif;font-size:11px;color:#444;text-align:center;letter-spacing:.1em;margin-top:8px}
+  @media(max-width:540px){.spectrum{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="title">THE BRIEF</div>
+      <div class="sub">Daily Intelligence · Saturday, 28 November 2026</div>
+      <span class="livebadge">● Real news · sources linked</span>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+  <div class="rule" style="margin-top:48px"></div>
+  <div class="metrics">⏱ Compiled Saturday, 28 November 2026 · 🔍 38 web searches · tap any source to read in full</div>
+  <div class="foot">POWERED BY CLAUDE · EVERY ITEM VERIFIED &amp; LINKED (LAST 48H)</div>
+</div>
+
+<script>
+/* =============================================================================
+   DATA — the routine fills these three structures with real content each day.
+   Do NOT touch anything below this comment block other than the data inside
+   SECTIONS, FUN_FACT, and PUZZLE.
+
+   SECTIONS shape — eleven entries in this exact order:
+     id    : one of "sg" | "india" | "uk" | "geo" | "tech" | "biz" | "sports" | "misc" | "fun" | "puzzle" | "wpuzzle"
+     title : tab label as shown in the chip row (use the emoji prefixes shown below)
+     color : hex color used for the active-tab fill and the section's gradient rule
+     items : array of news items (only for the 8 news tabs; fun/puzzle/wpuzzle use custom flag)
+       headline : string — declarative headline, no clickbait
+       summary  : string — 1-2 specific sentences with names, numbers, outcomes
+       source   : string — outlet name (must be on the allowed list for this tab)
+       url      : string — the article URL (deep link to the actual story)
+       date     : string — short date like "Jun 4" or "May 24"
+       spectrum : { left, center, right } OR null — only on political items
+                  Each value is a one-sentence summary of how outlets on that side
+                  of the spectrum framed the story.
+       bias     : string OR null — one short observation about where outlets diverge.
+                  Only present where framing genuinely differs across outlets.
+
+   FUN_FACT shape:
+     text : string — the fact itself, 2-3 sentences. Verifiable.
+     tag  : string — short category label (e.g. "Category · Food & Chemistry")
+
+   PUZZLE shape:
+     type     : one of "Visual" | "Logic" | "Quantitative" | "Lateral Thinking"
+     title    : short evocative name for the puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle itself; supports \n for line breaks
+     answer   : the answer; supports \n for line breaks; appears inside a toggle
+
+   WORD_PUZZLE shape (separate, daily word game — NYT-style, static reveal):
+     type     : one of "Connections" | "Word Ladder" | "Anagram" | "Spelling Bee" | "Letter Boxed" | "Mini Crossword"
+     title    : short evocative name for the word puzzle
+     how      : one-line "how to approach" hint
+     question : the puzzle body; supports \n for line breaks (grids render as pre-formatted text)
+     answer   : the answer; supports \n for line breaks; appears inside its own toggle (id "wpans")
+============================================================================= */
+
+const SECTIONS = [
+  {
+    "id": "sg",
+    "title": "🇸🇬 Singapore",
+    "color": "#e74c3c",
+    "items": [
+      {
+        "headline": "NEA raises cremation and niche fees from January 2027 in first revision since 1997",
+        "summary": "Government cremation fees for citizens and permanent residents will rise from S$100 to S$175 (and to S$350 for others) from 1 January 2027, with standard niche fees up from S$500 to S$600 and compulsory burial from S$315 to S$400, while inland ash-scattering falls from S$320 to S$200; ComCare and ComLink+ households get full waivers.",
+        "source": "NEA",
+        "url": "https://www.nea.gov.sg/media/news/news/index/nea-to-adjust-after-death-service-fees--with-fee-waivers-for-lower-income-households",
+        "date": "Nov 27",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Singapore's resident labour force participation rate dips to 67.8% in 2026",
+        "summary": "The Manpower Ministry's advance release shows the resident labour force participation rate for those aged 15 and over slipped to 67.8% from 67.9% in 2025 amid an ageing population, even as overall unemployment stayed low; the number of residents outside the labour force rose to about 1.18 million.",
+        "source": "Ministry of Manpower",
+        "url": "https://www.mom.gov.sg/newsroom/press-releases/2026/1127-labour-force-in-singapore-advance-release-2026",
+        "date": "Nov 27",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Singapore raises its 2026 growth forecast to around 6% after a 6.1% third quarter",
+        "summary": "The Trade and Industry Ministry lifted its 2026 GDP forecast to about 6%, up from a 4.5-5.5% range, after third-quarter growth came in at 6.1% year-on-year, beating the 5.4% advance estimate; Enterprise Singapore raised its 2026 non-oil domestic export growth projection to 30-32%.",
+        "source": "Reuters",
+        "url": "https://www.investing.com/news/economy-news/singapore-raises-2026-growth-forecast-after-61-q3-expansion-5046768",
+        "date": "Nov 24",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Chief Justice Menon sets out a 'communitarian' rule of law at a Singapore conference",
+        "summary": "At a Global Rule of Law Conference in Singapore marking the Judiciary's bicentennial, Chief Justice Sundaresh Menon and Home and Law Minister K. Shanmugam set out a rule of law that balances individual rights with society's needs; the gathering drew about 600 delegates from 26 jurisdictions, including current and former foreign chief justices.",
+        "source": "Ministry of Home Affairs",
+        "url": "https://www.mha.gov.sg/media-room/newsroom/global-rule-of-law-conference-2026/",
+        "date": "Nov 26",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "india",
+    "title": "🇮🇳 India",
+    "color": "#e67e22",
+    "items": [
+      {
+        "headline": "Supreme Court quashes Anand Mohan's remission, says victims must be heard before release",
+        "summary": "The Supreme Court on 26 November struck down Bihar's 2023 rule change that freed former MP Anand Mohan, jailed for life over the 1994 murder of IAS officer G. Krishnaiah, and ordered him to surrender within a month; the bench held that victims have an Article 21 right to be heard before remission, though their objection is not a veto.",
+        "source": "ThePrint",
+        "url": "https://theprint.in/judiciary/anand-mohan-to-return-to-jail-sc-strikes-down-bihar-remission-rule-change-says-victims-must-be-heard/3111299/",
+        "date": "Nov 26",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "India calls a special Parliament sitting from November 30 amid delimitation speculation",
+        "summary": "Parliamentary Affairs Minister Kiren Rijiju asked the Lok Sabha to reconvene on 30 November and the Rajya Sabha on 2 December for what he called 'very significant business' as a continuation of the Monsoon Session, without confirming the agenda; the opposition INDIA bloc called a strategy meeting, expecting a push on the stalled Delimitation Bill.",
+        "source": "India TV",
+        "url": "https://www.indiatvnews.com/news/india/delimitation-bill-updates-from-sp-s-opposition-to-dmk-s-conditions-and-ysrcp-s-likely-support-10-points-2026-11-27-1060504",
+        "date": "Nov 27",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Tripura records about 80% turnout in urban local body polls amid opposition complaints",
+        "summary": "Polling across 16 of Tripura's urban local bodies on 27 November drew roughly 80% turnout, with about 4.41 lakh of 5.62 lakh voters casting ballots by late afternoon; the BJP had already won 77 seats unopposed, the opposition alleged intimidation and counting is set for 2 December.",
+        "source": "Deccan Chronicle",
+        "url": "https://www.deccanchronicle.com/nation/politics/tripura-civic-polls-record-72-turnout-by-3-pm-amid-rigging-threat-allegations-2008539",
+        "date": "Nov 27",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "India's July-September GDP data is due November 30, with growth seen around 7.6%",
+        "summary": "Official second-quarter FY27 GDP lands on 30 November; a Mint poll of economists forecasts about 7.6% year-on-year growth, down from 7.8% the prior quarter but above the Reserve Bank's 7.2% projection, with SBI Research estimating 7.8% and ICRA 7.5%.",
+        "source": "KNN India",
+        "url": "https://knnindia.co.in/news/newsdetails/economy/indias-q2-gdp-growth-estimated-at-78-percent-exceeds-rbi-forecast-sbi-research",
+        "date": "Nov 27",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "uk",
+    "title": "🇬🇧 UK News",
+    "color": "#3949ab",
+    "items": [
+      {
+        "headline": "Huntingdon train attacker Anthony Williams convicted of 14 attempted murders",
+        "summary": "A jury at Cambridge Crown Court on 26 November found Anthony Williams, 33, guilty of attempting to murder 14 people — 10 on an LNER London-bound train that made an emergency stop at Huntingdon on 1 November 2025, plus three in Peterborough and one on a DLR train; he appeared by video-link from a secure hospital and will be sentenced on 4-5 February.",
+        "source": "ITV News",
+        "url": "https://www.itv.com/news/anglia/2026-11-26/train-knifeman-guilty-of-attempted-murder",
+        "date": "Nov 26",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "MPs urge the NHS to set a bed-occupancy target and end 'corridor care' for children",
+        "summary": "A Commons committee on 27 November urged the government to adopt a hospital bed-occupancy target and a plan to end corridor care for children, warning of a 'stark' gap between ministers' optimism and front-line NHS staff as the service heads into winter.",
+        "source": "UK Parliament",
+        "url": "https://www.parliament.uk/business/news/",
+        "date": "Nov 27",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "UK tribunal rejects the government's bid to keep its Apple encryption order secret",
+        "summary": "The Investigatory Powers Tribunal ruled that the government cannot keep secret its order demanding access to Apple users' encrypted data, allowing some future proceedings in the case to be held in public; the decision was made public on 19 November.",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-11-19/uk-court-rules-for-apple-in-user-data-fight-with-government",
+        "date": "Nov 19",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "UK government opens an investigation into Birmingham's supported housing sector",
+        "summary": "Ministers launched an investigation into supported 'exempt' accommodation in Birmingham — which houses around 34,000 benefit claimants across about 12,200 properties — following a High Court ruling that found a provider was taking advantage of the benefits system.",
+        "source": "Inside Housing",
+        "url": "https://www.insidehousing.co.uk/news/government-launches-investigation-into-supported-exempt-accommodation-in-birmingham-99868",
+        "date": "Nov 26",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "geo",
+    "title": "🌍 Global / Geopolitics",
+    "color": "#2980b9",
+    "items": [
+      {
+        "headline": "EU summit collapses without a budget deal or a EUR45bn Ukraine loan",
+        "summary": "An extraordinary EU summit in Brussels broke up early on 27 November with no agreement on the 2028-2034 budget or on a new EUR45 billion loan for Ukraine; Council President Antonio Costa said leaders agreed on none of the budget's main elements, and the matter was pushed to a 17-18 December summit as Germany's Friedrich Merz pressed for deeper cuts.",
+        "source": "Euronews",
+        "url": "https://www.euronews.com/2026/11/27/eu-budget-summit-collapses-as-row-over-money-exposes-clash-over-europes-strategic-tasks",
+        "date": "Nov 27",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Two Italian defence technicians killed in a drone strike on a Kuwait air-defence site",
+        "summary": "Antonio Saccoccio, 65, and Emanuele Lo Russo, 36, of Rheinmetall Italia were killed on 26 November while servicing an air-defence system at a Kuwaiti facility, with two other workers wounded; Italy's foreign minister said the drone was Iranian-made, while Iran's embassy in Rome denied any involvement.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/11/27/italians-killed-in-kuwait-why-is-iran-denying-responsibility",
+        "date": "Nov 27",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Colombian forces end a supermarket hostage siege in Cartagena",
+        "summary": "Colombian special forces freed the remaining hostages to end a roughly day-long siege at a supermarket in Cartagena on 25 November; one captor was killed and two suspects captured, and the gunmen had demanded about 7 billion pesos after a failed armoured-vehicle robbery.",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/11/24/hostage-situation-reported-in-colombia-as-armed-men-flee-into-supermarket",
+        "date": "Nov 25",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Germany arrests two Iraqis over an alleged Iran-linked plot to bomb synagogues",
+        "summary": "German federal prosecutors arrested two Iraqi men in Heidelberg and Cologne on 26 November over an alleged plot, tied to a pro-Iranian group, to attack synagogues; the raids involved more than 250 officers across 17 sites, and prosecutors say a search for a further suspect continues.",
+        "source": "The New Arab",
+        "url": "https://www.newarab.com/news/germany-arrests-two-iraqis-over-synagogue-attack-plot",
+        "date": "Nov 26",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "tech",
+    "title": "💻 Tech & AI",
+    "color": "#27ae60",
+    "items": [
+      {
+        "headline": "Nvidia pauses server shipments to Southeast Asia amid a US export crackdown",
+        "summary": "Nvidia asked manufacturing partners to halt server shipments to Malaysia, Singapore, Thailand and Indonesia while it checks whether regional partners comply with US export rules, after Washington closed a loophole that let Chinese firms rent computing power from data centres in those countries.",
+        "source": "TechCrunch",
+        "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+        "date": "Nov 26",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Restricted Nvidia Blackwell AI racks surface at a Shanghai data centre",
+        "summary": "Bloomberg reported that Chinese loan filings show a restricted Nvidia GB300 rack pledged as collateral and a GB200 server at a Shanghai site tied to the Singapore-based firm Megaspeed, which the US added to its Entity List on 23 November; Megaspeed and Nvidia deny any diversion.",
+        "source": "Bloomberg",
+        "url": "https://www.yahoo.com/news/us/articles/nvidia-blackwell-equipment-found-huang-183514875.html",
+        "date": "Nov 27",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "US export rule requiring licences for Chinese firms' remote chip access takes effect",
+        "summary": "A US Commerce Department interim rule that took effect on 19 November requires licences to export advanced AI chips and servers to data centres anywhere that may supply computing power to companies in China or other restricted countries, tightening controls on remote access to Nvidia hardware.",
+        "source": "TechCrunch",
+        "url": "https://techcrunch.com/2026/11/16/us-tightens-ai-chip-export-controls-to-deter-chinese-companies-from-accessing-compute-remotely/",
+        "date": "Nov 19",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "OpenAI raises about $11 billion more at a $1.25 trillion valuation",
+        "summary": "OpenAI has reportedly raised roughly $11 billion so far in a funding round valuing it at about $1.25 trillion; the round could total around $20 billion, short of the roughly $30 billion the company had sought.",
+        "source": "TechCrunch",
+        "url": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/",
+        "date": "Nov 6",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "biz",
+    "title": "📈 Business & Markets",
+    "color": "#8e44ad",
+    "items": [
+      {
+        "headline": "Wall Street rallies on Black Friday as the Nasdaq caps its best week in months",
+        "summary": "In a holiday-shortened session on 27 November the Dow rose about 1.2% to 50,775, the S&P 500 1.6% to 7,297 and the Nasdaq 2.3% to 24,130; all three gained more than 5% on the week — the S&P's best since April 2025 — as AI and chip stocks rebounded.",
+        "source": "CNBC",
+        "url": "https://www.cnbc.com/2026/11/26/stock-market-today-live-updates.html",
+        "date": "Nov 27",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "US Thanksgiving online sales hit a record $7.1 billion",
+        "summary": "Americans spent about $7.1 billion online on Thanksgiving Day, up 10.4% from a year earlier and above Adobe's $6.9 billion forecast, with phones accounting for roughly 63% of spending; Adobe projects a record $12.9 billion Black Friday and $15.1 billion Cyber Monday.",
+        "source": "Seeking Alpha",
+        "url": "https://seekingalpha.com/news/4677049-black-friday-came-early-for-retailers-as-thanksgiving-delivered-record-71b-in-sales",
+        "date": "Nov 27",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Nvidia's board reinstates Jensen Huang as CEO, powering a chip-stock rebound",
+        "summary": "Nvidia's board voted unanimously on 23 November to reinstate Jensen Huang as chief executive about 11 days after he resigned amid a scandal, citing input from senior US government levels; the stock jumped more than 30% and helped drive the week's AI-led market rebound.",
+        "source": "CNBC",
+        "url": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html",
+        "date": "Nov 23",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "sports",
+    "title": "🎾🏏🏎️ Sports",
+    "color": "#c0392b",
+    "items": [
+      {
+        "headline": "🏎️ Antonelli heads Friday practice as the Qatar Grand Prix weekend begins",
+        "summary": "Newly crowned 2026 champion Kimi Antonelli was fastest for Mercedes in Friday practice at Lusail, heading team-mate George Russell with Lando Norris close behind; qualifying follows on Saturday and the race on Sunday, the penultimate round of the season.",
+        "source": "ESPN",
+        "url": "https://www.espn.com/f1/story/_/id/50530095/qatar-grand-prix-2026-race-f1-start-s-how-watch-schedule-tv-channel-live-stream-predictions",
+        "date": "Nov 27",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "🏎️ Antonelli reaches Qatar as F1's youngest champion with Mercedes eyeing the constructors' title",
+        "summary": "Kimi Antonelli clinched the 2026 drivers' title at the Mexico City Grand Prix to become F1's youngest champion at 20 and the first Italian champion since 1953; with the drivers' fight settled, Mercedes lead the constructors' standings and can edge closer to that title over the final two rounds.",
+        "source": "Formula1.com",
+        "url": "https://www.formula1.com/en/latest/article/antonelli-crowned-youngest-ever-f1-champion-as-verstappen-wins-eventful-mexico-city-grand-prix.xpMMeef0KmRURs9IDs3LH",
+        "date": "Nov 2",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "🏏 India reduce New Zealand to 246 for 5 on day one of the second Test in Christchurch",
+        "summary": "After winning the toss and bowling first at Hagley Oval, India had New Zealand at 246 for 5 at stumps on day one of the second Test, with Tom Latham making 59, Tom Blundell 53 not out and Glenn Phillips 36 not out after India struck early.",
+        "source": "ESPNcricinfo",
+        "url": "https://www.cricinfo.com/series/india-in-new-zealand-2026-27-1539421/new-zealand-vs-india-2nd-test-1539443/full-scorecard",
+        "date": "Nov 27",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "🎾 Great Britain face Spain and Italy meet Czechia in the Davis Cup semi-finals",
+        "summary": "Great Britain, in their first Davis Cup semi-final since 2019 after beating Germany 2-1, face Spain — 2-0 winners over Austria — in Bologna, while holders Italy take on Czechia in the other semi-final; the final is on Sunday.",
+        "source": "ESPN",
+        "url": "https://www.espn.com/tennis/story/_/id/50606263/spain-beats-austria-set-davis-cup-semifinal-vs-britain",
+        "date": "Nov 27",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "misc",
+    "title": "🔬 Other Miscellaneous News",
+    "color": "#1abc9c",
+    "items": [
+      {
+        "headline": "Voyager 1 becomes the first spacecraft to reach one light-day from Earth",
+        "summary": "NASA says Voyager 1 passed one light-day from Earth — about 16.1 billion miles — on 18 November, the first human-made object to do so after nearly 50 years in space; a radio signal from the probe now takes a full 24 hours to reach home.",
+        "source": "NASA",
+        "url": "https://www.jpl.nasa.gov/news/nasas-voyager-1-makes-history-reaching-one-light-day-from-earth/",
+        "date": "Nov 18",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Europe's BepiColombo settles into orbit around Mercury despite a thruster glitch",
+        "summary": "The ESA-JAXA BepiColombo mission entered orbit around Mercury on 21 November — only the second mission ever to do so — after a planned braking burn was cut short by a software glitch, leaving it in a 75-hour orbit rather than the intended 58-hour one; ESA says the spacecraft is safe and stable, with its two orbiters due to separate on 9 December.",
+        "source": "ESA",
+        "url": "https://www.esa.int/articles/about-us/directorates/operations/bepicolombo-safely-in-mercury-orbit-despite-unexpected-challenge",
+        "date": "Nov 21",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "Tau-targeting Alzheimer's therapy reports slower decline in a phase 2 trial",
+        "summary": "Two-year results presented at a major Alzheimer's conference showed that diranersen, an antisense therapy targeting the tau protein, slowed clinical decline by about 38% at its highest dose versus placebo, though it missed its main statistical goal; the developer plans a larger phase 3 study.",
+        "source": "Newsweek",
+        "url": "https://www.newsweek.com/new-alzheimers-drug-slows-cognitive-decline-in-trial-12770387",
+        "date": "Nov",
+        "spectrum": null,
+        "bias": null
+      },
+      {
+        "headline": "A dark-matter telescope turns up an unexpected find: Euclid's first comet",
+        "summary": "While scanning the sky for clues to dark matter, ESA's Euclid space telescope captured a previously unknown comet, now designated C/2026 S1 (Euclid), spotted by a PhD student working with the Euclid Consortium; the icy visitor could help pick a target for the planned Comet Interceptor mission.",
+        "source": "ScienceDaily",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261124055852.htm",
+        "date": "Nov 24",
+        "spectrum": null,
+        "bias": null
+      }
+    ]
+  },
+  {
+    "id": "fun",
+    "title": "✦ Fun Fact",
+    "color": "#27ae60",
+    "custom": "fun"
+  },
+  {
+    "id": "puzzle",
+    "title": "🧩 Puzzle",
+    "color": "#e67e22",
+    "custom": "puzzle"
+  },
+  {
+    "id": "wpuzzle",
+    "title": "🔤 Word Puzzles",
+    "color": "#16a085",
+    "custom": "wpuzzle"
+  }
+];
+
+const FUN_FACT = {
+  "text": "Gallium is a soft, silvery metal that melts at about 29.8°C — just below body temperature — so a solid lump will turn to liquid in the warmth of your hand and set solid again once you put it down. Despite melting so easily it does not boil until around 2,200°C, one of the widest liquid ranges of any element, and unlike mercury it is barely toxic to handle.",
+  "tag": "Category · Chemistry"
+};
+
+const PUZZLE = {
+  "type": "Quantitative",
+  "title": "Hands Together",
+  "how": "Work out how many degrees each hand sweeps per minute, then find when they meet.",
+  "question": "A clock reads exactly 3:00, so the hour hand is on the 3 and the minute hand on the 12. Some time in the next hour the two hands will point in exactly the same direction and overlap.\n\nAt what time, to the nearest second, does this happen?",
+  "answer": "The minute hand sweeps 360° in 60 minutes = 6° per minute. The hour hand sweeps 360° in 12 hours = 0.5° per minute.\n\nAt 3:00 the hour hand sits at 90° (3 × 30°) and the minute hand at 0°. After t minutes the minute hand is at 6t° and the hour hand at (90 + 0.5t)°. They meet when 6t = 90 + 0.5t, so 5.5t = 90 and t = 90 ÷ 5.5 = 16 and 4/11 minutes.\n\nThat is 16 minutes and about 21.8 seconds, so the hands overlap at roughly 3:16:22."
+};
+
+const WORD_PUZZLE = {
+  "type": "Anagram",
+  "title": "Says It All",
+  "how": "Each capitalised clue is an 'apt anagram' — rearrange all its letters into a new word or phrase that describes the clue itself.",
+  "question": "Rearrange the letters of each clue into a new word or phrase that aptly describes it. The target letter-pattern is shown in brackets.\n\n1. DORMITORY → (5, 4)\n2. THE MORSE CODE → (4, 4, 4)\n3. THE CLASSROOM → a one-word profession (12)",
+  "answer": "1. DORMITORY → DIRTY ROOM\n2. THE MORSE CODE → HERE COME DOTS\n3. THE CLASSROOM → SCHOOLMASTER\n\nEach answer uses exactly the same letters as its clue."
+};
+
+/* =============================================================================
+   RENDER — DO NOT MODIFY anything below this line. The routine touches only the
+   data above.
+============================================================================= */
+
+function renderFun(){
+  return '<div class="sec-title">✦ Fun Fact of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#27ae60,transparent)"></div>'+
+    '<div class="fun-box"><div class="fun-text">'+FUN_FACT.text+'</div><div class="fun-tag">'+FUN_FACT.tag+'</div></div>';
+}
+function renderPuzzle(){
+  let h='<div class="sec-title">🧩 Daily Puzzle</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#e67e22,transparent)"></div>';
+  h+='<div class="puzzle-box"><span class="ptype">'+PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this)">Show Answer</button>';
+  h+='<div class="answer" id="ans"><span class="alabel">Answer</span>'+PUZZLE.answer+'</div></div>';
+  return h;
+}
+function renderWordPuzzle(){
+  let h='<div class="sec-title">🔤 Word Puzzle of the Day</div><div class="rule" style="margin-bottom:18px;background:linear-gradient(90deg,#16a085,transparent)"></div>';
+  h+='<div class="wpuzzle-box"><span class="wptype">'+WORD_PUZZLE.type+'</span>';
+  h+='<div class="puzzle-title">'+WORD_PUZZLE.title+'</div>';
+  h+='<div class="puzzle-how">How to approach: '+WORD_PUZZLE.how+'</div>';
+  h+='<div class="puzzle-q">'+WORD_PUZZLE.question+'</div>';
+  h+='<button class="btn" onclick="toggleAns(this,\'wpans\')">Show Answer</button>';
+  h+='<div class="answer" id="wpans"><span class="alabel">Answer</span>'+WORD_PUZZLE.answer+'</div></div>';
+  return h;
+}
+function toggleAns(btn,ansId){var a=document.getElementById(ansId||'ans');a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Hide Answer':'Show Answer';}
+
+function render(){
+  const tabs=document.getElementById('tabs');const content=document.getElementById('content');
+  SECTIONS.forEach((sec,idx)=>{
+    const b=document.createElement('button');b.className='tab'+(idx===0?' active':'');b.textContent=sec.title;
+    if(idx===0){b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';}
+    b.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.style.background='transparent';t.style.borderColor='#2a2a35';t.style.color='#888';});
+      b.classList.add('active');b.style.background=sec.color;b.style.borderColor=sec.color;b.style.color='#0a0a0f';
+      document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+      document.getElementById('sec-'+sec.id).classList.add('active');
+    };
+    tabs.appendChild(b);
+    const div=document.createElement('div');div.className='sec'+(idx===0?' active':'');div.id='sec-'+sec.id;
+    if(sec.custom==="fun"){div.innerHTML=renderFun();}
+    else if(sec.custom==="puzzle"){div.innerHTML=renderPuzzle();}
+    else if(sec.custom==="wpuzzle"){div.innerHTML=renderWordPuzzle();}
+    else{
+      let html='<div class="sec-title">'+sec.title+'</div><div class="rule" style="margin-bottom:8px;background:linear-gradient(90deg,'+sec.color+',transparent)"></div>';
+      sec.items.forEach(it=>{
+        html+='<div class="item"><div class="headline">'+it.headline+'</div><div class="summary">'+it.summary+'</div>';
+        if(it.source){
+          var link=it.url?('<a href="'+it.url+'" target="_blank" rel="noopener">'+it.source+'<span class="arrow">↗</span></a>'):('<b style="color:#c9a84c">'+it.source+'</b>');
+          html+='<div class="source">— '+link+' · '+it.date+'</div>';
+        }
+        if(it.spectrum)html+='<div class="spectrum"><div class="spec-cell spec-left"><span class="spec-label">◄ Left</span><div class="txt">'+it.spectrum.left+'</div></div><div class="spec-cell spec-center"><span class="spec-label">● Center</span><div class="txt">'+it.spectrum.center+'</div></div><div class="spec-cell spec-right"><span class="spec-label">Right ►</span><div class="txt">'+it.spectrum.right+'</div></div></div>';
+        if(it.bias)html+='<div class="bias-note"><b>◈ Bias Check</b>'+it.bias+'</div>';
+        html+='</div>';
+      });
+      div.innerHTML=html;
+    }
+    content.appendChild(div);
+  });
+}
+render();
+</script>
+</body>
+</html>

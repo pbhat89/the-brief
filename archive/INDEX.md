@@ -4786,3 +4786,34 @@ is empty until the first run.
 2026-11-27	Formula 1 reaches Lusail for the penultimate round, the Qatar Grand Prix	e9e9f599	formula 1,qatar grand prix,lusail
 2026-11-27	Mathematicians scrutinise rival AI and human claims of a Riemann hypothesis proof	ff8621e2	riemann hypothesis,mathematics,lean,alpoge,masullo
 2026-11-27	Blood 'fossil record' traces leukaemia back decades before diagnosis	47c14ae6	leukaemia,nature,cambridge,ucl,mutations
+2026-11-28	NEA raises cremation and niche fees from January 2027 in first revision since 1997	aa4d6e87	nea,singapore,cremation fees,2027
+2026-11-28	Singapore's resident labour force participation rate dips to 67.8% in 2026	b2aacfc0	singapore,mom,labour force,participation rate
+2026-11-28	Singapore raises its 2026 growth forecast to around 6% after a 6.1% third quarter	a84ce3df	singapore,mti,gdp forecast,growth
+2026-11-28	Chief Justice Menon sets out a 'communitarian' rule of law at a Singapore conference	e67234df	singapore,sundaresh menon,shanmugam,rule of law conference
+2026-11-28	Supreme Court quashes Anand Mohan's remission, says victims must be heard before release	1a93a823	supreme court,anand mohan,bihar,remission
+2026-11-28	India calls a special Parliament sitting from November 30 amid delimitation speculation	37d59e5c	india,parliament,kiren rijiju,delimitation bill
+2026-11-28	Tripura records about 80% turnout in urban local body polls amid opposition complaints	3ee4e046	tripura,civic polls,bjp,turnout
+2026-11-28	India's July-September GDP data is due November 30, with growth seen around 7.6%	36baf819	india,gdp,q2 fy27,rbi
+2026-11-28	Huntingdon train attacker Anthony Williams convicted of 14 attempted murders	8e7f9ebb	anthony williams,huntingdon,train attack,attempted murder
+2026-11-28	MPs urge the NHS to set a bed-occupancy target and end 'corridor care' for children	7ec7e8d0	nhs,uk parliament,corridor care,winter
+2026-11-28	UK tribunal rejects the government's bid to keep its Apple encryption order secret	38733da1	apple,uk government,investigatory powers tribunal,encryption
+2026-11-28	UK government opens an investigation into Birmingham's supported housing sector	106bf0e4	birmingham,supported housing,investigation,benefits
+2026-11-28	EU summit collapses without a budget deal or a EUR45bn Ukraine loan	ba5abe8b	european union,eu budget,ukraine loan,costa
+2026-11-28	Two Italian defence technicians killed in a drone strike on a Kuwait air-defence site	9123351b	kuwait,italy,drone strike,iran
+2026-11-28	Colombian forces end a supermarket hostage siege in Cartagena	8efc6230	colombia,cartagena,hostage siege,farc
+2026-11-28	Germany arrests two Iraqis over an alleged Iran-linked plot to bomb synagogues	0a1159a1	germany,iraqis,synagogue plot,iran
+2026-11-28	Nvidia pauses server shipments to Southeast Asia amid a US export crackdown	07422265	nvidia,southeast asia,export controls,chips
+2026-11-28	Restricted Nvidia Blackwell AI racks surface at a Shanghai data centre	163c4bd8	nvidia,blackwell,shanghai,megaspeed
+2026-11-28	US export rule requiring licences for Chinese firms' remote chip access takes effect	5a05eee2	commerce department,ai chips,export rule,china
+2026-11-28	OpenAI raises about $11 billion more at a $1.25 trillion valuation	4172355f	openai,funding,valuation,1.25 trillion
+2026-11-28	Wall Street rallies on Black Friday as the Nasdaq caps its best week in months	96a82e8f	wall street,sp 500,nasdaq,rally
+2026-11-28	US Thanksgiving online sales hit a record $7.1 billion	073dccb3	thanksgiving,online sales,adobe,retail
+2026-11-28	Nvidia's board reinstates Jensen Huang as CEO, powering a chip-stock rebound	cce0e107	nvidia,jensen huang,ceo,reinstated
+2026-11-28	🏎️ Antonelli heads Friday practice as the Qatar Grand Prix weekend begins	0fd213f0	formula 1,qatar grand prix,antonelli,lusail
+2026-11-28	🏎️ Antonelli reaches Qatar as F1's youngest champion with Mercedes eyeing the constructors' title	390e9fc1	formula 1,antonelli,mercedes,constructors
+2026-11-28	🏏 India reduce New Zealand to 246 for 5 on day one of the second Test in Christchurch	74914203	india,new zealand,christchurch,test
+2026-11-28	🎾 Great Britain face Spain and Italy meet Czechia in the Davis Cup semi-finals	5f8bd39c	davis cup,great britain,spain,italy
+2026-11-28	Voyager 1 becomes the first spacecraft to reach one light-day from Earth	68635f82	voyager 1,nasa,interstellar,light-day
+2026-11-28	Europe's BepiColombo settles into orbit around Mercury despite a thruster glitch	79ebf500	bepicolombo,mercury,esa,jaxa
+2026-11-28	Tau-targeting Alzheimer's therapy reports slower decline in a phase 2 trial	4e17e904	alzheimer,diranersen,tau,clinical trial
+2026-11-28	A dark-matter telescope turns up an unexpected find: Euclid's first comet	dc20abb1	euclid,comet,esa,dark matter

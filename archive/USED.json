@@ -1,11 +1,6 @@
 {
   "funfact_topics": [
     {
-      "date": "2026-09-28",
-      "topic_key": "run island",
-      "text": "Under the 1667 Treaty of Breda the Dutch kept the tiny nutmeg island of Run and handed Manhattan to England."
-    },
-    {
       "date": "2026-09-29",
       "topic_key": "mpemba effect",
       "text": "Hot water can sometimes freeze faster than cold (the Mpemba effect)"
@@ -284,14 +279,14 @@
       "date": "2026-11-27",
       "topic_key": "tree",
       "text": "There are more trees on Earth than stars in the Milky Way (2015 Nature study: ~3 trillion trees vs ~100-400 billion stars)."
+    },
+    {
+      "date": "2026-11-28",
+      "topic_key": "gallium",
+      "text": "Gallium is a metal that melts in your hand at about 29.8C, just below body temperature."
     }
   ],
   "puzzle_log": [
-    {
-      "date": "2026-10-28",
-      "type": "quantitative",
-      "title_key": "averaging-up"
-    },
     {
       "date": "2026-10-29",
       "type": "lateral",
@@ -426,14 +421,14 @@
       "date": "2026-11-27",
       "type": "logic",
       "title_key": "three-hats-in-a-line"
+    },
+    {
+      "date": "2026-11-28",
+      "type": "quantitative",
+      "title_key": "hands-together"
     }
   ],
   "word_puzzle_log": [
-    {
-      "date": "2026-10-28",
-      "type": "spellingbee",
-      "title_key": "round-and-round"
-    },
     {
       "date": "2026-10-29",
       "type": "grouping",
@@ -568,6 +563,11 @@
       "date": "2026-11-27",
       "type": "ladder",
       "title_key": "raining-cats-and-dogs"
+    },
+    {
+      "date": "2026-11-28",
+      "type": "anagram",
+      "title_key": "says-it-all"
     }
   ]
 }
